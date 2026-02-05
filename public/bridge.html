@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +20,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
-            overflow: hidden;
+            padding: 40px 20px;
+            position: relative;
         }
+        /* 动态流动星空背景 - 叠加星光流动效果 */
         .stars {
             position: absolute;
             top: 0;
@@ -32,16 +31,39 @@
             width: 100%;
             height: 100%;
             z-index: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: starFlow 80s linear infinite;
         }
+        /* 星光闪烁+流动动画 */
+        @keyframes starFlow {
+            0% { background-position: 0 0; }
+            100% { background-position: -1000px 1000px; }
+        }
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: starTwinkle 3s infinite ease-in-out;
+            box-shadow: 0 0 8px 1px rgba(255,255,255,0.6);
+        }
+        /* 玻璃质感容器 - 强化模糊+光影 */
         .container {
             position: relative;
             z-index: 1;
             text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             padding: 4rem 3rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 108, 255, 0.3);
+            box-shadow: 0 0 50px rgba(63, 66, 251, 0.15), inset 0 1px 0 rgba(255,255,255,0.1);
             max-width: 600px;
             width: 100%;
         }
@@ -51,12 +73,14 @@
             color: #6366F1;
             margin-bottom: 1rem;
             letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
         }
         .tagline {
             font-size: 1.2rem;
             color: #C7D2FE;
             margin-bottom: 3rem;
             line-height: 1.6;
+            opacity: 0.9;
         }
         .wallet-section {
             margin-bottom: 2.5rem;
@@ -82,67 +106,94 @@
             font-size: 0.95rem;
             color: #A5B4FC;
             font-weight: 500;
+            padding-left: 0.2rem;
         }
+        /* 玻璃质感输入框/下拉框 - 半透+模糊+霓虹边框 */
         input, select {
             padding: 1rem;
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(148, 163, 184, 0.3);
-            border-radius: 10px;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
             color: #FFFFFF;
             font-size: 1rem;
             outline: none;
-            transition: border 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.05);
         }
         input:focus, select:focus {
             border-color: #6366F1;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), 0 0 10px rgba(139, 92, 246, 0.2);
+            transform: translateY(-1px);
         }
+        input::placeholder {
+            color: #818cf8;
+            opacity: 0.6;
+        }
+        /* 霓虹呼吸按钮 - 渐变+呼吸阴影+缩放动画 */
         button {
             padding: 1.1rem;
             background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%);
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             color: #FFFFFF;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: all 0.3s ease;
             width: 100%;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+            animation: neonBreath 3s infinite ease-in-out alternate;
+        }
+        @keyframes neonBreath {
+            0% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+            100% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.6), 0 0 15px rgba(139, 92, 246, 0.5); }
         }
         button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 0 35px rgba(99, 102, 241, 0.7), 0 0 20px rgba(139, 92, 246, 0.5);
         }
+        button:active {
+            transform: translateY(-1px);
+        }
+        /* 禁用状态样式优化 */
         button:disabled {
-            background: #4B5563;
+            background: #27296d;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
+            animation: none;
+            opacity: 0.7;
         }
         .tx-status {
             margin-top: 1.5rem;
             font-size: 0.95rem;
             color: #34D399;
             min-height: 1.2rem;
+            text-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
         }
+        /* 手机端适配 */
         @media (max-width: 480px) {
             .container {
                 padding: 2.5rem 2rem;
+                border-radius: 16px;
             }
             .logo {
                 font-size: 2.5rem;
+                text-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
             }
-        }
-        @keyframes starTwinkle {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: starTwinkle 3s infinite ease-in-out;
+            body {
+                padding: 20px 15px;
+            }
+            button {
+                padding: 1rem;
+            }
+            input, select {
+                padding: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -184,26 +235,29 @@
     </div>
 
     <script>
-        // Generate random stars for space background
+        // 生成动态闪烁星光（强化星空效果）
         const starsContainer = document.getElementById('stars');
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < 300; i++) {
             const star = document.createElement('div');
             star.className = 'star';
             star.style.left = `${Math.random() * 100}%`;
             star.style.top = `${Math.random() * 100}%`;
             star.style.animationDelay = `${Math.random() * 5}s`;
+            // 随机星光大小，更自然
+            star.style.width = `${Math.random() * 3 + 1}px`;
+            star.style.height = `${Math.random() * 3 + 1}px`;
             starsContainer.appendChild(star);
         }
 
-        // Global variables
+        // 全局变量
         let provider, signer, astroTokenContract, bridgeContract;
         let isWalletConnected = false;
 
-        // ✅ Embedded Your Contract Addresses (No Modification Needed)
+        // 合约地址（无需修改）
         const ASTRO_TOKEN_ADDRESS = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853";
         const BRIDGE_CONTRACT_ADDRESS = "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318";
 
-        // ABI Simplified (core methods for transfer/approve/lockTokens)
+        // ABI 核心方法
         const ASTRO_TOKEN_ABI = [
             "function balanceOf(address owner) view returns (uint256)",
             "function approve(address spender, uint256 amount) returns (bool)",
@@ -215,7 +269,7 @@
             "function unlockTokens(address to, uint256 amount) external"
         ];
 
-        // DOM Elements
+        // DOM 元素获取
         const connectWalletBtn = document.getElementById('connectWalletBtn');
         const walletStatus = document.getElementById('walletStatus');
         const bridgeBtn = document.getElementById('bridgeBtn');
@@ -224,24 +278,21 @@
         const fromChain = document.getElementById('fromChain');
         const toChain = document.getElementById('toChain');
 
-        // Connect MetaMask Wallet
+        // 连接钱包
         connectWalletBtn.addEventListener('click', async () => {
             if (window.ethereum && !isWalletConnected) {
                 try {
-                    // Request account access
                     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                     const account = accounts[0];
                     isWalletConnected = true;
 
-                    // Initialize provider and signer
                     provider = new ethers.providers.Web3Provider(window.ethereum);
                     signer = provider.getSigner();
 
-                    // Initialize contracts
                     astroTokenContract = new ethers.Contract(ASTRO_TOKEN_ADDRESS, ASTRO_TOKEN_ABI, signer);
                     bridgeContract = new ethers.Contract(BRIDGE_CONTRACT_ADDRESS, BRIDGE_ABI, signer);
 
-                    // Update UI
+                    // 钱包地址脱敏显示
                     walletStatus.textContent = `Connected: ${account.slice(0, 6)}...${account.slice(-4)}`;
                     connectWalletBtn.textContent = 'Disconnect Wallet';
                     bridgeBtn.disabled = false;
@@ -253,7 +304,7 @@
                     txStatus.style.color = '#F87171';
                 }
             } else if (isWalletConnected) {
-                // Disconnect Wallet Logic
+                // 断开钱包
                 isWalletConnected = false;
                 walletStatus.textContent = 'Wallet not connected';
                 connectWalletBtn.textContent = 'Connect MetaMask';
@@ -266,12 +317,12 @@
             }
         });
 
-        // Initiate Cross-Chain Bridge Transfer
+        // 发起跨链转账
         bridgeBtn.addEventListener('click', async () => {
             const amount = parseFloat(tokenAmount.value);
             const targetChain = toChain.value;
 
-            // Basic validation
+            // 基础验证
             if (!amount || amount <= 0) {
                 txStatus.textContent = 'Please enter a valid amount!';
                 txStatus.style.color = '#F87171';
@@ -288,19 +339,19 @@
                 txStatus.style.color = '#FBBF24';
                 bridgeBtn.disabled = true;
 
-                // Convert amount to wei (18 decimals - ERC20 Standard)
+                // 转换为wei单位（ERC20 18位小数）
                 const amountWei = ethers.utils.parseEther(amount.toString());
 
-                // Step 1: Approve Bridge contract to spend AstroTokens
+                // 第一步：授权桥接合约花费代币
                 const approveTx = await astroTokenContract.approve(BRIDGE_CONTRACT_ADDRESS, amountWei);
                 await approveTx.wait();
                 txStatus.textContent = 'Approved! Locking tokens for cross-chain...';
 
-                // Step 2: Lock tokens in Bridge contract (trigger cross-chain)
+                // 第二步：锁定代币到桥接合约，触发跨链
                 const lockTx = await bridgeContract.lockTokens(amountWei, targetChain);
                 await lockTx.wait();
 
-                // Success UI
+                // 转账成功提示
                 txStatus.textContent = `Success! TX Hash: ${lockTx.hash.slice(0, 10)}...`;
                 txStatus.style.color = '#34D399';
                 tokenAmount.value = '';
@@ -313,12 +364,12 @@
             }
         });
 
-        // Listen for chain change - auto reload
+        // 监听链切换 - 自动刷新
         window.ethereum?.on('chainChanged', () => {
             window.location.reload();
         });
 
-        // Listen for account change - auto reload
+        // 监听账户切换 - 状态更新
         window.ethereum?.on('accountsChanged', (accounts) => {
             if (accounts.length === 0) {
                 isWalletConnected = false;
