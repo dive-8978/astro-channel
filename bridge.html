@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroChannel - Cross-Chain Bridge</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        body {
+            background: linear-gradient(180deg, #050029 0%, #1A0050 50%, #2E007A 100%);
+            background-attachment: fixed;
+            color: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #6366F1;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #C7D2FE;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        .wallet-section {
+            margin-bottom: 2.5rem;
+        }
+        .wallet-status {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #E0E7FF;
+        }
+        .bridge-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            text-align: left;
+        }
+        label {
+            font-size: 0.95rem;
+            color: #A5B4FC;
+            font-weight: 500;
+        }
+        input, select {
+            padding: 1rem;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #6366F1;
+        }
+        button {
+            padding: 1.1rem;
+            background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%);
+            border: none;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+        }
+        button:disabled {
+            background: #4B5563;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .tx-status {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: #34D399;
+            min-height: 1.2rem;
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 2.5rem 2rem;
+            }
+            .logo {
+                font-size: 2.5rem;
+            }
+        }
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: starTwinkle 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="container">
+        <h1 class="logo">AstroChannel</h1>
+        <p class="tagline">Seamless Cross-Chain Transfers for Your AstroTokens. Connect, Transfer, Explore the Interstellar Network.</p>
+
+        <div class="wallet-section">
+            <p class="wallet-status" id="walletStatus">Wallet not connected</p>
+            <button id="connectWalletBtn">Connect MetaMask</button>
+        </div>
+
+        <div class="bridge-section">
+            <div class="input-group">
+                <label for="fromChain">From Chain</label>
+                <select id="fromChain">
+                    <option value="ethereum">Ethereum Testnet (Sepolia)</option>
+                    <option value="bsc">BSC Testnet</option>
+                    <option value="polygon">Polygon Testnet (Mumbai)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="toChain">To Chain</label>
+                <select id="toChain">
+                    <option value="bsc">BSC Testnet</option>
+                    <option value="polygon">Polygon Testnet (Mumbai)</option>
+                    <option value="ethereum">Ethereum Testnet (Sepolia)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="tokenAmount">AstroToken Amount</label>
+                <input type="number" id="tokenAmount" placeholder="Enter amount" min="0.001" step="0.001">
+            </div>
+            <button id="bridgeBtn" disabled>Initiate Cross-Chain Transfer</button>
+            <p class="tx-status" id="txStatus"></p>
+        </div>
+    </div>
+
+    <script>
+        // Generate random stars for space background
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            starsContainer.appendChild(star);
+        }
+
+        // Global variables
+        let provider, signer, astroTokenContract, bridgeContract;
+        let isWalletConnected = false;
+
+        // ✅ Embedded Your Contract Addresses (No Modification Needed)
+        const ASTRO_TOKEN_ADDRESS = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853";
+        const BRIDGE_CONTRACT_ADDRESS = "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318";
+
+        // ABI Simplified (core methods for transfer/approve/lockTokens)
+        const ASTRO_TOKEN_ABI = [
+            "function balanceOf(address owner) view returns (uint256)",
+            "function approve(address spender, uint256 amount) returns (bool)",
+            "function transfer(address to, uint256 amount) returns (bool)"
+        ];
+
+        const BRIDGE_ABI = [
+            "function lockTokens(uint256 amount, string calldata targetChain) external",
+            "function unlockTokens(address to, uint256 amount) external"
+        ];
+
+        // DOM Elements
+        const connectWalletBtn = document.getElementById('connectWalletBtn');
+        const walletStatus = document.getElementById('walletStatus');
+        const bridgeBtn = document.getElementById('bridgeBtn');
+        const tokenAmount = document.getElementById('tokenAmount');
+        const txStatus = document.getElementById('txStatus');
+        const fromChain = document.getElementById('fromChain');
+        const toChain = document.getElementById('toChain');
+
+        // Connect MetaMask Wallet
+        connectWalletBtn.addEventListener('click', async () => {
+            if (window.ethereum && !isWalletConnected) {
+                try {
+                    // Request account access
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    const account = accounts[0];
+                    isWalletConnected = true;
+
+                    // Initialize provider and signer
+                    provider = new ethers.providers.Web3Provider(window.ethereum);
+                    signer = provider.getSigner();
+
+                    // Initialize contracts
+                    astroTokenContract = new ethers.Contract(ASTRO_TOKEN_ADDRESS, ASTRO_TOKEN_ABI, signer);
+                    bridgeContract = new ethers.Contract(BRIDGE_CONTRACT_ADDRESS, BRIDGE_ABI, signer);
+
+                    // Update UI
+                    walletStatus.textContent = `Connected: ${account.slice(0, 6)}...${account.slice(-4)}`;
+                    connectWalletBtn.textContent = 'Disconnect Wallet';
+                    bridgeBtn.disabled = false;
+                    txStatus.textContent = '';
+                    txStatus.style.color = '#34D399';
+
+                } catch (error) {
+                    txStatus.textContent = `Error: ${error.message.slice(0, 50)}`;
+                    txStatus.style.color = '#F87171';
+                }
+            } else if (isWalletConnected) {
+                // Disconnect Wallet Logic
+                isWalletConnected = false;
+                walletStatus.textContent = 'Wallet not connected';
+                connectWalletBtn.textContent = 'Connect MetaMask';
+                bridgeBtn.disabled = true;
+                tokenAmount.value = '';
+                txStatus.textContent = '';
+            } else {
+                txStatus.textContent = 'MetaMask not found! Please install it first.';
+                txStatus.style.color = '#F87171';
+            }
+        });
+
+        // Initiate Cross-Chain Bridge Transfer
+        bridgeBtn.addEventListener('click', async () => {
+            const amount = parseFloat(tokenAmount.value);
+            const targetChain = toChain.value;
+
+            // Basic validation
+            if (!amount || amount <= 0) {
+                txStatus.textContent = 'Please enter a valid amount!';
+                txStatus.style.color = '#F87171';
+                return;
+            }
+            if (fromChain.value === targetChain) {
+                txStatus.textContent = 'Source and target chain cannot be the same!';
+                txStatus.style.color = '#F87171';
+                return;
+            }
+
+            try {
+                txStatus.textContent = 'Processing... Approving tokens first';
+                txStatus.style.color = '#FBBF24';
+                bridgeBtn.disabled = true;
+
+                // Convert amount to wei (18 decimals - ERC20 Standard)
+                const amountWei = ethers.utils.parseEther(amount.toString());
+
+                // Step 1: Approve Bridge contract to spend AstroTokens
+                const approveTx = await astroTokenContract.approve(BRIDGE_CONTRACT_ADDRESS, amountWei);
+                await approveTx.wait();
+                txStatus.textContent = 'Approved! Locking tokens for cross-chain...';
+
+                // Step 2: Lock tokens in Bridge contract (trigger cross-chain)
+                const lockTx = await bridgeContract.lockTokens(amountWei, targetChain);
+                await lockTx.wait();
+
+                // Success UI
+                txStatus.textContent = `Success! TX Hash: ${lockTx.hash.slice(0, 10)}...`;
+                txStatus.style.color = '#34D399';
+                tokenAmount.value = '';
+
+            } catch (error) {
+                txStatus.textContent = `Transfer Failed: ${error.message.slice(0, 60)}`;
+                txStatus.style.color = '#F87171';
+            } finally {
+                bridgeBtn.disabled = false;
+            }
+        });
+
+        // Listen for chain change - auto reload
+        window.ethereum?.on('chainChanged', () => {
+            window.location.reload();
+        });
+
+        // Listen for account change - auto reload
+        window.ethereum?.on('accountsChanged', (accounts) => {
+            if (accounts.length === 0) {
+                isWalletConnected = false;
+                walletStatus.textContent = 'Wallet not connected';
+                connectWalletBtn.textContent = 'Connect MetaMask';
+                bridgeBtn.disabled = true;
+            } else {
+                window.location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
