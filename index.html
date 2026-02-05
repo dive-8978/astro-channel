@@ -60,6 +60,24 @@
         .navbar .logo span {
             color: #f72585;
         }
+        .navbar .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .whitepaper-btn {
+            padding: 8px 16px;
+            background: linear-gradient(90deg, #4cc9f0, #f72585);
+            border: none;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .whitepaper-btn:hover {
+            transform: scale(1.05);
+        }
         .navbar .social-links a {
             color: #fff;
             margin-left: 20px;
@@ -155,6 +173,18 @@
             padding: 30px 0;
             color: #a8dadc;
         }
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .navbar .logo {
+                font-size: 2rem;
+            }
+            .verify-channel input {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -164,22 +194,25 @@
     <div class="mars"></div>
 
     <div class="container">
-        <!-- 导航栏 -->
+        <!-- 导航栏（新增白皮书按钮） -->
         <nav class="navbar">
             <div class="logo">Astro<span>Channel</span></div>
-            <div class="social-links">
-                <!-- 预留社交账号替换位 -->
-                <a href="#" target="_blank">Telegram</a>
-                <a href="#" target="_blank">X</a>
+            <div class="nav-right">
+                <button class="whitepaper-btn" onclick="window.location.href='/AstroChannel_Whitepaper.pdf'">Whitepaper</button>
+                <div class="social-links">
+                    <!-- 预留社交账号替换位 -->
+                    <a href="#" target="_blank">Telegram</a>
+                    <a href="#" target="_blank">X</a>
+                </div>
             </div>
         </nav>
 
-        <!-- 核心内容区 -->
+        <!-- 核心内容区（修复bridge跳转） -->
         <section class="hero">
             <h1>Interstellar Cross-Chain Instant Transfer</h1>
             <p>Break inter-chain barriers, realize low-cost cross-chain circulation of virtual tokens, provide an efficient and fast channel for BECoin, and build a new decentralized cross-chain ecosystem</p>
-            <!-- 核心修改：添加跳转至public/bridge.html的点击事件 -->
-            <button class="btn" onclick="window.location.href='public/bridge.html'">Experience Cross-Chain Now</button>
+            <!-- 修复：根目录路径跳转bridge.html -->
+            <button class="btn" onclick="window.location.href='/bridge.html'">Experience Cross-Chain Now</button>
         </section>
 
         <!-- 3D区块链模块 -->
