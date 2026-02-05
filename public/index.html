@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroChannel - Interstellar Cross-Chain Bridge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            overflow-x: hidden;
+            background: #000;
+            color: #fff;
+        }
+        /* 粒子背景样式 */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        /* 火星元素样式 */
+        .mars {
+            position: fixed;
+            top: 10%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #e63946 0%, #1d3557 100%);
+            border-radius: 50%;
+            opacity: 0.7;
+            z-index: 1;
+            box-shadow: 0 0 50px rgba(230, 57, 70, 0.5);
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        /* 导航栏 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .navbar .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4cc9f0;
+        }
+        .navbar .logo span {
+            color: #f72585;
+        }
+        .navbar .social-links a {
+            color: #fff;
+            margin-left: 20px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar .social-links a:hover {
+            color: #4cc9f0;
+        }
+        /* 核心内容区 */
+        .hero {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #4cc9f0, #f72585);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #a8dadc;
+        }
+        .hero .btn {
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #4cc9f0, #f72585);
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .hero .btn:hover {
+            transform: scale(1.05);
+        }
+        /* 3D区块链模块 */
+        .blockchain-3d {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        .blockchain-3d h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #4cc9f0;
+        }
+        .blockchain-3d img {
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(76, 201, 240, 0.3);
+        }
+        /* 星链手机验证通道 */
+        .verify-channel {
+            background: rgba(17, 24, 39, 0.5);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .verify-channel h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #f72585;
+        }
+        .verify-channel input {
+            padding: 15px;
+            width: 60%;
+            border: 2px solid #4cc9f0;
+            border-radius: 50px;
+            background: transparent;
+            color: #fff;
+            font-size: 1rem;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        .verify-channel button {
+            padding: 15px 30px;
+            background: #f72585;
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #a8dadc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 粒子背景容器 -->
+    <div id="particles-js"></div>
+    <!-- 火星元素 -->
+    <div class="mars"></div>
+
+    <div class="container">
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <div class="logo">Astro<span>Channel</span></div>
+            <div class="social-links">
+                <!-- 预留社交账号替换位 -->
+                <a href="#" target="_blank">Telegram</a>
+                <a href="#" target="_blank">X</a>
+            </div>
+        </nav>
+
+        <!-- 核心内容区 -->
+        <section class="hero">
+            <h1>Interstellar Cross-Chain Instant Transfer</h1>
+            <p>Break inter-chain barriers, realize low-cost cross-chain circulation of virtual tokens, provide an efficient and fast channel for BECoin, and build a new decentralized cross-chain ecosystem</p>
+            <!-- 核心修改：添加跳转至public/bridge.html的点击事件 -->
+            <button class="btn" onclick="window.location.href='public/bridge.html'">Experience Cross-Chain Now</button>
+        </section>
+
+        <!-- 3D区块链模块 -->
+        <section class="blockchain-3d">
+            <h2>3D Blockchain Visualization</h2>
+            <img src="https://picsum.photos/seed/blockchain3d/800/400" alt="3D Blockchain Rendering">
+        </section>
+
+        <!-- 星链手机验证通道 -->
+        <section class="verify-channel">
+            <h2>Astro Chain Mobile Verification Channel</h2>
+            <input type="text" placeholder="Enter your wallet address">
+            <button>Verify & Transfer</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AstroChannel. All Rights Reserved.</p>
+    </footer>
+
+    <!-- 粒子背景JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+                "color": {"value": "#4cc9f0"},
+                "shape": {"type": "circle"},
+                "opacity": {"value": 0.5, "random": true},
+                "size": {"value": 3, "random": true},
+                "line_linked": {"enable": true, "distance": 150, "color": "#f72585", "opacity": 0.2, "width": 1},
+                "move": {"enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false}
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {"enable": true, "mode": "grab"},
+                    "onclick": {"enable": true, "mode": "push"},
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {"distance": 140, "line_linked": {"opacity": 0.5}},
+                    "push": {"particles_nb": 4}
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
