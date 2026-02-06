@@ -92,6 +92,7 @@
         .hero {
             text-align: center;
             margin-bottom: 100px;
+            position: relative;
         }
         .hero h1 {
             font-size: 4rem;
@@ -99,6 +100,8 @@
             background: linear-gradient(90deg, #4cc9f0, #f72585);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 2;
         }
         .hero p {
             font-size: 1.2rem;
@@ -207,6 +210,25 @@
                 width: 80%;
             }
         }
+
+        /* ========== MA 跑动小人样式 ========== */
+        .ma-character {
+            position: absolute;
+            top: -60px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f72585;
+            z-index: 3;
+            animation: float 2s ease-in-out infinite alternate;
+        }
+        .ma-character:nth-child(2) {
+            color: #4cc9f0;
+            animation-delay: 1s;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
     </style>
 </head>
 <body>
@@ -231,6 +253,10 @@
 
         <!-- 核心内容区（替换为三个功能按钮，路径均为根目录） -->
         <section class="hero">
+            <!-- MA 跑动小人 -->
+            <div class="ma-character" id="ma1">MA</div>
+            <div class="ma-character" id="ma2">MA</div>
+
             <h1>Interstellar Cross-Chain Instant Transfer</h1>
             <p>Break inter-chain barriers, realize low-cost cross-chain circulation of virtual tokens, provide an efficient and fast channel for BECoin, and build a new decentralized cross-chain ecosystem</p>
             <!-- 核心功能按钮组：Astro Bridge / Astro Wallet / Astro Chain -->
@@ -286,6 +312,29 @@
             },
             "retina_detect": true
         });
+
+        // ========== MA 小人左右跑动逻辑 ==========
+        const ma1 = document.getElementById('ma1');
+        const ma2 = document.getElementById('ma2');
+        let pos1 = 10;
+        let pos2 = 80;
+        let speed1 = 1;
+        let speed2 = -1.2;
+
+        function moveMA() {
+            pos1 += speed1;
+            pos2 += speed2;
+
+            // 碰到边界反弹
+            if (pos1 < 0 || pos1 > 90) speed1 *= -1;
+            if (pos2 < 0 || pos2 > 90) speed2 *= -1;
+
+            ma1.style.left = pos1 + '%';
+            ma2.style.left = pos2 + '%';
+
+            requestAnimationFrame(moveMA);
+        }
+        moveMA();
     </script>
 </body>
 </html>
