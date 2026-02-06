@@ -44,6 +44,41 @@
         .community-links a:hover { color: #8b6dff; text-decoration: underline; }
         .footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #333333; color: #aaaaaa; font-size: 0.9rem; }
         .footer h3 { color: #cccccc; margin-bottom: 0.8rem; font-size: 1.1rem; }
+        /* 底部翻页按钮（和全体系统一，尾页仅保留上一页） */
+        .page-pagination {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333333;
+        }
+        .pagination-btn {
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, #6d4aff, #4a2fd8);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .pagination-btn:disabled {
+            background: #333344;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        .pagination-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
+        }
+        .pagination-empty {
+            width: 140px; /* 与按钮等宽，保持布局居中 */
+            height: 1px;
+            visibility: hidden;
+        }
         /* Responsive */
         @media (max-width: 768px) {
             .container { padding: 1.5rem; }
@@ -55,11 +90,13 @@
             .roadmap-card, .vision-card { padding: 1.2rem; }
             .vision-card h3 { font-size: 1.5rem; }
             .vision-card p { font-size: 1rem; }
+            .pagination-empty { width: 120px; }
         }
         @media (max-width: 480px) {
             .page-title { font-size: 1.8rem; }
             .nav-links { gap: 1rem; }
             .nav-links a { font-size: 0.9rem; }
+            .pagination-empty { width: 100px; }
         }
     </style>
 </head>
@@ -73,7 +110,7 @@
         <nav class="nav">
             <div class="nav-logo">AstroChannel</div>
             <div class="nav-links">
-                <a href="index.html">Vision</a>
+                <a href="page1.html">Vision</a>
                 <a href="page2.html">Pain Points</a>
                 <a href="page3.html">Technology</a>
                 <a href="page4.html">Products</a>
@@ -233,6 +270,12 @@
             <h3>FINAL DISCLAIMER</h3>
             <p>This white paper is only a descriptive document of AstroChannel's project development plan, ecological rules and technical roadmap, and does not constitute any form of investment advice, financial product recommendation or income commitment. AstroChannel is a decentralized community-driven ecological project, with no official backing, no team reserve, and no VC private placement. Cryptocurrency investment involves high risks such as extreme price volatility, regulatory policy changes, and technical vulnerabilities. Before participating in the project, you must fully understand the relevant risks and evaluate your own risk tolerance. All operations and investment decisions are made at your own risk. The AstroChannel community reserves the right to adjust the ecological rules, technical roadmap and incentive system based on on-chain data feedback, community DAO voting and industry regulatory policies. All adjustments will be announced through the official community social platforms, and the final interpretation right of the project belongs to the AstroChannel decentralized community. The project team/community shall not be liable for any direct or indirect economic losses, reputation losses or other losses caused by participating in the project.</p>
         </footer>
+
+        <!-- 底部翻页按钮 - 尾页仅保留上一页（page6），空容器保持布局对称 -->
+        <div class="page-pagination">
+            <a href="page6.html" class="pagination-btn">← Previous Page</a>
+            <div class="pagination-empty"></div>
+        </div>
     </div>
 
     <!-- Particle Animation -->
