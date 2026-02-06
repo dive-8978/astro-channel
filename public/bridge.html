@@ -15,7 +15,8 @@
       min-height:100vh;
       display:flex;
       justify-content:center;
-      align-items:center;
+      align-items:flex-start; /* 仅改这1行，从center变flex-start，解决滑动 */
+      padding: 2rem 0; /* 加个上下内边距，页面不贴顶，更美观 */
       color:#fff;
       position:relative;
       overflow:auto;
