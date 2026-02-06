@@ -40,6 +40,50 @@
         .community-links a:hover { color: #8b6dff; text-decoration: underline; }
         .footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #333333; color: #aaaaaa; font-size: 0.9rem; }
         .footer h3 { color: #cccccc; margin-bottom: 0.8rem; font-size: 1.1rem; }
+        /* Bottom Pagination */
+        .page-pagination {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333333;
+        }
+        .pagination-btn {
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, #6d4aff, #4a2fd8);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .pagination-btn:disabled {
+            background: #333344;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        .pagination-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
+        }
+        /* Meme Activity Styles */
+        .meme-activity-card {
+            background: linear-gradient(135deg, #120a2d, #1a1042);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #6d4aff;
+            margin: 3rem 0;
+        }
+        .meme-activity-title {
+            color: #6d4aff;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
         /* Responsive */
         @media (max-width: 768px) {
             .container { padding: 1.5rem; }
@@ -141,6 +185,7 @@
                 <div class="list-item"><strong>Qualification Rule</strong>: Only for natural person users; institutional/quantitative addresses with bulk participation will be excluded, and the community has the right to judge user types through on-chain behavior analysis.</div>
             </div>
         </section>
+        </section>
 
         <!-- Benefit 2: Starlink Phone Exclusive Benefits -->
         <section class="section">
@@ -202,14 +247,32 @@
             </div>
         </section>
 
+        <!-- MemeAstro (MA) Exclusive Community Activity Rules -->
+        <section class="section">
+            <h2 class="section-title">MemeAstro (MA) Exclusive Community Activity Rules</h2>
+            <div class="section-content">
+                <div class="meme-activity-card">
+                    <h3 class="meme-activity-title">MA Community Fission & Holding Mining Activity (Cold Start Exclusive)</h3>
+                    <div class="list-item"><strong>1. Referral Fission Campaign</strong>: Invite new users to hold ≥100,000 MA for the first time; referrers get 5,000 MA, new users get 2,000 MA. A single referrer can earn up to 500,000 MA; limited to the first 1,000 valid referrals.</div>
+                    <div class="list-item"><strong>2. Holding Mining Campaign</strong>: Hold ≥500,000 MA daily to share a 100,000 MA pool; holding ≥1,000,000 MA increases mining yield by 1.5x. Pool settles daily at 24:00 and auto-distributes to wallets.</div>
+                    <div class="list-item"><strong>3. Community Engagement Campaign</strong>: Complete daily check-in, repost project tweets, and comment on Telegram/X to get 1,000-5,000 MA random rewards. Daily limited, first-come-first-served.</div>
+                    <div class="list-item"><strong>4. Campaign Period</strong>: 30 days after MA launch (cold start exclusive). All rewards are allocated from the community ecological fund with no additional issuance.</div>
+                    <div class="list-item"><strong>5. Withdrawal Rules</strong>: MA rewards are locked for 7 days; after unlocking, free to withdraw/trade. Multi-address reward farming will result in permanent disqualification.</div>
+                </div>
+                <div class="list-item"><strong>Campaign Core</strong>: All Meme activities aim to boost community activity. Rewards are linked to ASTRO ecological rights; MA from activities can participate in ASTRO airdrops and cross-chain fee reductions.</div>
+                <div class="list-item"><strong>Data Query</strong>: Activity progress and reward details are available in the AstroChannel official DApp in real time, with all data on-chain and traceable.</div>
+            </div>
+        </section>
+        </section>
+
         <!-- Incentive Distribution & Claim Rules -->
         <section class="section">
             <h2 class="section-title">Incentive Distribution & Claim Rules</h2>
             <div class="section-content">
-                <div class="list-item"><strong>Distribution Time</strong>: ASTRO airdrops will be distributed within 7 working days after the mainnet launch; cross-chain incentives are distributed on the 5th of each month; Starlink exclusive benefits are unlocked immediately after review.</div>
-                <div class="list-item"><strong>Claim Method</strong>: All incentives are automatically credited to the bound wallet address, no manual claim is required; the transaction record can be viewed on the official block explorer.</div>
-                <div class="list-item"><strong>Unclaimed Incentives</strong>: Incentives that are not credited due to wallet address errors will be retained in the community treasury for 3 months; users can apply for reissuance with valid proof within the time limit.</div>
-                <div class="list-item"><strong>Tax Rule</strong>: All ASTRO incentives are not subject to additional handling fees; the corresponding Gas fee for receiving tokens is borne by the user, and Starlink users can enjoy Gas fee subsidy.</div>
+                <div class="list-item"><strong>Distribution Time</strong>: ASTRO airdrops are distributed within 7 working days after mainnet launch; cross-chain incentives are distributed on the 5th of each month; Starlink exclusive benefits unlock immediately after review.</div>
+                <div class="list-item"><strong>Claim Method</strong>: All incentives are automatically credited to the bound wallet address; no manual claim required. Transaction records are viewable on the official block explorer.</div>
+                <div class="list-item"><strong>Unclaimed Incentives</strong>: Uncredited incentives due to wallet errors are held in the community treasury for 3 months; users can apply for reissue with valid proof within the period.</div>
+                <div class="list-item"><strong>Tax Rule</strong>: All ASTRO incentives are free of additional fees; users bear the Gas fee for receiving tokens, and Starlink users enjoy Gas fee subsidies.</div>
             </div>
         </section>
 
@@ -217,10 +280,10 @@
         <section class="section">
             <h2 class="section-title">Anti-Arbitrage & Fairness Rules</h2>
             <div class="section-content">
-                <div class="list-item">The official will use on-chain behavior analysis technology to identify and block wool mining addresses, including bulk address registration, high-frequency transfer, and cross-chain brushing behavior.</div>
-                <div class="list-item">Users who are found to have arbitrage behavior will have their incentive qualification cancelled permanently, and the already received incentives will be recovered to the community treasury through smart contract.</div>
-                <div class="list-item">The community DAO will vote on the adjustment of incentive rules every quarter to adapt to the ecological development and ensure the long-term fairness of the incentive system.</div>
-                <div class="list-item">All anti-arbitrage judgments are based on on-chain data, and the results are open and transparent; users who have objections can appeal through the official community.</div>
+                <div class="list-item">Official uses on-chain behavior analysis to identify and block reward farming addresses, including bulk registration, high-frequency transfers, and cross-chain brushing.</div>
+                <div class="list-item">Users found arbitraging will have incentives permanently revoked; already received incentives are reclaimed to the community treasury via smart contract.</div>
+                <div class="list-item">Community DAO votes quarterly on incentive rule adjustments to adapt to ecological development and ensure long-term fairness.</div>
+                <div class="list-item">All anti-arbitrage judgments are based on on-chain data with transparent results; users can appeal through official communities if they have objections.</div>
             </div>
         </section>
 
@@ -240,6 +303,12 @@
             <h3>DISCLAIMER</h3>
             <p>This white paper is only a description of the project development plan and ecological rules, and does not constitute any investment advice, income commitment or value guarantee. The AstroChannel community reserves the right to adjust ecological rules (including airdrops, incentives, token unlocking, etc.) based on on-chain data feedback, community DAO voting, and industry regulatory policies. All adjustments will be announced through official communities, and the final interpretation right belongs to the AstroChannel decentralized community. Cryptocurrency investment involves high risks of principal loss; participation implies that you are aware of and accept all risks, and the project team/community shall not be liable for any direct or indirect loss compensation.</p>
         </footer>
+
+        <!-- Bottom Pagination -->
+        <div class="page-pagination">
+            <a href="page5.html" class="pagination-btn">← Previous Page</a>
+            <a href="page7.html" class="pagination-btn">Next Page →</a>
+        </div>
     </div>
 
     <!-- Particle Animation -->
