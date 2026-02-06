@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTRO Wallet V5 - Mars Explorer</title>
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@lifi/sdk@2.7.0/dist/index.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
+body{
+  background:radial-gradient(circle at 25% 25%,#2b0a03,#0c0200);
+  color:#fff;min-height:100vh;display:flex;justify-content:center;align-items:center;overflow:hidden;padding:1rem;
+}
+.orbit-bg{
+  position:absolute;inset:0;z-index:0;
+  background:url('data:image/svg+xml,%3Csvg width="60" height="60" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="30" cy="30" r="1" fill="%23FF4500" fill-opacity="0.15"/%3E%3C/svg%3E') repeat;
+  animation:drift 180s linear infinite;
+}
+@keyframes drift{0%{background-position:0 0;}100%{background-position:-4000px 4000px;}}
+/* 多轨道卫星（新增） */
+.satellite{
+  position:absolute;width:10px;height:10px;background:#00ffff;border-radius:50%;
+  box-shadow:0 0 6px #0ff;animation:orbitAnim linear infinite;
+  --r: 180px; /* 轨道半径 */
+}
+.satellite:nth-child(2){--r: 220px;animation-duration:25s;}
+.satellite:nth-child(3){--r: 150px;animation-duration:18s;}
+.satellite:nth-child(4){--r: 250px;animation-duration:30s;}
+@keyframes orbitAnim{0%{transform:rotate(0deg) translateX(var(--r)) rotate(0deg);}100%{transform:rotate(360deg) translateX(var(--r)) rotate(-360deg);}}
+.wallet-container{
+  position:relative;z-index:1;width:100%;max-width:500px;padding:2rem;
+  backdrop-filter:blur(15px);background:rgba(255,255,255,0.05);
+  border-radius:25px;border:1px solid rgba(255,69,0,0.3);box-shadow:0 0 50px rgba(255,69,0,0.4);
+  text-align:center;
+}
+h1{
+  font-size:2.8rem;background:linear-gradient(90deg,#ff4500,#ff8c00,#ff69b4);
+  -webkit-background-clip:text;color:transparent;margin-bottom:0.5rem;animation:glow 3s infinite alternate;
+}
+@keyframes glow{0%{text-shadow:0 0 5px #ff4500,0 0 10px #ff4500;}100%{text-shadow:0 0 25px #ff69b4,0 0 50px #ff8c00;}}
+.tagline{color:#FFA07A;margin-bottom:2rem;font-size:1.1rem;}
+.group{text-align:left;margin-bottom:1.2rem;}
+.group label{display:block;margin-bottom:0.4rem;font-size:0.9rem;color:#FFA07A;}
+.wallet-status{margin-bottom:1rem;font-weight:600;color:#FFD700;}
+.balance{margin-top:0.3rem;color:#FF8C00;font-size:0.9rem;}
+.usd-balance{font-size:0.8rem;color:#FFD700;margin-top:0.2rem;}
+input,select{
+  width:100%;padding:0.9rem 1rem;margin-top:0.3rem;border-radius:12px;
+  border:1px solid rgba(255,140,0,0.3);background:rgba(50,20,10,0.6);color:#fff;
+  outline:none;font-size:1rem;transition:0.3s;
+}
+input:focus,select:focus{border-color:#ff8c00;box-shadow:0 0 10px #ff4500;}
+button{
+  width:100%;padding:1rem;margin-top:0.8rem;border:none;border-radius:15px;
+  font-size:1rem;font-weight:600;cursor:pointer;
+  background:linear-gradient(90deg,#ff4500,#ff8c00);color:#fff;
+  position:relative;overflow:hidden;transition:0.3s;
+}
+/* 按钮间距修复 */
+button + button {margin-top: 0.8rem;}
+button::after{
+  content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
+  transition:left 0.5s;
+}
+button:hover::after{left:100%;}
+button:hover{box-shadow:0 0 25px #ff4500;}
+button:disabled{opacity:0.5;cursor:not-allowed;background:#666;}
+.funct-btns{display:flex;gap:0.8rem;margin-top:1.5rem;}
+.funct-btn{flex:1;background:linear-gradient(90deg,#ff69b4,#ff4500);font-size:0.9rem;}
+.status{min-height:1.4rem;margin-top:1rem;font-size:0.95rem;}
+.success{color:#32CD32;}
+.warn{color:#FFA500;}
+.error{color:#FF6347;}
+.rocket{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%) translateY(0);
+  width:40px;height:80px;background:#ff4500;border-radius:20px 20px 0 0;
+  box-shadow:0 0 20px #ff8c00;
+  transition: transform 2s ease-in-out;
+  z-index: 1; /* 火箭层级高于卫星 */
+}
+.rocket.launch{transform:translateX(-50%) translateY(-450px);}
+.rocket::after{
+  content:"";position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);
+  width:8px;height:20px;background:linear-gradient(180deg,#FFD700,#FF4500);
+  border-radius:50%;filter:blur(4px);opacity:0.8;animation:flame 0.3s infinite;
+}
+@keyframes flame{0%{transform:translateX(-50%) scaleY(0.6);}50%{transform:translateX(-50%) scaleY(1.2);}100%{transform:translateX(-50%) scaleY(0.6);}}
+</style>
+</head>
+<body>
+<div class="orbit-bg"></div>
+<!-- 多轨道卫星（新增） -->
+<div class="satellite"></div>
+<div class="satellite"></div>
+<div class="satellite"></div>
+<div class="satellite"></div>
+
+<div class="wallet-container">
+  <h1>ASTRO Wallet</h1>
+  <p class="tagline">Mars Explorer Cross-Chain Wallet</p>
+  <p class="wallet-status" id="walletStatus">Wallet not connected</p>
+  <button id="connectBtn">Connect Wallet</button>
+
+  <div class="group">
+    <label>ASTRO Balance</label>
+    <div class="balance" id="balance">-- ASTRO</div>
+    <div class="usd-balance" id="usdBalance">-- USD</div>
+  </div>
+
+  <div class="group">
+    <label>From Chain</label>
+    <select id="fromChain">
+      <option value="1">Ethereum</option>
+      <option value="5">Goerli</option>
+      <option value="10">Optimism</option>
+      <option value="137">Polygon</option>
+      <option value="42161">Arbitrum</option>
+    </select>
+  </div>
+
+  <div class="group">
+    <label>To Chain</label>
+    <select id="toChain">
+      <option value="10">Optimism</option>
+      <option value="137">Polygon</option>
+      <option value="42161">Arbitrum</option>
+      <option value="1">Ethereum</option>
+      <option value="5">Goerli</option>
+    </select>
+  </div>
+
+  <div class="group">
+    <label>Recipient Address</label>
+    <input type="text" id="recipient" placeholder="0x...">
+  </div>
+
+  <div class="group">
+    <label>Amount (ASTRO)</label>
+    <input type="number" id="amount" placeholder="0.001" step="0.001" min="0.001">
+  </div>
+
+  <button id="sendBtn" disabled>Send ASTRO</button>
+  <button id="crossChainBtn" disabled>Cross-Chain Transfer</button>
+
+  <div class="status" id="status"></div>
+</div>
+
+<div class="rocket" id="rocket"></div>
+
+<script>
+let provider, signer, account, token, lifi;
+const ASTRO_ADDRESS = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853";
+const ASTRO_USD_RATE = 0.01;
+const ERC20_ABI = [
+  "function balanceOf(address) view returns(uint256)",
+  "function transfer(address,uint256) returns(bool)",
+  "function approve(address spender,uint256 amount) returns(bool)",
+  "function allowance(address owner,address spender) view returns(uint256)"
+];
+
+const walletStatus = document.getElementById('walletStatus');
+const connectBtn = document.getElementById('connectBtn');
+const balanceEl = document.getElementById('balance');
+const usdBalanceEl = document.getElementById('usdBalance');
+const fromChain = document.getElementById('fromChain');
+const toChain = document.getElementById('toChain');
+const recipientEl = document.getElementById('recipient');
+const amountEl = document.getElementById('amount');
+const sendBtn = document.getElementById('sendBtn');
+const crossChainBtn = document.getElementById('crossChainBtn');
+const statusEl = document.getElementById('status');
+const rocket = document.getElementById('rocket');
+
+async function initLiFi() {
+  lifi = new LiFi({ integrator: "ASTRO-Wallet-V5" });
+}
+
+function setStatus(text, type = "") {
+  statusEl.textContent = text;
+  statusEl.className = `status ${type}`;
+}
+
+async function updateBalance() {
+  if (!token || !account) return;
+  try {
+    const bal = await token.balanceOf(account);
+    const balEth = parseFloat(ethers.utils.formatEther(bal));
+    balanceEl.textContent = `${balEth.toFixed(4)} ASTRO`;
+    usdBalanceEl.textContent = `$${(balEth * ASTRO_USD_RATE).toFixed(2)} USD`;
+  } catch(e) {
+    setStatus("Balance load failed", "error");
+  }
+}
+
+async function watchNetwork() {
+  if (!window.ethereum) return;
+  window.ethereum.on('chainChanged',()=>window.location.reload());
+  window.ethereum.on('accountsChanged',()=>window.location.reload());
+}
+
+connectBtn.onclick = async () => {
+  if (!window.ethereum) { setStatus("MetaMask not found","error"); return; }
+  try {
+    setStatus("Connecting...","warn");
+    [account] = await window.ethereum.request({ method:'eth_requestAccounts' });
+    provider = new ethers.providers.Web3Provider(window.ethereum);
+    signer = provider.getSigner();
+    token = new ethers.Contract(ASTRO_ADDRESS, ERC20_ABI, signer);
+    await initLiFi();
+    watchNetwork();
+    walletStatus.textContent = `Connected: ${account.slice(0,6)}...${account.slice(-4)}`;
+    sendBtn.disabled = false;
+    crossChainBtn.disabled = false;
+    await updateBalance();
+    setStatus("Wallet connected","success");
+  } catch(e) { setStatus(e.message,"error"); }
+};
+
+// 单链转账
+sendBtn.onclick = async () => {
+  const to = recipientEl.value.trim();
+  const amt = parseFloat(amountEl.value);
+  if (!ethers.utils.isAddress(to)) { setStatus("Invalid address","error"); return; }
+  if (!amt || amt <=0) { setStatus("Invalid amount","error"); return; }
+  try {
+    setStatus("Sending...","warn");
+    sendBtn.disabled = true;
+    const tx = await token.transfer(to, ethers.utils.parseEther(amt.toString()));
+    await tx.wait();
+    setStatus("Transfer success!","success");
+    await updateBalance();
+  } catch(e){ setStatus(e.message,"error"); }
+  finally{ sendBtn.disabled=false; }
+};
+
+// 跨链转账（修复lifi.contractAddress报错）
+crossChainBtn.onclick = async () => {
+  const fromChainId = parseInt(fromChain.value);
+  const toChainId = parseInt(toChain.value);
+  const to = recipientEl.value.trim();
+  const amt = parseFloat(amountEl.value);
+  
+  if (!ethers.utils.isAddress(to)) { setStatus("Invalid recipient","error"); return; }
+  if (!amt || amt<=0) { setStatus("Invalid amount","error"); return; }
+  if (fromChainId === toChainId) { setStatus("Same chain, use Send","warn"); return; }
+  
+  try {
+    setStatus("Launching rocket...","warn");
+    crossChainBtn.disabled = true;
+    rocket.classList.add('launch');
+
+    const amountWei = ethers.utils.parseEther(amt.toString());
+    
+    // 修复：先获取LiFi路由，再从路由中取授权地址（避免lifi.contractAddress不存在）
+    setStatus("Finding best route...","warn");
+    const routes = await lifi.getRoutes({
+      fromChain: fromChainId,
+      toChain: toChainId,
+      fromToken: ASTRO_ADDRESS,
+      toToken: ASTRO_ADDRESS,
+      fromAmount: amountWei.toString(),
+      fromAddress: account,
+      toAddress: to,
+      options:{slippage:0.01}
+    });
+    
+    if(!routes || routes.routes.length===0) throw new Error("No cross-chain route");
+    
+    // 智能授权：从路由中获取需要授权的spender地址
+    const spender = routes.routes[0].steps[0].estimate.approvalAddress;
+    if (spender) {
+      const allowance = await token.allowance(account, spender);
+      if (allowance.lt(amountWei)) {
+        setStatus("Approving...","warn");
+        const approveTx = await token.approve(spender, ethers.constants.MaxUint256);
+        await approveTx.wait();
+      }
+    }
+
+    setStatus("Executing cross-chain...","warn");
+    await lifi.executeRoute(routes.routes[0], signer);
+
+    setStatus("Cross-chain success!","success");
+    await updateBalance();
+  } catch(e){ setStatus(e.message,"error"); }
+  finally {
+    crossChainBtn.disabled=false;
+    setTimeout(()=>rocket.classList.remove('launch'),2500);
+  }
+};
+</script>
+</body>
+</html>
