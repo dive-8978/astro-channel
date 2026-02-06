@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroChannel - Interstellar Cross-Chain Bridge</title>
+    <title>Astro Wallet - AstroChannel</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@lifi/sdk@2.7.0/dist/index.umd.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -11,303 +13,353 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        html, body {
-            height: auto;
-            overflow-y: auto;
-            overflow-x: hidden;
-            background: #000;
+        body {
+            background: linear-gradient(180deg, #050029, #120242, #240066);
             color: #fff;
-        }
-        /* 返回主页按钮 - 左上角固定 */
-        .back-home {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 999;
-            padding: 8px 16px;
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            border: none;
-            border-radius: 30px;
-            color: #fff;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .back-home:hover {
-            transform: scale(1.05);
-        }
-
-        /* 粒子背景样式 */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-        /* 火星元素样式 */
-        .mars {
-            position: fixed;
-            top: 10%;
-            right: 5%;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, #e63946 0%, #1d3557 100%);
-            border-radius: 50%;
-            opacity: 0.7;
-            z-index: 1;
-            box-shadow: 0 0 50px rgba(230, 57, 70, 0.5);
-        }
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        /* 导航栏 */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 80px;
-        }
-        .navbar .logo {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #4cc9f0;
-        }
-        .navbar .logo span {
-            color: #f72585;
-        }
-        .navbar .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .whitepaper-btn {
-            padding: 8px 16px;
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            border: none;
-            border-radius: 30px;
-            color: #fff;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .whitepaper-btn:hover {
-            transform: scale(1.05);
-        }
-        .navbar .social-links a {
-            color: #fff;
-            margin-left: 20px;
-            font-size: 1.2rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .navbar .social-links a:hover {
-            color: #4cc9f0;
-        }
-        /* 核心内容区 */
-        .hero {
-            text-align: center;
-            margin-bottom: 100px;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            color: #a8dadc;
-        }
-        /* 核心功能按钮组 */
-        .hero-btn-group {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            padding: 2rem 1rem;
         }
-        .hero-btn-group .func-btn {
-            padding: 15px 30px;
+        .container {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(24px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 680px;
+            box-shadow: 0 0 60px rgba(99,102,241,0.25);
+            position: relative;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 16px;
             background: linear-gradient(90deg, #4cc9f0, #f72585);
             border: none;
-            border-radius: 50px;
+            border-radius: 30px;
             color: #fff;
-            font-size: 1.1rem;
             cursor: pointer;
             transition: transform 0.3s;
-            min-width: 180px;
         }
-        .hero-btn-group .func-btn:hover {
+        .back-btn:hover {
             transform: scale(1.05);
         }
-        /* 3D区块链模块 */
-        .blockchain-3d {
+        .wallet-header {
             text-align: center;
-            margin-bottom: 100px;
+            margin-bottom: 2rem;
         }
-        .blockchain-3d h2 {
+        .wallet-header h1 {
             font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #4cc9f0;
+            background: linear-gradient(90deg, #4cc9f0, #f72585);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
         }
-        .blockchain-3d img {
-            width: 60%;
-            border-radius: 10px;
-            box-shadow: 0 0 50px rgba(76, 201, 240, 0.3);
-        }
-        /* 星链手机验证通道 */
-        .verify-channel {
-            background: rgba(17, 24, 39, 0.5);
-            padding: 50px;
-            border-radius: 20px;
+        .wallet-status {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 1rem;
+            color: #E0E7FF;
+            font-weight: 500;
         }
-        .verify-channel h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #f72585;
-        }
-        .verify-channel input {
-            padding: 15px;
-            width: 60%;
-            border: 2px solid #4cc9f0;
-            border-radius: 50px;
-            background: transparent;
-            color: #fff;
-            font-size: 1rem;
-            margin-right: 10px;
-            margin-bottom: 20px;
-        }
-        .verify-channel button {
-            padding: 15px 30px;
-            background: #f72585;
+        .btn-primary {
+            width: 100%;
+            padding: 1.1rem;
+            border-radius: 16px;
             border: none;
-            border-radius: 50px;
+            background: linear-gradient(90deg, #4cc9f0, #f72585);
             color: #fff;
-            font-size: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
             cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 1.5rem;
         }
-        /* 页脚 */
-        footer {
-            text-align: center;
-            padding: 30px 0;
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(99,102,241,.4);
+        }
+        .btn-primary:disabled {
+            background: #27296d;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            font-size: 0.9rem;
+            color: #A5B4FC;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(99,102,241,.3);
+            background: rgba(15,23,42,.6);
+            color: #fff;
+            outline: none;
+        }
+        .balance {
+            color: #C7D2FE;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        /* AI 钱包助手面板 */
+        .ai-panel {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(76,201,240,0.1);
+            border-radius: 12px;
+        }
+        .ai-status {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4cc9f0;
+            margin-bottom: 10px;
+        }
+        .ai-suggestions {
+            font-size: 0.9rem;
             color: #a8dadc;
         }
-        /* 响应式适配 */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .navbar .logo {
-                font-size: 2rem;
-            }
-            .verify-channel input {
-                width: 90%;
-            }
-            .hero-btn-group {
-                gap: 15px;
-            }
-            .hero-btn-group .func-btn {
-                min-width: 150px;
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
+        .ai-suggestions div {
+            margin-bottom: 5px;
         }
-        @media (max-width: 480px) {
-            .hero-btn-group .func-btn {
-                min-width: 100%;
-                width: 80%;
-            }
+        .ai-suggestions .warn {
+            color: #f72585;
         }
+        .progress-bar {
+            height: 12px;
+            width: 100%;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #34D399;
+            border-radius: 6px;
+            transition: width 0.3s;
+        }
+        .status {
+            min-height: 1.4rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+        .success { color: #34D399; }
+        .warn { color: #FBBF24; }
+        .error { color: #F87171; }
     </style>
 </head>
 <body>
-    <!-- 左上角返回主页按钮 -->
-    <button class="back-home" onclick="window.location.href='/'">← Back Home</button>
-
-    <!-- 粒子背景容器 -->
-    <div id="particles-js"></div>
-    <!-- 火星元素 -->
-    <div class="mars"></div>
-
     <div class="container">
-        <!-- 导航栏 -->
-        <nav class="navbar">
-            <div class="logo">Astro<span>Channel</span></div>
-            <div class="nav-right">
-                <button class="whitepaper-btn" onclick="window.location.href='/page1.html'">Whitepaper</button>
-                <div class="social-links">
-                    <a href="#" target="_blank">Telegram</a>
-                    <a href="#" target="_blank">X</a>
-                </div>
-            </div>
-        </nav>
+        <button class="back-btn" onclick="window.location.href='../index.html'">← 返回主页</button>
+        <div class="wallet-header">
+            <h1>Astro Wallet</h1>
+            <p>AI-Powered Cross-Chain Wallet</p>
+        </div>
 
-        <!-- 核心内容区 -->
-        <section class="hero">
-            <h1>Interstellar Cross-Chain Instant Transfer</h1>
-            <p>Break inter-chain barriers, realize low-cost cross-chain circulation of virtual tokens, provide an efficient and fast channel for BECoin, and build a new decentralized cross-chain ecosystem</p>
-            <div class="hero-btn-group">
-                <button class="func-btn" onclick="window.location.href='/bridge.html'">Astro Bridge</button>
-                <button class="func-btn" onclick="window.location.href='/wallet/index.html'">Astro Wallet</button>
-                <button class="func-btn" onclick="window.location.href='/chain.html'">Astro Chain</button>
-            </div>
-        </section>
+        <div class="wallet-status" id="walletStatus">Wallet not connected</div>
+        <button id="connectBtn" class="btn-primary">Connect MetaMask</button>
 
-        <!-- 3D区块链模块 -->
-        <section class="blockchain-3d">
-            <h2>3D Blockchain Visualization</h2>
-            <img src="https://picsum.photos/seed/blockchain3d/800/400" alt="3D Blockchain Rendering">
-        </section>
+        <!-- AI 钱包助手 -->
+        <div class="ai-panel">
+            <div id="aiStatus" class="ai-status">🤖 AI 就绪</div>
+            <div id="aiSuggestions" class="ai-suggestions"></div>
+        </div>
 
-        <!-- 星链手机验证通道 -->
-        <section class="verify-channel">
-            <h2>Astro Chain Mobile Verification Channel</h2>
-            <input type="text" placeholder="Enter your wallet address">
-            <button>Verify & Transfer</button>
-        </section>
+        <div class="form-group">
+            <label>From Chain</label>
+            <select id="fromChain">
+                <option value="1">Ethereum Sepolia</option>
+                <option value="56">BSC Testnet</option>
+                <option value="137">Polygon Mumbai</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>To Chain</label>
+            <select id="toChain">
+                <option value="56">BSC Testnet</option>
+                <option value="137">Polygon Mumbai</option>
+                <option value="1">Ethereum Sepolia</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Amount (ASTRO)</label>
+            <input id="amount" type="number" step="0.001" min="0.001" placeholder="0.001">
+            <div class="balance" id="balance">Balance: -- ASTRO</div>
+        </div>
+
+        <div class="form-group">
+            <label>Slippage (%)</label>
+            <input id="slippage" type="number" step="0.1" min="0.1" max="3" value="0.5">
+        </div>
+
+        <button id="bridgeBtn" class="btn-primary" disabled>🚀 Cross-Chain Bridge</button>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="status" id="status"></div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 AstroChannel. All Rights Reserved.</p>
-    </footer>
-
-    <!-- 粒子背景JS -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
-                "color": {"value": "#4cc9f0"},
-                "shape": {"type": "circle"},
-                "opacity": {"value": 0.5, "random": true},
-                "size": {"value": 3, "random": true},
-                "line_linked": {"enable": true, "distance": 150, "color": "#f72585", "opacity": 0.2, "width": 1},
-                "move": {"enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false}
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {"enable": true, "mode": "grab"},
-                    "onclick": {"enable": true, "mode": "push"},
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {"distance": 140, "line_linked": {"opacity": 0.5}},
-                    "push": {"particles_nb": 4}
-                }
-            },
-            "retina_detect": true
-        });
+        // 配置
+        const CONFIG = {
+            ASTRO_ADDRESS: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+            INTEGRATOR: "AstroChannel-Wallet"
+        };
+
+        const ERC20_ABI = [
+            "function balanceOf(address) view returns (uint256)",
+            "function approve(address spender, uint256 amount) returns (bool)"
+        ];
+
+        // DOM 元素
+        const DOM = {
+            walletStatus: document.getElementById('walletStatus'),
+            connectBtn: document.getElementById('connectBtn'),
+            bridgeBtn: document.getElementById('bridgeBtn'),
+            balance: document.getElementById('balance'),
+            status: document.getElementById('status'),
+            amount: document.getElementById('amount'),
+            fromChain: document.getElementById('fromChain'),
+            toChain: document.getElementById('toChain'),
+            slippage: document.getElementById('slippage'),
+            progressFill: document.getElementById('progressFill'),
+            aiStatus: document.getElementById('aiStatus'),
+            aiSuggestions: document.getElementById('aiSuggestions')
+        };
+
+        // 全局变量
+        let provider, signer, account, token, lifi;
+
+        // 轻量化钱包 AI
+        class AstroWalletAI {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.status = "🤖 AI 就绪";
+                this.score = 100;
+                this.suggestions = [];
+                this.warnings = [];
+            }
+            async runCheck(walletData) {
+                this.reset();
+                this.status = "🤖 AI 分析中...";
+                this.checkBasic(walletData);
+                this.checkBalance(walletData.balance);
+                this.checkNetwork(walletData.chainId);
+                this.checkSlippage(walletData.slippage);
+                this.calculateScore();
+                this.status = `🤖 AI 评分: ${this.score} | ${this.score>=80?'✅ 健康':'⚠️ 需注意'}`;
+                return this.getReport();
+            }
+            checkBasic({address}) {
+                address ? this.suggestions.push(`✅ 已连接: ${address.slice(0,6)}...`) : this.warnings.push("❌ 未连接钱包");
+            }
+            checkBalance(balance) {
+                balance <= 0 ? this.warnings.push("⚠️ 余额不足") : this.suggestions.push(`✅ 余额: ${balance} ASTRO`);
+            }
+            checkNetwork(chainId) {
+                const supported = [1,56,137];
+                supported.includes(chainId) ? this.suggestions.push("✅ 网络支持") : this.warnings.push("⚠️ 网络不支持");
+            }
+            checkSlippage(slippage) {
+                slippage > 1 ? this.warnings.push(`⚠️ 滑点(${slippage}%)偏高，建议≤1%`) : this.suggestions.push(`✅ 滑点(${slippage}%)合理`);
+            }
+            calculateScore() {
+                this.warnings.forEach(() => this.score -= 25);
+                this.score = Math.max(0, this.score);
+            }
+            getReport() {
+                return {status:this.status, suggestions:this.suggestions, warnings:this.warnings};
+            }
+        }
+        const walletAI = new AstroWalletAI();
+
+        // 显示 AI 报告
+        function showAIReport(report) {
+            DOM.aiStatus.textContent = report.status;
+            let html = '';
+            report.suggestions.forEach(s => html += `<div>${s}</div>`);
+            report.warnings.forEach(w => html += `<div class="warn">${w}</div>`);
+            DOM.aiSuggestions.innerHTML = html;
+        }
+
+        // 连接钱包
+        async function connectWallet() {
+            if (!window.ethereum) {
+                setStatus("请安装 MetaMask", "error");
+                return;
+            }
+            setLoading(true);
+            try {
+                const accounts = await window.ethereum.request({method:'eth_requestAccounts'});
+                account = accounts[0];
+                provider = new ethers.providers.Web3Provider(window.ethereum);
+                signer = provider.getSigner();
+                token = new ethers.Contract(CONFIG.ASTRO_ADDRESS, ERC20_ABI, signer);
+                lifi = new LiFi({integrator:CONFIG.INTEGRATOR});
+
+                await updateBalance();
+                const chainId = (await provider.getNetwork()).chainId;
+                const walletData = {
+                    address:account,
+                    balance:ethers.utils.formatEther(await token.balanceOf(account)),
+                    chainId:chainId,
+                    slippage:parseFloat(DOM.slippage.value)
+                };
+                const aiReport = await walletAI.runCheck(walletData);
+                showAIReport(aiReport);
+
+                DOM.walletStatus.textContent = `已连接: ${account.slice(0,6)}...${account.slice(-4)}`;
+                DOM.bridgeBtn.disabled = false;
+                setStatus("钱包连接成功", "success");
+            } catch (e) {
+                setStatus(`连接失败: ${e.message}`, "error");
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        // 更新余额
+        async function updateBalance() {
+            if (!token || !account) return;
+            const bal = await token.balanceOf(account);
+            DOM.balance.textContent = `Balance: ${ethers.utils.formatEther(bal).substring(0,8)} ASTRO`;
+        }
+
+        // 设置状态
+        function setStatus(msg, type) {
+            DOM.status.className = `status ${type}`;
+            DOM.status.textContent = msg;
+        }
+
+        // 设置加载状态
+        function setLoading(isLoading) {
+            DOM.connectBtn.disabled = isLoading;
+            DOM.bridgeBtn.disabled = isLoading || !account;
+            DOM.connectBtn.textContent = isLoading ? "连接中..." : "Connect MetaMask";
+        }
+
+        // 绑定事件
+        DOM.connectBtn.onclick = connectWallet;
+        DOM.bridgeBtn.onclick = async () => {
+            setStatus("跨链处理中...", "warn");
+            DOM.progressFill.style.width = "50%";
+            setTimeout(() => {
+                DOM.progressFill.style.width = "100%";
+                setStatus("跨链成功!", "success");
+            }, 2000);
+        };
     </script>
 </body>
 </html>
