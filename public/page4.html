@@ -38,6 +38,36 @@
         .community-links a:hover { color: #8b6dff; text-decoration: underline; }
         .footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #333333; color: #aaaaaa; font-size: 0.9rem; }
         .footer h3 { color: #cccccc; margin-bottom: 0.8rem; font-size: 1.1rem; }
+        /* 底部翻页按钮（和全体系统一） */
+        .page-pagination {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333333;
+        }
+        .pagination-btn {
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(135deg, #6d4aff, #4a2fd8);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .pagination-btn:disabled {
+            background: #333344;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        .pagination-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
+        }
         /* Responsive */
         @media (max-width: 768px) {
             .container { padding: 1.5rem; }
@@ -64,7 +94,7 @@
         <nav class="nav">
             <div class="nav-logo">AstroChannel</div>
             <div class="nav-links">
-                <a href="index.html">Vision</a>
+                <a href="page1.html">Vision</a>
                 <a href="page2.html">Pain Points</a>
                 <a href="page3.html">Technology</a>
                 <a href="page4.html" class="active">Products</a>
@@ -171,6 +201,12 @@
             <h3>DISCLAIMER</h3>
             <p>This white paper is only a description of the project development plan and ecological rules, and does not constitute any investment advice, income commitment or value guarantee. The AstroChannel community reserves the right to adjust ecological rules (including airdrops, incentives, token unlocking, etc.) based on on-chain data feedback, community DAO voting, and industry regulatory policies. All adjustments will be announced through official communities, and the final interpretation right belongs to the AstroChannel decentralized community. Cryptocurrency investment involves high risks of principal loss; participation implies that you are aware of and accept all risks, and the project team/community shall not be liable for any direct or indirect loss compensation.</p>
         </footer>
+
+        <!-- 底部翻页按钮 - 上一页page3，下一页page5 -->
+        <div class="page-pagination">
+            <a href="page3.html" class="pagination-btn">← Previous Page</a>
+            <a href="page5.html" class="pagination-btn">Next Page →</a>
+        </div>
     </div>
 
     <!-- Particle Animation -->
