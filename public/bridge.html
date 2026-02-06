@@ -1,385 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroChannel - Cross-Chain Bridge</title>
-    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        body {
-            background: linear-gradient(180deg, #050029 0%, #1A0050 50%, #2E007A 100%);
-            background-attachment: fixed;
-            color: #FFFFFF;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-            position: relative;
-        }
-        /* 动态流动星空背景 - 叠加星光流动效果 */
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            animation: starFlow 80s linear infinite;
-        }
-        /* 星光闪烁+流动动画 */
-        @keyframes starFlow {
-            0% { background-position: 0 0; }
-            100% { background-position: -1000px 1000px; }
-        }
-        @keyframes starTwinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: starTwinkle 3s infinite ease-in-out;
-            box-shadow: 0 0 8px 1px rgba(255,255,255,0.6);
-        }
-        /* 玻璃质感容器 - 强化模糊+光影 */
-        .container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 4rem 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(100, 108, 255, 0.3);
-            box-shadow: 0 0 50px rgba(63, 66, 251, 0.15), inset 0 1px 0 rgba(255,255,255,0.1);
-            max-width: 600px;
-            width: 100%;
-        }
-        .logo {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #6366F1;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #C7D2FE;
-            margin-bottom: 3rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-        .wallet-section {
-            margin-bottom: 2.5rem;
-        }
-        .wallet-status {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: #E0E7FF;
-        }
-        .bridge-section {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            text-align: left;
-        }
-        label {
-            font-size: 0.95rem;
-            color: #A5B4FC;
-            font-weight: 500;
-            padding-left: 0.2rem;
-        }
-        /* 玻璃质感输入框/下拉框 - 半透+模糊+霓虹边框 */
-        input, select {
-            padding: 1rem;
-            background: rgba(15, 23, 42, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 12px;
-            color: #FFFFFF;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.05);
-        }
-        input:focus, select:focus {
-            border-color: #6366F1;
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), 0 0 10px rgba(139, 92, 246, 0.2);
-            transform: translateY(-1px);
-        }
-        input::placeholder {
-            color: #818cf8;
-            opacity: 0.6;
-        }
-        /* 霓虹呼吸按钮 - 渐变+呼吸阴影+缩放动画 */
-        button {
-            padding: 1.1rem;
-            background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%);
-            border: none;
-            border-radius: 12px;
-            color: #FFFFFF;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
-            animation: neonBreath 3s infinite ease-in-out alternate;
-        }
-        @keyframes neonBreath {
-            0% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
-            100% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.6), 0 0 15px rgba(139, 92, 246, 0.5); }
-        }
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 35px rgba(99, 102, 241, 0.7), 0 0 20px rgba(139, 92, 246, 0.5);
-        }
-        button:active {
-            transform: translateY(-1px);
-        }
-        /* 禁用状态样式优化 */
-        button:disabled {
-            background: #27296d;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-            animation: none;
-            opacity: 0.7;
-        }
-        .tx-status {
-            margin-top: 1.5rem;
-            font-size: 0.95rem;
-            color: #34D399;
-            min-height: 1.2rem;
-            text-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
-        }
-        /* 手机端适配 */
-        @media (max-width: 480px) {
-            .container {
-                padding: 2.5rem 2rem;
-                border-radius: 16px;
-            }
-            .logo {
-                font-size: 2.5rem;
-                text-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
-            }
-            body {
-                padding: 20px 15px;
-            }
-            button {
-                padding: 1rem;
-            }
-            input, select {
-                padding: 0.9rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AstroChannel - Cross-Chain Bridge</title>
+
+  <!-- 修复：替换为稳定加载的ethers v5 CDN，优先加载 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Roboto, sans-serif; }
+    body {
+      background: linear-gradient(180deg,#050029,#1A0050,#2E007A);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+    .stars {
+      position:absolute; inset:0; z-index:0;
+      background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/svg%3E");
+      animation: starFlow 80s linear infinite;
+    }
+    @keyframes starFlow { to { background-position:-1000px 1000px; } }
+
+    .container {
+      z-index:1;
+      background:rgba(255,255,255,0.04);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(99,102,241,0.3);
+      border-radius:20px;
+      padding:3rem;
+      width:100%;
+      max-width:520px;
+      box-shadow:0 0 40px rgba(99,102,241,0.2);
+      text-align:center;
+    }
+
+    h1 {
+      font-size:3rem;
+      background:linear-gradient(90deg,#6366F1,#8B5CF6);
+      -webkit-background-clip:text;
+      color:transparent;
+      margin-bottom:.5rem;
+    }
+    .tagline { color:#C7D2FE; margin-bottom:2rem; }
+
+    .wallet-status { margin-bottom:1rem; color:#E0E7FF; }
+    .balance { font-size:.85rem; color:#A5B4FC; text-align:right; }
+
+    .group { margin-bottom:1.2rem; text-align:left; }
+    label { font-size:.9rem; color:#A5B4FC; margin-bottom:.4rem; display:block; }
+
+    input, select {
+      width:100%;
+      padding:1rem;
+      border-radius:12px;
+      border:1px solid rgba(99,102,241,0.3);
+      background:rgba(15,23,42,0.6);
+      color:#fff;
+      outline:none;
+    }
+    input::placeholder { color:#818cf8; opacity:0.6; }
+
+    button {
+      width:100%;
+      padding:1.1rem;
+      margin-top:.8rem;
+      border-radius:12px;
+      border:none;
+      cursor:pointer;
+      background:linear-gradient(90deg,#6366F1,#8B5CF6);
+      color:#fff;
+      font-weight:600;
+      transition:.3s;
+    }
+    button:disabled {
+      background:#27296d;
+      cursor:not-allowed;
+    }
+    button:not(:disabled):hover {
+      box-shadow:0 0 20px rgba(99,102,241,0.4);
+    }
+
+    .status {
+      min-height:1.3rem;
+      margin-top:1rem;
+      font-size:.95rem;
+    }
+    .error { color:#F87171; }
+    .warn { color:#FBBF24; }
+    .success { color:#34D399; }
+    a { color:#6366F1; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
 </head>
+
 <body>
-    <div class="stars" id="stars"></div>
-    <div class="container">
-        <h1 class="logo">AstroChannel</h1>
-        <p class="tagline">Seamless Cross-Chain Transfers for Your AstroTokens. Connect, Transfer, Explore the Interstellar Network.</p>
+<div class="stars"></div>
 
-        <div class="wallet-section">
-            <p class="wallet-status" id="walletStatus">Wallet not connected</p>
-            <button id="connectWalletBtn">Connect MetaMask</button>
-        </div>
+<div class="container">
+  <h1>AstroChannel</h1>
+  <p class="tagline">Secure Cross-Chain Transfers for AstroTokens</p>
 
-        <div class="bridge-section">
-            <div class="input-group">
-                <label for="fromChain">From Chain</label>
-                <select id="fromChain">
-                    <option value="ethereum">Ethereum Testnet (Sepolia)</option>
-                    <option value="bsc">BSC Testnet</option>
-                    <option value="polygon">Polygon Testnet (Mumbai)</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="toChain">To Chain</label>
-                <select id="toChain">
-                    <option value="bsc">BSC Testnet</option>
-                    <option value="polygon">Polygon Testnet (Mumbai)</option>
-                    <option value="ethereum">Ethereum Testnet (Sepolia)</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="tokenAmount">AstroToken Amount</label>
-                <input type="number" id="tokenAmount" placeholder="Enter amount" min="0.001" step="0.001">
-            </div>
-            <button id="bridgeBtn" disabled>Initiate Cross-Chain Transfer</button>
-            <p class="tx-status" id="txStatus"></p>
-        </div>
-    </div>
+  <p class="wallet-status" id="walletStatus">Wallet not connected</p>
+  <button id="connectBtn">Connect MetaMask</button>
 
-    <script>
-        // 生成动态闪烁星光（强化星空效果）
-        const starsContainer = document.getElementById('stars');
-        for (let i = 0; i < 300; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.top = `${Math.random() * 100}%`;
-            star.style.animationDelay = `${Math.random() * 5}s`;
-            // 随机星光大小，更自然
-            star.style.width = `${Math.random() * 3 + 1}px`;
-            star.style.height = `${Math.random() * 3 + 1}px`;
-            starsContainer.appendChild(star);
-        }
+  <div class="group">
+    <label>From Chain</label>
+    <select id="fromChain">
+      <option value="ethereum">Ethereum Sepolia</option>
+      <option value="bsc">BSC Testnet</option>
+      <option value="polygon">Polygon Mumbai</option>
+    </select>
+  </div>
 
-        // 全局变量
-        let provider, signer, astroTokenContract, bridgeContract;
-        let isWalletConnected = false;
+  <div class="group">
+    <label>To Chain</label>
+    <select id="toChain">
+      <option value="bsc">BSC Testnet</option>
+      <option value="polygon">Polygon Mumbai</option>
+      <option value="ethereum">Ethereum Sepolia</option>
+    </select>
+  </div>
 
-        // 合约地址（无需修改）
-        const ASTRO_TOKEN_ADDRESS = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853";
-        const BRIDGE_CONTRACT_ADDRESS = "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318";
+  <div class="group">
+    <label>Amount</label>
+    <input id="amount" type="text" placeholder="0.001" inputmode="decimal" />
+    <div class="balance" id="balance">Balance: -- ASTRO</div>
+  </div>
 
-        // ABI 核心方法
-        const ASTRO_TOKEN_ABI = [
-            "function balanceOf(address owner) view returns (uint256)",
-            "function approve(address spender, uint256 amount) returns (bool)",
-            "function transfer(address to, uint256 amount) returns (bool)"
-        ];
+  <button id="bridgeBtn" disabled>Bridge Tokens</button>
+  <div class="status" id="status"></div>
+</div>
 
-        const BRIDGE_ABI = [
-            "function lockTokens(uint256 amount, string calldata targetChain) external",
-            "function unlockTokens(address to, uint256 amount) external"
-        ];
+<script>
+/* ================= CONFIG ================= */
+const CHAINS = {
+  ethereum: { chainId: '0xaa36a7', explorer: 'https://sepolia.etherscan.io/tx/' },
+  bsc:      { chainId: '0x61', explorer: 'https://testnet.bscscan.com/tx/' },
+  polygon:  { chainId: '0x13881', explorer: 'https://mumbai.polygonscan.com/tx/' }
+};
 
-        // DOM 元素获取
-        const connectWalletBtn = document.getElementById('connectWalletBtn');
-        const walletStatus = document.getElementById('walletStatus');
-        const bridgeBtn = document.getElementById('bridgeBtn');
-        const tokenAmount = document.getElementById('tokenAmount');
-        const txStatus = document.getElementById('txStatus');
-        const fromChain = document.getElementById('fromChain');
-        const toChain = document.getElementById('toChain');
+const ASTRO_TOKEN = "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853";
+const BRIDGE = "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318";
 
-        // 连接钱包
-        connectWalletBtn.addEventListener('click', async () => {
-            if (window.ethereum && !isWalletConnected) {
-                try {
-                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-                    const account = accounts[0];
-                    isWalletConnected = true;
+const ERC20_ABI = [
+  "function balanceOf(address) view returns (uint256)",
+  "function allowance(address,address) view returns (uint256)",
+  "function approve(address,uint256) returns (bool)"
+];
 
-                    provider = new ethers.providers.Web3Provider(window.ethereum);
-                    signer = provider.getSigner();
+const BRIDGE_ABI = [
+  "function lockTokens(uint256,string)"
+];
 
-                    astroTokenContract = new ethers.Contract(ASTRO_TOKEN_ADDRESS, ASTRO_TOKEN_ABI, signer);
-                    bridgeContract = new ethers.Contract(BRIDGE_CONTRACT_ADDRESS, BRIDGE_ABI, signer);
+/* ================= STATE ================= */
+let provider, signer, account;
+let token, bridge;
+let isConnected = false;
 
-                    // 钱包地址脱敏显示
-                    walletStatus.textContent = `Connected: ${account.slice(0, 6)}...${account.slice(-4)}`;
-                    connectWalletBtn.textContent = 'Disconnect Wallet';
-                    bridgeBtn.disabled = false;
-                    txStatus.textContent = '';
-                    txStatus.style.color = '#34D399';
+/* ================= DOM ================= */
+const statusEl = document.getElementById('status');
+const walletStatus = document.getElementById('walletStatus');
+const connectBtn = document.getElementById('connectBtn');
+const bridgeBtn = document.getElementById('bridgeBtn');
+const amountInput = document.getElementById('amount');
+const balanceEl = document.getElementById('balance');
+const fromChain = document.getElementById('fromChain');
+const toChain = document.getElementById('toChain');
 
-                } catch (error) {
-                    txStatus.textContent = `Error: ${error.message.slice(0, 50)}`;
-                    txStatus.style.color = '#F87171';
-                }
-            } else if (isWalletConnected) {
-                // 断开钱包
-                isWalletConnected = false;
-                walletStatus.textContent = 'Wallet not connected';
-                connectWalletBtn.textContent = 'Connect MetaMask';
-                bridgeBtn.disabled = true;
-                tokenAmount.value = '';
-                txStatus.textContent = '';
-            } else {
-                txStatus.textContent = 'MetaMask not found! Please install it first.';
-                txStatus.style.color = '#F87171';
-            }
-        });
+/* ================= HELPERS ================= */
+function setStatus(msg, cls='') {
+  statusEl.className = 'status ' + cls;
+  statusEl.innerHTML = msg;
+}
 
-        // 发起跨链转账
-        bridgeBtn.addEventListener('click', async () => {
-            const amount = parseFloat(tokenAmount.value);
-            const targetChain = toChain.value;
+// 格式化金额，防止科学计数法/空值
+function formatAmount(val) {
+  if (!val || val === '' || isNaN(parseFloat(val))) return null;
+  const num = parseFloat(val);
+  return num > 0 ? num : null;
+}
 
-            // 基础验证
-            if (!amount || amount <= 0) {
-                txStatus.textContent = 'Please enter a valid amount!';
-                txStatus.style.color = '#F87171';
-                return;
-            }
-            if (fromChain.value === targetChain) {
-                txStatus.textContent = 'Source and target chain cannot be the same!';
-                txStatus.style.color = '#F87171';
-                return;
-            }
+/* ================= WALLET ================= */
+connectBtn.onclick = async () => {
+  if (!window.ethereum) return setStatus('MetaMask not installed!','error');
+  if (isConnected) return disconnectWallet(); // 新增：点击已连接按钮断开钱包
 
-            try {
-                txStatus.textContent = 'Processing... Approving tokens first';
-                txStatus.style.color = '#FBBF24';
-                bridgeBtn.disabled = true;
+  try {
+    setStatus('','');
+    [account] = await ethereum.request({ method:'eth_requestAccounts' });
+    provider = new ethers.providers.Web3Provider(window.ethereum);
+    signer = provider.getSigner();
 
-                // 转换为wei单位（ERC20 18位小数）
-                const amountWei = ethers.utils.parseEther(amount.toString());
+    // 初始化合约
+    token = new ethers.Contract(ASTRO_TOKEN, ERC20_ABI, signer);
+    bridge = new ethers.Contract(BRIDGE, BRIDGE_ABI, signer);
 
-                // 第一步：授权桥接合约花费代币
-                const approveTx = await astroTokenContract.approve(BRIDGE_CONTRACT_ADDRESS, amountWei);
-                await approveTx.wait();
-                txStatus.textContent = 'Approved! Locking tokens for cross-chain...';
+    // 更新钱包状态
+    isConnected = true;
+    walletStatus.textContent = `Connected: ${account.slice(0,6)}...${account.slice(-4)}`;
+    connectBtn.textContent = 'Disconnect Wallet';
+    bridgeBtn.disabled = false;
 
-                // 第二步：锁定代币到桥接合约，触发跨链
-                const lockTx = await bridgeContract.lockTokens(amountWei, targetChain);
-                await lockTx.wait();
+    // 获取并显示余额
+    const bal = await token.balanceOf(account);
+    balanceEl.textContent = `Balance: ${ethers.utils.formatEther(bal)} ASTRO`;
+    setStatus('Wallet connected successfully','success');
+  } catch (err) {
+    setStatus(`Connect failed: ${err.message.slice(0,40)}`,`error`);
+  }
+};
 
-                // 转账成功提示
-                txStatus.textContent = `Success! TX Hash: ${lockTx.hash.slice(0, 10)}...`;
-                txStatus.style.color = '#34D399';
-                tokenAmount.value = '';
+// 新增：断开钱包逻辑
+function disconnectWallet() {
+  isConnected = false;
+  account = null;
+  provider = null;
+  signer = null;
+  token = null;
+  bridge = null;
 
-            } catch (error) {
-                txStatus.textContent = `Transfer Failed: ${error.message.slice(0, 60)}`;
-                txStatus.style.color = '#F87171';
-            } finally {
-                bridgeBtn.disabled = false;
-            }
-        });
+  walletStatus.textContent = 'Wallet not connected';
+  connectBtn.textContent = 'Connect MetaMask';
+  bridgeBtn.disabled = true;
+  balanceEl.textContent = 'Balance: -- ASTRO';
+  amountInput.value = '';
+  setStatus('','');
+}
 
-        // 监听链切换 - 自动刷新
-        window.ethereum?.on('chainChanged', () => {
-            window.location.reload();
-        });
+/* ================= BRIDGE ================= */
+bridgeBtn.onclick = async () => {
+  // 1. 基础验证
+  if (fromChain.value === toChain.value)
+    return setStatus('From/To chain cannot be the same','error');
 
-        // 监听账户切换 - 状态更新
-        window.ethereum?.on('accountsChanged', (accounts) => {
-            if (accounts.length === 0) {
-                isWalletConnected = false;
-                walletStatus.textContent = 'Wallet not connected';
-                connectWalletBtn.textContent = 'Connect MetaMask';
-                bridgeBtn.disabled = true;
-            } else {
-                window.location.reload();
-            }
-        });
-    </script>
+  const amount = formatAmount(amountInput.value.trim());
+  if (!amount)
+    return setStatus('Please enter a valid positive amount','error');
+
+  // 2. 网络链ID验证
+  try {
+    const chainId = await ethereum.request({ method:'eth_chainId' });
+    if (chainId !== CHAINS[fromChain.value].chainId)
+      return setStatus(`Please switch to ${fromChain.options[fromChain.selectedIndex].text}`,`error`);
+  } catch (err) {
+    return setStatus('Failed to get network','error');
+  }
+
+  // 3. 转换金额为Wei
+  let amountWei;
+  try {
+    amountWei = ethers.utils.parseUnits(amount.toString(),18);
+  } catch {
+    return setStatus('Invalid amount format','error');
+  }
+
+  // 4. 开始跨链流程
+  try {
+    bridgeBtn.disabled = true;
+    setStatus('Checking token allowance...','warn');
+
+    // 检查授权额度
+    const allowance = await token.allowance(account, BRIDGE);
+    if (allowance.lt(amountWei)) {
+      setStatus('Approving tokens (one-time)...','warn');
+      const approveTx = await token.approve(BRIDGE, ethers.constants.MaxUint256);
+      await approveTx.wait();
+      setStatus('Approval success! Locking tokens...','warn');
+    }
+
+    // 锁定代币触发跨链
+    const lockTx = await bridge.lockTokens(amountWei, toChain.value);
+    await lockTx.wait();
+
+    // 跨链成功，显示浏览器链接
+    setStatus(
+      `Success! <a href="${CHAINS[fromChain.value].explorer}${lockTx.hash}" target="_blank">View Transaction</a>`,
+      'success'
+    );
+    amountInput.value = ''; // 清空输入框
+  } catch (err) {
+    setStatus(`Bridge failed: ${err.message.slice(0,50)}`,`error`);
+  } finally {
+    bridgeBtn.disabled = false; // 无论成败都解锁按钮
+  }
+};
+
+/* ================= 新增：钱包事件监听 ================= */
+// 监听链切换 - 刷新保持状态
+window.ethereum?.on('chainChanged', () => {
+  if (isConnected) window.location.reload();
+});
+
+// 监听账户切换/钱包断开
+window.ethereum?.on('accountsChanged', (accounts) => {
+  if (accounts.length === 0) disconnectWallet();
+  else if (accounts[0] !== account) window.location.reload();
+});
+
+// 监听钱包断开连接
+window.ethereum?.on('disconnect', () => disconnectWallet());
+</script>
 </body>
 </html>
