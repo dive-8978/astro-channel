@@ -31,10 +31,11 @@
             box-shadow: 0 0 60px rgba(99,102,241,0.25);
             position: relative;
         }
+        /* 返回按钮左移一点 */
         .back-btn {
             position: absolute;
             top: 20px;
-            left: 20px;
+            left: 10px;
             padding: 8px 16px;
             background: linear-gradient(90deg, #4cc9f0, #f72585);
             border: none;
@@ -107,7 +108,7 @@
             margin-top: 0.5rem;
             font-size: 0.95rem;
         }
-        /* AI 钱包助手面板 */
+        /* AI Wallet Assistant Panel */
         .ai-panel {
             margin: 20px 0;
             padding: 15px;
@@ -157,7 +158,7 @@
 </head>
 <body>
     <div class="container">
-        <button class="back-btn" onclick="window.location.href='../index.html'">← 返回主页</button>
+        <button class="back-btn" onclick="window.location.href='../index.html'">← Back to Home</button>
         <div class="wallet-header">
             <h1>Astro Wallet</h1>
             <p>AI-Powered Cross-Chain Wallet</p>
@@ -166,9 +167,9 @@
         <div class="wallet-status" id="walletStatus">Wallet not connected</div>
         <button id="connectBtn" class="btn-primary">Connect MetaMask</button>
 
-        <!-- AI 钱包助手 -->
+        <!-- AI Wallet Assistant -->
         <div class="ai-panel">
-            <div id="aiStatus" class="ai-status">🤖 AI 就绪</div>
+            <div id="aiStatus" class="ai-status">🤖 AI Ready</div>
             <div id="aiSuggestions" class="ai-suggestions"></div>
         </div>
 
@@ -210,7 +211,7 @@
     </div>
 
     <script>
-        // 配置
+        // Config
         const CONFIG = {
             ASTRO_ADDRESS: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
             INTEGRATOR: "AstroChannel-Wallet"
@@ -221,7 +222,7 @@
             "function approve(address spender, uint256 amount) returns (bool)"
         ];
 
-        // DOM 元素
+        // DOM Elements
         const DOM = {
             walletStatus: document.getElementById('walletStatus'),
             connectBtn: document.getElementById('connectBtn'),
@@ -237,43 +238,43 @@
             aiSuggestions: document.getElementById('aiSuggestions')
         };
 
-        // 全局变量
+        // Global Variables
         let provider, signer, account, token, lifi;
 
-        // 轻量化钱包 AI
+        // Lightweight Wallet AI
         class AstroWalletAI {
             constructor() {
                 this.reset();
             }
             reset() {
-                this.status = "🤖 AI 就绪";
+                this.status = "🤖 AI Ready";
                 this.score = 100;
                 this.suggestions = [];
                 this.warnings = [];
             }
             async runCheck(walletData) {
                 this.reset();
-                this.status = "🤖 AI 分析中...";
+                this.status = "🤖 AI Analyzing...";
                 this.checkBasic(walletData);
                 this.checkBalance(walletData.balance);
                 this.checkNetwork(walletData.chainId);
                 this.checkSlippage(walletData.slippage);
                 this.calculateScore();
-                this.status = `🤖 AI 评分: ${this.score} | ${this.score>=80?'✅ 健康':'⚠️ 需注意'}`;
+                this.status = `🤖 AI Score: ${this.score} | ${this.score>=80?'✅ Healthy':'⚠️ Attention'}`;
                 return this.getReport();
             }
             checkBasic({address}) {
-                address ? this.suggestions.push(`✅ 已连接: ${address.slice(0,6)}...`) : this.warnings.push("❌ 未连接钱包");
+                address ? this.suggestions.push(`✅ Connected: ${address.slice(0,6)}...`) : this.warnings.push("❌ Wallet not connected");
             }
             checkBalance(balance) {
-                balance <= 0 ? this.warnings.push("⚠️ 余额不足") : this.suggestions.push(`✅ 余额: ${balance} ASTRO`);
+                balance <= 0 ? this.warnings.push("⚠️ Insufficient balance") : this.suggestions.push(`✅ Balance: ${balance} ASTRO`);
             }
             checkNetwork(chainId) {
                 const supported = [1,56,137];
-                supported.includes(chainId) ? this.suggestions.push("✅ 网络支持") : this.warnings.push("⚠️ 网络不支持");
+                supported.includes(chainId) ? this.suggestions.push("✅ Network supported") : this.warnings.push("⚠️ Network not supported");
             }
             checkSlippage(slippage) {
-                slippage > 1 ? this.warnings.push(`⚠️ 滑点(${slippage}%)偏高，建议≤1%`) : this.suggestions.push(`✅ 滑点(${slippage}%)合理`);
+                slippage > 1 ? this.warnings.push(`⚠️ Slippage(${slippage}%) is high, recommended ≤1%`) : this.suggestions.push(`✅ Slippage(${slippage}%) is reasonable`);
             }
             calculateScore() {
                 this.warnings.forEach(() => this.score -= 25);
@@ -285,7 +286,7 @@
         }
         const walletAI = new AstroWalletAI();
 
-        // 显示 AI 报告
+        // Show AI Report
         function showAIReport(report) {
             DOM.aiStatus.textContent = report.status;
             let html = '';
@@ -294,10 +295,10 @@
             DOM.aiSuggestions.innerHTML = html;
         }
 
-        // 连接钱包
+        // Connect Wallet
         async function connectWallet() {
             if (!window.ethereum) {
-                setStatus("请安装 MetaMask", "error");
+                setStatus("Please install MetaMask", "error");
                 return;
             }
             setLoading(true);
@@ -320,44 +321,44 @@
                 const aiReport = await walletAI.runCheck(walletData);
                 showAIReport(aiReport);
 
-                DOM.walletStatus.textContent = `已连接: ${account.slice(0,6)}...${account.slice(-4)}`;
+                DOM.walletStatus.textContent = `Connected: ${account.slice(0,6)}...${account.slice(-4)}`;
                 DOM.bridgeBtn.disabled = false;
-                setStatus("钱包连接成功", "success");
+                setStatus("Wallet connected successfully", "success");
             } catch (e) {
-                setStatus(`连接失败: ${e.message}`, "error");
+                setStatus(`Connection failed: ${e.message}`, "error");
             } finally {
                 setLoading(false);
             }
         }
 
-        // 更新余额
+        // Update Balance
         async function updateBalance() {
             if (!token || !account) return;
             const bal = await token.balanceOf(account);
             DOM.balance.textContent = `Balance: ${ethers.utils.formatEther(bal).substring(0,8)} ASTRO`;
         }
 
-        // 设置状态
+        // Set Status
         function setStatus(msg, type) {
             DOM.status.className = `status ${type}`;
             DOM.status.textContent = msg;
         }
 
-        // 设置加载状态
+        // Set Loading State
         function setLoading(isLoading) {
             DOM.connectBtn.disabled = isLoading;
             DOM.bridgeBtn.disabled = isLoading || !account;
-            DOM.connectBtn.textContent = isLoading ? "连接中..." : "Connect MetaMask";
+            DOM.connectBtn.textContent = isLoading ? "Connecting..." : "Connect MetaMask";
         }
 
-        // 绑定事件
+        // Bind Events
         DOM.connectBtn.onclick = connectWallet;
         DOM.bridgeBtn.onclick = async () => {
-            setStatus("跨链处理中...", "warn");
+            setStatus("Processing cross-chain...", "warn");
             DOM.progressFill.style.width = "50%";
             setTimeout(() => {
                 DOM.progressFill.style.width = "100%";
-                setStatus("跨链成功!", "success");
+                setStatus("Cross-chain successful!", "success");
             }, 2000);
         };
     </script>
