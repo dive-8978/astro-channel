@@ -31,7 +31,6 @@
             box-shadow: 0 0 60px rgba(99,102,241,0.25);
             position: relative;
         }
-        /* 返回按钮左移一点 */
         .back-btn {
             position: absolute;
             top: 20px;
@@ -108,7 +107,6 @@
             margin-top: 0.5rem;
             font-size: 0.95rem;
         }
-        /* AI Wallet Assistant Panel */
         .ai-panel {
             margin: 20px 0;
             padding: 15px;
@@ -167,7 +165,6 @@
         <div class="wallet-status" id="walletStatus">Wallet not connected</div>
         <button id="connectBtn" class="btn-primary">Connect MetaMask</button>
 
-        <!-- AI Wallet Assistant -->
         <div class="ai-panel">
             <div id="aiStatus" class="ai-status">🤖 AI Ready</div>
             <div id="aiSuggestions" class="ai-suggestions"></div>
@@ -211,7 +208,6 @@
     </div>
 
     <script>
-        // Config
         const CONFIG = {
             ASTRO_ADDRESS: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
             INTEGRATOR: "AstroChannel-Wallet"
@@ -222,7 +218,6 @@
             "function approve(address spender, uint256 amount) returns (bool)"
         ];
 
-        // DOM Elements
         const DOM = {
             walletStatus: document.getElementById('walletStatus'),
             connectBtn: document.getElementById('connectBtn'),
@@ -238,10 +233,8 @@
             aiSuggestions: document.getElementById('aiSuggestions')
         };
 
-        // Global Variables
         let provider, signer, account, token, lifi;
 
-        // Lightweight Wallet AI
         class AstroWalletAI {
             constructor() {
                 this.reset();
@@ -286,7 +279,6 @@
         }
         const walletAI = new AstroWalletAI();
 
-        // Show AI Report
         function showAIReport(report) {
             DOM.aiStatus.textContent = report.status;
             let html = '';
@@ -295,7 +287,34 @@
             DOM.aiSuggestions.innerHTML = html;
         }
 
-        // Connect Wallet
+        function setupWalletListeners() {
+            if (!window.ethereum) return;
+            window.ethereum.on('accountsChanged', (accounts) => {
+                if (accounts.length === 0) {
+                    disconnectWallet();
+                } else {
+                    account = accounts[0];
+                    updateBalance();
+                }
+            });
+            window.ethereum.on('chainChanged', () => {
+                window.location.reload();
+            });
+        }
+
+        function disconnectWallet() {
+            account = null;
+            provider = null;
+            signer = null;
+            token = null;
+            lifi = null;
+            DOM.walletStatus.textContent = "Wallet not connected";
+            DOM.bridgeBtn.disabled = true;
+            DOM.balance.textContent = "Balance: -- ASTRO";
+            setStatus("Wallet disconnected", "warn");
+            showAIReport(walletAI.runCheck({address:null, balance:0, chainId:null, slippage:0.5}));
+        }
+
         async function connectWallet() {
             if (!window.ethereum) {
                 setStatus("Please install MetaMask", "error");
@@ -303,20 +322,22 @@
             }
             setLoading(true);
             try {
-                const accounts = await window.ethereum.request({method:'eth_requestAccounts'});
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                 account = accounts[0];
                 provider = new ethers.providers.Web3Provider(window.ethereum);
                 signer = provider.getSigner();
                 token = new ethers.Contract(CONFIG.ASTRO_ADDRESS, ERC20_ABI, signer);
-                lifi = new LiFi({integrator:CONFIG.INTEGRATOR});
+                lifi = new LiFi({ integrator: CONFIG.INTEGRATOR });
 
                 await updateBalance();
-                const chainId = (await provider.getNetwork()).chainId;
+                const network = await provider.getNetwork();
+                const chainId = network.chainId;
+                const balance = ethers.utils.formatEther(await token.balanceOf(account));
                 const walletData = {
-                    address:account,
-                    balance:ethers.utils.formatEther(await token.balanceOf(account)),
-                    chainId:chainId,
-                    slippage:parseFloat(DOM.slippage.value)
+                    address: account,
+                    balance: balance,
+                    chainId: chainId,
+                    slippage: parseFloat(DOM.slippage.value)
                 };
                 const aiReport = await walletAI.runCheck(walletData);
                 showAIReport(aiReport);
@@ -324,6 +345,7 @@
                 DOM.walletStatus.textContent = `Connected: ${account.slice(0,6)}...${account.slice(-4)}`;
                 DOM.bridgeBtn.disabled = false;
                 setStatus("Wallet connected successfully", "success");
+                setupWalletListeners();
             } catch (e) {
                 setStatus(`Connection failed: ${e.message}`, "error");
             } finally {
@@ -331,27 +353,23 @@
             }
         }
 
-        // Update Balance
         async function updateBalance() {
             if (!token || !account) return;
             const bal = await token.balanceOf(account);
             DOM.balance.textContent = `Balance: ${ethers.utils.formatEther(bal).substring(0,8)} ASTRO`;
         }
 
-        // Set Status
         function setStatus(msg, type) {
             DOM.status.className = `status ${type}`;
             DOM.status.textContent = msg;
         }
 
-        // Set Loading State
         function setLoading(isLoading) {
             DOM.connectBtn.disabled = isLoading;
             DOM.bridgeBtn.disabled = isLoading || !account;
             DOM.connectBtn.textContent = isLoading ? "Connecting..." : "Connect MetaMask";
         }
 
-        // Bind Events
         DOM.connectBtn.onclick = connectWallet;
         DOM.bridgeBtn.onclick = async () => {
             setStatus("Processing cross-chain...", "warn");
