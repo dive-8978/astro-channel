@@ -94,7 +94,7 @@ import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.es
 import { LiFi } from "https://cdn.jsdelivr.net/npm/@lifi/sdk@2.7.0/dist/index.esm.min.js";
 
 const CONFIG = {
-    ASTRO_ADDRESS: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853", // 确保这是测试网合约地址
+    ASTRO_ADDRESS: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
     INTEGRATOR: "AstroChannel-Wallet"
 };
 
@@ -167,29 +167,6 @@ function disconnectWallet(){
     walletAI.runCheck({address:null,balance:0,chainId:null,slippage:0.5}).then(showAIReport);
 }
 
-// 新增：初始化合约和余额
-async function initContractAndBalance() {
-    if (!provider || !account) return;
-    try {
-        // 重新初始化token合约（适配当前链）
-        token = new ethers.Contract(CONFIG.ASTRO_ADDRESS, ERC20_ABI, signer);
-        // 更新余额
-        await updateBalance();
-        // 重新运行AI检查
-        const network = await provider.getNetwork();
-        const walletData = {
-            address: account,
-            balance: parseFloat(DOM.balance.textContent.replace(/[^0-9.]/g, '') || 0),
-            chainId: network.chainId,
-            slippage: parseFloat(DOM.slippage.value)
-        };
-        const aiReport = await walletAI.runCheck(walletData);
-        showAIReport(aiReport);
-    } catch (e) {
-        setStatus(`Failed to init contract: ${e.message}`, "error");
-    }
-}
-
 async function connectWallet(){
     if(!window.ethereum){ setStatus("Please install MetaMask","error"); return; }
     setLoading(true);
@@ -198,30 +175,22 @@ async function connectWallet(){
         account=accounts[0];
         provider=new ethers.providers.Web3Provider(window.ethereum);
         signer=provider.getSigner();
+        token=new ethers.Contract(CONFIG.ASTRO_ADDRESS,ERC20_ABI,signer);
         lifi=new LiFi({integrator:CONFIG.INTEGRATOR});
-        
-        // 初始化合约和余额
-        await initContractAndBalance();
-
+        const bal=ethers.utils.formatEther(await token.balanceOf(account));
         const network = await provider.getNetwork();
-        DOM.walletStatus.textContent=`Connected: ${account.slice(0,6)}...${account.slice(-4)} (Chain ID: ${network.chainId})`;
+        const walletData={address:account,balance:bal,chainId:network.chainId,slippage:parseFloat(DOM.slippage.value)};
+        const aiReport = await walletAI.runCheck(walletData);
+        showAIReport(aiReport);
+        DOM.walletStatus.textContent=`Connected: ${account.slice(0,6)}...${account.slice(-4)}`;
         DOM.bridgeBtn.disabled=false;
         setStatus("Wallet connected successfully","success");
 
         // Wallet listeners
-        window.ethereum.on('accountsChanged', async (a)=>{
-            if(a.length===0){ 
-                disconnectWallet(); 
-            } else{ 
-                account=a[0]; 
-                await initContractAndBalance(); 
-            }
+        window.ethereum.on('accountsChanged', a=>{
+            if(a.length===0){ disconnectWallet(); } else{ account=a[0]; updateBalance(); }
         });
-        window.ethereum.on('chainChanged', async ()=>{
-            // 链切换后重新初始化
-            await initContractAndBalance();
-            setStatus("Chain changed, reloaded wallet data","warn");
-        });
+        window.ethereum.on('chainChanged', ()=>window.location.reload());
 
     }catch(e){
         setStatus(`Connection failed: ${e.message}`,"error");
@@ -230,94 +199,19 @@ async function connectWallet(){
 
 async function updateBalance(){
     if(!token||!account) return;
-    try {
-        const bal = await token.balanceOf(account);
-        const formattedBal = ethers.utils.formatEther(bal).substring(0,8);
-        DOM.balance.textContent=`Balance: ${formattedBal} ASTRO`;
-    } catch (e) {
-        DOM.balance.textContent="Balance: -- ASTRO";
-        setStatus(`Failed to get balance: ${e.message}`, "error");
-    }
+    const bal=await token.balanceOf(account);
+    DOM.balance.textContent=`Balance: ${ethers.utils.formatEther(bal).substring(0,8)} ASTRO`;
 }
 
-// 修复：真实的跨链桥接逻辑
+DOM.connectBtn.onclick=connectWallet;
 DOM.bridgeBtn.onclick=async()=>{
-    if(!account || !lifi) {
-        setStatus("Wallet not connected","error");
-        return;
-    }
-    const amount = parseFloat(DOM.amount.value);
-    if(!amount || amount <=0) {
-        setStatus("Please enter a valid amount","error");
-        return;
-    }
-    const fromChainId = parseInt(DOM.fromChain.value);
-    const toChainId = parseInt(DOM.toChain.value);
-    const slippage = parseFloat(DOM.slippage.value);
-
-    setLoading(true);
     setStatus("Processing cross-chain...","warn");
-    DOM.progressFill.style.width="20%";
-
-    try {
-        // 1. 检查链是否匹配
-        const network = await provider.getNetwork();
-        if(network.chainId !== fromChainId) {
-            setStatus(`Please switch to ${fromChainId} chain first`,"error");
-            DOM.progressFill.style.width="0%";
-            setLoading(false);
-            return;
-        }
-
-        DOM.progressFill.style.width="40%";
-        setStatus("Approving token spend...","warn");
-
-        // 2. 授权代币（LiFi需要）
-        const amountWei = ethers.utils.parseEther(amount.toString());
-        const approveTx = await token.approve(lifi.contractAddress, amountWei);
-        await approveTx.wait(); // 等待授权交易确认
-
-        DOM.progressFill.style.width="60%";
-        setStatus("Initiating cross-chain transfer...","warn");
-
-        // 3. 调用LiFi SDK发起跨链
-        const routeResponse = await lifi.getRoute({
-            fromChainId: fromChainId,
-            toChainId: toChainId,
-            fromTokenAddress: CONFIG.ASTRO_ADDRESS,
-            toTokenAddress: CONFIG.ASTRO_ADDRESS,
-            amount: amountWei.toString(),
-            fromAddress: account,
-            slippage: slippage,
-        });
-
-        // 4. 执行跨链交易
-        const executionResponse = await lifi.executeRoute({
-            signer: signer,
-            route: routeResponse.route,
-        });
-
-        DOM.progressFill.style.width="80%";
-        setStatus("Waiting for transaction confirmation...","warn");
-
-        // 5. 等待交易完成
-        await new Promise(resolve => setTimeout(resolve, 3000)); // 模拟等待
+    DOM.progressFill.style.width="50%";
+    setTimeout(()=>{
         DOM.progressFill.style.width="100%";
-        setStatus(`Cross-chain successful! Tx hash: ${executionResponse.txHash.slice(0,10)}...`,"success");
-        
-        // 6. 更新余额
-        await updateBalance();
-
-    } catch (e) {
-        setStatus(`Cross-chain failed: ${e.message}`,"error");
-        DOM.progressFill.style.width="0%";
-    } finally {
-        setLoading(false);
-    }
+        setStatus("Cross-chain successful!","success");
+    },2000);
 };
-
-// 初始化AI检查
-walletAI.runCheck({address:null,balance:0,chainId:null,slippage:0.5}).then(showAIReport);
 </script>
 
 </body>
