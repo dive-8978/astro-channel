@@ -97,7 +97,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* 目标数据看板 */
 .stats-bar {
   display: flex;
   justify-content: space-around;
@@ -293,8 +292,6 @@ footer .social-links a:hover {
   .navbar .nav-right { flex-direction: column; gap: 16px; }
 }
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -310,7 +307,6 @@ footer .social-links a:hover {
   </div>
 </nav>
 
-<!-- 目标数据看板（已按你要求全部改对） -->
 <div class="stats-bar">
   <div class="stat-item">
     <div class="stat-label">TARGET CHAINS</div>
@@ -333,7 +329,6 @@ footer .social-links a:hover {
 <section class="hero">
   <h1>Interstellar Cross-Chain Instant Transfer</h1>
   <p>Break inter-chain barriers, realize low-cost cross-chain circulation of virtual tokens, provide an efficient and fast channel for BECoin, and build a new decentralized cross-chain ecosystem</p>
-
   <div class="hero-btn-group">
     <button class="func-btn" onclick="location.href='/bridge.html'">Astro Bridge</button>
     <button class="func-btn" onclick="location.href='/wallet'">Astro Wallet</button>
@@ -346,23 +341,25 @@ footer .social-links a:hover {
   <img src="https://picsum.photos/seed/blockchain3d/900/450" alt="3D Blockchain Rendering">
 </section>
 
+<!-- 这里是改好的验证按钮，点了就有反应 -->
 <section class="verify-channel">
   <h2>Astro Chain Mobile Verification Channel</h2>
-  <input type="text" placeholder="Enter your wallet address">
-  <button>Verify & Transfer</button>
+  <input type="text" id="walletAddress" placeholder="Enter your wallet address">
+  <button onclick="handleVerifyAndTransfer()">Verify & Transfer</button>
 </section>
 </div>
 
 <footer>
   <div class="social-links">
     <a href="https://t.me/你的Telegram链接" target="_blank">Telegram</a>
-    <a href="https://x.com/Astro___Channel" target="_blank">X</a>
+    <a href="https://x.com/你的X账号名" target="_blank">X</a>
   </div>
   <p>&copy; 2026 AstroChannel. All Rights Reserved. Interstellar Web3 Infrastructure.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
+// 粒子背景
 particlesJS("particles-js", {
   "particles": {
     "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
@@ -401,6 +398,37 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
+
+// 验证+转账按钮功能（点了就弹提示）
+function isValidEthereumAddress(address) {
+  return /^0x[a-fA-F0-9]{40}$/.test(address);
+}
+function handleVerifyAndTransfer() {
+  const address = document.getElementById('walletAddress').value.trim();
+  const btn = document.querySelector('.verify-channel button');
+  const originalText = btn.textContent;
+
+  if (!address) {
+    alert('Please enter your wallet address');
+    return;
+  }
+  if (!isValidEthereumAddress(address)) {
+    alert('Please enter a valid Ethereum address (starts with 0x, 42 chars)');
+    return;
+  }
+
+  // 按钮变加载状态
+  btn.textContent = 'Processing...';
+  btn.disabled = true;
+
+  // 模拟跨链处理
+  setTimeout(() => {
+    alert(`✅ Transfer initiated!\nAddress: ${address}\n\nCross-chain bridge processing...`);
+    document.getElementById('walletAddress').value = '';
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }, 1800);
+}
 </script>
 </body>
 </html>
