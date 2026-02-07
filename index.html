@@ -81,6 +81,42 @@ body {
   align-items: center;
   gap: 24px;
 }
+
+/* 金属立体空投按钮 */
+.airdrop-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #2c3e50, #1a252f);
+  box-shadow: 
+    6px 6px 12px #0f1419,
+    -6px -6px 12px #374a5f,
+    inset 2px 2px 4px #3a4b5e,
+    inset -2px -2px 4px #141c23;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.airdrop-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    8px 8px 16px #0f1419,
+    -8px -8px 16px #374a5f,
+    inset 2px 2px 4px #3a4b5e,
+    inset -2px -2px 4px #141c23;
+}
+.airdrop-btn:active {
+  transform: translateY(0);
+}
+
 .whitepaper-btn {
   padding: 10px 22px;
   background: rgba(76, 201, 240, 0.1);
@@ -260,10 +296,10 @@ footer .social-links {
 footer .social-links a {
   color: #a8dadc;
   margin: 0 12px;
-  font-size: 0.95rem;
+  font-size: 1.1rem; /* 放大X文字 */
+  font-weight: 600; /* 加粗 */
   text-decoration: none;
   transition: color 0.3s ease;
-  font-weight: 500;
 }
 footer .social-links a:hover {
   color: #4cc9f0;
@@ -285,6 +321,7 @@ footer .social-links a:hover {
   .blockchain-3d img { width: 88%; }
   .verify-channel { padding: 45px 28px; }
   .planet { width: 140px; height: 140px; }
+  .navbar .nav-right { flex-wrap: wrap; justify-content: center; }
 }
 @media(max-width: 480px) {
   .hero-btn-group .func-btn { min-width: 100%; width: 88%; }
@@ -303,6 +340,8 @@ footer .social-links a:hover {
 <nav class="navbar">
   <div class="logo">Astro<span>Channel</span></div>
   <div class="nav-right">
+    <!-- 金属立体空投按钮，点击跳转到 airdrop.html -->
+    <a href="airdrop.html" class="airdrop-btn">MA Airdrop</a>
     <button class="whitepaper-btn" onclick="location.href='/page1.html'">Whitepaper</button>
   </div>
 </nav>
@@ -341,7 +380,6 @@ footer .social-links a:hover {
   <img src="https://picsum.photos/seed/blockchain3d/900/450" alt="3D Blockchain Rendering">
 </section>
 
-<!-- 这里是改好的验证按钮，点了就有反应 -->
 <section class="verify-channel">
   <h2>Astro Chain Mobile Verification Channel</h2>
   <input type="text" id="walletAddress" placeholder="Enter your wallet address">
@@ -352,14 +390,14 @@ footer .social-links a:hover {
 <footer>
   <div class="social-links">
     <a href="https://t.me/你的Telegram链接" target="_blank">Telegram</a>
-    <a href="https://x.com/你的X账号名" target="_blank">X</a>
+    <!-- 替换成你的X账号链接 -->
+    <a href="https://x.com/你的X账号" target="_blank">X</a>
   </div>
   <p>&copy; 2026 AstroChannel. All Rights Reserved. Interstellar Web3 Infrastructure.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-// 粒子背景
 particlesJS("particles-js", {
   "particles": {
     "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
@@ -399,7 +437,6 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
-// 验证+转账按钮功能（点了就弹提示）
 function isValidEthereumAddress(address) {
   return /^0x[a-fA-F0-9]{40}$/.test(address);
 }
@@ -417,11 +454,9 @@ function handleVerifyAndTransfer() {
     return;
   }
 
-  // 按钮变加载状态
   btn.textContent = 'Processing...';
   btn.disabled = true;
 
-  // 模拟跨链处理
   setTimeout(() => {
     alert(`✅ Transfer initiated!\nAddress: ${address}\n\nCross-chain bridge processing...`);
     document.getElementById('walletAddress').value = '';
