@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- update -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AstroBridge - Multi-Chain Bridge</title>
-<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@lifi/sdk@2.7.0/dist/index.umd.min.js"></script>
+<script>window.LiFi = window.LIFI;</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>window.Chart = Chart;</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 * {
@@ -37,6 +38,24 @@ body {
   box-shadow:0 0 50px rgba(255,69,0,0.2);
   position:relative;
   z-index:2;
+}
+/* 返回按钮样式 */
+.back-btn {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.back-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #ff8c00;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.back-btn a:hover {
+  color: #ff4500;
 }
 h1 {
   font-size:2.2rem;
@@ -161,6 +180,16 @@ button:disabled {
 </head>
 <body>
 <div class="container">
+  <!-- 返回主页按钮 -->
+  <div class="back-btn">
+    <a href="/">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Home
+    </a>
+  </div>
+
   <h1>AstroBridge</h1>
   <p class="status" id="walletStatus">Wallet not connected</p>
   <button id="connectBtn">Connect Wallet</button>
@@ -200,6 +229,7 @@ button:disabled {
   <div id="feeInfo">Estimated Fee: --</div>
   <div id="kycStatus">KYC: Not Verified</div>
   <div id="rewardList">NFT Rewards: None</div>
+  <div class="status" id="status"></div>
   <button id="bridgeBtn" disabled>Cross-Chain Transfer</button>
 
   <canvas id="txChart" height="120"></canvas>
@@ -248,7 +278,6 @@ const DOM = {
   txChart: document.getElementById('txChart')
 };
 
-// ===== AI 风险提示 =====
 class BridgeAI {
   constructor() { this.reset(); }
   reset() { this.status = "🤖 AI Ready"; this.suggestions = []; this.warnings = []; }
@@ -288,12 +317,10 @@ function showAI(report) {
   DOM.aiSuggestions.innerHTML = html;
 }
 
-// ===== 初始化 LiFi =====
 async function initLiFi() {
   lifi = new LiFi({ integrator: "AstroBridge" });
 }
 
-// ===== 钱包连接 =====
 function setStatus(el, msg, type = '') {
   el.textContent = msg;
   el.className = `status ${type}`;
@@ -324,14 +351,12 @@ DOM.connectBtn.onclick = async () => {
     watchNetwork();
     populateChainsAndTokens();
     await updateBalance();
-    await checkKYC();
-    await fetchTxHistoryFromBackend();
     setStatus(DOM.walletStatus, `Connected: ${account.slice(0,6)}...${account.slice(-4)}`, "success");
     DOM.bridgeBtn.disabled = false;
     updateAI();
-    await fetchNFTRewards();
   } catch (e) {
     setStatus(DOM.walletStatus, "Connection failed", "error");
+    console.error(e);
   } finally {
     setLoading(false);
   }
@@ -358,7 +383,6 @@ function populateChainsAndTokens() {
   });
 }
 
-// ===== 更新余额 =====
 async function updateBalance() {
   if (!account || !signer) return "--";
   try {
@@ -366,7 +390,6 @@ async function updateBalance() {
     const bal = await tokenContract.balanceOf(account);
     const formatted = parseFloat(ethers.utils.formatEther(bal)).toFixed(4);
     DOM.tokenBalance.textContent = `Balance: ${formatted} ${DOM.tokenSelect.value}`;
-    await fetchRealTimeRates(formatted);
     return formatted;
   } catch (e) {
     DOM.tokenBalance.textContent = "Balance: --";
@@ -374,18 +397,6 @@ async function updateBalance() {
   }
 }
 
-// ===== 后端 KYC 验证 =====
-async function checkKYC() {
-  try {
-    const res = await fetch(`/api/kyc?address=${account}`);
-    const data = await res.json();
-    DOM.kycStatus.textContent = data.verified ? "KYC: Verified" : "KYC: Not Verified";
-  } catch (e) {
-    DOM.kycStatus.textContent = "KYC: Error";
-  }
-}
-
-// ===== AI 更新 =====
 async function updateAI() {
   const balance = await updateBalance();
   const data = {
@@ -400,31 +411,6 @@ async function updateAI() {
   showAI(report);
 }
 
-// ===== NFT 奖励 =====
-async function fetchNFTRewards() {
-  try {
-    const res = await fetch(`/api/reward?address=${account}`);
-    const data = await res.json();
-    DOM.rewardList.textContent = `NFT Rewards: ${data.nfts.length ? data.nfts.join(", ") : "None"}`;
-  } catch (e) {
-    DOM.rewardList.textContent = "NFT Rewards: Error";
-  }
-}
-
-// ===== 实时汇率和手续费 =====
-async function fetchRealTimeRates(balance) {
-  try {
-    const res = await fetch(`/api/rates?token=${DOM.tokenSelect.value}`);
-    const data = await res.json();
-    DOM.pricePreview.textContent = `Estimated USD Value: $${(balance * data.price).toFixed(2)}`;
-    DOM.feeInfo.textContent = `Estimated Fee: $${(balance * data.fee).toFixed(2)}`;
-  } catch (e) {
-    DOM.pricePreview.textContent = "Estimated USD Value: --";
-    DOM.feeInfo.textContent = "Estimated Fee: --";
-  }
-}
-
-// ===== 交易队列 =====
 [DOM.tokenSelect, DOM.fromChain, DOM.toChain, DOM.amount, DOM.slippage].forEach(el => {
   el.addEventListener('input', updateAI);
 });
@@ -462,7 +448,6 @@ DOM.bridgeBtn.onclick = async () => {
   if (txQueue.length === 1) processQueue();
 };
 
-// ===== 处理队列 =====
 async function processQueue() {
   if (txQueue.length === 0) return;
   const tx = txQueue[0];
@@ -503,10 +488,8 @@ async function processQueue() {
     };
     txHistory.unshift(txRecord);
     updateHistoryList();
-    await recordTxToBackend(txRecord);
 
     setStatus(DOM.status, `Transfer success! Points: ${points}`, "success");
-    await fetchNFTRewards();
 
     txQueue.shift();
     await updateBalance();
@@ -515,7 +498,7 @@ async function processQueue() {
     if (tx.retries < 3) {
       tx.retries += 1;
       setStatus(DOM.status, `Retrying... (${tx.retries})`, "warn");
-      setTimeout(processQueue, 2000);
+      setTimeout(() => processQueue(), 2000);
       return;
     }
     setStatus(DOM.status, "Error: " + e.message.slice(0, 60), "error");
@@ -525,10 +508,9 @@ async function processQueue() {
     setTimeout(() => DOM.rocket.classList.remove('launch'), 2500);
   }
   updateQueueList();
-  if (txQueue.length > 0) setTimeout(processQueue, 500);
+  if (txQueue.length > 0) setTimeout(() => processQueue(), 500);
 }
 
-// ===== 图表 =====
 function initChart() {
   const ctx = DOM.txChart.getContext('2d');
   txChart = new Chart(ctx, {
@@ -563,30 +545,6 @@ function updateQueueList() {
 function updateHistoryList() {
   const text = txHistory.slice(0, 5).map(t => `${t.token} ${t.amount} ${t.from}→${t.to}`).join(" | ");
   DOM.historyList.textContent = `History: ${text || "Empty"}`;
-}
-
-// ===== 后端交互 =====
-async function recordTxToBackend(tx) {
-  try {
-    await fetch('/api/recordTx', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(tx)
-    });
-  } catch (e) {
-    console.error("Failed to record tx", e);
-  }
-}
-
-async function fetchTxHistoryFromBackend() {
-  try {
-    const res = await fetch('/api/txHistory');
-    const data = await res.json();
-    txHistory = data;
-    updateHistoryList();
-  } catch (e) {
-    console.error("Failed to fetch history", e);
-  }
 }
 </script>
 </body>
