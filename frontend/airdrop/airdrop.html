@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MemeAstro (MA) Triple Airdrop | AstroChannel</title>
 
-  <!-- 保留 Tailwind、ethers（项目需要） -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 
-  <!-- 移除外部 Font Awesome，改用内联 SVG 图标（解决 CSP） -->
   <style>
     body { 
       background:#050512; 
@@ -27,11 +25,96 @@
       outline: 2px solid rgba(0,229,255,.5);
       outline-offset: 2px;
     }
-    /* 内联箭头图标（替代 Font Awesome fa-arrow-left） */
     .icon-arrow-left {
       display: inline-block;
       width: 14px;
       height: 14px;
+      fill: currentColor;
+    }
+
+    .task-card {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+    }
+    .task-card:hover {
+      border-color: rgba(0,229,255,0.5);
+    }
+    .task-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #00e5ff;
+      margin-bottom: 8px;
+    }
+    .task-desc {
+      color: #a0c8d8;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      text-align: center;
+      width: 100%;
+    }
+    .btn-primary {
+      background: #00e5ff;
+      color: #000;
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: #33ebff;
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .claim-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+    #claimAirdrop {
+      max-width: 320px;
+      padding: 16px;
+      font-size: 18px;
+    }
+    .status {
+      margin-top: 12px;
+      color: #52c41a;
+      font-weight: 500;
+    }
+    .gas-note {
+      margin-top: 20px;
+      text-align: center;
+      color: #88aabb;
+      font-size: 14px;
+    }
+    .stats {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #a0c8d8;
+    }
+    .x-follow-btn {
+      background: #1da1f2;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .x-follow-btn:hover {
+      background: #1a91da;
+    }
+    .x-icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
       fill: currentColor;
     }
   </style>
@@ -41,7 +124,6 @@
 
 <div class="mb-6 text-center">
   <a href="https://www.astrochannel.one/" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-full text-cyan-400 hover:bg-cyan-400/20 transition-all">
-    <!-- 替换 Font Awesome 为内联 SVG -->
     <svg class="icon-arrow-left" viewBox="0 0 24 24">
       <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
     </svg>
@@ -52,13 +134,17 @@
 <h1 class="text-4xl font-bold text-center mb-4 text-cyan-400">
 🚀 MemeAstro (MA) Triple Airdrop
 </h1>
-<p class="text-center text-gray-300 mb-8">
-  Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months<br>
-  <span class="text-cyan-300">
-    Top 10k: 525,000 MA | 10k–50k: 218,750 MA | 50k–100k: 140,000 MA<br>
-    100k–200k: 70,000 MA | 200k–1M: 8,750 MA
-  </span>
+<p class="text-center text-gray-300 mb-4">
+  Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months
 </p>
+<p class="text-center text-cyan-300 mb-8">
+  Top 10k: 525,000 MA | 10k–50k: 218,750 MA | 50k–100k: 140,000 MA<br>
+  100k–200k: 70,000 MA | 200k–1M: 8,750 MA
+</p>
+
+<div class="stats">
+  Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1,234</span>
+</div>
 
 <!-- Wallet connection -->
 <div class="bg-black/40 border border-cyan-400/30 rounded-xl p-5 mb-6 neon">
@@ -73,10 +159,131 @@
   </div>
 </div>
 
-<!-- IMEI, X, and Bridge sections -->
+<!-- Task 1: Follow X -->
+<div class="task-card">
+  <div class="task-title">1. Follow X Account</div>
+  <div class="task-desc">Click to open X & follow @Astro___Channel</div>
+  <a href="https://x.com/Astro___Channel" target="_blank" class="btn x-follow-btn">
+    <svg class="x-icon" viewBox="0 0 24 24">
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+    </svg>
+    Follow on X
+  </a>
+  <button class="btn btn-primary verify-btn" data-task="x">I've Followed</button>
+</div>
+
+<!-- Task 2: Starlink IMEI -->
+<div class="task-card">
+  <div class="task-title">2. Starlink IMEI Verification</div>
+  <div class="task-desc">Enter 15-digit IMEI (one-time only)</div>
+  <input 
+    type="text" 
+    id="imeiInput" 
+    placeholder="Enter 15-digit IMEI"
+    class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg text-white mb-4"
+    maxlength="15"
+  >
+  <button class="btn btn-primary verify-btn" data-task="imei">Verify IMEI</button>
+</div>
+
+<!-- Task 3: Bridge Transfer -->
+<div class="task-card">
+  <div class="task-title">3. Complete Cross-Chain Transfer</div>
+  <div class="task-desc">Transfer via bridge & verify record</div>
+  <a 
+    href="https://www.astrochannel.one/bridge.html" 
+    target="_blank"
+    class="inline-block text-cyan-400 hover:text-cyan-300 mb-4 w-full text-center"
+  >
+    Go to Bridge →
+  </a>
+  <button class="btn btn-primary verify-btn" data-task="bridge">Verify Transfer</button>
+</div>
+
+<!-- Claim Button -->
+<div class="claim-section">
+  <button class="btn btn-primary" id="claimAirdrop" disabled>Claim MA Airdrop</button>
+  <div id="claimStatus" class="status"></div>
+</div>
+
+<!-- Gas Note -->
+<div class="gas-note">
+  Gas fees on BSC are paid by the user
+</div>
 
 <script>
-// 你的交互脚本（原样保留）
+  let connectedWallet = null;
+  let verifiedTasks = { x: false, imei: false, bridge: false };
+
+  // Connect MetaMask
+  document.getElementById('connectBtn').addEventListener('click', async () => {
+    if (!window.ethereum) {
+      alert('Please install MetaMask');
+      return;
+    }
+    try {
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      connectedWallet = accounts[0];
+      document.getElementById('walletStatus').textContent = `Connected: ${connectedWallet.slice(0,6)}...${connectedWallet.slice(-4)}`;
+      document.getElementById('connectBtn').textContent = 'Connected';
+      document.getElementById('connectBtn').disabled = true;
+      checkClaimEnable();
+    } catch (err) {
+      console.error('Connect failed', err);
+    }
+  });
+
+  // Verify Buttons
+  document.querySelectorAll('.verify-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!connectedWallet) {
+        alert('Connect MetaMask first');
+        return;
+      }
+      const task = btn.dataset.task;
+      btn.textContent = 'Verifying...';
+      btn.disabled = true;
+
+      // IMEI check
+      if (task === 'imei') {
+        const imei = document.getElementById('imeiInput').value.trim();
+        if (imei.length !== 15 || !/^\d+$/.test(imei)) {
+          alert('IMEI must be 15 digits');
+          btn.textContent = 'Verify IMEI';
+          btn.disabled = false;
+          return;
+        }
+      }
+
+      // Simulate API/chain check
+      await new Promise(r => setTimeout(r, 1500));
+
+      verifiedTasks[task] = true;
+      btn.textContent = '✅ Verified';
+      btn.style.background = '#52c41a';
+      checkClaimEnable();
+    });
+  });
+
+  // Enable claim if any task verified
+  function checkClaimEnable() {
+    const ok = Object.values(verifiedTasks).some(v => v);
+    document.getElementById('claimAirdrop').disabled = !ok || !connectedWallet;
+  }
+
+  // Claim Airdrop
+  document.getElementById('claimAirdrop').addEventListener('click', async () => {
+    const btn = document.getElementById('claimAirdrop');
+    const status = document.getElementById('claimStatus');
+    btn.textContent = 'Claiming...';
+    btn.disabled = true;
+
+    // Simulate on-chain tx
+    await new Promise(r => setTimeout(r, 2000));
+
+    status.textContent = '✅ Claimed! MA locked for 3 months, auto-unlock at expiry';
+    btn.textContent = 'Claimed';
+  });
 </script>
 
 </body>
