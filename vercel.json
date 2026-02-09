@@ -4,7 +4,7 @@
     { "source": "/wallet", "destination": "/wallet.html" },
     { "source": "/chain", "destination": "/chain.html" },
     // 新增：所有 /api/* 转发到后端入口
-    { "source": "/api/:path*", "destination": "/backend/server.ts" },
+   
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
