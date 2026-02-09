@@ -1,46 +1,32 @@
-import express from 'express';
-import { pool } from '../lib/db';
-const router = express.Router();
+import type { Request, Response } from "express";
+import { db, createUserIfNotExist, isImeiUsed, markImeiUsed, markTask, assignReward } from "../lib/db";
 
-/**
- * POST /api/verify-imei
- * body: { imei: string, wallet: string }
- */
-router.post('/', async (req, res) => {
+export default async function handler(req: Request, res: Response) {
   try {
-    const { imei, wallet } = req.body;
+    const { wallet, imei } = req.body;
 
-    // 参数校验
-    if (!imei || !/^\d{15}$/.test(imei)) {
-      return res.status(400).json({ success: false, message: 'Invalid IMEI' });
-    }
-    if (!wallet || !/^0x[a-fA-F0-9]{40}$/.test(wallet)) {
-      return res.status(400).json({ success: false, message: 'Invalid wallet address' });
-    }
+    if (!wallet || !imei) return res.status(400).json({ error: "Missing wallet or IMEI" });
+    if (!/^\d{15}$/.test(imei)) return res.status(400).json({ error: "IMEI must be 15 digits" });
 
-    // 查询是否已使用
-    const check = await pool.query(
-      'SELECT * FROM airdrop WHERE imei = $1 OR wallet = $2',
-      [imei, wallet]
-    );
+    // 1️⃣ 创建用户记录（如果不存在）
+    createUserIfNotExist(wallet);
 
-    if (check.rows.some(row => row.imei_verified)) {
-      return res.status(400).json({ success: false, message: 'IMEI already used' });
-    }
+    // 2️⃣ 检查 IMEI 是否已用
+    if (isImeiUsed(imei)) return res.status(400).json({ error: "IMEI already used" });
 
-    // 插入或更新
-    await pool.query(
-      `INSERT INTO airdrop (wallet, imei, imei_verified)
-       VALUES ($1, $2, true)
-       ON CONFLICT (wallet) DO UPDATE SET imei = EXCLUDED.imei, imei_verified = true`,
-      [wallet, imei]
-    );
+    // 3️⃣ 标记任务完成
+    markTask(wallet, "imei");
 
-    return res.json({ success: true, message: 'IMEI verified (+10,000 MA)' });
-  } catch (err) {
-    console.error('verify-imei error:', err);
-    return res.status(500).json({ success: false, message: 'Server error' });
+    // 4️⃣ 标记 IMEI
+    markImeiUsed(imei, wallet);
+
+    // 5️⃣ 分配奖励
+    const reward = assignReward(wallet);
+
+    res.json({ success: true, reward });
+
+  } catch (err: any) {
+    console.error("verify-imei error:", err);
+    res.status(500).json({ error: err.toString() });
   }
-});
-
-export default router;
+}
