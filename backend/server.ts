@@ -1,30 +1,54 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+
 dotenv.config();
 
-// 导入各个 API 路由
-import verifyImei from './api/verify-imei';
-import verifyX from './api/verify-x';
-import verifyBridge from './api/verify-bridge';
-import reward from './api/reward';
-import claim from './api/claim';
-
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// 跨域和 JSON 解析
+// 中间件
 app.use(cors());
 app.use(express.json());
 
-// API 路由
-app.use('/api/verify-imei', verifyImei);
-app.use('/api/verify-x', verifyX);
-app.use('/api/verify-bridge', verifyBridge);
-app.use('/api/reward', reward);
-app.use('/api/claim', claim);
+// 引入 API
+import verifyImei from "./api/verify-imei";
+import verifyX from "./api/verify-x";
+import verifyBridge from "./api/verify-bridge";
+import claim from "./api/claim";
+import { getUser } from "./lib/db";
+
+// 路由挂载
+app.post("/api/verify-imei", verifyImei);
+app.post("/api/verify-x", verifyX);
+app.post("/api/verify-bridge", verifyBridge);
+app.post("/api/claim", claim);
+
+// 可选：获取用户奖励信息
+app.get("/api/reward/:wallet", (req, res) => {
+  try {
+    const { wallet } = req.params;
+    const user = getUser(wallet);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    res.json({
+      success: true,
+      wallet,
+      reward: user.reward || 0,
+      tasks: {
+        imei: user.verified_imei || false,
+        x: user.verified_x || false,
+        bridge: user.verified_bridge || false,
+        claimed: user.claimed || false
+      }
+    });
+  } catch (err: any) {
+    console.error("reward error:", err);
+    res.status(500).json({ error: err.toString() });
+  }
+});
 
 // 启动服务
-const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 MemeAstro backend running on http://localhost:${PORT}`);
 });
