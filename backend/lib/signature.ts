@@ -1,51 +1,26 @@
 import { ethers } from "ethers";
-import { getUser, db } from "./db";
+import dotenv from "dotenv";
+dotenv.config();
 
-// 后端私钥，用于签名 EIP-712
-const PRIVATE_KEY = process.env.SIGNER_PRIVATE_KEY || "";
-if (!PRIVATE_KEY) throw new Error("Missing SIGNER_PRIVATE_KEY in .env");
+const signer = new ethers.Wallet(process.env.SIGNER_PRIVATE_KEY || "", undefined);
 
-const walletSigner = new ethers.Wallet(PRIVATE_KEY);
-
-// EIP-712 Domain
-const domain = {
-  name: "MemeAstroAirdrop",
-  version: "1",
-  chainId: 56, // BSC 主网
-  verifyingContract: process.env.AIRDROP_CONTRACT_ADDRESS || ""
-};
-
-// EIP-712 类型
-const types = {
-  Claim: [
-    { name: "wallet", type: "address" },
-    { name: "amount", type: "uint256" },
-    { name: "lockUntil", type: "uint256" }
-  ]
-};
-
-// 生成签名
-export async function signClaim(walletAddress: string) {
-  const user = getUser(walletAddress);
-  if (!user) throw new Error("User not found");
-
-  const amount = user.reward;
-  if (!amount || amount <= 0) throw new Error("No reward assigned");
-
-  // 锁仓 3 个月
-  const now = Math.floor(Date.now() / 1000);
-  const lockUntil = now + 90 * 24 * 3600; // 90 天秒数
-
-  const value = {
-    wallet: walletAddress,
-    amount,
-    lockUntil
+export function signAirdrop(wallet: string, amount: number, lockUntil: number) {
+  const domain = {
+    name: "MemeAstro",
+    version: "1",
+    chainId: Number(process.env.CHAIN_ID || 1),
+    verifyingContract: "0x0000000000000000000000000000000000000000" // placeholder
   };
 
-  const signature = await walletSigner._signTypedData(domain, types, value);
+  const types = {
+    Airdrop: [
+      { name: "wallet", type: "address" },
+      { name: "amount", type: "uint256" },
+      { name: "lockUntil", type: "uint256" }
+    ]
+  };
 
-  // 更新数据库标记已领取
-  db.prepare("UPDATE users SET claimed = 1 WHERE wallet = ?").run(walletAddress);
+  const value = { wallet, amount, lockUntil };
 
-  return { signature, amount, lockUntil };
+  return signer._signTypedData(domain, types, value);
 }
