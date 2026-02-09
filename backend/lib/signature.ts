@@ -1,31 +1,22 @@
 import { ethers } from "ethers";
-import { db } from "./db";
+import { getUser, db } from "./db";
 
-/**
- * ===============================
- * 私钥配置
- * ===============================
- * 建议在 .env 中配置：
- * AIRDROP_SIGNER_PRIVATE_KEY=0x...
- */
-const signerPrivateKey = process.env.AIRDROP_SIGNER_PRIVATE_KEY;
-if (!signerPrivateKey) throw "Missing AIRDROP_SIGNER_PRIVATE_KEY in .env";
+// 后端私钥，用于签名 EIP-712
+const PRIVATE_KEY = process.env.SIGNER_PRIVATE_KEY || "";
+if (!PRIVATE_KEY) throw new Error("Missing SIGNER_PRIVATE_KEY in .env");
 
-const wallet = new ethers.Wallet(signerPrivateKey);
+const walletSigner = new ethers.Wallet(PRIVATE_KEY);
 
-/**
- * ===============================
- * EIP-712 结构
- * ===============================
- */
-const DOMAIN = {
+// EIP-712 Domain
+const domain = {
   name: "MemeAstroAirdrop",
   version: "1",
-  chainId: 56, // BSC Mainnet
-  verifyingContract: process.env.AIRDROP_CONTRACT || "0xYourContractAddress",
+  chainId: 56, // BSC 主网
+  verifyingContract: process.env.AIRDROP_CONTRACT_ADDRESS || ""
 };
 
-const TYPES = {
+// EIP-712 类型
+const types = {
   Claim: [
     { name: "wallet", type: "address" },
     { name: "amount", type: "uint256" },
@@ -33,24 +24,28 @@ const TYPES = {
   ]
 };
 
-/**
- * ===============================
- * 生成签名
- * ===============================
- */
-export function signClaim(walletAddress: string) {
-  // 1️⃣ 获取用户奖励
-  const user = db.getUser(walletAddress);
-  if (!user) throw "User not found";
-  if (!user.reward || user.reward <= 0) throw "No reward assigned";
-  if (user.claimed) throw "Already claimed";
+// 生成签名
+export async function signClaim(walletAddress: string) {
+  const user = getUser(walletAddress);
+  if (!user) throw new Error("User not found");
 
   const amount = user.reward;
-  const now = Math.floor(Date.now() / 1000);
-  const lockUntil = now + 60 * 60 * 24 * 30 * 3; // 3个月锁仓
+  if (!amount || amount <= 0) throw new Error("No reward assigned");
 
-  const message = { wallet: walletAddress, amount, lockUntil };
-  const signature = wallet._signTypedData(DOMAIN, TYPES, message);
+  // 锁仓 3 个月
+  const now = Math.floor(Date.now() / 1000);
+  const lockUntil = now + 90 * 24 * 3600; // 90 天秒数
+
+  const value = {
+    wallet: walletAddress,
+    amount,
+    lockUntil
+  };
+
+  const signature = await walletSigner._signTypedData(domain, types, value);
+
+  // 更新数据库标记已领取（可选择在 claim.ts 里再确认一次）
+  db.prepare("UPDATE users SET claimed = 1 WHERE wallet = ?").run(walletAddress);
 
   return { signature, amount, lockUntil };
 }
