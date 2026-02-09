@@ -1,66 +1,67 @@
-import Database from "better-sqlite3";
-import path from "path";
+import pkg from "pg";
+import dotenv from "dotenv";
+dotenv.config();
 
-// 数据库文件
-const dbPath = path.join(__dirname, "airdrop.db");
-export const db = new Database(dbPath);
+const { Pool } = pkg;
 
-// 初始化 users 表
-db.prepare(`
-CREATE TABLE IF NOT EXISTS users (
-  wallet TEXT PRIMARY KEY,
-  reward INTEGER DEFAULT 0,
-  claimed INTEGER DEFAULT 0,
-  verified_imei INTEGER DEFAULT 0,
-  verified_x INTEGER DEFAULT 0,
-  verified_bridge INTEGER DEFAULT 0,
-  created_at INTEGER DEFAULT (strftime('%s','now'))
-)
-`).run();
+const pool = new Pool({
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT || 5432),
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+});
 
-// 初始化 imeis 表
-db.prepare(`
-CREATE TABLE IF NOT EXISTS imeis (
-  imei TEXT PRIMARY KEY,
-  wallet TEXT,
-  created_at INTEGER DEFAULT (strftime('%s','now'))
-)
-`).run();
+// 初始化表
+export async function initDB() {
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS users (
+      wallet TEXT PRIMARY KEY,
+      reward INTEGER DEFAULT 0,
+      claimed BOOLEAN DEFAULT FALSE,
+      verified_imei BOOLEAN DEFAULT FALSE,
+      verified_x BOOLEAN DEFAULT FALSE,
+      verified_bridge BOOLEAN DEFAULT FALSE,
+      created_at BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
+    );
+  `);
 
-// ============================
-// 用户操作
-// ============================
-
-// 创建用户，如果不存在
-export function createUserIfNotExist(wallet: string) {
-  db.prepare("INSERT OR IGNORE INTO users(wallet) VALUES(?)").run(wallet);
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS imeis (
+      imei TEXT PRIMARY KEY,
+      wallet TEXT,
+      created_at BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
+    );
+  `);
 }
 
-// 获取用户
-export function getUser(wallet: string) {
-  return db.prepare("SELECT * FROM users WHERE wallet = ?").get(wallet);
+export async function createUserIfNotExist(wallet: string) {
+  await pool.query(
+    `INSERT INTO users(wallet) VALUES($1) ON CONFLICT (wallet) DO NOTHING`,
+    [wallet]
+  );
 }
 
-// 标记任务完成
-export function markTask(wallet: string, task: "imei" | "x" | "bridge") {
+export async function getUser(wallet: string) {
+  const res = await pool.query(`SELECT * FROM users WHERE wallet = $1`, [wallet]);
+  return res.rows[0];
+}
+
+export async function markTask(wallet: string, task: "imei" | "x" | "bridge") {
   const col = task === "imei" ? "verified_imei" : task === "x" ? "verified_x" : "verified_bridge";
-  db.prepare(`UPDATE users SET ${col} = 1 WHERE wallet = ?`).run(wallet);
+  await pool.query(`UPDATE users SET ${col} = TRUE WHERE wallet = $1`, [wallet]);
 }
 
-// ============================
-// IMEI 去重
-// ============================
-export function isImeiUsed(imei: string) {
-  return !!db.prepare("SELECT 1 FROM imeis WHERE imei = ?").get(imei);
+export async function isImeiUsed(imei: string) {
+  const res = await pool.query(`SELECT 1 FROM imeis WHERE imei = $1`, [imei]);
+  return res.rowCount > 0;
 }
 
-export function markImeiUsed(imei: string, wallet: string) {
-  db.prepare("INSERT INTO imeis(imei, wallet) VALUES(?, ?)").run(imei, wallet);
+export async function markImeiUsed(imei: string, wallet: string) {
+  await pool.query(`INSERT INTO imeis(imei, wallet) VALUES($1, $2)`, [imei, wallet]);
 }
 
-// ============================
-// 奖励阶梯逻辑
-// ============================
+// 奖励阶梯
 const rewardTiers = [
   { maxRank: 10000, reward: 525000 },
   { maxRank: 50000, reward: 218750 },
@@ -69,16 +70,17 @@ const rewardTiers = [
   { maxRank: 1000000, reward: 8750 },
 ];
 
-// 分配奖励
-export function assignReward(wallet: string) {
-  const user = getUser(wallet);
+export async function assignReward(wallet: string) {
+  const user = await getUser(wallet);
   if (!user) return 0;
   if (user.reward > 0) return user.reward;
 
-  // 计算排名（按创建时间）
-  const rank = db.prepare("SELECT COUNT(*) as cnt FROM users WHERE created_at <= ?").get(user.created_at).cnt;
+  const res = await pool.query(
+    `SELECT COUNT(*) as cnt FROM users WHERE created_at <= $1`,
+    [user.created_at]
+  );
+  const rank = Number(res.rows[0].cnt);
 
-  // 按阶梯奖励
   let reward = 0;
   for (const tier of rewardTiers) {
     if (rank <= tier.maxRank) {
@@ -87,6 +89,8 @@ export function assignReward(wallet: string) {
     }
   }
 
-  db.prepare("UPDATE users SET reward = ? WHERE wallet = ?").run(reward, wallet);
+  await pool.query(`UPDATE users SET reward = $1 WHERE wallet = $2`, [reward, wallet]);
   return reward;
 }
+
+export { pool };
