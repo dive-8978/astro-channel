@@ -1,30 +1,26 @@
-import type { Request, Response } from "express";
+import express from "express";
 import { createUserIfNotExist, isImeiUsed, markImeiUsed, markTask, assignReward } from "../lib/db";
 
-export default async function handler(req: Request, res: Response) {
+const router = express.Router();
+
+router.post("/", async (req, res) => {
   try {
     const { wallet, imei } = req.body;
-    if (!wallet) return res.status(400).json({ error: "Missing wallet" });
-    if (!imei) return res.status(400).json({ error: "Missing IMEI" });
+    if (!wallet || !imei || imei.length !== 15) return res.status(400).json({ error: "Invalid params" });
 
-    const imeiTrim = imei.trim();
-    if (imeiTrim.length !== 15 || !/^\d+$/.test(imeiTrim)) {
-      return res.status(400).json({ error: "IMEI must be 15 digits" });
-    }
+    const used = await isImeiUsed(imei);
+    if (used) return res.status(400).json({ error: "IMEI already used" });
 
-    if (isImeiUsed(imeiTrim)) {
-      return res.status(400).json({ error: "IMEI already used" });
-    }
-
-    createUserIfNotExist(wallet);
-    markTask(wallet, "imei");
-    markImeiUsed(imeiTrim, wallet);
-
-    const reward = assignReward(wallet);
+    await createUserIfNotExist(wallet);
+    await markTask(wallet, "imei");
+    await markImeiUsed(imei, wallet);
+    const reward = await assignReward(wallet);
 
     res.json({ success: true, reward });
-  } catch (err: any) {
-    console.error("verify-imei error:", err);
-    res.status(500).json({ error: err.toString() });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
   }
-}
+});
+
+export default router;
