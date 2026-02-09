@@ -1,121 +1,93 @@
 import Database from "better-sqlite3";
+import path from "path";
 
-export const db = new Database("airdrop.db");
+// 数据库文件
+const dbPath = path.join(__dirname, "airdrop.db");
+export const db = new Database(dbPath);
 
-/**
- * ===============================
- * 初始化表结构
- * ===============================
- */
-db.exec(`
+// 初始化表
+db.prepare(`
 CREATE TABLE IF NOT EXISTS users (
   wallet TEXT PRIMARY KEY,
+  reward INTEGER DEFAULT 0,
+  claimed INTEGER DEFAULT 0,
   verified_imei INTEGER DEFAULT 0,
   verified_x INTEGER DEFAULT 0,
   verified_bridge INTEGER DEFAULT 0,
-  reward INTEGER DEFAULT 0,
-  claimed INTEGER DEFAULT 0,
-  created_at INTEGER
-);
+  created_at INTEGER DEFAULT (strftime('%s','now'))
+)
+`).run();
 
-CREATE TABLE IF NOT EXISTS imei_used (
+db.prepare(`
+CREATE TABLE IF NOT EXISTS imeis (
   imei TEXT PRIMARY KEY,
   wallet TEXT,
-  created_at INTEGER
-);
-`);
+  created_at INTEGER DEFAULT (strftime('%s','now'))
+)
+`).run();
 
-/**
- * ===============================
- * 用户相关
- * ===============================
- */
-export function getUser(wallet: string) {
-  return db.prepare(
-    "SELECT * FROM users WHERE wallet = ?"
-  ).get(wallet);
-}
+// ============================
+// 用户操作
+// ============================
 
+// 创建用户，如果不存在
 export function createUserIfNotExist(wallet: string) {
-  db.prepare(`
-    INSERT OR IGNORE INTO users (wallet, created_at)
-    VALUES (?, ?)
-  `).run(wallet, Date.now());
+  const stmt = db.prepare("INSERT OR IGNORE INTO users(wallet) VALUES(?)");
+  stmt.run(wallet);
 }
 
-/**
- * ===============================
- * 任务标记
- * ===============================
- */
-export function markTask(
-  wallet: string,
-  task: "imei" | "x" | "bridge"
-) {
-  const field =
-    task === "imei" ? "verified_imei" :
-    task === "x" ? "verified_x" :
-    "verified_bridge";
-
-  db.prepare(`
-    UPDATE users SET ${field} = 1 WHERE wallet = ?
-  `).run(wallet);
+// 获取用户
+export function getUser(wallet: string) {
+  return db.prepare("SELECT * FROM users WHERE wallet = ?").get(wallet);
 }
 
-/**
- * ===============================
- * IMEI 防重复
- * ===============================
- */
+// 标记任务完成
+export function markTask(wallet: string, task: "imei" | "x" | "bridge") {
+  const col = task === "imei" ? "verified_imei" : task === "x" ? "verified_x" : "verified_bridge";
+  db.prepare(`UPDATE users SET ${col} = 1 WHERE wallet = ?`).run(wallet);
+}
+
+// ============================
+// IMEI 去重
+// ============================
 export function isImeiUsed(imei: string) {
-  return !!db.prepare(
-    "SELECT 1 FROM imei_used WHERE imei = ?"
-  ).get(imei);
+  return !!db.prepare("SELECT 1 FROM imeis WHERE imei = ?").get(imei);
 }
 
 export function markImeiUsed(imei: string, wallet: string) {
-  db.prepare(`
-    INSERT INTO imei_used (imei, wallet, created_at)
-    VALUES (?, ?, ?)
-  `).run(imei, wallet, Date.now());
+  db.prepare("INSERT INTO imeis(imei, wallet) VALUES(?, ?)").run(imei, wallet);
 }
 
-/**
- * ===============================
- * 奖励阶梯（按顺序）
- * ===============================
- */
-export function calculateReward(): number {
-  const count =
-    db.prepare("SELECT COUNT(*) AS c FROM users").get().c;
+// ============================
+// 奖励阶梯逻辑
+// ============================
 
-  if (count <= 10_000) return 20_000;
-  if (count <= 50_000) return 15_000;
-  if (count <= 100_000) return 5_000;
-  if (count <= 200_000) return 1_000;
-  if (count <= 1_000_000) return 500;
+const rewardTiers = [
+  { maxRank: 10000, reward: 525000 },
+  { maxRank: 50000, reward: 218750 },
+  { maxRank: 100000, reward: 140000 },
+  { maxRank: 200000, reward: 70000 },
+  { maxRank: 1000000, reward: 8750 },
+];
 
-  return 0;
-}
-
+// 分配奖励
 export function assignReward(wallet: string) {
-  const reward = calculateReward();
-  if (reward === 0) throw "Airdrop full";
+  const user = getUser(wallet);
+  if (!user) return 0;
+  if (user.reward > 0) return user.reward; // 已分配
 
-  db.prepare(`
-    UPDATE users SET reward = ? WHERE wallet = ?
-  `).run(reward, wallet);
+  // 计算排名（按创建时间）
+  const rank = db.prepare("SELECT COUNT(*) as cnt FROM users WHERE created_at <= ?").get(user.created_at).cnt;
 
+  // 按阶梯奖励
+  let reward = 0;
+  for (const tier of rewardTiers) {
+    if (rank <= tier.maxRank) {
+      reward = tier.reward;
+      break;
+    }
+  }
+
+  db.prepare("UPDATE users SET reward = ? WHERE wallet = ?").run(reward, wallet);
   return reward;
-}
-
-/**
- * ===============================
- * Claim 状态
- * ===============================
- */
-export function markClaimed(wallet: string) {
-  db.prepare(`
-    UPDATE users SET claimed = 1 WHERE wallet = ?
-  `).run(wallet);
 }
