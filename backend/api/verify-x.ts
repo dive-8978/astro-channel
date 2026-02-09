@@ -1,19 +1,22 @@
-import type { Request, Response } from "express";
+import express from "express";
 import { createUserIfNotExist, markTask, assignReward } from "../lib/db";
 
-export default async function handler(req: Request, res: Response) {
+const router = express.Router();
+
+router.post("/", async (req, res) => {
   try {
     const { wallet } = req.body;
     if (!wallet) return res.status(400).json({ error: "Missing wallet" });
 
-    createUserIfNotExist(wallet);
-    markTask(wallet, "x");
-
-    const reward = assignReward(wallet);
+    await createUserIfNotExist(wallet);
+    await markTask(wallet, "x");
+    const reward = await assignReward(wallet);
 
     res.json({ success: true, reward });
-  } catch (err: any) {
-    console.error("verify-x error:", err);
-    res.status(500).json({ error: err.toString() });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
   }
-}
+});
+
+export default router;
