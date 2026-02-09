@@ -44,7 +44,7 @@ export async function signClaim(walletAddress: string) {
 
   const signature = await walletSigner._signTypedData(domain, types, value);
 
-  // 更新数据库标记已领取（可选择在 claim.ts 里再确认一次）
+  // 更新数据库标记已领取
   db.prepare("UPDATE users SET claimed = 1 WHERE wallet = ?").run(walletAddress);
 
   return { signature, amount, lockUntil };
