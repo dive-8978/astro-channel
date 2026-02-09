@@ -1,17 +1,30 @@
-import type { Request, Response } from "express";
-import { getUser } from "../lib/db";
+import express from "express";
+import { getUser, assignReward } from "../lib/db";
 
-export default async function handler(req: Request, res: Response) {
+const router = express.Router();
+
+router.get("/", async (req, res) => {
   try {
-    const { wallet } = req.query;
+    const wallet = req.query.wallet as string;
     if (!wallet) return res.status(400).json({ error: "Missing wallet" });
 
-    const user = getUser(wallet as string);
-    if (!user) return res.status(404).json({ error: "User not found" });
+    const reward = await assignReward(wallet);
+    const user = await getUser(wallet);
 
-    res.json({ reward: user.reward, claimed: user.claimed });
-  } catch (err: any) {
-    console.error("reward error:", err);
-    res.status(500).json({ error: err.toString() });
+    res.json({
+      success: true,
+      reward,
+      verified: {
+        imei: user?.verified_imei || false,
+        x: user?.verified_x || false,
+        bridge: user?.verified_bridge || false
+      },
+      claimed: user?.claimed || false
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
   }
-}
+});
+
+export default router;
