@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MemeAstro (MA) Triple Airdrop | AstroChannel</title>
 
-  <!-- 使用编译后的 Tailwind CSS -->
+  <!-- 使用本地 Tailwind CSS 构建 -->
   <link rel="stylesheet" href="dist/output.css">
 
   <style>
@@ -39,119 +39,121 @@
   </style>
 </head>
 
-<body class="min-h-screen px-4 py-10 max-w-3xl mx-auto">
-<div class="mb-6 text-center">
-  <a href="https://www.astrochannel.one/" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-full text-cyan-400 hover:bg-cyan-400/20 transition-all">
-    ← Back to Home
-  </a>
-</div>
+<body class="min-h-screen py-10">
 
-<h1 class="text-4xl font-bold text-center mb-4 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
-<p class="text-center text-gray-300 mb-4">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
+  <div class="mx-auto w-[670px] px-4">
+    <div class="mb-6 text-center">
+      <a href="https://www.astrochannel.one/" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-full text-cyan-400 hover:bg-cyan-400/20 transition-all">
+        ← Back to Home
+      </a>
+    </div>
 
-<div class="reward-card">
-  <div class="reward-title">💎 Long-Term Double Reward (ASTRO Airdrop)</div>
-  <div class="reward-desc">
-    • Hold MA for <b>6 months</b> → Get <b>ASTRO (Mainnet Token)</b> airdrop<br>
-    • Ratio: <b>10,000 MA = 1 ASTRO</b><br>
-    • Auto-snapshot & auto-distribute to your wallet<br>
-    • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet ecosystem
+    <h1 class="text-4xl font-bold text-center mb-4 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
+    <p class="text-center text-gray-300 mb-4">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
+
+    <div class="reward-card">
+      <div class="reward-title">💎 Long-Term Double Reward (ASTRO Airdrop)</div>
+      <div class="reward-desc">
+        • Hold MA for <b>6 months</b> → Get <b>ASTRO (Mainnet Token)</b> airdrop<br>
+        • Ratio: <b>10,000 MA = 1 ASTRO</b><br>
+        • Auto-snapshot & auto-distribute to your wallet (no manual action needed)<br>
+        • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet ecosystem
+      </div>
+    </div>
+
+    <div class="stats">Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1,234</span></div>
+
+    <!-- Wallet connection -->
+    <div class="bg-black/40 border border-cyan-400/30 rounded-xl p-5 mb-6 neon">
+      <div class="flex justify-between items-center">
+        <div id="walletStatus" class="text-sm text-gray-300">Wallet not connected</div>
+        <button id="connectBtn" class="px-4 py-2 bg-cyan-400 text-black rounded-lg font-bold hover:bg-cyan-300 transition-colors">Connect Wallet</button>
+      </div>
+    </div>
+
+    <!-- Task Cards -->
+    <div class="task-card">
+      <div class="task-title">1. Follow X Account</div>
+      <div class="task-desc">Click to open X & follow @Astro___Channel</div>
+      <a href="https://x.com/Astro___Channel" target="_blank" class="btn x-follow-btn">Follow on X</a>
+      <button class="btn btn-primary verify-btn" data-task="x">I've Followed</button>
+    </div>
+
+    <div class="task-card">
+      <div class="task-title">2. Starlink IMEI Verification</div>
+      <div class="task-desc">Enter 15-digit IMEI (one-time only)</div>
+      <input type="text" id="imeiInput" placeholder="Enter 15-digit IMEI" class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg text-white mb-4" maxlength="15">
+      <button class="btn btn-primary verify-btn" data-task="imei">Verify IMEI</button>
+    </div>
+
+    <div class="task-card">
+      <div class="task-title">3. Complete Cross-Chain Transfer</div>
+      <div class="task-desc">Transfer via bridge & verify record</div>
+      <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="inline-block text-cyan-400 hover:text-cyan-300 mb-4 w-full text-center">Go to Bridge →</a>
+      <button class="btn btn-primary verify-btn" data-task="bridge">Verify Transfer</button>
+    </div>
+
+    <!-- Claim -->
+    <div class="claim-section">
+      <button class="btn btn-primary" id="claimAirdrop" disabled>Claim MA Airdrop</button>
+      <div id="claimStatus" class="status"></div>
+    </div>
+
+    <div class="gas-note">Gas fees on BSC are paid by the user</div>
   </div>
-</div>
 
-<div class="stats">Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1,234</span></div>
+  <script type="module">
+    import { ethers } from './ethers.js'; // 本地构建版本
 
-<!-- Wallet connection -->
-<div class="bg-black/40 border border-cyan-400/30 rounded-xl p-5 mb-6 neon">
-  <div class="flex justify-between items-center">
-    <div id="walletStatus" class="text-sm text-gray-300">Wallet not connected</div>
-    <button id="connectBtn" class="px-4 py-2 bg-cyan-400 text-black rounded-lg font-bold hover:bg-cyan-300 transition-colors">Connect Wallet</button>
-  </div>
-</div>
+    let connectedWallet = null;
+    let verifiedTasks = { x: false, imei: false, bridge: false };
 
-<!-- Task Cards -->
-<div class="task-card">
-  <div class="task-title">1. Follow X Account</div>
-  <div class="task-desc">Click to open X & follow @Astro___Channel</div>
-  <a href="https://x.com/Astro___Channel" target="_blank" class="btn x-follow-btn">Follow on X</a>
-  <button class="btn btn-primary verify-btn" data-task="x">I've Followed</button>
-</div>
-
-<div class="task-card">
-  <div class="task-title">2. Starlink IMEI Verification</div>
-  <div class="task-desc">Enter 15-digit IMEI (one-time only)</div>
-  <input type="text" id="imeiInput" placeholder="Enter 15-digit IMEI" class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg text-white mb-4" maxlength="15">
-  <button class="btn btn-primary verify-btn" data-task="imei">Verify IMEI</button>
-</div>
-
-<div class="task-card">
-  <div class="task-title">3. Complete Cross-Chain Transfer</div>
-  <div class="task-desc">Transfer via bridge & verify record</div>
-  <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="inline-block text-cyan-400 hover:text-cyan-300 mb-4 w-full text-center">Go to Bridge →</a>
-  <button class="btn btn-primary verify-btn" data-task="bridge">Verify Transfer</button>
-</div>
-
-<!-- Claim -->
-<div class="claim-section">
-  <button class="btn btn-primary" id="claimAirdrop" disabled>Claim MA Airdrop</button>
-  <div id="claimStatus" class="status"></div>
-</div>
-
-<div class="gas-note">Gas fees on BSC are paid by the user</div>
-
-<script type="module">
-  import { ethers } from './ethers.js'; // 本地构建版本
-
-  let connectedWallet = null;
-  let verifiedTasks = { x: false, imei: false, bridge: false };
-
-  document.getElementById('connectBtn').addEventListener('click', async () => {
-    if (!window.ethereum) { alert('Please install MetaMask'); return; }
-    try {
-      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-      connectedWallet = accounts[0];
-      document.getElementById('walletStatus').textContent = `Connected: ${connectedWallet.slice(0,6)}...${connectedWallet.slice(-4)}`;
-      document.getElementById('connectBtn').textContent = 'Connected';
-      document.getElementById('connectBtn').disabled = true;
-      checkClaimEnable();
-    } catch (err) { console.error('Connect failed', err); }
-  });
-
-  document.querySelectorAll('.verify-btn').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      if (!connectedWallet) { alert('Connect MetaMask first'); return; }
-      const task = btn.dataset.task;
-      btn.textContent = 'Verifying...'; btn.disabled = true;
-
-      if (task === 'imei') {
-        const imei = document.getElementById('imeiInput').value.trim();
-        if (imei.length !== 15 || !/^\d+$/.test(imei)) {
-          alert('IMEI must be 15 digits'); btn.textContent = 'Verify IMEI'; btn.disabled = false; return;
-        }
-      }
-
-      // 模拟后端验证
-      await new Promise(r => setTimeout(r, 1500));
-      verifiedTasks[task] = true;
-      btn.textContent = '✅ Verified';
-      btn.style.background = '#52c41a';
-      checkClaimEnable();
+    document.getElementById('connectBtn').addEventListener('click', async () => {
+      if (!window.ethereum) { alert('Please install MetaMask'); return; }
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        connectedWallet = accounts[0];
+        document.getElementById('walletStatus').textContent = `Connected: ${connectedWallet.slice(0,6)}...${connectedWallet.slice(-4)}`;
+        document.getElementById('connectBtn').textContent = 'Connected';
+        document.getElementById('connectBtn').disabled = true;
+        checkClaimEnable();
+      } catch (err) { console.error('Connect failed', err); }
     });
-  });
 
-  function checkClaimEnable() {
-    const ok = Object.values(verifiedTasks).some(v => v);
-    document.getElementById('claimAirdrop').disabled = !ok || !connectedWallet;
-  }
+    document.querySelectorAll('.verify-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if (!connectedWallet) { alert('Connect MetaMask first'); return; }
+        const task = btn.dataset.task;
+        btn.textContent = 'Verifying...'; btn.disabled = true;
 
-  document.getElementById('claimAirdrop').addEventListener('click', async () => {
-    const btn = document.getElementById('claimAirdrop');
-    const status = document.getElementById('claimStatus');
-    btn.textContent = 'Claiming...'; btn.disabled = true;
-    await new Promise(r => setTimeout(r, 2000));
-    status.textContent = '✅ Claimed! MA locked for 3 months, auto-unlock at expiry';
-    btn.textContent = 'Claimed';
-  });
-</script>
+        if (task === 'imei') {
+          const imei = document.getElementById('imeiInput').value.trim();
+          if (imei.length !== 15 || !/^\d+$/.test(imei)) {
+            alert('IMEI must be 15 digits'); btn.textContent = 'Verify IMEI'; btn.disabled = false; return;
+          }
+        }
+
+        await new Promise(r => setTimeout(r, 1500)); // 模拟后端验证
+        verifiedTasks[task] = true;
+        btn.textContent = '✅ Verified';
+        btn.style.background = '#52c41a';
+        checkClaimEnable();
+      });
+    });
+
+    function checkClaimEnable() {
+      const ok = Object.values(verifiedTasks).some(v => v);
+      document.getElementById('claimAirdrop').disabled = !ok || !connectedWallet;
+    }
+
+    document.getElementById('claimAirdrop').addEventListener('click', async () => {
+      const btn = document.getElementById('claimAirdrop');
+      const status = document.getElementById('claimStatus');
+      btn.textContent = 'Claiming...'; btn.disabled = true;
+      await new Promise(r => setTimeout(r, 2000));
+      status.textContent = '✅ Claimed! MA locked for 3 months, auto-unlock at expiry';
+      btn.textContent = 'Claimed';
+    });
+  </script>
 </body>
 </html>
