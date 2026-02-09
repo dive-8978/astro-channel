@@ -63,6 +63,7 @@
       width: 100%;
       box-sizing: border-box;
       font-size: 16px;
+      text-decoration: none;
     }
     .btn-primary {
       background: #00e5ff;
@@ -75,12 +76,12 @@
       opacity: 0.5;
       cursor: not-allowed;
     }
-    .x-follow-btn {
+    .x-follow-btn, .bridge-btn {
       background: #1da1f2;
       color: white;
       margin-bottom: 14px;
     }
-    .x-follow-btn:hover {
+    .x-follow-btn:hover, .bridge-btn:hover {
       background: #1a91da;
     }
     .x-icon {
@@ -212,7 +213,9 @@
     <div class="task-card">
       <div class="task-title">3. Complete Cross-Chain Transfer</div>
       <div class="task-desc">Transfer via bridge & verify record</div>
-      <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="inline-block text-cyan-400 hover:text-cyan-300 mb-5 w-full text-center">Go to Bridge →</a>
+      <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="btn bridge-btn">
+        Go to Bridge
+      </a>
       <button class="btn btn-primary verify-btn" data-task="bridge">Verify Transfer</button>
     </div>
 
