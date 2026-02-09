@@ -5,7 +5,7 @@ import path from "path";
 const dbPath = path.join(__dirname, "airdrop.db");
 export const db = new Database(dbPath);
 
-// 初始化表
+// 初始化 users 表
 db.prepare(`
 CREATE TABLE IF NOT EXISTS users (
   wallet TEXT PRIMARY KEY,
@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 )
 `).run();
 
+// 初始化 imeis 表
 db.prepare(`
 CREATE TABLE IF NOT EXISTS imeis (
   imei TEXT PRIMARY KEY,
@@ -32,8 +33,7 @@ CREATE TABLE IF NOT EXISTS imeis (
 
 // 创建用户，如果不存在
 export function createUserIfNotExist(wallet: string) {
-  const stmt = db.prepare("INSERT OR IGNORE INTO users(wallet) VALUES(?)");
-  stmt.run(wallet);
+  db.prepare("INSERT OR IGNORE INTO users(wallet) VALUES(?)").run(wallet);
 }
 
 // 获取用户
@@ -61,7 +61,6 @@ export function markImeiUsed(imei: string, wallet: string) {
 // ============================
 // 奖励阶梯逻辑
 // ============================
-
 const rewardTiers = [
   { maxRank: 10000, reward: 525000 },
   { maxRank: 50000, reward: 218750 },
@@ -74,7 +73,7 @@ const rewardTiers = [
 export function assignReward(wallet: string) {
   const user = getUser(wallet);
   if (!user) return 0;
-  if (user.reward > 0) return user.reward; // 已分配
+  if (user.reward > 0) return user.reward;
 
   // 计算排名（按创建时间）
   const rank = db.prepare("SELECT COUNT(*) as cnt FROM users WHERE created_at <= ?").get(user.created_at).cnt;
