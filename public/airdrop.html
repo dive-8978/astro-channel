@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MemeAstro (MA) Triple Airdrop | AstroChannel</title>
-
   <link rel="stylesheet" href="dist/output.css">
-
   <style>
     body { 
       background: #050512; 
@@ -20,7 +18,7 @@
     }
     .container {
       width: 100%;
-      max-width: 420px;
+      max-width: 630px;
       padding: 0 16px;
     }
     .neon { 
@@ -34,28 +32,28 @@
       background: rgba(0,0,0,0.4);
       border: 1px solid rgba(0,229,255,0.3);
       border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
     }
     .task-card:hover, .reward-card:hover {
       border-color: rgba(0,229,255,0.5);
     }
     .task-title, .reward-title {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
       color: #00e5ff;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .task-desc, .reward-desc {
       color: #a0c8d8;
-      margin-bottom: 16px;
-      line-height: 1.5;
+      margin-bottom: 18px;
+      line-height: 1.6;
     }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 24px;
+      padding: 14px 28px;
       border-radius: 10px;
       font-weight: 600;
       cursor: pointer;
@@ -64,6 +62,7 @@
       text-align: center;
       width: 100%;
       box-sizing: border-box;
+      font-size: 16px;
     }
     .btn-primary {
       background: #00e5ff;
@@ -79,7 +78,7 @@
     .x-follow-btn {
       background: #1da1f2;
       color: white;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .x-follow-btn:hover {
       background: #1a91da;
@@ -93,7 +92,7 @@
     input {
       width: 100%;
       box-sizing: border-box;
-      padding: 12px 16px;
+      padding: 14px 18px;
       background: rgba(0,0,0,0.5);
       border: 1px solid rgba(0,229,255,0.3);
       border-radius: 10px;
@@ -101,40 +100,41 @@
       font-size: 16px;
     }
     .claim-section {
-      margin-top: 24px;
+      margin-top: 30px;
       text-align: center;
     }
     #claimAirdrop {
-      max-width: 320px;
-      padding: 16px;
-      font-size: 18px;
+      max-width: 380px;
+      padding: 18px;
+      font-size: 19px;
     }
     .status {
-      margin-top: 12px;
+      margin-top: 14px;
       color: #52c41a;
       font-weight: 500;
     }
     .gas-note {
-      margin-top: 20px;
+      margin-top: 24px;
       text-align: center;
       color: #88aabb;
       font-size: 14px;
     }
     .stats {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       color: #a0c8d8;
+      font-size: 16px;
     }
     .tier-list {
-      margin-top: 12px;
-      padding-left: 20px;
-      line-height: 1.7;
+      margin-top: 14px;
+      padding-left: 22px;
+      line-height: 1.8;
     }
     .back-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 16px;
+      padding: 10px 20px;
       background: rgba(0,229,255,0.1);
       border: 1px solid rgba(0,229,255,0.3);
       border-radius: 24px;
@@ -150,25 +150,25 @@
 
 <body>
   <div class="container">
-    <div class="mb-6 text-center">
+    <div class="mb-8 text-center">
       <a href="https://www.astrochannel.one/" class="back-link">
         ← Back to Home
       </a>
     </div>
 
-    <h1 class="text-3xl font-bold text-center mb-4 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
-    <p class="text-center text-gray-300 mb-6">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
+    <h1 class="text-4xl font-bold text-center mb-6 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
+    <p class="text-center text-gray-300 mb-8">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
 
     <div class="reward-card">
       <div class="reward-title">🏆 Airdrop Tier Rewards</div>
       <div class="reward-desc">
         Rewards based on participation order:
         <div class="tier-list">
-          • 1–10,000 名：525,000 MA<br>
-          • 10,001–50,000 名：218,750 MA<br>
-          • 50,001–100,000 名：140,000 MA<br>
-          • 100,001–200,000 名：70,000 MA<br>
-          • 200,001–1,000,000 名：8,750 MA
+          • 1–10,000: 525,000 MA<br>
+          • 10,001–50,000: 218,750 MA<br>
+          • 50,001–100,000: 140,000 MA<br>
+          • 100,001–200,000: 70,000 MA<br>
+          • 200,001–1,000,000: 8,750 MA
         </div>
       </div>
     </div>
@@ -178,17 +178,17 @@
       <div class="reward-desc">
         • Hold MA for <b>6 months</b> → Get <b>ASTRO (Mainnet Token)</b> airdrop<br>
         • Ratio: <b>10,000 MA = 1 ASTRO</b><br>
-        • Auto-snapshot & auto-distribute to your wallet<br>
-        • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet
+        • Auto-snapshot & auto-distribute to your wallet (no manual action needed)<br>
+        • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet ecosystem
       </div>
     </div>
 
     <div class="stats">Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1,234</span></div>
 
-    <div class="bg-black/40 border border-cyan-400/30 rounded-xl p-5 mb-6 neon">
+    <div class="bg-black/40 border border-cyan-400/30 rounded-xl p-6 mb-8 neon">
       <div class="flex justify-between items-center">
         <div id="walletStatus" class="text-sm text-gray-300">Wallet not connected</div>
-        <button id="connectBtn" class="px-4 py-2 bg-cyan-400 text-black rounded-lg font-bold hover:bg-cyan-300 transition-colors">Connect Wallet</button>
+        <button id="connectBtn" class="px-5 py-3 bg-cyan-400 text-black rounded-lg font-bold hover:bg-cyan-300 transition-colors">Connect Wallet</button>
       </div>
     </div>
 
@@ -206,13 +206,13 @@
       <div class="task-title">2. Starlink IMEI Verification</div>
       <div class="task-desc">Enter 15-digit IMEI (one-time only)</div>
       <input type="text" id="imeiInput" placeholder="Enter 15-digit IMEI" maxlength="15">
-      <button class="btn btn-primary verify-btn mt-4" data-task="imei">Verify IMEI</button>
+      <button class="btn btn-primary verify-btn mt-5" data-task="imei">Verify IMEI</button>
     </div>
 
     <div class="task-card">
       <div class="task-title">3. Complete Cross-Chain Transfer</div>
       <div class="task-desc">Transfer via bridge & verify record</div>
-      <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="inline-block text-cyan-400 hover:text-cyan-300 mb-4 w-full text-center">Go to Bridge →</a>
+      <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="inline-block text-cyan-400 hover:text-cyan-300 mb-5 w-full text-center">Go to Bridge →</a>
       <button class="btn btn-primary verify-btn" data-task="bridge">Verify Transfer</button>
     </div>
 
