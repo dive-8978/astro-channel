@@ -5,55 +5,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MemeAstro (MA) Triple Airdrop | AstroChannel</title>
 
-  <!-- 使用本地 Tailwind CSS 构建 -->
   <link rel="stylesheet" href="dist/output.css">
 
   <style>
     body { 
-      background:#050512; 
-      color:#e0f7ff;
+      background: #050512; 
+      color: #e0f7ff;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 0 16px;
     }
     .neon { 
-      box-shadow:0 0 20px rgba(0,229,255,.25);
+      box-shadow: 0 0 20px rgba(0,229,255,.25);
       transition: all 0.3s ease;
     }
-    .neon:hover { box-shadow:0 0 25px rgba(0,229,255,.4); }
+    .neon:hover { box-shadow: 0 0 25px rgba(0,229,255,.4); }
     input:focus, button:focus { outline: 2px solid rgba(0,229,255,.5); outline-offset: 2px; }
-    .task-card, .reward-card { background: rgba(0,0,0,0.4); border: 1px solid rgba(0,229,255,0.3); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
-    .task-card:hover, .reward-card:hover { border-color: rgba(0,229,255,0.5); }
-    .task-title, .reward-title { font-size: 18px; font-weight: 700; color: #00e5ff; margin-bottom: 8px; }
-    .task-desc, .reward-desc { color: #a0c8d8; margin-bottom: 16px; line-height: 1.5; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.2s; border: none; text-align: center; width: 100%; }
-    .btn-primary { background: #00e5ff; color: #000; }
-    .btn-primary:hover:not(:disabled) { background: #33ebff; }
-    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .claim-section { margin-top: 30px; text-align: center; }
-    #claimAirdrop { max-width: 320px; padding: 16px; font-size: 18px; }
-    .status { margin-top: 12px; color: #52c41a; font-weight: 500; }
-    .gas-note { margin-top: 20px; text-align: center; color: #88aabb; font-size: 14px; }
-    .stats { text-align: center; margin-bottom: 24px; color: #a0c8d8; }
-    .x-follow-btn { background: #1da1f2; color: white; margin-bottom: 12px; }
-    .x-follow-btn:hover { background: #1a91da; }
-    .x-icon { width: 18px; height: 18px; margin-right: 8px; fill: currentColor; }
-    .tier-list { margin-top: 12px; padding-left: 20px; line-height: 1.7; }
+
+    .task-card, .reward-card {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .task-card:hover, .reward-card:hover {
+      border-color: rgba(0,229,255,0.5);
+    }
+    .task-title, .reward-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #00e5ff;
+      margin-bottom: 8px;
+    }
+    .task-desc, .reward-desc {
+      color: #a0c8d8;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .btn-primary {
+      background: #00e5ff;
+      color: #000;
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: #33ebff;
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .x-follow-btn {
+      background: #1da1f2;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .x-follow-btn:hover {
+      background: #1a91da;
+    }
+    .x-icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      fill: currentColor;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 16px;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+    }
+    .claim-section {
+      margin-top: 24px;
+      text-align: center;
+    }
+    #claimAirdrop {
+      max-width: 320px;
+      padding: 16px;
+      font-size: 18px;
+    }
+    .status {
+      margin-top: 12px;
+      color: #52c41a;
+      font-weight: 500;
+    }
+    .gas-note {
+      margin-top: 20px;
+      text-align: center;
+      color: #88aabb;
+      font-size: 14px;
+    }
+    .stats {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #a0c8d8;
+    }
+    .tier-list {
+      margin-top: 12px;
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(0,229,255,0.1);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 24px;
+      color: #00e5ff;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .back-link:hover {
+      background: rgba(0,229,255,0.2);
+    }
   </style>
 </head>
 
-<body class="min-h-screen py-10">
-
-  <!-- 页面宽度改为 max-w-[450px] 居中 -->
-  <div class="mx-auto max-w-[450px] px-4">
+<body>
+  <div class="container">
     <div class="mb-6 text-center">
-      <a href="https://www.astrochannel.one/" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-full text-cyan-400 hover:bg-cyan-400/20 transition-all">
+      <a href="https://www.astrochannel.one/" class="back-link">
         ← Back to Home
       </a>
     </div>
 
-    <h1 class="text-4xl font-bold text-center mb-4 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
-    <p class="text-center text-gray-300 mb-4">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
+    <h1 class="text-3xl font-bold text-center mb-4 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
+    <p class="text-center text-gray-300 mb-6">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
 
-    <!-- 阶梯奖励区 -->
     <div class="reward-card">
       <div class="reward-title">🏆 Airdrop Tier Rewards</div>
       <div class="reward-desc">
@@ -73,14 +178,13 @@
       <div class="reward-desc">
         • Hold MA for <b>6 months</b> → Get <b>ASTRO (Mainnet Token)</b> airdrop<br>
         • Ratio: <b>10,000 MA = 1 ASTRO</b><br>
-        • Auto-snapshot & auto-distribute to your wallet (no manual action needed)<br>
-        • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet ecosystem
+        • Auto-snapshot & auto-distribute to your wallet<br>
+        • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet
       </div>
     </div>
 
     <div class="stats">Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1,234</span></div>
 
-    <!-- Wallet connection -->
     <div class="bg-black/40 border border-cyan-400/30 rounded-xl p-5 mb-6 neon">
       <div class="flex justify-between items-center">
         <div id="walletStatus" class="text-sm text-gray-300">Wallet not connected</div>
@@ -88,19 +192,21 @@
       </div>
     </div>
 
-    <!-- Task Cards -->
     <div class="task-card">
       <div class="task-title">1. Follow X Account</div>
       <div class="task-desc">Click to open X & follow @Astro___Channel</div>
-      <a href="https://x.com/Astro___Channel" target="_blank" class="btn x-follow-btn">Follow on X</a>
+      <a href="https://x.com/Astro___Channel" target="_blank" class="btn x-follow-btn">
+        <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+        Follow on X
+      </a>
       <button class="btn btn-primary verify-btn" data-task="x">I've Followed</button>
     </div>
 
     <div class="task-card">
       <div class="task-title">2. Starlink IMEI Verification</div>
       <div class="task-desc">Enter 15-digit IMEI (one-time only)</div>
-      <input type="text" id="imeiInput" placeholder="Enter 15-digit IMEI" class="w-full px-4 py-3 bg-black/50 border border-cyan-400/30 rounded-lg text-white mb-4" maxlength="15">
-      <button class="btn btn-primary verify-btn" data-task="imei">Verify IMEI</button>
+      <input type="text" id="imeiInput" placeholder="Enter 15-digit IMEI" maxlength="15">
+      <button class="btn btn-primary verify-btn mt-4" data-task="imei">Verify IMEI</button>
     </div>
 
     <div class="task-card">
@@ -110,7 +216,6 @@
       <button class="btn btn-primary verify-btn" data-task="bridge">Verify Transfer</button>
     </div>
 
-    <!-- Claim -->
     <div class="claim-section">
       <button class="btn btn-primary" id="claimAirdrop" disabled>Claim MA Airdrop</button>
       <div id="claimStatus" class="status"></div>
@@ -120,7 +225,7 @@
   </div>
 
   <script type="module">
-    import { ethers } from './ethers.js'; // 本地构建版本
+    import { ethers } from './ethers.js';
 
     let connectedWallet = null;
     let verifiedTasks = { x: false, imei: false, bridge: false };
@@ -146,11 +251,14 @@
         if (task === 'imei') {
           const imei = document.getElementById('imeiInput').value.trim();
           if (imei.length !== 15 || !/^\d+$/.test(imei)) {
-            alert('IMEI must be 15 digits'); btn.textContent = 'Verify IMEI'; btn.disabled = false; return;
+            alert('IMEI must be 15 digits');
+            btn.textContent = 'Verify IMEI';
+            btn.disabled = false;
+            return;
           }
         }
 
-        await new Promise(r => setTimeout(r, 1500)); // 模拟后端验证
+        await new Promise(r => setTimeout(r, 1500));
         verifiedTasks[task] = true;
         btn.textContent = '✅ Verified';
         btn.style.background = '#52c41a';
