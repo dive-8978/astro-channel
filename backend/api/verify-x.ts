@@ -1,49 +1,28 @@
-import express from 'express';
-import { pool } from '../lib/db';
-const router = express.Router();
+import type { Request, Response } from "express";
+import { createUserIfNotExist, markTask, assignReward, db } from "../lib/db";
 
-/**
- * POST /api/verify-x
- * body: { wallet: string }
- */
-router.post('/', async (req, res) => {
+export default async function handler(req: Request, res: Response) {
   try {
     const { wallet } = req.body;
+    if (!wallet) return res.status(400).json({ error: "Missing wallet" });
 
-    // 校验 wallet 格式
-    if (!wallet || !/^0x[a-fA-F0-9]{40}$/.test(wallet)) {
-      return res.status(400).json({ success: false, message: 'Invalid wallet address' });
-    }
+    // 1️⃣ 创建用户记录（如果不存在）
+    createUserIfNotExist(wallet);
 
-    // 查询用户
-    const userResult = await pool.query(
-      'SELECT x_verified FROM airdrop WHERE wallet = $1',
-      [wallet]
-    );
+    // 2️⃣ 检查是否已完成 X 任务
+    const user = db.prepare("SELECT verified_x FROM users WHERE wallet = ?").get(wallet);
+    if (user.verified_x) return res.status(400).json({ error: "X task already verified" });
 
-    if (userResult.rows[0]?.x_verified) {
-      return res.json({ success: true, message: 'X already verified' });
-    }
+    // 3️⃣ 标记任务完成
+    markTask(wallet, "x");
 
-    // TODO: 对接 X API 验证关注状态
-    const isFollowed = true; // 这里先假设验证成功
-    if (!isFollowed) {
-      return res.status(400).json({ success: false, message: 'Not following @Astro___Channel' });
-    }
+    // 4️⃣ 分配奖励
+    const reward = assignReward(wallet);
 
-    // 插入或更新记录
-    await pool.query(
-      `INSERT INTO airdrop (wallet, x_verified)
-       VALUES ($1, true)
-       ON CONFLICT (wallet) DO UPDATE SET x_verified = true`,
-      [wallet]
-    );
+    res.json({ success: true, reward });
 
-    return res.json({ success: true, message: 'X verified ✅' });
-  } catch (err) {
-    console.error('verify-x error:', err);
-    return res.status(500).json({ success: false, message: 'Server error' });
+  } catch (err: any) {
+    console.error("verify-x error:", err);
+    res.status(500).json({ error: err.toString() });
   }
-});
-
-export default router;
+}
