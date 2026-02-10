@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemeAstro (MA) Triple Airdrop | AstroChannel</title>
+  <style>
+    body { 
+      background: #050512; 
+      color: #e0f7ff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 630px;
+      padding: 0 16px;
+    }
+    input:focus, button:focus { outline: 2px solid rgba(0,229,255,.5); outline-offset: 2px; }
+
+    .task-card, .reward-card {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .task-card:hover, .reward-card:hover {
+      border-color: rgba(0,229,255,0.5);
+    }
+    .task-title, .reward-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #00e5ff;
+      margin-bottom: 10px;
+    }
+    .task-desc, .reward-desc {
+      color: #a0c8d8;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    /* 主按钮：Connect Wallet 超级好看 */
+    .wallet-btn {
+      position: relative;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #000;
+      background: #00e5ff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 18px rgba(0,229,255,0.4), 0 0 32px rgba(0,229,255,0.2);
+      overflow: hidden;
+    }
+    .wallet-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transition: left 0.6s ease;
+    }
+    .wallet-btn:hover {
+      transform: translateY(-2px);
+      background: #33ebff;
+      box-shadow: 0 0 25px rgba(0,229,255,0.7), 0 0 45px rgba(0,229,255,0.4);
+    }
+    .wallet-btn:hover::before { left: 100%; }
+    .wallet-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* 普通按钮 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: none;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 16px;
+      text-decoration: none;
+      background: #00e5ff;
+      color: #000;
+      box-shadow: 0 0 10px rgba(0,229,255,0.2);
+    }
+    .btn:hover:not(:disabled) {
+      background: #33ebff;
+      transform: translateY(-1px);
+      box-shadow: 0 0 15px rgba(0,229,255,0.35);
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* X 按钮 */
+    .x-follow-btn, .bridge-btn {
+      background: #1da1f2;
+      color: white;
+      margin-bottom: 14px;
+      box-shadow: none;
+    }
+    .x-follow-btn:hover, .bridge-btn:hover {
+      background: #1a91da;
+    }
+
+    .x-icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      fill: currentColor;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 18px;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+    }
+    .claim-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+    #claimAirdrop {
+      max-width: 380px;
+      padding: 18px;
+      font-size: 19px;
+    }
+    .status {
+      margin-top: 14px;
+      color: #52c41a;
+      font-weight: 500;
+    }
+    .gas-note {
+      margin-top: 24px;
+      text-align: center;
+      color: #88aabb;
+      font-size: 14px;
+    }
+    .stats {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #a0c8d8;
+      font-size: 16px;
+    }
+    .tier-list {
+      margin-top: 14px;
+      padding-left: 22px;
+      line-height: 1.8;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(0,229,255,0.1);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 24px;
+      color: #00e5ff;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .back-link:hover {
+      background: rgba(0,229,255,0.2);
+    }
+
+    /* 余额展示卡片 */
+    .balance-card {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid #00e5ff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+      display: none;
+    }
+    .balance-title {
+      font-size: 16px;
+      color: #a0c8d8;
+      margin-bottom: 8px;
+    }
+    .balance-amount {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00e5ff;
+      margin-bottom: 8px;
+    }
+    .balance-lock {
+      font-size: 14px;
+      color: #52c41a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mb-8 text-center">
+      <a href="https://www.astrochannel.one/" class="back-link">← Back to Home</a>
+    </div>
+
+    <h1 class="text-4xl font-bold text-center mb-6 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
+    <p class="text-center text-gray-300 mb-8">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
+
+    <!-- 余额展示区 -->
+    <div class="balance-card" id="balanceCard">
+      <div class="balance-title">Your Locked Balance</div>
+      <div class="balance-amount" id="lockedAmount">0 MA</div>
+      <div class="balance-lock" id="lockInfo">Locked for 90 days</div>
+    </div>
+
+    <div class="reward-card">
+      <div class="reward-title">🏆 Airdrop Tier Rewards</div>
+      <div class="reward-desc">
+        Rewards based on participation order:
+        <div class="tier-list">
+          • 1–10,000: 525,000 MA<br>
+          • 10,001–50,000: 218,750 MA<br>
+          • 50,001–100,000: 140,000 MA<br>
+          • 100,001–200,000: 70,000 MA<br>
+          • 200,001–1,000,000: 8,750 MA
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-card">
+      <div class="reward-title">💎 Long-Term Double Reward (ASTRO Airdrop)</div>
+      <div class="reward-desc">
+        • Hold MA for <b>6 months</b> → Get <b>ASTRO (Mainnet Token)</b> airdrop<br>
+        • Ratio: <b>10,000 MA = 1 ASTRO</b><br>
+        • Auto-snapshot & auto-distribute to your wallet<br>
+        • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet ecosystem
+      </div>
+    </div>
+
+    <div class="stats">Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1,234</span></div>
+
+    <div style="background: rgba(0,0,0,0.4); border:1px solid rgba(0,229,255,0.3); border-radius:16px; padding:24px; margin-bottom:24px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div id="walletStatus" style="color:#a0c8d8;">Wallet not connected</div>
+        <button id="connectBtn" class="wallet-btn">Connect Wallet</button>
+      </div>
+    </div>
+
+    <div class="task-card">
+      <div class="task-title">1. Follow X Account</div>
+      <div class="task-desc">Click to open X & follow @Astro___Channel</div>
+      <a href="https://x.com/Astro___Channel" target="_blank" class="btn x-follow-btn">
+        <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+        Follow on X
+      </a>
+      <button class="btn verify-btn" data-task="x">I've Followed</button>
+    </div>
+
+    <div class="task-card">
+      <div class="task-title">2. Starlink IMEI Verification</div>
+      <div class="task-desc">Enter 15-digit IMEI (one-time only)</div>
+      <input type="text" id="imeiInput" placeholder="Enter 15-digit IMEI" maxlength="15">
+      <button class="btn verify-btn mt-5" data-task="imei">Verify IMEI</button>
+    </div>
+
+    <div class="task-card">
+      <div class="task-title">3. Complete Cross-Chain Transfer</div>
+      <div class="task-desc">Transfer via bridge & verify record</div>
+      <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="btn bridge-btn">Go to Bridge</a>
+      <button class="btn verify-btn" data-task="bridge">Verify Transfer</button>
+    </div>
+
+    <div class="claim-section">
+      <button class="btn" id="claimAirdrop" disabled>Claim MA Airdrop</button>
+      <div id="claimStatus" class="status"></div>
+    </div>
+
+    <div class="gas-note">Gas fees on BSC are paid by the user</div>
+  </div>
+
+  <script>
+    let connectedWallet = null;
+    let verifiedTasks = { x: false, imei: false, bridge: false };
+
+    // 这里可以改成你实际的空投数量
+    const CLAIM_AMOUNT = "525,000 MA";
+
+    // Connect Wallet
+    document.getElementById('connectBtn').addEventListener('click', async () => {
+      if (!window.ethereum) {
+        alert('Please install MetaMask!');
+        return;
+      }
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        connectedWallet = accounts[0];
+        document.getElementById('walletStatus').textContent = `Connected: ${connectedWallet.slice(0,6)}...${connectedWallet.slice(-4)}`;
+        document.getElementById('connectBtn').textContent = 'Connected';
+        document.getElementById('connectBtn').disabled = true;
+        checkClaimEnable();
+      } catch (err) {
+        console.error(err);
+        alert('Connect failed: ' + err.message);
+      }
+    });
+
+    // Verify Tasks
+    document.querySelectorAll('.verify-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if (!connectedWallet) {
+          alert('Connect wallet first!');
+          return;
+        }
+        const task = btn.dataset.task;
+        btn.textContent = 'Verifying...';
+        btn.disabled = true;
+
+        if (task === 'imei') {
+          const imei = document.getElementById('imeiInput').value.trim();
+          if (imei.length !== 15 || !/^\d+$/.test(imei)) {
+            alert('IMEI must be 15 digits!');
+            btn.textContent = 'Verify IMEI';
+            btn.disabled = false;
+            return;
+          }
+        }
+
+        await new Promise(r => setTimeout(r, 1200));
+        verifiedTasks[task] = true;
+        btn.textContent = '✅ Verified';
+        btn.style.background = '#52c41a';
+        checkClaimEnable();
+      });
+    });
+
+    function checkClaimEnable() {
+      const ok = Object.values(verifiedTasks).some(v => v);
+      document.getElementById('claimAirdrop').disabled = !ok || !connectedWallet;
+    }
+
+    // Claim
+    document.getElementById('claimAirdrop').addEventListener('click', async () => {
+      const btn = document.getElementById('claimAirdrop');
+      const status = document.getElementById('claimStatus');
+      btn.textContent = 'Claiming...';
+      btn.disabled = true;
+      await new Promise(r => setTimeout(r, 2000));
+      
+      // 显示余额卡片
+      document.getElementById('balanceCard').style.display = 'block';
+      document.getElementById('lockedAmount').textContent = CLAIM_AMOUNT;
+
+      status.textContent = '✅ Claimed & locked for 90 days | Withdraw after expiration';
+      btn.textContent = 'Locked · Withdraw after 90 days';
+      btn.style.background = '#666';
+    });
+  </script>
+</body>
+</html>
