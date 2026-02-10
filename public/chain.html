@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstroChain - Mainnet Under Construction</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter','Segoe UI',sans-serif}
+body{
+  background:#000;color:#fff;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden
+}
+#particles-js{position:fixed;inset:0;z-index:0;opacity:.7}
+.nebula{
+  position:fixed;inset:0;z-index:0;opacity:.4;
+  background:
+    radial-gradient(circle at 70% 20%,rgba(76,201,240,.12),transparent 60%),
+    radial-gradient(circle at 20% 80%,rgba(14,165,233,.18),transparent 50%)
+}
+.planet{
+  position:fixed;top:15%;right:8%;width:180px;height:180px;
+  background:radial-gradient(circle at 30% 30%,#4cc9f0 0%,#1d3557 60%,#000 100%);
+  border-radius:50%;z-index:1;opacity:.85;
+  box-shadow:0 0 100px rgba(76,201,240,.5),inset 0 0 30px rgba(0,0,0,.5);
+  animation:float 12s ease-in-out infinite
+}
+@keyframes float{
+  0%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-25px) rotate(5deg)}
+  100%{transform:translateY(0) rotate(0)}
+}
+.container{
+  position:relative;z-index:2;
+  text-align:center;
+  display:flex;flex-direction:column;gap:.8rem;
+  padding:20px
+}
+.title{
+  font-size:5rem;font-weight:800;line-height:1.15;
+  background:linear-gradient(135deg,#0ea5e9,#4cc9f0,#bae6fd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 30px rgba(76,201,240,.7);
+  animation:glow 3s ease-in-out infinite alternate
+}
+.days{
+  font-size:4.5rem;font-weight:800;
+  background:linear-gradient(135deg,#0ea5e9,#4cc9f0,#bae6fd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 40px rgba(76,201,240,.8);
+  animation:pulse 1.5s ease-in-out infinite
+}
+.hms{
+  font-size:1.8rem;font-weight:700;letter-spacing:2px;
+  background:linear-gradient(90deg,#4cc9f0,#0ea5e9,#4cc9f0);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent
+}
+.sub{
+  margin-top:.5rem;
+  font-size:1.2rem;letter-spacing:2px;
+  text-transform:uppercase;opacity:.85
+}
+@keyframes glow{
+  from{text-shadow:0 0 20px rgba(76,201,240,.5)}
+  to{text-shadow:0 0 60px rgba(76,201,240,.9)}
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+@media(max-width:768px){
+  .title{font-size:3rem}
+  .days{font-size:3.5rem}
+}
+@media(max-width:480px){
+  .title{font-size:2.2rem}
+  .days{font-size:2.6rem}
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+<div class="nebula"></div>
+<div class="planet"></div>
+
+<div class="container">
+  <h1 class="title">Astro Chain</h1>
+  <div class="days" id="days">365</div>
+  <div class="hms" id="hms">00 : 00 : 00</div>
+  <h1 class="title">Mainnet Under Construction</h1>
+  <p class="sub">Interstellar Web3 Infrastructure Coming Soon</p>
+</div>
+
+<!-- 倒计时（不依赖任何第三方） -->
+<script>
+(function(){
+  const daysEl=document.getElementById("days");
+  const hmsEl=document.getElementById("hms");
+
+  const target=new Date();
+  target.setDate(target.getDate()+365);
+  target.setHours(0,0,0,0);
+
+  const pad=n=>String(n).padStart(2,"0");
+
+  function tick(){
+    const now=new Date();
+    let diff=Math.max(target-now,0);
+
+    const d=Math.floor(diff/86400000);
+    diff%=86400000;
+    const h=Math.floor(diff/3600000);
+    diff%=3600000;
+    const m=Math.floor(diff/60000);
+    const s=Math.floor((diff%60000)/1000);
+
+    daysEl.textContent=d;
+    hmsEl.textContent=`${pad(h)} : ${pad(m)} : ${pad(s)}`;
+  }
+
+  tick();
+  setInterval(tick,1000);
+})();
+</script>
+
+<!-- 粒子特效（失败也不影响页面） -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+if(typeof particlesJS!=="undefined"){
+  particlesJS("particles-js",{
+    particles:{
+      number:{value:90,density:{enable:true,value_area:800}},
+      color:{value:["#0ea5e9","#4cc9f0","#bae6fd"]},
+      shape:{type:"circle"},
+      opacity:{value:.5,random:true},
+      size:{value:3.5,random:true},
+      line_linked:{enable:true,distance:160,color:"#0ea5e9",opacity:.3,width:1.2},
+      move:{enable:true,speed:2.5,random:true}
+    },
+    interactivity:{
+      events:{onhover:{enable:true,mode:"grab"},onclick:{enable:true,mode:"push"}},
+      modes:{grab:{distance:150,line_linked:{opacity:.7}},push:{particles_nb:5}}
+    },
+    retina_detect:true
+  });
+}
+</script>
+
+</body>
+</html>
