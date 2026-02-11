@@ -231,7 +231,7 @@
     <div class="balance-card" id="balanceCard">
       <div class="balance-title">Your Locked Balance</div>
       <div class="balance-amount" id="lockedAmount">0 MA</div>
-      <div class="balance-lock" id="lockInfo">Locked for 90 days</div>
+      <div class="balance-lock" id="lockInfo">Locked for 120 days</div>
     </div>
 
     <div class="reward-card">
@@ -307,8 +307,20 @@
   <script>
     let connectedWallet = null;
     let verifiedTasks = { x: false, imei: false, bridge: false };
-    const CLAIM_AMOUNT = "525,000 MA";
-    const CONTRACT_ADDRESS = "0xFf56bB1006962F24C40D71D1fe7FC6FcAC53a523";
+    const CLAIM_AMOUNT = "525000000000000000000000"; // 525,000 MA (以wei为单位)
+    // 1. ✅ 已修改为你的锁仓合约地址
+    const CONTRACT_ADDRESS = "0xfE3D128dbF5a0970D5EC0a9c1E75d9df25f2FA97";
+
+    // 2. ✅ 合约ABI (包含分发函数)
+    const CONTRACT_ABI = [
+      {
+        "inputs": [],
+        "name": "distribute",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ];
 
     // Connect Wallet Logic
     document.getElementById('connectBtn').addEventListener('click', async () => {
@@ -366,24 +378,43 @@
       document.getElementById('claimAirdrop').disabled = !hasVerifiedTask || !connectedWallet;
     }
 
-    // Claim Airdrop Logic
+    // 3. ✅ 真正的领币逻辑 (调用合约)
     document.getElementById('claimAirdrop').addEventListener('click', async () => {
       const btn = document.getElementById('claimAirdrop');
       const status = document.getElementById('claimStatus');
       btn.textContent = 'Claiming...';
       btn.disabled = true;
-      
-      // Simulate Claim Transaction
-      await new Promise(r => setTimeout(r, 2000));
-      
-      // Show Balance Card
-      document.getElementById('balanceCard').style.display = 'block';
-      document.getElementById('lockedAmount').textContent = CLAIM_AMOUNT;
+      status.textContent = '';
 
-      // Update UI Status
-      status.textContent = '✅ Claim successful! Locked for 90 days | Withdraw after expiration';
-      btn.textContent = 'Locked · Withdraw after 90 days';
-      btn.style.background = '#666';
+      try {
+        // 创建合约实例
+        const provider = new window.ethereum.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new window.ethereum.Contract(CONTRACT_ABI, CONTRACT_ADDRESS, signer);
+
+        // 调用合约的 distribute 函数
+        status.textContent = 'Waiting for wallet confirmation...';
+        const tx = await contract.methods.distribute().send({ from: connectedWallet });
+        
+        // 交易成功
+        console.log("Transaction Hash:", tx.hash);
+        document.getElementById('balanceCard').style.display = 'block';
+        document.getElementById('lockedAmount').textContent = '525,000 MA';
+        status.textContent = `✅ Success! TX: ${tx.hash.slice(0,10)}...`;
+        btn.textContent = '✅ Claimed & Locked';
+        btn.style.background = '#52c41a';
+
+      } catch (error) {
+        // 处理错误 (用户取消或链上失败)
+        console.error(error);
+        if (error.code === 4001) {
+          status.textContent = '❌ Transaction cancelled by user';
+        } else {
+          status.textContent = '❌ Claim failed: ' + error.message.slice(0, 50) + '...';
+        }
+        btn.textContent = 'Claim MA Airdrop';
+        btn.disabled = false;
+      }
     });
   </script>
 </body>
