@@ -44,7 +44,7 @@
       line-height: 1.6;
     }
 
-    /* 主按钮：Connect Wallet 超级好看 */
+    /* Original Connect Wallet Button Style (UNCHANGED) */
     .wallet-btn {
       position: relative;
       padding: 14px 28px;
@@ -58,6 +58,10 @@
       transition: all 0.3s ease;
       box-shadow: 0 0 18px rgba(0,229,255,0.4), 0 0 32px rgba(0,229,255,0.2);
       overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
     .wallet-btn::before {
       content: '';
@@ -82,7 +86,7 @@
       box-shadow: none;
     }
 
-    /* 普通按钮 */
+    /* Regular Buttons (UNCHANGED) */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -112,7 +116,7 @@
       cursor: not-allowed;
     }
 
-    /* X 按钮 */
+    /* X & Bridge Buttons (UNCHANGED) */
     .x-follow-btn, .bridge-btn {
       background: #1da1f2;
       color: white;
@@ -186,7 +190,7 @@
       background: rgba(0,229,255,0.2);
     }
 
-    /* 余额展示卡片 */
+    /* Balance Card (UNCHANGED) */
     .balance-card {
       background: rgba(0,0,0,0.5);
       border: 1px solid #00e5ff;
@@ -221,9 +225,9 @@
     </div>
 
     <h1 class="text-4xl font-bold text-center mb-6 text-cyan-400">🚀 MemeAstro (MA) Triple Airdrop</h1>
-    <p class="text-center text-gray-300 mb-8">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Lock 3 Months</p>
+    <p class="text-center text-gray-300 mb-8">Choose <b>1 of 3 ways</b> to join · Total <b>35B MA (35%)</b> · Locked for 3 Months</p>
 
-    <!-- 余额展示区 -->
+    <!-- Balance Display -->
     <div class="balance-card" id="balanceCard">
       <div class="balance-title">Your Locked Balance</div>
       <div class="balance-amount" id="lockedAmount">0 MA</div>
@@ -233,7 +237,7 @@
     <div class="reward-card">
       <div class="reward-title">🏆 Airdrop Tier Rewards</div>
       <div class="reward-desc">
-        Rewards based on participation order:
+        Rewards based on the order of participation:
         <div class="tier-list">
           • 1–10,000: 525,000 MA<br>
           • 10,001–50,000: 218,750 MA<br>
@@ -247,11 +251,16 @@
     <div class="reward-card">
       <div class="reward-title">💎 Long-Term Double Reward (ASTRO Airdrop)</div>
       <div class="reward-desc">
-        • Hold MA for <b>6 months</b> → Get <b>ASTRO (Mainnet Token)</b> airdrop<br>
+        • Hold MA for <b>6 months</b> → Eligible for <b>ASTRO (Mainnet Token)</b> airdrop<br>
         • Ratio: <b>10,000 MA = 1 ASTRO</b><br>
-        • Auto-snapshot & auto-distribute to your wallet<br>
-        • ASTRO powers AstroChannel cross-chain bridge, AI wallet & mainnet ecosystem
+        • Auto-snapshot & auto-distribution to your wallet<br>
+        • ASTRO powers AstroChannel Cross-Chain Bridge, AI Wallet & Mainnet Ecosystem
       </div>
+
+      <!-- ✅ NEW BUY BUTTON: Exact same style as Connect Wallet, small size, correct position -->
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0xFf56bB1006962F24C40D71D1fe7FC6FcAC53a523" target="_blank" class="wallet-btn">
+        Buy MA
+      </a>
     </div>
 
     <div class="stats">Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1,234</span></div>
@@ -265,7 +274,7 @@
 
     <div class="task-card">
       <div class="task-title">1. Follow X Account</div>
-      <div class="task-desc">Click to open X & follow @Astro___Channel</div>
+      <div class="task-desc">Click to open X and follow @Astro___Channel</div>
       <a href="https://x.com/Astro___Channel" target="_blank" class="btn x-follow-btn">
         <svg class="x-icon" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
         Follow on X
@@ -275,14 +284,14 @@
 
     <div class="task-card">
       <div class="task-title">2. Starlink IMEI Verification</div>
-      <div class="task-desc">Enter 15-digit IMEI (one-time only)</div>
+      <div class="task-desc">Enter your 15-digit IMEI (one-time verification)</div>
       <input type="text" id="imeiInput" placeholder="Enter 15-digit IMEI" maxlength="15">
       <button class="btn verify-btn mt-5" data-task="imei">Verify IMEI</button>
     </div>
 
     <div class="task-card">
       <div class="task-title">3. Complete Cross-Chain Transfer</div>
-      <div class="task-desc">Transfer via bridge & verify record</div>
+      <div class="task-desc">Complete a transfer via the bridge and verify the transaction</div>
       <a href="https://www.astrochannel.one/bridge.html" target="_blank" class="btn bridge-btn">Go to Bridge</a>
       <button class="btn verify-btn" data-task="bridge">Verify Transfer</button>
     </div>
@@ -292,20 +301,19 @@
       <div id="claimStatus" class="status"></div>
     </div>
 
-    <div class="gas-note">Gas fees on BSC are paid by the user</div>
+    <div class="gas-note">Gas fees on the BSC network are paid by the user</div>
   </div>
 
   <script>
     let connectedWallet = null;
     let verifiedTasks = { x: false, imei: false, bridge: false };
-
-    // 这里可以改成你实际的空投数量
     const CLAIM_AMOUNT = "525,000 MA";
+    const CONTRACT_ADDRESS = "0xFf56bB1006962F24C40D71D1fe7FC6FcAC53a523";
 
-    // Connect Wallet
+    // Connect Wallet Logic
     document.getElementById('connectBtn').addEventListener('click', async () => {
       if (!window.ethereum) {
-        alert('Please install MetaMask!');
+        alert('Please install MetaMask to connect your wallet!');
         return;
       }
       try {
@@ -317,31 +325,33 @@
         checkClaimEnable();
       } catch (err) {
         console.error(err);
-        alert('Connect failed: ' + err.message);
+        alert('Connection failed: ' + err.message);
       }
     });
 
-    // Verify Tasks
+    // Task Verification Logic
     document.querySelectorAll('.verify-btn').forEach(btn => {
       btn.addEventListener('click', async () => {
         if (!connectedWallet) {
-          alert('Connect wallet first!');
+          alert('Please connect your wallet first!');
           return;
         }
         const task = btn.dataset.task;
         btn.textContent = 'Verifying...';
         btn.disabled = true;
 
+        // IMEI Validation Check
         if (task === 'imei') {
           const imei = document.getElementById('imeiInput').value.trim();
           if (imei.length !== 15 || !/^\d+$/.test(imei)) {
-            alert('IMEI must be 15 digits!');
+            alert('IMEI must be exactly 15 digits!');
             btn.textContent = 'Verify IMEI';
             btn.disabled = false;
             return;
           }
         }
 
+        // Simulate Verification Process
         await new Promise(r => setTimeout(r, 1200));
         verifiedTasks[task] = true;
         btn.textContent = '✅ Verified';
@@ -350,24 +360,28 @@
       });
     });
 
+    // Check if Claim Button should be enabled
     function checkClaimEnable() {
-      const ok = Object.values(verifiedTasks).some(v => v);
-      document.getElementById('claimAirdrop').disabled = !ok || !connectedWallet;
+      const hasVerifiedTask = Object.values(verifiedTasks).some(v => v);
+      document.getElementById('claimAirdrop').disabled = !hasVerifiedTask || !connectedWallet;
     }
 
-    // Claim
+    // Claim Airdrop Logic
     document.getElementById('claimAirdrop').addEventListener('click', async () => {
       const btn = document.getElementById('claimAirdrop');
       const status = document.getElementById('claimStatus');
       btn.textContent = 'Claiming...';
       btn.disabled = true;
+      
+      // Simulate Claim Transaction
       await new Promise(r => setTimeout(r, 2000));
       
-      // 显示余额卡片
+      // Show Balance Card
       document.getElementById('balanceCard').style.display = 'block';
       document.getElementById('lockedAmount').textContent = CLAIM_AMOUNT;
 
-      status.textContent = '✅ Claimed & locked for 90 days | Withdraw after expiration';
+      // Update UI Status
+      status.textContent = '✅ Claim successful! Locked for 90 days | Withdraw after expiration';
       btn.textContent = 'Locked · Withdraw after 90 days';
       btn.style.background = '#666';
     });
