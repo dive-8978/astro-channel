@@ -307,11 +307,11 @@
   <script>
     let connectedWallet = null;
     let verifiedTasks = { x: false, imei: false, bridge: false };
-    const CLAIM_AMOUNT = "525000000000000000000000"; // 525,000 MA (以wei为单位)
-    // 1. ✅ 已修改为你的锁仓合约地址
+    
+    // 1. ✅ 锁仓合约地址 (已设置为你的地址)
     const CONTRACT_ADDRESS = "0xfE3D128dbF5a0970D5EC0a9c1E75d9df25f2FA97";
-
-    // 2. ✅ 合约ABI (包含分发函数)
+    
+    // 2. ✅ 完整ABI (包含领取和查询余额功能)
     const CONTRACT_ABI = [
       {
         "inputs": [],
@@ -319,10 +319,38 @@
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
+      },
+      {
+        "inputs": [{"internalType":"address","name":"account","type":"address"}],
+        "name": "lockedBalanceOf",
+        "outputs": [{"internalType":"uint256","name":"","type":"uint256"}],
+        "type": "function"
+      },
+      {
+        "inputs": [{"internalType":"address","name":"account","type":"address"}],
+        "name": "releaseTimeOf",
+        "outputs": [{"internalType":"uint256","name":"","type":"uint256"}],
+        "type": "function"
       }
     ];
 
-    // Connect Wallet Logic
+    // 页面加载时自动检查钱包连接状态
+    window.addEventListener('DOMContentLoaded', async () => {
+      if (window.ethereum) {
+        try {
+          // 检查是否已经连接过钱包
+          const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+          if (accounts.length > 0) {
+            connectedWallet = accounts[0];
+            await initWallet(); // 自动初始化并查询余额
+          }
+        } catch (err) {
+          console.log('Wallet not connected on page load');
+        }
+      }
+    });
+
+    // 连接钱包按钮逻辑
     document.getElementById('connectBtn').addEventListener('click', async () => {
       if (!window.ethereum) {
         alert('Please install MetaMask to connect your wallet!');
@@ -331,17 +359,74 @@
       try {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         connectedWallet = accounts[0];
-        document.getElementById('walletStatus').textContent = `Connected: ${connectedWallet.slice(0,6)}...${connectedWallet.slice(-4)}`;
-        document.getElementById('connectBtn').textContent = 'Connected';
-        document.getElementById('connectBtn').disabled = true;
-        checkClaimEnable();
+        await initWallet();
       } catch (err) {
         console.error(err);
         alert('Connection failed: ' + err.message);
       }
     });
 
-    // Task Verification Logic
+    // ✅ 核心函数：初始化钱包并自动查询用户锁仓余额
+    async function initWallet() {
+      // 更新UI显示已连接
+      document.getElementById('walletStatus').textContent = `Connected: ${connectedWallet.slice(0,6)}...${connectedWallet.slice(-4)}`;
+      document.getElementById('connectBtn').textContent = 'Connected';
+      document.getElementById('connectBtn').disabled = true;
+      
+      // 关键步骤：自动查询用户是否已经领过币
+      await checkUserLockedBalance();
+      
+      // 检查是否可以领取
+      checkClaimEnable();
+    }
+
+    // ✅ 自动查询用户在合约中的锁仓余额和解锁时间
+    async function checkUserLockedBalance() {
+      try {
+        const provider = new window.ethereum.providers.Web3Provider(window.ethereum);
+        const contract = new window.ethereum.Contract(CONTRACT_ABI, CONTRACT_ADDRESS, provider);
+        
+        // 调用合约读取数据 (不需要Gas费)
+        const lockedBalance = await contract.methods.lockedBalanceOf(connectedWallet).call();
+        const releaseTime = await contract.methods.releaseTimeOf(connectedWallet).call();
+
+        // 如果余额大于0，说明用户已经领过了
+        if (lockedBalance > 0) {
+          // 显示余额卡片
+          document.getElementById('balanceCard').style.display = 'block';
+          
+          // 转换为正常的MA数量显示
+          const maBalance = (lockedBalance / 1e18).toLocaleString();
+          document.getElementById('lockedAmount').textContent = `${maBalance} MA`;
+          
+          // 计算剩余时间
+          const currentTime = Math.floor(Date.now() / 1000);
+          const remainingSeconds = releaseTime - currentTime;
+          
+          if (remainingSeconds > 0) {
+            // 还在锁仓中
+            const daysLeft = Math.ceil(remainingSeconds / 86400);
+            document.getElementById('lockInfo').textContent = `🔒 Locked for ${daysLeft} more days`;
+            document.getElementById('claimAirdrop').textContent = '✅ Already Claimed';
+            document.getElementById('claimAirdrop').disabled = true;
+            document.getElementById('claimAirdrop').style.background = '#666';
+          } else {
+            // 已经解锁
+            document.getElementById('lockInfo').textContent = '✅ Unlocked! Ready to withdraw';
+          }
+          
+          // 标记所有任务为已完成，防止重复操作
+          verifiedTasks.x = true;
+          verifiedTasks.imei = true;
+          verifiedTasks.bridge = true;
+        }
+      } catch (error) {
+        console.error("Error checking locked balance:", error);
+        // 这里不弹提示，防止影响用户体验
+      }
+    }
+
+    // 任务验证逻辑
     document.querySelectorAll('.verify-btn').forEach(btn => {
       btn.addEventListener('click', async () => {
         if (!connectedWallet) {
@@ -352,7 +437,7 @@
         btn.textContent = 'Verifying...';
         btn.disabled = true;
 
-        // IMEI Validation Check
+        // IMEI特殊验证
         if (task === 'imei') {
           const imei = document.getElementById('imeiInput').value.trim();
           if (imei.length !== 15 || !/^\d+$/.test(imei)) {
@@ -363,7 +448,7 @@
           }
         }
 
-        // Simulate Verification Process
+        // 模拟验证过程
         await new Promise(r => setTimeout(r, 1200));
         verifiedTasks[task] = true;
         btn.textContent = '✅ Verified';
@@ -372,13 +457,13 @@
       });
     });
 
-    // Check if Claim Button should be enabled
+    // 检查是否满足领取条件
     function checkClaimEnable() {
       const hasVerifiedTask = Object.values(verifiedTasks).some(v => v);
       document.getElementById('claimAirdrop').disabled = !hasVerifiedTask || !connectedWallet;
     }
 
-    // 3. ✅ 真正的领币逻辑 (调用合约)
+    // ✅ 真正的领取逻辑：调用锁仓合约
     document.getElementById('claimAirdrop').addEventListener('click', async () => {
       const btn = document.getElementById('claimAirdrop');
       const status = document.getElementById('claimStatus');
@@ -387,30 +472,28 @@
       status.textContent = '';
 
       try {
-        // 创建合约实例
+        // 创建合约实例并发送交易
         const provider = new window.ethereum.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const contract = new window.ethereum.Contract(CONTRACT_ABI, CONTRACT_ADDRESS, signer);
 
-        // 调用合约的 distribute 函数
-        status.textContent = 'Waiting for wallet confirmation...';
+        status.textContent = '⏳ Waiting for wallet confirmation...';
         const tx = await contract.methods.distribute().send({ from: connectedWallet });
         
-        // 交易成功
-        console.log("Transaction Hash:", tx.hash);
-        document.getElementById('balanceCard').style.display = 'block';
-        document.getElementById('lockedAmount').textContent = '525,000 MA';
+        // 交易成功！
+        console.log("Transaction Success:", tx.hash);
         status.textContent = `✅ Success! TX: ${tx.hash.slice(0,10)}...`;
-        btn.textContent = '✅ Claimed & Locked';
-        btn.style.background = '#52c41a';
+        
+        // 重新查询余额，更新UI显示
+        await checkUserLockedBalance();
 
       } catch (error) {
-        // 处理错误 (用户取消或链上失败)
+        // 处理错误
         console.error(error);
         if (error.code === 4001) {
           status.textContent = '❌ Transaction cancelled by user';
         } else {
-          status.textContent = '❌ Claim failed: ' + error.message.slice(0, 50) + '...';
+          status.textContent = '❌ Claim failed: ' + error.message.slice(0, 60) + '...';
         }
         btn.textContent = 'Claim MA Airdrop';
         btn.disabled = false;
