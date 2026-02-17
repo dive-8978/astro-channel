@@ -100,39 +100,40 @@ body{
   <p class="sub">Interstellar Web3 Infrastructure Coming Soon</p>
 </div>
 
-<!-- 倒计时（不依赖任何第三方） -->
 <script>
 (function(){
-  const daysEl=document.getElementById("days");
-  const hmsEl=document.getElementById("hms");
+  const daysEl = document.getElementById("days");
+  const hmsEl = document.getElementById("hms");
 
-  const target=new Date();
-  target.setDate(target.getDate()+365);
-  target.setHours(0,0,0,0);
+  // ✅ 这里改成你想要的倒计时天数（比如 7 天）
+  const countdownDays = 12;
 
-  const pad=n=>String(n).padStart(2,"0");
+  // ✅ 目标时间 = 现在 + countdownDays
+  const target = new Date();
+  target.setTime(target.getTime() + countdownDays * 86400000);
+
+  const pad = n => String(n).padStart(2, "0");
 
   function tick(){
-    const now=new Date();
-    let diff=Math.max(target-now,0);
+    const now = new Date();
+    let diff = Math.max(target - now, 0);
 
-    const d=Math.floor(diff/86400000);
-    diff%=86400000;
-    const h=Math.floor(diff/3600000);
-    diff%=3600000;
-    const m=Math.floor(diff/60000);
-    const s=Math.floor((diff%60000)/1000);
+    const d = Math.floor(diff / 86400000);
+    diff %= 86400000;
+    const h = Math.floor(diff / 3600000);
+    diff %= 3600000;
+    const m = Math.floor(diff / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
 
-    daysEl.textContent=d;
-    hmsEl.textContent=`${pad(h)} : ${pad(m)} : ${pad(s)}`;
+    daysEl.textContent = d;
+    hmsEl.textContent = `${pad(h)} : ${pad(m)} : ${pad(s)}`;
   }
 
   tick();
-  setInterval(tick,1000);
+  setInterval(tick, 1000);
 })();
 </script>
 
-<!-- 粒子特效（失败也不影响页面） -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
 if(typeof particlesJS!=="undefined"){
