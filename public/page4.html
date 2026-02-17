@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroChannel - Product System & Launch Roadmap</title>
+    <title>AstroChannel - Products</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
         body { background: #0a0e27; color: #ffffff; overflow-x: hidden; line-height: 1.8; }
@@ -26,19 +26,12 @@
         .section-title::before { content: "•"; color: #6d4aff; font-size: 1.8rem; }
         .section-content { color: #dddddd; font-size: 1rem; }
         .list-item { margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.8rem; }
-        .list-item::before { content: "📱"; color: #6d4aff; flex-shrink: 0; margin-top: 0.2rem; }
-        .table-container { overflow-x: auto; margin: 1.5rem 0; border-radius: 8px; border: 1px solid #333; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #333; }
-        th { background: #1a1042; color: #6d4aff; font-weight: 600; }
-        tr:hover { background: #120a2d; }
-        tr:last-child td { border-bottom: none; }
+        .list-item::before { content: "🔹"; color: #6d4aff; flex-shrink: 0; margin-top: 0.2rem; }
         .community-links { margin: 2rem 0; display: flex; gap: 1.5rem; flex-wrap: wrap; }
         .community-links a { color: #6d4aff; text-decoration: none; font-weight: 500; transition: all 0.3s ease; }
         .community-links a:hover { color: #8b6dff; text-decoration: underline; }
         .footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #333333; color: #aaaaaa; font-size: 0.9rem; }
         .footer h3 { color: #cccccc; margin-bottom: 0.8rem; font-size: 1.1rem; }
-        /* 底部翻页按钮（和全体系统一） */
         .page-pagination {
             margin-top: 4rem;
             display: flex;
@@ -68,14 +61,12 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
         }
-        /* Responsive */
         @media (max-width: 768px) {
             .container { padding: 1.5rem; }
             .page-title { font-size: 2rem; }
             .page-subtitle { font-size: 1.1rem; }
             .section-title { font-size: 1.3rem; }
             .nav-logo { font-size: 1.6rem; }
-            th, td { padding: 0.7rem; font-size: 0.95rem; }
         }
         @media (max-width: 480px) {
             .page-title { font-size: 1.8rem; }
@@ -90,7 +81,6 @@
     </div>
 
     <div class="container">
-        <!-- Navigation -->
         <nav class="nav">
             <div class="nav-logo">AstroChannel</div>
             <div class="nav-links">
@@ -98,122 +88,78 @@
                 <a href="page2.html">Pain Points</a>
                 <a href="page3.html">Technology</a>
                 <a href="page4.html" class="active">Products</a>
-                <a href="page5.html">Tokenomics</a>
-                <a href="page6.html">Incentives</a>
+                <a href="page5.html">MemeAstro(MA)</a>
+                <a href="page6.html">Tokenomics</a>
                 <a href="page7.html">Roadmap</a>
             </div>
         </nav>
-<!-- 返回到首页按钮 -->
-<a href="/" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: linear-gradient(90deg, #4cc9f0, #f72585); border: none; border-radius: 30px; color: #fff; font-size: 1rem; text-decoration: none; cursor: pointer; transition: transform 0.3s; margin: 10px 0;">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-  Back to Homepage
-</a>
-        <!-- Page Header -->
+
+        <a href="/" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: linear-gradient(90deg, #4cc9f0, #f72585); border: none; border-radius: 30px; color: #fff; font-size: 1rem; text-decoration: none; cursor: pointer; transition: transform 0.3s; margin: 10px 0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Back to Homepage
+        </a>
+
         <div class="page-header">
-            <h1 class="page-title">Product System & Lightweight Launch Plan</h1>
-            <p class="page-subtitle">Three Core Products, Phased Launch, Prioritize User Experience & Ecological Linkage</p>
+            <h1 class="page-title">Three Core Products</h1>
+            <p class="page-subtitle">AstroBridge + AstroWallet + AstroChain</p>
         </div>
 
-        <!-- Core Risk Alert -->
         <div class="risk-alert">
             <h3>CORE RISK WARNING</h3>
-            <p>This is a decentralized community-driven ecological project with no official backing. Cryptocurrencies involve high risks such as extreme price volatility, regulatory changes, and technical vulnerabilities. Evaluate your risk tolerance before participation; all operations and decisions are at your own risk.</p>
+            <p>Cryptocurrencies and decentralized projects involve high risks including price volatility, technical vulnerabilities, and policy changes. Please fully understand the risks before participating. All operations are at your own risk.</p>
         </div>
 
-        <!-- Core Product System -->
         <section class="section">
-            <h2 class="section-title">Three Core Products (Ecological Closed Loop)</h2>
+            <h2 class="section-title">1. AstroBridge — Smart Intent Network</h2>
             <div class="section-content">
-                <p style="margin-bottom: 1rem;">All products are developed around <strong>cross-chain core + AI empowerment + Starlink linkage</strong>, with lightweight launch of minimum viable functions and phased iteration of advanced features.</p>
-                <div class="list-item"><strong>AstroCross - Zero-Fee Cross-Chain Aggregator</strong>: The core product of the ecosystem, supporting multi-chain zero-platform-fee cross-chain, dynamic routing automatic selection, offline transaction caching, and exclusive Starlink Phone fee exemption benefits. The first phase supports Ethereum, BSC, Polygon, Solana and other mainstream public chains.</div>
-                <div class="list-item"><strong>AstroWallet - AI Wealth Manager Multi-Chain Wallet</strong>: Integrated with AstroCross, supporting one-click cross-chain, multi-chain asset unified management, AI Gas fee prediction, intelligent asset allocation (lightweight), and on-chain income monitoring. Non-custodial design, local private key storage, ensuring asset security.</div>
-                <div class="list-item"><strong>AstroAI - Ecological AI Service Hub</strong>: The underlying AI support of the ecosystem, providing lightweight reinforcement learning model for AstroWallet, cross-chain transaction risk warning, ecological data statistics, and community intelligent customer service. The long-term plan is to connect brain-computer interface and interstellar AI decision-making.</div>
+                <div class="list-item">Full-chain compatible intent-centric cross-chain</div>
+                <div class="list-item">AI risk control & robot execution</div>
+                <div class="list-item">Fast / Safe Lane mechanism</div>
+                <div class="list-item">Quantum-safe zkProof verification</div>
             </div>
         </section>
 
-        <!-- Product Launch Priority & Iteration -->
         <section class="section">
-            <h2 class="section-title">Product Launch Priority & Iteration Logic</h2>
+            <h2 class="section-title">2. AstroWallet — AI Smart Wallet</h2>
             <div class="section-content">
-                <div class="table-container">
-                    <table>
-                        <tr>
-                            <th>Product</th>
-                            <th>Launch Phase (Time)</th>
-                            <th>Core Functions (Lightweight)</th>
-                            <th>Subsequent Iteration (3-6 Months)</th>
-                        </tr>
-                        <tr>
-                            <td>AstroCross</td>
-                            <td>Phase 1 (0-1 Month)</td>
-                            <td>Zero-fee cross-chain for 5+ mainstream chains, dynamic routing, basic on-chain data statistics</td>
-                            <td>Offline transaction caching, Starlink Phone binding, 10+ public chain support</td>
-                        </tr>
-                        <tr>
-                            <td>AstroWallet</td>
-                            <td>Phase 2 (1-2 Months)</td>
-                            <td>Multi-chain asset management, one-click cross-chain with AstroCross, AI Gas prediction</td>
-                            <td>Intelligent income monitoring, personalized asset allocation, cold wallet integration</td>
-                        </tr>
-                        <tr>
-                            <td>AstroAI</td>
-                            <td>Phase 3 (2-3 Months)</td>
-                            <td>Ecological data statistics, basic risk warning, community intelligent customer service</td>
-                            <td>Advanced AI model, cross-chain arbitrage reminder, interstellar scenario adaptation</td>
-                        </tr>
-                    </table>
-                </div>
+                <div class="list-item">User-owned assets, robots only execute</div>
+                <div class="list-item">Natural language & voice command</div>
+                <div class="list-item">AI optimal routing & Gas saving</div>
+                <div class="list-item">Risk alert & asset monitoring</div>
             </div>
         </section>
 
-        <!-- Starlink Phone Exclusive Adaptation -->
         <section class="section">
-            <h2 class="section-title">Starlink Phone Exclusive Product Adaptation</h2>
+            <h2 class="section-title">3. AstroChain — Native Public Chain</h2>
             <div class="section-content">
-                <p style="margin-bottom: 1rem;">Deep integration with Starlink Phone hardware, exclusive functional optimization and ecological benefits, forming a unique hardware-software ecological linkage:</p>
-                <div class="list-item">Exclusive UI adaptation: Optimized mobile terminal interface for Starlink Phone's screen and system, supporting one-click access to AstroCross/AstroWallet.</div>
-                <div class="list-item">Network optimization: Adapt to Starlink satellite network, reduce cross-chain transaction delay under satellite network, and support offline transaction signature caching.</div>
-                <div class="list-item">Hardware binding: One Starlink Phone IMEI can only bind one wallet address, and the bound address unlocks all ecological exclusive benefits.</div>
-                <div class="list-item">Fee exemption benefit: Bound Starlink Phone addresses enjoy 3% MA purchase tax exemption (capped at 5000 USD) and zero Gas fee subsidy for small-sum cross-chain transactions.</div>
+                <div class="list-item">EVM-compatible, high TPS, low gas</div>
+                <div class="list-item">Native intent & AI robot support</div>
+                <div class="list-item">Post-quantum cryptography</div>
+                <div class="list-item">DAO governance & community node</div>
             </div>
         </section>
 
-        <!-- Product Launch Core Principles -->
         <section class="section">
-            <h2 class="section-title">Product Launch Core Principles</h2>
+            <h2 class="section-title">Ecology Synergy</h2>
             <div class="section-content">
-                <div class="list-item">Low-cost launch: Based on open source technology secondary development, reduce R&D costs, and prioritize the realization of core usable functions.</div>
-                <div class="list-item">Fast iteration: Based on community user feedback, rapid iteration of product functions, and continuous optimization of user experience.</div>
-                <div class="list-item">Ecological linkage: All products are closely linked with MA/ASTRO tokens, and product usage is linked with ecological incentives to improve user stickiness.</div>
-                <div class="list-item">Security first: Non-custodial design for all core products, local private key storage, and regular security audit of on-chain contracts.</div>
+                <div class="list-item">MA: Meme token for cold start & airdrop</div>
+                <div class="list-item">ASTRO: Governance + gas + ecosystem utility</div>
+                <div class="list-item">Bridge + Wallet + Chain form a closed loop</div>
+                <div class="list-item">Robots + AI + Interchain = Next-Gen Web3</div>
             </div>
         </section>
 
-        <!-- Official Community -->
-        <section class="section">
-            <h2 class="section-title">Official Community</h2>
-            <div class="section-content community-links">
-                <a href="#telegram">Telegram Official Group</a>
-                <a href="#discord">Discord Community</a>
-                <a href="#x">X (Twitter) Official</a>
-                <a href="#github">GitHub Open Source</a>
-            </div>
-        </section>
-
-        <!-- Disclaimer -->
         <footer class="footer">
             <h3>DISCLAIMER</h3>
-            <p>This white paper is only a description of the project development plan and ecological rules, and does not constitute any investment advice, income commitment or value guarantee. The AstroChannel community reserves the right to adjust ecological rules (including airdrops, incentives, token unlocking, etc.) based on on-chain data feedback, community DAO voting, and industry regulatory policies. All adjustments will be announced through official communities, and the final interpretation right belongs to the AstroChannel decentralized community. Cryptocurrency investment involves high risks of principal loss; participation implies that you are aware of and accept all risks, and the project team/community shall not be liable for any direct or indirect loss compensation.</p>
+            <p>This whitepaper is for project introduction and ecological planning only. It does not constitute investment advice or value commitment. The AstroChannel community reserves the right to adjust ecological rules through DAO voting. Digital currency investment carries high risks; please participate cautiously.</p>
         </footer>
 
-        <!-- 底部翻页按钮 - 上一页page3，下一页page5 -->
         <div class="page-pagination">
             <a href="page3.html" class="pagination-btn">← Previous Page</a>
             <a href="page5.html" class="pagination-btn">Next Page →</a>
         </div>
     </div>
 
-    <!-- Particle Animation -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const createParticles = () => {
