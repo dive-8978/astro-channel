@@ -105,12 +105,8 @@ body{
   const daysEl = document.getElementById("days");
   const hmsEl = document.getElementById("hms");
 
-  // 设置为 365 天倒计时
-  const countdownDays = 365;
-
-  // 目标时间 = 当前时间 + 365 天
-  const target = new Date();
-  target.setTime(target.getTime() + countdownDays * 86400000);
+  // ———— 这里我帮你固定了目标时间：2027-02-18 00:00:00 ————
+  const target = new Date("2027-02-18T00:00:00+08:00");
 
   const pad = n => String(n).padStart(2, "0");
 
