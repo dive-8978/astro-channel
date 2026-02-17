@@ -3,21 +3,14 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AstroBridge - Multi-Chain Bridge</title>
+<title>AstroBridge - Global Super Chain</title>
 <script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@lifi/sdk@2.7.0/dist/index.umd.min.js"></script>
-<script>window.LiFi = window.LIFI;</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>window.Chart = Chart;</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Orbitron',sans-serif;
-}
-body {
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
+body{
   background:radial-gradient(circle at 20% 20%,#050029,#2E007A);
   color:#fff;
   min-height:100vh;
@@ -27,59 +20,39 @@ body {
   padding:2rem 1rem;
   overflow-x:hidden;
 }
-.container {
+.container{
   background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(20px);
+  backdrop-filter:blur(25px);
   border-radius:25px;
   padding:2rem;
   width:100%;
-  max-width:720px;
+  max-width:780px;
   text-align:center;
-  box-shadow:0 0 50px rgba(255,69,0,0.2);
+  box-shadow:0 0 50px rgba(255,69,0,0.25);
   position:relative;
   z-index:2;
 }
-/* 返回按钮样式 */
-.back-btn {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-.back-btn a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: #ff8c00;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  transition: 0.3s;
-}
-.back-btn a:hover {
-  color: #ff4500;
-}
-h1 {
-  font-size:2.2rem;
+h1{
+  font-size:2.4rem;
   background:linear-gradient(90deg,#ff4500,#ff8c00,#ff69b4);
   -webkit-background-clip:text;
   color:transparent;
-  margin-bottom:0.5rem;
+  margin-bottom:0.2rem;
   animation:glow 3s infinite alternate;
 }
-@keyframes glow {
+h2{
+  font-size:1rem;
+  color:#FFA07A;
+  margin-bottom:1rem;
+  letter-spacing:1px;
+}
+@keyframes glow{
   0%{text-shadow:0 0 5px #ff4500,0 0 10px #ff4500;}
   100%{text-shadow:0 0 20px #ff69b4,0 0 40px #ff8c00;}
 }
-.group {
-  text-align:left;
-  margin-bottom:1rem;
-}
-.group label {
-  display:block;
-  margin-bottom:0.3rem;
-  color:#FFA07A;
-  font-size:0.9rem;
-}
-input, select {
+.group{ text-align:left; margin-bottom:1rem;}
+.group label{ display:block; margin-bottom:0.3rem; color:#FFA07A; font-size:0.9rem; }
+input, select{
   width:100%;
   padding:0.8rem 1rem;
   border-radius:12px;
@@ -90,11 +63,8 @@ input, select {
   font-size:1rem;
   transition:0.3s;
 }
-input:focus, select:focus {
-  border-color:#ff8c00;
-  box-shadow:0 0 10px #ff4500;
-}
-button {
+input:focus, select:focus{ border-color:#ff8c00; box-shadow:0 0 10px #ff4500; }
+button{
   width:100%;
   padding:1rem;
   margin-top:0.5rem;
@@ -107,47 +77,27 @@ button {
   color:#fff;
   transition:0.3s;
 }
-button:disabled {
-  opacity:0.5;
-  cursor:not-allowed;
-  background:#666;
-}
-.status {
-  min-height:1.4rem;
-  margin-top:0.5rem;
-  font-size:0.95rem;
-}
-.success {color:#32CD32;}
-.warn {color:#FFA500;}
-.error {color:#FF6347;}
-.balance {
-  margin-top:0.3rem;
-  color:#FF8C00;
-  font-size:0.9rem;
-}
-.rocket {
+button:disabled{ opacity:0.5; cursor:not-allowed; background:#666; }
+.status{ min-height:1.4rem; margin-top:0.5rem; font-size:0.95rem;}
+.success{color:#32CD32;}
+.warn{color:#FFA500;}
+.error{color:#FF6347;}
+.balance{ margin-top:0.3rem; color:#FF8C00; font-size:0.9rem; }
+.rocket{
   position:absolute;
   bottom:10px;
   left:50%;
   transform:translateX(-50%) translateY(0);
-  width:30px;
-  height:60px;
+  width:30px; height:60px;
   background:#ff4500;
   border-radius:15px 15px 0 0;
   box-shadow:0 0 15px #ff8c00;
   transition: transform 2s ease-in-out;
   z-index:1;
 }
-.rocket.launch {
-  transform:translateX(-50%) translateY(-300px);
-}
-#txChart {
-  margin-top:15px;
-  background:rgba(0,0,0,0.2);
-  border-radius:10px;
-  padding:10px;
-}
-.queueList, #historyList, #feeInfo, #pointsInfo, #rewardList {
+.rocket.launch{ transform:translateX(-50%) translateY(-300px); }
+#txChart{ margin-top:15px; background:rgba(0,0,0,0.2); border-radius:10px; padding:10px; }
+.queueList, #historyList, #feeInfo, #pointsInfo, #rewardList{
   margin-top:10px;
   font-size:0.85rem;
   color:#FFA07A;
@@ -156,41 +106,32 @@ button:disabled {
   text-align:left;
   padding:5px;
 }
-.ai-panel {
+.ai-panel{
   margin:15px 0;
   padding:12px;
   background:rgba(255,140,0,0.1);
   border-radius:12px;
   text-align:left;
 }
-.ai-status {
-  font-size:1rem;
-  font-weight:600;
-  color:#ff8c00;
-  margin-bottom:8px;
-}
-.ai-suggestions {
+.ai-status{ font-size:1rem; font-weight:600; color:#ff8c00; margin-bottom:8px;}
+.ai-suggestions{ font-size:0.85rem; color:#FFA07A;}
+.ai-suggestions .warn{ color:#ff4500;}
+.global-label{
+  margin-bottom:1rem;
   font-size:0.85rem;
-  color:#FFA07A;
-}
-.ai-suggestions .warn {
-  color:#ff4500;
+  color:#7FFFD4;
+  letter-spacing:1px;
+  text-transform:uppercase;
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <!-- 返回主页按钮 -->
-  <div class="back-btn">
-    <a href="/">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Back to Home
-    </a>
-  </div>
 
+<div class="container">
   <h1>AstroBridge</h1>
+  <h2>Global Super Chain Network</h2>
+  <div class="global-label">Frontier Web3 Cross-Chain Infrastructure</div>
+
   <p class="status" id="walletStatus">Wallet not connected</p>
   <button id="connectBtn">Connect Wallet</button>
 
@@ -229,6 +170,7 @@ button:disabled {
   <div id="feeInfo">Estimated Fee: --</div>
   <div id="kycStatus">KYC: Not Verified</div>
   <div id="rewardList">NFT Rewards: None</div>
+
   <div class="status" id="status"></div>
   <button id="bridgeBtn" disabled>Cross-Chain Transfer</button>
 
@@ -241,17 +183,27 @@ button:disabled {
 </div>
 
 <script>
-let provider, signer, account, lifi, tokenContract;
-let txQueue = [], txHistory = [], points = 0, txChart = null;
+const { ethers } = window;
+const LiFi = window.LiFi;
+
+let provider, signer, account;
+let txQueue = [], txHistory = [], points = 0;
+let txChart = null;
 
 const CHAINS = [
-  {id:1,name:"Ethereum"},{id:56,name:"BSC"},{id:137,name:"Polygon"},
-  {id:42161,name:"Arbitrum"},{id:10,name:"Optimism"},{id:43114,name:"Avalanche"},{id:250,name:"Fantom"}
+  { id: 1, name: "Ethereum" },
+  { id: 56, name: "BSC" },
+  { id: 137, name: "Polygon" },
+  { id: 42161, name: "Arbitrum" },
+  { id: 10, name: "Optimism" },
+  { id: 43114, name: "Avalanche" },
+  { id: 250, name: "Fantom" }
 ];
+
 const TOKENS = {
   ASTRO: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
-  USDT: "0xTestUSDT",
-  USDC: "0xTestUSDC"
+  USDT: "0x0000000000000000000000000000000000000000",
+  USDC: "0x1111111111111111111111111111111111111111"
 };
 
 const DOM = {
@@ -280,33 +232,48 @@ const DOM = {
 
 class BridgeAI {
   constructor() { this.reset(); }
-  reset() { this.status = "🤖 AI Ready"; this.suggestions = []; this.warnings = []; }
+  reset() {
+    this.status = "🤖 AI Ready";
+    this.suggestions = [];
+    this.warnings = [];
+  }
   async runCheck(data) {
-    this.reset(); this.status = "🤖 Analyzing...";
+    this.reset();
+    this.status = "🤖 Analyzing...";
     this.checkWallet(data.account);
     this.checkBalance(data.balance, data.amount);
     this.checkChain(data.from, data.to);
     this.checkSlippage(data.slippage);
-    this.status = `🤖 ${this.warnings.length ? '⚠️ Attention' : '✅ Safe'}`;
-    return { status: this.status, suggestions: this.suggestions, warnings: this.warnings };
+    this.status = this.warnings.length ? "⚠️ Attention" : "✅ Safe";
+    return {
+      status: `🤖 ${this.status}`,
+      suggestions: this.suggestions,
+      warnings: this.warnings
+    };
   }
   checkWallet(acc) {
-    acc ? this.suggestions.push(`✅ Connected: ${acc.slice(0,6)}...`) : this.warnings.push("❌ Wallet not connected");
+    acc ? this.suggestions.push(`✅ Connected: ${acc.slice(0,6)}...`)
+       : this.warnings.push("❌ Wallet not connected");
   }
   checkBalance(bal, amt) {
     if (bal && parseFloat(amt) > parseFloat(bal)) {
-      this.warnings.push(`⚠️ Amount exceeds balance (${bal})`);
+      this.warnings.push(`⚠️ Exceeds balance: ${bal}`);
     } else if (bal) {
       this.suggestions.push(`✅ Balance: ${bal}`);
     }
   }
   checkChain(from, to) {
-    from === to ? this.warnings.push("⚠️ Same chain not allowed") : this.suggestions.push(`✅ Cross-chain: ${from} → ${to}`);
+    from === to
+      ? this.warnings.push("⚠️ Same chain not allowed")
+      : this.suggestions.push(`✅ ${from} → ${to}`);
   }
   checkSlippage(s) {
-    s > 1 ? this.warnings.push(`⚠️ Slippage (${s}%) high, ≤1% recommended`) : this.suggestions.push(`✅ Slippage (${s}%) ok`);
+    s > 1
+      ? this.warnings.push(`⚠️ Slippage ${s}% → ≤1% recommended`)
+      : this.suggestions.push(`✅ Slippage ${s}% ok`);
   }
 }
+
 const bridgeAI = new BridgeAI();
 
 function showAI(report) {
@@ -317,235 +284,121 @@ function showAI(report) {
   DOM.aiSuggestions.innerHTML = html;
 }
 
-async function initLiFi() {
-  lifi = new LiFi({ integrator: "AstroBridge" });
+function initChains() {
+  CHAINS.forEach(c => {
+    DOM.fromChain.add(new Option(c.name, c.id));
+    DOM.toChain.add(new Option(c.name, c.id));
+  });
 }
 
-function setStatus(el, msg, type = '') {
-  el.textContent = msg;
-  el.className = `status ${type}`;
-}
-function setLoading(isLoading) {
-  DOM.connectBtn.disabled = isLoading;
-  DOM.bridgeBtn.disabled = isLoading || !account;
-  DOM.connectBtn.textContent = isLoading ? "Connecting..." : "Connect Wallet";
-}
-function watchNetwork() {
-  if (window.ethereum) {
-    window.ethereum.on('chainChanged', () => window.location.reload());
-    window.ethereum.on('accountsChanged', () => window.location.reload());
-  }
+function initTokens() {
+  Object.keys(TOKENS).forEach(t => {
+    DOM.tokenSelect.add(new Option(t, TOKENS[t]));
+  });
 }
 
-DOM.connectBtn.onclick = async () => {
+function updateUI() {
+  DOM.pointsInfo.textContent = `Points: ${points}`;
+  DOM.queueList.textContent = `Queue: ${txQueue.length} items`;
+  DOM.historyList.textContent = `History: ${txHistory.length} items`;
+}
+
+function launchRocket() {
+  DOM.rocket.classList.add('launch');
+  setTimeout(() => DOM.rocket.classList.remove('launch'), 2000);
+}
+
+async function connectWallet() {
   if (!window.ethereum) {
-    setStatus(DOM.walletStatus, "MetaMask not found", "error");
+    DOM.walletStatus.textContent = "MetaMask not found";
+    DOM.walletStatus.className = "status error";
     return;
   }
-  setLoading(true);
   try {
-    [account] = await window.ethereum.request({ method: 'eth_requestAccounts' });
     provider = new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
     signer = provider.getSigner();
-    await initLiFi();
-    watchNetwork();
-    populateChainsAndTokens();
-    await updateBalance();
-    setStatus(DOM.walletStatus, `Connected: ${account.slice(0,6)}...${account.slice(-4)}`, "success");
+    account = await signer.getAddress();
+    DOM.walletStatus.textContent = `Connected: ${account.slice(0,6)}...`;
+    DOM.walletStatus.className = "status success";
     DOM.bridgeBtn.disabled = false;
-    updateAI();
-  } catch (e) {
-    setStatus(DOM.walletStatus, "Connection failed", "error");
-    console.error(e);
-  } finally {
-    setLoading(false);
-  }
-};
-
-function populateChainsAndTokens() {
-  CHAINS.forEach(c => {
-    const o = document.createElement('option');
-    o.value = c.id;
-    o.textContent = c.name;
-    DOM.fromChain.appendChild(o);
-  });
-  CHAINS.forEach(c => {
-    const o = document.createElement('option');
-    o.value = c.id;
-    o.textContent = c.name;
-    DOM.toChain.appendChild(o);
-  });
-  Object.keys(TOKENS).forEach(t => {
-    const o = document.createElement('option');
-    o.value = t;
-    o.textContent = t;
-    DOM.tokenSelect.appendChild(o);
-  });
-}
-
-async function updateBalance() {
-  if (!account || !signer) return "--";
-  try {
-    tokenContract = new ethers.Contract(TOKENS[DOM.tokenSelect.value], ["function balanceOf(address) view returns (uint256)"], signer);
-    const bal = await tokenContract.balanceOf(account);
-    const formatted = parseFloat(ethers.utils.formatEther(bal)).toFixed(4);
-    DOM.tokenBalance.textContent = `Balance: ${formatted} ${DOM.tokenSelect.value}`;
-    return formatted;
-  } catch (e) {
-    DOM.tokenBalance.textContent = "Balance: --";
-    return "--";
+    runAICheck();
+  } catch (err) {
+    DOM.walletStatus.textContent = "Rejected";
+    DOM.walletStatus.className = "status error";
   }
 }
 
-async function updateAI() {
-  const balance = await updateBalance();
+async function runAICheck() {
   const data = {
     account,
-    balance,
-    amount: DOM.amount.value || 0,
-    from: DOM.fromChain.value,
-    to: DOM.toChain.value,
+    balance: DOM.tokenBalance.textContent.replace('Balance: ', ''),
+    amount: DOM.amount.value,
+    from: DOM.fromChain.options[DOM.fromChain.selectedIndex]?.text,
+    to: DOM.toChain.options[DOM.toChain.selectedIndex]?.text,
     slippage: DOM.slippage.value
   };
   const report = await bridgeAI.runCheck(data);
   showAI(report);
 }
 
-[DOM.tokenSelect, DOM.fromChain, DOM.toChain, DOM.amount, DOM.slippage].forEach(el => {
-  el.addEventListener('input', updateAI);
-});
-
-DOM.bridgeBtn.onclick = async () => {
-  const amt = parseFloat(DOM.amount.value);
-  const slip = parseFloat(DOM.slippage.value);
-  const from = DOM.fromChain.value;
-  const to = DOM.toChain.value;
-
-  if (!amt || amt <= 0) {
-    setStatus(DOM.status, "Invalid amount", "error");
-    return;
-  }
-  if (from === to) {
-    setStatus(DOM.status, "Select different chains", "error");
-    return;
-  }
-  const balance = parseFloat(await updateBalance());
-  if (amt > balance) {
-    setStatus(DOM.status, "Insufficient balance", "error");
-    return;
-  }
-
-  const tx = {
-    token: DOM.tokenSelect.value,
-    from,
-    to,
-    amount: amt,
-    slippage: slip,
-    retries: 0
-  };
-  txQueue.push(tx);
-  updateQueueList();
-  if (txQueue.length === 1) processQueue();
-};
-
-async function processQueue() {
-  if (txQueue.length === 0) return;
-  const tx = txQueue[0];
-  DOM.bridgeBtn.disabled = true;
-  DOM.rocket.classList.add('launch');
-  setStatus(DOM.status, `Processing ${tx.amount} ${tx.token}...`, "warn");
-
-  try {
-    const routes = await lifi.getRoutes({
-      fromChain: parseInt(tx.from),
-      toChain: parseInt(tx.to),
-      fromToken: TOKENS[tx.token],
-      toToken: TOKENS[tx.token],
-      fromAmount: ethers.utils.parseEther(tx.amount.toString()).toString(),
-      fromAddress: account,
-      toAddress: account,
-      options: { slippage: tx.slippage / 100 }
-    });
-    if (!routes?.routes.length) throw new Error("No route found");
-    await lifi.executeRoute(routes.routes[0], signer);
-
-    if (!txChart) initChart();
-    txChart.data.labels.push(new Date().toLocaleTimeString());
-    txChart.data.datasets[0].data.push(tx.amount * 0.01);
-    txChart.update();
-
-    points += 1;
-    DOM.pointsInfo.textContent = `Points: ${points}`;
-
-    const txRecord = {
-      from: tx.from,
-      to: tx.to,
-      amount: tx.amount,
-      token: tx.token,
-      time: new Date().toISOString(),
-      fromAddress: account,
-      toAddress: account
-    };
-    txHistory.unshift(txRecord);
-    updateHistoryList();
-
-    setStatus(DOM.status, `Transfer success! Points: ${points}`, "success");
-
-    txQueue.shift();
-    await updateBalance();
-    updateAI();
-  } catch (e) {
-    if (tx.retries < 3) {
-      tx.retries += 1;
-      setStatus(DOM.status, `Retrying... (${tx.retries})`, "warn");
-      setTimeout(() => processQueue(), 2000);
-      return;
-    }
-    setStatus(DOM.status, "Error: " + e.message.slice(0, 60), "error");
-    txQueue.shift();
-  } finally {
-    DOM.bridgeBtn.disabled = false;
-    setTimeout(() => DOM.rocket.classList.remove('launch'), 2500);
-  }
-  updateQueueList();
-  if (txQueue.length > 0) setTimeout(() => processQueue(), 500);
-}
-
 function initChart() {
-  const ctx = DOM.txChart.getContext('2d');
-  txChart = new Chart(ctx, {
+  txChart = new Chart(DOM.txChart, {
     type: 'line',
     data: {
-      labels: [],
+      labels: ['1', '2', '3', '4', '5'],
       datasets: [{
-        label: 'Fee (USD)',
-        data: [],
-        borderColor: '#FF8C00',
-        backgroundColor: 'rgba(255,140,0,0.1)',
-        fill: true,
+        label: 'Tx Count',
+        data: [0, 0, 0, 0, 0],
+        borderColor: '#ff8c00',
+        backgroundColor: 'rgba(255,140,0,0.2)',
         tension: 0.4
       }]
     },
     options: {
       responsive: true,
-      plugins: { legend: { labels: { color: '#fff' } } },
-      scales: {
-        x: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: '#fff' } },
-        y: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { color: '#fff' } }
-      }
+      plugins: { legend: { display: false } }
     }
   });
 }
 
-function updateQueueList() {
-  const text = txQueue.map(t => `${t.token} ${t.amount} ${t.from}→${t.to}`).join(" | ");
-  DOM.queueList.textContent = `Queue: ${text || "Empty"}`;
+function mockBridge() {
+  const amt = DOM.amount.value;
+  const token = DOM.tokenSelect.options[DOM.tokenSelect.selectedIndex].text;
+  const from = DOM.fromChain.options[DOM.fromChain.selectedIndex].text;
+  const to = DOM.toChain.options[DOM.toChain.selectedIndex].text;
+
+  DOM.status.textContent = `Bridging ${amt} ${token}...`;
+  DOM.status.className = "status warn";
+
+  launchRocket();
+  points += 10;
+
+  setTimeout(() => {
+    DOM.status.textContent = `Success: ${amt} ${token} → ${to}`;
+    DOM.status.className = "status success";
+    txHistory.push(`${from}→${to} ${amt} ${token}`);
+    updateUI();
+  }, 2000);
 }
 
-function updateHistoryList() {
-  const text = txHistory.slice(0, 5).map(t => `${t.token} ${t.amount} ${t.from}→${t.to}`).join(" | ");
-  DOM.historyList.textContent = `History: ${text || "Empty"}`;
-}
+DOM.connectBtn.onclick = connectWallet;
+DOM.bridgeBtn.onclick = () => {
+  mockBridge();
+  runAICheck();
+};
+
+[DOM.amount, DOM.slippage, DOM.fromChain, DOM.toChain, DOM.tokenSelect].forEach(el => {
+  el.addEventListener('input', runAICheck);
+});
+
+window.onload = () => {
+  initChains();
+  initTokens();
+  initChart();
+  updateUI();
+  runAICheck();
+};
 </script>
 </body>
 </html>
