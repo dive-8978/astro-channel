@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AstroBridge - Global Super Chain</title>
+<title>AstroBridge • Global Super Chain</title>
 <script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@lifi/sdk@2.7.0/dist/index.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -26,7 +26,7 @@ body{
   border-radius:25px;
   padding:2rem;
   width:100%;
-  max-width:780px;
+  max-width:900px;
   text-align:center;
   box-shadow:0 0 50px rgba(255,69,0,0.25);
   position:relative;
@@ -123,6 +123,21 @@ button:disabled{ opacity:0.5; cursor:not-allowed; background:#666; }
   letter-spacing:1px;
   text-transform:uppercase;
 }
+.dashboard{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:20px;
+}
+.card{
+  background:rgba(15,15,35,0.6);
+  border:1px solid rgba(80,80,140,0.3);
+  border-radius:16px;
+  padding:12px;
+  text-align:left;
+}
+.card h3{ color:#72ddf7; font-size:16px; margin-bottom:6px; }
+.card p{ margin:4px 0; }
 </style>
 </head>
 <body>
@@ -179,6 +194,34 @@ button:disabled{ opacity:0.5; cursor:not-allowed; background:#666; }
   <div class="queueList" id="historyList">History: Empty</div>
   <div class="queueList" id="pointsInfo">Points: 0</div>
 
+  <!-- 新增 Dashboard 状态卡 -->
+  <div class="dashboard">
+    <div class="card">
+      <h3>Network Status</h3>
+      <p>AI Governance: <span id="dashAiGov">LOADING</span></p>
+      <p>Self-Healing: <span id="dashSelfHeal">LOADING</span></p>
+      <p>Quantum Safe: <span id="dashQuantum">LOADING</span></p>
+      <p>Audit: <span id="dashAudit">LOADING</span></p>
+    </div>
+    <div class="card">
+      <h3>Robots Cluster</h3>
+      <p>Online Robots: <span id="dashRobots">0</span></p>
+      <p>Badge System: ACTIVE</p>
+      <p>Execution Load: <span id="dashLoad">0%</span></p>
+    </div>
+    <div class="card">
+      <h3>Supported Chains</h3>
+      <p>ETH · POLYGON · BSC</p>
+      <p id="dashChains">LOADING</p>
+    </div>
+    <div class="card">
+      <h3>AI Engine</h3>
+      <p>Risk Score: <span id="dashAiScore">0%</span></p>
+      <p>Federated Learning: <span id="dashFl">LOADING</span></p>
+      <p>Auto Routing: <span id="dashRouting">LOADING</span></p>
+    </div>
+  </div>
+
   <div class="rocket" id="rocket"></div>
 </div>
 
@@ -193,11 +236,7 @@ let txChart = null;
 const CHAINS = [
   { id: 1, name: "Ethereum" },
   { id: 56, name: "BSC" },
-  { id: 137, name: "Polygon" },
-  { id: 42161, name: "Arbitrum" },
-  { id: 10, name: "Optimism" },
-  { id: 43114, name: "Avalanche" },
-  { id: 250, name: "Fantom" }
+  { id: 137, name: "Polygon" }
 ];
 
 const TOKENS = {
@@ -226,17 +265,22 @@ const DOM = {
   rewardList: document.getElementById('rewardList'),
   aiStatus: document.getElementById('aiStatus'),
   aiSuggestions: document.getElementById('aiSuggestions'),
-  kycStatus: document.getElementById('kycStatus'),
-  txChart: document.getElementById('txChart')
+  dashAiGov: document.getElementById('dashAiGov'),
+  dashSelfHeal: document.getElementById('dashSelfHeal'),
+  dashQuantum: document.getElementById('dashQuantum'),
+  dashAudit: document.getElementById('dashAudit'),
+  dashRobots: document.getElementById('dashRobots'),
+  dashLoad: document.getElementById('dashLoad'),
+  dashChains: document.getElementById('dashChains'),
+  dashAiScore: document.getElementById('dashAiScore'),
+  dashFl: document.getElementById('dashFl'),
+  dashRouting: document.getElementById('dashRouting')
 };
 
+// --- AI 检查系统 ---
 class BridgeAI {
   constructor() { this.reset(); }
-  reset() {
-    this.status = "🤖 AI Ready";
-    this.suggestions = [];
-    this.warnings = [];
-  }
+  reset() { this.status = "🤖 AI Ready"; this.suggestions = []; this.warnings = []; }
   async runCheck(data) {
     this.reset();
     this.status = "🤖 Analyzing...";
@@ -245,160 +289,101 @@ class BridgeAI {
     this.checkChain(data.from, data.to);
     this.checkSlippage(data.slippage);
     this.status = this.warnings.length ? "⚠️ Attention" : "✅ Safe";
-    return {
-      status: `🤖 ${this.status}`,
-      suggestions: this.suggestions,
-      warnings: this.warnings
-    };
+    return { status:`🤖 ${this.status}`, suggestions:this.suggestions, warnings:this.warnings };
   }
-  checkWallet(acc) {
-    acc ? this.suggestions.push(`✅ Connected: ${acc.slice(0,6)}...`)
-       : this.warnings.push("❌ Wallet not connected");
-  }
-  checkBalance(bal, amt) {
-    if (bal && parseFloat(amt) > parseFloat(bal)) {
-      this.warnings.push(`⚠️ Exceeds balance: ${bal}`);
-    } else if (bal) {
-      this.suggestions.push(`✅ Balance: ${bal}`);
-    }
-  }
-  checkChain(from, to) {
-    from === to
-      ? this.warnings.push("⚠️ Same chain not allowed")
-      : this.suggestions.push(`✅ ${from} → ${to}`);
-  }
-  checkSlippage(s) {
-    s > 1
-      ? this.warnings.push(`⚠️ Slippage ${s}% → ≤1% recommended`)
-      : this.suggestions.push(`✅ Slippage ${s}% ok`);
-  }
+  checkWallet(acc){ acc ? this.suggestions.push(`✅ Connected: ${acc.slice(0,6)}...`) : this.warnings.push("❌ Wallet not connected"); }
+  checkBalance(bal, amt){ if(bal && parseFloat(amt)>parseFloat(bal)) this.warnings.push(`⚠️ Exceeds balance: ${bal}`); else if(bal) this.suggestions.push(`✅ Balance: ${bal}`); }
+  checkChain(from,to){ from===to?this.warnings.push("⚠️ Same chain not allowed"):this.suggestions.push(`✅ ${from} → ${to}`); }
+  checkSlippage(s){ s>1?this.warnings.push(`⚠️ Slippage ${s}% → ≤1% recommended`):this.suggestions.push(`✅ Slippage ${s}% ok`); }
 }
 
 const bridgeAI = new BridgeAI();
 
-function showAI(report) {
+function showAI(report){
   DOM.aiStatus.textContent = report.status;
-  let html = '';
-  report.suggestions.forEach(s => html += `<div>${s}</div>`);
-  report.warnings.forEach(w => html += `<div class="warn">${w}</div>`);
-  DOM.aiSuggestions.innerHTML = html;
+  let html='';
+  report.suggestions.forEach(s=>html+=`<div>${s}</div>`);
+  report.warnings.forEach(w=>html+=`<div class="warn">${w}</div>`);
+  DOM.aiSuggestions.innerHTML=html;
 }
 
-function initChains() {
-  CHAINS.forEach(c => {
-    DOM.fromChain.add(new Option(c.name, c.id));
-    DOM.toChain.add(new Option(c.name, c.id));
-  });
+function initChains(){ CHAINS.forEach(c=>{ DOM.fromChain.add(new Option(c.name,c.id)); DOM.toChain.add(new Option(c.name,c.id)); }); }
+function initTokens(){ Object.keys(TOKENS).forEach(t=>DOM.tokenSelect.add(new Option(t,TOKENS[t]))); }
+function updateUI(){
+  DOM.pointsInfo.textContent=`Points: ${points}`;
+  DOM.queueList.textContent=`Queue: ${txQueue.length} items`;
+  DOM.historyList.textContent=`History: ${txHistory.length} items`;
 }
 
-function initTokens() {
-  Object.keys(TOKENS).forEach(t => {
-    DOM.tokenSelect.add(new Option(t, TOKENS[t]));
-  });
-}
+function launchRocket(){ DOM.rocket.classList.add('launch'); setTimeout(()=>DOM.rocket.classList.remove('launch'),2000); }
 
-function updateUI() {
-  DOM.pointsInfo.textContent = `Points: ${points}`;
-  DOM.queueList.textContent = `Queue: ${txQueue.length} items`;
-  DOM.historyList.textContent = `History: ${txHistory.length} items`;
-}
-
-function launchRocket() {
-  DOM.rocket.classList.add('launch');
-  setTimeout(() => DOM.rocket.classList.remove('launch'), 2000);
-}
-
-async function connectWallet() {
-  if (!window.ethereum) {
-    DOM.walletStatus.textContent = "MetaMask not found";
-    DOM.walletStatus.className = "status error";
-    return;
-  }
-  try {
-    provider = new ethers.providers.Web3Provider(window.ethereum);
-    await provider.send("eth_requestAccounts", []);
-    signer = provider.getSigner();
-    account = await signer.getAddress();
-    DOM.walletStatus.textContent = `Connected: ${account.slice(0,6)}...`;
-    DOM.walletStatus.className = "status success";
-    DOM.bridgeBtn.disabled = false;
+async function connectWallet(){
+  if(!window.ethereum){DOM.walletStatus.textContent="MetaMask not found";DOM.walletStatus.className="status error";return;}
+  try{
+    provider=new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send("eth_requestAccounts",[]);
+    signer=provider.getSigner();
+    account=await signer.getAddress();
+    DOM.walletStatus.textContent=`Connected: ${account.slice(0,6)}...`;
+    DOM.walletStatus.className="status success";
+    DOM.bridgeBtn.disabled=false;
     runAICheck();
-  } catch (err) {
-    DOM.walletStatus.textContent = "Rejected";
-    DOM.walletStatus.className = "status error";
-  }
+  }catch(err){DOM.walletStatus.textContent="Rejected";DOM.walletStatus.className="status error";}
 }
 
-async function runAICheck() {
-  const data = {
-    account,
-    balance: DOM.tokenBalance.textContent.replace('Balance: ', ''),
-    amount: DOM.amount.value,
-    from: DOM.fromChain.options[DOM.fromChain.selectedIndex]?.text,
-    to: DOM.toChain.options[DOM.toChain.selectedIndex]?.text,
-    slippage: DOM.slippage.value
+async function runAICheck(){
+  const data={account,balance:DOM.tokenBalance.textContent.replace('Balance: ',''),
+    amount:DOM.amount.value,
+    from:DOM.fromChain.options[DOM.fromChain.selectedIndex]?.text,
+    to:DOM.toChain.options[DOM.toChain.selectedIndex]?.text,
+    slippage:DOM.slippage.value
   };
-  const report = await bridgeAI.runCheck(data);
+  const report=await bridgeAI.runCheck(data);
   showAI(report);
+
+  // 模拟 Dashboard 状态更新
+  DOM.dashAiGov.textContent="ACTIVE";
+  DOM.dashSelfHeal.textContent="ON";
+  DOM.dashQuantum.textContent="ENABLED";
+  DOM.dashAudit.textContent="STANDBY";
+  DOM.dashRobots.textContent="2";
+  DOM.dashLoad.textContent=Math.floor(Math.random()*30)+"%";
+  DOM.dashChains.textContent="All chains healthy";
+  DOM.dashAiScore.textContent=Math.floor(Math.random()*100)+"%";
+  DOM.dashFl.textContent="ACTIVE";
+  DOM.dashRouting.textContent="ENABLED";
 }
 
-function initChart() {
-  txChart = new Chart(DOM.txChart, {
-    type: 'line',
-    data: {
-      labels: ['1', '2', '3', '4', '5'],
-      datasets: [{
-        label: 'Tx Count',
-        data: [0, 0, 0, 0, 0],
-        borderColor: '#ff8c00',
-        backgroundColor: 'rgba(255,140,0,0.2)',
-        tension: 0.4
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { display: false } }
-    }
+function initChart(){
+  txChart=new Chart(document.getElementById('txChart'),{
+    type:'line',
+    data:{labels:['1','2','3','4','5'],datasets:[{label:'Tx Count',data:[0,0,0,0,0],borderColor:'#ff8c00',backgroundColor:'rgba(255,140,0,0.2)',tension:0.4}]},
+    options:{responsive:true,plugins:{legend:{display:false}}}
   });
 }
 
-function mockBridge() {
-  const amt = DOM.amount.value;
-  const token = DOM.tokenSelect.options[DOM.tokenSelect.selectedIndex].text;
-  const from = DOM.fromChain.options[DOM.fromChain.selectedIndex].text;
-  const to = DOM.toChain.options[DOM.toChain.selectedIndex].text;
+function mockBridge(){
+  const amt=DOM.amount.value;
+  const token=DOM.tokenSelect.options[DOM.tokenSelect.selectedIndex].text;
+  const from=DOM.fromChain.options[DOM.fromChain.selectedIndex].text;
+  const to=DOM.toChain.options[DOM.toChain.selectedIndex].text;
 
-  DOM.status.textContent = `Bridging ${amt} ${token}...`;
-  DOM.status.className = "status warn";
+  DOM.status.textContent=`Bridging ${amt} ${token}...`;
+  DOM.status.className="status warn";
 
   launchRocket();
-  points += 10;
+  points+=10;
 
-  setTimeout(() => {
-    DOM.status.textContent = `Success: ${amt} ${token} → ${to}`;
-    DOM.status.className = "status success";
+  setTimeout(()=>{
+    DOM.status.textContent=`Success: ${amt} ${token} → ${to}`;
+    DOM.status.className="status success";
     txHistory.push(`${from}→${to} ${amt} ${token}`);
     updateUI();
-  }, 2000);
+  },2000);
 }
 
-DOM.connectBtn.onclick = connectWallet;
-DOM.bridgeBtn.onclick = () => {
-  mockBridge();
-  runAICheck();
-};
+DOM.connectBtn.onclick=connectWallet;
+DOM.bridgeBtn.onclick=()=>{mockBridge(); runAICheck();};
+[DOM.amount, DOM.slippage, DOM.fromChain, DOM.toChain, DOM.tokenSelect].forEach(el=>el.addEventListener('input',runAICheck));
 
-[DOM.amount, DOM.slippage, DOM.fromChain, DOM.toChain, DOM.tokenSelect].forEach(el => {
-  el.addEventListener('input', runAICheck);
-});
-
-window.onload = () => {
-  initChains();
-  initTokens();
-  initChart();
-  updateUI();
-  runAICheck();
-};
-</script>
-</body>
-</html>
+window
