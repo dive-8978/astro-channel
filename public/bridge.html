@@ -5,322 +5,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AstroBridge - Global Super Chain</title>
 <script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@lifi/sdk@2.7.0/dist/index.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif}
 body{
   background:radial-gradient(circle at 20% 20%,#050029,#2E007A);
   color:#fff;
-  min-height:100vh;
+  font-family:Arial;
   display:flex;
   justify-content:center;
-  align-items:flex-start;
-  padding:2rem 1rem;
-  overflow-x:hidden;
+  padding:40px 10px;
 }
 .container{
   background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(25px);
-  border-radius:25px;
-  padding:2rem;
+  padding:30px;
+  border-radius:20px;
   width:100%;
-  max-width:780px;
-  text-align:center;
-  box-shadow:0 0 50px rgba(255,69,0,0.25);
-  position:relative;
-  z-index:2;
+  max-width:700px;
 }
-h1{
-  font-size:2.4rem;
-  background:linear-gradient(90deg,#ff4500,#ff8c00,#ff69b4);
-  -webkit-background-clip:text;
-  color:transparent;
-  margin-bottom:0.2rem;
-  animation:glow 3s infinite alternate;
-}
-h2{
-  font-size:1rem;
-  color:#FFA07A;
-  margin-bottom:1rem;
-  letter-spacing:1px;
-}
-@keyframes glow{
-  0%{text-shadow:0 0 5px #ff4500,0 0 10px #ff4500;}
-  100%{text-shadow:0 0 20px #ff69b4,0 0 40px #ff8c00;}
-}
-.group{ text-align:left; margin-bottom:1rem;}
-.group label{ display:block; margin-bottom:0.3rem; color:#FFA07A; font-size:0.9rem; }
-input, select{
-  width:100%;
-  padding:0.8rem 1rem;
-  border-radius:12px;
-  border:1px solid rgba(255,140,0,0.3);
-  background:rgba(50,20,10,0.6);
-  color:#fff;
-  outline:none;
-  font-size:1rem;
-  transition:0.3s;
-}
-input:focus, select:focus{ border-color:#ff8c00; box-shadow:0 0 10px #ff4500; }
 button{
   width:100%;
-  padding:1rem;
-  margin-top:0.5rem;
+  padding:12px;
   border:none;
-  border-radius:15px;
-  font-size:1rem;
-  font-weight:600;
-  cursor:pointer;
+  border-radius:12px;
+  margin-top:10px;
   background:linear-gradient(90deg,#ff4500,#ff8c00);
   color:#fff;
-  transition:0.3s;
-}
-button:disabled{ opacity:0.5; cursor:not-allowed; background:#666; }
-.status{ min-height:1.4rem; margin-top:0.5rem; font-size:0.95rem;}
-.success{color:#32CD32;}
-.warn{color:#FFA500;}
-.error{color:#FF6347;}
-.balance{ margin-top:0.3rem; color:#FF8C00; font-size:0.9rem; }
-.rocket{
-  position:absolute;
-  bottom:10px;
-  left:50%;
-  transform:translateX(-50%) translateY(0);
-  width:30px; height:60px;
-  background:#ff4500;
-  border-radius:15px 15px 0 0;
-  box-shadow:0 0 15px #ff8c00;
-  transition: transform 2s ease-in-out;
-  z-index:1;
-}
-.rocket.launch{ transform:translateX(-50%) translateY(-300px); }
-#txChart{ margin-top:15px; background:rgba(0,0,0,0.2); border-radius:10px; padding:10px; }
-.queueList, #historyList, #feeInfo, #pointsInfo, #rewardList{
-  margin-top:10px;
-  font-size:0.85rem;
-  color:#FFA07A;
-  max-height:120px;
-  overflow-y:auto;
-  text-align:left;
-  padding:5px;
-}
-.ai-panel{
-  margin:15px 0;
-  padding:12px;
-  background:rgba(255,140,0,0.1);
-  border-radius:12px;
-  text-align:left;
-}
-.ai-status{ font-size:1rem; font-weight:600; color:#ff8c00; margin-bottom:8px;}
-.ai-suggestions{ font-size:0.85rem; color:#FFA07A;}
-.ai-suggestions .warn{ color:#ff4500;}
-.global-label{
-  margin-bottom:1rem;
-  font-size:0.85rem;
-  color:#7FFFD4;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-#homeBtn{
-  margin: 10px auto 20px auto;
-  padding: 0.8rem 1.5rem;
-  border:none;
-  border-radius:12px;
-  background:linear-gradient(90deg,#00d4ff,#0078ff);
-  color:#fff;
-  font-weight:600;
+  font-weight:bold;
   cursor:pointer;
-  transition:0.3s;
 }
-#homeBtn:hover{
-  background:linear-gradient(90deg,#0078ff,#00d4ff);
+.status{margin-top:10px;min-height:20px;}
+.success{color:#32CD32;}
+.error{color:#FF6347;}
+.warn{color:#FFA500;}
+input,select{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  margin-top:5px;
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>AstroBridge</h1>
-  <h2>Global Super Chain Network</h2>
-  <div class="global-label">Frontier Web3 Cross-Chain Infrastructure</div>
-  <button id="homeBtn">🏠 返回主页</button>
+<h2>AstroBridge - Global Super Chain</h2>
 
-  <p class="status" id="walletStatus">Wallet not connected</p>
-  <button id="connectBtn">Connect Wallet</button>
+<p id="walletStatus">Wallet not connected</p>
+<button id="connectBtn">Connect Wallet</button>
 
-  <div class="ai-panel">
-    <div id="aiStatus" class="ai-status">🤖 AI Ready</div>
-    <div id="aiSuggestions" class="ai-suggestions"></div>
-  </div>
+<hr/>
 
-  <div class="group">
-    <label>Token</label>
-    <select id="tokenSelect"></select>
-    <div class="balance" id="tokenBalance">--</div>
-  </div>
+<label>From Chain</label>
+<select id="fromChain">
+  <option value="1">Ethereum</option>
+  <option value="56">BSC</option>
+  <option value="137">Polygon</option>
+</select>
 
-  <div class="group">
-    <label>From Chain</label>
-    <select id="fromChain"></select>
-  </div>
+<label>To Chain</label>
+<select id="toChain">
+  <option value="56">BSC</option>
+  <option value="1">Ethereum</option>
+  <option value="137">Polygon</option>
+</select>
 
-  <div class="group">
-    <label>To Chain</label>
-    <select id="toChain"></select>
-  </div>
+<label>Amount</label>
+<input id="amount" type="number" placeholder="0.01"/>
 
-  <div class="group">
-    <label>Amount</label>
-    <input id="amount" type="number" step="0.001" min="0.001" placeholder="0.001"/>
-  </div>
+<label>Slippage (%)</label>
+<input id="slippage" type="number" value="1"/>
 
-  <div class="group">
-    <label>Slippage (%)</label>
-    <input id="slippage" type="number" step="0.1" min="0.1" max="5" value="1"/>
-  </div>
+<div class="status" id="status"></div>
+<button id="bridgeBtn" disabled>Cross-Chain Transfer</button>
 
-  <div id="pricePreview">Estimated USD Value: --</div>
-  <div id="feeInfo">Estimated Fee: --</div>
-  <div id="kycStatus">KYC: Not Verified</div>
-  <div id="rewardList">NFT Rewards: None</div>
-
-  <div class="status" id="status"></div>
-  <button id="bridgeBtn" disabled>Cross-Chain Transfer</button>
-
-  <canvas id="txChart" height="120"></canvas>
-  <div class="queueList" id="queueList">Queue: Empty</div>
-  <div class="queueList" id="historyList">History: Empty</div>
-  <div class="queueList" id="pointsInfo">Points: 0</div>
-
-  <div class="rocket" id="rocket"></div>
 </div>
 
 <script>
 const { ethers } = window;
-const LiFi = window.LiFi;
+const API_BASE = "http://45.76.150.100:3000";
 
 let provider, signer, account;
-let txQueue = [], txHistory = [], points = 0;
-let txChart = null;
-
-const CHAINS = [
-  { id: 1, name: "Ethereum" },
-  { id: 56, name: "BSC" },
-  { id: 137, name: "Polygon" },
-  { id: 42161, name: "Arbitrum" },
-  { id: 10, name: "Optimism" },
-  { id: 43114, name: "Avalanche" },
-  { id: 250, name: "Fantom" }
-];
-
-const TOKENS = {
-  ASTRO: "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
-  USDT: "0x0000000000000000000000000000000000000000",
-  USDC: "0x1111111111111111111111111111111111111111"
-};
 
 const DOM = {
-  walletStatus: document.getElementById('walletStatus'),
-  connectBtn: document.getElementById('connectBtn'),
-  bridgeBtn: document.getElementById('bridgeBtn'),
-  status: document.getElementById('status'),
-  tokenSelect: document.getElementById('tokenSelect'),
-  fromChain: document.getElementById('fromChain'),
-  toChain: document.getElementById('toChain'),
-  amount: document.getElementById('amount'),
-  slippage: document.getElementById('slippage'),
-  tokenBalance: document.getElementById('tokenBalance'),
-  rocket: document.getElementById('rocket'),
-  pricePreview: document.getElementById('pricePreview'),
-  feeInfo: document.getElementById('feeInfo'),
-  queueList: document.getElementById('queueList'),
-  historyList: document.getElementById('historyList'),
-  pointsInfo: document.getElementById('pointsInfo'),
-  rewardList: document.getElementById('rewardList'),
-  aiStatus: document.getElementById('aiStatus'),
-  aiSuggestions: document.getElementById('aiSuggestions'),
-  kycStatus: document.getElementById('kycStatus'),
-  txChart: document.getElementById('txChart'),
-  homeBtn: document.getElementById('homeBtn')
+  walletStatus: document.getElementById("walletStatus"),
+  connectBtn: document.getElementById("connectBtn"),
+  bridgeBtn: document.getElementById("bridgeBtn"),
+  fromChain: document.getElementById("fromChain"),
+  toChain: document.getElementById("toChain"),
+  amount: document.getElementById("amount"),
+  slippage: document.getElementById("slippage"),
+  status: document.getElementById("status")
 };
 
-// 返回主页按钮
-DOM.homeBtn.onclick = () => { window.location.href = "/"; };
-
-// AI 检查逻辑
-class BridgeAI {
-  constructor() { this.reset(); }
-  reset() { this.status="🤖 AI Ready"; this.suggestions=[]; this.warnings=[]; }
-  async runCheck(data) {
-    this.reset();
-    this.status="🤖 Analyzing...";
-    this.checkWallet(data.account);
-    this.checkBalance(data.balance,data.amount);
-    this.checkChain(data.from,data.to);
-    this.checkSlippage(data.slippage);
-    this.status = this.warnings.length ? "⚠️ Attention" : "✅ Safe";
-    return { status:`🤖 ${this.status}`, suggestions:this.suggestions, warnings:this.warnings };
-  }
-  checkWallet(acc){ acc ? this.suggestions.push(`✅ Connected: ${acc.slice(0,6)}...`) : this.warnings.push("❌ Wallet not connected"); }
-  checkBalance(bal,amt){ if(bal && parseFloat(amt) > parseFloat(bal)) this.warnings.push(`⚠️ Exceeds balance: ${bal}`); else if(bal) this.suggestions.push(`✅ Balance: ${bal}`);}
-  checkChain(from,to){ from===to ? this.warnings.push("⚠️ Same chain not allowed") : this.suggestions.push(`✅ ${from} → ${to}`);}
-  checkSlippage(s){ s>1 ? this.warnings.push(`⚠️ Slippage ${s}% → ≤1% recommended`) : this.suggestions.push(`✅ Slippage ${s}% ok`);}
-}
-const bridgeAI = new BridgeAI();
-
-function showAI(report){
-  DOM.aiStatus.textContent = report.status;
-  let html=''; report.suggestions.forEach(s=>html+=`<div>${s}</div>`); report.warnings.forEach(w=>html+=`<div class="warn">${w}</div>`);
-  DOM.aiSuggestions.innerHTML=html;
-}
-
-function initChains(){ CHAINS.forEach(c=>{ DOM.fromChain.add(new Option(c.name,c.id)); DOM.toChain.add(new Option(c.name,c.id)); }); }
-function initTokens(){ Object.keys(TOKENS).forEach(t=>{ DOM.tokenSelect.add(new Option(t,TOKENS[t])); }); }
-function updateUI(){ DOM.pointsInfo.textContent=`Points: ${points}`; DOM.queueList.textContent=`Queue: ${txQueue.length} items`; DOM.historyList.textContent=`History: ${txHistory.length} items`; }
-function launchRocket(){ DOM.rocket.classList.add('launch'); setTimeout(()=>DOM.rocket.classList.remove('launch'),2000); }
-
 async function connectWallet(){
-  if(!window.ethereum){ DOM.walletStatus.textContent="MetaMask not found"; DOM.walletStatus.className="status error"; return; }
+  if(!window.ethereum){
+    DOM.walletStatus.innerText="MetaMask not found";
+    return;
+  }
+  provider=new ethers.providers.Web3Provider(window.ethereum);
+  await provider.send("eth_requestAccounts",[]);
+  signer=provider.getSigner();
+  account=await signer.getAddress();
+  DOM.walletStatus.innerText="Connected: "+account.slice(0,6)+"...";
+  DOM.bridgeBtn.disabled=false;
+}
+
+async function realBridge(){
   try{
-    provider=new ethers.providers.Web3Provider(window.ethereum);
-    await provider.send("eth_requestAccounts",[]);
-    signer=provider.getSigner(); account=await signer.getAddress();
-    DOM.walletStatus.textContent=`Connected: ${account.slice(0,6)}...`;
-    DOM.walletStatus.className="status success"; DOM.bridgeBtn.disabled=false; runAICheck();
-  }catch(err){ DOM.walletStatus.textContent="Rejected"; DOM.walletStatus.className="status error"; }
-}
+    const payload={
+      account,
+      amount:DOM.amount.value,
+      fromChain:Number(DOM.fromChain.value),
+      toChain:Number(DOM.toChain.value),
+      slippage:Number(DOM.slippage.value)
+    };
 
-async function runAICheck(){
-  const data={ account, balance:DOM.tokenBalance.textContent.replace('Balance: ',''), amount:DOM.amount.value, from:DOM.fromChain.options[DOM.fromChain.selectedIndex]?.text, to:DOM.toChain.options[DOM.toChain.selectedIndex]?.text, slippage:DOM.slippage.value };
-  const report = await bridgeAI.runCheck(data);
-  showAI(report);
-}
+    DOM.status.innerText="Submitting intent...";
+    DOM.status.className="status warn";
 
-function initChart(){ txChart=new Chart(DOM.txChart,{ type:'line', data:{ labels:['1','2','3','4','5'], datasets:[{ label:'Tx Count', data:[0,0,0,0,0], borderColor:'#ff8c00', backgroundColor:'rgba(255,140,0,0.2)', tension:0.4 }] }, options:{ responsive:true, plugins:{ legend:{ display:false }}}}); }
+    const res=await fetch(API_BASE+"/intent/submit",{
+      method:"POST",
+      headers:{ "Content-Type":"application/json"},
+      body:JSON.stringify(payload)
+    });
 
-function mockBridge(){
-  const amt=DOM.amount.value; const token=DOM.tokenSelect.options[DOM.tokenSelect.selectedIndex].text;
-  const from=DOM.fromChain.options[DOM.fromChain.selectedIndex].text; const to=DOM.toChain.options[DOM.toChain.selectedIndex].text;
-  DOM.status.textContent=`Bridging ${amt} ${token}...`; DOM.status.className="status warn";
-  launchRocket(); points+=10;
-  setTimeout(()=>{
-    DOM.status.textContent=`Success: ${amt} ${token} → ${to}`; DOM.status.className="status success"; txHistory.push(`${from}→${to} ${amt} ${token}`); updateUI();
-  },2000);
+    const data=await res.json();
+
+    if(!res.ok) throw new Error(data.message||"Bridge failed");
+
+    DOM.status.innerText="✅ Intent submitted: "+data.intentId;
+    DOM.status.className="status success";
+
+  }catch(err){
+    DOM.status.innerText="❌ "+err.message;
+    DOM.status.className="status error";
+  }
 }
 
 DOM.connectBtn.onclick=connectWallet;
-DOM.bridgeBtn.onclick=()=>{ mockBridge(); runAICheck(); };
-[DOM.amount,DOM.slippage,DOM.fromChain,DOM.toChain,DOM.tokenSelect].forEach(el=>{ el.addEventListener('input',runAICheck); });
+DOM.bridgeBtn.onclick=realBridge;
 
-window.onload=()=>{
-  initChains();
-  initTokens();
-  initChart();
-  updateUI();
-  runAICheck();
-};
 </script>
 </body>
 </html>
