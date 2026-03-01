@@ -1,0 +1,36 @@
+<script>
+  // 后端控制面板 → 带密钥
+  const API_BASE = 'http://45.76.150.100:3000';
+
+  let ownerSign = localStorage.getItem('astro_owner_sign') || '';
+
+  if (!ownerSign) {
+    ownerSign = prompt('请输入你的控制密钥（ASTRO_OWNER_SIGNATURE）：');
+    if (ownerSign) {
+      localStorage.setItem('astro_owner_sign', ownerSign);
+    } else {
+      alert('密钥不能为空，面板将无法操作');
+    }
+  }
+
+  async function refresh() {
+    // 原有刷新逻辑不变
+  }
+
+  async function sendCommand(cmd, extra = {}) {
+    if (!ownerSign) return alert('请先设置控制密钥');
+
+    try {
+      const res = await fetch(`${API_BASE}/api/dashboard/${cmd}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sign: ownerSign, ...extra })
+      });
+      const result = await res.json();
+      alert(result.message || '操作成功');
+      refresh();
+    } catch (err) {
+      alert('操作失败: ' + err.message);
+    }
+  }
+</script>
