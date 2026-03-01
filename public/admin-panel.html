@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro AR Control Panel</title>
+    <title>Astro AR 全球控制中心</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         * {
             margin: 0;
@@ -68,9 +70,10 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 16px;
+            margin-bottom:20px;
         }
         .timeline-box {
-            max-height: 420px;
+            max-height: 360px;
             overflow-y: auto;
         }
         .timeline-item {
@@ -115,7 +118,7 @@
             padding: 10px;
             font-size: 13px;
         }
-        input {
+        input, select {
             width: 100%;
             padding: 12px;
             border-radius: 8px;
@@ -124,15 +127,21 @@
             color: #fff;
             margin-bottom: 12px;
         }
+
+        #nodeMap {
+            width:100%;
+            height:380px;
+            border-radius:12px;
+            margin-top:6px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Astro AR Robot Control Panel</h1>
+        <h1>Astro AR 全球控制中心</h1>
         <div id="globalStatus" class="status-badge badge-online">ONLINE</div>
     </div>
 
-    <!-- 实时数据看板 -->
     <div class="grid">
         <div class="card">
             <h3>在线机器人</h3>
@@ -150,20 +159,18 @@
             <div class="label">24h 执行率</div>
         </div>
         <div class="card">
-            <h3>运行模式</h3>
-            <div class="num" id="runMode">SAFE</div>
-            <div class="label">FAST / SAFE / BLOCK</div>
+            <h3>全球节点</h3>
+            <div class="num" id="nodesCount">0</div>
+            <div class="label">已部署地区</div>
         </div>
     </div>
 
     <div class="main-layout">
-        <!-- 动作时间线（看AR做了什么） -->
         <div class="card timeline-box">
             <h3>机器人实时动作日志</h3>
             <div id="timeline"></div>
         </div>
 
-        <!-- 控制面板 -->
         <div class="card">
             <h3>Owner Signature（必须填）</h3>
             <input type="text" id="signKey" placeholder="粘贴 ASTRO_OWNER_SIGNATURE">
@@ -187,11 +194,25 @@
         </div>
     </div>
 
+    <div class="card">
+        <h3>🌍 全球节点部署地图（点城市 → 一键部署全链桥）</h3>
+        <div id="nodeMap"></div>
+    </div>
+
 <script>
     const API_BASE = "http://localhost:3000";
     let timelineCount = 0;
+    let map, markers = {};
 
-    // 统一请求
+    const chains = [
+      {name:"Ethereum",id:"eth"},
+      {name:"BSC",id:"bsc"},
+      {name:"Polygon",id:"polygon"},
+      {name:"Arbitrum",id:"arb"},
+      {name:"Optimism",id:"op"},
+      {name:"Solana",id:"sol"}
+    ];
+
     async function api(url, data={}) {
         const sign = document.getElementById("signKey").value;
         if(!sign && url !== "/api/dashboard/state") {
@@ -211,7 +232,6 @@
         }
     }
 
-    // 刷新数据
     async function refresh() {
         const r = await fetch(API_BASE + "/api/dashboard/state");
         const d = await r.json();
@@ -220,13 +240,12 @@
         document.getElementById("robotsNum").innerText = d.nodesHealthy || 0;
         document.getElementById("queueLen").innerText = d.queueLength || 0;
         document.getElementById("successRate").innerText = (d.successRate || 0).toFixed(1) + "%";
-        document.getElementById("runMode").innerText = d.mode || "SAFE";
+        document.getElementById("nodesCount").innerText = d.globalNodes || 0;
 
         const st = document.getElementById("globalStatus");
         st.className = d.status === "running" ? "status-badge badge-online" : "status-badge badge-warning";
     }
 
-    // 日志时间线
     function addLog(action, msg, type="normal") {
         const t = new Date().toLocaleTimeString();
         const wrap = document.getElementById("timeline");
@@ -238,7 +257,6 @@
         if(timelineCount > 30) wrap.lastChild.remove();
     }
 
-    // 按钮功能
     async function callPause() { const r=await api("/api/dashboard/pause"); addLog("暂停系统", r?.success?"已暂停":r?.error, r?.success?"normal":"err"); refresh(); }
     async function callResume() { const r=await api("/api/dashboard/resume"); addLog("恢复自动运行", r?.success?"已恢复":r?.error, r?.success?"normal":"err"); refresh(); }
     async function callRepair() { const r=await api("/api/dashboard/repair"); addLog("一键修复", r?.success?"AR开始自愈":r?.error, r?.success?"warn":"err"); refresh(); }
@@ -247,9 +265,60 @@
     async function callAutoTask() { const r=await api("/api/dashboard/auto-task"); addLog("自主任务启动", r?.success?"AR开始自主执行":r?.error, r?.success?"normal":"err"); refresh(); }
     async function setMode(m) { const r=await api("/api/dashboard/mode", {mode:m}); addLog("切换模式", m, "warn"); refresh(); }
 
+    function chainSelectHtml(region){
+      return chains.map(c=>`<option value="${c.id}">${c.name}</option>`).join("");
+    }
+
+    function initMap(){
+      map = L.map("nodeMap").setView([30,0],2);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+
+      const regions = [
+        {name:"New York",lat:40.7128,lng:-74.0060,region:"us-east"},
+        {name:"London",lat:51.5074,lng:-0.1278,region:"eu-west"},
+        {name:"Singapore",lat:1.3521,lng:103.8198,region:"ap-southeast"},
+        {name:"Tokyo",lat:35.6762,lng:139.6503,region:"ap-northeast"},
+        {name:"Frankfurt",lat:50.1109,lng:8.6821,region:"eu-central"},
+        {name:"Sydney",lat:-33.8688,lng:151.2093,region:"ap-south"},
+        {name:"Los Angeles",lat:34.0522,lng:-118.2437,region:"us-west"}
+      ];
+
+      regions.forEach(p=>{
+        let m = L.marker([p.lat,p.lng]).addTo(map);
+        m.bindPopup(`
+          <b>${p.name}</b><br>
+          <select id="chain-${p.region}" style="margin:6px 0;">
+            ${chainSelectHtml(p.region)}
+          </select><br>
+          <button onclick="deployToRegion('${p.region}','${p.name}')"
+            style="padding:8px 12px;border-radius:6px;background:#7cffcf;color:#000;border:0;cursor:pointer;">
+            部署机器人+全链桥
+          </button>
+        `);
+        markers[p.region]=m;
+      });
+    }
+
+    async function deployToRegion(region,city){
+      let sel = document.getElementById("chain-"+region);
+      let chain = sel.value;
+      let chainName = chains.find(x=>x.id===chain).name;
+
+      addLog("全球部署", `正在部署 ${city} (${chainName})`, "warn");
+      let r = await api("/api/dashboard/deploy-global", { region, city, chain });
+
+      if(r?.success){
+        addLog("部署成功", `${city} 节点上线，桥已兼容 ${chainName}`, "normal");
+      } else {
+        addLog("部署失败", `${city} 部署失败，请检查后端`, "err");
+      }
+      refresh();
+    }
+
     setInterval(refresh, 3000);
     refresh();
     addLog("面板已加载", "正在连接后端服务", "normal");
+    initMap();
 </script>
 </body>
 </html>
