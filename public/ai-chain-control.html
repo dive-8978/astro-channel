@@ -3,105 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Chain Control</title>
+<title>AstroChain • L5 星际主控台</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui}
-body{background:#050812;color:#eaf2ff;height:100vh;overflow:hidden}
-#app{height:100%;display:grid;grid-template-rows:70px 1fr 90px}
-.top{display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:#0a0f1f}
-.top h1{font-size:18px}
-.status{display:flex;gap:10px}
-.pill{padding:6px 10px;border-radius:999px;background:#121a33;font-size:12px}
-.main{position:relative;overflow:hidden}
-.map{position:absolute;inset:0;opacity:0.15;background:radial-gradient(circle at 50% 50%,#2a37ff11 0%,#050812 60%)}
-.nodes{position:absolute;inset:0}
-.node{position:absolute;width:14px;height:14px;background:#6e8cff;border-radius:50%;box-shadow:0 0 18px #6e8cff99}
-.chain{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none}
-.line{stroke:#6e8cff44;stroke-width:1}
-.ctrl{background:#0a0f1f;display:flex;align-items:center;gap:12px;padding:0 22px}
-.ctrl input{flex:1;background:#0d142a;border:1px solid #232b4a;color:#eaf2ff;border-radius:12px;padding:12px;outline:none}
-.ctrl button{padding:12px 16px;border-radius:12px;border:none;background:#6c7cff;color:white;font-weight:600}
-.ctrl button.warn{background:#ffb057}
-.ctrl button.danger{background:#ff5777}
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', system-ui; }
+    body {
+        background: #05070f;
+        color: #c0d4ff;
+        overflow: hidden;
+        height: 100vh;
+    }
+    .hud {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 30%, rgba(60,120,255,0.08) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    .container { position:relative; height:100vh; display:flex; flex-direction:column; z-index:2; }
+
+    .header {
+        background: rgba(10,15,40,0.95);
+        border-bottom: 1px solid #3a4a8a;
+        padding: 12px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        backdrop-filter: blur(12px);
+    }
+    .header h1 {
+        font-size: 22px;
+        background: linear-gradient(90deg, #7fb8ff, #5fffe0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .status { display:flex; gap:12px; }
+    .pill {
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid #4a6bff;
+    }
+
+    .main {
+        flex: 1;
+        position: relative;
+        background: #0a0f1f;
+    }
+    #nodeMap { width:100%; height:100%; }
+
+    .control-bar {
+        background: rgba(10,15,40,0.98);
+        border-top: 1px solid #3a4a8a;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        backdrop-filter: blur(12px);
+    }
+    input, select, button {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid #3a4a8a;
+        background: #0f1626;
+        color: #e6f0ff;
+    }
+    button {
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    button:hover { transform: translateY(-2px); box-shadow: 0 0 15px rgba(90,140,255,0.6); }
+    .btn-primary { background: #4a8dff; color:white; border:none; }
+    .btn-warn { background: #ffaa33; color:#000; border:none; }
+    .btn-danger { background: #ff4d6b; color:white; border:none; }
+    .btn-success { background: #00ff9d; color:#000; border:none; }
+
+    .log {
+        position: absolute;
+        left: 24px;
+        top: 80px;
+        width: 380px;
+        height: 260px;
+        background: rgba(10,15,40,0.85);
+        border: 1px solid #3a4a8a;
+        border-radius: 12px;
+        padding: 14px;
+        font-size: 13px;
+        overflow-y: auto;
+        backdrop-filter: blur(8px);
+        z-index: 10;
+    }
+    .log .ok { color:#7cff9e; }
+    .log .warn { color:#ffdd7a; }
+    .log .err { color:#ff7a8a; }
 </style>
 </head>
 <body>
-<div id="app">
-<div class="top">
-<h1>AI Chain Control • 星际路由</h1>
-<div class="status">
-<div class="pill">在线节点</div>
-<div class="pill">跨链健康</div>
-</div>
+<div class="container">
+    <div class="header">
+        <h1>ASTROCHAIN • L5 星际主控台</h1>
+        <div class="status">
+            <div class="pill" id="status">ONLINE</div>
+            <div class="pill" id="nodesCount">0 节点</div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="hud"></div>
+        <div id="nodeMap"></div>
+    </div>
+
+    <div class="control-bar">
+        <input id="signKey" placeholder="Owner Signature (必填)" style="width:280px;">
+        
+        <button class="btn-primary" onclick="refresh()">刷新全局</button>
+        <button class="btn-primary" onclick="callRepair()">一键修复</button>
+        <button class="btn-warn" onclick="callExpand()">扩容节点</button>
+        <button class="btn-primary" onclick="callReplicate()">自我复制</button>
+        <button class="btn-success" onclick="callAutoTask()">启动自主任务</button>
+        <button class="btn-danger" onclick="callKillSwitch()">紧急熔断</button>
+
+        <select id="modeSelect" onchange="setMode(this.value)">
+            <option value="SAFE">SAFE 模式</option>
+            <option value="FAST">FAST 模式</option>
+            <option value="BLOCK">BLOCK 模式</option>
+        </select>
+
+        <button onclick="toggleDisaster()">自动灾难恢复</button>
+        <button onclick="exportLog()">导出日志</button>
+    </div>
+
+    <div class="log" id="log">系统已启动 · L5 星际路由就绪...</div>
 </div>
 
-<div class="main">
-<div class="map"></div>
-<svg class="chain" id="chainSvg"></svg>
-<div class="nodes" id="nodes"></div>
-</div>
-
-<div class="ctrl">
-<input placeholder="目标链 ID / 地址" id="target">
-<button onclick="runBridge()">跨链转发</button>
-<button class="warn" onclick="runSync()">同步账本</button>
-<button class="danger" onclick="killSwitch()">熔断保护</button>
-</div>
-</div>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const API = "http://45.76.150.100:3000";
-const svg = document.getElementById("chainSvg");
-const nodesWrap = document.getElementById("nodes");
+const API_BASE = "http://45.76.150.100:3000";
 
-async function fetchNodes(){
-  try{
-    const res = await fetch(API+"/api/nodes");
-    const data = await res.json();
-    renderNodes(data.nodes || []);
-  }catch(e){console.log(e)}
+let map, markers = {};
+let isDisasterEnabled = true;
+
+function log(msg, type = "normal") {
+    const time = new Date().toLocaleTimeString();
+    const color = type === "ok" ? "ok" : type === "warn" ? "warn" : type === "err" ? "err" : "";
+    const html = `<span class="${color}">[${time}] ${msg}</span><br>`;
+    document.getElementById("log").innerHTML += html;
+    document.getElementById("log").scrollTop = 999999;
 }
 
-function renderNodes(list){
-  nodesWrap.innerHTML = "";
-  svg.innerHTML = "";
-  const w = innerWidth, h = innerHeight - 160;
-  list.forEach((n,i)=>{
-    const x = 200 + (i*140) % (w-280);
-    const y = 120 + (i*90) % (h-180);
-    const div = document.createElement("div");
-    div.className = "node";
-    div.style.left = x+"px";
-    div.style.top = y+"px";
-    nodesWrap.appendChild(div);
-  });
+async function api(url, body = {}) {
+    const sign = document.getElementById("signKey").value.trim();
+    if (!sign) {
+        log("请先填写 Owner Signature", "err");
+        return null;
+    }
+    try {
+        const res = await fetch(API_BASE + url, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ sign, ...body })
+        });
+        return await res.json();
+    } catch(e) {
+        log("后端连接失败", "err");
+        return null;
+    }
 }
 
-async function runBridge(){
-  const t = document.getElementById("target").value.trim();
-  if(!t)return;
-  try{
-    await fetch(API+"/api/bridge/run",{
-      method:"POST", headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({target:t})
+async function refresh() {
+    const data = await api("/api/dashboard/state");
+    if (!data) return;
+    document.getElementById("nodesCount").textContent = (data.nodesHealthy || 0) + " 节点";
+    document.getElementById("status").textContent = data.status === "running" ? "ONLINE" : "PAUSED";
+    log("全局状态已刷新", "ok");
+}
+
+async function callRepair() {
+    const r = await api("/api/dashboard/repair");
+    log(r?.message || "修复已触发", r?.success ? "ok" : "err");
+    refresh();
+}
+async function callExpand() {
+    const r = await api("/api/dashboard/expand");
+    log(r?.message || "扩容已触发", r?.success ? "ok" : "err");
+    refresh();
+}
+async function callReplicate() {
+    const r = await api("/api/dashboard/replicate");
+    log(r?.message || "自我复制启动", r?.success ? "ok" : "err");
+    refresh();
+}
+async function callAutoTask() {
+    const r = await api("/api/dashboard/auto-task");
+    log(r?.message || "自主任务启动", r?.success ? "ok" : "err");
+    refresh();
+}
+async function callKillSwitch() {
+    if (!confirm("确定执行全网紧急熔断？")) return;
+    const r = await api("/api/dashboard/pause");
+    log(r?.message || "紧急熔断已执行", "err");
+    refresh();
+}
+
+async function setMode(mode) {
+    const r = await api("/api/dashboard/mode", { mode });
+    log(`模式切换为 ${mode}`, r?.success ? "ok" : "err");
+    refresh();
+}
+
+function toggleDisaster() {
+    isDisasterEnabled = !isDisasterEnabled;
+    log("自动灾难恢复 " + (isDisasterEnabled ? "已开启" : "已关闭"), "ok");
+}
+
+function exportLog() {
+    const logText = document.getElementById("log").innerText;
+    const blob = new Blob([logText], {type: "text/plain"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "AstroChain_Log.txt";
+    a.click();
+    log("日志已导出", "ok");
+}
+
+function initMap() {
+    map = L.map("nodeMap", { zoomControl: false }).setView([25, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© AstroChain Global Network'
+    }).addTo(map);
+
+    const locations = [
+        {name:"纽约", lat:40.71, lng:-74.01},
+        {name:"伦敦", lat:51.51, lng:-0.13},
+        {name:"新加坡", lat:1.35, lng:103.82},
+        {name:"东京", lat:35.68, lng:139.77},
+        {name:"法兰克福", lat:50.11, lng:8.68},
+        {name:"悉尼", lat:-33.87, lng:151.21},
+        {name:"洛杉矶", lat:34.05, lng:-118.24}
+    ];
+
+    locations.forEach(loc => {
+        const marker = L.marker([loc.lat, loc.lng]).addTo(map);
+        marker.bindPopup(`<b>${loc.name}</b><br><button onclick="deployTo('${loc.name}')">在此部署机器人</button>`);
     });
-    alert("跨链任务已下发");
-  }catch(e){alert("失败")}
 }
 
-async function runSync(){
-  await fetch(API+"/api/admin/sync");
-  alert("同步中");
+async function deployTo(city) {
+    log(`正在向 ${city} 部署机器人节点...`, "ok");
+    const r = await api("/api/dashboard/expand", { region: city });
+    if (r && r.success) log(`${city} 部署成功！`, "ok");
 }
 
-async function killSwitch(){
-  if(!confirm("熔断？"))return;
-  await fetch(API+"/api/admin/emergency",{method:"POST"});
-  alert("已熔断");
-}
-
-setInterval(fetchNodes,4000);
-fetchNodes();
+window.onload = () => {
+    initMap();
+    refresh();
+    log("AstroChain L5 星际主控台已启动", "ok");
+    setInterval(refresh, 5000);
+};
 </script>
 </body>
 </html>
