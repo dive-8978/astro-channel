@@ -1,36 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro AR Control Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui;
+        }
+        body {
+            background: #0a0f1f;
+            color: #e8eaf6;
+            padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #7cffcf;
+        }
+        .status-badge {
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+        .badge-online { background: #00e676; color: #000; }
+        .badge-warning { background: #ffab00; color: #000; }
+        .badge-error { background: #ff5252; color: #fff; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .card {
+            background: #121a33;
+            border: 1px solid #2a3558;
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .card h3 {
+            font-size: 13px;
+            color: #9fa8da;
+            margin-bottom: 8px;
+        }
+        .card .num {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .card .label {
+            font-size: 12px;
+            color: #7986cb;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 16px;
+        }
+        .timeline-box {
+            max-height: 420px;
+            overflow-y: auto;
+        }
+        .timeline-item {
+            padding: 12px;
+            border-left: 3px solid #7cffcf;
+            background: #141c3a;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .timeline-item.warn { border-left-color: #ffab00; }
+        .timeline-item.err { border-left-color: #ff5252; }
+        .time { font-size: 12px; color: #9fa8da; }
+        .action { font-weight: 600; margin: 4px 0; }
+        .msg { font-size: 13px; color: #c5cae9; }
+
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .2s;
+        }
+        .btn-primary { background: #7cffcf; color: #0f172a; }
+        .btn-warning { background: #ffab00; color: #000; }
+        .btn-danger { background: #ff5252; color: #fff; }
+        .btn-success { background: #00e676; color: #000; }
+        button:hover { opacity: .9; transform: translateY(-1px); }
+
+        .mode-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .mode-btn {
+            flex: 1;
+            padding: 10px;
+            font-size: 13px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #2a3558;
+            background: #0f172a;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Astro AR Robot Control Panel</h1>
+        <div id="globalStatus" class="status-badge badge-online">ONLINE</div>
+    </div>
+
+    <!-- 实时数据看板 -->
+    <div class="grid">
+        <div class="card">
+            <h3>在线机器人</h3>
+            <div class="num" id="robotsNum">0</div>
+            <div class="label">节点在线数</div>
+        </div>
+        <div class="card">
+            <h3>待处理任务</h3>
+            <div class="num" id="queueLen">0</div>
+            <div class="label">意图队列</div>
+        </div>
+        <div class="card">
+            <h3>成功率</h3>
+            <div class="num" id="successRate">0%</div>
+            <div class="label">24h 执行率</div>
+        </div>
+        <div class="card">
+            <h3>运行模式</h3>
+            <div class="num" id="runMode">SAFE</div>
+            <div class="label">FAST / SAFE / BLOCK</div>
+        </div>
+    </div>
+
+    <div class="main-layout">
+        <!-- 动作时间线（看AR做了什么） -->
+        <div class="card timeline-box">
+            <h3>机器人实时动作日志</h3>
+            <div id="timeline"></div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="card">
+            <h3>Owner Signature（必须填）</h3>
+            <input type="text" id="signKey" placeholder="粘贴 ASTRO_OWNER_SIGNATURE">
+
+            <h3 style="margin-top:16px;">一键操作</h3>
+            <div class="btn-group">
+                <button class="btn-primary" onclick="callResume()">恢复自动运行</button>
+                <button class="btn-warning" onclick="callPause()">暂停系统</button>
+                <button class="btn-success" onclick="callRepair()">一键修复</button>
+                <button class="btn-primary" onclick="callExpand()">扩容节点</button>
+                <button class="btn-primary" onclick="callReplicate()">自我复制</button>
+                <button class="btn-danger" onclick="callAutoTask()">自主任务</button>
+            </div>
+
+            <h3 style="margin-top:16px;">安全模式</h3>
+            <div class="mode-group">
+                <button class="mode-btn btn-primary" onclick="setMode('FAST')">FAST</button>
+                <button class="mode-btn btn-warning" onclick="setMode('SAFE')">SAFE</button>
+                <button class="mode-btn btn-danger" onclick="setMode('BLOCK')">BLOCK</button>
+            </div>
+        </div>
+    </div>
+
 <script>
-  // 后端控制面板 → 带密钥
-  const API_BASE = 'http://45.76.150.100:3000';
+    const API_BASE = "http://localhost:3000";
+    let timelineCount = 0;
 
-  let ownerSign = localStorage.getItem('astro_owner_sign') || '';
-
-  if (!ownerSign) {
-    ownerSign = prompt('请输入你的控制密钥（ASTRO_OWNER_SIGNATURE）：');
-    if (ownerSign) {
-      localStorage.setItem('astro_owner_sign', ownerSign);
-    } else {
-      alert('密钥不能为空，面板将无法操作');
+    // 统一请求
+    async function api(url, data={}) {
+        const sign = document.getElementById("signKey").value;
+        if(!sign && url !== "/api/dashboard/state") {
+            addLog("请先填写签名", "err");
+            return null;
+        }
+        try {
+            const res = await fetch(API_BASE + url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...data, sign })
+            });
+            return await res.json();
+        } catch(e) {
+            addLog("后端未启动或连接失败", "err");
+            return null;
+        }
     }
-  }
 
-  async function refresh() {
-    // 原有刷新逻辑不变
-  }
+    // 刷新数据
+    async function refresh() {
+        const r = await fetch(API_BASE + "/api/dashboard/state");
+        const d = await r.json();
+        if(!d) return;
 
-  async function sendCommand(cmd, extra = {}) {
-    if (!ownerSign) return alert('请先设置控制密钥');
+        document.getElementById("robotsNum").innerText = d.nodesHealthy || 0;
+        document.getElementById("queueLen").innerText = d.queueLength || 0;
+        document.getElementById("successRate").innerText = (d.successRate || 0).toFixed(1) + "%";
+        document.getElementById("runMode").innerText = d.mode || "SAFE";
 
-    try {
-      const res = await fetch(`${API_BASE}/api/dashboard/${cmd}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sign: ownerSign, ...extra })
-      });
-      const result = await res.json();
-      alert(result.message || '操作成功');
-      refresh();
-    } catch (err) {
-      alert('操作失败: ' + err.message);
+        const st = document.getElementById("globalStatus");
+        st.className = d.status === "running" ? "status-badge badge-online" : "status-badge badge-warning";
     }
-  }
+
+    // 日志时间线
+    function addLog(action, msg, type="normal") {
+        const t = new Date().toLocaleTimeString();
+        const wrap = document.getElementById("timeline");
+        const div = document.createElement("div");
+        div.className = "timeline-item " + (type==="warn"?"warn":type==="err"?"err":"");
+        div.innerHTML = `<div class="time">${t}</div><div class="action">${action}</div><div class="msg">${msg}</div>`;
+        wrap.prepend(div);
+        timelineCount++;
+        if(timelineCount > 30) wrap.lastChild.remove();
+    }
+
+    // 按钮功能
+    async function callPause() { const r=await api("/api/dashboard/pause"); addLog("暂停系统", r?.success?"已暂停":r?.error, r?.success?"normal":"err"); refresh(); }
+    async function callResume() { const r=await api("/api/dashboard/resume"); addLog("恢复自动运行", r?.success?"已恢复":r?.error, r?.success?"normal":"err"); refresh(); }
+    async function callRepair() { const r=await api("/api/dashboard/repair"); addLog("一键修复", r?.success?"AR开始自愈":r?.error, r?.success?"warn":"err"); refresh(); }
+    async function callExpand() { const r=await api("/api/dashboard/expand"); addLog("扩容节点", r?.success?"正在新增节点":r?.error, r?.success?"warn":"err"); refresh(); }
+    async function callReplicate() { const r=await api("/api/dashboard/replicate"); addLog("自我复制", r?.success?"跨节点复制中":r?.error, r?.success?"warn":"err"); refresh(); }
+    async function callAutoTask() { const r=await api("/api/dashboard/auto-task"); addLog("自主任务启动", r?.success?"AR开始自主执行":r?.error, r?.success?"normal":"err"); refresh(); }
+    async function setMode(m) { const r=await api("/api/dashboard/mode", {mode:m}); addLog("切换模式", m, "warn"); refresh(); }
+
+    setInterval(refresh, 3000);
+    refresh();
+    addLog("面板已加载", "正在连接后端服务", "normal");
 </script>
+</body>
+</html>
