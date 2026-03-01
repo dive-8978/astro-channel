@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chain Control</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui}
+body{background:#050812;color:#eaf2ff;height:100vh;overflow:hidden}
+#app{height:100%;display:grid;grid-template-rows:70px 1fr 90px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:#0a0f1f}
+.top h1{font-size:18px}
+.status{display:flex;gap:10px}
+.pill{padding:6px 10px;border-radius:999px;background:#121a33;font-size:12px}
+.main{position:relative;overflow:hidden}
+.map{position:absolute;inset:0;opacity:0.15;background:radial-gradient(circle at 50% 50%,#2a37ff11 0%,#050812 60%)}
+.nodes{position:absolute;inset:0}
+.node{position:absolute;width:14px;height:14px;background:#6e8cff;border-radius:50%;box-shadow:0 0 18px #6e8cff99}
+.chain{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none}
+.line{stroke:#6e8cff44;stroke-width:1}
+.ctrl{background:#0a0f1f;display:flex;align-items:center;gap:12px;padding:0 22px}
+.ctrl input{flex:1;background:#0d142a;border:1px solid #232b4a;color:#eaf2ff;border-radius:12px;padding:12px;outline:none}
+.ctrl button{padding:12px 16px;border-radius:12px;border:none;background:#6c7cff;color:white;font-weight:600}
+.ctrl button.warn{background:#ffb057}
+.ctrl button.danger{background:#ff5777}
+</style>
+</head>
+<body>
+<div id="app">
+<div class="top">
+<h1>AI Chain Control • 星际路由</h1>
+<div class="status">
+<div class="pill">在线节点</div>
+<div class="pill">跨链健康</div>
+</div>
+</div>
+
+<div class="main">
+<div class="map"></div>
+<svg class="chain" id="chainSvg"></svg>
+<div class="nodes" id="nodes"></div>
+</div>
+
+<div class="ctrl">
+<input placeholder="目标链 ID / 地址" id="target">
+<button onclick="runBridge()">跨链转发</button>
+<button class="warn" onclick="runSync()">同步账本</button>
+<button class="danger" onclick="killSwitch()">熔断保护</button>
+</div>
+</div>
+
+<script>
+const API = "http://45.76.150.100:3000";
+const svg = document.getElementById("chainSvg");
+const nodesWrap = document.getElementById("nodes");
+
+async function fetchNodes(){
+  try{
+    const res = await fetch(API+"/api/nodes");
+    const data = await res.json();
+    renderNodes(data.nodes || []);
+  }catch(e){console.log(e)}
+}
+
+function renderNodes(list){
+  nodesWrap.innerHTML = "";
+  svg.innerHTML = "";
+  const w = innerWidth, h = innerHeight - 160;
+  list.forEach((n,i)=>{
+    const x = 200 + (i*140) % (w-280);
+    const y = 120 + (i*90) % (h-180);
+    const div = document.createElement("div");
+    div.className = "node";
+    div.style.left = x+"px";
+    div.style.top = y+"px";
+    nodesWrap.appendChild(div);
+  });
+}
+
+async function runBridge(){
+  const t = document.getElementById("target").value.trim();
+  if(!t)return;
+  try{
+    await fetch(API+"/api/bridge/run",{
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({target:t})
+    });
+    alert("跨链任务已下发");
+  }catch(e){alert("失败")}
+}
+
+async function runSync(){
+  await fetch(API+"/api/admin/sync");
+  alert("同步中");
+}
+
+async function killSwitch(){
+  if(!confirm("熔断？"))return;
+  await fetch(API+"/api/admin/emergency",{method:"POST"});
+  alert("已熔断");
+}
+
+setInterval(fetchNodes,4000);
+fetchNodes();
+</script>
+</body>
+</html>
