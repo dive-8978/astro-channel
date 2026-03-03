@@ -268,10 +268,7 @@
         • ASTRO: Core token of AstroChannel Ecosystem
       </div>
 
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0xFf56bB1006962F24C40D71D1fe7FC6FcAC53a523" 
-         target="_blank" class="wallet-btn">
-        Buy MA
-      </a>
+      <!-- 这里原来的 Buy MA 按钮已经删掉 -->
     </div>
 
     <div class="stats">Current Participants: <span id="participants" class="text-cyan-400 font-semibold">1234</span></div>
@@ -326,12 +323,14 @@
         "inputs": [{"internalType":"address","name":"account","type":"address"}],
         "name": "lockedBalanceOf",
         "outputs": [{"internalType":"uint256","name":"","type":"uint256"}],
+        "stateMutability": "view",
         "type": "function"
       },
       {
         "inputs": [{"internalType":"address","name":"account","type":"address"}],
         "name": "releaseTimeOf",
         "outputs": [{"internalType":"uint256","name":"","type":"uint256"}],
+        "stateMutability": "view",
         "type": "function"
       }
     ];
@@ -376,15 +375,18 @@
 
     async function checkUserLockedBalance() {
       try {
-        const provider = new window.ethereum.providers.Web3Provider(window.ethereum);
-        const contract = new window.ethereum.Contract(CONTRACT_ABI, CONTRACT_ADDRESS, provider);
+        if (!window.ethereum || !connectedWallet) return;
         
-        const lockedBalance = await contract.methods.lockedBalanceOf(connectedWallet).call();
-        const releaseTime = await contract.methods.releaseTimeOf(connectedWallet).call();
+        const provider = new ethers.BrowserProvider(window.ethereum);
+        const signer = await provider.getSigner();
+        const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
+        
+        const lockedBalance = await contract.lockedBalanceOf(connectedWallet);
+        const releaseTime = await contract.releaseTimeOf(connectedWallet);
 
         if (lockedBalance > 0) {
           document.getElementById('balanceCard').style.display = 'block';
-          const maBalance = (lockedBalance / 1e18).toLocaleString();
+          const maBalance = (lockedBalance / 10n ** 18n).toLocaleString();
           document.getElementById('lockedAmount').textContent = `${maBalance} MA`;
           
           const currentTime = Math.floor(Date.now() / 1000);
@@ -439,22 +441,22 @@
       status.textContent = '';
 
       try {
-        const provider = new window.ethereum.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const contract = new window.ethereum.Contract(CONTRACT_ABI, CONTRACT_ADDRESS, signer);
+        const provider = new ethers.BrowserProvider(window.ethereum);
+        const signer = await provider.getSigner();
+        const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
 
         status.textContent = '⏳ Confirm in wallet...';
-        const tx = await contract.methods.distribute().send({ from: connectedWallet });
+        const tx = await contract.distribute();
         
         status.textContent = `✅ Success! TX: ${tx.hash.slice(0,10)}...`;
         await checkUserLockedBalance();
 
       } catch (error) {
         console.error(error);
-        if (error.code === 4001) {
+        if (error.code === 'ACTION_REJECTED') {
           status.textContent = '❌ Transaction cancelled';
         } else {
-          status.textContent = '❌ Claim failed: ' + error.message.slice(0, 60);
+          status.textContent = '❌ Claim failed: ' + (error.message || 'Unknown error').slice(0, 60);
         }
         btn.textContent = 'Claim MA Airdrop';
         btn.disabled = false;
