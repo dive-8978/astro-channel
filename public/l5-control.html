@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>AstroChain L5 Control</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<style>
+body {
+  margin:0;
+  background:#0b0f1a;
+  color:#00ffcc;
+  font-family:monospace;
+}
+#map { height:400px; }
+.panel {
+  padding:15px;
+  border-top:1px solid #00ffcc33;
+}
+button {
+  background:#001f1f;
+  color:#00ffcc;
+  border:1px solid #00ffcc;
+  padding:6px 12px;
+  margin:5px;
+  cursor:pointer;
+}
+input {
+  background:#001f1f;
+  color:#00ffcc;
+  border:1px solid #00ffcc;
+}
+#log {
+  height:200px;
+  overflow:auto;
+  background:#000;
+  padding:10px;
+  font-size:12px;
+}
+.metrics div { margin:5px 0; }
+</style>
+</head>
+<body>
+
+<h2 style="padding:15px;">🌌 AstroChain L5 星际主控台</h2>
+
+<div id="map"></div>
+
+<div class="panel">
+  Owner Signature:
+  <input type="password" id="signKey" placeholder="Enter signature" />
+  <button onclick="refresh()">刷新状态</button>
+  <button onclick="repair()">一键修复</button>
+  <button onclick="pause()">KillSwitch</button>
+</div>
+
+<div class="panel metrics">
+  <div>系统状态: <span id="status">-</span></div>
+  <div>机器人数量: <span id="robotCount">0</span></div>
+  <div>队列长度: <span id="queueSize">0</span></div>
+  <div>成功率: <span id="successRate">0%</span></div>
+  <div>当前模式: <span id="mode">SAFE</span></div>
+</div>
+
+<div class="panel">
+  <button onclick="setMode('FAST')">FAST</button>
+  <button onclick="setMode('SAFE')">SAFE</button>
+  <button onclick="setMode('BLOCK')">BLOCK</button>
+</div>
+
+<div id="log"></div>
+
+<script>
+const API_BASE = "http://45.76.150.100:3000";
+const GLOBAL_NODES = [
+  {city:"New York",lat:40.7,lng:-74},
+  {city:"London",lat:51.5,lng:-0.1},
+  {city:"Tokyo",lat:35.6,lng:139.6},
+  {city:"Singapore",lat:1.29,lng:103.85}
+];
+
+const map = L.map('map').setView([20,0],2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+let markers = [];
+
+GLOBAL_NODES.forEach(loc=>{
+  const m = L.marker([loc.lat,loc.lng]).addTo(map)
+    .bindPopup(loc.city);
+  markers.push(m);
+});
+
+function log(msg,type="info"){
+  const el=document.getElementById("log");
+  const color = type==="ok"?"#00ff00":type==="err"?"#ff4444":"#00ffcc";
+  el.innerHTML += `<div style="color:${color}">[${new Date().toLocaleTimeString()}] ${msg}</div>`;
+  el.scrollTop=el.scrollHeight;
+}
+
+async function api(path,data={}){
+  const sign=document.getElementById("signKey").value.trim();
+  try{
+    const res=await fetch(API_BASE+path,{
+      method:"POST",
+      headers:{ "Content-Type":"application/json"},
+      body:JSON.stringify({...data,signature:sign})
+    });
+    return await res.json();
+  }catch(e){
+    log("API 连接失败","err");
+  }
+}
+
+async function refresh(){
+  const d=await api("/api/dashboard/state");
+  if(!d) return;
+
+  document.getElementById("status").innerText=d.status||"-";
+  document.getElementById("robotCount").innerText=d.robotCount||0;
+  document.getElementById("queueSize").innerText=d.queueSize||0;
+  document.getElementById("successRate").innerText=(d.successRate||0)+"%";
+  document.getElementById("mode").innerText=d.mode||"SAFE";
+
+  updateNodeHealth(d.nodesHealthy||0);
+  log("状态刷新完成","ok");
+}
+
+function updateNodeHealth(count){
+  const percent=count/GLOBAL_NODES.length;
+  markers.forEach(m=>{
+    if(percent>0.7){
+      m.setIcon(new L.Icon.Default());
+    }else{
+      m.setOpacity(0.4);
+    }
+  });
+}
+
+async function repair(){
+  await api("/api/dashboard/repair");
+  log("修复指令已发送","ok");
+}
+
+async function pause(){
+  await api("/api/dashboard/pause");
+  log("系统已暂停","err");
+}
+
+async function setMode(mode){
+  await api("/api/dashboard/mode",{mode});
+  log("模式切换为 "+mode,"ok");
+}
+
+setInterval(refresh,5000);
+refresh();
+</script>
+
+</body>
+</html>
