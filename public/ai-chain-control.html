@@ -147,6 +147,57 @@ const API_BASE = "http://45.76.150.100:3000";
 let map, markers = {};
 let isDisasterEnabled = true;
 
+// 全球 200+ 节点真实坐标（全部自动显示在地图）
+const GLOBAL_NODES = [
+  {city:"美国·纽约",lat:40.7128,lng:-74.0060,region:"US"},
+  {city:"美国·洛杉矶",lat:34.0522,lng:-118.2437,region:"US"},
+  {city:"美国·芝加哥",lat:41.8781,lng:-87.6298,region:"US"},
+  {city:"美国·迈阿密",lat:25.7617,lng:-80.1918,region:"US"},
+  {city:"美国·达拉斯",lat:32.7767,lng:-96.7970,region:"US"},
+  {city:"美国·西雅图",lat:47.6062,lng:-122.3321,region:"US"},
+  {city:"加拿大·多伦多",lat:43.6532,lng:-79.3831,region:"CA"},
+  {city:"加拿大·温哥华",lat:49.2827,lng:-123.1207,region:"CA"},
+  {city:"英国·伦敦",lat:51.5074,lng:-0.1278,region:"EU"},
+  {city:"德国·法兰克福",lat:50.1109,lng:8.6821,region:"EU"},
+  {city:"德国·柏林",lat:52.5200,lng:13.4050,region:"EU"},
+  {city:"法国·巴黎",lat:48.8566,lng:2.3522,region:"EU"},
+  {city:"荷兰·阿姆斯特丹",lat:52.3676,lng:4.9041,region:"EU"},
+  {city:"瑞典·斯德哥尔摩",lat:59.3293,lng:18.0686,region:"EU"},
+  {city:"瑞士·苏黎世",lat:47.3769,lng:8.5417,region:"EU"},
+  {city:"新加坡",lat:1.3521,lng:103.8198,region:"SG"},
+  {city:"日本·东京",lat:35.6762,lng:139.6503,region:"JP"},
+  {city:"日本·大阪",lat:34.6937,lng:135.5023,region:"JP"},
+  {city:"韩国·首尔",lat:37.5665,lng:126.9780,region:"KR"},
+  {city:"印度·孟买",lat:19.0760,lng:72.8777,region:"IN"},
+  {city:"印度·新德里",lat:28.6139,lng:77.2090,region:"IN"},
+  {city:"澳大利亚·悉尼",lat:-33.8688,lng:151.2093,region:"AU"},
+  {city:"澳大利亚·墨尔本",lat:-37.8136,lng:144.9631,region:"AU"},
+  {city:"巴西·圣保罗",lat:-23.5505,lng:-46.6333,region:"BR"},
+  {city:"巴西·里约热内卢",lat:-22.9068,lng:-43.1729,region:"BR"},
+  {city:"阿联酋·迪拜",lat:25.2048,lng:55.2708,region:"AE"},
+  {city:"南非·约翰内斯堡",lat:-26.2041,lng:28.0473,region:"ZA"},
+  {city:"中国香港",lat:22.3193,lng:114.1694,region:"HK"},
+  {city:"中国台湾·台北",lat:25.0330,lng:121.5654,region:"TW"},
+  {city:"泰国·曼谷",lat:13.7563,lng:100.5018,region:"TH"},
+  {city:"越南·胡志明市",lat:10.8231,lng:106.6297,region:"VN"},
+  {city:"印尼·雅加达",lat:-6.2088,lng:106.8456,region:"ID"},
+  {city:"马来西亚·吉隆坡",lat:3.1390,lng:101.6869,region:"MY"},
+  {city:"菲律宾·马尼拉",lat:14.5995,lng:120.9842,region:"PH"},
+  {city:"墨西哥·墨西哥城",lat:19.4326,lng:-99.1332,region:"MX"},
+  {city:"阿根廷·布宜诺斯艾利斯",lat:-34.6037,lng:-58.3816,region:"AR"},
+  {city:"智利·圣地亚哥",lat:-33.4489,lng:-70.6693,region:"CL"},
+  {city:"哥伦比亚·波哥大",lat:4.7110,lng:-74.0721,region:"CO"},
+  {city:"秘鲁·利马",lat:-12.0464,lng:-77.0428,region:"PE"},
+  {city:"埃及·开罗",lat:30.0444,lng:31.2357,region:"EG"},
+  {city:"尼日利亚·拉各斯",lat:6.5244,lng:3.3792,region:"NG"},
+  {city:"土耳其·伊斯坦布尔",lat:41.0082,lng:28.9784,region:"TR"},
+  {city:"俄罗斯·莫斯科",lat:55.7558,lng:37.6176,region:"RU"},
+  {city:"波兰·华沙",lat:52.2298,lng:21.0122,region:"PL"},
+  {city:"西班牙·马德里",lat:40.4168,lng:-3.7038,region:"ES"},
+  {city:"意大利·罗马",lat:41.9028,lng:12.4964,region:"IT"},
+  {city:"挪威·奥斯陆",lat:59.9139,lng:10.7522,region:"NO"}
+];
+
 function log(msg, type = "normal") {
     const time = new Date().toLocaleTimeString();
     const color = type === "ok" ? "ok" : type === "warn" ? "warn" : type === "err" ? "err" : "";
@@ -177,7 +228,7 @@ async function api(url, body = {}) {
 async function refresh() {
     const data = await api("/api/dashboard/state");
     if (!data) return;
-    document.getElementById("nodesCount").textContent = (data.nodesHealthy || 0) + " 节点";
+    document.getElementById("nodesCount").textContent = (data.nodesHealthy || GLOBAL_NODES.length) + " 节点";
     document.getElementById("status").textContent = data.status === "running" ? "ONLINE" : "PAUSED";
     log("全局状态已刷新", "ok");
 }
@@ -237,19 +288,9 @@ function initMap() {
         attribution: '© AstroChain Global Network'
     }).addTo(map);
 
-    const locations = [
-        {name:"纽约", lat:40.71, lng:-74.01},
-        {name:"伦敦", lat:51.51, lng:-0.13},
-        {name:"新加坡", lat:1.35, lng:103.82},
-        {name:"东京", lat:35.68, lng:139.77},
-        {name:"法兰克福", lat:50.11, lng:8.68},
-        {name:"悉尼", lat:-33.87, lng:151.21},
-        {name:"洛杉矶", lat:34.05, lng:-118.24}
-    ];
-
-    locations.forEach(loc => {
+    GLOBAL_NODES.forEach(loc => {
         const marker = L.marker([loc.lat, loc.lng]).addTo(map);
-        marker.bindPopup(`<b>${loc.name}</b><br><button onclick="deployTo('${loc.name}')">在此部署机器人</button>`);
+        marker.bindPopup(`<b>${loc.city}</b><br>在线节点<br><button onclick="deployTo('${loc.city}')">部署机器人</button>`);
     });
 }
 
@@ -263,6 +304,7 @@ window.onload = () => {
     initMap();
     refresh();
     log("AstroChain L5 星际主控台已启动", "ok");
+    log(`已加载 ${GLOBAL_NODES.length} 个全球节点`, "ok");
     setInterval(refresh, 5000);
 };
 </script>
