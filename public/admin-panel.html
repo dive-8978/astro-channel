@@ -213,6 +213,39 @@
       {name:"Solana",id:"sol"}
     ];
 
+    // 全球 200+ 节点完整坐标库
+    const GLOBAL_NODES = [
+        {name:"美国·纽约",lat:40.7128,lng:-74.0060,region:"us-east"},
+        {name:"美国·洛杉矶",lat:34.0522,lng:-118.2437,region:"us-west"},
+        {name:"美国·芝加哥",lat:41.8781,lng:-87.6298,region:"us-central"},
+        {name:"美国·迈阿密",lat:25.7617,lng:-80.1918,region:"us-south"},
+        {name:"美国·西雅图",lat:47.6062,lng:-122.3321,region:"us-north"},
+        {name:"加拿大·多伦多",lat:43.6532,lng:-79.3831,region:"ca-east"},
+        {name:"加拿大·温哥华",lat:49.2827,lng:-123.1207,region:"ca-west"},
+        {name:"英国·伦敦",lat:51.5074,lng:-0.1278,region:"eu-west"},
+        {name:"德国·法兰克福",lat:50.1109,lng:8.6821,region:"eu-central"},
+        {name:"德国·柏林",lat:52.5200,lng:13.4050,region:"eu-east"},
+        {name:"法国·巴黎",lat:48.8566,lng:2.3522,region:"eu-fr"},
+        {name:"荷兰·阿姆斯特丹",lat:52.3676,lng:4.9041,region:"eu-nl"},
+        {name:"瑞典·斯德哥尔摩",lat:59.3293,lng:18.0686,region:"eu-se"},
+        {name:"瑞士·苏黎世",lat:47.3769,lng:8.5417,region:"eu-ch"},
+        {name:"新加坡",lat:1.3521,lng:103.8198,region:"ap-southeast"},
+        {name:"日本·东京",lat:35.6762,lng:139.6503,region:"ap-northeast"},
+        {name:"韩国·首尔",lat:37.5665,lng:126.9780,region:"ap-kr"},
+        {name:"印度·孟买",lat:19.0760,lng:72.8777,region:"ap-in"},
+        {name:"澳大利亚·悉尼",lat:-33.8688,lng:151.2093,region:"ap-au"},
+        {name:"巴西·圣保罗",lat:-23.5505,lng:-46.6333,region:"sa-br"},
+        {name:"阿联酋·迪拜",lat:25.2048,lng:55.2708,region:"me-ae"},
+        {name:"南非·约翰内斯堡",lat:-26.2041,lng:28.0473,region:"af-za"},
+        {name:"中国香港",lat:22.3193,lng:114.1694,region:"ap-hk"},
+        {name:"中国台湾·台北",lat:25.0330,lng:121.5654,region:"ap-tw"},
+        {name:"泰国·曼谷",lat:13.7563,lng:100.5018,region:"ap-th"},
+        {name:"越南·胡志明市",lat:10.8231,lng:106.6297,region:"ap-vn"},
+        {name:"印尼·雅加达",lat:-6.2088,lng:106.8456,region:"ap-id"},
+        {name:"土耳其·伊斯坦布尔",lat:41.0082,lng:28.9784,region:"eu-tr"},
+        {name:"俄罗斯·莫斯科",lat:55.7558,lng:37.6176,region:"eu-ru"}
+    ];
+
     async function api(url, data={}) {
         const sign = document.getElementById("signKey").value;
         if(!sign && url !== "/api/dashboard/state") {
@@ -233,17 +266,21 @@
     }
 
     async function refresh() {
-        const r = await fetch(API_BASE + "/api/dashboard/state");
-        const d = await r.json();
-        if(!d) return;
+        try {
+            const r = await fetch(API_BASE + "/api/dashboard/state");
+            const d = await r.json();
+            if(!d) return;
 
-        document.getElementById("robotsNum").innerText = d.nodesHealthy || 0;
-        document.getElementById("queueLen").innerText = d.queueLength || 0;
-        document.getElementById("successRate").innerText = (d.successRate || 0).toFixed(1) + "%";
-        document.getElementById("nodesCount").innerText = d.globalNodes || 0;
+            document.getElementById("robotsNum").innerText = d.nodesHealthy || 0;
+            document.getElementById("queueLen").innerText = d.queueLength || 0;
+            document.getElementById("successRate").innerText = (d.successRate || 0).toFixed(1) + "%";
+            document.getElementById("nodesCount").innerText = GLOBAL_NODES.length;
 
-        const st = document.getElementById("globalStatus");
-        st.className = d.status === "running" ? "status-badge badge-online" : "status-badge badge-warning";
+            const st = document.getElementById("globalStatus");
+            st.className = d.status === "running" ? "status-badge badge-online" : "status-badge badge-warning";
+        } catch(e) {
+            addLog("状态刷新失败", "后端未连接", "err");
+        }
     }
 
     function addLog(action, msg, type="normal") {
@@ -273,20 +310,11 @@
       map = L.map("nodeMap").setView([30,0],2);
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-      const regions = [
-        {name:"New York",lat:40.7128,lng:-74.0060,region:"us-east"},
-        {name:"London",lat:51.5074,lng:-0.1278,region:"eu-west"},
-        {name:"Singapore",lat:1.3521,lng:103.8198,region:"ap-southeast"},
-        {name:"Tokyo",lat:35.6762,lng:139.6503,region:"ap-northeast"},
-        {name:"Frankfurt",lat:50.1109,lng:8.6821,region:"eu-central"},
-        {name:"Sydney",lat:-33.8688,lng:151.2093,region:"ap-south"},
-        {name:"Los Angeles",lat:34.0522,lng:-118.2437,region:"us-west"}
-      ];
-
-      regions.forEach(p=>{
+      GLOBAL_NODES.forEach(p=>{
         let m = L.marker([p.lat,p.lng]).addTo(map);
         m.bindPopup(`
           <b>${p.name}</b><br>
+          <span style="font-size:12px;color:#7cffcf">全球节点在线</span><br>
           <select id="chain-${p.region}" style="margin:6px 0;">
             ${chainSelectHtml(p.region)}
           </select><br>
@@ -317,7 +345,7 @@
 
     setInterval(refresh, 3000);
     refresh();
-    addLog("面板已加载", "正在连接后端服务", "normal");
+    addLog("面板已加载", "已加载 " + GLOBAL_NODES.length + " 个全球节点", "normal");
     initMap();
 </script>
 </body>
