@@ -21,10 +21,26 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
 .x-icon svg{width:15px;height:15px;fill:#fff}
 .page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
-.token-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px}
+.token-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px;transition:0.3s}
+.token-card:hover{border-color:rgba(76,201,240,0.3);transform:translateY(-2px)}
 .token-card h3{color:#4cc9f0;font-size:1.3rem;margin-bottom:10px}
 .token-card p{color:#a8dadc;line-height:1.7}
-.btn-back{display:inline-block;margin-top:40px;padding:12px 24px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
+
+/* 返回主页按钮（全站统一） */
+.btn-home{
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:10px;
+  background:rgba(76,201,240,0.1);
+  border:1px solid #4cc9f0;
+  color:#4cc9f0;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+  margin-bottom:20px;
+}
+.btn-home:hover{background:#4cc9f0;color:#000}
+
 footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
 @media(max-width:768px){.page-title{font-size:2rem}}
 </style>
@@ -47,26 +63,39 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
   </div>
 </nav>
 
+<!-- 返回主页按钮 -->
+<a href="index.html" class="btn-home">← Back to Home</a>
+
 <h1 class="page-title">Tokenomics</h1>
 <p class="page-desc">ASTRO: The fuel of the intent economy.</p>
 
 <div class="token-card">
-  <h3>Utility & Fuel</h3>
-  <p>ASTRO is used as gas for every intent execution. All fees are distributed to node operators and governance.</p>
-</div>
-<div class="token-card">
-  <h3>Deflationary Model</h3>
-  <p>Automatic burn mechanism on every transaction. Total supply decreases permanently over time.</p>
-</div>
-<div class="token-card">
-  <h3>Governance</h3>
-  <p>ASTRO holders vote on network parameters, upgrades, risk rules, and ecosystem grants.</p>
+  <h3>Total Supply</h3>
+  <p>Total fixed supply: 1,000,000,000 ASTRO. No additional minting, ensuring long-term scarcity and value stability.</p>
 </div>
 
-<a href="memeastro.html" class="btn-back">← Previous</a>
+<div class="token-card">
+  <h3>Utility & Execution Fuel</h3>
+  <p>ASTRO serves as the native gas for all intent execution, node computing, and cross-chain validation. All network fees flow back to ecosystem participants.</p>
+</div>
+
+<div class="token-card">
+  <h3>Deflationary Mechanism</h3>
+  <p>Automatic on-chain burn from transaction fees and execution costs. Circulating supply decreases permanently over time, creating deflationary pressure.</p>
+</div>
+
+<div class="token-card">
+  <h3>Governance Rights</h3>
+  <p>ASTRO holders control network governance, including protocol upgrades, node parameters, risk policies, and ecosystem fund allocation.</p>
+</div>
+
+<div class="token-card">
+  <h3>Ecosystem Incentives</h3>
+  <p>Rewards for node operators, developers, liquidity providers, and early contributors to build a sustainable intent economy.</p>
+</div>
 
 <footer>
-  <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
+  <p>© 2026 AstroBridge | Global Intent Network</p>
 </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
