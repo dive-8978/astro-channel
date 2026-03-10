@@ -22,6 +22,26 @@ body{background:#020617;color:#fff;overflow-x:hidden}
 
 .container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
 
+/* 返回主页按钮 */
+.btn-back-home{
+  position:fixed;
+  top:24px;
+  left:24px;
+  z-index:999;
+  padding:10px 18px;
+  border-radius:10px;
+  background:rgba(76,201,240,0.1);
+  border:1px solid #4cc9f0;
+  color:#4cc9f0;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.2s;
+}
+.btn-back-home:hover{
+  background:#4cc9f0;
+  color:#000;
+}
+
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
 .logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav-right{display:flex;align-items:center;gap:24px}
@@ -44,51 +64,36 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
 }
 .page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
 
-/* 产品卡片 —— 渐变立体风格 */
-.product-card{
-  background:linear-gradient(135deg, #1a2347, #0d132d);
-  border:1px solid rgba(76,201,240,0.3);
-  border-radius:18px;
-  padding:28px;
-  margin-bottom:20px;
+/* 产品大卡片 */
+.product-item{
+  background:linear-gradient(135deg, #141e3d, #0a0f25);
+  border:1px solid rgba(76,201,240,0.25);
+  border-radius:20px;
+  padding:32px;
+  margin-bottom:24px;
   transition:all 0.3s;
-  box-shadow:0 0 20px rgba(76,201,240,0.08);
 }
-.product-card:hover{
-  transform:translateY(-4px);
-  background:linear-gradient(135deg, #1f2c5a, #101a3a);
-  box-shadow:0 8px 25px rgba(76,201,240,0.15);
+.product-item:hover{
+  transform:translateY(-6px);
+  background:linear-gradient(135deg, #1a274e, #0d1430);
+  box-shadow:0 10px 30px rgba(76,201,240,0.12);
 }
-.product-card h3{color:#4cc9f0;font-size:1.4rem;margin-bottom:10px}
-.product-card p{color:#a8dadc;line-height:1.7}
-
-/* 按钮 */
-.btn-action{
-  display:inline-block;
-  margin-top:12px;
-  padding:10px 20px;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  color:#fff;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.2s;
-}
-.btn-action:hover{transform:scale(1.03)}
-
-.btn-back{
-  display:inline-block;
-  margin-top:40px;
-  padding:12px 26px;
-  background:rgba(76,201,240,0.1);
+.product-item h2{
   color:#4cc9f0;
-  border:1px solid #4cc9f0;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.2s;
+  font-size:1.6rem;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
-.btn-back:hover{background:#4cc9f0;color:#000}
+.product-item p{
+  color:#e0e0e0;
+  font-size:1rem;
+  line-height:1.7;
+}
+.product-item .icon{
+  font-size:2rem;
+}
 
 footer{
   margin-top:60px;
@@ -99,15 +104,19 @@ footer{
 
 @media(max-width:768px){
   .page-title{font-size:2rem}
+  .product-item{padding:24px}
+  .product-item h2{font-size:1.4rem}
 }
 </style>
 </head>
 
 <body>
 
+<a href="index.html" class="btn-back-home">← Home</a>
 <canvas id="sphereCanvas"></canvas>
 
 <div class="container">
+
 <nav>
   <div class="logo">AstroBridge</div>
   <div class="nav-right">
@@ -115,6 +124,7 @@ footer{
       <a href="vision.html">Vision</a>
       <a href="painpoints.html">Pain Points</a>
       <a href="technology.html">Technology</a>
+      <a href="products.html">Products</a>
       <a href="progress.html">Progress</a>
     </div>
     <div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
@@ -124,29 +134,37 @@ footer{
 </nav>
 
 <h1 class="page-title">Products</h1>
-<p class="page-desc">The complete intent ecosystem.</p>
+<p class="page-desc">Full product suite for the global intent ecosystem.</p>
 
-<div class="product-card">
-  <h3>Astro Intent Network</h3>
-  <p>Core protocol for universal intent execution across all chains.</p>
+<div class="product-item">
+  <h2><span class="icon">🌐</span> Astro Intent Network</h2>
+  <p>Core protocol for universal intent execution across all chains. Users only need to input intent; AI and robots automatically complete cross-chain operations, transfers, swaps, and interactions.</p>
 </div>
 
-<div class="product-card">
-  <h3>Astro Console</h3>
-  <p>One dashboard to control all your assets, intents, and agents.</p>
+<div class="product-item">
+  <h2><span class="icon">🖥️</span> Astro Console</h2>
+  <p>One unified dashboard to control all your assets, intents, agents, and nodes. View real-time status, execution history, fee burning records, and security logs.</p>
 </div>
 
-<div class="product-card">
-  <h3>MemeAstro</h3>
-  <p>Social intent layer for Web3 communities.</p>
+<div class="product-item">
+  <h2><span class="icon">🚀</span> MemeAstro</h2>
+  <p>Social intent layer for Web3 communities. One-click launch, management, and cross-chain promotion for communities, with built-in intent automation and governance tools.</p>
 </div>
 
-<div class="product-card">
-  <h3>Astro SDK</h3>
-  <p>Build intent-powered apps with 5 lines of code.</p>
+<div class="product-item">
+  <h2><span class="icon">🧩</span> Astro SDK</h2>
+  <p>Developer toolkit to build intent-powered applications with minimal code. Support quick integration for DApps, wallets, bots, and enterprise systems.</p>
 </div>
 
-<a href="technology.html" class="btn-back">← Back</a>
+<div class="product-item">
+  <h2><span class="icon">🤖</span> Astro Robot Cluster</h2>
+  <p>Decentralized robot execution network that processes user intents 24/7 across chains. Permission-isolated, non-custodial, and fully auditable.</p>
+</div>
+
+<div class="product-item">
+  <h2><span class="icon">🔗</span> Astro Solver Network</h2>
+  <p>Decentralized solver marketplace that competes to provide the best path, lowest gas, and highest success rate for every user intent.</p>
+</div>
 
 <footer>
   <p>© 2026 AstroBridge | Global Intent Network</p>
