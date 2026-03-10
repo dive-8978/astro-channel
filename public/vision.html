@@ -9,27 +9,15 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
 
-/* 左上角返回主页按钮 */
-.back-home {
-  position: fixed;
-  top: 28px;
-  left: 28px;
-  z-index: 999;
-  color: #4cc9f0;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 9px 16px;
-  border: 1px solid #4cc9f0;
-  border-radius: 10px;
-  background: rgba(76,201,240,0.08);
-  transition: 0.2s;
-}
-.back-home:hover {
-  background: #4cc9f0;
-  color: #000;
+#sphereCanvas{
+  position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;opacity:0.6;background:#020617;
 }
 
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
+.back-home {
+  position: fixed;top:28px;left:28px;z-index:999;color:#4cc9f0;font-weight:600;text-decoration:none;padding:9px 16px;border:1px solid #4cc9f0;border-radius:10px;background:rgba(76,201,240,0.08);transition:0.2s;
+}
+.back-home:hover {background:#4cc9f0;color:#000;}
+
 .container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
 .logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -44,22 +32,54 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
 .page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
 
-/* 左右布局 */
-.content-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
+.content-row {display:flex;gap:40px;align-items:flex-start}
+.left-text {flex:1}
+.right-diagram {flex:1}
+
+/* 你要的：渐变 + 立体 +  hover变色 */
+.flow-box {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  padding:20px;
 }
-.left-text {
-  flex: 1;
+.flow-item {
+  width:100%;
+  padding:24px;
+  background:linear-gradient(135deg, #1a2347, #0d132d);
+  border:1px solid #4cc9f0;
+  border-radius:18px;
+  text-align:center;
+  font-size:1rem;
+  font-weight:600;
+  color:#fff;
+  transition:all 0.3s ease;
+  box-shadow:0 0 20px rgba(76,201,240,0.1);
+  position:relative;
 }
-.right-diagram {
-  flex: 1;
+.flow-item:hover {
+  background:linear-gradient(135deg, #4cc9f0, #f72585);
+  transform:translateY(-4px);
+  box-shadow:0 8px 25px rgba(76,201,240,0.3);
+  color:#fff;
 }
-.arch-img {
-  width: 100%;
-  border-radius: 16px;
-  border: 1px solid rgba(76,201,240,0.2);
+.flow-arrow {
+  width:2px;
+  height:24px;
+  background:linear-gradient(to bottom,#4cc9f0,#4cc9f0);
+  position:relative;
+  opacity:0.7;
+}
+.flow-arrow::after {
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  left:50%;
+  transform:translateX(-50%);
+  width:10px;height:10px;
+  background:#4cc9f0;
+  clip-path:polygon(0 0,100% 0,50% 100%);
 }
 
 .card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px}
@@ -70,18 +90,15 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 
 @media(max-width:768px){
   .page-title{font-size:2rem}
-  .content-row {
-    flex-direction: column;
-  }
+  .content-row {flex-direction:column}
 }
 </style>
 </head>
 <body>
 
-<!-- 左上角返回主页按钮 -->
 <a href="index.html" class="back-home">← Home</a>
+<canvas id="sphereCanvas"></canvas>
 
-<div id="particles"></div>
 <div class="container">
 <nav>
   <div class="logo">AstroBridge</div>
@@ -102,7 +119,6 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 <p class="page-desc">The world’s first intelligent intent network for Web3 and robot economy.</p>
 
 <div class="content-row">
-  <!-- 左侧文字（完全不动） -->
   <div class="left-text">
     <div class="card">
       <h3>Intent-Centric Future</h3>
@@ -118,9 +134,19 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
     </div>
   </div>
 
-  <!-- 右侧工程示意图 -->
+  <!-- 右边：渐变立体流程卡片 -->
   <div class="right-diagram">
-    <img class="arch-img" src="https://i.imgur.com/8RkKwGZ.png" alt="AstroBridge Architecture">
+    <div class="flow-box">
+      <div class="flow-item">User Intent</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-item">AI Understanding</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-item">Cross-Chain Routing</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-item">Autonomous Execution</div>
+      <div class="flow-arrow"></div>
+      <div class="flow-item">Final Settlement</div>
+    </div>
   </div>
 </div>
 
@@ -129,9 +155,55 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS("particles",{particles:{number:{value:80,density:{enable:true,value_area:800}},color:{value:["#4cc9f0","#f72585"]},opacity:{value:0.4,random:true},size:{value:3,random:true},line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},move:{enable:true,speed:1.5,random:true}},interactivity:{events:{onhover:{enable:true,mode:"grab"}}},retina_detect:true})
+const canvas=document.getElementById('sphereCanvas');
+const ctx=canvas.getContext('2d');
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+
+window.addEventListener('resize',()=>{
+  w=canvas.width=window.innerWidth;
+  h=canvas.height=window.innerHeight;
+});
+
+const particleCount=700;
+const radius=220;
+const speed=0.002;
+
+class Particle{
+  constructor(){
+    this.angle1=Math.random()*Math.PI*2;
+    this.angle2=Math.random()*Math.PI*2;
+    this.depth=Math.random()*0.8+0.2;
+    this.size=Math.random()*1.5+0.5;
+    this.color=Math.random()>0.5?'#4cc9f0':'#f72585';
+  }
+  update(){
+    this.angle1+=speed;
+    this.angle2+=speed*0.7;
+  }
+  draw(){
+    const x=w/2+radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);
+    const y=h/2+radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);
+    const z=radius*this.depth*Math.cos(this.angle1);
+    const scale=(z+radius)/(radius*2);
+    const alpha=scale*0.6+0.2;
+    ctx.beginPath();
+    ctx.arc(x,y,this.size*scale,0,Math.PI*2);
+    ctx.fillStyle=this.color+'80';
+    ctx.fill();
+  }
+}
+
+const particles=Array.from({length:particleCount},()=>new Particle());
+
+function loop(){
+  requestAnimationFrame(loop);
+  ctx.fillStyle='rgba(2,6,23,0.15)';
+  ctx.fillRect(0,0,w,h);
+  particles.forEach(p=>{p.update();p.draw();});
+}
+loop();
 </script>
 </body>
 </html>
