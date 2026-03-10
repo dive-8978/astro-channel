@@ -13,9 +13,32 @@ body{background:#020617;color:#fff;overflow-x:hidden}
 
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:80px}
 .logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+/* 导航区：链接 + X图标 */
+.nav-right{display:flex;align-items:center;gap:24px}
 .nav-links{display:flex;gap:24px}
 .nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
 .nav-links a:hover{color:#4cc9f0}
+
+/* X 账号按钮样式 */
+.x-button{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#121a33;
+  border:1px solid #2a3558;
+  color:#fff;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  transition:.2s;
+}
+.x-button:hover{
+  background:#4cc9f0;
+  color:#000;
+}
 
 .hero{text-align:center;margin-bottom:80px}
 .hero h1{font-size:4rem;font-weight:800;line-height:1.2;margin-bottom:20px;
@@ -53,11 +76,16 @@ footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,
 
 <nav>
   <div class="logo">AstroBridge</div>
-  <div class="nav-links">
-    <a href="vision.html">Vision</a>
-    <a href="technology.html">Technology</a>
-    <a href="progress.html">Progress</a>
-    <a href="global-console.html">Global Console</a>
+  
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="vision.html">Vision</a>
+      <a href="technology.html">Technology</a>
+      <a href="progress.html">Progress</a>
+      <a href="global-console.html">Global Console</a>
+    </div>
+    <!-- X 账号按钮 -->
+    <a href="https://x.com/AstroBridge" target="_blank" class="x-button">𝕏</a>
   </div>
 </nav>
 
