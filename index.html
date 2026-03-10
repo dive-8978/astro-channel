@@ -1,283 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroBridge - Global Intent Network</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: #020617;
-            color: #fff;
-            font-family: sans-serif;
-            overflow-x: hidden;
-        }
-        /* 粒子背景 */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-        /* 容器 */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* 导航栏 */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            position: relative;
-            z-index: 10;
-        }
-        .logo {
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .nav-links a {
-            color: #a0d8ef;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover {
-            color: #f72585;
-        }
-        .x-button {
-            width: 36px;
-            height: 36px;
-            border: 1px solid #4cc9f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4cc9f0;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        /* 汉堡菜单 */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-        }
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: #4cc9f0;
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-        /* 英雄区 */
-        .hero {
-            text-align: center;
-            padding: 80px 0;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
-        }
-        .hero p {
-            font-size: 1.4rem;
-            color: #a0d8ef;
-            max-width: 900px;
-            margin: 0 auto 40px;
-            line-height: 1.5;
-        }
-        .hero-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-        }
-        .btn {
-            padding: 16px 40px;
-            border-radius: 12px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-        .btn-primary {
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            color: #fff;
-        }
-        .btn-secondary {
-            border: 1px solid #4cc9f0;
-            color: #4cc9f0;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        /* 内容区 */
-        .section {
-            padding: 60px 0;
-        }
-        .section h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .section p {
-            font-size: 1.1rem;
-            color: #a0d8ef;
-            line-height: 1.6;
-            max-width: 800px;
-        }
-        /* 页脚 */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            color: #6b8cae;
-            font-size: 0.9rem;
-        }
-        /* 移动端适配 */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 80px;
-                right: 20px;
-                background: #020617;
-                border: 1px solid rgba(76,201,240,0.2);
-                border-radius: 12px;
-                padding: 20px;
-                gap: 16px;
-                width: 200px;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .logo {
-                font-size: 2rem;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero p {
-                font-size: 1.1rem;
-            }
-            .section h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstroBridge - Global Intent Network</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+body{background:#020617;color:#fff;overflow-x:hidden}
+
+#sphereCanvas{
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:-1;
+  background:#020617;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+  position:relative;
+  z-index:1;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 0;
+  position:relative;
+  z-index:10;
+}
+
+.logo{
+  font-size:2rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.nav-links a{
+  color:#a0d8ef;
+  text-decoration:none;
+  font-size:1rem;
+  transition:color 0.3s;
+}
+
+.nav-links a:hover{
+  color:#f72585;
+}
+
+.x-button{
+  width:36px;
+  height:36px;
+  border:1px solid #4cc9f0;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#4cc9f0;
+  text-decoration:none;
+  font-size:1.2rem;
+}
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:4px;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:24px;
+  height:2px;
+  background:#4cc9f0;
+  border-radius:2px;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 0 60px;
+}
+
+.hero h1{
+  font-size:2.8rem;
+  font-weight:800;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  line-height:1.2;
+}
+
+.hero p{
+  font-size:1.2rem;
+  color:#a0d8ef;
+  max-width:700px;
+  margin:0 auto 36px;
+  line-height:1.5;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:center;
+}
+
+.btn{
+  padding:14px 36px;
+  border-radius:10px;
+  font-size:1.1rem;
+  font-weight:600;
+  text-decoration:none;
+  transition:transform 0.2s;
+}
+
+.btn-primary{
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  color:#fff;
+}
+
+.btn-secondary{
+  border:1px solid #4cc9f0;
+  color:#4cc9f0;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.section{
+  padding:60px 0;
+  text-align:center;
+}
+
+.section h2{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.section p{
+  font-size:1.1rem;
+  color:#a0d8ef;
+  line-height:1.6;
+  max-width:750px;
+  margin:0 auto;
+}
+
+footer{
+  text-align:center;
+  padding:40px 0;
+  color:#6b8cae;
+  font-size:0.9rem;
+}
+
+@media(max-width:768px){
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:80px;
+    right:20px;
+    background:#020617;
+    border:1px solid rgba(76,201,240,0.2);
+    border-radius:12px;
+    padding:20px;
+    gap:16px;
+    width:200px;
+  }
+  .nav-links.active{
+    display:flex;
+  }
+  .hamburger{
+    display:flex;
+  }
+  .hero h1{
+    font-size:2.2rem;
+  }
+}
+</style>
 </head>
+
 <body>
-    <div id="particles-js"></div>
-    <div class="container">
-        <nav>
-            <div class="logo">AstroBridge</div>
-            <div class="nav-right">
-                <button class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="nav-links" id="nav-links">
-                    <a href="vision.html">Vision</a>
-                    <a href="technology.html">Technology</a>
-                    <a href="products.html">Products</a>
-                    <a href="progress.html">Progress</a>
-                    <a href="roadmap.html">Roadmap</a>
-                    <a href="tokenomics.html">Tokenomics</a>
-                    <a href="team.html">Team</a>
-                    <a href="whitepaper.html">Whitepaper</a>
-                    <a href="painpoints.html">Pain Points</a>
-                    <a href="community.html">Community</a>
-                    <a href="memeastro.html">MemeAstro</a>
-                    <a href="global-console.html">Global Console</a>
-                    <a href="console.html">Demo Console</a>
-                </div>
-                <a href="https://x.com/Astro___Channel" class="x-button">𝕏</a>
-            </div>
-        </nav>
+<canvas id="sphereCanvas"></canvas>
 
-        <div class="hero">
-            <h1>Global Intent<br>Network</h1>
-            <p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p>
-            <div class="hero-buttons">
-                <a href="global-console.html" class="btn btn-primary">Global Console</a>
-                <a href="demo-console.html" class="btn btn-secondary">Demo Console</a>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>What is AstroBridge?</h2>
-            <p>AstroBridge is the global intent network that connects blockchains, AI agents, and robotic systems through a unified intent layer. It enables seamless cross-chain operations, autonomous execution, and decentralized governance for the next generation of digital and physical infrastructure.</p>
-        </div>
-
-        <footer>
-            &copy; 2026 AstroBridge | Global Intent Network
-        </footer>
+<div class="container">
+  <nav>
+    <div class="logo">AstroBridge</div>
+    <div class="nav-right">
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="vision.html">Vision</a>
+        <a href="technology.html">Technology</a>
+        <a href="products.html">Products</a>
+        <a href="progress.html">Progress</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="team.html">Team</a>
+        <a href="whitepaper.html">Whitepaper</a>
+        <a href="painpoints.html">Pain Points</a>
+        <a href="community.html">Community</a>
+        <a href="memeastro.html">MemeAstro</a>
+        <a href="global-console.html">Global Console</a>
+        <a href="console.html">Demo Console</a>
+      </div>
+      <a href="https://x.com/Astro___Channel" class="x-button">𝕏</a>
     </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // 粒子背景初始化
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: ["#4cc9f0", "#f72585"] },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#4cc9f0", opacity: 0.2, width: 1 },
-                move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out", bounce: false }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
-                modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } }, push: { particles_nb: 4 } }
-            },
-            retina_detect: true
-        });
+  <div class="hero">
+    <h1>Global Intent Network</h1>
+    <p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p>
+    <div class="hero-buttons">
+      <a href="global-console.html" class="btn btn-primary">Global Console</a>
+      <a href="demo-console.html" class="btn btn-secondary">Demo Console</a>
+    </div>
+  </div>
 
-        // 汉堡菜单交互
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
+  <div class="section">
+    <h2>What is AstroBridge?</h2>
+    <p>AstroBridge is the global intent network that connects blockchains, AI agents, and robotic systems through a unified intent layer. It enables seamless cross-chain operations, autonomous execution, and decentralized governance for the next generation of digital and physical infrastructure.</p>
+  </div>
+
+  <footer>&copy; 2026 AstroBridge | Global Intent Network</footer>
+</div>
+
+<script>
+const canvas=document.getElementById('sphereCanvas');
+const ctx=canvas.getContext('2d');
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+
+window.addEventListener('resize',()=>{
+  w=canvas.width=window.innerWidth;
+  h=canvas.height=window.innerHeight;
+});
+
+const particleCount=800;
+const radius=220;
+const speed=0.002;
+
+class Particle{
+  constructor(){
+    this.angle1=Math.random()*Math.PI*2;
+    this.angle2=Math.random()*Math.PI*2;
+    this.depth=Math.random()*0.8+0.2;
+    this.size=Math.random()*1.5+0.5;
+    this.color=Math.random()>0.5?'#4cc9f0':'#f72585';
+  }
+  update(){
+    this.angle1+=speed;
+    this.angle2+=speed*0.7;
+  }
+  draw(){
+    const x=w/2+radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);
+    const y=h/2+radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);
+    const z=radius*this.depth*Math.cos(this.angle1);
+    const scale=(z+radius)/(radius*2);
+    const alpha=scale*0.8+0.2;
+    ctx.beginPath();
+    ctx.arc(x,y,this.size*scale,0,Math.PI*2);
+    ctx.fillStyle=this.color.replace(')',`,`+alpha+`)`).replace('rgb','rgba');
+    ctx.fill();
+  }
+}
+
+const particles=Array.from({length:particleCount},()=>new Particle());
+
+function loop(){
+  requestAnimationFrame(loop);
+  ctx.fillStyle='rgba(2,6,23,0.2)';
+  ctx.fillRect(0,0,w,h);
+  particles.forEach(p=>{p.update();p.draw();});
+}
+loop();
+
+const hamburger=document.getElementById('hamburger');
+const navLinks=document.getElementById('nav-links');
+hamburger.addEventListener('click',()=>{
+  navLinks.classList.toggle('active');
+});
+</script>
 </body>
 </html>
