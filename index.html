@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AstroBridge - Global Intent Network</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700,800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
@@ -13,32 +13,18 @@ body{background:#020617;color:#fff;overflow-x:hidden}
 
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:80px}
 .logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-
-/* 导航区：链接 + X图标 */
 .nav-right{display:flex;align-items:center;gap:24px}
-.nav-links{display:flex;gap:24px}
-.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s;white-space:nowrap}
 .nav-links a:hover{color:#4cc9f0}
 
-/* X 账号按钮样式 */
 .x-button{
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  background:#121a33;
-  border:1px solid #2a3558;
-  color:#fff;
-  font-weight:bold;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  transition:.2s;
+  width:36px;height:36px;border-radius:50%;
+  background:#121a33;border:1px solid #2a3558;
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  text-decoration:none;transition:.2s;
 }
-.x-button:hover{
-  background:#4cc9f0;
-  color:#000;
-}
+.x-button:hover{background:#4cc9f0;color:#000;}
 
 .hero{text-align:center;margin-bottom:80px}
 .hero h1{font-size:4rem;font-weight:800;line-height:1.2;margin-bottom:20px;
@@ -65,7 +51,6 @@ footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,
 @media(max-width:768px){
 .hero h1{font-size:2.4rem}
 .card-grid{grid-template-columns:1fr}
-.nav-links{gap:12px}
 }
 </style>
 </head>
@@ -76,15 +61,22 @@ footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,
 
 <nav>
   <div class="logo">AstroBridge</div>
-  
   <div class="nav-right">
     <div class="nav-links">
       <a href="vision.html">Vision</a>
       <a href="technology.html">Technology</a>
+      <a href="products.html">Products</a>
       <a href="progress.html">Progress</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="team.html">Team</a>
+      <a href="whitepaper.html">Whitepaper</a>
+      <a href="painpoints.html">Pain Points</a>
+      <a href="community.html">Community</a>
+      <a href="memeastro.html">MemeAstro</a>
       <a href="global-console.html">Global Console</a>
+      <a href="console.html">Demo Console</a>
     </div>
-    <!-- 已改为你的 X 账号链接 -->
     <a href="https://x.com/Astro___Channel" target="_blank" class="x-button">𝕏</a>
   </div>
 </nav>
@@ -128,16 +120,14 @@ footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,
 <script>
 particlesJS("particles",{
   particles:{
-    number:{value:80,density:{enable:true,value_area:800}},
+    number:{value:80},
     color:{value:["#4cc9f0","#f72585"]},
-    opacity:{value:0.4,random:true},
-    size:{value:3,random:true},
-    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},
+    opacity:{value:0.4},
+    size:{value:3},
+    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15},
     move:{enable:true,speed:1.5,random:true}
-  },
-  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
-  retina_detect:true
-})
+  }
+});
 </script>
 </body>
 </html>
