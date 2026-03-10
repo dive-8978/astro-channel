@@ -8,30 +8,102 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
-.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-links{display:flex;gap:22px}
+
+#particles{
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  z-index:0;opacity:0.5
+}
+
+.container{
+  max-width:1000px;margin:auto;
+  padding:40px 20px;position:relative;z-index:2
+}
+
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:50px;flex-wrap:wrap;gap:16px
+}
+
+.logo{
+  font-size:2rem;font-weight:800;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+
+.nav-right{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap}
 .nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
 .nav-links a:hover{color:#4cc9f0}
-.x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
+
+.x-icon{
+  width:34px;height:34px;background:#000;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:.3s;border:1px solid #4cc9f0
+}
 .x-icon:hover{transform:scale(1.1);border-color:#f72585}
 .x-icon svg{width:15px;height:15px;fill:#fff}
-.page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+.page-title{
+  font-size:2.8rem;margin-bottom:12px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
 .page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
-.roadmap-item{background:rgba(255,255,255,0.04);border-left:4px solid #4cc9f0;border-radius:12px;padding:24px;margin-bottom:16px}
-.roadmap-item h3{color:#fff;font-size:1.2rem;margin-bottom:6px}
-.roadmap-item p{color:#a8dadc;line-height:1.6}
-.btn-back{display:inline-block;margin-top:40px;padding:12px 24px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
-footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
+
+.btn-home{
+  display:inline-block;padding:10px 20px;border-radius:10px;
+  background:rgba(76,201,240,0.1);border:1px solid #4cc9f0;
+  color:#4cc9f0;font-weight:600;text-decoration:none;
+  transition:.3s;margin-bottom:30px
+}
+.btn-home:hover{background:#4cc9f0;color:#000}
+
+.roadmap-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;margin-bottom:60px
+}
+
+.roadmap-box{
+  background:linear-gradient(135deg,#111833,#070b1f);
+  border:1px solid rgba(76,201,240,0.2);
+  border-radius:18px;padding:30px;
+  position:relative;overflow:hidden;transition:all 0.4s
+}
+.roadmap-box::before{
+  content:'';position:absolute;top:0;left:0;
+  width:100%;height:4px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+}
+.roadmap-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 30px rgba(76,201,240,0.15);
+  border-color:rgba(76,201,240,0.4)
+}
+
+.roadmap-tag{
+  display:inline-block;padding:6px 14px;border-radius:30px;
+  font-size:0.85rem;font-weight:700;margin-bottom:16px;
+  background:rgba(76,201,240,0.1);color:#4cc9f0
+}
+.roadmap-box h3{font-size:1.3rem;margin-bottom:12px;color:#fff}
+.roadmap-box p{color:#a8dadc;line-height:1.7;font-size:0.95rem}
+
+footer{
+  margin-top:60px;padding-top:30px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  color:#a8dadc;text-align:center
+}
+
 @media(max-width:768px){.page-title{font-size:2rem}}
 </style>
 </head>
 <body>
+
 <div id="particles"></div>
 <div class="container">
+
 <nav>
   <div class="logo">AstroBridge</div>
   <div class="nav-right">
@@ -47,35 +119,57 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
   </div>
 </nav>
 
+<a href="index.html" class="btn-home">← Back to Home</a>
+
 <h1 class="page-title">Roadmap</h1>
-<p class="page-desc">The path to full-chain intelligent intent.</p>
+<p class="page-desc">Four-Stage Development Path | AstroBridge Global Intent Network</p>
 
-<div class="roadmap-item">
-  <h3>Q1 2026 - Core Protocol Launch</h3>
-  <p>Basic intent layer, AI routing engine, and multi-chain support.</p>
-</div>
-<div class="roadmap-item">
-  <h3>Q2 2026 - Robot Network</h3>
-  <p>Decentralized robot node launch and solver market.</p>
-</div>
-<div class="roadmap-item">
-  <h3>Q3 2026 - Full Chain Compatibility</h3>
-  <p>Support for ALL public blockchains without limits.</p>
-</div>
-<div class="roadmap-item">
-  <h3>Q4 2026 - Ecosystem Expansion</h3>
-  <p>SDK, developer platform, and global adoption.</p>
-</div>
+<div class="roadmap-grid">
+  <div class="roadmap-box">
+    <div class="roadmap-tag">Stage 1 ✅</div>
+    <h3>Core Protocol Completed</h3>
+    <p>Full-chain compatibility, intent sovereignty, AI risk control and basic robot execution layer finished.</p>
+  </div>
 
-<a href="tokenomics.html" class="btn-back">← Previous</a>
+  <div class="roadmap-box">
+    <div class="roadmap-tag">Stage 2 🔵</div>
+    <h3>Token & Governance</h3>
+    <p>ASTRO token deployment, on-chain burn mechanism, API open and developer tool platform.</p>
+  </div>
+
+  <div class="roadmap-box">
+    <div class="roadmap-tag">Stage 3 🚀</div>
+    <h3>Global Node Network</h3>
+    <p>200+ global decentralized nodes, AI scheduling, high-availability cross-chain execution.</p>
+  </div>
+
+  <div class="roadmap-box">
+    <div class="roadmap-tag">Stage 4 🌌</div>
+    <h3>Robot Economy Ecosystem</h3>
+    <p>Become the Web3 intent OS for global DApps, robots, enterprises and full ecosystem adoption.</p>
+  </div>
+</div>
 
 <footer>
-  <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
+  <p>© 2026 AstroBridge | Global Intent Network</p>
 </footer>
+
 </div>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS("particles",{particles:{number:{value:80,density:{enable:true,value_area:800}},color:{value:["#4cc9f0","#f72585"]},opacity:{value:0.4,random:true},size:{value:3,random:true},line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},move:{enable:true,speed:1.5,random:true}},interactivity:{events:{onhover:{enable:true,mode:"grab"}}},retina_detect:true})
+particlesJS("particles",{
+  particles:{
+    number:{value:80},
+    color:{value:["#4cc9f0","#f72585"]},
+    opacity:{value:0.4,random:true},
+    size:{value:3,random:true},
+    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15},
+    move:{enable:true,speed:1.5,random:true}
+  },
+  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
+  retina_detect:true
+})
 </script>
 </body>
 </html>
