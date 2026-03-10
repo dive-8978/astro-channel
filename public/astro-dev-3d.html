@@ -1,279 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AstroBridge Developer 3D</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #000; overflow: hidden; font-family: Arial, sans-serif; }
-    #container { width: 100vw; height: 100vh; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstroBridge - Global Intent Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700,800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#020112;color:#fff;overflow-x:hidden}
 
-    /* 返回主页 */
-    #backBtn {
-      position: fixed; top: 24px; left: 30px;
-      padding: 10px 20px;
-      background: rgba(0,14,28,0.7);
-      border: 1px solid #0ef;
-      color: #0ef;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      backdrop-filter: blur(6px);
-      z-index: 999;
-    }
-    #backBtn:hover { background: rgba(0,50,80,0.6); }
+#sphereCanvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:0;
+  opacity:0.8;
+  background:#020112;
+}
 
-    /* 右侧开发者按钮面板 */
-    .dev-panel {
-      position: fixed; right: 26px; top: 50%;
-      transform: translateY(-50%);
-      display: flex; flex-direction: column;
-      gap: 16px; z-index: 999;
-    }
+.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
 
-    .dev-btn {
-      width: 180px; height: 50px;
-      background: rgba(0,10,25,0.85);
-      border: 2px solid #0ef;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 14px; font-weight: bold;
-      text-align: center; line-height: 50px;
-      cursor: pointer;
-      box-shadow: 0 0 12px #0ef;
-      transition: all 0.2s;
-      backdrop-filter: blur(6px);
-    }
-    .dev-btn:hover {
-      background: rgba(0,40,70,0.6);
-      box-shadow: 0 0 20px #0ff;
-      color: #0ff;
-    }
+/* 导航 + 汉堡菜单 */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:80px;
+  position:relative;
+  z-index:999;
+}
+.logo{
+  font-size:2rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    /* 悬浮提示 */
-    .tooltip {
-      position: absolute;
-      background: rgba(0,10,30,0.9);
-      color: #0ef;
-      padding: 6px 10px;
-      border-radius: 4px;
-      font-size: 12px;
-      pointer-events: none;
-      border: 1px solid #0ef;
-      display: none;
-      white-space: nowrap;
-      z-index: 999;
-    }
-  </style>
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+/* 汉堡按钮 */
+.hamburger{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+}
+.hamburger span{
+  width:28px;
+  height:2px;
+  background:#4cc9f0;
+  border-radius:2px;
+}
+
+/* 折叠菜单 */
+.nav-menu{
+  position:absolute;
+  top:100%;
+  right:0;
+  background:#0a1028;
+  border:1px solid rgba(76,201,240,0.2);
+  border-radius:16px;
+  padding:24px;
+  width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  z-index:999;
+}
+.nav-menu a{
+  color:#a8dadc;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+  white-space:nowrap;
+}
+.nav-menu a:hover{
+  color:#4cc9f0;
+}
+.nav-menu.hidden{
+  display:none;
+}
+
+.x-button{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#121a33;
+  border:1px solid #2a3558;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  transition:.2s;
+}
+.x-button:hover{
+  background:#4cc9f0;
+  color:#000;
+}
+
+.hero{text-align:center;margin-bottom:80px}
+.hero h1{
+  font-size:4rem;
+  font-weight:800;
+  line-height:1.2;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  font-size:1.2rem;
+  color:#a8dadc;
+  max-width:600px;
+  margin:0 auto 40px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.btn{
+  padding:16px 36px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn.primary{
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  color:#fff;
+}
+.btn.secondary{
+  background:rgba(76,201,240,0.1);
+  color:#4cc9f0;
+  border:1px solid #4cc9f0;
+}
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.section{margin-bottom:60px}
+.section h2{
+  font-size:2.2rem;
+  font-weight:700;
+  margin-bottom:20px;
+  color:#fff;
+}
+.section p{
+  color:#a8dadc;
+  font-size:1.1rem;
+  line-height:1.7;
+}
+
+.globe-container {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#globe-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.globe-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.globe-text h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.globe-text p {
+  font-size: 1.2rem;
+  color: #c4f1ff;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+.data-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(76,201,240,0.15);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+}
+.data-card .label {
+  font-size: 1rem;
+  color: #a8dadc;
+  margin-bottom: 12px;
+}
+.data-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4cc9f0;
+}
+.data-card .unit {
+  font-size: 1rem;
+  color: #f72585;
+  margin-left: 6px;
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(76,201,240,0.15);
+  border-radius:16px;
+  padding:24px;
+}
+.card h3{
+  color:#4cc9f0;
+  margin-bottom:10px;
+}
+.card p{
+  color:#a8dadc;
+}
+
+footer{
+  text-align:center;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  color:#a8dadc;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2.4rem}
+.card-grid, .data-grid{grid-template-columns:1fr}
+.globe-container{height:300px}
+}
+</style>
 </head>
 
 <body>
-<button id="backBtn">← Back to Home</button>
 
-<div class="dev-panel">
-  <div class="dev-btn" onclick="goDev(1)">Quick Connect</div>
-  <div class="dev-btn" onclick="goDev(2)">API Docs</div>
-  <div class="dev-btn" onclick="goDev(3)">Node Join</div>
-  <div class="dev-btn" onclick="goDev(4)">DApp Connect</div>
-  <div class="dev-btn" onclick="goDev(5)">Contract Info</div>
-  <div class="dev-btn" onclick="goDev(6)">Earn ASTRO</div>
-  <div class="dev-btn" onclick="goDev(7)">Console</div>
+<canvas id="sphereCanvas"></canvas>
+
+<div class="container">
+
+<nav>
+  <div class="logo">AstroBridge</div>
+  
+  <div class="nav-right">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href=" " target="_blank" class="x-button">𝕏</a >
+  </div>
+
+  <div class="nav-menu hidden" id="navMenu">
+    <a href="vision.html">Vision</a >
+    <a href="technology.html">Technology</a >
+    <a href="astro-dev-3d.html">Developer</a >
+    <a href="products.html">Products</a >
+    <a href="progress.html">Progress</a >
+    <a href="roadmap.html">Roadmap</a >
+    <a href="tokenomics.html">Tokenomics</a >
+    <a href="team.html">Team</a >
+    <a href="whitepaper.html">Whitepaper</a >
+    <a href="painpoints.html">Pain Points</a >
+    <a href="community.html">Community</a >
+    <a href="memeastro.html">MemeAstro</a >
+    <a href="global-console.html">Global Console</a >
+    <a href="console.html">Demo Console</a >
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Global Intent Network</h1>
+  <p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p >
+  <div class="buttons">
+    <a href="global-console.html" class="btn primary">Global Console</a >
+    <a href="console.html" class="btn secondary">Demo Console</a >
+  </div>
 </div>
 
-<div id="container"></div>
-<div class="tooltip" id="tooltip"></div>
+<div class="globe-container">
+  <div id="globe-particles"></div>
+  <div class="globe-text">
+    <h2>Compatible with ALL Blockchains</h2>
+    <p>Truly Universal Chain Compatibility Across the Globe</p >
+  </div>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/EffectComposer.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/RenderPass.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<div class="data-grid">
+  <div class="data-card">
+    <div class="label">24H Total Volume</div>
+    <div class="value" id="volume">$12,860,000,000</div>
+    <div class="unit">USD</div>
+  </div>
+  <div class="data-card">
+    <div class="label">24H Transactions</div>
+    <div class="value" id="tx">26,458,921</div>
+    <div class="unit">Tx</div>
+  </div>
+  <div class="data-card">
+    <div class="label">Global Nodes Online</div>
+    <div class="value" id="nodes">18,623</div>
+    <div class="unit">Nodes</div>
+  </div>
+</div>
 
+<div class="section">
+  <h2>What is AstroBridge</h2>
+  <p>AstroBridge connects all chains, assets, and robots into one intent-driven network. You only need to say what you want, and AI does the rest.</p >
+</div>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>AI Intent Routing</h3>
+    <p>Autonomous cross-chain execution with best price, speed, and security.</p >
+  </div>
+  <div class="card">
+    <h3>Global Network</h3>
+    <p>Decentralized nodes worldwide for ultra-low latency and reliability.</p >
+  </div>
+  <div class="card">
+    <h3>Robot Economy</h3>
+    <p>Built for AI agents to operate independently across chains 24/7.</p >
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AstroBridge | Global Intent Network</p >
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-// 返回主页
-document.getElementById('backBtn').onclick = () => {
-  alert('Go to AstroBridge Home');
-  // window.location.href = 'index.html';
-};
-
-// 开发者按钮点击
-function goDev(index) {
-  const txt = [
-    'Quick Connect Intent Network',
-    'API Docs: Execute / Query',
-    'Apply Global Node',
-    'DApp / Robot / AI Connect',
-    'ASTRO Token & Burn Contract',
-    'Developer Reward: Earn ASTRO',
-    'Online Console: Status & Burn'
-  ];
-  alert(txt[index-1]);
-  // 你后面填真实链接：window.open(...)
-}
-
-// ======== Three.js 3D 球形架构 ========
-const container = document.getElementById('container');
-const tooltip = document.getElementById('tooltip');
-
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 1000);
-camera.position.z = 20;
-
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.toneMapping = THREE.ReinhardToneMapping;
-container.appendChild(renderer.domElement);
-
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.minDistance = 9;
-controls.maxDistance = 36;
-
-// 发光效果
-const renderScene = new THREE.RenderPass(scene, camera);
-const bloomPass = new THREE.UnrealBloomPass(
-  new THREE.Vector2(window.innerWidth, window.innerHeight), 1.7, 0.45, 0.06
-);
-const composer = new THREE.EffectComposer(renderer);
-composer.addPass(renderScene);
-composer.addPass(bloomPass);
-
-// 你的真实模块
-const modules = [
-  { id: 'core', name: 'Core System', size: 15, color: '#ff2266', isCore: true },
-  { id: 'intent', name: 'Intent Layer', size: 9, color: '#00eeff' },
-  { id: 'ai', name: 'AI Engine', size: 9, color: '#44ffaa' },
-  { id: 'robot', name: 'Robot Cluster', size: 8, color: '#ffcc22' },
-  { id: 'chain', name: 'Chain Client', size: 9, color: '#7744ff' },
-  { id: 'queue', name: 'Queue Engine', size: 8, color: '#ff6622' },
-  { id: 'solver', name: 'Sovereign Solver', size: 8, color: '#cc44ff' },
-  { id: 'security', name: 'Security', size: 7, color: '#ff2244' },
-  { id: 'api', name: 'API PORT', size: 12, color: '#00ffdd', isApi: true },
-  { id: 'monitor', name: 'Monitor', size: 7, color: '#44ccff' },
-  { id: 'storage', name: 'Storage', size: 7, color: '#88ff88' },
-  { id: 'dashboard', name: 'Dashboard', size: 8, color: '#ff88ff' },
-  { id: 'config', name: 'Config', size: 6, color: '#cccccc' },
-  { id: 'utils', name: 'Utils', size: 6, color: '#aaaaaa' },
-];
-
-const links = [];
-const coreId = 'core';
-modules.forEach(m => { if (m.id !== coreId) links.push({ from: coreId, to: m.id }); });
-
-const sphereRadius = 9;
-const nodeObjMap = {};
-const lineObjMap = {};
-
-// 创建节点
-modules.forEach(mod => {
-  const g = new THREE.SphereGeometry(mod.size/4, 24,16);
-  const mat = new THREE.MeshBasicMaterial({
-    color: mod.color, transparent: true, opacity: 0.92
-  });
-  const mesh = new THREE.Mesh(g, mat);
-  mesh.userData = mod;
-
-  if (mod.isCore) {
-    mesh.position.set(0,0,0);
-  } else {
-    const phi = Math.random() * Math.PI * 2;
-    const costheta = Math.random() * 2 - 1;
-    const theta = Math.acos(costheta);
-    mesh.position.set(
-      sphereRadius * Math.sin(theta)*Math.cos(phi),
-      sphereRadius * Math.sin(theta)*Math.sin(phi),
-      sphereRadius * Math.cos(theta)
-    );
-  }
-  scene.add(mesh);
-  nodeObjMap[mod.id] = mesh;
+// 汉堡菜单开关
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('hidden');
 });
 
-// 创建连线
-links.forEach(link => {
-  const n1 = nodeObjMap[link.from];
-  const n2 = nodeObjMap[link.to];
-  const points = [n1.position, n2.position];
-  const g = new THREE.BufferGeometry().setFromPoints(points);
-  const mat = new THREE.LineBasicMaterial({
-    color: '#00ffff', transparent: true, opacity: 0.4
-  });
-  const line = new THREE.Line(g, mat);
-  scene.add(line);
-  lineObjMap[`${link.from}-${link.to}`] = line;
-});
-
-// 5 秒一次全局流光脉冲
-function pulseAllLinks() {
-  const duration = 1500;
-  links.forEach(link => {
-    const line = lineObjMap[`${link.from}-${link.to}`];
-    if (!line) return;
-    const t0 = performance.now();
-    function anim() {
-      const t = Math.min(1, (performance.now() - t0) / duration);
-      line.material.opacity = 0.2 + 0.8 * Math.sin(t * Math.PI);
-      if (t < 1) requestAnimationFrame(anim);
-      else line.material.opacity = 0.4;
-    }
-    anim();
-  });
-}
-setInterval(pulseAllLinks, 5000);
-pulseAllLinks();
-
-// 点击 API
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2();
-window.addEventListener('pointerdown', (e) => {
-  mouse.x = (e.clientX/window.innerWidth)*2 -1;
-  mouse.y = -(e.clientY/window.innerHeight)*2 +1;
-  raycaster.setFromCamera(mouse, camera);
-  const arr = Object.values(nodeObjMap);
-  const intersects = raycaster.intersectObjects(arr);
-  if (intersects.length) {
-    const d = intersects[0].object.userData;
-    if (d.isApi) {
-      alert('Open Developer API Portal');
-      // window.open('https://your-api-domain.com');
-    } else {
-      alert('Module: ' + d.name);
-    }
+// 中间小星球
+particlesJS("globe-particles",{
+  particles:{
+    number:{value:60},
+    shape:{type:"circle"},
+    color:{value:["#4cc9f0","#f72585","#ffffff"]},
+    opacity:{value:0.6},
+    size:{value:2.5},
+    line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},
+    move:{enable:true,speed:1,direction:"none",straight:false,spin:true}
   }
 });
 
-// 悬浮提示
-window.addEventListener('pointermove', (e) => {
-  mouse.x = (e.clientX/window.innerWidth)*2 -1;
-  mouse.y = -(e.clientY/window.innerHeight)*2 +1;
-  raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(Object.values(nodeObjMap));
-  if (intersects.length) {
-    const d = intersects[0].object.userData;
-    tooltip.style.display = 'block';
-    tooltip.style.left = e.clientX + 10 + 'px';
-    tooltip.style.top = e.clientY + 10 + 'px';
-    tooltip.innerText = d.name;
-  } else {
-    tooltip.style.display = 'none';
+// 数字动画
+function animateValue(id, start, end, duration) {
+  let obj = document.getElementById(id);
+  let range = end - start;
+  let minTimer = 50;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  stepTime = Math.max(stepTime, minTimer);
+  let startTime = new Date().getTime();
+  let endTime = startTime + duration;
+  let timer;
+
+  function run() {
+    let now = new Date().getTime();
+    let remaining = Math.max((endTime - now) / duration, 0);
+    let value = Math.round(end - (remaining * range));
+    if(id==="volume") obj.innerHTML = "$"+value.toLocaleString();
+    else obj.innerHTML = value.toLocaleString();
+    if (value == end) clearInterval(timer);
   }
-});
-
-// 动画循环
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();
-  composer.render();
+  timer = setInterval(run, stepTime);
+  run();
 }
-animate();
 
-// 窗口自适应
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth/window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  composer.setSize(window.innerWidth, window.innerHeight);
+animateValue("volume", 12850000000, 12860000000, 1500);
+animateValue("tx", 26450000, 26458921, 1500);
+animateValue("nodes", 18600, 18623, 1500);
+
+setInterval(() => {
+  animateValue("volume", 12860000000, 12860000000 + Math.floor(Math.random()*5000000), 1000);
+  animateValue("tx", 26458921, 26458921 + Math.floor(Math.random()*300), 1000);
+  animateValue("nodes", 18623, 18623 + Math.floor(Math.random()*3), 1000);
+}, 5000);
+
+// 3D圆球背景
+const canvas=document.getElementById('sphereCanvas');
+const ctx=canvas.getContext('2d');
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+
+window.addEventListener('resize',()=>{
+  w=canvas.width=window.innerWidth;
+  h=canvas.height=window.innerHeight;
 });
+
+const particleCount=800;
+const radius=240;
+const speed=0.002;
+
+class Particle{
+  constructor(){
+    this.angle1=Math.random()*Math.PI*2;
+    this.angle2=Math.random()*Math.PI*2;
+    this.depth=Math.random()*0.8+0.2;
+    this.size=Math.random()*1.5+0.5;
+    this.color=Math.random()>0.5 ? '#4cc9f0' : '#f72585';
+  }
+  update(){
+    this.angle1+=speed;
+    this.angle2+=speed*0.7;
+  }
+  draw(){
+    const x=w/2 + radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);
+    const y=h/2 + radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);
+    const z=radius*this.depth*Math.cos(this.angle1);
+    const scale=(z+radius)/(radius*2);
+    const alpha=scale*0.7+0.2;
+    
+    ctx.beginPath();
+    ctx.arc(x,y,this.size*scale,0,Math.PI*2);
+    ctx.fillStyle=this.color+'80';
+    ctx.fill();
+  }
+}
+
+const particles=Array.from({length:particleCount},()=>new Particle());
+
+function loop(){
+  requestAnimationFrame(loop);
+  ctx.fillStyle='rgba(2,6,23,0.15)';
+  ctx.fillRect(0,0,w,h);
+  particles.forEach(p=>{p.update();p.draw();});
+}
+loop();
 </script>
 </body>
 </html>
