@@ -3,100 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Astro Intent Network</title>
+<title>AstroBridge - Global Intent Network</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
-.container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:70px}
-.logo{font-size:2.5rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:24px}
-nav .links{display:flex;gap:30px}
-nav a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
-nav a:hover{color:#4cc9f0}
-.x-icon{width:36px;height:36px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
-.x-icon:hover{transform:scale(1.1);border-color:#f72585}
-.x-icon svg{width:16px;height:16px;fill:#fff}
-.hero{text-align:center;margin-top:60px;margin-bottom:100px}
-.hero h1{font-size:4.5rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:25px}
-.hero p{font-size:1.2rem;color:#a8dadc;max-width:720px;margin:auto;line-height:1.7}
-.hero-buttons{margin-top:40px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
-.btn{padding:16px 36px;border-radius:40px;font-size:1rem;font-weight:600;border:none;cursor:pointer;transition:.3s}
-.btn-primary{background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff}
-.btn-secondary{background:transparent;border:1px solid #4cc9f0;color:#4cc9f0}
-.btn:hover{transform:translateY(-3px)}
-.stats{display:flex;justify-content:space-around;margin-top:80px;margin-bottom:100px;background:rgba(255,255,255,0.05);padding:40px;border-radius:18px;backdrop-filter:blur(10px)}
-.stat{text-align:center}
-.stat h3{font-size:2.2rem;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.stat p{color:#a8dadc;font-size:.9rem;margin-top:6px}
-.section{margin-bottom:120px;text-align:center}
-.section h2{font-size:2.5rem;margin-bottom:20px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.section p{color:#a8dadc;max-width:760px;margin:auto;line-height:1.8}
-.architecture{margin-top:60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
-.arch-box{background:rgba(255,255,255,0.05);padding:30px;border-radius:14px;border:1px solid rgba(255,255,255,0.08);transition:.3s}
-.arch-box:hover{transform:translateY(-6px)}
-footer{text-align:center;padding:50px;color:#a8dadc;border-top:1px solid rgba(255,255,255,0.1)}
-@media(max-width:768px){.hero h1{font-size:2.8rem}.stats{flex-direction:column;gap:30px}}
+#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
+.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
+
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:80px}
+.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
+.nav-links a:hover{color:#4cc9f0}
+
+.hero{text-align:center;margin-bottom:80px}
+.hero h1{font-size:4rem;font-weight:800;line-height:1.2;margin-bottom:20px;
+background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.2rem;color:#a8dadc;max-width:600px;margin:0 auto 40px}
+
+.buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.btn{padding:16px 36px;border-radius:12px;font-weight:600;text-decoration:none;transition:.3s}
+.btn.primary{background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff}
+.btn.secondary{background:rgba(76,201,240,0.1);color:#4cc9f0;border:1px solid #4cc9f0}
+.btn:hover{transform:scale(1.05)}
+
+.section{margin-bottom:60px}
+.section h2{font-size:2.2rem;font-weight:700;margin-bottom:20px;color:#fff}
+.section p{color:#a8dadc;font-size:1.1rem;line-height:1.7}
+
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:24px}
+.card h3{color:#4cc9f0;margin-bottom:10px}
+.card p{color:#a8dadc}
+
+footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc}
+
+@media(max-width:768px){
+.hero h1{font-size:2.4rem}
+.card-grid{grid-template-columns:1fr}
+.nav-links{gap:12px}
+}
 </style>
 </head>
+
 <body>
 <div id="particles"></div>
 <div class="container">
+
 <nav>
-<div class="logo">Astro</div>
-<div class="nav-right">
-<div class="links">
-<a href="public/vision.html">Vision</a>
-<a href="public/technology.html">Technology</a>
-<a href="public/console.html">Console</a>
-<a href="public/progress.html">Progress</a>
-</div>
-<div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
-<svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-</div>
-</div>
+  <div class="logo">AstroBridge</div>
+  <div class="nav-links">
+    <a href="vision.html">Vision</a>
+    <a href="technology.html">Technology</a>
+    <a href="progress.html">Progress</a>
+    <a href="global-console.html">Global Console</a>
+  </div>
 </nav>
-<section class="hero">
-<h1>Astro Intent Network</h1>
-<p>The Next-Generation Intelligent Intent Layer for Web3. A full-chain AI-powered infrastructure that unifies all blockchains with autonomous execution, universal routing, and decentralized solver markets.</p>
-<div class="hero-buttons">
-<button class="btn btn-primary" onclick="location.href='public/console.html'">Launch Console</button>
-<button class="btn btn-secondary" onclick="location.href='public/vision.html'">Explore Vision</button>
+
+<div class="hero">
+  <h1>Global Intent Network</h1>
+  <p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p>
+  <div class="buttons">
+    <a href="global-console.html" class="btn primary">Global Console</a>
+    <a href="console.html" class="btn secondary">Demo Console</a>
+  </div>
 </div>
-</section>
-<div class="stats">
-<div class="stat"><h3>ALL</h3><p>Chains Supported</p></div>
-<div class="stat"><h3>200+</h3><p>Global Nodes</p></div>
-<div class="stat"><h3>10K+</h3><p>AI Robots</p></div>
-<div class="stat"><h3>1M+</h3><p>Intents Executed</p></div>
+
+<div class="section">
+  <h2>What is AstroBridge</h2>
+  <p>AstroBridge connects all chains, assets, and robots into one intent-driven network. You only need to say what you want, and AI does the rest.</p>
 </div>
-<section class="section">
-<h2>How It Works</h2>
-<p>Users submit intent → AI analyzes risk & routing → Robot network executes across chains → Trustless & automatic settlement.</p>
-</section>
-<section class="section">
-<h2>Network Architecture</h2>
-<div class="architecture">
-<div class="arch-box"><h3>Intent Layer</h3><p>User intent creation & signature verification</p></div>
-<div class="arch-box"><h3>AI Engine</h3><p>Risk analysis & routing optimization</p></div>
-<div class="arch-box"><h3>Robot Network</h3><p>Autonomous execution agents</p></div>
-<div class="arch-box"><h3>Chain Router</h3><p>Cross-chain interoperability</p></div>
-<div class="arch-box"><h3>Solver Market</h3><p>Decentralized intent fulfillment</p></div>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>AI Intent Routing</h3>
+    <p>Autonomous cross-chain execution with best price, speed, and security.</p>
+  </div>
+  <div class="card">
+    <h3>Global Network</h3>
+    <p>Decentralized nodes worldwide for ultra-low latency and reliability.</p>
+  </div>
+  <div class="card">
+    <h3>Robot Economy</h3>
+    <p>Built for AI agents to operate independently across chains 24/7.</p>
+  </div>
 </div>
-</section>
-<section class="section">
-<h2>Astro Token</h2>
-<p>ASTRO fuels the network. Every intent execution consumes ASTRO as gas, with automatic on-chain burn mechanism.</p>
-</section>
+
 <footer>
-<p>© 2026 Astro Intent Network | FOR DEMONSTRATION ONLY</p>
+  <p>© 2026 AstroBridge | Global Intent Network | FOR DEMONSTRATION ONLY</p>
 </footer>
+
 </div>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS("particles",{particles:{number:{value:120,density:{enable:true,value_area:800}},color:{value:["#4cc9f0","#f72585","#bae6fd"]},opacity:{value:0.6,random:true},size:{value:4,random:true},line_linked:{enable:true,distance:140,color:"#4cc9f0",opacity:0.25,width:1},move:{enable:true,speed:1.8,random:true,straight:false}},interactivity:{detect_on:"canvas",events:{onhover:{enable:true,mode:"grab"}}},retina_detect:true})
+particlesJS("particles",{
+  particles:{
+    number:{value:80,density:{enable:true,value_area:800}},
+    color:{value:["#4cc9f0","#f72585"]},
+    opacity:{value:0.4,random:true},
+    size:{value:3,random:true},
+    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},
+    move:{enable:true,speed:1.5,random:true}
+  },
+  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
+  retina_detect:true
+})
 </script>
 </body>
 </html>
