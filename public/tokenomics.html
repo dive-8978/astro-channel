@@ -4,118 +4,235 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AstroBridge - Tokenomics</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-html, body { width:100%; height:100%; overflow-x:hidden; background:#020617; color:#fff; }
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.3}
-.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px;flex-wrap:wrap;gap:15px}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-.nav-links{display:flex;gap:22px;flex-wrap:wrap}
-.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
-.nav-links a:hover{color:#4cc9f0}
-.x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
-.x-icon:hover{transform:scale(1.1);border-color:#f72585}
-.x-icon svg{width:15px;height:15px;fill:#fff}
-.page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
-.token-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px;transition:0.3s}
-.token-card:hover{border-color:rgba(76,201,240,0.3);transform:translateY(-2px)}
-.token-card h3{color:#4cc9f0;font-size:1.3rem;margin-bottom:10px}
-.token-card p{color:#a8dadc;line-height:1.7}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
 
-.btn-home{
-  display:inline-block;
-  padding:10px 20px;
-  border-radius:10px;
-  background:rgba(76,201,240,0.1);
-  border:1px solid #4cc9f0;
-  color:#4cc9f0;
-  font-weight:600;
-  text-decoration:none;
-  transition:0.3s;
-  margin-bottom:20px;
-}
-.btn-home:hover{background:#4cc9f0;color:#000}
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: #050a1a;
+    color: #e0e6ff;
+    overflow-x: hidden;
+  }
 
-footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
-@media(max-width:768px){.page-title{font-size:2rem}}
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, #102045 0%, #050a1a 60%);
+    z-index: 0;
+    opacity: 1;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00d1ff, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 26px;
+  }
+
+  .nav-links a {
+    color: #a0b4e6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #00d1ff;
+  }
+
+  .x-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(0,209,255,0.08);
+    border: 1px solid rgba(0,209,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .x-btn:hover {
+    background: rgba(0,209,255,0.15);
+    border-color: #00d1ff;
+  }
+
+  .x-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: #00d1ff;
+  }
+
+  .btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(0,209,255,0.08);
+    border: 1px solid rgba(0,209,255,0.4);
+    color: #00d1ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 24px;
+  }
+
+  .btn-home:hover {
+    background: #00d1ff;
+    color: #050a1a;
+  }
+
+  .page-title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00d1ff, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-desc {
+    color: #a0b4e6;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+
+  /* 四个方块布局 */
+  .token-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .token-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(0,209,255,0.15);
+    border-radius: 18px;
+    padding: 30px;
+    transition: 0.3s;
+  }
+
+  .token-box:hover {
+    border-color: rgba(0,209,255,0.4);
+    background: rgba(0,209,255,0.04);
+    transform: translateY(-3px);
+  }
+
+  .token-box h3 {
+    color: #00d1ff;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .token-box p {
+    color: #c0d0f0;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #778ab8;
+    text-align: center;
+  }
+
+  @media (max-width:768px) {
+    .page-title { font-size: 2rem; }
+    .token-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
+
 <body>
 
-<div id="particles"></div>
+<div id="bg"></div>
 <div class="container">
 
-<nav>
-  <div class="logo">AstroBridge</div>
-  <div class="nav-right">
-    <div class="nav-links">
-      <a href="vision.html">Vision</a>
-      <a href="painpoints.html">Pain Points</a>
-      <a href="technology.html">Technology</a>
-      <a href="progress.html">Progress</a>
+  <nav>
+    <div class="logo">AstroBridge</div>
+    <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;">
+      <div class="nav-links">
+        <a href="vision.html">Vision</a>
+        <a href="painpoints.html">Pain Points</a>
+        <a href="technology.html">Technology</a>
+        <a href="progress.html">Progress</a>
+      </div>
+      <div class="x-btn" onclick="window.open('https://x.com/Astro___Channel','_blank')">
+        <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+      </div>
     </div>
-    <div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
-      <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+  </nav>
+
+  <a href="index.html" class="btn-home">← Back to Home</a>
+
+  <h1 class="page-title">Tokenomics</h1>
+  <p class="page-desc">ASTRO — The Fuel of the Global Intent Economy</p>
+
+  <div class="token-grid">
+    <div class="token-box">
+      <h3>Token Info</h3>
+      <p>
+        Token: ASTRO<br>
+        Network: BSC<br>
+        Supply: 100,000,000,000
+      </p>
+    </div>
+
+    <div class="token-box">
+      <h3>Utility & Fuel</h3>
+      <p>ASTRO is the gas for intent execution, node computing, cross-chain validation and protocol services.</p>
+    </div>
+
+    <div class="token-box">
+      <h3>Deflationary</h3>
+      <p>Auto burn from fees. Supply decreases permanently, creating long-term deflationary value.</p>
+    </div>
+
+    <div class="token-box">
+      <h3>Governance & Incentives</h3>
+      <p>Vote on upgrades & ecosystem rewards for nodes, developers, liquidity providers and builders.</p>
     </div>
   </div>
-</nav>
 
-<a href="index.html" class="btn-home">← Back to Home</a>
-
-<h1 class="page-title">Tokenomics</h1>
-<p class="page-desc">ASTRO: The fuel of the intent economy.</p>
-
-<div class="token-card">
-  <h3>Token Information</h3>
-  <p>Token: ASTRO<br>Network: BSC (Binance Smart Chain)<br>Total Supply: 100,000,000,000 ASTRO<br>No mint, no unlock.</p>
-</div>
-
-<div class="token-card">
-  <h3>Utility & Execution Fuel</h3>
-  <p>ASTRO is the native gas for all intent execution, node computing, and cross-chain validation. All network fees flow back to ecosystem participants.</p>
-</div>
-
-<div class="token-card">
-  <h3>Deflationary Mechanism</h3>
-  <p>Automatic on-chain burn from transaction fees and execution costs. Circulating supply decreases permanently over time, creating deflationary pressure.</p>
-</div>
-
-<div class="token-card">
-  <h3>Governance Rights</h3>
-  <p>ASTRO holders control network governance, including protocol upgrades, node parameters, risk policies, and ecosystem fund allocation.</p>
-</div>
-
-<div class="token-card">
-  <h3>Ecosystem Incentives</h3>
-  <p>Rewards for node operators, developers, liquidity providers, and early contributors to build a sustainable intent economy.</p>
-</div>
-
-<footer>
-  <p>© 2026 AstroBridge | Global Intent Network</p>
-</footer>
+  <footer>
+    <p>© 2026 AstroBridge | Global Intent Network</p>
+  </footer>
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-setTimeout(()=>{
-  particlesJS("particles",{
-    particles:{
-      number:{value:25},
-      color:{value:["#4cc9f0","#f72585"]},
-      opacity:{value:0.3},
-      size:{value:2},
-      line_linked:{enable:true,distance:100,color:"#4cc9f0",opacity:0.08,width:1},
-      move:{enable:true,speed:0.5,bounce:false}
-    },
-    interactivity:{events:{onhover:{enable:false}}},
-    retina_detect:false
-  });
-}, 100);
-</script>
 </body>
 </html>
