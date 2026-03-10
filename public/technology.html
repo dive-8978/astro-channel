@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AstroBridge - Technology</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
@@ -12,17 +12,18 @@ body{background:#020617;color:#fff;overflow-x:hidden}
 /* 左上角返回主页按钮 */
 .back-home {
   position: fixed;
-  top: 28px;
-  left: 28px;
+  top: 20px;
+  left: 20px;
   z-index: 999;
   color: #4cc9f0;
   font-weight: 600;
   text-decoration: none;
-  padding: 9px 16px;
+  padding: 8px 14px;
   border: 1px solid #4cc9f0;
   border-radius: 10px;
   background: rgba(76,201,240,0.08);
   transition: 0.2s;
+  font-size:14px;
 }
 .back-home:hover {
   background: #4cc9f0;
@@ -30,75 +31,62 @@ body{background:#020617;color:#fff;overflow-x:hidden}
 }
 
 #particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
-.container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-links{display:flex;gap:22px}
-.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
+.container{max-width:1200px;margin:auto;padding:30px 20px;position:relative;z-index:2}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;flex-wrap:wrap;gap:16px;}
+.logo{font-size:1.6rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-right{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.nav-links{display:flex;gap:16px;flex-wrap:wrap;}
+.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s;font-size:14px;}
 .nav-links a:hover{color:#4cc9f0}
-.x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
+.x-icon{width:32px;height:32px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
 .x-icon:hover{transform:scale(1.1);border-color:#f72585}
-.x-icon svg{width:15px;height:15px;fill:#fff}
+.x-icon svg{width:14px;height:14px;fill:#fff}
 
-.page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
+.page-title{font-size:2rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-desc{color:#a8dadc;font-size:1rem;margin-bottom:30px}
 
-/* -------------------------- 科幻架构方块 -------------------------- */
+/* 科幻架构方块 */
 .tech-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  margin: 60px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin: 40px 0;
   position: relative;
+  max-width:100%;
 }
 
 .tech-node {
   position: relative;
-  border-radius: 18px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-weight: 700;
   color: #fff;
   background: linear-gradient(135deg, #0ea5e9, #4cc9f0);
-  box-shadow: 0 0 25px rgba(76, 201, 240, 0.4);
+  box-shadow: 0 0 20px rgba(76, 201, 240, 0.3);
   animation: pulse-glow 3s infinite alternate ease-in-out;
   transition: all 0.4s ease;
   z-index: 2;
-  padding: 10px;
-}
-
-.tech-node.big {
-  width: 200px;
-  height: 200px;
-  font-size: 1rem;
-  background: linear-gradient(135deg, #0ea5e9, #0369a1);
-}
-.tech-node.small {
-  width: 130px;
-  height: 130px;
-  font-size: 0.85rem;
-  background: linear-gradient(135deg, #4cc9f0, #0284c7);
+  padding: 12px;
+  aspect-ratio:1/1;
 }
 
 .tech-node .icon {
-  font-size: 32px;
+  font-size: 28px;
 }
 .tech-node.big .icon {
-  font-size: 44px;
+  font-size: 36px;
 }
 
 .tech-node::before {
   content: '';
   position: absolute;
   inset: -2px;
-  border-radius: 19px;
+  border-radius: 18px;
   background: linear-gradient(90deg, #4cc9f0, #f72585, #4cc9f0);
   z-index: -1;
   opacity: 0;
@@ -111,23 +99,26 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
 
 @keyframes pulse-glow {
   0% { transform: scale(1); box-shadow: 0 0 20px rgba(76, 201, 240, 0.3); }
-  100% { transform: scale(1.04); box-shadow: 0 0 40px rgba(76, 201, 240, 0.7); }
+  100% { transform: scale(1.03); box-shadow: 0 0 30px rgba(76, 201, 240, 0.5); }
 }
 @keyframes hue {
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
 }
 
-.tech-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px}
-.tech-card h3{color:#4cc9f0;font-size:1.3rem;margin-bottom:10px}
-.tech-card p{color:#a8dadc;line-height:1.7}
+.tech-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:22px;margin-bottom:16px}
+.tech-card h3{color:#4cc9f0;font-size:1.1rem;margin-bottom:8px}
+.tech-card p{color:#a8dadc;line-height:1.6;font-size:0.95rem}
 
-footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
+footer{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center;font-size:14px}
 
+/* 手机端 */
 @media(max-width:768px){
-  .page-title{font-size:2rem}
-  .tech-node.big{width:150px;height:150px}
-  .tech-node.small{width:100px;height:100px}
+  .page-title{font-size:1.7rem}
+  .tech-node{padding:10px;}
+  .tech-node .icon{font-size:24px;}
+  .tech-node.big .icon{font-size:28px;}
+  .tech-node{font-size:0.75rem;}
 }
 </style>
 </head>
@@ -157,17 +148,16 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 <h1 class="page-title">Technology</h1>
 <p class="page-desc">9-Layer Modular Architecture · Full On-Chain Alignment</p>
 
-<!-- ===================== 科幻方块架构图 ===================== -->
 <div class="tech-grid">
   <div class="tech-node big">
     <div class="icon">🪪</div>
     <div>Intent Core</div>
   </div>
-  <div class="tech-node small">
+  <div class="tech-node">
     <div class="icon">🤖</div>
     <div>AI Engine</div>
   </div>
-  <div class="tech-node small">
+  <div class="tech-node">
     <div class="icon">🤖</div>
     <div>Robot Cluster</div>
   </div>
@@ -175,11 +165,11 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
     <div class="icon">🌍</div>
     <div>Chain Compatibility</div>
   </div>
-  <div class="tech-node small">
+  <div class="tech-node">
     <div class="icon">⚡</div>
     <div>Distributed Queue</div>
   </div>
-  <div class="tech-node small">
+  <div class="tech-node">
     <div class="icon">🪐</div>
     <div>Free Node Network</div>
   </div>
@@ -187,7 +177,7 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
     <div class="icon">🌕</div>
     <div>Solver Network</div>
   </div>
-  <div class="tech-node small">
+  <div class="tech-node">
     <div class="icon">🛡️</div>
     <div>Security & ZK</div>
   </div>
@@ -196,7 +186,6 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
     <div>API & Console</div>
   </div>
 </div>
-<!-- =========================================================== -->
 
 <div class="tech-card">
   <h3>Intent Layer</h3>
