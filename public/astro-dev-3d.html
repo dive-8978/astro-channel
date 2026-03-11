@@ -35,7 +35,7 @@ body { width:100vw; height:100vh; background: radial-gradient(circle at 50%, #05
 <div class="title">The Next Decade: Blockchain & Web3 Infrastructure</div>
 <div class="holo-text" id="holoText">AstroBridge</div>
 <div class="tip">Drag to rotate • Scroll to zoom • Click Earth to enter Developer Center</div>
-<div class="home-btn" onclick="goHome()">← Return Home</div>
+<div class="home-btn" onclick="location.href='index.html'">← Return Home</div>
 
 <div id="scene-container"></div>
 
@@ -146,7 +146,6 @@ function fireBeam(){
 }
 
 function goApi(path){ alert('Navigate to '+path); }
-function goHome(){ alert('Return Home'); }
 
 function animate(){ requestAnimationFrame(animate); controls.update(); renderer.render(scene,camera); }
 
