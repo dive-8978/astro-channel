@@ -1,0 +1,40 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#000; overflow:hidden; font-family:Arial,sans-serif; }
+#container { width:100vw; height:100vh; }
+
+#backBtn{
+  position:fixed; top:24px; left:30px;
+  padding:10px 20px;
+  background: rgba(0,14,28,0.7);
+  border:1px solid #0ef; color:#0ef;
+  border-radius:8px; font-size:14px; cursor:pointer;
+  backdrop-filter:blur(6px); z-index:999;
+}
+#backBtn:hover{ background:rgba(0,50,80,0.6); }
+
+.dev-panel{
+  position:fixed; right:26px; top:50%;
+  transform:translateY(-50%);
+  display:flex; flex-direction:column; gap:16px; z-index:999;
+}
+.dev-btn{
+  width:180px; height:50px;
+  background: rgba(0,10,25,0.85);
+  border:2px solid #0ef; border-radius:10px;
+  color:#fff; font-size:14px; font-weight:bold;
+  text-align:center; line-height:50px;
+  cursor:pointer; box-shadow:0 0 12px #0ef;
+  transition:all 0.2s; backdrop-filter:blur(6px);
+}
+.dev-btn:hover{
+  background: rgba(0,40,70,0.6);
+  box-shadow:0 0 20px #0ff; color:#0ff;
+}
+
+.tooltip{
+  position:absolute; background:rgba(0,10,30,0.9);
+  color:#0ef; padding:6px 10px; border-radius:4px;
+  font-size:12px; pointer-events:none; border:1px solid #0ef;
+  display:none; white-space:nowrap; z-index:999;
+  transition: all 0.2s ease;
+}
