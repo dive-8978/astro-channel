@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstroBridge - Whitepaper</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>AstroBridge - Whitepaper V7.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
@@ -19,20 +19,25 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
 .x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
 .x-icon:hover{transform:scale(1.1);border-color:#f72585}
 .x-icon svg{width:15px;height:15px;fill:#fff}
+
 .page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
+.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px;line-height:1.6}
+
 .wp-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px}
 .wp-card h3{color:#4cc9f0;font-size:1.3rem;margin-bottom:10px}
-.wp-card p{color:#a8dadc;line-height:1.7}
-.download-btn{display:inline-block;padding:14px 30px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600;margin-top:20px}
-.btn-back{display:inline-block;margin-top:40px;padding:12px 24px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
+.wp-card p{color:#a8dadc;line-height:1.7;margin-bottom:8px}
+
+.download-btn{display:inline-block;padding:14px 30px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600;margin-top:20px;cursor:pointer}
+.btn-home{display:inline-block;margin-top:40px;padding:12px 24px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
+
 footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
+
 @media(max-width:768px){.page-title{font-size:2rem}}
 </style>
 </head>
 <body>
 <div id="particles"></div>
-<div class="container">
+<div class="container" id="pdf-content">
 <nav>
   <div class="logo">AstroBridge</div>
   <div class="nav-right">
@@ -48,33 +53,74 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
   </div>
 </nav>
 
-<h1 class="page-title">Whitepaper</h1>
-<p class="page-desc>Complete technical & economic documentation.</p>
+<h1 class="page-title">Whitepaper V7.0</h1>
+<p class="page-desc">Global Intelligent Intent Network | Final Version · Full-Chain Compatible · Token Autonomy · Intent Sovereignty</p>
 
 <div class="wp-card">
-  <h3>AstroBridge Whitepaper 7.0</h3>
-  <p>Full documentation of intent layer, AI agent system, tokenomics, and roadmap.</p>
-</div>
-<div class="wp-card">
-  <h3>Technical Paper</h3>
-  <p>Deep dive into architecture, cryptography, and cross-chain verification.</p>
-</div>
-<div class="wp-card">
-  <h3>Economics Paper</h3>
-  <p>Token model, incentives, staking, and governance mechanisms.</p>
+  <h3>Project Overview</h3>
+  <p>AstroBridge is the world’s first full-chain intelligent intent network, providing intent sovereignty confirmation, AI autonomous governance, and non-custodial cross-chain execution for the robotic economy. Users only need to send intents; AI and robots complete the rest automatically across all chains.</p>
 </div>
 
-<a href="#" class="download-btn">Download Whitepaper</a>
+<div class="wp-card">
+  <h3>Core Architecture</h3>
+  <p>9-layer modular architecture: Intent Confirmation Layer, AI Autonomy Layer, Robot Execution Layer, Full-Chain Compatibility Layer, Distributed Scheduling Layer, Global Free Node Layer, Decentralized Solver Network, Security & Proof Layer, API & Console Layer. All modules match engineering code one-to-one.</p>
+</div>
+
+<div class="wp-card">
+  <h3>AI Autonomy (Controlled)</h3>
+  <p>Four core capabilities: Auto-Evolution, Auto-Governance, Auto-Repair, Auto-Expansion. AI only optimizes and executes within strict boundaries; human retains full control of core rules.</p>
+</div>
+
+<div class="wp-card">
+  <h3>Astro Token (BSC BEP20)</h3>
+  <p>Total Supply: 10,000,000,000 • Decimals: 18 • No mint, no pre-mine. 100% of fees are burned on-chain. Annual burn cap: 2% of total supply. All burns are verifiable on BSC Scan.</p>
+</div>
+
+<div class="wp-card">
+  <h3>Global Node Network</h3>
+  <p>Powered by 200+ global free public RPC nodes. AI automatically selects, balances, and repairs nodes to achieve a decentralized, high-availability network with zero hardware cost.</p>
+</div>
+
+<div class="wp-card">
+  <h3>Security System</h3>
+  <p>Non-custodial, robot permission isolation, triple intent verification, emergency circuit breakers, anti-MEV, anti-quantum attack, and ZK proof throughout the whole process.</p>
+</div>
+
+<a class="download-btn" onclick="downloadPDF()">Download Full Whitepaper PDF</a>
 <br>
-<a href="team.html" class="btn-back">← Previous</a>
+<a href="index.html" class="btn-home">← Back to Home</a>
 
 <footer>
-  <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
+  <p>© 2026 AstroBridge</p>
 </footer>
 </div>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-particlesJS("particles",{particles:{number:{value:80,density:{enable:true,value_area:800}},color:{value:["#4cc9f0","#f72585"]},opacity:{value:0.4,random:true},size:{value:3,random:true},line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},move:{enable:true,speed:1.5,random:true}},interactivity:{events:{onhover:{enable:true,mode:"grab"}}},retina_detect:true})
+particlesJS("particles",{
+  particles:{
+    number:{value:80,density:{enable:true,value_area:800}},
+    color:{value:["#4cc9f0","#f72585"]},
+    opacity:{value:0.4,random:true},
+    size:{value:3,random:true},
+    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},
+    move:{enable:true,speed:1.5,random:true}
+  },
+  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
+  retina_detect:true
+});
+
+function downloadPDF() {
+  const opt = {
+    margin: 10,
+    filename: 'AstroBridge-Whitepaper-V7.0.pdf',
+    image: { type: 'jpg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+  html2pdf().set(opt).from(document.getElementById('pdf-content')).save();
+}
 </script>
 </body>
 </html>
