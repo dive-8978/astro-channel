@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AstroBridge - Engineering Structure</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600,700,800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020112;color:#fff;overflow:hidden;}
@@ -67,6 +67,7 @@ body{background:#020112;color:#fff;overflow:hidden;}
   cursor:pointer;
   transition:0.25s transform,0.25s box-shadow;
   font-size:14px;
+  z-index:2;
 }
 .node:hover{
   transform:scale(1.1);
@@ -99,6 +100,26 @@ body{background:#020112;color:#fff;overflow:hidden;}
   0%{transform:scale(0.2);}
   100%{transform:scale(2.5);opacity:0;}
 }
+
+/* AstroBridge 中心字 */
+.center-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:4rem;
+  font-weight:900;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 0 20px #4cc9f0,0 0 40px #f72585,0 0 60px #4cc9f0;
+  opacity:0;
+  z-index:5;
+  animation:flash 1.5s infinite alternate;
+}
+@keyframes flash{
+  0%{opacity:0.3;}
+  100%{opacity:1;}
+}
 </style>
 </head>
 <body>
@@ -109,7 +130,7 @@ body{background:#020112;color:#fff;overflow:hidden;}
 <div class="title">ASTROBRIDGE ENGINEERING STRUCTURE</div>
 <div class="tooltip" id="tooltip"></div>
 
-<!-- 节点示意 -->
+<!-- 节点 -->
 <div class="node" data-tooltip="System entry point + self-maintenance tasks" style="top:150px; left:50%;">index.ts</div>
 <div class="node" data-tooltip="Global AI orchestrator + automatic maintenance" style="top:250px; left:30%;">AiOrchestrator.ts</div>
 <div class="node" data-tooltip="AI risk monitoring + threshold management" style="top:250px; left:70%;">AiRiskEngine.ts</div>
@@ -117,8 +138,8 @@ body{background:#020112;color:#fff;overflow:hidden;}
 <div class="node" data-tooltip="Decentralized solver for autonomous execution" style="top:400px; left:80%;">SovereignSolver.ts</div>
 <div class="node" data-tooltip="Robot lifecycle and cluster management" style="top:550px; left:50%;">Robot.ts</div>
 
-<!-- HUD 扫描圈 -->
 <div class="radar-circle" style="top:500px; left:50%; width:100px; height:100px;"></div>
+<div class="center-text" id="centerText">ASTROBRIDGE</div>
 
 <script>
 // 粒子背景
@@ -173,6 +194,54 @@ document.querySelectorAll('.node').forEach(node=>{
     tooltip.style.opacity = 0;
   });
 });
+
+// 光束动画
+const centerText = document.getElementById('centerText');
+const nodes = Array.from(document.querySelectorAll('.node'));
+
+function fireBeams(){
+  const beams = [];
+  nodes.forEach(node=>{
+    const rect = node.getBoundingClientRect();
+    const startX = rect.left + rect.width/2;
+    const startY = rect.top + rect.height/2;
+    const endX = w/2;
+    const endY = h/2;
+    beams.push({x:startX,y:startY,dx:(endX-startX)/60,dy:(endY-startY)/60,count:0});
+  });
+
+  const beamAnim = setInterval(()=>{
+    ctx.fillStyle='rgba(2,6,23,0.3)';
+    ctx.fillRect(0,0,w,h);
+    particles.forEach(p=>{p.update();p.draw();});
+    let allDone = true;
+    beams.forEach(b=>{
+      if(b.count<60){
+        allDone=false;
+        ctx.beginPath();
+        ctx.strokeStyle='rgba(76,201,240,0.8)';
+        ctx.lineWidth=2;
+        ctx.moveTo(b.x,b.y);
+        b.x+=b.dx;
+        b.y+=b.dy;
+        ctx.lineTo(b.x,b.y);
+        ctx.stroke();
+        b.count++;
+      }
+    });
+    if(allDone){
+      clearInterval(beamAnim);
+      centerText.style.opacity=1;
+    }
+  },16);
+}
+
+// 每3秒触发一次
+setInterval(()=>{
+  centerText.style.opacity=0;
+  fireBeams();
+},3000);
+
 </script>
 </body>
 </html>
