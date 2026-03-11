@@ -3,53 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web3 Blockchain Infrastructure - Developer Portal</title>
+<title>AstroBridge Developer Portal</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', system-ui, sans-serif;}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif;}
 body { width:100vw; height:100vh; background: radial-gradient(circle at 50%, #050a18, #000); overflow:hidden; color:#e8eaf6; }
-
-/* 顶部开发者 API 端口 */
-.api-bar { position: fixed; top:20px; left:50%; transform:translateX(-50%); display:flex; gap:12px; z-index:999; flex-wrap:wrap;}
+.api-bar { position: fixed; top:20px; left:50%; transform:translateX(-50%); display:flex; gap:12px; flex-wrap:wrap; z-index:999;}
 .api-item { padding:10px 16px; background: rgba(24,34,66,0.8); border:1px solid #4cc9f0; color:#4cc9f0; border-radius:8px; font-size:12px; cursor:pointer; transition:.3s;}
-.api-item:hover { background:#4cc9f0; color:#000;}
-
-/* 3D画布 */
+.api-item:hover { background:#4cc9f0; color:#000; }
 #scene-container { width:100%; height:100%; position:fixed; top:0; left:0; z-index:1; }
-
-/* 中间标题 */
-.title { position: fixed; top:100px; left:50%; transform:translateX(-50%); font-size:26px; font-weight:bold;
+.title { position: fixed; top:80px; left:50%; transform:translateX(-50%); font-size:26px; font-weight:bold;
   background: linear-gradient(90deg,#4cc9f0,#f72585); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-  text-shadow:0 0 15px rgba(76,201,240,0.4); z-index:10; text-align:center; max-width:90%; line-height:1.2;
-}
-
-/* 闪烁文字 */
+  text-shadow:0 0 15px rgba(76,201,240,0.4); z-index:10; text-align:center; max-width:90%; line-height:1.2; }
 .holo-text { position:fixed; top:200px; left:50%; transform:translateX(-50%); font-size:48px; font-weight:bold;
   background: linear-gradient(90deg,#4cc9f0,#f72585,#ffffff); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-  text-shadow:0 0 20px #4cc9f0, 0 0 40px #f72585; opacity:0; z-index:10; pointer-events:none;
-}
-
-/* 提示 */
-.tip { position: fixed; bottom:30px; left:50%; transform:translateX(-50%); color:#7cf; font-size:14px; z-index:10; text-align:center;}
-@media(max-width:768px){ .title{font-size:18px;} .holo-text{font-size:32px;} }
+  text-shadow:0 0 20px #4cc9f0, 0 0 40px #f72585; opacity:0; z-index:10; pointer-events:none; text-align:center;}
+.tip { position: fixed; bottom:80px; left:50%; transform:translateX(-50%); color:#7cf; font-size:14px; z-index:10; text-align:center;}
+.home-btn { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); padding:12px 24px; background:#4cc9f0; color:#000; font-weight:bold; border-radius:8px; cursor:pointer; z-index:10; transition:.3s;}
+.home-btn:hover { background:#f72585; color:#fff;}
+@media(max-width:768px){ .title{font-size:18px;} .holo-text{font-size:32px;} .home-btn{padding:10px 18px;} }
 </style>
 </head>
 <body>
 
-<!-- 顶部 API -->
 <div class="api-bar">
-  <div class="api-item" onclick="goApi('/api-docs')">API Docs</div>
-  <div class="api-item" onclick="goApi('/rpc')">RPC Endpoints</div>
-  <div class="api-item" onclick="goApi('/faucet')">Testnet Faucet</div>
-  <div class="api-item" onclick="goApi('/abi')">Contract ABIs</div>
-  <div class="api-item" onclick="goApi('/sdk')">SDK Download</div>
-  <div class="api-item" onclick="goApi('/webhook')">Webhook Logs</div>
-  <div class="api-item" onclick="goApi('/node')">Node Setup</div>
-  <div class="api-item" onclick="goApi('/explorer')">Explorer</div>
+  <div class="api-item" onclick="goApi('#api-docs')">API Docs</div>
+  <div class="api-item" onclick="goApi('#rpc')">RPC Endpoints</div>
+  <div class="api-item" onclick="goApi('#faucet')">Testnet Faucet</div>
+  <div class="api-item" onclick="goApi('#sdk')">SDK Download</div>
 </div>
 
-<div class="title">The Next Decade: Underlying System of Blockchain & Web3</div>
+<div class="title">The Next Decade: Blockchain & Web3 Infrastructure</div>
 <div class="holo-text" id="holoText">AstroBridge</div>
 <div class="tip">Drag to rotate • Scroll to zoom • Click Earth to enter Developer Center</div>
+<div class="home-btn" onclick="goHome()">← Return Home</div>
 
 <div id="scene-container"></div>
 
@@ -61,90 +47,65 @@ let scene, camera, renderer, controls;
 let earthMesh=null, beams=[];
 let holoText=document.getElementById('holoText');
 
-// 行星数据
 const planets=[
   {name:'Sun', radius:5, color:0xffcc00, x:0},
   {name:'Mercury', radius:0.8, color:0xaaaaaa, x:8},
   {name:'Venus', radius:1.2, color:0xeec86f, x:11},
   {name:'Earth', radius:1.3, color:0x4499ff, x:14},
-  {name:'Mars', radius:1.0, color:0xff6633, x:17},
-  {name:'Jupiter', radius:2.5, color:0xe9c46a, x:24},
-  {name:'Saturn', radius:2.2, color:0xf1d49e, x:30},
-  {name:'Uranus', radius:1.6, color:0x4cc9f0, x:36},
-  {name:'Neptune', radius:1.5, color:0x7209b7, x:40}
+  {name:'Mars', radius:1.0, color:0xff6633, x:17}
 ];
 
-// API方块位置（光束起点）
 let apiPositions=[];
 
-// 初始化
 function init(){
   const container=document.getElementById('scene-container');
   scene=new THREE.Scene();
-
-  camera=new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight,0.1,1000);
+  camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,1000);
   camera.position.set(0,25,40);
-  camera.lookAt(14,0,0);
-
   renderer=new THREE.WebGLRenderer({antialias:true, alpha:true});
   renderer.setSize(window.innerWidth,window.innerHeight);
   container.appendChild(renderer.domElement);
 
   controls=new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping=true;
-  controls.dampingFactor=0.05;
-  controls.minDistance=15;
-  controls.maxDistance=100;
+  controls.enableDamping=true; controls.dampingFactor=0.05; controls.minDistance=15; controls.maxDistance=100;
 
   // 星空
   const stars=[];
-  for(let i=0;i<2000;i++){
-    stars.push((Math.random()-0.5)*2000,(Math.random()-0.5)*2000,(Math.random()-0.5)*2000);
-  }
+  for(let i=0;i<2000;i++){ stars.push((Math.random()-0.5)*2000,(Math.random()-0.5)*2000,(Math.random()-0.5)*2000);}
   const starGeo=new THREE.BufferGeometry();
   starGeo.setAttribute('position', new THREE.Float32BufferAttribute(stars,3));
   scene.add(new THREE.Points(starGeo,new THREE.PointsMaterial({color:0xffffff,size:0.6})));
 
-  // 创建行星
   planets.forEach(p=>{
     const geo=new THREE.SphereGeometry(p.radius,32,32);
     const mat=new THREE.MeshBasicMaterial({color:p.color});
     const mesh=new THREE.Mesh(geo,mat);
-    mesh.position.x=p.x;
-    mesh.userData={name:p.name};
+    mesh.position.x=p.x; mesh.userData={name:p.name};
     scene.add(mesh);
     if(p.name==='Earth') earthMesh=mesh;
 
-    // 轨道
     if(p.name!=='Sun'){
       const points=[];
       for(let i=0;i<=100;i++){
         const angle=(i/100)*2*Math.PI;
         points.push(new THREE.Vector3(Math.cos(angle)*p.x,0,Math.sin(angle)*p.x));
       }
-      const orbitGeo=new THREE.BufferGeometry().setFromPoints(points);
-      scene.add(new THREE.Line(orbitGeo,new THREE.LineBasicMaterial({color:p.color,transparent:true,opacity:0.3})));
+      scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), new THREE.LineBasicMaterial({color:p.color,transparent:true,opacity:0.3})));
     }
   });
 
-  // API方块生成光束起点
-  const boxY=15, boxZ=0;
   apiPositions=[
-    new THREE.Vector3(-20,boxY,0),
-    new THREE.Vector3(20,boxY,0),
+    new THREE.Vector3(-20,15,0),
+    new THREE.Vector3(20,15,0),
     new THREE.Vector3(-25,5,10),
     new THREE.Vector3(25,5,-10)
   ];
 
   window.addEventListener('click',onMouseClick);
-
   animate();
-
-  // 每3秒发光束
-  setInterval(()=>{fireBeam()},3000);
+  setInterval(()=>fireBeam(),3000);
 }
 
-// 点击地球
 function onMouseClick(e){
   const mouse=new THREE.Vector2((e.clientX/window.innerWidth)*2-1,-(e.clientY/window.innerHeight)*2+1);
   const raycaster=new THREE.Raycaster();
@@ -153,67 +114,44 @@ function onMouseClick(e){
   for(let item of intersects){
     if(item.object.userData.name==='Earth'){
       flyToEarth();
-      setTimeout(()=>{ location.href='/developer-center'; },1500);
+      setTimeout(()=>{ alert('Developer Center (replace with your link)'); },1500);
       return;
     }
   }
 }
 
-// 飞向地球
 function flyToEarth(){
   const targetPos=earthMesh.position.clone().add(new THREE.Vector3(0,2,5));
-  const duration=1500;
-  const start=camera.position.clone();
-  const startTime=Date.now();
+  const start=camera.position.clone(); const startTime=Date.now();
   function update(){
-    const t=Math.min(1,(Date.now()-startTime)/duration);
+    const t=Math.min(1,(Date.now()-startTime)/1500);
     camera.position.lerpVectors(start,targetPos,t);
     camera.lookAt(earthMesh.position);
     if(t<1) requestAnimationFrame(update);
-  }
-  update();
+  } update();
 }
 
-// 光束函数
 function fireBeam(){
   const color=0x4cc9f0;
   const beamsThisRound=[];
   apiPositions.forEach(pos=>{
     const geom=new THREE.BufferGeometry().setFromPoints([pos.clone(),earthMesh.position.clone()]);
     const line=new THREE.Line(geom,new THREE.LineBasicMaterial({color:color,transparent:true,opacity:0.8}));
-    scene.add(line);
-    beamsThisRound.push(line);
+    scene.add(line); beamsThisRound.push(line);
   });
   beams.push(...beamsThisRound);
-
-  // 显示Holo文字
   holoText.style.opacity=1;
   setTimeout(()=>{ holoText.style.opacity=0; },1200);
-
-  // 光束渐隐
-  setTimeout(()=>{
-    beamsThisRound.forEach(l=>scene.remove(l));
-  },1200);
+  setTimeout(()=>beamsThisRound.forEach(l=>scene.remove(l)),1200);
 }
 
-// API跳转
-function goApi(path){
-  location.href='http://你的后端IP:端口'+path;
-}
+function goApi(path){ alert('Navigate to '+path); }
+function goHome(){ alert('Return Home'); }
 
-function animate(){
-  requestAnimationFrame(animate);
-  controls.update();
-  renderer.render(scene,camera);
-}
+function animate(){ requestAnimationFrame(animate); controls.update(); renderer.render(scene,camera); }
 
 init();
-
-window.addEventListener('resize',()=>{
-  camera.aspect=window.innerWidth/window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth,window.innerHeight);
-});
+window.addEventListener('resize',()=>{ camera.aspect=window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth,window.innerHeight); });
 </script>
 </body>
 </html>
