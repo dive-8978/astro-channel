@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AstroBridge 3D v3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="backBtn">← Back to Home</button>
+
+<div class="dev-panel">
+  <div class="dev-btn" onclick="goDev(1)">Quick Connect</div>
+  <div class="dev-btn" onclick="goDev(2)">API Docs</div>
+  <div class="dev-btn" onclick="goDev(3)">Node Join</div>
+  <div class="dev-btn" onclick="goDev(4)">DApp Connect</div>
+  <div class="dev-btn" onclick="goDev(5)">Contract Info</div>
+  <div class="dev-btn" onclick="goDev(6)">Earn ASTRO</div>
+  <div class="dev-btn" onclick="goDev(7)">Console</div>
+</div>
+
+<div id="container"></div>
+<div class="tooltip" id="tooltip"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
