@@ -3,75 +3,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstroBridge - MemeAstro</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>MemeAstro (MA) - AstroBridge Airdrop Pass</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#020617;color:#fff;overflow-x:hidden}
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
-.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-links{display:flex;gap:22px}
-.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
-.nav-links a:hover{color:#4cc9f0}
-.x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
-.x-icon:hover{transform:scale(1.1);border-color:#f72585}
-.x-icon svg{width:15px;height:15px;fill:#fff}
-.page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px}
-.card h3{color:#4cc9f0;font-size:1.3rem;margin-bottom:10px}
-.card p{color:#a8dadc;line-height:1.7}
-.btn-back{display:inline-block;margin-top:40px;padding:12px 24px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
-footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
-@media(max-width:768px){.page-title{font-size:2rem}}
+body{background:#020617;color:#fff;overflow-x:hidden;position:relative}
+
+#fireworks-canvas {position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
+#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;opacity:0.4}
+
+.balloon{
+  position:fixed;
+  z-index:2;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation:floatUp linear infinite;
+}
+@keyframes floatUp{
+  0%{transform:translateY(100vh) rotate(0deg);opacity:0}
+  10%{opacity:1}
+  90%{opacity:1}
+  100%{transform:translateY(-100vh) rotate(720deg);opacity:0}
+}
+
+.ribbon{
+  position:fixed;
+  z-index:2;
+  width:3px;
+  height:20px;
+  background:#ffda22;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  0%{transform:translateY(-10vh) rotate(0deg)}
+  100%{transform:translateY(110vh) rotate(360deg)}
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+  position:relative;
+  z-index:10;
+  text-align:center;
+}
+
+.main-title {
+  font-size:5.5rem;
+  font-weight:900;
+  background:linear-gradient(90deg,#ffda22,#ff3366,#4cc9f0,#f72585);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientShift 3s linear infinite;
+  margin-bottom:10px;
+  text-shadow:0 0 40px rgba(255,218,34,0.5), 0 0 70px rgba(255,51,102,0.4);
+}
+.main-title span {
+  font-size:3rem;
+  color:#ffda22;
+  -webkit-text-fill-color:#ffda22;
+  text-shadow:0 0 30px #ffda22;
+}
+@keyframes gradientShift {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.sub-title {
+  font-size:1.8rem;
+  color:#ffda22;
+  margin-bottom:50px;
+  text-shadow:0 0 20px #ffda22;
+}
+
+.info-box {
+  background:rgba(255,255,255,0.06);
+  border:2px solid rgba(255,218,34,0.4);
+  border-radius:20px;
+  padding:40px;
+  margin-bottom:30px;
+  box-shadow:0 0 50px rgba(255,218,34,0.2);
+  text-align:left;
+}
+.info-box h2 {
+  color:#ffda22;
+  font-size:2rem;
+  margin-bottom:22px;
+  text-align:center;
+}
+.info-box p {
+  color:#e0e0e0;
+  font-size:1.2rem;
+  line-height:1.9;
+  margin-bottom:14px;
+}
+.info-box strong {
+  color:#ff3366;
+  font-size:1.3rem;
+}
+
+.btn-home {
+  display:inline-block;
+  margin-top:40px;
+  padding:18px 44px;
+  background:linear-gradient(90deg,#ff3366,#ffda22);
+  color:#000;
+  font-weight:900;
+  font-size:1.2rem;
+  border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 0 40px rgba(255,218,34,0.5);
+  transition:0.3s;
+}
+.btn-home:hover {
+  transform:scale(1.08);
+  box-shadow:0 0 60px rgba(255,218,34,0.7);
+}
+
+footer {
+  margin-top:80px;
+  padding-top:30px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:#aaa;
+  text-align:center;
+}
+
+@media(max-width:768px){
+  .main-title{font-size:3.2rem}
+  .main-title span{font-size:1.8rem}
+  .sub-title{font-size:1.4rem}
+  .info-box{padding:24px}
+}
 </style>
 </head>
+
 <body>
+<canvas id="fireworks-canvas"></canvas>
 <div id="particles"></div>
+
 <div class="container">
-<nav>
-  <div class="logo">AstroBridge</div>
-  <div class="nav-right">
-    <div class="nav-links">
-      <a href="vision.html">Vision</a>
-      <a href="painpoints.html">Pain Points</a>
-      <a href="technology.html">Technology</a>
-      <a href="progress.html">Progress</a>
-    </div>
-    <div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
-      <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-    </div>
+  <h1 class="main-title">MEME Astro <span>(MA)</span></h1>
+  <p class="sub-title">Official Airdrop Pass for AstroBridge Mainnet</p>
+
+  <div class="info-box">
+    <h2>TOKEN INFORMATION</h2>
+    <p><strong>• Chain:</strong> BSC (BNB Chain)</p>
+    <p><strong>• Total Supply:</strong> 1,000,000,000 (10 BILLION)</p>
+    <p><strong>• Type:</strong> Meme Token + Official Airdrop Ticket</p>
   </div>
-</nav>
 
-<h1 class="page-title">MemeAstro</h1>
-<p class="page-desc">Social intent layer for Web3 communities.</p>
+  <div class="info-box">
+    <h2>AIRDROP RULES</h2>
+    <p><strong>Hold MemeAstro (MA) for 6 FULL MONTHS</strong></p>
+    <p>All holders who keep MA tokens for 6 consecutive months will be eligible for the official AstroBridge Mainnet Token Airdrop.</p>
+    <p><strong>Airdrop Ratio:</strong> 1:1 OR 2:1 (Final ratio will be announced by the team)</p>
+    <p><strong>All qualified holders will be automatically airdropped.</strong></p>
+  </div>
 
-<div class="card">
-  <h3>Community Intents</h3>
-  <p>Enable meme communities to create collective intents, governance actions, and automated social interactions.</p>
-</div>
-<div class="card">
-  <h3>AI-Powered Social Agents</h3>
-  <p>Autonomous agents manage community growth, engagement, and cross-chain activities 24/7.</p>
-</div>
-<div class="card">
-  <h3>Fair Launch Tools</h3>
-  <p>Decentralized, intent-based fair launch system with anti-bot and anti-manipulation protection.</p>
+  <div class="info-box">
+    <h2>IMPORTANT</h2>
+    <p>MemeAstro (MA) is the <strong>ONLY PASSPORT</strong> for the AstroBridge mainnet airdrop.</p>
+    <p>No other token will be used as the airdrop credential.</p>
+    <p>Save, hold, and qualify for the future of Web3.</p>
+  </div>
+
+  <!-- 返回主页按钮 -->
+  <a href="index.html" class="btn-home">BACK TO HOME</a>
+
+  <footer>
+    <p>© 2026 AstroBridge | MemeAstro (MA)</p>
+  </footer>
 </div>
 
-<a href="products.html" class="btn-back">← Previous</a>
-
-<footer>
-  <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
-</footer>
-</div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS("particles",{particles:{number:{value:80,density:{enable:true,value_area:800}},color:{value:["#4cc9f0","#f72585"]},opacity:{value:0.4,random:true},size:{value:3,random:true},line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},move:{enable:true,speed:1.5,random:true}},interactivity:{events:{onhover:{enable:true,mode:"grab"}}},retina_detect:true})
+// 粒子
+particlesJS("particles",{
+  particles:{
+    number:{value:70,density:{enable:true,value_area:800}},
+    color:{value:["#ffda22","#ff3366","#4cc9f0"]},
+    opacity:{value:0.5,random:true},
+    size:{value:2.5,random:true},
+    line_linked:{enable:true,distance:120,color:"#ffda22",opacity:0.1,width:1},
+    move:{enable:true,speed:1.2,random:true}
+  },
+  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
+  retina_detect:true
+});
+
+// 烟花
+const canvas = document.getElementById('fireworks-canvas');
+const ctx = canvas.getContext('2d');
+function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
+window.addEventListener('resize',resize);resize();
+
+class Firework{
+  constructor(){
+    this.x=Math.random()*canvas.width;
+    this.y=canvas.height;
+    this.sx=Math.random()*3-1.5;
+    this.sy=Math.random()*-4-4;
+    this.size=Math.random()*2+2;
+    this.alpha=1;
+    this.decay=0.005;
+    this.colors=['#ffda22','#ff3366','#4cc9f0','#f72585','#ffffff'];
+    this.color=this.colors[Math.floor(Math.random()*this.colors.length)];
+  }
+  update(){
+    this.sy+=0.04;
+    this.x+=this.sx;
+    this.y+=this.sy;
+    this.alpha-=this.decay;
+  }
+  draw(){
+    ctx.save();
+    ctx.globalAlpha=this.alpha;
+    ctx.fillStyle=this.color;
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+class Particle{
+  constructor(x,y,color){
+    this.x=x;this.y=y;
+    this.sx=Math.random()*6-3;
+    this.sy=Math.random()*6-3;
+    this.size=Math.random()*2+1;
+    this.alpha=1;
+    this.decay=0.015;
+    this.color=color;
+  }
+  update(){
+    this.x+=this.sx;
+    this.y+=this.sy;
+    this.alpha-=this.decay;
+  }
+  draw(){
+    ctx.save();
+    ctx.globalAlpha=this.alpha;
+    ctx.fillStyle=this.color;
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+let fireworks=[];
+let particles=[];
+
+function loop(){
+  ctx.fillStyle='rgba(2,6,23,0.2)';
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  if(Math.random()<0.15) fireworks.push(new Firework());
+  fireworks.forEach((f,i)=>{f.update();f.draw();if(f.alpha<=0){fireworks.splice(i,1);for(let q=0;q<30;q++) particles.push(new Particle(f.x,f.y,f.color));}});
+  particles.forEach((p,i)=>{p.update();p.draw();if(p.alpha<=0) particles.splice(i,1);});
+  requestAnimationFrame(loop);
+}
+loop();
+
+// 气球
+function createBalloons(){
+  const colors=['#ff3366','#ffda22','#4cc9f0','#f72585','#ffffff','#33ff77'];
+  for(let i=0;i<15;i++){
+    const b=document.createElement('div');
+    b.classList.add('balloon');
+    const size=Math.random()*40+50;
+    b.style.width=size+'px';
+    b.style.height=size*1.1+'px';
+    b.style.left=Math.random()*100+'vw';
+    b.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
+    b.style.animationDuration=(Math.random()*30+40)+'s';
+    b.style.animationDelay=(Math.random()*20)+'s';
+    document.body.appendChild(b);
+  }
+}
+
+// 彩带
+function createRibbons(){
+  const colors=['#ffda22','#ff3366','#4cc9f0','#f72585','#fff'];
+  for(let i=0;i<40;i++){
+    const r=document.createElement('div');
+    r.classList.add('ribbon');
+    r.style.left=Math.random()*100+'vw';
+    r.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
+    r.style.animationDuration=(Math.random()*10+10)+'s';
+    r.style.animationDelay=(Math.random()*10)+'s';
+    document.body.appendChild(r);
+  }
+}
+
+createBalloons();
+createRibbons();
 </script>
 </body>
 </html>
