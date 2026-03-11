@@ -1,25 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>AstroBridge Dev 3D v4</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroBridge Global Control Center</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', system-ui, sans-serif; }
+        body { background:#0a0f1f; color:#e8eaf6; padding:24px; max-width:1400px; margin:0 auto; }
+
+        /* 太阳系开发者入口 (全屏可隐藏) */
+        #solarEnter {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50%, #050a18, #000);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        #solarEnter h1 {
+            font-size: 30px;
+            background: linear-gradient(90deg,#4cc9f0,#f72585);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        #solarEnter p {
+            color: #7cf;
+            margin-bottom: 30px;
+        }
+
+        /* 纤细 · 扁平 · 发光轨道 */
+        .orbit {
+            position: absolute;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            box-shadow: 0 0 3px currentColor, 0 0 6px currentColor;
+            opacity: 0.8;
+        }
+
+        .sun {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(#ffcc00, #ff5500);
+            border-radius: 50%;
+            box-shadow: 0 0 40px #ff9900, 0 0 100px #ff5500;
+            z-index: 10;
+        }
+
+        .mercury {
+            width: 7px; height:7px; background:#aaa; border-radius:50%; position:absolute; top:0; left:50%; transform:translateX(-50%);
+            box-shadow:0 0 4px #aaa, 0 0 8px #aaa;
+        }
+        .venus {
+            width:12px; height:12px; background:#f1c36f; border-radius:50%; position:absolute; top:0; left:50%; transform:translateX(-50%);
+            box-shadow:0 0 6px #f1c36f, 0 0 10px #f1c36f;
+        }
+        .earth {
+            width:16px; height:16px; background:#4499ff; border-radius:50%; position:absolute; top:0; left:50%; transform:translateX(-50%);
+            box-shadow:0 0 8px #4499ff, 0 0 14px #4499ff;
+        }
+        .mars {
+            width:12px; height:12px; background:#ff6633; border-radius:50%; position:absolute; top:0; left:50%; transform:translateX(-50%);
+            box-shadow:0 0 6px #ff6633, 0 0 10px #ff6633;
+        }
+        .saturn {
+            width:22px; height:22px; background:#e9c46a; border-radius:50%; position:absolute; top:0; left:50%; transform:translateX(-50%);
+            box-shadow:0 0 10px #e9c46a, 0 0 16px #e9c46a;
+        }
+        .uranus {
+            width:18px; height:18px; background:#4cc9f0; border-radius:50%; position:absolute; top:0; left:50%; transform:translateX(-50%);
+            box-shadow:0 0 8px #4cc9f0, 0 0 14px #4cc9f0;
+        }
+        .neptune {
+            width:17px; height:17px; background:#7209b7; border-radius:50%; position:absolute; top:0; left:50%; transform:translateX(-50%);
+            box-shadow:0 0 8px #7209b7, 0 0 12px #7209b7;
+        }
+
+        .enterBtn {
+            padding: 12px 30px;
+            background: linear-gradient(90deg,#4cc9f0,#f72585);
+            border-radius: 30px;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+        .header h1 { font-size:26px; color:#7cffcf; }
+        .status-badge { padding:8px 16px; border-radius:999px; font-weight:600; }
+        .badge-online { background:#00e676; color:#000; }
+        .badge-warning { background:#ffab00; color:#000; }
+        .badge-error { background:#ff5252; color:#fff; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px; margin-bottom:24px; }
+        .card { background:#121a33; border:1px solid #2a3558; border-radius:12px; padding:20px; }
+        .card h3 { font-size:14px; color:#9fa8da; margin-bottom:8px; }
+        .card .num { font-size:32px; font-weight:700; color:#fff; }
+        .card .label { font-size:12px; color:#7986cb; }
+        .main-layout { display:grid; grid-template-columns:2fr 1fr; gap:16px; margin-bottom:20px; }
+        .timeline-box { max-height:380px; overflow-y:auto; }
+        .timeline-item { padding:12px; border-left:3px solid #7cffcf; background:#141c3a; margin-bottom:10px; border-radius:8px; }
+        .timeline-item.warn { border-left-color:#ffab00; }
+        .timeline-item.err { border-left-color:#ff5252; }
+        .time { font-size:12px; color:#9fa8da; }
+        .action { font-weight:600; margin:4px 0; }
+        .msg { font-size:13px; color:#c5cae9; }
+        .btn-group { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:12px; margin-top:12px; }
+        button { padding:14px; border:none; border-radius:10px; font-weight:600; cursor:pointer; transition:.2s; }
+        .btn-primary { background:#7cffcf; color:#0f172a; }
+        .btn-warning { background:#ffab00; color:#000; }
+        .btn-danger { background:#ff5252; color:#fff; }
+        .btn-success { background:#00e676; color:#000; }
+        button:hover { opacity:.9; transform:translateY(-1px); }
+        #worldMap { width:100%; height:380px; border-radius:12px; margin-top:6px; }
+        input { width:100%; padding:12px 14px; margin-top:8px; border-radius:8px; background:#182242; border:1px solid #2f3b63; color:#fff; outline:none; }
+
+        /* 开发者选项卡片 */
+        .dev-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .dev-btn {
+            padding: 10px 16px;
+            background: #182242;
+            border: 1px solid #4cc9f0;
+            color: #4cc9f0;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .dev-btn:hover {
+            background: #4cc9f0;
+            color: #000;
+        }
+
+        @media (max-width: 900px) { .main-layout { grid-template-columns:1fr; } }
+    </style>
 </head>
+
 <body>
-<button id="backBtn">← Back to Home</button>
-<div class="dev-panel">
-  <div class="dev-btn" onclick="goDev(1)">Quick Connect</div>
-  <div class="dev-btn" onclick="goDev(2)">API Docs</div>
-  <div class="dev-btn" onclick="goDev(3)">Node Join</div>
-  <div class="dev-btn" onclick="goDev(4)">DApp Connect</div>
-  <div class="dev-btn" onclick="goDev(5)">Contract Info</div>
-  <div class="dev-btn" onclick="goDev(6)">Earn ASTRO</div>
-  <div class="dev-btn" onclick="goDev(7)">Console</div>
+
+<!-- 🔴 开发者太阳系入口 + 全套发光细轨道 -->
+<div id="solarEnter" onclick="enterConsole()">
+    <h1>AstroBridge Control Center</h1>
+    <p>Developer Portal · Interchain Intent Network</p>
+
+    <div style="position:relative; width:600px; height:600px; display:flex; align-items:center; justify-content:center;">
+        <div class="sun"></div>
+
+        <!-- 轨道：细 + 发光 + 扁平 -->
+        <div class="orbit" style="width:160px; height:160px; color:#aaa;"></div>
+        <div class="orbit" style="width:210px; height:210px; color:#f1c36f;"></div>
+        <div class="orbit" style="width:260px; height:260px; color:#4499ff;"></div>
+        <div class="orbit" style="width:320px; height:320px; color:#ff6633;"></div>
+        <div class="orbit" style="width:420px; height:420px; color:#e9c46a;"></div>
+        <div class="orbit" style="width:500px; height:500px; color:#4cc9f0;"></div>
+        <div class="orbit" style="width:580px; height:580px; color:#7209b7;"></div>
+
+        <!-- 行星 -->
+        <div class="mercury"></div>
+        <div class="venus"></div>
+        <div class="earth"></div>
+        <div class="mars"></div>
+        <div class="saturn"></div>
+        <div class="uranus"></div>
+        <div class="neptune"></div>
+    </div>
+
+    <div class="enterBtn">Enter Control Center</div>
 </div>
-<div id="container"></div>
-<div class="tooltip" id="tooltip"></div>
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
-<script src="main.js"></script>
+
+<!-- 👇 下面完全保留你原来的控制台 -->
+<div class="header">
+    <h1>AstroBridge Global Control Center</h1>
+    <div id="systemStatus" class="status-badge badge-online">ONLINE</div>
+</div>
+
+<!-- 🧑‍💻 开发者对接选项 -->
+<div class="dev-bar">
+    <div class="dev-btn">API Docs</div>
+    <div class="dev-btn">RPC Endpoints</div>
+    <div class="dev-btn">Testnet Faucet</div>
+    <div class="dev-btn">Contract ABIs</div>
+    <div class="dev-btn">SDK Download</div>
+    <div class="dev-btn">Webhook Logs</div>
+    <div class="dev-btn">Node Setup</div>
+    <div class="dev-btn">Explorer</div>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h3>Online Robots</h3>
+        <div class="num">1,846</div>
+        <div class="label">Active Nodes</div>
+    </div>
+    <div class="card">
+        <h3>Pending Tasks</h3>
+        <div class="num">247</div>
+        <div class="label">Intent Queue</div>
+    </div>
+    <div class="card">
+        <h3>Success Rate</h3>
+        <div class="num">99.2%</div>
+        <div class="label">24h Performance</div>
+    </div>
+    <div class="card">
+        <h3>Global Regions</h3>
+        <div class="num">84</div>
+        <div class="label">Deployed Zones</div>
+    </div>
+</div>
+
+<div class="main-layout">
+    <div class="card timeline-box">
+        <h3>Real-time Robot Action Log</h3>
+        <div id="logArea">
+            <div class="timeline-item">
+                <div class="time">12:34:56</div>
+                <div class="action">NODE ONLINE</div>
+                <div class="msg">Node connected: Frankfurt, Germany</div>
+            </div>
+            <div class="timeline-item.warn">
+                <div class="time">12:33:12</div>
+                <div class="action">TASK PAUSED</div>
+                <div class="msg">Intent queue suspended by system</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">12:31:45</div>
+                <div class="action">INTENT EXECUTED</div>
+                <div class="msg">Cross-chain swap completed successfully</div>
+            </div>
+            <div class="timeline-item.err">
+                <div class="time">12:29:03</div>
+                <div class="action">RETRY</div>
+                <div class="msg">Reconnecting to Asia-Pacific node</div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">12:25:11</div>
+                <div class="action">SYSTEM READY</div>
+                <div class="msg">All global nodes operational</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Owner Signature</h3>
+        <input type="text" placeholder="Enter ASTRO_OWNER_SIGNATURE">
+
+        <h3 style="margin-top:20px;">One-Click Controls</h3>
+        <div class="btn-group">
+            <button class="btn-primary">Resume Auto Run</button>
+            <button class="btn-warning">Pause System</button>
+            <button class="btn-success">Repair All</button>
+            <button class="btn-primary">Expand Nodes</button>
+            <button class="btn-primary">Self-Replicate</button>
+            <button class="btn-danger">Auto Task</button>
+            <button class="btn-primary">Connect Network</button>
+        </div>
+
+        <h3 style="margin-top:20px;">Security Mode</h3>
+        <div style="display:flex; gap:10px; margin-top:10px;">
+            <button class="btn-primary">FAST</button>
+            <button class="btn-warning">SAFE</button>
+            <button class="btn-danger">BLOCK</button>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h3>🌍 Global Node Deployment Map</h3>
+    <div id="worldMap"></div>
+</div>
+
+<script>
+    // 点击进入控制台
+    function enterConsole() {
+        document.getElementById("solarEnter").style.display = "none";
+    }
+
+    // 地图逻辑
+    let map;
+    const majorNodes = [
+        { name:"New York", lat:40.7128, lng:-74.0060 },
+        { name:"London", lat:51.5074, lng:-0.1278 },
+        { name:"Singapore", lat:1.3521, lng:103.8198 },
+        { name:"Tokyo", lat:35.6762, lng:139.6503 },
+        { name:"Frankfurt", lat:50.1109, lng:8.6821 },
+        { name:"Sydney", lat:-33.8688, lng:151.2093 },
+        { name:"Los Angeles", lat:34.0522, lng:-118.2437 },
+        { name:"Toronto", lat:43.6532, lng:-79.3832 },
+        { name:"Dubai", lat:25.2048, lng:55.2708 },
+        { name:"Mumbai", lat:19.0760, lng:72.8777 },
+        { name:"São Paulo", lat:-23.5505, lng:-46.6333 },
+        { name:"Hong Kong", lat:22.3193, lng:114.1694 },
+        { name:"Shanghai", lat:31.2304, lng:121.4737 },
+        { name:"Paris", lat:48.8566, lng:2.3522 },
+        { name:"Seoul", lat:37.5665, lng:126.9780 }
+    ];
+
+    function initMap() {
+        map = L.map('worldMap').setView([20, 0], 2);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        majorNodes.forEach(p => {
+            L.marker([p.lat, p.lng])
+              .addTo(map)
+              .bindPopup(`<b>${p.name}</b><br>Node Online`);
+        });
+    }
+
+    initMap();
+</script>
+
 </body>
 </html>
