@@ -9,7 +9,8 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020617;color:#fff;overflow-x:hidden}
 #particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
-.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
+.container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
+
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
 .logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav-right{display:flex;align-items:center;gap:24px}
@@ -19,19 +20,79 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
 .x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
 .x-icon:hover{transform:scale(1.1);border-color:#f72585}
 .x-icon svg{width:15px;height:15px;fill:#fff}
+
 .page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
-.pain-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:26px;margin-bottom:20px}
-.pain-card h3{color:#f72585;font-size:1.3rem;margin-bottom:10px}
-.pain-card p{color:#a8dadc;line-height:1.7}
-.btn-back{display:inline-block;margin-top:40px;padding:12px 24px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
-footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
-@media(max-width:768px){.page-title{font-size:2rem}}
+.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:60px}
+
+.pain-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:32px;
+  margin-bottom:60px;
+}
+.pain-circle{
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  background:rgba(255,255,255,0.02);
+  border:2px solid rgba(76,201,240,0.3);
+  box-shadow:0 0 28px rgba(76,201,240,0.3),
+             inset 0 0 22px rgba(76,201,240,0.12);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+  transition:all 0.4s ease;
+}
+.pain-circle:hover{
+  border-color:rgba(247,37,133,0.5);
+  box-shadow:0 0 40px rgba(247,37,133,0.4),
+             inset 0 0 28px rgba(247,37,133,0.2);
+  transform:translateY(-6px);
+}
+.pain-circle h3{
+  color:#4cc9f0;
+  font-size:1.4rem;
+  margin-bottom:14px;
+}
+.pain-circle p{
+  color:#a8dadc;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+.btn-home{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 30px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer{
+  margin-top:60px;
+  padding-top:30px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  color:#a8dadc;
+  text-align:center;
+}
+
+@media(max-width:768px){
+  .page-title{font-size:2rem}
+  .pain-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
+
 <div id="particles"></div>
 <div class="container">
+
 <nav>
   <div class="logo">AstroBridge</div>
   <div class="nav-right">
@@ -50,32 +111,48 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 <h1 class="page-title">Pain Points</h1>
 <p class="page-desc">The critical problems Web3 is facing today.</p>
 
-<div class="pain-card">
-  <h3>Fragmented Ecosystem</h3>
-  <p>Users must switch between dozens of chains, wallets, bridges, and interfaces. Experience is broken.</p>
-</div>
-<div class="pain-card">
-  <h3>Complexity & High Risk</h3>
-  <p>Cross-chain transfers, bridging, and routing are technical, error-prone, and high-risk.</p>
-</div>
-<div class="pain-card">
-  <h3>No Autonomous Execution</h3>
-  <p>Everything requires manual steps. Bots and automation are centralized and unsafe.</p>
-</div>
-<div class="pain-card">
-  <h3>Robot Economy Unready</h3>
-  <p>Blockchain was not built for AI agents to act independently at scale.</p>
+<div class="pain-grid">
+  <div class="pain-circle">
+    <h3>Fragmented Ecosystem</h3>
+    <p>Users switch between chains, wallets, bridges, and interfaces. Experience is broken.</p>
+  </div>
+  <div class="pain-circle">
+    <h3>Complexity & High Risk</h3>
+    <p>Cross-chain operations are technical, error-prone, and expose users to serious risks.</p>
+  </div>
+  <div class="pain-circle">
+    <h3>No Autonomous Execution</h3>
+    <p>All actions require manual steps. Automation is centralized and insecure.</p>
+  </div>
+  <div class="pain-circle">
+    <h3>Robot Economy Unready</h3>
+    <p>Blockchain was not designed for large-scale AI agent automation and execution.</p>
+  </div>
 </div>
 
-<a href="vision.html" class="btn-back">← Previous</a>
+<a href="index.html" class="btn-home">← Back to Home</a>
 
 <footer>
-  <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
+  <p>© 2026 AstroBridge</p>
 </footer>
+
 </div>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS("particles",{particles:{number:{value:80,density:{enable:true,value_area:800}},color:{value:["#4cc9f0","#f72585"]},opacity:{value:0.4,random:true},size:{value:3,random:true},line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},move:{enable:true,speed:1.5,random:true}},interactivity:{events:{onhover:{enable:true,mode:"grab"}}},retina_detect:true})
+particlesJS("particles",{
+  particles:{
+    number:{value:80,density:{enable:true,value_area:800}},
+    color:{value:["#4cc9f0","#f72585"]},
+    opacity:{value:0.4,random:true},
+    size:{value:3,random:true},
+    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},
+    move:{enable:true,speed:1.5,random:true}
+  },
+  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
+  retina_detect:true
+});
 </script>
+
 </body>
 </html>
