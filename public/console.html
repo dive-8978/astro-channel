@@ -10,15 +10,23 @@
 body{background:#020617;color:#fff;overflow-x:hidden}
 #particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
 .container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
+
+/* 顶部只留 Logo + 返回主页按钮 */
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
 .logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-links{display:flex;gap:22px}
-.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
-.nav-links a:hover{color:#4cc9f0}
-.x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
-.x-icon:hover{transform:scale(1.1);border-color:#f72585}
-.x-icon svg{width:15px;height:15px;fill:#fff}
+
+.btn-home {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #4cc9f0, #f72585);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-home:hover {
+  transform: scale(1.05);
+}
 
 .page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
@@ -73,7 +81,6 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
   transform:scale(1.03);
 }
 
-.btn-back{display:inline-block;margin-top:40px;padding:12px 24px;background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
 footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
 @media(max-width:768px){.page-title{font-size:2rem}}
 </style>
@@ -84,17 +91,8 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 
 <nav>
   <div class="logo">AstroBridge</div>
-  <div class="nav-right">
-    <div class="nav-links">
-      <a href="vision.html">Vision</a>
-      <a href="painpoints.html">Pain Points</a>
-      <a href="technology.html">Technology</a>
-      <a href="progress.html">Progress</a>
-    </div>
-    <div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
-      <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-    </div>
-  </div>
+  <!-- 返回主页按钮 -->
+  <a href="../index.html" class="btn-home">← Back to Home</a>
 </nav>
 
 <h1 class="page-title">Demo Console</h1>
@@ -116,8 +114,6 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 
   <button class="btn-primary">Execute Intent</button>
 </div>
-
-<a href="../index.html" class="btn-back">← Back to Home</a>
 
 <footer>
   <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
