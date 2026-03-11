@@ -3,302 +3,466 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MemeAstro (MA) - AstroBridge Airdrop Pass</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=swap" rel="stylesheet">
+<title>AstroBridge - Global Intent Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700,800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#020617;color:#fff;overflow-x:hidden;position:relative}
+body{background:#020112;color:#fff;overflow-x:hidden}
 
-#fireworks-canvas {position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;opacity:0.4}
-
-.balloon{
+#sphereCanvas{
   position:fixed;
-  z-index:2;
-  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
-  animation:floatUp linear infinite;
-}
-@keyframes floatUp{
-  0%{transform:translateY(100vh) rotate(0deg);opacity:0}
-  10%{opacity:1}
-  90%{opacity:1}
-  100%{transform:translateY(-100vh) rotate(720deg);opacity:0}
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:0;
+  opacity:0.8;
+  background:#020112;
 }
 
-.ribbon{
-  position:fixed;
-  z-index:2;
-  width:3px;
-  height:20px;
-  background:#ffda22;
-  animation:fall linear infinite;
-}
-@keyframes fall{
-  0%{transform:translateY(-10vh) rotate(0deg)}
-  100%{transform:translateY(110vh) rotate(360deg)}
-}
+.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
+/* 导航 + 汉堡菜单 */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:80px;
   position:relative;
-  z-index:10;
-  text-align:center;
+  z-index:999;
 }
-
-.main-title {
-  font-size:5.5rem;
-  font-weight:900;
-  background:linear-gradient(90deg,#ffda22,#ff3366,#4cc9f0,#f72585);
-  background-size:300% 300%;
+.logo{
+  font-size:2rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:gradientShift 3s linear infinite;
-  margin-bottom:10px;
-  text-shadow:0 0 40px rgba(255,218,34,0.5), 0 0 70px rgba(255,51,102,0.4);
-}
-.main-title span {
-  font-size:3rem;
-  color:#ffda22;
-  -webkit-text-fill-color:#ffda22;
-  text-shadow:0 0 30px #ffda22;
-}
-@keyframes gradientShift {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
 }
 
-.sub-title {
-  font-size:1.8rem;
-  color:#ffda22;
-  margin-bottom:50px;
-  text-shadow:0 0 20px #ffda22;
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
 }
 
-.info-box {
-  background:rgba(255,255,255,0.06);
-  border:2px solid rgba(255,218,34,0.4);
-  border-radius:20px;
-  padding:40px;
-  margin-bottom:30px;
-  box-shadow:0 0 50px rgba(255,218,34,0.2);
-  text-align:left;
+/* 汉堡按钮 */
+.hamburger{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  background:transparent;
+  border:none;
+  cursor:pointer;
 }
-.info-box h2 {
-  color:#ffda22;
-  font-size:2rem;
-  margin-bottom:22px;
-  text-align:center;
-}
-.info-box p {
-  color:#e0e0e0;
-  font-size:1.2rem;
-  line-height:1.9;
-  margin-bottom:14px;
-}
-.info-box strong {
-  color:#ff3366;
-  font-size:1.3rem;
+.hamburger span{
+  width:28px;
+  height:2px;
+  background:#4cc9f0;
+  border-radius:2px;
 }
 
-.btn-home {
-  display:inline-block;
-  margin-top:40px;
-  padding:18px 44px;
-  background:linear-gradient(90deg,#ff3366,#ffda22);
-  color:#000;
-  font-weight:900;
-  font-size:1.2rem;
-  border-radius:50px;
+/* 折叠菜单 */
+.nav-menu{
+  position:absolute;
+  top:100%;
+  right:0;
+  background:#0a1028;
+  border:1px solid rgba(76,201,240,0.2);
+  border-radius:16px;
+  padding:24px;
+  width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  z-index:999;
+}
+.nav-menu a{
+  color:#a8dadc;
   text-decoration:none;
-  box-shadow:0 0 40px rgba(255,218,34,0.5);
-  transition:0.3s;
+  font-weight:500;
+  transition:.3s;
+  white-space:nowrap;
 }
-.btn-home:hover {
-  transform:scale(1.08);
-  box-shadow:0 0 60px rgba(255,218,34,0.7);
+.nav-menu a:hover{
+  color:#4cc9f0;
+}
+.nav-menu.hidden{
+  display:none;
 }
 
-footer {
-  margin-top:80px;
-  padding-top:30px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  color:#aaa;
+.x-button{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#121a33;
+  border:1px solid #2a3558;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  transition:.2s;
+}
+.x-button:hover{
+  background:#4cc9f0;
+  color:#000;
+}
+
+.hero{text-align:center;margin-bottom:80px}
+.hero h1{
+  font-size:4rem;
+  font-weight:800;
+  line-height:1.2;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  font-size:1.2rem;
+  color:#a8dadc;
+  max-width:600px;
+  margin:0 auto 40px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.btn{
+  padding:16px 36px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn.primary{
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  color:#fff;
+}
+.btn.secondary{
+  background:rgba(76,201,240,0.1);
+  color:#4cc9f0;
+  border:1px solid #4cc9f0;
+}
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.section{margin-bottom:60px}
+.section h2{
+  font-size:2.2rem;
+  font-weight:700;
+  margin-bottom:20px;
+  color:#fff;
+}
+.section p{
+  color:#a8dadc;
+  font-size:1.1rem;
+  line-height:1.7;
+}
+
+.globe-container {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#globe-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.globe-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.globe-text h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.globe-text p {
+  font-size: 1.2rem;
+  color: #c4f1ff;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+.data-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(76,201,240,0.15);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+}
+.data-card .label {
+  font-size: 1rem;
+  color: #a8dadc;
+  margin-bottom: 12px;
+}
+.data-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4cc9f0;
+}
+.data-card .unit {
+  font-size: 1rem;
+  color: #f72585;
+  margin-left: 6px;
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(76,201,240,0.15);
+  border-radius:16px;
+  padding:24px;
+}
+.card h3{
+  color:#4cc9f0;
+  margin-bottom:10px;
+}
+.card p{
+  color:#a8dadc;
+}
+
+footer{
   text-align:center;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  color:#a8dadc;
 }
 
 @media(max-width:768px){
-  .main-title{font-size:3.2rem}
-  .main-title span{font-size:1.8rem}
-  .sub-title{font-size:1.4rem}
-  .info-box{padding:24px}
+.hero h1{font-size:2.4rem}
+.card-grid, .data-grid{grid-template-columns:1fr}
+.globe-container{height:300px}
 }
 </style>
 </head>
 
 <body>
-<canvas id="fireworks-canvas"></canvas>
-<div id="particles"></div>
+
+<canvas id="sphereCanvas"></canvas>
 
 <div class="container">
-  <h1 class="main-title">MEME Astro <span>(MA)</span></h1>
-  <p class="sub-title">Official Airdrop Pass for AstroBridge Mainnet</p>
 
-  <div class="info-box">
-    <h2>TOKEN INFORMATION</h2>
-    <p><strong>• Chain:</strong> BSC (BNB Chain)</p>
-    <p><strong>• Total Supply:</strong> 1,000,000,000 (1 BILLION)</p>
-    <p><strong>• Type:</strong> Meme Token + Official Airdrop Ticket</p>
+<nav>
+  <div class="logo">AstroBridge</div>
+  
+  <div class="nav-right">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="https://x.com/Astro___Channel" target="_blank" class="x-button">𝕏</a>
   </div>
 
-  <div class="info-box">
-    <h2>AIRDROP RULES</h2>
-    <p><strong>Hold MemeAstro (MA) for 6 FULL MONTHS</strong></p>
-    <p>All holders who keep MA tokens for 6 consecutive months will be eligible for the official AstroBridge Mainnet Token Airdrop.</p>
-    <p><strong>Airdrop Ratio:</strong> 1:1 OR 2:1 (Final ratio will be announced by the team)</p>
-    <p><strong>All qualified holders will be automatically airdropped.</strong></p>
+  <div class="nav-menu hidden" id="navMenu">
+    <a href="vision.html">Vision</a>
+    <a href="technology.html">Technology</a>
+    <a href="astro-dev-3d.html">Developer</a>
+    <a href="products.html">Products</a>
+    <a href="progress.html">Progress</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="team.html">Team</a>
+    <a href="whitepaper.html">Whitepaper</a>
+    <a href="painpoints.html">Pain Points</a>
+    <a href="community.html">Community</a>
+    <a href="memeastro.html">MemeAstro</a>
+    <a href="global-console.html">Global Console</a>
+    <a href="console.html">Demo Console</a>
   </div>
+</nav>
 
-  <div class="info-box">
-    <h2>IMPORTANT</h2>
-    <p>MemeAstro (MA) is the <strong>ONLY PASSPORT</strong> for the AstroBridge mainnet airdrop.</p>
-    <p>No other token will be used as the airdrop credential.</p>
-    <p>Save, hold, and qualify for the future of Web3.</p>
+<div class="hero">
+  <h1>Global Intent Network</h1>
+  <p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p>
+  <div class="buttons">
+    <a href="global-console.html" class="btn primary">Global Console</a>
+    <a href="console.html" class="btn secondary">Demo Console</a>
   </div>
+</div>
 
-  <!-- 返回主页按钮 -->
-  <a href="index.html" class="btn-home">BACK TO HOME</a>
+<div class="globe-container">
+  <div id="globe-particles"></div>
+  <div class="globe-text">
+    <h2>Compatible with ALL Blockchains</h2>
+    <p>Truly Universal Chain Compatibility Across the Globe</p>
+  </div>
+</div>
 
-  <footer>
-    <p>© 2026 AstroBridge | MemeAstro (MA)</p>
-  </footer>
+<div class="data-grid">
+  <div class="data-card">
+    <div class="label">24H Total Volume</div>
+    <div class="value" id="volume">$12,860,000,000</div>
+    <div class="unit">USD</div>
+  </div>
+  <div class="data-card">
+    <div class="label">24H Transactions</div>
+    <div class="value" id="tx">26,458,921</div>
+    <div class="unit">Tx</div>
+  </div>
+  <div class="data-card">
+    <div class="label">Global Nodes Online</div>
+    <div class="value" id="nodes">18,623</div>
+    <div class="unit">Nodes</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>What is AstroBridge</h2>
+  <p>AstroBridge connects all chains, assets, and robots into one intent-driven network. You only need to say what you want, and AI does the rest.</p>
+</div>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>AI Intent Routing</h3>
+    <p>Autonomous cross-chain execution with best price, speed, and security.</p>
+  </div>
+  <div class="card">
+    <h3>Global Network</h3>
+    <p>Decentralized nodes worldwide for ultra-low latency and reliability.</p>
+  </div>
+  <div class="card">
+    <h3>Robot Economy</h3>
+    <p>Built for AI agents to operate independently across chains 24/7.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 AstroBridge | Global Intent Network</p>
+</footer>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-// 粒子
-particlesJS("particles",{
-  particles:{
-    number:{value:70,density:{enable:true,value_area:800}},
-    color:{value:["#ffda22","#ff3366","#4cc9f0"]},
-    opacity:{value:0.5,random:true},
-    size:{value:2.5,random:true},
-    line_linked:{enable:true,distance:120,color:"#ffda22",opacity:0.1,width:1},
-    move:{enable:true,speed:1.2,random:true}
-  },
-  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
-  retina_detect:true
+// 汉堡菜单开关
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('hidden');
 });
 
-// 烟花
-const canvas = document.getElementById('fireworks-canvas');
-const ctx = canvas.getContext('2d');
-function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
-window.addEventListener('resize',resize);resize();
+// 中间小星球
+particlesJS("globe-particles",{
+  particles:{
+    number:{value:60},
+    shape:{type:"circle"},
+    color:{value:["#4cc9f0","#f72585","#ffffff"]},
+    opacity:{value:0.6},
+    size:{value:2.5},
+    line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},
+    move:{enable:true,speed:1,direction:"none",straight:false,spin:true}
+  }
+});
 
-class Firework{
-  constructor(){
-    this.x=Math.random()*canvas.width;
-    this.y=canvas.height;
-    this.sx=Math.random()*3-1.5;
-    this.sy=Math.random()*-4-4;
-    this.size=Math.random()*2+2;
-    this.alpha=1;
-    this.decay=0.005;
-    this.colors=['#ffda22','#ff3366','#4cc9f0','#f72585','#ffffff'];
-    this.color=this.colors[Math.floor(Math.random()*this.colors.length)];
+// 数字动画
+function animateValue(id, start, end, duration) {
+  let obj = document.getElementById(id);
+  let range = end - start;
+  let minTimer = 50;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  stepTime = Math.max(stepTime, minTimer);
+  let startTime = new Date().getTime();
+  let endTime = startTime + duration;
+  let timer;
+
+  function run() {
+    let now = new Date().getTime();
+    let remaining = Math.max((endTime - now) / duration, 0);
+    let value = Math.round(end - (remaining * range));
+    if(id==="volume") obj.innerHTML = "$"+value.toLocaleString();
+    else obj.innerHTML = value.toLocaleString();
+    if (value == end) clearInterval(timer);
   }
-  update(){
-    this.sy+=0.04;
-    this.x+=this.sx;
-    this.y+=this.sy;
-    this.alpha-=this.decay;
-  }
-  draw(){
-    ctx.save();
-    ctx.globalAlpha=this.alpha;
-    ctx.fillStyle=this.color;
-    ctx.beginPath();
-    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-    ctx.fill();
-    ctx.restore();
-  }
+  timer = setInterval(run, stepTime);
+  run();
 }
+
+animateValue("volume", 12850000000, 12860000000, 1500);
+animateValue("tx", 26450000, 26458921, 1500);
+animateValue("nodes", 18600, 18623, 1500);
+
+setInterval(() => {
+  animateValue("volume", 12860000000, 12860000000 + Math.floor(Math.random()*5000000), 1000);
+  animateValue("tx", 26458921, 26458921 + Math.floor(Math.random()*300), 1000);
+  animateValue("nodes", 18623, 18623 + Math.floor(Math.random()*3), 1000);
+}, 5000);
+
+// 3D圆球背景
+const canvas=document.getElementById('sphereCanvas');
+const ctx=canvas.getContext('2d');
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+
+window.addEventListener('resize',()=>{
+  w=canvas.width=window.innerWidth;
+  h=canvas.height=window.innerHeight;
+});
+
+const particleCount=800;
+const radius=240;
+const speed=0.002;
 
 class Particle{
-  constructor(x,y,color){
-    this.x=x;this.y=y;
-    this.sx=Math.random()*6-3;
-    this.sy=Math.random()*6-3;
-    this.size=Math.random()*2+1;
-    this.alpha=1;
-    this.decay=0.015;
-    this.color=color;
+  constructor(){
+    this.angle1=Math.random()*Math.PI*2;
+    this.angle2=Math.random()*Math.PI*2;
+    this.depth=Math.random()*0.8+0.2;
+    this.size=Math.random()*1.5+0.5;
+    this.color=Math.random()>0.5 ? '#4cc9f0' : '#f72585';
   }
   update(){
-    this.x+=this.sx;
-    this.y+=this.sy;
-    this.alpha-=this.decay;
+    this.angle1+=speed;
+    this.angle2+=speed*0.7;
   }
   draw(){
-    ctx.save();
-    ctx.globalAlpha=this.alpha;
-    ctx.fillStyle=this.color;
+    const x=w/2 + radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);
+    const y=h/2 + radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);
+    const z=radius*this.depth*Math.cos(this.angle1);
+    const scale=(z+radius)/(radius*2);
+    const alpha=scale*0.7+0.2;
+    
     ctx.beginPath();
-    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+    ctx.arc(x,y,this.size*scale,0,Math.PI*2);
+    ctx.fillStyle=this.color+'80';
     ctx.fill();
-    ctx.restore();
   }
 }
 
-let fireworks=[];
-let particles=[];
+const particles=Array.from({length:particleCount},()=>new Particle());
 
 function loop(){
-  ctx.fillStyle='rgba(2,6,23,0.2)';
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  if(Math.random()<0.15) fireworks.push(new Firework());
-  fireworks.forEach((f,i)=>{f.update();f.draw();if(f.alpha<=0){fireworks.splice(i,1);for(let q=0;q<30;q++) particles.push(new Particle(f.x,f.y,f.color));}});
-  particles.forEach((p,i)=>{p.update();p.draw();if(p.alpha<=0) particles.splice(i,1);});
   requestAnimationFrame(loop);
+  ctx.fillStyle='rgba(2,6,23,0.15)';
+  ctx.fillRect(0,0,w,h);
+  particles.forEach(p=>{p.update();p.draw();});
 }
 loop();
-
-// 气球
-function createBalloons(){
-  const colors=['#ff3366','#ffda22','#4cc9f0','#f72585','#ffffff','#33ff77'];
-  for(let i=0;i<15;i++){
-    const b=document.createElement('div');
-    b.classList.add('balloon');
-    const size=Math.random()*40+50;
-    b.style.width=size+'px';
-    b.style.height=size*1.1+'px';
-    b.style.left=Math.random()*100+'vw';
-    b.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
-    b.style.animationDuration=(Math.random()*30+40)+'s';
-    b.style.animationDelay=(Math.random()*20)+'s';
-    document.body.appendChild(b);
-  }
-}
-
-// 彩带
-function createRibbons(){
-  const colors=['#ffda22','#ff3366','#4cc9f0','#f72585','#fff'];
-  for(let i=0;i<40;i++){
-    const r=document.createElement('div');
-    r.classList.add('ribbon');
-    r.style.left=Math.random()*100+'vw';
-    r.style.backgroundColor=colors[Math.floor(Math.random()*colors.length)];
-    r.style.animationDuration=(Math.random()*10+10)+'s';
-    r.style.animationDelay=(Math.random()*10)+'s';
-    document.body.appendChild(r);
-  }
-}
-
-createBalloons();
-createRibbons();
 </script>
 </body>
 </html>
