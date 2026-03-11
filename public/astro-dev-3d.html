@@ -85,6 +85,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/shaders/LuminosityHighPassShader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/EffectComposer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/RenderPass.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/examples/js/postprocessing/UnrealBloomPass.js"></script>
@@ -92,11 +93,10 @@
 <script>
 // 返回主页
 document.getElementById('backBtn').onclick = () => {
-  alert('Go to AstroBridge Home');
-  // window.location.href = 'index.html';
+  window.location.href = 'index.html';
 };
 
-// 开发者按钮点击
+// 开发者按钮跳转
 function goDev(index) {
   const txt = [
     'Quick Connect Intent Network',
@@ -108,7 +108,6 @@ function goDev(index) {
     'Online Console: Status & Burn'
   ];
   alert(txt[index-1]);
-  // 你后面填真实链接：window.open(...)
 }
 
 // ======== Three.js 3D 球形架构 ========
@@ -124,7 +123,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.toneMapping = THREE.ReinhardToneMapping;
 container.appendChild(renderer.domElement);
 
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.minDistance = 9;
 controls.maxDistance = 36;
@@ -138,7 +137,7 @@ const composer = new THREE.EffectComposer(renderer);
 composer.addPass(renderScene);
 composer.addPass(bloomPass);
 
-// 你的真实模块
+// 模块数据
 const modules = [
   { id: 'core', name: 'Core System', size: 15, color: '#ff2266', isCore: true },
   { id: 'intent', name: 'Intent Layer', size: 9, color: '#00eeff' },
@@ -203,7 +202,7 @@ links.forEach(link => {
   lineObjMap[`${link.from}-${link.to}`] = line;
 });
 
-// 5 秒一次全局流光脉冲
+// 全局流光脉冲
 function pulseAllLinks() {
   const duration = 1500;
   links.forEach(link => {
@@ -222,7 +221,7 @@ function pulseAllLinks() {
 setInterval(pulseAllLinks, 5000);
 pulseAllLinks();
 
-// 点击 API
+// 点击检测
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 window.addEventListener('pointerdown', (e) => {
@@ -233,12 +232,7 @@ window.addEventListener('pointerdown', (e) => {
   const intersects = raycaster.intersectObjects(arr);
   if (intersects.length) {
     const d = intersects[0].object.userData;
-    if (d.isApi) {
-      alert('Open Developer API Portal');
-      // window.open('https://your-api-domain.com');
-    } else {
-      alert('Module: ' + d.name);
-    }
+    alert('Module: ' + d.name);
   }
 });
 
@@ -267,7 +261,7 @@ function animate() {
 }
 animate();
 
-// 窗口自适应
+// 自适应
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth/window.innerHeight;
   camera.updateProjectionMatrix();
