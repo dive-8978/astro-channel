@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstroBridge - Engineering Structure</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700,800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#020112;color:#fff;overflow:hidden;}
+
+/* Canvas 全屏 */
+#space{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:0;
+  background:#020112;
+}
+
+/* 返回主页按钮 */
+.home-btn{
+  position:absolute;
+  top:25px;
+  left:25px;
+  padding:8px 18px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
+  color:#4cc9f0;
+  border:1px solid #4cc9f0;
+  background:rgba(10,30,60,0.6);
+  box-shadow:0 0 10px rgba(76,201,240,0.6);
+  z-index:3;
+  transition:0.25s;
+}
+.home-btn:hover{
+  background:#4cc9f0;
+  color:#02121f;
+  box-shadow:0 0 20px #4cc9f0,0 0 40px #f72585;
+}
+
+/* 页面标题 */
+.title{
+  position:absolute;
+  top:25px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:2rem;
+  font-weight:800;
+  color:#fff;
+  text-shadow:0 0 10px #4cc9f0,0 0 20px #f72585;
+  z-index:2;
+}
+
+/* 节点 */
+.node{
+  position:absolute;
+  width:160px;
+  padding:12px;
+  border-radius:12px;
+  background:rgba(10,30,60,0.8);
+  border:1px solid rgba(76,201,240,0.4);
+  text-align:center;
+  cursor:pointer;
+  transition:0.25s transform,0.25s box-shadow;
+  font-size:14px;
+}
+.node:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 15px #4cc9f0,0 0 25px #f72585;
+}
+
+/* 小提示 */
+.tooltip{
+  position:absolute;
+  background:rgba(0,0,0,0.85);
+  padding:6px 12px;
+  border-radius:6px;
+  font-size:12px;
+  color:#4cc9f0;
+  pointer-events:none;
+  opacity:0;
+  transition:0.2s;
+  z-index:4;
+}
+
+/* HUD 扫描圈 */
+.radar-circle{
+  position:absolute;
+  border:2px solid #4cc9f0;
+  border-radius:50%;
+  animation:radarScan 3s linear infinite;
+  opacity:0.3;
+}
+@keyframes radarScan{
+  0%{transform:scale(0.2);}
+  100%{transform:scale(2.5);opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<canvas id="space"></canvas>
+
+<a href="index.html" class="home-btn">← Home</a>
+<div class="title">ASTROBRIDGE ENGINEERING STRUCTURE</div>
+<div class="tooltip" id="tooltip"></div>
+
+<!-- 节点示意 -->
+<div class="node" data-tooltip="System entry point + self-maintenance tasks" style="top:150px; left:50%;">index.ts</div>
+<div class="node" data-tooltip="Global AI orchestrator + automatic maintenance" style="top:250px; left:30%;">AiOrchestrator.ts</div>
+<div class="node" data-tooltip="AI risk monitoring + threshold management" style="top:250px; left:70%;">AiRiskEngine.ts</div>
+<div class="node" data-tooltip="Global chain client + RPC pool management" style="top:400px; left:20%;">EvmChainClient.ts</div>
+<div class="node" data-tooltip="Decentralized solver for autonomous execution" style="top:400px; left:80%;">SovereignSolver.ts</div>
+<div class="node" data-tooltip="Robot lifecycle and cluster management" style="top:550px; left:50%;">Robot.ts</div>
+
+<!-- HUD 扫描圈 -->
+<div class="radar-circle" style="top:500px; left:50%; width:100px; height:100px;"></div>
+
+<script>
+// 粒子背景
+const canvas = document.getElementById('space');
+const ctx = canvas.getContext('2d');
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+window.addEventListener('resize',()=>{w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;});
+
+const particleCount=400;
+class Particle{
+  constructor(){
+    this.x=Math.random()*w;
+    this.y=Math.random()*h;
+    this.vx=(Math.random()-0.5)*0.3;
+    this.vy=(Math.random()-0.5)*0.3;
+    this.size=Math.random()*1.5+0.5;
+    this.color=Math.random()>0.5?'#4cc9f0':'#f72585';
+  }
+  update(){
+    this.x+=this.vx;
+    this.y+=this.vy;
+    if(this.x<0||this.x>w)this.vx*=-1;
+    if(this.y<0||this.y>h)this.vy*=-1;
+  }
+  draw(){
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+    ctx.fillStyle=this.color+'aa';
+    ctx.fill();
+  }
+}
+const particles = Array.from({length:particleCount},()=>new Particle());
+function animate(){
+  ctx.fillStyle='rgba(2,6,23,0.3)';
+  ctx.fillRect(0,0,w,h);
+  particles.forEach(p=>{p.update();p.draw();});
+  requestAnimationFrame(animate);
+}
+animate();
+
+// 悬浮提示
+const tooltip = document.getElementById('tooltip');
+document.querySelectorAll('.node').forEach(node=>{
+  node.addEventListener('mousemove',(e)=>{
+    tooltip.innerText = node.dataset.tooltip;
+    tooltip.style.left = e.pageX + 15 + 'px';
+    tooltip.style.top = e.pageY + 15 + 'px';
+    tooltip.style.opacity = 1;
+  });
+  node.addEventListener('mouseleave',()=>{
+    tooltip.style.opacity = 0;
+  });
+});
+</script>
+</body>
+</html>
