@@ -1,99 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    title>Web3 Blockchain Infrastructure - Developer Portal</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
-        body {
-            width: 100vw;
-            height: 100vh;
-            background: radial-gradient(circle at 50%, #050a18, #000);
-            overflow: hidden;
-            color: #e8eaf6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web3 Blockchain Infrastructure - Developer Portal</title>
+<style>
+* {
+  margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', system-ui, sans-serif;
+}
+body {
+  width:100vw; height:100vh;
+  background: radial-gradient(circle at 50%, #050a18, #000);
+  overflow:hidden; color:#e8eaf6;
+}
 
-        /* 顶部开发者 API 端口 */
-        .api-bar {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            z-index: 999;
-        }
-        .api-item {
-            padding: 10px 16px;
-            background: rgba(24,34,66,0.8);
-            border: 1px solid #4cc9f0;
-            color: #4cc9f0;
-            border-radius: 8px;
-            font-size: 12px;
-            cursor: pointer;
-        }
+/* 顶部 API 端口 */
+.api-bar {
+  position: fixed; top: 20px; left:50%;
+  transform: translateX(-50%);
+  display:flex; gap:12px;
+  z-index:999;
+}
+.api-item {
+  padding:10px 16px; border-radius:8px;
+  background: rgba(24,34,66,0.8);
+  border:1px solid #4cc9f0;
+  color:#4cc9f0;
+  cursor:pointer; font-size:12px; position:relative;
+  transition:0.3s;
+}
+.api-item:hover { box-shadow:0 0 8px #4cc9f0; transform:scale(1.05); }
+.api-item:hover::after {
+  content: attr(data-tooltip);
+  position:absolute; top:-28px; left:50%;
+  transform:translateX(-50%);
+  padding:4px 8px;
+  background:rgba(76,201,240,0.9); color:#000;
+  font-size:10px; border-radius:4px; white-space:nowrap;
+}
 
-        /* 3D 太阳系画布 */
-        #scene-container {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top:0; left:0;
-            z-index: 1;
-        }
+/* 返回主页 */
+.home-btn {
+  position: fixed; top:20px; left:20px;
+  padding:10px 16px; background:rgba(24,34,66,0.8);
+  border:1px solid #4cc9f0; border-radius:8px;
+  color:#4cc9f0; cursor:pointer; font-weight:bold;
+  transition:0.3s; z-index:999;
+}
+.home-btn:hover { box-shadow:0 0 12px #4cc9f0; transform:scale(1.05); }
 
-        /* 中间标题 */
-        .title {
-            position: fixed;
-            top: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 26px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #4cc9f0, #f72585);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 15px rgba(76,201,240,0.4);
-            z-index: 10;
-        }
+/* 中间 hologram 文字 */
+.holo-title {
+  position: fixed; top:180px; left:50%;
+  transform: translateX(-50%);
+  font-size:32px; font-weight:bold;
+  background: linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  text-shadow:0 0 20px #4cc9f0,0 0 40px #f72585;
+  opacity:0; z-index:10;
+  animation:holoBlink 2s infinite;
+}
+@keyframes holoBlink {0%,100%{opacity:0.3;}50%{opacity:1;}}
 
-        /* 提示 */
-        .tip {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #7cf;
-            font-size:14px;
-            z-index:10;
-        }
-    </style>
+/* 中间标题 */
+.title {
+  position: fixed; top:100px; left:50%;
+  transform:translateX(-50%);
+  font-size:26px; font-weight:bold;
+  background: linear-gradient(90deg, #4cc9f0, #f72585);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  text-shadow:0 0 15px rgba(76,201,240,0.4);
+  z-index:10;
+}
+
+/* 提示 */
+.tip {
+  position:fixed; bottom:30px; left:50%;
+  transform:translateX(-50%);
+  color:#7cf; font-size:14px; z-index:10;
+}
+
+/* 3D 容器 */
+#scene-container { width:100%; height:100%; position:fixed; top:0; left:0; z-index:1; }
+</style>
 </head>
-
 <body>
 
-<!-- 顶部真实开发者接入端口 → 以后填后端IP即可 -->
+<div class="home-btn" onclick="location.href='/'">Home</div>
+
+<!-- 顶部真实开发者接入端口 -->
 <div class="api-bar">
-    <div class="api-item" onclick="goApi('/api-docs')">API Docs</div>
-    <div class="api-item" onclick="goApi('/rpc')">RPC Endpoints</div>
-    <div class="api-item" onclick="goApi('/faucet')">Testnet Faucet</div>
-    <div class="api-item" onclick="goApi('/abi')">Contract ABIs</div>
-    <div class="api-item" onclick="goApi('/sdk')">SDK Download</div>
-    <div class="api-item" onclick="goApi('/webhook')">Webhook Logs</div>
-    <div class="api-item" onclick="goApi('/node')">Node Setup</div>
-    <div class="api-item" onclick="goApi('/explorer')">Explorer</div>
+  <div class="api-item" data-tooltip="View API Documentation" onclick="goApi('/api-docs')">API Docs</div>
+  <div class="api-item" data-tooltip="RPC Endpoints" onclick="goApi('/rpc')">RPC</div>
+  <div class="api-item" data-tooltip="Get Testnet Tokens" onclick="goApi('/faucet')">Faucet</div>
+  <div class="api-item" data-tooltip="Download ABIs" onclick="goApi('/abi')">ABIs</div>
+  <div class="api-item" data-tooltip="SDK Download" onclick="goApi('/sdk')">SDK</div>
+  <div class="api-item" data-tooltip="Webhook Logs" onclick="goApi('/webhook')">Webhook</div>
+  <div class="api-item" data-tooltip="Node Setup" onclick="goApi('/node')">Node</div>
+  <div class="api-item" data-tooltip="Blockchain Explorer" onclick="goApi('/explorer')">Explorer</div>
 </div>
 
 <!-- 中间标题 -->
 <div class="title">
 The Next Decade: Underlying System of Blockchain & Web3
 </div>
+
+<!-- 中间 hologram -->
+<div class="holo-title">AstroBridge Dev Portal</div>
 
 <!-- 3D太阳系 -->
 <div id="scene-container"></div>
@@ -102,7 +115,6 @@ The Next Decade: Underlying System of Blockchain & Web3
 
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
-
 <script>
 let scene, camera, renderer, controls;
 let earthMesh = null;
@@ -140,11 +152,7 @@ function init() {
   // 星空
   const stars = [];
   for(let i=0;i<8000;i++){
-    stars.push(
-      (Math.random()-0.5)*2000,
-      (Math.random()-0.5)*2000,
-      (Math.random()-0.5)*2000
-    );
+    stars.push((Math.random()-0.5)*2000,(Math.random()-0.5)*2000,(Math.random()-0.5)*2000);
   }
   const starGeo = new THREE.BufferGeometry();
   starGeo.setAttribute('position', new THREE.Float32BufferAttribute(stars,3));
@@ -159,22 +167,23 @@ function init() {
     mesh.position.x = p.x;
     mesh.userData = { name:p.name };
     scene.add(mesh);
-
     if(p.name === 'Earth') earthMesh = mesh;
 
     // 轨道
     if(p.name !== 'Sun'){
-      const orbit = new THREE.LineLoop(
-        new THREE.CircleGeometry(p.x,100),
-        new THREE.LineBasicMaterial({ color:p.color, transparent:true, opacity:0.4 })
-      );
+      const orbitGeo = new THREE.CircleGeometry(p.x,100);
+      orbitGeo.vertices.shift();
+      const orbit = new THREE.LineLoop(orbitGeo, new THREE.LineBasicMaterial({ color:p.color, transparent:true, opacity:0.3 }));
       orbit.rotation.x = Math.PI/2;
       scene.add(orbit);
     }
   });
 
-  // 点击地球 → 放大 → 进入开发者中心
+  // 点击地球 → 飞向开发者中心
   window.addEventListener('click', onMouseClick);
+
+  // 光束发射
+  setInterval(animateBeams, 3000);
 
   animate();
 }
@@ -182,19 +191,17 @@ function init() {
 // 点击检测
 function onMouseClick(e) {
   const mouse = new THREE.Vector2(
-    (e.clientX / window.innerWidth) * 2 - 1,
-    -(e.clientY / window.innerHeight) * 2 + 1
+    (e.clientX / window.innerWidth)*2 - 1,
+    -(e.clientY / window.innerHeight)*2 + 1
   );
   const raycaster = new THREE.Raycaster();
   raycaster.setFromCamera(mouse, camera);
   const intersects = raycaster.intersectObjects(scene.children);
 
   for(let item of intersects){
-    if(item.object.userData.name === 'Earth'){
+    if(item.object.userData.name==='Earth'){
       flyToEarth();
-      setTimeout(()=>{
-        location.href = '/developer-center'; // 👈 这里填你的后端接入地址
-      },1500);
+      setTimeout(()=>{ location.href='/developer-center'; },1500);
       return;
     }
   }
@@ -207,6 +214,8 @@ function flyToEarth() {
   const start = camera.position.clone();
   const startTime = Date.now();
 
+  document.querySelector('.holo-title').style.opacity = 1;
+
   function update() {
     const t = Math.min(1, (Date.now()-startTime)/duration);
     camera.position.lerpVectors(start, targetPos, t);
@@ -216,12 +225,31 @@ function flyToEarth() {
   update();
 }
 
-// 端口跳转（后端直接替换这里）
-function goApi(path) {
-  location.href = 'http://你的后端IP:端口'+path;
+// 光束动画
+const beams = [];
+function createBeam(from, to, color=0x4cc9f0) {
+  const mat = new THREE.LineBasicMaterial({ color:color, transparent:true, opacity:0.6 });
+  const geom = new THREE.BufferGeometry().setFromPoints([from.clone(), to.clone()]);
+  const line = new THREE.Line(geom, mat);
+  scene.add(line);
+  beams.push(line);
+  setInterval(()=>{ line.material.opacity = Math.random()*0.6+0.4; }, 1000 + Math.random()*1000);
 }
 
-function animate() {
+function animateBeams() {
+  const apiPositions = [
+    new THREE.Vector3(-20,15,0),
+    new THREE.Vector3(20,15,0),
+    new THREE.Vector3(-25,5,10),
+    new THREE.Vector3(25,5,-10)
+  ];
+  apiPositions.forEach(pos => createBeam(pos, earthMesh.position));
+}
+
+// API 跳转
+function goApi(path){ location.href='http://你的后端IP:端口'+path; }
+
+function animate(){
   requestAnimationFrame(animate);
   controls.update();
   renderer.render(scene,camera);
@@ -231,7 +259,7 @@ init();
 window.addEventListener('resize',()=>{
   camera.aspect = window.innerWidth/window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth,window.innerHeight);
+  renderer.setSize(window.innerWidth, window.innerHeight);
 });
 </script>
 
