@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Three.js Test</title>
+  <meta charset="utf-8">
+  <title>Three.js Test on Vercel</title>
   <style>
     body { margin:0; overflow:hidden; background:#000; }
     canvas { display:block; }
@@ -14,43 +13,58 @@
     import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js';
     import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/controls/OrbitControls.js';
 
-    // 下面直接粘你的完整 three.js 代码（从 const scene = ... 开始到 animate()）
+    // 强制设置背景色，确保不是透明黑屏
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x112244);
+    scene.background = new THREE.Color(0x112244);  // 深蓝，容易看出渲染了没
 
-    const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 1000);
-    camera.position.set(0, 5, 15);
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 5, 15);  // 拉近，确保能看到球
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(innerWidth, innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);  // 加这行，画面更清晰
     document.body.appendChild(renderer.domElement);
 
     const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
 
-    // 示例物体 + 光（确保能看到东西）
-    const geo = new THREE.SphereGeometry(4, 32, 32);
-    const mat = new THREE.MeshStandardMaterial({ color: 0x44ff88 });
-    const ball = new THREE.Mesh(geo, mat);
-    scene.add(ball);
+    // 加个明显物体 + 光（MeshStandardMaterial 需要光）
+    const geometry = new THREE.SphereGeometry(4, 32, 32);
+    const material = new THREE.MeshStandardMaterial({ color: 0x44ff88, metalness: 0.1, roughness: 0.5 });
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
 
+    // 光源（必须加，不然 StandardMaterial 黑的）
     scene.add(new THREE.AmbientLight(0xffffff, 0.8));
     const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
-    dirLight.position.set(5, 10, 7.5);
+    dirLight.position.set(10, 10, 10);
     scene.add(dirLight);
 
+    // 动画循环
     function animate() {
       requestAnimationFrame(animate);
-      ball.rotation.y += 0.01;
+      sphere.rotation.y += 0.01;  // 旋转看是否渲染
       controls.update();
       renderer.render(scene, camera);
     }
-    animate();
+
+    animate();  // 必须显式调用！
 
     window.addEventListener('resize', () => {
-      camera.aspect = innerWidth / innerHeight;
+      camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(innerWidth, innerHeight);
+      renderer.setSize(window.innerWidth, window.innerHeight);
     });
+
+    // 加个调试文字到页面，确保 JS 至少跑了
+    const debug = document.createElement('div');
+    debug.style.position = 'absolute';
+    debug.style.top = '10px';
+    debug.style.left = '10px';
+    debug.style.color = 'white';
+    debug.style.fontSize = '20px';
+    debug.textContent = 'Three.js Loaded – 如果看到这个，JS 执行了，但可能相机/光问题';
+    document.body.appendChild(debug);
   </script>
 </body>
 </html>
