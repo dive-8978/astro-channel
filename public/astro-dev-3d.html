@@ -1,254 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AstroBridge Global Developer Console</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: #020a1a;
-      overflow: hidden;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-    #scene-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    #holoText {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #4cc9f0;
-      font-size: 28px;
-      text-shadow: 0 0 15px #4cc9f0;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s;
-    }
-    .api-panel {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: rgba(0,10,30,0.8);
-      border: 1px solid #4cc9f0;
-      border-radius: 10px;
-      padding: 16px 20px;
-      color: #fff;
-      min-width: 300px;
-      backdrop-filter: blur(6px);
-    }
-    .api-panel h3 {
-      color: #4cc9f0;
-      margin-bottom: 10px;
-    }
-    .api-item {
-      margin: 8px 0;
-      padding: 8px 12px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .api-item:hover {
-      background: rgba(76,201,240,0.2);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstroBridge Global Developer Console</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#020a1a;
+overflow:hidden;
+font-family:system-ui;
+}
+
+#scene-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+
+#holoText{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#4cc9f0;
+font-size:28px;
+text-shadow:0 0 20px #4cc9f0;
+opacity:0;
+pointer-events:none;
+transition:opacity .3s;
+}
+
+.home-btn{
+position:fixed;
+top:20px;
+left:20px;
+padding:8px 16px;
+border:1px solid #4cc9f0;
+color:#4cc9f0;
+background:rgba(0,0,0,.4);
+border-radius:6px;
+cursor:pointer;
+}
+
+.api-panel{
+position:fixed;
+top:20px;
+right:20px;
+background:rgba(0,10,30,.85);
+border:1px solid #4cc9f0;
+border-radius:10px;
+padding:16px 20px;
+color:#fff;
+min-width:280px;
+backdrop-filter:blur(6px);
+}
+
+.api-panel h3{
+color:#4cc9f0;
+margin-bottom:10px;
+}
+
+.api-item{
+margin:8px 0;
+padding:8px 12px;
+background:rgba(255,255,255,.05);
+border-radius:6px;
+cursor:pointer;
+}
+
+.api-item:hover{
+background:rgba(76,201,240,.2);
+}
+
+</style>
 </head>
+
 <body>
 
 <div id="scene-container"></div>
+
 <div id="holoText">API LINK ESTABLISHED</div>
 
+<div class="home-btn" onclick="location.href='index.html'">← Home</div>
+
 <div class="api-panel">
-  <h3>Global API Ports</h3>
-  <div class="api-item" onclick="goApi('/api/v1/nodes')">API: Node Status • Port 8080</div>
-  <div class="api-item" onclick="goApi('/api/v1/bridge')">API: AstroBridge • Port 8081</div>
-  <div class="api-item" onclick="goApi('/api/v1/chain')">API: Chain Sync • Port 8082</div>
-  <div class="api-item" onclick="goApi('/api/v1/dev')">API: Developer Center • Port 8090</div>
+<h3>Global API Ports</h3>
+
+<div class="api-item" onclick="goApi('/api/v1/nodes')">
+Node Status • 8080
+</div>
+
+<div class="api-item" onclick="goApi('/api/v1/bridge')">
+AstroBridge Core • 8081
+</div>
+
+<div class="api-item" onclick="goApi('/api/v1/chain')">
+Chain Sync • 8082
+</div>
+
+<div class="api-item" onclick="goApi('/api/v1/dev')">
+Developer Center • 8090
+</div>
+
 </div>
 
 <script type="importmap">
 {
-  "imports": {
-    "three": "https://unpkg.com/three@0.168.0/build/three.module.js",
-    "three/addons/": "https://unpkg.com/three@0.168.0/examples/jsm/"
-  }
+"imports":{
+"three":"https://unpkg.com/three@0.168.0/build/three.module.js",
+"three/addons/":"https://unpkg.com/three@0.168.0/examples/jsm/"
+}
 }
 </script>
 
 <script type="module">
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-let scene, camera, renderer, controls;
-let earthMesh = null;
-let beams = [];
-const holoText = document.getElementById('holoText');
+import * as THREE from 'three'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 
-const planets = [
-  { name: 'Sun', radius: 5, color: 0xffcc00, x: 0 },
-  { name: 'Mercury', radius: 0.8, color: 0xaaaaaa, x: 8 },
-  { name: 'Venus', radius: 1.2, color: 0xeec86f, x: 11 },
-  { name: 'Earth', radius: 1.3, color: 0x4499ff, x: 14 },
-  { name: 'Mars', radius: 1.0, color: 0xff6633, x: 17 }
-];
+let scene,camera,renderer,controls
+let earthMesh
+let planetMeshes=[]
+let beams=[]
 
-const apiPositions = [
-  new THREE.Vector3(-20, 15, 0),
-  new THREE.Vector3(20, 15, 0),
-  new THREE.Vector3(-25, 5, 10),
-  new THREE.Vector3(25, 5, -10)
-];
+const holoText=document.getElementById("holoText")
 
-function init() {
-  const container = document.getElementById('scene-container');
-  scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x000211);
+const planets=[
+{name:'Sun',radius:5,color:0xffcc00,x:0},
+{name:'Mercury',radius:.7,color:0xaaaaaa,x:8},
+{name:'Venus',radius:1,color:0xeec86f,x:11},
+{name:'Earth',radius:1.2,color:0x4499ff,x:14},
+{name:'Mars',radius:.9,color:0xff6633,x:17}
+]
 
-  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(0, 15, 35);
+const apiPositions=[
+new THREE.Vector3(-20,15,0),
+new THREE.Vector3(20,15,0),
+new THREE.Vector3(-25,5,10),
+new THREE.Vector3(25,5,-10)
+]
 
-  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild(renderer.domElement);
+function init(){
 
-  controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.08;
-  controls.minDistance = 15;
-  controls.maxDistance = 100;
+scene=new THREE.Scene()
 
-  // Stars
-  const stars = [];
-  for (let i = 0; i < 2000; i++) {
-    stars.push(
-      (Math.random() - 0.5) * 2000,
-      (Math.random() - 0.5) * 2000,
-      (Math.random() - 0.5) * 2000
-    );
-  }
-  const starGeo = new THREE.BufferGeometry();
-  starGeo.setAttribute('position', new THREE.Float32BufferAttribute(stars, 3));
-  const starMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.6 });
-  scene.add(new THREE.Points(starGeo, starMat));
+camera=new THREE.PerspectiveCamera(
+60,
+window.innerWidth/window.innerHeight,
+.1,
+2000
+)
 
-  // Planets + orbits
-  planets.forEach(p => {
-    const geo = new THREE.SphereGeometry(p.radius, 32, 32);
-    const mat = new THREE.MeshBasicMaterial({ color: p.color });
-    const mesh = new THREE.Mesh(geo, mat);
-    mesh.position.x = p.x;
-    mesh.userData.name = p.name;
-    scene.add(mesh);
-    if (p.name === 'Earth') earthMesh = mesh;
+camera.position.set(0,15,35)
 
-    if (p.name !== 'Sun') {
-      const points = [];
-      for (let i = 0; i <= 100; i++) {
-        const a = (i / 100) * Math.PI * 2;
-        points.push(new THREE.Vector3(Math.cos(a) * p.x, 0, Math.sin(a) * p.x));
-      }
-      const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
-      const lineMat = new THREE.LineBasicMaterial({
-        color: p.color,
-        transparent: true,
-        opacity: 0.25
-      });
-      scene.add(new THREE.Line(lineGeo, lineMat));
-    }
-  });
+renderer=new THREE.WebGLRenderer({antialias:true})
 
-  window.addEventListener('click', onMouseClick);
-  animate();
-  setInterval(fireBeam, 3200);
+renderer.setSize(window.innerWidth,window.innerHeight)
+
+document
+.getElementById("scene-container")
+.appendChild(renderer.domElement)
+
+controls=new OrbitControls(camera,renderer.domElement)
+
+controls.enableDamping=true
+
+/* 星系背景 */
+
+const stars=[]
+
+for(let i=0;i<4000;i++){
+
+stars.push(
+(Math.random()-.5)*2000,
+(Math.random()-.5)*2000,
+(Math.random()-.5)*2000
+)
+
 }
 
-function onMouseClick(e) {
-  const mouse = new THREE.Vector2(
-    (e.clientX / window.innerWidth) * 2 - 1,
-    -(e.clientY / window.innerHeight) * 2 + 1
-  );
-  const raycaster = new THREE.Raycaster();
-  raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(scene.children);
-  for (const item of intersects) {
-    if (item.object.userData.name === 'Earth') {
-      flyToEarth();
-      setTimeout(() => {
-        alert('Developer Center: https://yourdomain.com/dev');
-      }, 1600);
-      return;
-    }
-  }
+const starGeo=new THREE.BufferGeometry()
+
+starGeo.setAttribute(
+'position',
+new THREE.Float32BufferAttribute(stars,3)
+)
+
+const starMat=new THREE.PointsMaterial({
+color:0xffffff,
+size:.7
+})
+
+scene.add(new THREE.Points(starGeo,starMat))
+
+/* 太阳光 */
+
+const sunLight=new THREE.PointLight(0xffcc00,3,300)
+
+scene.add(sunLight)
+
+/* 行星 */
+
+planets.forEach(p=>{
+
+const geo=new THREE.SphereGeometry(p.radius,64,64)
+
+const mat=new THREE.MeshStandardMaterial({
+color:p.color,
+emissive:p.color,
+emissiveIntensity:.25,
+metalness:.5,
+roughness:.4
+})
+
+const mesh=new THREE.Mesh(geo,mat)
+
+mesh.position.x=p.x
+
+mesh.userData.name=p.name
+
+scene.add(mesh)
+
+planetMeshes.push(mesh)
+
+if(p.name==="Earth") earthMesh=mesh
+
+/* 太阳光晕 */
+
+if(p.name==="Sun"){
+
+const glowGeo=new THREE.SphereGeometry(7,64,64)
+
+const glowMat=new THREE.MeshBasicMaterial({
+color:0xffcc66,
+transparent:true,
+opacity:.25
+})
+
+const glow=new THREE.Mesh(glowGeo,glowMat)
+
+scene.add(glow)
+
 }
 
-function flyToEarth() {
-  const target = earthMesh.position.clone().add(new THREE.Vector3(0, 2, 5));
-  const start = camera.position.clone();
-  const startT = Date.now();
-  function update() {
-    const t = Math.min(1, (Date.now() - startT) / 1600);
-    camera.position.lerpVectors(start, target, t);
-    camera.lookAt(earthMesh.position);
-    if (t < 1) requestAnimationFrame(update);
-  }
-  update();
+/* 轨道 */
+
+if(p.name!=="Sun"){
+
+const points=[]
+
+for(let i=0;i<=360;i++){
+
+let a=THREE.MathUtils.degToRad(i)
+
+points.push(
+new THREE.Vector3(
+Math.cos(a)*p.x,
+0,
+Math.sin(a)*p.x
+)
+)
+
 }
 
-function fireBeam() {
-  const color = 0x4cc9f0;
-  const group = [];
-  apiPositions.forEach(pos => {
-    const geo = new THREE.BufferGeometry().setFromPoints([
-      pos.clone(),
-      earthMesh.position.clone()
-    ]);
-    const mat = new THREE.LineBasicMaterial({
-      color,
-      transparent: true,
-      opacity: 0.8
-    });
-    const beam = new THREE.Line(geo, mat);
-    scene.add(beam);
-    group.push(beam);
-  });
-  beams.push(...group);
-  holoText.style.opacity = 1;
-  setTimeout(() => { holoText.style.opacity = 0; }, 1200);
-  setTimeout(() => {
-    group.forEach(b => scene.remove(b));
-  }, 1200);
+const orbitGeo=new THREE.BufferGeometry().setFromPoints(points)
+
+const orbitMat=new THREE.LineBasicMaterial({
+color:p.color,
+transparent:true,
+opacity:.35
+})
+
+scene.add(new THREE.Line(orbitGeo,orbitMat))
+
 }
 
-window.goApi = function (path) {
-  holoText.style.opacity = 1;
-  setTimeout(() => { holoText.style.opacity = 0; }, 1000);
-  alert(`Open API: ${path}\nGlobal Port: 8080-8099`);
-};
+})
 
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();
-  renderer.render(scene, camera);
+window.addEventListener("click",onMouseClick)
+
+animate()
+
+setInterval(fireBeam,3200)
+
 }
 
-init();
+/* 点击地球 */
 
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+function onMouseClick(e){
+
+const mouse=new THREE.Vector2(
+(e.clientX/window.innerWidth)*2-1,
+-(e.clientY/window.innerHeight)*2+1
+)
+
+const raycaster=new THREE.Raycaster()
+
+raycaster.setFromCamera(mouse,camera)
+
+const intersects=raycaster.intersectObjects(scene.children)
+
+for(const obj of intersects){
+
+if(obj.object.userData.name==="Earth"){
+
+flyToEarth()
+
+setTimeout(()=>{
+alert("Developer Center")
+},1600)
+
+}
+
+}
+
+}
+
+function flyToEarth(){
+
+const target=earthMesh.position.clone()
+.add(new THREE.Vector3(0,2,5))
+
+const start=camera.position.clone()
+
+const startT=Date.now()
+
+function update(){
+
+const t=Math.min(1,(Date.now()-startT)/1600)
+
+camera.position.lerpVectors(start,target,t)
+
+camera.lookAt(earthMesh.position)
+
+if(t<1) requestAnimationFrame(update)
+
+}
+
+update()
+
+}
+
+/* 光束 */
+
+function fireBeam(){
+
+const group=[]
+
+apiPositions.forEach(pos=>{
+
+const geo=new THREE.BufferGeometry()
+.setFromPoints([pos.clone(),earthMesh.position.clone()])
+
+const mat=new THREE.LineBasicMaterial({
+color:0x4cc9f0,
+transparent:true,
+opacity:.9
+})
+
+const beam=new THREE.Line(geo,mat)
+
+scene.add(beam)
+
+group.push(beam)
+
+})
+
+holoText.style.opacity=1
+
+setTimeout(()=>{holoText.style.opacity=0},1200)
+
+setTimeout(()=>{
+group.forEach(b=>scene.remove(b))
+},1200)
+
+}
+
+/* API */
+
+window.goApi=function(path){
+
+holoText.style.opacity=1
+
+setTimeout(()=>{holoText.style.opacity=0},800)
+
+alert("Open API "+path)
+
+}
+
+/* 动画 */
+
+function animate(){
+
+requestAnimationFrame(animate)
+
+controls.update()
+
+planetMeshes.forEach(p=>{
+p.rotation.y+=0.01
+})
+
+scene.rotation.y+=0.0006
+
+renderer.render(scene,camera)
+
+}
+
+init()
+
+window.addEventListener("resize",()=>{
+
+camera.aspect=window.innerWidth/window.innerHeight
+
+camera.updateProjectionMatrix()
+
+renderer.setSize(window.innerWidth,window.innerHeight)
+
+})
+
 </script>
 
 </body>
