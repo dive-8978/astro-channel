@@ -2,333 +2,426 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>AstroBridge - Engineering Structure</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstroBridge Engineering Structure</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#020112;color:#fff;overflow:hidden;}
 
-/* Canvas 全屏 */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif
+}
+
+body{
+background:#020112;
+color:white;
+overflow:hidden;
+}
+
 #space{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  z-index:0;
-  background:#020112;
+position:fixed;
+top:0;
+left:0;
+width:100vw;
+height:100vh;
+z-index:0;
 }
 
-/* 返回主页按钮 - 手机适配 */
+/* Home */
 .home-btn{
-  position:absolute;
-  top:15px;
-  left:15px;
-  padding:6px 12px;
-  border-radius:16px;
-  text-decoration:none;
-  font-size:12px;
-  color:#4cc9f0;
-  border:1px solid #4cc9f0;
-  background:rgba(10,30,60,0.6);
-  box-shadow:0 0 8px rgba(76,201,240,0.6);
-  z-index:3;
-  transition:0.25s;
-}
-.home-btn:hover{
-  background:#4cc9f0;
-  color:#02121f;
-  box-shadow:0 0 16px #4cc9f0,0 0 32px #f72585;
+position:absolute;
+top:15px;
+left:15px;
+padding:6px 12px;
+border-radius:16px;
+text-decoration:none;
+font-size:12px;
+color:#4cc9f0;
+border:1px solid #4cc9f0;
+background:rgba(10,30,60,0.6);
+box-shadow:0 0 8px rgba(76,201,240,0.6);
+z-index:3;
 }
 
-/* 页面标题 - 手机适配 */
+/* Title */
+
 .title{
-  position:absolute;
-  top:18px;
-  left:50%;
-  transform:translateX(-50%);
-  font-size:1.5rem;
-  font-weight:800;
-  color:#fff;
-  text-shadow:0 0 8px #4cc9f0,0 0 16px #f72585;
-  z-index:2;
-  text-align:center;
-  width:calc(100% - 120px);
+position:absolute;
+top:18px;
+left:50%;
+transform:translateX(-50%);
+font-size:1.6rem;
+font-weight:800;
+text-shadow:0 0 10px #4cc9f0,0 0 20px #f72585;
+z-index:3;
 }
 
-/* 节点 - 核心响应式修改 */
+/* Node */
+
 .node{
-  position:absolute;
-  width:140px;
-  padding:10px;
-  border-radius:10px;
-  background:rgba(10,30,60,0.8);
-  border:1px solid rgba(76,201,240,0.4);
-  text-align:center;
-  cursor:pointer;
-  transition:0.25s transform,0.25s box-shadow;
-  font-size:12px;
-  z-index:2;
-  /* 移动端触摸优化 */
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
+position:absolute;
+width:140px;
+padding:10px;
+background:rgba(10,30,60,0.8);
+border:1px solid rgba(76,201,240,0.4);
+border-radius:10px;
+text-align:center;
+font-size:12px;
+cursor:pointer;
+transform:translate(-50%,-50%);
+transition:0.25s;
+z-index:3;
 }
+
 .node:hover{
-  transform:scale(1.1);
-  box-shadow:0 0 12px #4cc9f0,0 0 20px #f72585;
-}
-/* 手机端缩小hover效果 */
-@media (max-width: 768px) {
-  .node:hover{
-    transform:none;
-    box-shadow:none;
-  }
-  .node:active{
-    transform:scale(1.05);
-    box-shadow:0 0 12px #4cc9f0;
-  }
+transform:translate(-50%,-50%) scale(1.1);
+box-shadow:0 0 12px #4cc9f0,0 0 20px #f72585;
 }
 
-/* 小提示 - 手机适配 */
+/* Tooltip */
+
 .tooltip{
-  position:absolute;
-  background:rgba(0,0,0,0.85);
-  padding:5px 10px;
-  border-radius:5px;
-  font-size:11px;
-  color:#4cc9f0;
-  pointer-events:none;
-  opacity:0;
-  transition:0.2s;
-  z-index:4;
-  /* 防止超出屏幕 */
-  max-width:calc(100% - 30px);
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+position:absolute;
+background:black;
+padding:6px 10px;
+border-radius:5px;
+font-size:11px;
+color:#4cc9f0;
+pointer-events:none;
+opacity:0;
+transition:0.2s;
+z-index:5;
+max-width:200px;
 }
 
-/* HUD 扫描圈 */
-.radar-circle{
-  position:absolute;
-  border:2px solid #4cc9f0;
-  border-radius:50%;
-  animation:radarScan 3s linear infinite;
-  opacity:0.3;
-}
-@keyframes radarScan{
-  0%{transform:scale(0.2);}
-  100%{transform:scale(2.5);opacity:0;}
-}
+/* center */
 
-/* AstroBridge 中心字 - 手机适配 */
 .center-text{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  font-size:3rem;
-  font-weight:900;
-  color:#fff;
-  text-align:center;
-  text-shadow:0 0 16px #4cc9f0,0 0 32px #f72585,0 0 48px #4cc9f0;
-  opacity:0;
-  z-index:5;
-  animation:flash 1.5s infinite alternate;
-}
-@keyframes flash{
-  0%{opacity:0.3;}
-  100%{opacity:1;}
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:3rem;
+font-weight:900;
+text-shadow:0 0 20px #4cc9f0,0 0 40px #f72585;
+opacity:0;
+z-index:4;
+animation:flash 1.5s infinite alternate;
 }
 
-/* 网格布局辅助 - 用于手机端自动排列 */
-.grid-container{
-  position:absolute;
-  top:80px;
-  left:0;
-  width:100%;
-  height:calc(100% - 80px);
-  z-index:2;
-  display:none;
+@keyframes flash{
+0%{opacity:0.3}
+100%{opacity:1}
 }
-@media (max-width: 768px) {
-  .grid-container{display:block;}
-  .node{position:static;display:inline-block;margin:10px;}
+
+/* radar */
+
+.radar-circle{
+position:absolute;
+border:2px solid #4cc9f0;
+border-radius:50%;
+animation:radar 3s linear infinite;
+opacity:0.4;
 }
+
+@keyframes radar{
+0%{transform:translate(-50%,-50%) scale(0.3)}
+100%{transform:translate(-50%,-50%) scale(2.5);opacity:0}
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.node{
+width:120px;
+font-size:11px;
+}
+
+.center-text{
+font-size:2rem;
+}
+
+.title{
+font-size:1.2rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
 <canvas id="space"></canvas>
 
 <a href="index.html" class="home-btn">← Home</a>
+
 <div class="title">ASTROBRIDGE ENGINEERING STRUCTURE</div>
+
 <div class="tooltip" id="tooltip"></div>
 
-<!-- 手机端网格容器 -->
-<div class="grid-container" id="gridContainer"></div>
-
-<!-- 节点 - 手机端通过JS动态添加到网格 -->
-<div class="node" data-tooltip="System entry point + self-maintenance tasks">index.ts</div>
-<div class="node" data-tooltip="Global AI orchestrator + automatic maintenance">AiOrchestrator.ts</div>
-<div class="node" data-tooltip="AI risk monitoring + threshold management">AiRiskEngine.ts</div>
-<div class="node" data-tooltip="Global chain client + RPC pool management">EvmChainClient.ts</div>
-<div class="node" data-tooltip="Decentralized solver for autonomous execution">SovereignSolver.ts</div>
-<div class="node" data-tooltip="Robot lifecycle and cluster management">Robot.ts</div>
-
-<div class="radar-circle" style="top:50%; left:50%; width:100px; height:100px; transform:translate(-50%,-50%);"></div>
 <div class="center-text" id="centerText">ASTROBRIDGE</div>
 
+<div class="radar-circle" style="top:50%;left:50%;width:120px;height:120px;"></div>
+
+
+<!-- nodes -->
+
+<div class="node" data-tooltip="System entry point + self-maintenance tasks">index.ts</div>
+
+<div class="node" data-tooltip="Global AI orchestrator + automatic maintenance">AiOrchestrator.ts</div>
+
+<div class="node" data-tooltip="AI risk monitoring + threshold management">AiRiskEngine.ts</div>
+
+<div class="node" data-tooltip="Global chain client + RPC pool management">EvmChainClient.ts</div>
+
+<div class="node" data-tooltip="Decentralized solver for autonomous execution">SovereignSolver.ts</div>
+
+<div class="node" data-tooltip="Robot lifecycle and cluster management">Robot.ts</div>
+
+
 <script>
-// 粒子背景
-const canvas = document.getElementById('space');
-const ctx = canvas.getContext('2d');
-let w=canvas.width=window.innerWidth;
-let h=canvas.height=window.innerHeight;
-window.addEventListener('resize',()=>{
-  w=canvas.width=window.innerWidth;
-  h=canvas.height=window.innerHeight;
-  // 重置粒子边界
-  particles.forEach(p=>{
-    p.x = Math.min(p.x, w-5);
-    p.y = Math.min(p.y, h-5);
-  });
-});
 
-const particleCount=400;
+/* canvas */
+
+const canvas=document.getElementById("space")
+const ctx=canvas.getContext("2d")
+
+let w=canvas.width=window.innerWidth
+let h=canvas.height=window.innerHeight
+
+window.addEventListener("resize",()=>{
+w=canvas.width=window.innerWidth
+h=canvas.height=window.innerHeight
+layoutNodes()
+})
+
+/* particles */
+
 class Particle{
-  constructor(){
-    this.x=Math.random()*w;
-    this.y=Math.random()*h;
-    this.vx=(Math.random()-0.5)*0.3;
-    this.vy=(Math.random()-0.5)*0.3;
-    this.size=Math.random()*1.5+0.5;
-    this.color=Math.random()>0.5?'#4cc9f0':'#f72585';
-  }
-  update(){
-    this.x+=this.vx;
-    this.y+=this.vy;
-    if(this.x<0||this.x>w)this.vx*=-1;
-    if(this.y<0||this.y>h)this.vy*=-1;
-  }
-  draw(){
-    ctx.beginPath();
-    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-    ctx.fillStyle=this.color+'aa';
-    ctx.fill();
-  }
+
+constructor(){
+
+this.x=Math.random()*w
+this.y=Math.random()*h
+
+this.vx=(Math.random()-0.5)*0.3
+this.vy=(Math.random()-0.5)*0.3
+
+this.size=Math.random()*1.5
+
+this.color=Math.random()>0.5?"#4cc9f0":"#f72585"
+
 }
-const particles = Array.from({length:particleCount},()=>new Particle());
+
+update(){
+
+this.x+=this.vx
+this.y+=this.vy
+
+if(this.x<0||this.x>w)this.vx*=-1
+if(this.y<0||this.y>h)this.vy*=-1
+
+}
+
+draw(){
+
+ctx.beginPath()
+ctx.arc(this.x,this.y,this.size,0,Math.PI*2)
+ctx.fillStyle=this.color
+ctx.fill()
+
+}
+
+}
+
+const particles=Array.from({length:350},()=>new Particle())
+
 function animate(){
-  ctx.fillStyle='rgba(2,6,23,0.3)';
-  ctx.fillRect(0,0,w,h);
-  particles.forEach(p=>{p.update();p.draw();});
-  requestAnimationFrame(animate);
-}
-animate();
 
-// 悬浮提示
-const tooltip = document.getElementById('tooltip');
-const nodes = document.querySelectorAll('.node');
+ctx.fillStyle="rgba(2,6,23,0.3)"
+ctx.fillRect(0,0,w,h)
+
+particles.forEach(p=>{
+p.update()
+p.draw()
+})
+
+requestAnimationFrame(animate)
+
+}
+
+animate()
+
+/* nodes */
+
+const nodes=document.querySelectorAll(".node")
+
+function layoutNodes(){
+
+const mobile=window.innerWidth<768
+
+if(mobile){
+
+const cols=2
+
+const gapX=window.innerWidth/(cols+1)
+const gapY=110
+
+nodes.forEach((node,i)=>{
+
+const col=i%cols
+const row=Math.floor(i/cols)
+
+node.style.left=gapX*(col+1)+"px"
+node.style.top=(120+row*gapY)+"px"
+
+})
+
+}
+
+else{
+
+const centerX=w/2
+const centerY=h/2
+
+const radius=Math.min(w,h)*0.35
+
+const step=(Math.PI*2)/nodes.length
+
+nodes.forEach((node,i)=>{
+
+const angle=i*step
+
+let x=centerX+radius*Math.cos(angle)
+let y=centerY+radius*Math.sin(angle)
+
+node.style.left=x+"px"
+node.style.top=y+"px"
+
+})
+
+}
+
+}
+
+layoutNodes()
+
+/* tooltip */
+
+const tooltip=document.getElementById("tooltip")
+
 nodes.forEach(node=>{
-  node.addEventListener('mousemove',(e)=>{
-    tooltip.innerText = node.dataset.tooltip;
-    tooltip.style.left = (e.pageX + 15) + 'px';
-    tooltip.style.top = (e.pageY + 15) + 'px';
-    tooltip.style.opacity = 1;
-  });
-  node.addEventListener('mouseleave',()=>{
-    tooltip.style.opacity = 0;
-  });
-  // 手机触摸支持
-  node.addEventListener('touchstart',(e)=>{
-    tooltip.innerText = node.dataset.tooltip;
-    const touch = e.touches[0];
-    tooltip.style.left = (touch.pageX + 15) + 'px';
-    tooltip.style.top = (touch.pageY + 15) + 'px';
-    tooltip.style.opacity = 1;
-  },{passive:true});
-  node.addEventListener('touchend',()=>{
-    tooltip.style.opacity = 0;
-  });
-});
 
-// 手机端网格布局
-const gridContainer = document.getElementById('gridContainer');
-function adaptToMobile(){
-  if(window.innerWidth <= 768){
-    nodes.forEach(node=>{
-      gridContainer.appendChild(node.cloneNode(true));
-    });
-    nodes.forEach(node=>node.remove());
-  }else{
-    const gridNodes = gridContainer.querySelectorAll('.node');
-    gridNodes.forEach(node=>{
-      document.body.appendChild(node);
-      gridContainer.removeChild(node);
-    });
-  }
-}
-// 初始化适配
-adaptToMobile();
-// 窗口变化时重新适配
-window.addEventListener('resize', adaptToMobile);
+node.addEventListener("mousemove",e=>{
 
-// 光束动画
-const centerText = document.getElementById('centerText');
+tooltip.innerText=node.dataset.tooltip
+
+let x=e.pageX+15
+let y=e.pageY+15
+
+if(x+200>window.innerWidth)x=window.innerWidth-200
+if(y+40>window.innerHeight)y=window.innerHeight-40
+
+tooltip.style.left=x+"px"
+tooltip.style.top=y+"px"
+tooltip.style.opacity=1
+
+})
+
+node.addEventListener("mouseleave",()=>{
+tooltip.style.opacity=0
+})
+
+})
+
+/* beam animation */
+
+const centerText=document.getElementById("centerText")
 
 function fireBeams(){
-  const beamNodes = Array.from(document.querySelectorAll('.node'));
-  if(beamNodes.length === 0) return;
-  
-  const beams = [];
-  beamNodes.forEach(node=>{
-    const rect = node.getBoundingClientRect();
-    const startX = rect.left + rect.width/2;
-    const startY = rect.top + rect.height/2;
-    const endX = w/2;
-    const endY = h/2;
-    beams.push({
-      x:startX,
-      y:startY,
-      dx:(endX-startX)/60,
-      dy:(endY-startY)/60,
-      count:0
-    });
-  });
 
-  const beamAnim = setInterval(()=>{
-    ctx.fillStyle='rgba(2,6,23,0.3)';
-    ctx.fillRect(0,0,w,h);
-    particles.forEach(p=>{p.update();p.draw();});
-    let allDone = true;
-    beams.forEach(b=>{
-      if(b.count<60){
-        allDone=false;
-        ctx.beginPath();
-        ctx.strokeStyle='rgba(76,201,240,0.8)';
-        ctx.lineWidth=2;
-        ctx.moveTo(b.x,b.y);
-        b.x+=b.dx;
-        b.y+=b.dy;
-        ctx.lineTo(b.x,b.y);
-        ctx.stroke();
-        b.count++;
-      }
-    });
-    if(allDone){
-      clearInterval(beamAnim);
-      centerText.style.opacity=1;
-    }
-  },16);
+const beams=[]
+
+nodes.forEach(node=>{
+
+const r=node.getBoundingClientRect()
+
+const startX=r.left+r.width/2
+const startY=r.top+r.height/2
+
+beams.push({
+x:startX,
+y:startY,
+dx:(w/2-startX)/60,
+dy:(h/2-startY)/60,
+count:0
+})
+
+})
+
+const anim=setInterval(()=>{
+
+ctx.fillStyle="rgba(2,6,23,0.3)"
+ctx.fillRect(0,0,w,h)
+
+particles.forEach(p=>{
+p.update()
+p.draw()
+})
+
+let done=true
+
+beams.forEach(b=>{
+
+if(b.count<60){
+
+done=false
+
+ctx.beginPath()
+ctx.strokeStyle="#4cc9f0"
+ctx.lineWidth=2
+
+ctx.moveTo(b.x,b.y)
+
+b.x+=b.dx
+b.y+=b.dy
+
+ctx.lineTo(b.x,b.y)
+
+ctx.stroke()
+
+b.count++
+
 }
 
-// 每3秒触发一次
+})
+
+if(done){
+
+clearInterval(anim)
+
+centerText.style.opacity=1
+
+}
+
+},16)
+
+}
+
 setInterval(()=>{
-  centerText.style.opacity=0;
-  fireBeams();
-},3000);
+
+centerText.style.opacity=0
+fireBeams()
+
+},4000)
+
 </script>
+
 </body>
 </html>
