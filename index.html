@@ -631,6 +631,14 @@ particles.forEach(p=>{p.update();p.draw();});
 
 loop();
 
+// 点击空白处自动关闭汉堡菜单
+document.addEventListener('click', function(e) {
+  const navMenu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburger');
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    navMenu.classList.add('hidden');
+  }
+});
 </script>
 </body>
 </html>
