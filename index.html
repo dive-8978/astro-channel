@@ -30,7 +30,7 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   pointer-events: none;
 }
 
-/* 工程进度 → Project Progress 蓝色流光立体字 */
+/* 工程进度 英文 蓝色流光 */
 #progressText {
   position: fixed;
   z-index: 2;
@@ -47,6 +47,7 @@ body{background:#020112;color:#fff;overflow-x:hidden}
     0 0 24px #4cc9f0;
   animation: flowBlue 3s infinite alternate ease-in-out;
   white-space: nowrap;
+  pointer-events: none;
 }
 
 @keyframes flowBlue {
@@ -484,7 +485,7 @@ loadRealData();
 setInterval(loadRealData, 30000);
 
 // ======================
-// 科技玻璃大厦（灯光变慢）
+// 大厦灯光：从下往上一直慢慢亮上去，超亮蓝光
 // ======================
 (function buildBridgeProgress() {
   const canvas=document.getElementById('bridgeBuildingCanvas');
@@ -515,8 +516,8 @@ setInterval(loadRealData, 30000);
   const windowCols=6;
   const windowRows=14;
 
-  // 灯光变慢控制
-  let lightTick = 0;
+  // 灯光从下往上慢慢亮
+  let lightFillProgress = 0;
 
   function drawBridge() {
     ctx.clearRect(0,0,w,h);
@@ -539,11 +540,17 @@ setInterval(loadRealData, 30000);
     const rowGap=height/windowRows;
     const fillBottom=bottom-height*progress;
 
+    // 让灯光慢慢爬到当前进度
+    const targetLightPos = bottom - fillBottom;
+    const speed = 1.5;
+    if (lightFillProgress < targetLightPos) {
+      lightFillProgress += speed;
+    } else if (lightFillProgress > targetLightPos + 10) {
+      lightFillProgress = targetLightPos;
+    }
+
     ctx.strokeStyle='rgba(76,201,240,0.12)';
     ctx.lineWidth=0.6;
-
-    lightTick++;
-    const shouldChangeLight = lightTick % 25 === 0; // 更慢
 
     for(let r=0;r<windowRows;r++){
       for(let c=0;c<windowCols;c++){
@@ -554,12 +561,10 @@ setInterval(loadRealData, 30000);
 
         ctx.strokeRect(x,y,ww,hh);
 
-        if(y+hh >= fillBottom){
-          // 灯光刷新变慢
-          const isLight = shouldChangeLight ? (Math.random()<0.3) : (ctx.fillStyle && ctx.fillStyle.includes('0.4'));
-          ctx.fillStyle=isLight
-            ?'rgba(76,201,240,0.4)'
-            :'rgba(76,201,240,0.08)';
+        const isInLightZone = (y + hh >= bottom - lightFillProgress);
+        if(isInLightZone){
+          // 超亮蓝光，和文字一样亮
+          ctx.fillStyle = '#4cc9f0';
           ctx.fillRect(x+0.5,y+0.5,ww-1,hh-1);
         }
       }
