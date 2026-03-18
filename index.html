@@ -30,6 +30,30 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   pointer-events: none;
 }
 
+/* 工程进度 → Project Progress 蓝色流光立体字 */
+#progressText {
+  position: fixed;
+  z-index: 2;
+  left: calc(75vw + 60px);
+  top: 48vh;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  transform: rotate(-90deg);
+  transform-origin: left center;
+  text-shadow:
+    0 0 6px #4cc9f0,
+    0 0 12px #4cc9f0,
+    0 0 24px #4cc9f0;
+  animation: flowBlue 3s infinite alternate ease-in-out;
+  white-space: nowrap;
+}
+
+@keyframes flowBlue {
+  0%   { text-shadow: 0 0 6px #4cc9f0, 0 0 12px #4cc9f0, 0 0 24px #4cc9f0; }
+  100% { text-shadow: 0 0 10px #4cc9f0, 0 0 20px #4cc9f0, 0 0 40px #4cc9f0; }
+}
+
 .container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
 
 nav{
@@ -304,6 +328,7 @@ footer{
 
 <canvas id="sphereCanvas"></canvas>
 <canvas id="bridgeBuildingCanvas"></canvas>
+<div id="progressText">Project Progress</div>
 
 <div class="container">
 
@@ -459,7 +484,7 @@ loadRealData();
 setInterval(loadRealData, 30000);
 
 // ======================
-// 科技玻璃大厦（带窗户+幕墙）
+// 科技玻璃大厦（灯光变慢）
 // ======================
 (function buildBridgeProgress() {
   const canvas=document.getElementById('bridgeBuildingCanvas');
@@ -490,6 +515,9 @@ setInterval(loadRealData, 30000);
   const windowCols=6;
   const windowRows=14;
 
+  // 灯光变慢控制
+  let lightTick = 0;
+
   function drawBridge() {
     ctx.clearRect(0,0,w,h);
     const progress=getCurrentProgress();
@@ -514,6 +542,9 @@ setInterval(loadRealData, 30000);
     ctx.strokeStyle='rgba(76,201,240,0.12)';
     ctx.lineWidth=0.6;
 
+    lightTick++;
+    const shouldChangeLight = lightTick % 25 === 0; // 更慢
+
     for(let r=0;r<windowRows;r++){
       for(let c=0;c<windowCols;c++){
         const x=left+c*colGap;
@@ -524,7 +555,8 @@ setInterval(loadRealData, 30000);
         ctx.strokeRect(x,y,ww,hh);
 
         if(y+hh >= fillBottom){
-          const isLight=Math.random()<0.35;
+          // 灯光刷新变慢
+          const isLight = shouldChangeLight ? (Math.random()<0.3) : (ctx.fillStyle && ctx.fillStyle.includes('0.4'));
           ctx.fillStyle=isLight
             ?'rgba(76,201,240,0.4)'
             :'rgba(76,201,240,0.08)';
