@@ -20,7 +20,6 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   background:#020112;
 }
 
-/* ========== Bridge 大厦 背景层（完全透明不挡字） ========== */
 #bridgeBuildingCanvas {
   position: fixed;
   top: 0;
@@ -28,7 +27,7 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  pointer-events: none; /* 不拦截点击 */
+  pointer-events: none;
 }
 
 .container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
@@ -418,10 +417,9 @@ hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
 particlesJS("globe-particles",{particles:{number:{value:60},shape:{type:"circle"},color:{value:["#4cc9f0","#f72585","#ffffff"]},opacity:{value:0.6},size:{value:2.5},line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},move:{enable:true,speed:1}}});
 
 // ======================
-// 纯静态真实数据（GitHub直接用）
+// 纯静态真实数据
 // ======================
 function getRealStaticData() {
-  // =========== 你以后只改这里 3 个数字！ ===========
   return {
     volume: 12860000000,
     tx:     26458921,
@@ -461,66 +459,94 @@ loadRealData();
 setInterval(loadRealData, 30000);
 
 // ======================
-// 透明玻璃 Bridge 大厦 300天自动填满
+// 科技玻璃大厦（带窗户+幕墙）
 // ======================
 (function buildBridgeProgress() {
-  const canvas = document.getElementById('bridgeBuildingCanvas');
-  const ctx = canvas.getContext('2d');
-  let w = canvas.width = window.innerWidth;
-  let h = canvas.height = window.innerHeight;
+  const canvas=document.getElementById('bridgeBuildingCanvas');
+  const ctx=canvas.getContext('2d');
+  let w=canvas.width=window.innerWidth;
+  let h=canvas.height=window.innerHeight;
 
   window.addEventListener('resize', () => {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
+    w=canvas.width=window.innerWidth;
+    h=canvas.height=window.innerHeight;
   });
 
-  const totalDays = 300;
-  const currentVersion = 3.0;
-  const targetVersion = 7.0;
-  const startProgress = currentVersion / targetVersion;
-  const perDayAdd = (targetVersion - currentVersion) / totalDays;
+  const totalDays=300;
+  const currentVersion=3.0;
+  const targetVersion=7.0;
+  const startProgress=currentVersion/targetVersion;
+  const perDayAdd=(targetVersion-currentVersion)/totalDays;
 
   function getCurrentProgress() {
-    const now = Date.now();
-    const start = now - 3 * 24 * 60 * 60 * 1000;
-    const daysPassed = (now - start) / (1000 * 60 * 60 * 24);
-    let p = startProgress + daysPassed * perDayAdd;
-    if (p > 1) p = 1;
+    const now=Date.now();
+    const start=now-3*24*60*60*1000;
+    const daysPassed=(now-start)/(1000*60*60*24);
+    let p=startProgress+daysPassed*perDayAdd;
+    if (p > 1) p=1;
     return p;
   }
 
+  const windowCols=6;
+  const windowRows=14;
+
   function drawBridge() {
-    ctx.clearRect(0, 0, w, h);
-    const progress = getCurrentProgress();
+    ctx.clearRect(0,0,w,h);
+    const progress=getCurrentProgress();
 
-    const cx = w * 0.75;
-    const bottom = h * 0.85;
-    const height = h * 0.55;
-    const width = 100;
+    const cx=w*0.75;
+    const bottom=h*0.85;
+    const height=h*0.55;
+    const top=bottom-height;
+    const width=100;
+    const left=cx-width/2;
 
-    ctx.globalAlpha = 0.12;
-    ctx.strokeStyle = '#4cc9f0';
-    ctx.lineWidth = 3;
-    ctx.strokeRect(cx - width/2, bottom - height, width, height);
+    ctx.globalAlpha=0.15;
+    ctx.strokeStyle='#4cc9f0';
+    ctx.lineWidth=3;
+    ctx.strokeRect(left,top,width,height);
+    ctx.globalAlpha=1;
 
-    const fillH = height * progress;
-    ctx.globalAlpha = 0.25;
-    ctx.fillStyle = '#4cc9f0';
-    ctx.fillRect(cx - width/2, bottom - fillH, width, fillH);
+    const colGap=width/windowCols;
+    const rowGap=height/windowRows;
+    const fillBottom=bottom-height*progress;
 
-    ctx.globalAlpha = 0.6;
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(cx - width/2, bottom - fillH - 2, width, 2);
+    ctx.strokeStyle='rgba(76,201,240,0.12)';
+    ctx.lineWidth=0.6;
+
+    for(let r=0;r<windowRows;r++){
+      for(let c=0;c<windowCols;c++){
+        const x=left+c*colGap;
+        const y=top+r*rowGap;
+        const ww=colGap;
+        const hh=rowGap;
+
+        ctx.strokeRect(x,y,ww,hh);
+
+        if(y+hh >= fillBottom){
+          const isLight=Math.random()<0.35;
+          ctx.fillStyle=isLight
+            ?'rgba(76,201,240,0.4)'
+            :'rgba(76,201,240,0.08)';
+          ctx.fillRect(x+0.5,y+0.5,ww-1,hh-1);
+        }
+      }
+    }
+
+    ctx.globalAlpha=0.7;
+    ctx.fillStyle='#ffffff';
+    ctx.fillRect(left,fillBottom-2,width,2);
+    ctx.globalAlpha=1;
   }
 
-  function loop() {
+  function loop(){
     requestAnimationFrame(loop);
     drawBridge();
   }
   loop();
 })();
 
-// 原有星球粒子
+// 星球粒子
 const canvas=document.getElementById('sphereCanvas');
 const ctx=canvas.getContext('2d');
 let w=canvas.width=window.innerWidth;
