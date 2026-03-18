@@ -20,6 +20,17 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   background:#020112;
 }
 
+/* ========== Bridge 大厦 背景层（完全透明不挡字） ========== */
+#bridgeBuildingCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none; /* 不拦截点击 */
+}
+
 .container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
 
 nav{
@@ -293,6 +304,8 @@ footer{
 <body>
 
 <canvas id="sphereCanvas"></canvas>
+<!-- ========== Bridge 透明大厦 ========== -->
+<canvas id="bridgeBuildingCanvas"></canvas>
 
 <div class="container">
 
@@ -405,6 +418,30 @@ hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
 
 particlesJS("globe-particles",{particles:{number:{value:60},shape:{type:"circle"},color:{value:["#4cc9f0","#f72585","#ffffff"]},opacity:{value:0.6},size:{value:2.5},line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},move:{enable:true,speed:1}}});
 
+// ======================
+// 1. 真实数据接口（你后台填这里）
+// ======================
+async function loadRealData() {
+  try {
+    // 你只需要把下面换成你的真实接口
+    // const res = await fetch("/api/global-stats");
+    // const data = await res.json();
+
+    // 模拟真实数据（你上线后删掉这里）
+    const data = {
+      volume: 12860000000 + Math.floor(Math.random() * 20000000),
+      tx:     26458921    + Math.floor(Math.random() * 1000),
+      nodes:  18623       + Math.floor(Math.random() * 10)
+    };
+
+    animateValue("volume", 0, data.volume, 1200);
+    animateValue("tx",     0, data.tx,     1200);
+    animateValue("nodes",  0, data.nodes,  1200);
+  } catch (e) {
+    console.log("使用演示数据");
+  }
+}
+
 function animateValue(id,start,end,duration){
 let obj=document.getElementById(id);
 let range=end-start;
@@ -428,16 +465,79 @@ timer=setInterval(run,stepTime);
 run();
 }
 
-animateValue("volume",12850000000,12860000000,1500);
-animateValue("tx",26450000,26458921,1500);
-animateValue("nodes",18600,18623,1500);
+// 初始加载真实数据
+loadRealData();
 
-setInterval(()=>{
-animateValue("volume",12860000000,12860000000+Math.floor(Math.random()*5000000),1000);
-animateValue("tx",26458921,26458921+Math.floor(Math.random()*300),1000);
-animateValue("nodes",18623,18623+Math.floor(Math.random()*3),1000);
-},5000);
+// 30秒自动刷新一次真实数据
+setInterval(loadRealData, 30000);
 
+// ======================
+// 2. 透明玻璃 Bridge 大厦 300天自动填满
+// ======================
+(function buildBridgeProgress() {
+  const canvas = document.getElementById('bridgeBuildingCanvas');
+  const ctx = canvas.getContext('2d');
+  let w = canvas.width = window.innerWidth;
+  let h = canvas.height = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  });
+
+  // 项目配置：1.0 → 7.0，当前 3.0
+  const totalDays = 300;
+  const currentVersion = 3.0;
+  const targetVersion = 7.0;
+  const startProgress = currentVersion / targetVersion; // ~42.8%
+  const perDayAdd = (targetVersion - currentVersion) / totalDays;
+
+  function getCurrentProgress() {
+    const now = Date.now();
+    const start = now - 3 * 24 * 60 * 60 * 1000; // 模拟已过3天，你可以固定一个开始时间戳
+    const daysPassed = (now - start) / (1000 * 60 * 60 * 24);
+    let p = startProgress + daysPassed * perDayAdd;
+    if (p > 1) p = 1;
+    return p;
+  }
+
+  function drawBridge() {
+    ctx.clearRect(0, 0, w, h);
+    const progress = getCurrentProgress();
+
+    // 右侧偏下位置
+    const cx = w * 0.75;
+    const bottom = h * 0.85;
+    const height = h * 0.55;
+    const top = bottom - height;
+    const width = 100;
+
+    // 玻璃轮廓
+    ctx.globalAlpha = 0.12;
+    ctx.strokeStyle = '#4cc9f0';
+    ctx.lineWidth = 3;
+    ctx.strokeRect(cx - width/2, top, width, height);
+
+    // 已建造部分（颜色稍深，依然透明）
+    const fillH = height * progress;
+    ctx.globalAlpha = 0.25;
+    ctx.fillStyle = '#4cc9f0';
+    ctx.fillRect(cx - width/2, bottom - fillH, width, fillH);
+
+    // 顶部小光条
+    ctx.globalAlpha = 0.6;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(cx - width/2, bottom - fillH - 2, width, 2);
+  }
+
+  function loop() {
+    requestAnimationFrame(loop);
+    drawBridge();
+  }
+  loop();
+})();
+
+// 原有星球粒子
 const canvas=document.getElementById('sphereCanvas');
 const ctx=canvas.getContext('2d');
 let w=canvas.width=window.innerWidth;
