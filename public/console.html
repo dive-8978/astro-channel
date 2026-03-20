@@ -8,6 +8,9 @@
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.13.2/themes/base/jquery-ui.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.13.2/jquery-ui.min.js"></script>
 
 <script>
 tailwind.config = {
@@ -39,6 +42,14 @@ tailwind.config = {
     to { box-shadow: 0 0 22px #165DFF66; }
   }
 }
+#ui-datepicker-div {
+  background: #1a1d26;
+  color: white;
+  border: 1px solid #333;
+}
+.ui-datepicker-header {
+  background: #165DFF;
+}
 </style>
 </head>
 
@@ -65,27 +76,38 @@ tailwind.config = {
 <!-- REAL-TIME TICKER -->
 <div class="bg-card border-b border-gray-800 py-2 overflow-x-auto">
   <div class="max-w-7xl mx-auto px-4 flex gap-6 whitespace-nowrap text-sm" id="ticker">
-    Loading real-time prices...
+    连接实时价格中...
   </div>
 </div>
 
 <!-- MAIN -->
 <main class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
 
-  <!-- LEFT MARKET + CHART -->
+  <!-- LEFT: CHART + DATE + COIN SELECTOR -->
   <div class="md:col-span-1 space-y-4">
     <div class="glass p-4 rounded-xl">
       <h3 class="text-lg font-bold mb-3 flex items-center">
-        <i class="fa fa-line-chart mr-2 text-astro"></i> Market Trend
+        <i class="fa fa-line-chart mr-2 text-astro"></i> Market Chart
       </h3>
-      <canvas id="priceChart" height="180"></canvas>
+
+      <!-- 币种选择 + 日期选择 -->
+      <div class="flex gap-2 mb-3">
+        <select id="coinSelector" class="flex-1 bg-card text-sm p-2 rounded-lg border border-gray-700">
+          <option value="BTCUSDT">Bitcoin (BTC)</option>
+          <option value="ETHUSDT">Ethereum (ETH)</option>
+        </select>
+        <input type="text" id="datePicker" placeholder="Select date" class="flex-1 bg-card text-sm p-2 rounded-lg border border-gray-700 w-28">
+      </div>
+
+      <canvas id="priceChart" height="190"></canvas>
     </div>
-    <div class="glass p-4 rounded-xl h-[380px] overflow-y-auto scrollbar-hide">
+
+    <div class="glass p-4 rounded-xl h-[340px] overflow-y-auto">
       <h3 class="text-lg font-bold mb-3 flex items-center">
         <i class="fa fa-bars mr-2 text-astro"></i> Top Pairs
       </h3>
       <div class="space-y-2 text-sm" id="marketList">
-        Loading...
+        加载中...
       </div>
     </div>
   </div>
@@ -100,19 +122,19 @@ tailwind.config = {
         <div>
           <label class="text-sm text-gray-400 block mb-1">From</label>
           <div class="flex flex-col sm:flex-row gap-2">
-            <select id="fromChain" class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
+            <select class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
               <option>ETH</option>
               <option>BSC</option>
               <option>ARB</option>
               <option>OP</option>
             </select>
-            <select id="fromToken" class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
+            <select class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
               <option>USDT</option>
               <option>ETH</option>
               <option>BNB</option>
               <option>MA</option>
             </select>
-            <input id="fromAmount" type="number" placeholder="0.00" class="flex-2 bg-card border border-gray-700 rounded-lg p-3 text-right">
+            <input type="number" placeholder="0.00" class="flex-2 bg-card border border-gray-700 rounded-lg p-3 text-right">
           </div>
         </div>
 
@@ -125,30 +147,29 @@ tailwind.config = {
         <div>
           <label class="text-sm text-gray-400 block mb-1">To</label>
           <div class="flex flex-col sm:flex-row gap-2">
-            <select id="toChain" class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
+            <select class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
               <option>BSC</option>
               <option>ETH</option>
               <option>ARB</option>
               <option>OP</option>
             </select>
-            <select id="toToken" class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
+            <select class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
               <option>MA</option>
               <option>USDT</option>
               <option>ETH</option>
               <option>BNB</option>
             </select>
-            <input id="toAmount" readonly placeholder="0.00" class="flex-2 bg-card border border-gray-700 rounded-lg p-3 text-right">
+            <input readonly placeholder="0.00" class="flex-2 bg-card border border-gray-700 rounded-lg p-3 text-right">
           </div>
         </div>
 
         <div class="bg-card/60 rounded-lg p-3 text-sm text-gray-300 space-y-1">
           <div class="flex justify-between"><span>Route</span><span class="text-astro">AstroBridge AI</span></div>
           <div class="flex justify-between"><span>Network Fee</span><span>~$0.25</span></div>
-          <div class="flex justify-between"><span>Swap Time</span><span>~20s</span></div>
+          <div class="flex justify-between"><span>Time</span><span>~20s</span></div>
         </div>
 
-        <!-- 对接你后端的真实交换按钮 -->
-        <button id="swapBtn" class="w-full py-4 rounded-xl bg-astro hover:bg-astro/90 text-white font-bold text-lg">
+        <button class="w-full py-4 rounded-xl bg-astro hover:bg-astro/90 text-white font-bold text-lg">
           Swap & Cross-Chain Transfer
         </button>
       </div>
@@ -171,7 +192,7 @@ tailwind.config = {
   </div>
 </main>
 
-<!-- WALLET MODAL (ALL WALLETS SUPPORTED) -->
+<!-- WALLET MODAL -->
 <div id="walletModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80">
   <div class="glass w-full max-w-sm mx-4 rounded-2xl p-6">
     <div class="flex justify-between items-center mb-4">
@@ -189,57 +210,28 @@ tailwind.config = {
         <i class="fa fa-money text-xl"></i> Trust Wallet
       </button>
       <button class="w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
-        <i class="fa fa-star text-xl"></i> Phantom (Solana)
+        <i class="fa fa-star text-xl"></i> Phantom
       </button>
     </div>
   </div>
 </div>
 
 <script>
-// ==========================
-// 真实价格接口（实时行情）
-// ==========================
-async function loadPrices() {
-  const { data } = await axios.get('https://api.coingecko.com/api/v3/simple/price', {
-    params: {
-      ids: 'bitcoin,ethereum,binancecoin,solana,tether',
-      vs_currencies: 'usd',
-      include_24hr_change: true
-    }
-  });
-
-  document.getElementById('ticker').innerHTML = `
-    <div class="flex items-center gap-2"><span>BTC</span><span class="text-green-400">$${data.bitcoin.usd}</span><span class="text-xs">${data.bitcoin.usd_24h_change?.toFixed(2)}%</span></div>
-    <div class="flex items-center gap-2"><span>ETH</span><span class="text-green-400">$${data.ethereum.usd}</span><span class="text-xs">${data.ethereum.usd_24h_change?.toFixed(2)}%</span></div>
-    <div class="flex items-center gap-2"><span>BNB</span><span class="text-green-400">$${data.binancecoin.usd}</span><span class="text-xs">${data.binancecoin.usd_24h_change?.toFixed(2)}%</span></div>
-    <div class="flex items-center gap-2"><span>SOL</span><span class="text-red-400">$${data.solana.usd}</span><span class="text-xs">${data.solana.usd_24h_change?.toFixed(2)}%</span></div>
-    <div class="flex items-center gap-2"><span>USDT</span><span class="text-gray-300">$1.00</span></div>
-    <div class="flex items-center gap-2"><span>MA</span><span class="text-astro">$0.00186</span><span class="text-xs">+5.22%</span></div>
-  `;
-
-  document.getElementById('marketList').innerHTML = `
-    <div class="flex justify-between py-2 border-b border-gray-700"><span>BTC/USDT</span><span>$${data.bitcoin.usd}</span></div>
-    <div class="flex justify-between py-2 border-b border-gray-700"><span>ETH/USDT</span><span>$${data.ethereum.usd}</span></div>
-    <div class="flex justify-between py-2 border-b border-gray-700"><span>BNB/USDT</span><span>$${data.binancecoin.usd}</span></div>
-    <div class="flex justify-between py-2 border-b border-gray-700"><span>SOL/USDT</span><span>$${data.solana.usd}</span></div>
-    <div class="flex justify-between py-2 border-b border-gray-700"><span>MA/USDT</span><span class="text-astro">$0.00186</span></div>
-  `;
-}
-
-// ==========================
-// 图表
-// ==========================
+// ==============================================
+// 图表初始化
+// ==============================================
 const ctx = document.getElementById('priceChart').getContext('2d');
-new Chart(ctx, {
+let chart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: Array(12).fill(''),
+    labels: [],
     datasets: [{
+      label: 'Price',
       borderColor: '#165DFF',
       backgroundColor: 'rgba(22,93,255,0.1)',
       borderWidth: 2,
       tension: 0.4,
-      data: [3780,3800,3795,3820,3810,3830,3845,3835,3841],
+      data: [],
       fill: true
     }]
   },
@@ -250,45 +242,93 @@ new Chart(ctx, {
   }
 });
 
-// ==========================
-// 钱包弹窗
-// ==========================
-const modal = document.getElementById('walletModal');
-document.getElementById('connectBtn').onclick = () => modal.style.display = 'flex';
-document.getElementById('closeModal').onclick = () => modal.style.display = 'none';
-modal.onclick = (e) => e.target === modal && (modal.style.display = 'none');
+// ==============================================
+// 日期选择器
+// ==============================================
+$(function() {
+  $("#datePicker").datepicker({
+    dateFormat: "yy-mm-dd",
+    onSelect: function() {
+      loadKline($("#coinSelector").val(), this.value);
+    }
+  });
+  $("#coinSelector").change(function() {
+    loadKline($(this).val(), $("#datePicker").val());
+  });
+  // 默认加载今天 BTC
+  const today = new Date().toISOString().split('T')[0];
+  $("#datePicker").val(today);
+  loadKline("BTCUSDT", today);
+});
 
-// ==========================
-// 对接你后端的真实跨链接口
-// ==========================
-document.getElementById('swapBtn').onclick = async () => {
-  const fromChain = document.getElementById('fromChain').value;
-  const fromToken = document.getElementById('fromToken').value;
-  const fromAmount = document.getElementById('fromAmount').value;
-  const toChain = document.getElementById('toChain').value;
-  const toToken = document.getElementById('toToken').value;
+// ==============================================
+// 加载币安 K 线
+// ==============================================
+async function loadKline(symbol, date) {
+  if (!date) return;
+  const startTime = new Date(date).getTime();
+  const endTime = startTime + 86400000;
 
-  if (!fromAmount) return alert('Please enter amount');
+  const { data } = await axios.get("https://api.binance.com/api/v3/klines", {
+    params: { symbol, interval: "1h", startTime, endTime, limit: 24 }
+  });
 
-  try {
-    // ↓↓↓ 这里直接对接你的真实后端接口 ↓↓↓
-    const { data } = await axios.post('http://localhost:3000/api/swap', {
-      fromChain,
-      fromToken,
-      fromAmount,
-      toChain,
-      toToken
-    });
+  const times = [];
+  const prices = [];
+  data.forEach(d => {
+    times.push(new Date(d[0]).getHours() + "h");
+    prices.push(parseFloat(d[4]));
+  });
 
-    document.getElementById('toAmount').value = data.estimatedAmount;
-    alert('Swap initialized: ' + data.txHash);
-  } catch (err) {
-    alert('Swap error: ' + (err.response?.data?.message || err.message));
-  }
+  chart.data.labels = times;
+  chart.data.datasets[0].data = prices;
+  chart.update();
+}
+
+// ==============================================
+// 实时价格 WebSocket
+// ==============================================
+const ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade/ethusdt@trade/bnbusdt@trade/solusdt@trade');
+ws.onmessage = function(e) {
+  const d = JSON.parse(e.data);
+  const s = d.s.replace("USDT", "");
+  const p = parseFloat(d.p).toFixed(2);
+  const color = d.m ? "#ef4444" : "#22c55e";
+
+  const el = document.getElementById(s);
+  if (el) { el.innerHTML = "$" + p; el.style.color = color; }
+
+  const mel = document.getElementById("M"+s);
+  if (mel) { mel.innerHTML = "$" + p; mel.style.color = color; }
 };
 
-// 启动
-loadPrices();
+// ==============================================
+// 初始化行情面板
+// ==============================================
+document.getElementById("ticker").innerHTML = `
+  <div class="flex items-center gap-2">BTC <span id="BTC">$0</span></div>
+  <div class="flex items-center gap-2">ETH <span id="ETH">$0</span></div>
+  <div class="flex items-center gap-2">BNB <span id="BNB">$0</span></div>
+  <div class="flex items-center gap-2">SOL <span id="SOL">$0</span></div>
+  <div class="flex items-center gap-2">USDT <span class="text-gray-400">$1.00</span></div>
+  <div class="flex items-center gap-2">MA <span class="text-astro">$0.00186</span></div>
+`;
+
+document.getElementById("marketList").innerHTML = `
+  <div class="flex justify-between py-2 border-b border-gray-700">BTC/USDT <span id="MBTC">$0</span></div>
+  <div class="flex justify-between py-2 border-b border-gray-700">ETH/USDT <span id="METH">$0</span></div>
+  <div class="flex justify-between py-2 border-b border-gray-700">BNB/USDT <span id="MBNB">$0</span></div>
+  <div class="flex justify-between py-2 border-b border-gray-700">SOL/USDT <span id="MSOL">$0</span></div>
+  <div class="flex justify-between py-2 border-b border-gray-700">MA/USDT <span class="text-astro">$0.00186</span></div>
+`;
+
+// ==============================================
+// 钱包弹窗
+// ==============================================
+const modal = document.getElementById("walletModal");
+connectBtn.onclick = () => modal.style.display = "flex";
+closeModal.onclick = () => modal.style.display = "none";
+modal.onclick = (e) => e.target === modal && (modal.style.display = "none");
 </script>
 
 </body>
