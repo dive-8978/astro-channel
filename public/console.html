@@ -3,138 +3,304 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstroBridge - Console</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#020617;color:#fff;overflow-x:hidden}
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
-.container{max-width:1000px;margin:auto;padding:40px 20px;position:relative;z-index:2}
+<title>AstroBridge | Astronomy Cross-Chain Swap</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+<script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script src="https://unpkg.com/walletconnect@2.10.1/dist/index.umd.min.js"></script>
 
-/* 顶部只留 Logo + 返回主页按钮 */
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        astro: '#165DFF',
+        cosm: '#0EA5E9',
+        success: '#10B981',
+        danger: '#EF4444',
+        dark: '#0F1116',
+        darker: '#090B10',
+        card: '#1A1D26',
+        'card-border': '#2A2E3A',
+      },
+      fontFamily: {
+        inter: ['Inter','system-ui','sans-serif'],
+      },
+    }
+  }
+}
+</script>
 
-.btn-home {
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #4cc9f0, #f72585);
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+<style type="text/tailwindcss">
+@layer utilities {
+  .glass {
+    background: rgba(255,255,255,0.035);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .animate-glow {
+    animation: glow 3s infinite alternate;
+  }
+  @keyframes glow {
+    from { box-shadow: 0 0 12px #165DFF33; }
+    to { box-shadow: 0 0 22px #165DFF66; }
+  }
 }
-.btn-home:hover {
-  transform: scale(1.05);
-}
-
-.page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
-
-.console-card{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(76,201,240,0.2);
-  border-radius:16px;
-  padding:30px;
-  margin-bottom:20px;
-}
-.console-card h3{
-  color:#4cc9f0;
-  font-size:1.4rem;
-  margin-bottom:12px;
-}
-.console-card p{
-  color:#a8dadc;
-  line-height:1.7;
-  margin-bottom:16px;
-}
-.input-line{
-  margin-bottom:18px;
-}
-.input-line label{
-  display:block;color:#a8dadc;margin-bottom:6px;font-size:0.9rem;
-}
-.input-line input{
-  width:100%;
-  padding:14px 16px;
-  border-radius:10px;
-  border:1px solid rgba(76,201,240,0.2);
-  background:rgba(255,255,255,0.05);
-  color:#fff;
-  font-size:1rem;
-  outline:none;
-}
-.input-line input:focus{
-  border-color:#4cc9f0;
-}
-.btn-primary{
-  display:inline-block;
-  padding:14px 26px;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  color:#fff;
-  border:none;border-radius:12px;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
-.btn-primary:hover{
-  transform:scale(1.03);
-}
-
-footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;text-align:center}
-@media(max-width:768px){.page-title{font-size:2rem}}
 </style>
-</head>
-<body>
-<div id="particles"></div>
-<div class="container">
 
-<nav>
-  <div class="logo">AstroBridge</div>
-  <!-- 返回主页按钮 -->
-  <a href="../index.html" class="btn-home">← Back to Home</a>
+</head>
+<body class="bg-dark text-gray-100 font-inter min-h-screen">
+
+<!-- 🔵 返回主页按钮 - 蓝色小按钮 -->
+<div class="fixed top-4 left-4 z-50">
+  <a href=" " class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-astro text-white text-sm font-medium hover:bg-astro/90 transition">
+    <i class="fa fa-home"></i> Home
+  </a >
+</div>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-40 bg-darker/90 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="text-astro text-2xl font-bold tracking-tight">AstroBridge</div>
+      <span class="text-xs px-2 py-1 rounded bg-astro/20 text-astro">Astronomy</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="connectWalletBtn" class="px-4 py-2 rounded-lg bg-astro hover:bg-astro/90 text-white font-medium transition flex items-center gap-2">
+        <i class="fa fa-link"></i> Connect Wallet
+      </button>
+    </div>
+  </div>
 </nav>
 
-<h1 class="page-title">Demo Console</h1>
-<p class="page-desc">Try AstroBridge Intent Execution (Testnet Only)</p>
-
-<div class="console-card">
-  <h3>Intent Demo</h3>
-  <p>Enter a simple intent, and the AI will route and execute it across chains.</p>
-
-  <div class="input-line">
-    <label>Your Intent (e.g., Swap 0.1 ETH to USDC on Arbitrum)</label>
-    <input type="text" placeholder="Type your intent here...">
+<!-- TOP TICKER -->
+<div class="bg-card border-b border-card-border py-2 overflow-x-auto">
+  <div class="max-w-7xl mx-auto px-4 flex gap-8 whitespace-nowrap text-sm">
+    <div class="flex items-center gap-2"><span class="font-semibold">BTC</span> <span class="text-success">$69,342</span> <span class="text-xs text-green-400">+2.31%</span></div>
+    <div class="flex items-center gap-2"><span class="font-semibold">ETH</span> <span class="text-success">$3,841</span> <span class="text-xs text-green-400">+1.08%</span></div>
+    <div class="flex items-center gap-2"><span class="font-semibold">BNB</span> <span class="text-success">$521</span> <span class="text-xs text-green-400">+0.74%</span></div>
+    <div class="flex items-center gap-2"><span class="font-semibold">SOL</span> <span class="text-danger">$132</span> <span class="text-xs text-red-400">-1.22%</span></div>
+    <div class="flex items-center gap-2"><span class="font-semibold">USDT</span> <span class="text-gray-300">$1.00</span> <span class="text-xs">0.00%</span></div>
+    <div class="flex items-center gap-2"><span class="font-semibold">MA</span> <span class="text-astro">$0.00186</span> <span class="text-xs text-green-400">+5.22%</span></div>
   </div>
-
-  <div class="input-line">
-    <label>Your Wallet Address (Test)</label>
-    <input type="text" placeholder="0x...">
-  </div>
-
-  <button class="btn-primary">Execute Intent</button>
 </div>
 
-<footer>
-  <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
+
+  <!-- LEFT: MARKET -->
+  <div class="md:col-span-1 space-y-4">
+    <div class="card p-4 rounded-xl glass">
+      <h3 class="text-lg font-bold mb-3 flex items-center"><i class="fa fa-line-chart mr-2 text-astro"></i> Market Overview</h3>
+      <canvas id="priceChart" height="180"></canvas>
+    </div>
+    <div class="card p-4 rounded-xl glass h-[380px] overflow-y-auto scrollbar-hide">
+      <h3 class="text-lg font-bold mb-3 flex items-center"><i class="fa fa-bars mr-2 text-astro"></i> Top Pairs</h3>
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>BTC/USDT</span>
+          <span class="text-success">$69,342</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>ETH/USDT</span>
+          <span class="text-success">$3,841</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>BNB/USDT</span>
+          <span class="text-success">$521</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>SOL/USDT</span>
+          <span class="text-danger">$132</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>MA/USDT</span>
+          <span class="text-astro">$0.00186</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>ARB/USDT</span>
+          <span class="text-success">$1.18</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>OP/USDT</span>
+          <span class="text-danger">$2.86</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-white/5">
+          <span>MATIC/USDT</span>
+          <span class="text-success">$0.94</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTER: SWAP -->
+  <div class="md:col-span-2">
+    <div class="glass p-6 rounded-2xl animate-glow">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold">Astronomy Cross-Chain Swap</h2>
+        <span class="text-xs px-3 py-1 rounded-full bg-astro/20 text-astro">Zero Platform Fee</span>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FROM -->
+        <div>
+          <label class="text-sm text-gray-400 block mb-1">From</label>
+          <div class="flex gap-2">
+            <select class="w-1/3 bg-card border border-card-border rounded-lg px-3 py-3 text-sm">
+              <option>Ethereum</option>
+              <option>BSC</option>
+              <option>Arbitrum</option>
+              <option>Optimism</option>
+              <option>Solana</option>
+            </select>
+            <select class="w-1/3 bg-card border border-card-border rounded-lg px-3 py-3 text-sm">
+              <option>USDT</option>
+              <option>ETH</option>
+              <option>MA</option>
+              <option>BNB</option>
+              <option>SOL</option>
+            </select>
+            <input type="number" placeholder="0.00" class="w-1/3 bg-card border border-card-border rounded-lg px-3 py-3 text-right">
+          </div>
+        </div>
+
+        <!-- SWITCH -->
+        <div class="flex justify-center">
+          <button class="w-10 h-10 rounded-full bg-astro/20 text-astro flex items-center justify-center hover:bg-astro/30 transition">
+            <i class="fa fa-exchange"></i>
+          </button>
+        </div>
+
+        <!-- TO -->
+        <div>
+          <label class="text-sm text-gray-400 block mb-1">To</label>
+          <div class="flex gap-2">
+            <select class="w-1/3 bg-card border border-card-border rounded-lg px-3 py-3 text-sm">
+              <option>BSC</option>
+              <option>Ethereum</option>
+              <option>Arbitrum</option>
+              <option>Optimism</option>
+              <option>Solana</option>
+            </select>
+            <select class="w-1/3 bg-card border border-card-border rounded-lg px-3 py-3 text-sm">
+              <option>MA</option>
+              <option>USDT</option>
+              <option>ETH</option>
+              <option>BNB</option>
+              <option>SOL</option>
+            </select>
+            <input type="number" placeholder="0.00" class="w-1/3 bg-card border border-card-border rounded-lg px-3 py-3 text-right" readonly>
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div class="bg-card/60 rounded-lg p-3 text-sm text-gray-300 space-y-1">
+          <div class="flex justify-between"><span>Network Fee</span><span>~$0.32</span></div>
+          <div class="flex justify-between"><span>Swap Time</span><span>~30 seconds</span></div>
+          <div class="flex justify-between"><span>Bridge Route</span><span class="text-astro">AstroBridge V3</span></div>
+        </div>
+
+        <!-- BUTTON -->
+        <button id="swapBtn" class="w-full py-4 rounded-xl bg-astro hover:bg-astro/90 text-white font-bold text-lg transition">
+          Swap & Cross-Chain Transfer
+        </button>
+
+        <div class="text-xs text-center text-gray-500 mt-2">
+          <i class="fa fa-lock text-astro mr-1"></i> Secure · Non-Custodial · Fast · All-Chain Supported
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM INFO -->
+    <div class="mt-6 grid grid-cols-3 gap-3 text-sm">
+      <div class="glass p-3 rounded-xl text-center">
+        <div class="text-astro text-lg font-bold">29+</div>
+        <div class="text-xs text-gray-400">Blockchains</div>
+      </div>
+      <div class="glass p-3 rounded-xl text-center">
+        <div class="text-astro text-lg font-bold">$1.2B+</div>
+        <div class="text-xs text-gray-400">24h Volume</div>
+      </div>
+      <div class="glass p-3 rounded-xl text-center">
+        <div class="text-astro text-lg font-bold">100K+</div>
+        <div class="text-xs text-gray-400">Users</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-auto py-6 border-t border-white/5 text-center text-xs text-gray-500">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="mb-2 font-semibold">AstroBridge Astronomy Cross-Chain System</div>
+    <div>All-Chain Compatible · Non-Custodial · Secure · Fast</div>
+  </div>
 </footer>
 
+<!-- MODAL -->
+<div id="walletModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70">
+  <div class="glass w-full max-w-sm rounded-2xl p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-lg font-bold">Connect Wallet</h3>
+      <button id="closeModal" class="text-gray-400 hover:text-white"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="space-y-3">
+      <button class="w-full p-3 rounded-xl bg-card border border-card-border hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-puzzle-piece text-xl"></i> Injected Wallet (MetaMask etc.)
+      </button>
+      <button class="w-full p-3 rounded-xl bg-card border border-card-border hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-qrcode text-xl"></i> WalletConnect (All Mobile Wallets)
+      </button>
+      <button class="w-full p-3 rounded-xl bg-card border border-card-border hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-money text-xl"></i> Trust Wallet
+      </button>
+      <button class="w-full p-3 rounded-xl bg-card border border-card-border hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-star text-xl"></i> Phantom (Solana)
+      </button>
+    </div>
+    <div class="text-xs text-gray-500 text-center mt-4">
+      Supports ALL wallets on ALL chains.
+    </div>
+  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-particlesJS("particles",{
-  particles:{
-    number:{value:80,density:{enable:true,value_area:800}},
-    color:{value:["#4cc9f0","#f72585"]},
-    opacity:{value:0.4,random:true},
-    size:{value:3,random:true},
-    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},
-    move:{enable:true,speed:1.5,random:true}
+// CHART
+const ctx = document.getElementById('priceChart').getContext('2d');
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['','','','','','','','','',''],
+    datasets: [{
+      borderColor: '#165DFF',
+      backgroundColor: 'rgba(22,93,255,0.1)',
+      borderWidth: 2,
+      tension: 0.4,
+      data: [3800,3820,3790,3840,3830,3850,3841],
+      fill: true
+    }]
   },
-  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
-  retina_detect:true
-})
+  options: {
+    plugins: { legend: false },
+    scales: { x: { display: false }, y: { display: false } },
+    elements: { point: { radius: 0 } }
+  }
+});
+
+// MODAL
+const modal = document.getElementById('walletModal');
+document.getElementById('connectWalletBtn').onclick = () => { modal.style.display = 'flex'; }
+document.getElementById('closeModal').onclick = () => { modal.style.display = 'none'; }
+modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; }
+
+// SWAP BUTTON
+document.getElementById('swapBtn').onclick = () => {
+  alert('Cross-Chain Swap Initialized\nThis demo connects to your real API in production.');
+}
 </script>
+
 </body>
 </html>
