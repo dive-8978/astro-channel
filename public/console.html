@@ -56,6 +56,7 @@ tailwind.config = {
 
 <body class="bg-dark text-gray-100 min-h-screen">
 
+<!-- NAV -->
 <nav class="sticky top-0 z-50 bg-darker/90 backdrop-blur-md border-b border-white/5">
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <div class="flex items-center gap-2">
@@ -73,50 +74,58 @@ tailwind.config = {
   </div>
 </nav>
 
+<!-- REAL-TIME TICKER -->
 <div class="bg-card border-b border-gray-800 py-2 overflow-x-auto">
   <div class="max-w-7xl mx-auto px-4 flex gap-6 whitespace-nowrap text-sm" id="ticker">
-    Loading...
+    连接实时价格中...
   </div>
 </div>
 
+<!-- MAIN -->
 <main class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
 
+  <!-- LEFT: CHART + DATE + COIN SELECTOR -->
   <div class="md:col-span-1 space-y-4">
     <div class="glass p-4 rounded-xl">
-      <h3 class="text-lg font-bold mb-3">
+      <h3 class="text-lg font-bold mb-3 flex items-center">
         <i class="fa fa-line-chart mr-2 text-astro"></i> Market Chart
       </h3>
 
+      <!-- 币种选择 + 日期选择 -->
       <div class="flex gap-2 mb-3">
         <select id="coinSelector" class="flex-1 bg-card text-sm p-2 rounded-lg border border-gray-700">
-          <option value="BTCUSDT">Bitcoin</option>
-          <option value="ETHUSDT">Ethereum</option>
+          <option value="BTCUSDT">Bitcoin (BTC)</option>
+          <option value="ETHUSDT">Ethereum (ETH)</option>
           <option value="BNBUSDT">BNB</option>
-          <option value="SOLUSDT">Solana</option>
+          <option value="SOLUSDT">Solana (SOL)</option>
         </select>
-        <input type="text" id="datePicker" class="flex-1 bg-card text-sm p-2 rounded-lg border border-gray-700">
+        <input type="text" id="datePicker" placeholder="Select date" class="flex-1 bg-card text-sm p-2 rounded-lg border border-gray-700 w-28">
       </div>
 
       <canvas id="priceChart" height="190"></canvas>
     </div>
 
     <div class="glass p-4 rounded-xl h-[340px] overflow-y-auto">
-      <h3 class="text-lg font-bold mb-3">
+      <h3 class="text-lg font-bold mb-3 flex items-center">
         <i class="fa fa-bars mr-2 text-astro"></i> Top Pairs
       </h3>
-      <div id="marketList"></div>
+      <div class="space-y-2 text-sm" id="marketList">
+        加载中...
+      </div>
     </div>
   </div>
 
+  <!-- SWAP PANEL -->
   <div class="md:col-span-2">
     <div class="glass p-6 rounded-2xl animate-glow">
       <h2 class="text-xl font-bold">Astronomy Cross-Chain Swap</h2>
+      <p class="text-sm text-gray-400 mt-1">Non-Custodial • AI-Optimized • All-Chain</p>
 
       <div class="mt-6 space-y-4">
         <div>
-          <label class="text-sm text-gray-400">From</label>
-          <div class="flex gap-2">
-            <select id="fromToken" class="flex-1 bg-card border p-3 rounded-lg">
+          <label class="text-sm text-gray-400 block mb-1">From</label>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <select id="fromToken" class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
               <option>ETH</option>
               <option>BTC</option>
               <option>BNB</option>
@@ -124,16 +133,16 @@ tailwind.config = {
               <option>ARB</option>
               <option>OP</option>
             </select>
-            <input id="amountIn" type="number" placeholder="0.00" class="flex-1 bg-card border p-3 rounded-lg text-right">
+            <input id="amountIn" type="number" placeholder="0.00" class="flex-2 bg-card border border-gray-700 rounded-lg p-3 text-right">
           </div>
         </div>
 
-        <div class="text-center text-astro text-xl">⇅</div>
+        <div class="flex justify-center text-astro text-xl">⇅</div>
 
         <div>
-          <label class="text-sm text-gray-400">To</label>
-          <div class="flex gap-2">
-            <select id="toToken" class="flex-1 bg-card border p-3 rounded-lg">
+          <label class="text-sm text-gray-400 block mb-1">To</label>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <select id="toToken" class="flex-1 bg-card border border-gray-700 rounded-lg p-3 text-sm">
               <option>BNB</option>
               <option>ETH</option>
               <option>BTC</option>
@@ -141,109 +150,135 @@ tailwind.config = {
               <option>ARB</option>
               <option>OP</option>
             </select>
-            <input id="amountOut" readonly placeholder="0.00" class="flex-1 bg-card border p-3 rounded-lg text-right">
+            <input id="amountOut" readonly placeholder="0.00" class="flex-2 bg-card border border-gray-700 rounded-lg p-3 text-right">
           </div>
         </div>
 
-        <div class="bg-card/60 p-3 rounded-lg text-sm">
-          <div class="flex justify-between">
-            <span>Route</span><span id="routeAI" class="text-astro">Calculating...</span>
-          </div>
+        <div class="bg-card/60 rounded-lg p-3 text-sm text-gray-300 space-y-1">
+          <div class="flex justify-between"><span>Route</span><span id="routeAI" class="text-astro">Calculating...</span></div>
+          <div class="flex justify-between"><span>Network Fee</span><span>~$0.25</span></div>
+          <div class="flex justify-between"><span>Time</span><span>~20s</span></div>
         </div>
 
-        <button id="swapBtn" class="w-full py-4 rounded-xl bg-astro text-white font-bold">
-          Swap
+        <button id="swapBtn" class="w-full py-4 rounded-xl bg-astro hover:bg-astro/90 text-white font-bold text-lg">
+          Swap & Cross-Chain Transfer
         </button>
       </div>
     </div>
   </div>
 </main>
 
-<div id="walletModal" class="fixed inset-0 hidden items-center justify-center bg-black/80">
-  <div class="glass w-full max-w-sm p-6 rounded-2xl">
-    <h3 class="text-lg font-bold mb-4">Connect Wallet</h3>
-
-    <div class="space-y-2">
-      <button class="wallet w-full p-3 bg-card rounded">MetaMask</button>
-      <button class="wallet w-full p-3 bg-card rounded">Coinbase Wallet</button>
-      <button class="wallet w-full p-3 bg-card rounded">Trust Wallet</button>
-      <button class="wallet w-full p-3 bg-card rounded">Phantom</button>
-      <button class="wallet w-full p-3 bg-card rounded">OKX Wallet</button>
-      <button class="wallet w-full p-3 bg-card rounded">Bitget Wallet</button>
-      <button class="wallet w-full p-3 bg-card rounded">Bybit Wallet</button>
+<!-- WALLET MODAL -->
+<div id="walletModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80">
+  <div class="glass w-full max-w-sm mx-4 rounded-2xl p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-lg font-bold">Connect Wallet</h3>
+      <button id="closeModal" class="text-gray-400 hover:text-white"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="space-y-3">
+      <button class="wallet w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-puzzle-piece text-xl"></i> MetaMask
+      </button>
+      <button class="wallet w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-credit-card text-xl"></i> Coinbase Wallet
+      </button>
+      <button class="wallet w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-money text-xl"></i> Trust Wallet
+      </button>
+      <button class="wallet w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-star text-xl"></i> Phantom
+      </button>
+      <button class="wallet w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-link text-xl"></i> OKX Wallet
+      </button>
+      <button class="wallet w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-link text-xl"></i> Bitget Wallet
+      </button>
+      <button class="wallet w-full p-3 rounded-xl bg-card border border-gray-700 hover:bg-astro/10 transition flex items-center gap-3">
+        <i class="fa fa-link text-xl"></i> Bybit Wallet
+      </button>
     </div>
   </div>
 </div>
 
 <script>
-// Chart
-const chart = new Chart(document.getElementById('priceChart'), {
+// =================== Chart 初始化 ===================
+const ctx = document.getElementById('priceChart').getContext('2d');
+let chart = new Chart(ctx, {
   type: 'line',
-  data: { labels: [], datasets: [{ data: [], borderColor: '#165DFF' }] },
-  options: { plugins:{legend:false}, scales:{x:{display:false},y:{display:false}} }
+  data: {
+    labels: [],
+    datasets: [{
+      label: 'Price',
+      borderColor: '#165DFF',
+      backgroundColor: 'rgba(22,93,255,0.1)',
+      borderWidth: 2,
+      tension: 0.4,
+      data: [],
+      fill: true
+    }]
+  },
+  options: { plugins:{legend:false}, scales:{x:{display:false},y:{display:false}}, elements:{point:{radius:0}} }
 });
 
-// Datepicker
-$(function(){
-  $("#datePicker").datepicker({
-    dateFormat:"yy-mm-dd",
-    onSelect:loadKline
-  });
-  const today=new Date().toISOString().split('T')[0];
-  $("#datePicker").val(today);
-  loadKline();
+// =================== 日期选择器 ===================
+$(function() {
+  $("#datePicker").datepicker({ dateFormat:"yy-mm-dd", onSelect:()=>loadKline($("#coinSelector").val(), $("#datePicker").val()) });
+  $("#coinSelector").change(()=>loadKline($("#coinSelector").val(), $("#datePicker").val()));
+  $("#datePicker").val(new Date().toISOString().split('T')[0]);
+  loadKline("BTCUSDT", new Date().toISOString().split('T')[0]);
 });
 
-// Kline
-async function loadKline(){
-  const symbol=$("#coinSelector").val();
-  const date=$("#datePicker").val();
-  const start=new Date(date).getTime();
-  const {data}=await axios.get("https://api.binance.com/api/v3/klines",{params:{symbol,interval:"1h",startTime:start}});
+// =================== K 线加载 ===================
+async function loadKline(symbol, date) {
+  if(!date) return;
+  const startTime=new Date(date).getTime();
+  const endTime=startTime+86400000;
+  const { data } = await axios.get("https://api.binance.com/api/v3/klines",{params:{symbol, interval:"1h", startTime, endTime, limit:24}});
   chart.data.labels=data.map(d=>new Date(d[0]).getHours()+"h");
-  chart.data.datasets[0].data=data.map(d=>d[4]);
+  chart.data.datasets[0].data=data.map(d=>parseFloat(d[4]));
   chart.update();
 }
 
-// WebSocket FIXED
-const ws = new WebSocket("wss://stream.binance.com:9443/stream?streams=btcusdt@trade/ethusdt@trade/bnbusdt@trade/solusdt@trade");
-
+// =================== 实时价格 WebSocket ===================
+const streams=["btcusdt","ethusdt","bnbusdt","solusdt"];
+const ws=new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams.map(s=>s+"@trade").join('/')}`);
 const priceMap={};
-
 ws.onmessage=e=>{
   const d=JSON.parse(e.data).data;
-  priceMap[d.s]=parseFloat(d.p);
-
-  const s=d.s.replace("USDT","");
-  const el=document.getElementById(s);
-  if(el) el.innerHTML="$"+d.p;
-
-  calculate();
+  const symbol=d.s;
+  const base=symbol.replace("USDT","");
+  const price=parseFloat(d.p).toFixed(2);
+  priceMap[base]=parseFloat(d.p);
+  const color=d.m?"#ef4444":"#22c55e";
+  const el=document.getElementById(base);
+  if(el){el.innerHTML="$"+price;el.style.color=color;}
+  const mel=document.getElementById("M"+base);
+  if(mel){mel.innerHTML="$"+price;mel.style.color=color;}
+  calculateSwap();
 };
-
 ws.onclose=()=>setTimeout(()=>location.reload(),2000);
+ws.onerror=()=>ws.close();
 
-// Swap calc
-function calculate(){
-  const amount=document.getElementById("amountIn").value;
-  const from=document.getElementById("fromToken").value+"USDT";
-  const to=document.getElementById("toToken").value+"USDT";
-
+// =================== Swap 计算 ===================
+function calculateSwap(){
+  const amt=parseFloat(document.getElementById("amountIn").value);
+  if(!amt){document.getElementById("amountOut").value="";return;}
+  const from=document.getElementById("fromToken").value;
+  const to=document.getElementById("toToken").value;
   if(!priceMap[from]||!priceMap[to]) return;
-
-  const usd=amount*priceMap[from];
+  const usd=amt*priceMap[from];
   document.getElementById("amountOut").value=(usd/priceMap[to]).toFixed(4);
 }
+document.addEventListener("input",e=>{if(e.target.id==="amountIn") calculateSwap();});
 
-document.addEventListener("input",e=>{
-  if(e.target.id==="amountIn") calculate();
-});
+// =================== Wallet 弹窗 ===================
+const modal=document.getElementById("walletModal");
+connectBtn.onclick=()=>modal.style.display="flex";
+closeModal.onclick=()=>modal.style.display="none";
+modal.onclick=e=>e.target===modal&&(modal.style.display="none");
 
-// Wallet
 let provider, signer;
-
-connectBtn.onclick=()=>walletModal.style.display="flex";
-
 document.querySelectorAll(".wallet").forEach(btn=>{
   btn.onclick=async()=>{
     if(!window.ethereum) return alert("Install MetaMask");
@@ -252,37 +287,38 @@ document.querySelectorAll(".wallet").forEach(btn=>{
     signer=await provider.getSigner();
     const addr=await signer.getAddress();
     connectBtn.innerText=addr.slice(0,6)+"..."+addr.slice(-4);
-    walletModal.style.display="none";
-  };
+    modal.style.display="none";
+  }
 });
 
-// Route AI
+// =================== AI 路由演示 ===================
 setInterval(()=>{
   const routes=["ETH→USDT→BNB","ETH→ARB→BNB","ETH→OP→BNB"];
-  routeAI.innerText=routes[Math.floor(Math.random()*routes.length)];
-},2000);
+  document.getElementById("routeAI").innerText=routes[Math.floor(Math.random()*routes.length)];
+},3000);
 
-// Swap btn
-swapBtn.onclick=()=>{
-  if(!signer) return alert("Connect wallet");
-  alert("Swap Submitted 🚀");
+// =================== Swap 按钮 ===================
+document.getElementById("swapBtn").onclick=()=>{
+  if(!signer) return alert("Connect wallet first");
+  const amt=document.getElementById("amountIn").value;
+  if(!amt) return alert("Enter amount");
+  alert("🚀 Swap Submitted (Demo)\nAmount: "+amt);
 };
 
-// UI init
-ticker.innerHTML=`
-BTC <span id="BTC"></span>
-ETH <span id="ETH"></span>
-BNB <span id="BNB"></span>
-SOL <span id="SOL"></span>
+// =================== 初始化 UI ===================
+document.getElementById("ticker").innerHTML=`
+  <div class="flex items-center gap-2">BTC <span id="BTC">$0</span></div>
+  <div class="flex items-center gap-2">ETH <span id="ETH">$0</span></div>
+  <div class="flex items-center gap-2">BNB <span id="BNB">$0</span></div>
+  <div class="flex items-center gap-2">SOL <span id="SOL">$0</span></div>
 `;
 
-marketList.innerHTML=`
-BTC/USDT <span id="MBTC"></span><br>
-ETH/USDT <span id="METH"></span><br>
-BNB/USDT <span id="MBNB"></span><br>
-SOL/USDT <span id="MSOL"></span>
+document.getElementById("marketList").innerHTML=`
+  <div class="flex justify-between py-2 border-b border-gray-700">BTC/USDT <span id="MBTC">$0</span></div>
+  <div class="flex justify-between py-2 border-b border-gray-700">ETH/USDT <span id="METH">$0</span></div>
+  <div class="flex justify-between py-2 border-b border-gray-700">BNB/USDT <span id="MBNB">$0</span></div>
+  <div class="flex justify-between py-2 border-b border-gray-700">SOL/USDT <span id="MSOL">$0</span></div>
 `;
 </script>
-
 </body>
 </html>
