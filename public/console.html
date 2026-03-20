@@ -3,215 +3,322 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstroBridge | Cross-Chain Swap</title>
+<title>AstroBridge Pro | Cross-Chain Trading Demo</title>
+
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        astro:'#165DFF',
+        dark:'#0F1116',
+        darker:'#090B10',
+        card:'#1A1D26',
+        green:'#22c55e',
+        red:'#ef4444'
+      }
+    }
+  }
+}
+</script>
+
+<!-- Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.13.2/themes/base/jquery-ui.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.13.2/jquery-ui.min.js"></script>
+
+<!-- jQuery + DatePicker -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist/jquery-ui.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist/jquery-ui.min.js"></script>
+
+<!-- Ethers -->
 <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+
+<style>
+body {background: radial-gradient(ellipse at bottom,#0d0f18 0%,#010205 100%); color:#fff;}
+.glass {background: rgba(255,255,255,0.05); backdrop-filter: blur(15px); border:1px solid rgba(255,255,255,0.1);}
+.animate-glow {animation: glow 3s infinite alternate;}
+@keyframes glow {from{box-shadow:0 0 12px #165DFF33;} to{box-shadow:0 0 22px #165DFF66;}}
+::-webkit-scrollbar {width:6px; height:6px;}
+::-webkit-scrollbar-thumb {background:rgba(255,255,255,0.2); border-radius:3px;}
+</style>
 </head>
-<body class="bg-dark text-gray-100 min-h-screen">
+<body class="min-h-screen">
 
 <!-- NAV -->
-<nav class="sticky top-0 bg-darker/90 backdrop-blur-md border-b border-white/5 p-3 flex justify-between items-center">
-  <div class="flex gap-2 items-center">
-    <div class="text-astro text-2xl font-bold">AstroBridge</div>
-    <span class="text-xs px-2 py-1 rounded bg-astro/20 text-astro">Astronomy</span>
+<nav class="glass px-6 py-4 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+  <div class="flex items-center gap-3">
+    <div class="text-3xl font-bold text-astro">AstroBridge Pro</div>
+    <span class="text-sm px-2 py-1 bg-astro/30 rounded">Full Trading Desk</span>
   </div>
-  <button id="connectBtn" class="bg-astro px-4 py-2 rounded text-white">Connect Wallet</button>
+  <button id="connectBtn" class="bg-astro text-white px-4 py-2 rounded font-semibold">
+    <i class="fas fa-wallet mr-1"></i> Connect Wallet
+  </button>
 </nav>
 
-<!-- REAL-TIME TICKER -->
-<div class="bg-card border-b border-gray-800 py-2 overflow-x-auto text-sm">
-  <div id="ticker" class="max-w-7xl mx-auto flex gap-6"></div>
+<!-- TOP TICKER -->
+<div class="overflow-x-auto whitespace-nowrap py-3 px-6 bg-darker border-b border-gray-800 text-sm">
+  <div id="topTicker" class="flex gap-6"></div>
 </div>
 
-<main class="max-w-7xl mx-auto p-4 grid md:grid-cols-3 gap-6">
+<!-- MAIN GRID -->
+<main class="grid md:grid-cols-4 gap-6 p-6">
 
-  <!-- CHART -->
-  <div class="md:col-span-1 space-y-4">
-    <div class="bg-card p-4 rounded">
-      <div class="font-bold text-lg text-astro mb-2">Market Chart</div>
-      <div class="flex gap-2 mb-3">
-        <select id="coinSelector" class="bg-card border p-2 text-sm rounded">
-          <option value="BTCUSDT">Bitcoin (BTC)</option>
-          <option value="ETHUSDT">Ethereum (ETH)</option>
-          <option value="BNBUSDT">BNB</option>
-          <option value="SOLUSDT">Solana (SOL)</option>
-        </select>
-        <input type="text" id="datePicker" class="bg-card border p-2 text-sm rounded">
+  <!-- LEFT: MARKET + KLINE -->
+  <section class="md:col-span-2 space-y-4">
+
+    <!-- Market Table -->
+    <div class="glass p-4 rounded shadow-lg">
+      <div class="flex justify-between items-center mb-3">
+        <div class="text-xl font-bold text-astro">Markets</div>
+        <div class="flex gap-2">
+          <select id="marketInterval" class="bg-card border border-gray-700 px-3 py-1 rounded text-sm">
+            <option value="1m">1m</option>
+            <option value="5m">5m</option>
+            <option value="1h" selected>1h</option>
+            <option value="1d">1d</option>
+          </select>
+        </div>
       </div>
-      <canvas id="priceChart" height="180"></canvas>
-    </div>
-
-    <div class="bg-card p-4 rounded h-[320px] overflow-y-auto text-sm">
-      <div class="font-bold text-lg text-astro mb-2">Top Pairs</div>
-      <div id="marketList"></div>
-    </div>
-  </div>
-
-  <!-- SWAP PANEL -->
-  <div class="md:col-span-2 bg-card p-6 rounded space-y-4">
-    <div class="text-xl font-bold">Cross-Chain Swap</div>
-
-    <div>
-      <label class="text-gray-400">From</label>
-      <div class="flex gap-2 mt-2">
-        <select id="fromToken" class="bg-card border p-2 rounded w-1/3">
-          <option>ETH</option><option>BTC</option><option>BNB</option><option>SOL</option>
-        </select>
-        <input id="amountIn" type="number" placeholder="0.00" class="bg-card border p-2 rounded w-2/3 text-right">
+      <div class="overflow-x-auto max-h-96">
+        <table id="marketTable" class="w-full text-sm">
+          <thead class="text-gray-400">
+            <tr>
+              <th class="text-left p-2">Symbol</th>
+              <th class="text-right p-2">Price</th>
+              <th class="text-right p-2">24h Change</th>
+              <th class="text-right p-2">24h High</th>
+              <th class="text-right p-2">24h Low</th>
+              <th class="text-right p-2">24h Volume</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
 
-    <div class="text-center text-2xl text-astro">⇅</div>
+    <!-- Kline Chart -->
+    <div class="glass p-4 rounded shadow-lg">
+      <div class="flex justify-between items-center mb-3">
+        <div class="text-lg font-bold text-astro">K-Line Chart</div>
+        <div class="flex gap-2">
+          <select id="chartSymbol" class="bg-card border border-gray-700 text-sm px-3 py-1 rounded"></select>
+          <input type="text" id="chartDate" class="bg-card border border-gray-700 text-sm px-3 py-1 rounded w-32">
+        </div>
+      </div>
+      <canvas id="kline"></canvas>
+    </div>
 
-    <div>
-      <label class="text-gray-400">To</label>
-      <div class="flex gap-2 mt-2">
-        <select id="toToken" class="bg-card border p-2 rounded w-1/3">
-          <option>BNB</option><option>ETH</option><option>BTC</option><option>SOL</option>
-        </select>
-        <input id="amountOut" readonly class="bg-card border p-2 rounded w-2/3 text-right" placeholder="0.00">
+  </section>
+
+  <!-- RIGHT: SWAP + TOP GAINERS + ORDER BOOK -->
+  <section class="md:col-span-2 space-y-4">
+
+    <!-- Swap Panel -->
+    <div class="glass p-6 rounded shadow-lg space-y-4 animate-glow">
+      <div class="text-xl font-bold text-astro">Swap</div>
+
+      <div>
+        <label class="text-gray-400 text-sm">From</label>
+        <select id="swapFrom" class="w-full bg-card border border-gray-700 px-3 py-2 rounded"></select>
+        <input id="swapAmt" type="number" class="w-full mt-2 bg-card border border-gray-700 px-3 py-2 rounded" placeholder="0.00">
+      </div>
+
+      <div class="text-center text-xl text-astro">⇅</div>
+
+      <div>
+        <label class="text-gray-400 text-sm">To</label>
+        <select id="swapTo" class="w-full bg-card border border-gray-700 px-3 py-2 rounded"></select>
+        <input id="swapOut" readonly class="w-full mt-2 bg-card border border-gray-700 px-3 py-2 rounded" placeholder="0.00">
+      </div>
+
+      <div class="glass p-3 text-sm rounded">
+        <div class="flex justify-between"><span>Route</span><span class="text-astro">Astro AI</span></div>
+        <div class="flex justify-between"><span>Network Fee</span><span>~$0.25</span></div>
+        <div class="flex justify-between"><span>Time</span><span>~20s</span></div>
+        <div class="flex justify-between"><span>Funding Rate</span><span id="fundRate">0.03%</span></div>
+        <div class="flex justify-between"><span>Slippage</span><span>0.2%</span></div>
+      </div>
+
+      <button id="swapBtn" class="w-full bg-astro text-white py-3 rounded font-bold">Swap Now</button>
+    </div>
+
+    <!-- Top Gainers -->
+    <div class="glass p-4 rounded shadow-lg">
+      <div class="text-lg font-bold text-astro mb-2">Top Gainers (24h)</div>
+      <canvas id="topGainers"></canvas>
+    </div>
+
+    <!-- Order Book -->
+    <div class="glass p-4 rounded shadow-lg">
+      <div class="flex justify-between items-center mb-2 text-lg font-bold text-astro">Order Book</div>
+      <div class="grid grid-cols-2 gap-2 max-h-60 overflow-y-auto text-sm">
+        <div>
+          <div class="text-gray-400 mb-1">Bids</div>
+          <div id="orderBids" class="space-y-1"></div>
+        </div>
+        <div>
+          <div class="text-gray-400 mb-1">Asks</div>
+          <div id="orderAsks" class="space-y-1"></div>
+        </div>
       </div>
     </div>
 
-    <div class="bg-card/60 p-3 rounded text-sm space-y-1">
-      <div class="flex justify-between"><span>Route</span><span id="routeAI" class="text-astro"></span></div>
-      <div class="flex justify-between"><span>Network Fee</span><span>~$0.25</span></div>
-      <div class="flex justify-between"><span>Time</span><span>~20s</span></div>
-    </div>
-    <button id="swapBtn" class="bg-astro text-white py-3 rounded w-full font-bold">Swap</button>
-  </div>
+  </section>
 
 </main>
 
-<!-- WALLET MODAL -->
-<div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center">
-  <div class="bg-card p-6 rounded max-w-sm w-full space-y-3">
-    <div class="flex justify-between items-center">
+<!-- Wallet Modal -->
+<div id="walletModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center">
+  <div class="glass p-6 rounded max-w-sm w-full">
+    <div class="flex justify-between items-center mb-4">
       <div class="font-bold text-lg">Connect Wallet</div>
-      <button id="closeModal"><i class="fa fa-times text-gray-400"></i></button>
+      <button id="closeWallet"><i class="fas fa-times text-gray-400"></i></button>
     </div>
-    <button class="wallet bg-card p-3 rounded w-full">MetaMask</button>
-    <button class="wallet bg-card p-3 rounded w-full">Coinbase Wallet</button>
-    <button class="wallet bg-card p-3 rounded w-full">Trust Wallet</button>
-    <button class="wallet bg-card p-3 rounded w-full">Phantom</button>
+    <button class="walletBtn w-full bg-card py-3 rounded mb-2">MetaMask</button>
+    <button class="walletBtn w-full bg-card py-3 rounded mb-2">Coinbase Wallet</button>
+    <button class="walletBtn w-full bg-card py-3 rounded mb-2">Trust Wallet</button>
+    <button class="walletBtn w-full bg-card py-3 rounded">Phantom</button>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-// Chart
-const chart = new Chart(document.getElementById('priceChart'), {
-  type:'line',
-  data:{labels:[],datasets:[{data:[],borderColor:'#165DFF',fill:true,backgroundColor:'rgba(22,93,255,0.2)'}]},
-  options:{plugins:{legend:false},scales:{x:{display:false},y:{display:false}}}
+const priceBook={},changeBook={},highBook={},lowBook={},volBook={};
+const symbols=[
+  "BTCUSDT","ETHUSDT","BNBUSDT","SOLUSDT","XRPUSDT","ADAUSDT","DOGEUSDT","MATICUSDT","LINKUSDT","DOTUSDT",
+  "LTCUSDT","AVAXUSDT","UNIUSDT","ALGOUSDT","FTMUSDT","ATOMUSDT","VETUSDT","TRXUSDT","ICPUSDT","MANAUSDT"
+];
+
+// 初始化 swap / chart 下拉
+symbols.forEach(s=>{
+  const base=s.replace("USDT","");
+  priceBook[base]=0; changeBook[base]=0; highBook[base]=0; lowBook[base]=0; volBook[base]=0;
+  $("#swapFrom").append(`<option>${base}</option>`);
+  $("#swapTo").append(`<option>${base}</option>`);
+  $("#chartSymbol").append(`<option value="${s}">${base}</option>`);
 });
 
-// Datepicker
-$(function(){
-  $("#datePicker").datepicker({dateFormat:'yy-mm-dd',onSelect:()=>loadKline($("#coinSelector").val(),$("#datePicker").val())});
-  $("#coinSelector").change(()=>loadKline($("#coinSelector").val(),$("#datePicker").val()));
-  $("#datePicker").val(new Date().toISOString().split('T')[0]);
-  loadKline("BTCUSDT",$("#datePicker").val());
+// 市场表格
+symbols.forEach(s=>{
+  const base=s.replace("USDT","");
+  $("#marketTable tbody").append(`<tr id="row${base}">
+    <td class="p-2">${base}</td>
+    <td class="p-2 text-right" id="price${base}">--</td>
+    <td class="p-2 text-right" id="chg${base}">--</td>
+    <td class="p-2 text-right" id="high${base}">--</td>
+    <td class="p-2 text-right" id="low${base}">--</td>
+    <td class="p-2 text-right" id="vol${base}">--</td>
+  </tr>`);
 });
 
-// Load K-line
-async function loadKline(symbol,date){
-  const start=new Date(date).getTime();
-  const {data}=await axios.get("https://api.binance.com/api/v3/klines",{
-    params:{symbol,interval:'1h',startTime:start,limit:24}
-  });
-  chart.data.labels=data.map(d=>new Date(d[0]).getHours()+"h");
-  chart.data.datasets[0].data=data.map(d=>parseFloat(d[4]));
-  chart.update();
-}
+// 顶部行情
+symbols.forEach(s=>{
+  const base=s.replace("USDT","");
+  $("#topTicker").append(`<div class="flex gap-1"><strong>${base}</strong><span id="top${base}">--</span></div>`);
+});
 
-// Real-time prices + 24h
-const streams=["btcusdt","ethusdt","bnbusdt","solusdt"];
-const ws=new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams.map(s=>s+"@ticker_24hr").join("/")}`);
-const priceMap={}, changeMap={};
+// WebSocket 实时更新 24h ticker
+const ws = new WebSocket(`wss://stream.binance.com:9443/stream?streams=${symbols.map(s=>s.toLowerCase()+"@ticker_24hr").join("/")}`);
+ws.onmessage = evt=>{
+  const msg = JSON.parse(evt.data).data;
+  const sym = msg.s.replace("USDT","");
+  priceBook[sym]=parseFloat(msg.c);
+  changeBook[sym]=parseFloat(msg.P);
+  highBook[sym]=parseFloat(msg.h);
+  lowBook[sym]=parseFloat(msg.l);
+  volBook[sym]=parseFloat(msg.v);
 
-ws.onmessage=e=>{
-  const d=JSON.parse(e.data).data;
-  const symbol=d.s.replace("USDT","");
-  priceMap[symbol]=parseFloat(d.c);
-  changeMap[symbol]=parseFloat(d.P);
-  updateTicker(symbol,d);
-  updateMarketList(symbol,d);
-  calculateSwap();
+  $(`#price${sym}`).text("$"+priceBook[sym].toFixed(2));
+  $(`#chg${sym}`).text(changeBook[sym].toFixed(2)+"%").css("color",changeBook[sym]>=0?"#22c55e":"#ef4444");
+  $(`#high${sym}`).text("$"+highBook[sym].toFixed(2));
+  $(`#low${sym}`).text("$"+lowBook[sym].toFixed(2));
+  $(`#vol${sym}`).text(parseFloat(volBook[sym]).toLocaleString());
+  $(`#top${sym}`).text("$"+priceBook[sym].toFixed(2));
 };
 
-function updateTicker(symbol,d){
-  const pct=parseFloat(d.P).toFixed(2);
-  const clr=pct>=0?'#22c55e':'#ef4444';
-  const html=`$${parseFloat(d.c).toFixed(2)} <span style="color:${clr}">${pct}%</span>`;
-  if(document.getElementById(symbol)){
-    document.getElementById(symbol).innerHTML=html;
-  }
-}
-
-function updateMarketList(symbol,d){
-  const pct=parseFloat(d.P).toFixed(2);
-  const clr=pct>=0?'#22c55e':'#ef4444';
-  if(document.getElementById("M"+symbol)){
-    document.getElementById("M"+symbol).innerHTML=`$${parseFloat(d.c).toFixed(2)} <span style="color:${clr}">${pct}%</span>`;
-  }
-}
-
-ws.onclose=()=>setTimeout(()=>location.reload(),2000);
-
-// Populate Ticker UI
-document.getElementById("ticker").innerHTML=streams.map(s=>`
-  <div class="flex gap-1"><strong>${s.replace("usdt","").toUpperCase()}</strong> <span id="${s.replace("usdt","")}"></span></div>
-`).join("");
-
-// Populate MarketList UI
-document.getElementById("marketList").innerHTML=streams.map(s=>`
-  <div class="flex justify-between py-2 border-b border-gray-700">
-    ${s.replace("usdt","").toUpperCase()}/USDT <span id="M${s.replace("usdt","")}"></span>
-  </div>
-`).join("");
-
-// Swap calc
-function calculateSwap(){
-  const amt=parseFloat(document.getElementById("amountIn").value);
-  const from=document.getElementById("fromToken").value;
-  const to=document.getElementById("toToken").value;
-  if(!amt||!priceMap[from]||!priceMap[to]) return;
-  document.getElementById("amountOut").value=(amt*priceMap[from]/priceMap[to]).toFixed(4);
-}
-document.getElementById("amountIn").addEventListener("input",calculateSwap);
-
-// Wallet
-const modal=document.getElementById("walletModal");
-document.getElementById("connectBtn").onclick=()=>modal.classList.remove("hidden");
-document.getElementById("closeModal").onclick=()=>modal.classList.add("hidden");
-let provider,signer;
-document.querySelectorAll(".wallet").forEach(btn=>{
-  btn.onclick=async()=>{
-    if(!window.ethereum) return alert("Install MetaMask");
-    provider=new ethers.BrowserProvider(window.ethereum);
-    await provider.send("eth_requestAccounts",[]);
-    signer=await provider.getSigner();
-    const addr=await signer.getAddress();
-    document.getElementById("connectBtn").innerText=addr.slice(0,6)+"..."+addr.slice(-4);
-    modal.classList.add("hidden");
+// Swap 实时计算
+$("#swapAmt").on("input",()=>{
+  const from=$("#swapFrom").val(),to=$("#swapTo").val();
+  if(priceBook[from]&&priceBook[to]){
+    $("#swapOut").val( ($("#swapAmt").val()*priceBook[from]/priceBook[to]).toFixed(6) );
   }
 });
 
-// AI Route
-setInterval(()=>{
-  const r=["ETH→USDT→BNB","ETH→SOL→BNB","BTC→USDT→ETH"];
-  document.getElementById("routeAI").innerText=r[Math.floor(Math.random()*r.length)];
-},2000);
+// Kline chart
+const kChart=new Chart($("#kline"),{
+  type:'line',
+  data:{labels:[],datasets:[{data:[], borderColor:'#165DFF', tension:0.3, fill:true, backgroundColor:'rgba(22,93,255,0.1)'}]},
+  options:{scales:{x:{display:false}}}
+});
+function loadKline(){
+  const symbol=$("#chartSymbol").val();
+  const date=$("#chartDate").val();
+  if(!date) return;
+  const st=new Date(date).getTime();
+  axios.get("https://api.binance.com/api/v3/klines",{params:{symbol,interval:$("#marketInterval").val(),startTime:st,limit:24}})
+  .then(res=>{
+    kChart.data.labels=res.data.map(d=>new Date(d[0]).getHours()+"h");
+    kChart.data.datasets[0].data=res.data.map(d=>parseFloat(d[4]));
+    kChart.update();
+  });
+}
+$("#chartDate").datepicker({dateFormat:"yy-mm-dd",onSelect:loadKline});
+$("#chartSymbol").change(loadKline);
+$("#marketInterval").change(loadKline);
+$("#chartDate").val(new Date().toISOString().split('T')[0]);
+loadKline();
 
-// Swap Button
-document.getElementById("swapBtn").onclick=()=>alert("Swap Demo Submitted!");
+// Top Gainers Chart
+const gainCtx=$("#topGainers");
+const gainChart=new Chart(gainCtx,{
+  type:'bar',
+  data:{labels:[],datasets:[{label:'24h %',data:[],backgroundColor:'#22c55e'}]},
+  options:{indexAxis:'y',scales:{x:{beginAtZero:true}}}
+});
+function updateTopGainers(){
+  const top=symbols.map(s=>{
+    const base=s.replace("USDT","");
+    return {base,chg:changeBook[base]||0};
+  }).sort((a,b)=>b.chg-a.chg).slice(0,5);
+  gainChart.data.labels=top.map(x=>x.base);
+  gainChart.data.datasets[0].data=top.map(x=>x.chg);
+  gainChart.update();
+}
+setInterval(updateTopGainers,5000);
+
+// Wallet
+$("#connectBtn").click(()=>$("#walletModal").removeClass("hidden"));
+$("#closeWallet").click(()=>$("#walletModal").addClass("hidden"));
+$(".walletBtn").click(async ()=>{
+  if(!window.ethereum) return alert("Install MetaMask");
+  const provider=new ethers.BrowserProvider(window.ethereum);
+  await provider.send("eth_requestAccounts",[]);
+  const signer = await provider.getSigner();
+  const addr = await signer.getAddress();
+  $("#connectBtn").text(addr.slice(0,6)+"..."+addr.slice(-4));
+  $("#walletModal").addClass("hidden");
+});
+
+// Swap button demo
+$("#swapBtn").click(()=>alert("Swap executed!"));
+
+// Fake Order Book demo
+function updateOrderBook(){
+  const bids=[],asks=[];
+  for(let i=0;i<10;i++){
+    const p=(100+Math.random()*10).toFixed(2),q=(Math.random()*5).toFixed(3);
+    bids.push(`<div class="flex justify-between"><span class="text-green-400">${p}</span><span>${q}</span></div>`);
+    asks.push(`<div class="flex justify-between"><span class="text-red-400">${(p*1.01).toFixed(2)}</span><span>${q}</span></div>`);
+  }
+  $("#orderBids").html(bids.join(""));
+  $("#orderAsks").html(asks.join(""));
+}
+setInterval(updateOrderBook,2000);
 </script>
-
 </body>
 </html>
