@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AstroBridge • Genesis Terminal</title>
+  <title>AstroBridge • Intent Trading Terminal</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,48 +31,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist/jquery-ui.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
 
   <style>
     :root {
-      --bg-dark: #02040f;
+      --bg: #02040f;
+      --text: #e3f2fd;
       --glow-blue: rgba(64, 196, 255, 0.6);
       --glow-purple: rgba(124, 77, 255, 0.5);
     }
 
     body {
-      background: var(--bg-dark);
+      background: var(--bg);
       background-image: url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
       background-size: cover;
       background-position: center 30%;
       background-attachment: fixed;
-      color: #e3f2fd;
+      color: var(--text);
       font-family: 'Exo 2', sans-serif;
+      min-height: 100vh;
       margin: 0;
       overflow-x: hidden;
-      min-height: 100vh;
       position: relative;
+      transition: background 0.6s ease;
     }
 
-    /* 柔和星云流动 - 更干净版 */
+    body.light-mode {
+      --bg: #0a192f;
+      --text: #f0f9ff;
+      filter: brightness(1.15);
+    }
+
     .nebula-flow {
       position: fixed;
       inset: 0;
       z-index: -3;
       pointer-events: none;
-      background: 
-        radial-gradient(ellipse at 40% 30%, rgba(124,77,255,0.18) 0%, transparent 60%),
-        radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.15) 0%, transparent 65%),
-        radial-gradient(ellipse at 15% 80%, rgba(103,58,183,0.12) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 40% 30%, rgba(124,77,255,0.10) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.08) 0%, transparent 65%);
       background-size: 220% 220%;
-      animation: nebula-flow 420s ease-in-out infinite;
+      animation: nebula-flow 520s ease-in-out infinite;
       mix-blend-mode: screen;
-      opacity: 0.55;
-      filter: blur(50px) brightness(0.95);
+      opacity: 0.4;
+      filter: blur(70px);
     }
 
     @keyframes nebula-flow {
@@ -81,74 +82,25 @@
       100% { background-position: 0% 0%; }
     }
 
-    /* 精简星尘 - 少而精 */
-    .stars-container {
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      pointer-events: none;
-    }
-
+    .stars-container { position: fixed; inset: 0; z-index: -2; pointer-events: none; }
     .stars-layer { position: absolute; inset: 0; }
-    #stars-far  { box-shadow:  /* 手动少量或用 JS 生成 */ ; opacity: 0.5; animation: drift 300s linear infinite; }
-    #stars-mid  { opacity: 0.7; animation: drift 200s linear infinite reverse; }
-    #stars-near { opacity: 0.85; animation: drift 140s linear infinite; }
 
-    @keyframes drift { 0% { transform: translate(0,0); } 100% { transform: translate(-5vw, -8vh); } }
-
-    /* 彗星 - 更稀疏、更优雅 */
-    .comets-layer {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    .comet {
-      position: absolute;
-      width: 2.5px;
-      height: 2.5px;
-      background: #fff;
-      border-radius: 50%;
-      box-shadow: 0 0 15px 6px var(--glow-blue);
-      opacity: 0;
-    }
-
-    .comet::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      width: var(--tail, 160px);
-      height: 1.8px;
-      background: linear-gradient(to right, var(--glow-blue), transparent);
-      transform: translateY(-50%);
-      filter: blur(2px);
-    }
-
-    @keyframes comet-fly {
-      0%   { transform: translate(0,0) rotate(var(--angle)); opacity: 0; }
-      8%   { opacity: 0.9; }
-      100% { transform: translate(160vw, 100vh) rotate(var(--angle)); opacity: 0; }
-    }
-
-    /* UI 优化 */
     .glass-panel {
-      background: rgba(8, 15, 40, 0.32);
-      backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(64,196,255,0.25);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 0 20px rgba(64,196,255,0.08);
+      background: rgba(8, 15, 40, 0.26);
+      backdrop-filter: blur(22px) saturate(180%);
+      border: 1px solid rgba(64,196,255,0.20);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.55), inset 0 0 20px rgba(64,196,255,0.05);
       border-radius: 1.25rem;
-      transition: all 0.5s ease;
+      transition: all 0.4s ease;
     }
 
     .glass-panel:hover {
-      border-color: rgba(64,196,255,0.5);
-      box-shadow: 0 12px 48px rgba(64,196,255,0.3);
+      border-color: rgba(64,196,255,0.40);
+      box-shadow: 0 12px 48px rgba(64,196,255,0.22);
     }
 
     .neon-text {
-      text-shadow: 0 0 10px var(--glow-blue), 0 0 20px var(--glow-purple);
+      text-shadow: 0 0 10px #40c4ff, 0 0 20px #7c4dff;
     }
 
     .btn-neon {
@@ -158,25 +110,20 @@
     }
 
     .btn-neon:hover {
-      box-shadow: 0 0 35px rgba(64,196,255,0.8), 0 0 60px rgba(124,77,255,0.6);
-      transform: scale(1.04);
+      box-shadow: 0 0 40px rgba(64,196,255,0.75);
+      transform: scale(1.03);
     }
 
-    /* 主题切换 */
-    body.dark { --bg-dark: #000; filter: brightness(0.9); }
-    body.light { background: linear-gradient(#0a192f, #001233); color: #e3f2fd; }
-
-    /* 返回顶部 */
     #back-to-top {
       position: fixed;
       bottom: 30px;
       right: 30px;
       z-index: 100;
-      background: rgba(64,196,255,0.3);
-      backdrop-filter: blur(10px);
+      background: rgba(64,196,255,0.25);
+      backdrop-filter: blur(12px);
       color: white;
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -184,154 +131,239 @@
       opacity: 0;
       transition: all 0.4s;
       cursor: pointer;
+      border: 1px solid rgba(64,196,255,0.4);
     }
 
     #back-to-top.show { opacity: 1; }
+
+    footer a:hover { color: #40c4ff; text-decoration: underline; }
   </style>
 </head>
 <body class="dark">
 
   <div class="nebula-flow"></div>
+
   <div class="stars-container">
     <div class="stars-layer" id="stars-far"></div>
     <div class="stars-layer" id="stars-mid"></div>
     <div class="stars-layer" id="stars-near"></div>
   </div>
-  <div class="comets-layer"></div>
 
-  <!-- NAV -->
-  <nav class="glass-panel px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20">
-    <div class="flex items-center gap-5">
-      <a href="#" id="home-btn" class="text-3xl text-genesis-blue hover:text-white transition"><i class="fas fa-home"></i></a>
+  <!-- Navigation -->
+  <nav class="glass-panel px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
+    <div class="flex items-center gap-6">
+      <a href="https://astrochannel.one" title="Return to Home" class="text-3xl text-genesis-blue hover:text-white transition">
+        <i class="fas fa-home"></i>
+      </a>
       <h1 class="text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
+      <span class="text-sm px-3 py-1 bg-genesis-purple/15 rounded-full border border-genesis-purple/30">Intent Trading Terminal</span>
     </div>
-    <div class="flex items-center gap-4">
-      <button id="theme-toggle" class="text-xl text-genesis-blue hover:text-white"><i class="fas fa-moon"></i></button>
-      <button id="connectBtn" class="btn-neon px-6 py-2.5 rounded-full text-sm font-medium uppercase tracking-wide">
+
+    <div class="flex items-center gap-5">
+      <button id="theme-toggle" class="text-xl text-genesis-blue hover:text-white transition" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button id="connectBtn" class="btn-neon px-6 py-2.5 rounded-full text-sm uppercase tracking-wide">
         <i class="fas fa-wallet mr-2"></i> Connect Wallet
       </button>
     </div>
   </nav>
 
-  <!-- 主内容区域（占位，你可以替换成完整的市场/K线/Swap 等） -->
-  <main class="p-8 max-w-7xl mx-auto relative z-10">
-    <div class="glass-panel p-8 mb-8">
-      <h2 class="text-3xl font-orbitron neon-text mb-6">Genesis Trading Interface</h2>
-      <p class="opacity-80">实时跨链交易终端 • 连接钱包后解锁完整功能</p>
-      <!-- 这里放你的 Swap、Market Table、Chart 等 -->
-      <button class="btn-neon mt-6 px-8 py-3 rounded-lg">Explore Markets</button>
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto p-8 pt-12 pb-20 relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl md:text-6xl font-orbitron neon-text mb-5">Intent Execution Terminal</h2>
+      <p class="text-xl opacity-80 max-w-3xl mx-auto leading-relaxed">
+        Say what you want. AI understands. Robots execute across chains. Results confirmed on-chain.
+      </p>
+    </div>
+
+    <!-- Intent Input -->
+    <section class="glass-panel p-8 mb-10">
+      <h3 class="text-2xl font-orbitron neon-text mb-6">Express Your Intent</h3>
+      <textarea id="intentInput" rows="4"
+        class="w-full bg-void-black/35 border border-genesis-blue/30 rounded-xl p-5 text-white placeholder-gray-500 focus:outline-none focus:border-genesis-blue focus:ring-1 focus:ring-genesis-blue resize-none"
+        placeholder="Example: Swap 1.2 ETH to USDC on Arbitrum with best rate, max slippage 0.4%"></textarea>
+
+      <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+        <button id="parseIntentBtn" class="btn-neon px-8 py-3 rounded-lg font-medium uppercase tracking-wider">Parse Intent</button>
+        <button id="executeBtn" class="bg-gray-700/60 px-8 py-3 rounded-lg font-medium uppercase tracking-wider cursor-not-allowed opacity-50" disabled>
+          Execute Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Preview & Status -->
+    <div class="grid md:grid-cols-2 gap-6 mb-10">
+      <div class="glass-panel p-7">
+        <h4 class="text-xl font-orbitron mb-4">AI Execution Plan</h4>
+        <div id="parsedPlan" class="text-sm opacity-80 leading-relaxed min-h-[140px]">
+          Enter your intent above and click "Parse Intent" to begin.
+        </div>
+      </div>
+
+      <div class="glass-panel p-7">
+        <h4 class="text-xl font-orbitron mb-4">Execution Status</h4>
+        <div id="statusLog" class="text-sm space-y-2.5 max-h-48 overflow-y-auto pr-2">
+          <p class="text-gray-400">Wallet status: Not connected</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Executions -->
+    <div class="glass-panel p-7">
+      <h4 class="text-xl font-orbitron mb-5">Recent Intent Executions</h4>
+      <div id="historyList" class="space-y-3 text-sm max-h-64 overflow-y-auto pr-2">
+        <div class="flex justify-between items-center py-2 border-b border-genesis-blue/10">
+          <span>Swap 0.8 ETH → USDC (Arbitrum)</span>
+          <span class="text-green-400">Success • 8m ago</span>
+        </div>
+        <div class="flex justify-between items-center py-2 border-b border-genesis-blue/10">
+          <span>Bridge 500 USDT → Solana</span>
+          <span class="text-green-400">Confirmed • 14m ago</span>
+        </div>
+        <div class="flex justify-between items-center py-2">
+          <span>Stake 1,200 ASTRO</span>
+          <span class="text-green-400">Executed • 29m ago</span>
+        </div>
+      </div>
     </div>
   </main>
 
-  <!-- Wallet Modal -->
-  <div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50">
-    <div class="glass-panel p-10 rounded-2xl max-w-md w-full border border-genesis-blue/40">
-      <div class="flex justify-between items-center mb-8">
-        <h3 class="text-2xl font-orbitron neon-text">Neural Vault Connection</h3>
-        <button id="closeWallet" class="text-2xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
-      </div>
-      <button class="w-full glass-panel py-4 mb-4 text-left px-6 rounded-xl hover:bg-genesis-blue/10 transition">MetaMask</button>
-      <button class="w-full glass-panel py-4 mb-4 text-left px-6 rounded-xl hover:bg-genesis-blue/10 transition">WalletConnect</button>
-      <button class="w-full glass-panel py-4 text-left px-6 rounded-xl hover:bg-genesis-blue/10 transition">Coinbase Wallet</button>
-    </div>
-  </div>
-
-  <!-- 回到顶部按钮 -->
+  <!-- Back to Top -->
   <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 
   <!-- Footer -->
-  <footer class="glass-panel mt-20 py-6 text-center text-sm opacity-70 border-t border-genesis-blue/20">
-    © 2026 AstroBridge • Powered by Cosmic Intelligence • San Jose, CA
+  <footer class="glass-panel mt-16 py-8 text-center text-sm opacity-70 border-t border-genesis-blue/20">
+    <p>© 2026 AstroBridge Global Intent Network • All rights reserved</p>
+    <div class="mt-3 flex justify-center gap-6">
+      <a href="https://astrochannel.one" class="hover:text-genesis-blue transition">Home</a>
+      <a href="#" class="hover:text-genesis-blue transition">Whitepaper</a>
+      <a href="#" class="hover:text-genesis-blue transition">Documentation</a>
+      <a href="#" class="hover:text-genesis-blue transition">API</a>
+    </div>
   </footer>
 
   <script>
-    // 星尘生成（少量精致）
+    // Star dust generation
     function generateStars(id, count, min, max, op) {
-      let s = [];
-      for(let i=0; i<count; i++){
-        let x = Math.random()*100, y=Math.random()*100, sz = Math.random()*(max-min)+min;
-        s.push(`${x}vw ${y}vh ${sz}px #e3f2fd`);
+      let shadows = [];
+      for (let i = 0; i < count; i++) {
+        let x = Math.random() * 100;
+        let y = Math.random() * 100;
+        let size = Math.random() * (max - min) + min;
+        shadows.push(`${x}vw ${y}vh ${size}px #e3f2fd`);
       }
-      document.getElementById(id).style.boxShadow = s.join(',');
+      document.getElementById(id).style.boxShadow = shadows.join(',');
       document.getElementById(id).style.opacity = op;
     }
-    generateStars('stars-far', 80, 0.5, 1.2, 0.45);
-    generateStars('stars-mid', 40, 1.0, 1.8, 0.65);
-    generateStars('stars-near', 12, 1.5, 3.0, 0.8);
 
-    // 彗星 - 更慢更少
-    function createComet(){
-      const c = document.createElement('div');
-      c.className = 'comet';
-      const x = Math.random()*-40-20, y = Math.random()*60-30;
-      const ang = Math.random()*50 + 25;
-      const dur = Math.random()*12 + 10;
-      const tail = Math.random()*180 + 120;
-      const del = Math.random()*8;
+    generateStars('stars-far',  70, 0.4, 1.1, 0.42);
+    generateStars('stars-mid',  35, 0.9, 1.7, 0.62);
+    generateStars('stars-near', 12, 1.4, 2.8, 0.78);
 
-      c.style.left = x+'vw';
-      c.style.top = y+'vh';
-      c.style.setProperty('--angle', ang+'deg');
-      c.style.setProperty('--tail', tail+'px');
-      c.style.animation = `comet-fly ${dur}s linear ${del}s forwards`;
-
-      document.querySelector('.comets-layer').appendChild(c);
-      setTimeout(()=>c.remove(), (dur+del+2)*1000);
-    }
-    setInterval(createComet, 8000 + Math.random()*12000);
-    for(let i=0;i<2;i++) setTimeout(createComet, i*6000);
-
-    // 钱包连接示例（模拟）
-    let connected = false;
-    let address = '';
+    // Wallet connection
+    let provider, signer, userAddress = null;
 
     $("#connectBtn").click(async () => {
-      if(connected){
-        if(confirm("Disconnect wallet?")) {
-          connected = false;
-          address = '';
+      if (userAddress) {
+        if (confirm("Disconnect wallet?")) {
+          userAddress = null;
           $("#connectBtn").html('<i class="fas fa-wallet mr-2"></i> Connect Wallet');
+          $("#statusLog").prepend('<p class="text-yellow-300">Wallet disconnected</p>');
+          $("#executeBtn").addClass('opacity-50 cursor-not-allowed').prop('disabled', true);
         }
         return;
       }
 
-      $("#walletModal").removeClass("hidden");
+      if (!window.ethereum) {
+        alert("MetaMask or compatible wallet required");
+        return;
+      }
+
+      try {
+        provider = new ethers.BrowserProvider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        signer = await provider.getSigner();
+        userAddress = await signer.getAddress();
+
+        $("#connectBtn").html(`<i class="fas fa-circle text-green-400 mr-2 text-xs"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`);
+        $("#statusLog").prepend(`<p class="text-green-400">Wallet connected: ${userAddress.slice(0,6)}...</p>`);
+        $("#executeBtn").removeClass('opacity-50 cursor-not-allowed').prop('disabled', false);
+      } catch (err) {
+        alert("Connection failed: " + err.message);
+      }
     });
 
-    $("#closeWallet").click(() => $("#walletModal").addClass("hidden"));
+    // Parse intent (simulation)
+    $("#parseIntentBtn").click(() => {
+      const text = $("#intentInput").val().trim();
+      if (!text) {
+        alert("Please enter your intent");
+        return;
+      }
 
-    // 模拟连接成功
-    $(".glass-panel button").click(() => {
-      address = '0x' + 'a'.repeat(40); // 模拟地址
-      $("#connectBtn").html(`<i class="fas fa-circle text-green-400 mr-2 text-xs"></i>${address.slice(0,6)}...${address.slice(-4)}`);
-      $("#walletModal").addClass("hidden");
-      connected = true;
-      alert("Wallet linked successfully!");
+      $("#parsedPlan").html(`
+        <strong>Intent detected:</strong> ${text}<br><br>
+        <strong>AI breakdown:</strong><br>
+        • Action: Cross-chain swap / bridge / stake<br>
+        • Chains involved: Ethereum → Arbitrum / Solana<br>
+        • Estimated gas: ~0.0018 ETH<br>
+        • Max slippage: 0.4%<br>
+        • Security check: Passed<br>
+        • Robots assigned: 3 agents
+      `);
+
+      if (userAddress) $("#executeBtn").prop('disabled', false);
     });
 
-    // 返回主页 / 滚动顶部
-    $("#home-btn").click(e => {
-      e.preventDefault();
-      window.scrollTo({top:0, behavior:'smooth'});
+    // Execute simulation (placeholder for real API call)
+    $("#executeBtn").click(async () => {
+      if (!userAddress) {
+        alert("Please connect wallet first");
+        return;
+      }
+
+      const intent = $("#intentInput").val().trim();
+      if (!intent) return;
+
+      $("#statusLog").prepend(`<p class="text-blue-300">[${new Date().toLocaleTimeString()}] Executing intent...</p>`);
+
+      // Here you would normally call your backend / AstroBridge API
+      // Example:
+      // fetch('https://api.astrobridge.network/v1/intent', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${userAddress}` },
+      //   body: JSON.stringify({ intent, wallet: userAddress })
+      // })
+
+      setTimeout(() => {
+        $("#statusLog").prepend(`<p class="text-green-400">[${new Date().toLocaleTimeString()}] Intent executed successfully (demo mode)</p>`);
+        $("#statusLog").prepend(`<p class="text-gray-400">Tx simulation hash: 0x${Math.random().toString(16).slice(2,10)}...</p>`);
+
+        // Add to history
+        $("#historyList").prepend(`
+          <div class="flex justify-between items-center py-2 border-b border-genesis-blue/10">
+            <span>${intent.slice(0,40)}${intent.length > 40 ? '...' : ''}</span>
+            <span class="text-green-400">Success • just now</span>
+          </div>
+        `);
+      }, 1800);
     });
 
-    // 回到顶部按钮
-    const backTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 400) backTop.classList.add('show');
-      else backTop.classList.remove('show');
-    });
-    backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-    // 主题切换
+    // Theme toggle
     $("#theme-toggle").click(() => {
-      document.body.classList.toggle('dark');
-      document.body.classList.toggle('light');
+      document.body.classList.toggle('light-mode');
       const icon = $("#theme-toggle i");
       icon.toggleClass('fa-moon fa-sun');
     });
 
-    // 你的其他逻辑（如 Binance WS、Chart 等）放这里
+    // Back to top
+    const backTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('show', window.scrollY > 400);
+    });
+    backTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   </script>
 </body>
 </html>
