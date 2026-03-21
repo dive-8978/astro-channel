@@ -31,14 +31,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+
+  <!-- WalletConnect + ethers -->
+  <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
 
   <style>
     :root {
       --bg: #02040f;
       --text: #e3f2fd;
       --glow-blue: rgba(64, 196, 255, 0.6);
-      --glow-purple: rgba(124, 77, 255, 0.5);
     }
 
     body {
@@ -53,13 +55,6 @@
       margin: 0;
       overflow-x: hidden;
       position: relative;
-      transition: background 0.6s ease;
-    }
-
-    body.light-mode {
-      --bg: #0a192f;
-      --text: #f0f9ff;
-      filter: brightness(1.15);
     }
 
     .nebula-flow {
@@ -76,17 +71,13 @@
       filter: blur(70px);
     }
 
-    @keyframes nebula-flow {
-      0%   { background-position: 0% 0%; }
-      50%  { background-position: 100% 100%; }
-      100% { background-position: 0% 0%; }
-    }
+    @keyframes nebula-flow { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }
 
     .stars-container { position: fixed; inset: 0; z-index: -2; pointer-events: none; }
     .stars-layer { position: absolute; inset: 0; }
 
     .glass-panel {
-      background: rgba(8, 15, 40, 0.26);
+      background: rgba(8,15,40,0.26);
       backdrop-filter: blur(22px) saturate(180%);
       border: 1px solid rgba(64,196,255,0.20);
       box-shadow: 0 8px 32px rgba(0,0,0,0.55), inset 0 0 20px rgba(64,196,255,0.05);
@@ -94,14 +85,9 @@
       transition: all 0.4s ease;
     }
 
-    .glass-panel:hover {
-      border-color: rgba(64,196,255,0.40);
-      box-shadow: 0 12px 48px rgba(64,196,255,0.22);
-    }
+    .glass-panel:hover { border-color: rgba(64,196,255,0.40); }
 
-    .neon-text {
-      text-shadow: 0 0 10px #40c4ff, 0 0 20px #7c4dff;
-    }
+    .neon-text { text-shadow: 0 0 10px #40c4ff, 0 0 20px #7c4dff; }
 
     .btn-neon {
       background: linear-gradient(135deg, #40c4ff, #7c4dff);
@@ -109,37 +95,27 @@
       transition: all 0.4s;
     }
 
-    .btn-neon:hover {
-      box-shadow: 0 0 40px rgba(64,196,255,0.75);
-      transform: scale(1.03);
+    .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
+
+    .wallet-option {
+      transition: all 0.3s;
     }
 
+    .wallet-option:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(64,196,255,0.3); }
+
     #back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 100;
-      background: rgba(64,196,255,0.25);
-      backdrop-filter: blur(12px);
-      color: white;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: all 0.4s;
-      cursor: pointer;
+      position: fixed; bottom: 30px; right: 30px; z-index: 100;
+      background: rgba(64,196,255,0.25); backdrop-filter: blur(12px);
+      color: white; width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: all 0.4s; cursor: pointer;
       border: 1px solid rgba(64,196,255,0.4);
     }
 
     #back-to-top.show { opacity: 1; }
-
-    footer a:hover { color: #40c4ff; text-decoration: underline; }
   </style>
 </head>
-<body class="dark">
+<body>
 
   <div class="nebula-flow"></div>
 
@@ -160,21 +136,51 @@
     </div>
 
     <div class="flex items-center gap-5">
-      <button id="theme-toggle" class="text-xl text-genesis-blue hover:text-white transition" title="Toggle Theme">
-        <i class="fas fa-moon"></i>
-      </button>
       <button id="connectBtn" class="btn-neon px-6 py-2.5 rounded-full text-sm uppercase tracking-wide">
         <i class="fas fa-wallet mr-2"></i> Connect Wallet
       </button>
     </div>
   </nav>
 
+  <!-- Wallet Selection Modal -->
+  <div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50">
+    <div class="glass-panel p-10 rounded-2xl max-w-lg w-full border border-genesis-blue/40">
+      <div class="flex justify-between items-center mb-8">
+        <h3 class="text-2xl font-orbitron neon-text">Connect Wallet</h3>
+        <button id="closeWallet" class="text-2xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10 transition" data-provider="metamask">
+          <i class="fab fa-metamask text-4xl mb-3 block"></i>
+          MetaMask
+        </button>
+        <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10 transition" data-provider="walletconnect">
+          <i class="fas fa-link text-4xl mb-3 block"></i>
+          WalletConnect
+        </button>
+        <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10 transition" disabled>
+          <i class="fas fa-wallet text-4xl mb-3 block opacity-50"></i>
+          Coinbase Wallet (soon)
+        </button>
+        <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10 transition" disabled>
+          <i class="fas fa-ghost text-4xl mb-3 block opacity-50"></i>
+          Phantom (soon)
+        </button>
+      </div>
+
+      <p class="text-center text-sm opacity-70 mt-6">
+        Supports 300+ wallets via WalletConnect (Trust Wallet, Rainbow, OKX, etc.)
+      </p>
+    </div>
+  </div>
+
   <!-- Main Content -->
   <main class="max-w-5xl mx-auto p-8 pt-12 pb-20 relative z-10">
     <div class="text-center mb-12">
       <h2 class="text-5xl md:text-6xl font-orbitron neon-text mb-5">Intent Execution Terminal</h2>
       <p class="text-xl opacity-80 max-w-3xl mx-auto leading-relaxed">
-        Say what you want. AI understands. Robots execute across chains. Results confirmed on-chain.
+        Express your intent. AI parses. Robots execute across chains. Results confirmed on-chain.
       </p>
     </div>
 
@@ -182,7 +188,7 @@
     <section class="glass-panel p-8 mb-10">
       <h3 class="text-2xl font-orbitron neon-text mb-6">Express Your Intent</h3>
       <textarea id="intentInput" rows="4"
-        class="w-full bg-void-black/35 border border-genesis-blue/30 rounded-xl p-5 text-white placeholder-gray-500 focus:outline-none focus:border-genesis-blue focus:ring-1 focus:ring-genesis-blue resize-none"
+        class="w-full bg-void-black/35 border border-genesis-blue/30 rounded-xl p-5 text-white placeholder-gray-500 focus:outline-none focus:border-genesis-blue focus:ring-1 focus:ring-genesis-blue resize-none font-mono"
         placeholder="Example: Swap 1.2 ETH to USDC on Arbitrum with best rate, max slippage 0.4%"></textarea>
 
       <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
@@ -198,34 +204,23 @@
       <div class="glass-panel p-7">
         <h4 class="text-xl font-orbitron mb-4">AI Execution Plan</h4>
         <div id="parsedPlan" class="text-sm opacity-80 leading-relaxed min-h-[140px]">
-          Enter your intent above and click "Parse Intent" to begin.
+          Enter your intent and click "Parse Intent" to begin.
         </div>
       </div>
 
       <div class="glass-panel p-7">
         <h4 class="text-xl font-orbitron mb-4">Execution Status</h4>
-        <div id="statusLog" class="text-sm space-y-2.5 max-h-48 overflow-y-auto pr-2">
-          <p class="text-gray-400">Wallet status: Not connected</p>
+        <div id="statusLog" class="text-sm space-y-2.5 max-h-48 overflow-y-auto pr-2 font-mono">
+          <p class="text-gray-400">Wallet: Not connected</p>
         </div>
       </div>
     </div>
 
     <!-- Recent Executions -->
-    <div class="glass-panel p-7">
+    <div class="glass-panel p-7 mb-10">
       <h4 class="text-xl font-orbitron mb-5">Recent Intent Executions</h4>
       <div id="historyList" class="space-y-3 text-sm max-h-64 overflow-y-auto pr-2">
-        <div class="flex justify-between items-center py-2 border-b border-genesis-blue/10">
-          <span>Swap 0.8 ETH → USDC (Arbitrum)</span>
-          <span class="text-green-400">Success • 8m ago</span>
-        </div>
-        <div class="flex justify-between items-center py-2 border-b border-genesis-blue/10">
-          <span>Bridge 500 USDT → Solana</span>
-          <span class="text-green-400">Confirmed • 14m ago</span>
-        </div>
-        <div class="flex justify-between items-center py-2">
-          <span>Stake 1,200 ASTRO</span>
-          <span class="text-green-400">Executed • 29m ago</span>
-        </div>
+        <!-- Populated dynamically -->
       </div>
     </div>
   </main>
@@ -236,134 +231,130 @@
   <!-- Footer -->
   <footer class="glass-panel mt-16 py-8 text-center text-sm opacity-70 border-t border-genesis-blue/20">
     <p>© 2026 AstroBridge Global Intent Network • All rights reserved</p>
-    <div class="mt-3 flex justify-center gap-6">
+    <div class="mt-3 flex justify-center gap-8">
       <a href="https://astrochannel.one" class="hover:text-genesis-blue transition">Home</a>
       <a href="#" class="hover:text-genesis-blue transition">Whitepaper</a>
-      <a href="#" class="hover:text-genesis-blue transition">Documentation</a>
+      <a href="#" class="hover:text-genesis-blue transition">Docs</a>
       <a href="#" class="hover:text-genesis-blue transition">API</a>
     </div>
   </footer>
 
   <script>
-    // Star dust generation
+    // Star dust
     function generateStars(id, count, min, max, op) {
-      let shadows = [];
+      let s = [];
       for (let i = 0; i < count; i++) {
-        let x = Math.random() * 100;
-        let y = Math.random() * 100;
-        let size = Math.random() * (max - min) + min;
-        shadows.push(`${x}vw ${y}vh ${size}px #e3f2fd`);
+        let x = Math.random() * 100, y = Math.random() * 100;
+        let sz = Math.random() * (max - min) + min;
+        s.push(`${x}vw ${y}vh ${sz}px #e3f2fd`);
       }
-      document.getElementById(id).style.boxShadow = shadows.join(',');
+      document.getElementById(id).style.boxShadow = s.join(',');
       document.getElementById(id).style.opacity = op;
     }
-
-    generateStars('stars-far',  70, 0.4, 1.1, 0.42);
-    generateStars('stars-mid',  35, 0.9, 1.7, 0.62);
+    generateStars('stars-far', 70, 0.4, 1.1, 0.42);
+    generateStars('stars-mid', 35, 0.9, 1.7, 0.62);
     generateStars('stars-near', 12, 1.4, 2.8, 0.78);
 
     // Wallet connection
-    let provider, signer, userAddress = null;
+    let provider = null;
+    let userAddress = null;
 
-    $("#connectBtn").click(async () => {
-      if (userAddress) {
-        if (confirm("Disconnect wallet?")) {
-          userAddress = null;
-          $("#connectBtn").html('<i class="fas fa-wallet mr-2"></i> Connect Wallet');
-          $("#statusLog").prepend('<p class="text-yellow-300">Wallet disconnected</p>');
-          $("#executeBtn").addClass('opacity-50 cursor-not-allowed').prop('disabled', true);
+    const modal = document.getElementById('walletModal');
+    const closeModal = document.getElementById('closeWallet');
+    const connectBtn = document.getElementById('connectBtn');
+
+    connectBtn.onclick = () => modal.classList.remove('hidden');
+
+    closeModal.onclick = () => modal.classList.add('hidden');
+
+    // Wallet options
+    document.querySelectorAll('[data-provider]').forEach(btn => {
+      btn.onclick = async () => {
+        const providerType = btn.dataset.provider;
+
+        try {
+          if (providerType === 'metamask') {
+            if (!window.ethereum) throw new Error("MetaMask not detected");
+            provider = new ethers.providers.Web3Provider(window.ethereum);
+            await provider.send("eth_requestAccounts", []);
+          } else if (providerType === 'walletconnect') {
+            const WalletConnectProvider = window.WalletConnectProvider.default;
+            const wcProvider = new WalletConnectProvider({
+              infuraId: "YOUR_INFURA_ID_HERE", // ← Replace with your Infura/Alchemy/etc ID
+              // Or use public defaults for demo
+            });
+            await wcProvider.enable();
+            provider = new ethers.providers.Web3Provider(wcProvider);
+          }
+
+          const signer = provider.getSigner();
+          userAddress = await signer.getAddress();
+
+          connectBtn.innerHTML = `<i class="fas fa-circle text-green-400 mr-2 text-xs"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+          document.getElementById('statusLog').innerHTML += `<p class="text-green-400">[${new Date().toLocaleTimeString()}] Wallet connected: ${userAddress.slice(0,6)}...</p>`;
+          document.getElementById('executeBtn').disabled = false;
+          document.getElementById('executeBtn').classList.remove('opacity-50', 'cursor-not-allowed');
+
+          modal.classList.add('hidden');
+        } catch (err) {
+          alert("Connection failed: " + err.message);
         }
-        return;
-      }
-
-      if (!window.ethereum) {
-        alert("MetaMask or compatible wallet required");
-        return;
-      }
-
-      try {
-        provider = new ethers.BrowserProvider(window.ethereum);
-        await provider.send("eth_requestAccounts", []);
-        signer = await provider.getSigner();
-        userAddress = await signer.getAddress();
-
-        $("#connectBtn").html(`<i class="fas fa-circle text-green-400 mr-2 text-xs"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`);
-        $("#statusLog").prepend(`<p class="text-green-400">Wallet connected: ${userAddress.slice(0,6)}...</p>`);
-        $("#executeBtn").removeClass('opacity-50 cursor-not-allowed').prop('disabled', false);
-      } catch (err) {
-        alert("Connection failed: " + err.message);
-      }
+      };
     });
 
-    // Parse intent (simulation)
-    $("#parseIntentBtn").click(() => {
-      const text = $("#intentInput").val().trim();
-      if (!text) {
-        alert("Please enter your intent");
-        return;
-      }
+    // Parse intent (demo)
+    document.getElementById('parseIntentBtn').onclick = () => {
+      const intent = document.getElementById('intentInput').value.trim();
+      if (!intent) return alert("Please enter your intent");
 
-      $("#parsedPlan").html(`
-        <strong>Intent detected:</strong> ${text}<br><br>
-        <strong>AI breakdown:</strong><br>
-        • Action: Cross-chain swap / bridge / stake<br>
-        • Chains involved: Ethereum → Arbitrum / Solana<br>
-        • Estimated gas: ~0.0018 ETH<br>
-        • Max slippage: 0.4%<br>
-        • Security check: Passed<br>
-        • Robots assigned: 3 agents
-      `);
+      document.getElementById('parsedPlan').innerHTML = `
+        <strong>Intent:</strong> ${intent}<br><br>
+        <strong>AI Plan:</strong><br>
+        • Type: Cross-chain swap / bridge<br>
+        • Optimal route: Detected (e.g. Ethereum → Arbitrum)<br>
+        • Est. gas: ~0.0015 ETH<br>
+        • Slippage tolerance: 0.4%<br>
+        • Security: Passed<br>
+        • Agents: 3 robots assigned
+      `;
+    };
 
-      if (userAddress) $("#executeBtn").prop('disabled', false);
-    });
+    // Execute (demo + placeholder for real API)
+    document.getElementById('executeBtn').onclick = async () => {
+      if (!userAddress) return alert("Connect wallet first");
 
-    // Execute simulation (placeholder for real API call)
-    $("#executeBtn").click(async () => {
-      if (!userAddress) {
-        alert("Please connect wallet first");
-        return;
-      }
-
-      const intent = $("#intentInput").val().trim();
+      const intent = document.getElementById('intentInput').value.trim();
       if (!intent) return;
 
-      $("#statusLog").prepend(`<p class="text-blue-300">[${new Date().toLocaleTimeString()}] Executing intent...</p>`);
+      const status = document.getElementById('statusLog');
+      status.innerHTML += `<p class="text-blue-300">[${new Date().toLocaleTimeString()}] Sending intent to network...</p>`;
 
-      // Here you would normally call your backend / AstroBridge API
+      // TODO: Real API call to AstroBridge backend
       // Example:
-      // fetch('https://api.astrobridge.network/v1/intent', {
+      // const response = await fetch('https://api.astrobridge.network/v1/intents', {
       //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${userAddress}` },
+      //   headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${userAddress}` },
       //   body: JSON.stringify({ intent, wallet: userAddress })
-      // })
+      // });
+      // const data = await response.json();
 
       setTimeout(() => {
-        $("#statusLog").prepend(`<p class="text-green-400">[${new Date().toLocaleTimeString()}] Intent executed successfully (demo mode)</p>`);
-        $("#statusLog").prepend(`<p class="text-gray-400">Tx simulation hash: 0x${Math.random().toString(16).slice(2,10)}...</p>`);
+        status.innerHTML += `<p class="text-green-400">[${new Date().toLocaleTimeString()}] Intent executed (demo mode)</p>`;
+        status.innerHTML += `<p class="text-gray-400">Simulated Tx: 0x${Math.random().toString(16).slice(2,10)}...</p>`;
 
-        // Add to history
-        $("#historyList").prepend(`
+        document.getElementById('historyList').innerHTML = `
           <div class="flex justify-between items-center py-2 border-b border-genesis-blue/10">
-            <span>${intent.slice(0,40)}${intent.length > 40 ? '...' : ''}</span>
+            <span>${intent.slice(0,50)}${intent.length > 50 ? '...' : ''}</span>
             <span class="text-green-400">Success • just now</span>
           </div>
-        `);
-      }, 1800);
-    });
-
-    // Theme toggle
-    $("#theme-toggle").click(() => {
-      document.body.classList.toggle('light-mode');
-      const icon = $("#theme-toggle i");
-      icon.toggleClass('fa-moon fa-sun');
-    });
+        ` + document.getElementById('historyList').innerHTML;
+      }, 2200);
+    };
 
     // Back to top
     const backTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      backTop.classList.toggle('show', window.scrollY > 400);
-    });
-    backTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 400));
+    backTop.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
   </script>
 </body>
 </html>
