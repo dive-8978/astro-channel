@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AstroBridge Pro | Cross-Chain Trading Demo</title>
-
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -23,32 +22,29 @@ tailwind.config = {
   }
 }
 </script>
-
 <!-- Font Awesome -->
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <!-- jQuery + DatePicker -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist/jquery-ui.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist/jquery-ui.min.js"></script>
-
 <!-- Ethers -->
 <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
-
 <style>
 body {background: radial-gradient(ellipse at bottom,#0d0f18 0%,#010205 100%); color:#fff;}
 .glass {background: rgba(255,255,255,0.05); backdrop-filter: blur(15px); border:1px solid rgba(255,255,255,0.1);}
 .animate-glow {animation: glow 3s infinite alternate;}
 @keyframes glow {from{box-shadow:0 0 12px #165DFF33;} to{box-shadow:0 0 22px #165DFF66;}}
+.price-flash {animation: flash 1s ease-out;}
+@keyframes flash {0%{opacity:0.3;} 50%{opacity:1;} 100%{opacity:0.3;}}
+.row-highlight {background:rgba(22,93,255,0.15) !important; transition:background 1.2s;}
 ::-webkit-scrollbar {width:6px; height:6px;}
 ::-webkit-scrollbar-thumb {background:rgba(255,255,255,0.2); border-radius:3px;}
 </style>
 </head>
 <body class="min-h-screen">
-
 <!-- NAV -->
 <nav class="glass px-6 py-4 flex justify-between items-center sticky top-0 z-50 shadow-lg">
   <div class="flex items-center gap-3">
@@ -67,10 +63,8 @@ body {background: radial-gradient(ellipse at bottom,#0d0f18 0%,#010205 100%); co
 
 <!-- MAIN GRID -->
 <main class="grid md:grid-cols-4 gap-6 p-6">
-
   <!-- LEFT: MARKET + KLINE -->
   <section class="md:col-span-2 space-y-4">
-
     <!-- Market Table -->
     <div class="glass p-4 rounded shadow-lg">
       <div class="flex justify-between items-center mb-3">
@@ -110,32 +104,26 @@ body {background: radial-gradient(ellipse at bottom,#0d0f18 0%,#010205 100%); co
           <input type="text" id="chartDate" class="bg-card border border-gray-700 text-sm px-3 py-1 rounded w-32">
         </div>
       </div>
-      <canvas id="kline"></canvas>
+      <canvas id="kline" height="320"></canvas>
     </div>
-
   </section>
 
   <!-- RIGHT: SWAP + TOP GAINERS + ORDER BOOK -->
   <section class="md:col-span-2 space-y-4">
-
     <!-- Swap Panel -->
     <div class="glass p-6 rounded shadow-lg space-y-4 animate-glow">
       <div class="text-xl font-bold text-astro">Swap</div>
-
       <div>
         <label class="text-gray-400 text-sm">From</label>
         <select id="swapFrom" class="w-full bg-card border border-gray-700 px-3 py-2 rounded"></select>
-        <input id="swapAmt" type="number" class="w-full mt-2 bg-card border border-gray-700 px-3 py-2 rounded" placeholder="0.00">
+        <input id="swapAmt" type="number" step="any" class="w-full mt-2 bg-card border border-gray-700 px-3 py-2 rounded" placeholder="0.00">
       </div>
-
       <div class="text-center text-xl text-astro">⇅</div>
-
       <div>
         <label class="text-gray-400 text-sm">To</label>
         <select id="swapTo" class="w-full bg-card border border-gray-700 px-3 py-2 rounded"></select>
         <input id="swapOut" readonly class="w-full mt-2 bg-card border border-gray-700 px-3 py-2 rounded" placeholder="0.00">
       </div>
-
       <div class="glass p-3 text-sm rounded">
         <div class="flex justify-between"><span>Route</span><span class="text-astro">Astro AI</span></div>
         <div class="flex justify-between"><span>Network Fee</span><span>~$0.25</span></div>
@@ -143,182 +131,268 @@ body {background: radial-gradient(ellipse at bottom,#0d0f18 0%,#010205 100%); co
         <div class="flex justify-between"><span>Funding Rate</span><span id="fundRate">0.03%</span></div>
         <div class="flex justify-between"><span>Slippage</span><span>0.2%</span></div>
       </div>
-
-      <button id="swapBtn" class="w-full bg-astro text-white py-3 rounded font-bold">Swap Now</button>
+      <button id="swapBtn" class="w-full bg-astro hover:bg-blue-700 text-white py-3 rounded font-bold transition">Swap Now</button>
     </div>
 
     <!-- Top Gainers -->
     <div class="glass p-4 rounded shadow-lg">
       <div class="text-lg font-bold text-astro mb-2">Top Gainers (24h)</div>
-      <canvas id="topGainers"></canvas>
+      <canvas id="topGainers" height="180"></canvas>
     </div>
 
     <!-- Order Book -->
     <div class="glass p-4 rounded shadow-lg">
       <div class="flex justify-between items-center mb-2 text-lg font-bold text-astro">Order Book</div>
-      <div class="grid grid-cols-2 gap-2 max-h-60 overflow-y-auto text-sm">
+      <div class="grid grid-cols-2 gap-2 max-h-60 overflow-y-auto text-sm font-mono">
         <div>
           <div class="text-gray-400 mb-1">Bids</div>
-          <div id="orderBids" class="space-y-1"></div>
+          <div id="orderBids" class="space-y-0.5"></div>
         </div>
         <div>
           <div class="text-gray-400 mb-1">Asks</div>
-          <div id="orderAsks" class="space-y-1"></div>
+          <div id="orderAsks" class="space-y-0.5"></div>
         </div>
       </div>
     </div>
-
   </section>
-
 </main>
 
 <!-- Wallet Modal -->
-<div id="walletModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center">
+<div id="walletModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
   <div class="glass p-6 rounded max-w-sm w-full">
     <div class="flex justify-between items-center mb-4">
       <div class="font-bold text-lg">Connect Wallet</div>
-      <button id="closeWallet"><i class="fas fa-times text-gray-400"></i></button>
+      <button id="closeWallet"><i class="fas fa-times text-gray-400 hover:text-white"></i></button>
     </div>
-    <button class="walletBtn w-full bg-card py-3 rounded mb-2">MetaMask</button>
-    <button class="walletBtn w-full bg-card py-3 rounded mb-2">Coinbase Wallet</button>
-    <button class="walletBtn w-full bg-card py-3 rounded mb-2">Trust Wallet</button>
-    <button class="walletBtn w-full bg-card py-3 rounded">Phantom</button>
+    <button class="walletBtn w-full bg-card hover:bg-gray-700 py-3 rounded mb-2 transition">MetaMask</button>
+    <button class="walletBtn w-full bg-card hover:bg-gray-700 py-3 rounded mb-2 transition">Coinbase Wallet</button>
+    <button class="walletBtn w-full bg-card hover:bg-gray-700 py-3 rounded mb-2 transition">Trust Wallet</button>
+    <button class="walletBtn w-full bg-card hover:bg-gray-700 py-3 rounded transition">Phantom</button>
   </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-const priceBook={},changeBook={},highBook={},lowBook={},volBook={};
-const symbols=[
+// 数据存储
+const priceBook = {}, changeBook = {}, highBook = {}, lowBook = {}, volBook = {};
+const symbols = [
   "BTCUSDT","ETHUSDT","BNBUSDT","SOLUSDT","XRPUSDT","ADAUSDT","DOGEUSDT","MATICUSDT","LINKUSDT","DOTUSDT",
   "LTCUSDT","AVAXUSDT","UNIUSDT","ALGOUSDT","FTMUSDT","ATOMUSDT","VETUSDT","TRXUSDT","ICPUSDT","MANAUSDT"
 ];
 
-// 初始化 swap / chart 下拉
-symbols.forEach(s=>{
-  const base=s.replace("USDT","");
-  priceBook[base]=0; changeBook[base]=0; highBook[base]=0; lowBook[base]=0; volBook[base]=0;
+// 初始化下拉菜单
+symbols.forEach(s => {
+  const base = s.replace("USDT", "");
+  priceBook[base] = 0; changeBook[base] = 0; highBook[base] = 0; lowBook[base] = 0; volBook[base] = 0;
   $("#swapFrom").append(`<option>${base}</option>`);
   $("#swapTo").append(`<option>${base}</option>`);
   $("#chartSymbol").append(`<option value="${s}">${base}</option>`);
 });
 
-// 市场表格
-symbols.forEach(s=>{
-  const base=s.replace("USDT","");
-  $("#marketTable tbody").append(`<tr id="row${base}">
-    <td class="p-2">${base}</td>
-    <td class="p-2 text-right" id="price${base}">--</td>
-    <td class="p-2 text-right" id="chg${base}">--</td>
-    <td class="p-2 text-right" id="high${base}">--</td>
-    <td class="p-2 text-right" id="low${base}">--</td>
-    <td class="p-2 text-right" id="vol${base}">--</td>
-  </tr>`);
+// 市场表格行
+symbols.forEach(s => {
+  const base = s.replace("USDT", "");
+  $("#marketTable tbody").append(`
+    <tr id="row${base}" class="hover:bg-gray-800/50 transition">
+      <td class="p-2">${base}</td>
+      <td class="p-2 text-right" id="price${base}">--</td>
+      <td class="p-2 text-right" id="chg${base}">--</td>
+      <td class="p-2 text-right" id="high${base}">--</td>
+      <td class="p-2 text-right" id="low${base}">--</td>
+      <td class="p-2 text-right" id="vol${base}">--</td>
+    </tr>`);
 });
 
-// 顶部行情
-symbols.forEach(s=>{
-  const base=s.replace("USDT","");
-  $("#topTicker").append(`<div class="flex gap-1"><strong>${base}</strong><span id="top${base}">--</span></div>`);
+// 顶部 ticker
+symbols.forEach(s => {
+  const base = s.replace("USDT", "");
+  $("#topTicker").append(`<div class="flex gap-1.5 items-center"><strong>${base}</strong><span id="top${base}" class="font-medium">--</span></div>`);
 });
 
-// WebSocket 实时更新 24h ticker
+// ====================== 实时价格 WebSocket ======================
 const ws = new WebSocket(`wss://stream.binance.com:9443/stream?streams=${symbols.map(s=>s.toLowerCase()+"@ticker_24hr").join("/")}`);
-ws.onmessage = evt=>{
-  const msg = JSON.parse(evt.data).data;
-  const sym = msg.s.replace("USDT","");
-  priceBook[sym]=parseFloat(msg.c);
-  changeBook[sym]=parseFloat(msg.P);
-  highBook[sym]=parseFloat(msg.h);
-  lowBook[sym]=parseFloat(msg.l);
-  volBook[sym]=parseFloat(msg.v);
 
-  $(`#price${sym}`).text("$"+priceBook[sym].toFixed(2));
-  $(`#chg${sym}`).text(changeBook[sym].toFixed(2)+"%").css("color",changeBook[sym]>=0?"#22c55e":"#ef4444");
-  $(`#high${sym}`).text("$"+highBook[sym].toFixed(2));
-  $(`#low${sym}`).text("$"+lowBook[sym].toFixed(2));
+ws.onmessage = evt => {
+  const msg = JSON.parse(evt.data);
+  if (!msg.data) return;
+  const data = msg.data;
+  const sym = data.s.replace("USDT", "");
+  
+  priceBook[sym] = parseFloat(data.c);
+  changeBook[sym] = parseFloat(data.P);
+  highBook[sym] = parseFloat(data.h);
+  lowBook[sym] = parseFloat(data.l);
+  volBook[sym] = parseFloat(data.v);
+
+  // 更新表格
+  $(`#price${sym}`).text("$" + priceBook[sym].toFixed(2)).addClass('price-flash');
+  setTimeout(() => $(`#price${sym}`).removeClass('price-flash'), 1200);
+
+  $(`#chg${sym}`).text(changeBook[sym].toFixed(2) + "%")
+    .css("color", changeBook[sym] >= 0 ? "#22c55e" : "#ef4444");
+
+  $(`#high${sym}`).text("$" + highBook[sym].toFixed(2));
+  $(`#low${sym}`).text("$" + lowBook[sym].toFixed(2));
   $(`#vol${sym}`).text(parseFloat(volBook[sym]).toLocaleString());
-  $(`#top${sym}`).text("$"+priceBook[sym].toFixed(2));
+
+  // 顶部 ticker
+  $(`#top${sym}`).text("$" + priceBook[sym].toFixed(2))
+    .css("color", changeBook[sym] >= 0 ? "#22c55e" : "#ef4444");
+
+  // 行高亮
+  $(`#row${sym}`).addClass('row-highlight');
+  setTimeout(() => $(`#row${sym}`).removeClass('row-highlight'), 1800);
 };
 
-// Swap 实时计算
-$("#swapAmt").on("input",()=>{
-  const from=$("#swapFrom").val(),to=$("#swapTo").val();
-  if(priceBook[from]&&priceBook[to]){
-    $("#swapOut").val( ($("#swapAmt").val()*priceBook[from]/priceBook[to]).toFixed(6) );
+// ====================== Swap 计算 ======================
+$("#swapAmt").on("input", () => {
+  const from = $("#swapFrom").val();
+  const to = $("#swapTo").val();
+  const amt = parseFloat($("#swapAmt").val()) || 0;
+  if (priceBook[from] && priceBook[to] && amt > 0) {
+    const out = (amt * priceBook[from] / priceBook[to]).toFixed(6);
+    $("#swapOut").val(out);
+  } else {
+    $("#swapOut").val("0.00");
   }
 });
 
-// Kline chart
-const kChart=new Chart($("#kline"),{
-  type:'line',
-  data:{labels:[],datasets:[{data:[], borderColor:'#165DFF', tension:0.3, fill:true, backgroundColor:'rgba(22,93,255,0.1)'}]},
-  options:{scales:{x:{display:false}}}
+// ====================== 实时 K线 ======================
+let kChart;
+let klineWs = null;
+let lastKlineTime = 0;
+
+const ctx = document.getElementById('kline').getContext('2d');
+kChart = new Chart(ctx, {
+  type: 'candlestick',  // 如果想用蜡烛图；这里先用 line 更稳定
+  data: { labels: [], datasets: [{ label: 'Close', data: [], borderColor: '#165DFF', tension: 0.2, fill: true, backgroundColor: 'rgba(22,93,255,0.08)' }] },
+  options: {
+    responsive: true,
+    scales: { x: { display: false }, y: { ticks: { color: '#aaa' } } },
+    plugins: { legend: { display: false } }
+  }
 });
-function loadKline(){
-  const symbol=$("#chartSymbol").val();
-  const date=$("#chartDate").val();
-  if(!date) return;
-  const st=new Date(date).getTime();
-  axios.get("https://api.binance.com/api/v3/klines",{params:{symbol,interval:$("#marketInterval").val(),startTime:st,limit:24}})
-  .then(res=>{
-    kChart.data.labels=res.data.map(d=>new Date(d[0]).getHours()+"h");
-    kChart.data.datasets[0].data=res.data.map(d=>parseFloat(d[4]));
+
+function startKlineWs() {
+  if (klineWs) klineWs.close();
+  const symbol = $("#chartSymbol").val();
+  const interval = $("#marketInterval").val();
+  klineWs = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@kline_${interval}`);
+
+  klineWs.onmessage = evt => {
+    const msg = JSON.parse(evt.data);
+    if (!msg.k) return;
+    const k = msg.k;
+    if (!k.x) return; // 只处理已关闭的 K 线（更稳定）
+
+    const timeStr = new Date(k.t).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+    const close = parseFloat(k.c);
+
+    if (k.t > lastKlineTime) {
+      kChart.data.labels.push(timeStr);
+      kChart.data.datasets[0].data.push(close);
+      lastKlineTime = k.t;
+
+      if (kChart.data.labels.length > 80) {
+        kChart.data.labels.shift();
+        kChart.data.datasets[0].data.shift();
+      }
+      kChart.update('none');
+    }
+  };
+}
+
+// 加载历史 K线（初始化或切换时）
+function loadHistoryKline() {
+  const symbol = $("#chartSymbol").val();
+  const interval = $("#marketInterval").val();
+  axios.get("https://api.binance.com/api/v3/klines", {
+    params: { symbol, interval, limit: 80 }
+  }).then(res => {
+    const data = res.data;
+    kChart.data.labels = data.map(d => new Date(d[0]).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}));
+    kChart.data.datasets[0].data = data.map(d => parseFloat(d[4])); // close price
     kChart.update();
+    lastKlineTime = data[data.length-1][0];
   });
 }
-$("#chartDate").datepicker({dateFormat:"yy-mm-dd",onSelect:loadKline});
-$("#chartSymbol").change(loadKline);
-$("#marketInterval").change(loadKline);
-$("#chartDate").val(new Date().toISOString().split('T')[0]);
-loadKline();
 
-// Top Gainers Chart
-const gainCtx=$("#topGainers");
-const gainChart=new Chart(gainCtx,{
-  type:'bar',
-  data:{labels:[],datasets:[{label:'24h %',data:[],backgroundColor:'#22c55e'}]},
-  options:{indexAxis:'y',scales:{x:{beginAtZero:true}}}
+$("#chartSymbol").change(() => { startKlineWs(); loadHistoryKline(); });
+$("#marketInterval").change(() => { startKlineWs(); loadHistoryKline(); });
+
+// 初始化
+$("#chartDate").val(new Date().toISOString().split('T')[0]);
+startKlineWs();
+loadHistoryKline();
+
+// ====================== Top Gainers ======================
+const gainCtx = document.getElementById('topGainers').getContext('2d');
+const gainChart = new Chart(gainCtx, {
+  type: 'bar',
+  data: { labels: [], datasets: [{ label: '24h %', data: [], backgroundColor: '#22c55e' }] },
+  options: {
+    indexAxis: 'y',
+    scales: { x: { beginAtZero: true, ticks: { color: '#aaa' } } },
+    plugins: { legend: { display: false } }
+  }
 });
-function updateTopGainers(){
-  const top=symbols.map(s=>{
-    const base=s.replace("USDT","");
-    return {base,chg:changeBook[base]||0};
-  }).sort((a,b)=>b.chg-a.chg).slice(0,5);
-  gainChart.data.labels=top.map(x=>x.base);
-  gainChart.data.datasets[0].data=top.map(x=>x.chg);
+
+function updateTopGainers() {
+  const top = symbols.map(s => {
+    const base = s.replace("USDT","");
+    return { base, chg: changeBook[base] || 0 };
+  }).sort((a,b) => b.chg - a.chg).slice(0,6);
+
+  gainChart.data.labels = top.map(x => x.base + (top.indexOf(x)<3 ? ' 🚀' : ''));
+  gainChart.data.datasets[0].data = top.map(x => x.chg);
   gainChart.update();
 }
-setInterval(updateTopGainers,5000);
+setInterval(updateTopGainers, 4000);
+updateTopGainers();
 
-// Wallet
-$("#connectBtn").click(()=>$("#walletModal").removeClass("hidden"));
-$("#closeWallet").click(()=>$("#walletModal").addClass("hidden"));
-$(".walletBtn").click(async ()=>{
-  if(!window.ethereum) return alert("Install MetaMask");
-  const provider=new ethers.BrowserProvider(window.ethereum);
-  await provider.send("eth_requestAccounts",[]);
-  const signer = await provider.getSigner();
-  const addr = await signer.getAddress();
-  $("#connectBtn").text(addr.slice(0,6)+"..."+addr.slice(-4));
-  $("#walletModal").addClass("hidden");
-});
+// ====================== Order Book (跟随价格) ======================
+function updateOrderBook() {
+  const sym = $("#chartSymbol").val().replace("USDT","");
+  const midPrice = priceBook[sym] || 50000;
 
-// Swap button demo
-$("#swapBtn").click(()=>alert("Swap executed!"));
+  const bids = [], asks = [];
+  for (let i = 0; i < 10; i++) {
+    const offset = (Math.random() - 0.5) * 0.0015;
+    const depth = (10 - i) * 0.4 + Math.random() * 0.6;
 
-// Fake Order Book demo
-function updateOrderBook(){
-  const bids=[],asks=[];
-  for(let i=0;i<10;i++){
-    const p=(100+Math.random()*10).toFixed(2),q=(Math.random()*5).toFixed(3);
-    bids.push(`<div class="flex justify-between"><span class="text-green-400">${p}</span><span>${q}</span></div>`);
-    asks.push(`<div class="flex justify-between"><span class="text-red-400">${(p*1.01).toFixed(2)}</span><span>${q}</span></div>`);
+    const bidPrice = (midPrice * (1 - 0.0008 * (i + 1) + offset)).toFixed(2);
+    bids.push(`<div class="flex justify-between"><span class="text-green-400">${bidPrice}</span><span>${depth.toFixed(3)}</span></div>`);
+
+    const askPrice = (midPrice * (1 + 0.0008 * (i + 1) + offset)).toFixed(2);
+    asks.push(`<div class="flex justify-between"><span class="text-red-400">${askPrice}</span><span>${depth.toFixed(3)}</span></div>`);
   }
-  $("#orderBids").html(bids.join(""));
+  $("#orderBids").html(bids.reverse().join("")); // bids 从高到低
   $("#orderAsks").html(asks.join(""));
 }
-setInterval(updateOrderBook,2000);
+setInterval(updateOrderBook, 1500);
+updateOrderBook();
+
+// ====================== Wallet 连接 ======================
+$("#connectBtn").click(() => $("#walletModal").removeClass("hidden"));
+$("#closeWallet").click(() => $("#walletModal").addClass("hidden"));
+$(".walletBtn").click(async () => {
+  if (!window.ethereum) return alert("Please install MetaMask or compatible wallet");
+  try {
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
+    const signer = await provider.getSigner();
+    const addr = await signer.getAddress();
+    $("#connectBtn").html(`<i class="fas fa-circle text-green-500 mr-1 text-xs"></i>${addr.slice(0,6)}...${addr.slice(-4)}`);
+    $("#walletModal").addClass("hidden");
+  } catch(e) {
+    alert("Connection failed: " + e.message);
+  }
+});
+
+// Swap 按钮 demo
+$("#swapBtn").click(() => {
+  alert("Swap executed successfully! (Demo mode)");
+});
 </script>
 </body>
 </html>
