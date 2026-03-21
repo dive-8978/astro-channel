@@ -11,11 +11,11 @@
       theme: {
         extend: {
           colors: {
-            'genesis-blue': '#00f0ff',
-            'genesis-purple': '#8b00ff',
-            'void-black': '#000814',
-            'star-gold': '#ffd700',
-            'nebula-teal': '#00fff5',
+            'genesis-blue': '#40c4ff',
+            'genesis-purple': '#7c4dff',
+            'void-black': '#02040f',
+            'star-gold': '#ffd54f',
+            'nebula-teal': '#26c6da',
           },
           fontFamily: {
             'orbitron': ['Orbitron', 'sans-serif'],
@@ -28,7 +28,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -38,77 +38,79 @@
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
 
   <style>
-    body {
-      background: linear-gradient(to bottom, #000814, #0a001f);
-      background-image: url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #e0f7ff;
-      font-family: 'Exo 2', sans-serif;
-      overflow-x: hidden;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
+    :root {
+      --bg-dark: #02040f;
+      --glow-blue: rgba(64, 196, 255, 0.6);
+      --glow-purple: rgba(124, 77, 255, 0.5);
     }
 
-    /* 星云背景动画层 - 多层渐变云团缓慢流动 */
-    .nebula-clouds {
+    body {
+      background: var(--bg-dark);
+      background-image: url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+      color: #e3f2fd;
+      font-family: 'Exo 2', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* 柔和星云流动 - 更干净版 */
+    .nebula-flow {
       position: fixed;
       inset: 0;
       z-index: -3;
       pointer-events: none;
       background: 
-        radial-gradient(circle at 25% 35%, rgba(139, 92, 246, 0.28) 10%, transparent 50%),
-        radial-gradient(circle at 75% 55%, rgba(34, 211, 238, 0.25) 15%, transparent 55%),
-        radial-gradient(circle at 45% 85%, rgba(249, 115, 22, 0.18) 8%, transparent 50%),
-        radial-gradient(circle at 90% 20%, rgba(168, 85, 247, 0.22) 12%, transparent 60%);
-      background-size: 180% 180%, 220% 220%, 160% 160%, 200% 200%;
-      background-position: 0% 0%, 30% 70%, 80% 20%, 50% 90%;
-      animation: 
-        nebula1 280s ease-in-out infinite,
-        nebula2 340s ease-in-out infinite reverse,
-        nebula3 420s ease-in-out infinite;
-      filter: blur(45px) brightness(1.15);
+        radial-gradient(ellipse at 40% 30%, rgba(124,77,255,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse at 15% 80%, rgba(103,58,183,0.12) 0%, transparent 70%);
+      background-size: 220% 220%;
+      animation: nebula-flow 420s ease-in-out infinite;
       mix-blend-mode: screen;
-      opacity: 0.6;
+      opacity: 0.55;
+      filter: blur(50px) brightness(0.95);
     }
 
-    @keyframes nebula1 { 0%,100% { background-position: 0% 0%;   } 50% { background-position: 120% 120%; } }
-    @keyframes nebula2 { 0%,100% { background-position: 30% 70%; } 50% { background-position: -60% -40%; } }
-    @keyframes nebula3 { 0%,100% { background-position: 80% 20%; } 50% { background-position: 160% 110%; } }
+    @keyframes nebula-flow {
+      0%   { background-position: 0% 0%; }
+      50%  { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
 
-    /* 星尘容器 + 层 */
+    /* 精简星尘 - 少而精 */
     .stars-container {
       position: fixed;
       inset: 0;
-      pointer-events: none;
       z-index: -2;
+      pointer-events: none;
     }
 
-    .stars-layer {
-      position: absolute;
-      inset: 0;
-      background: transparent;
-    }
+    .stars-layer { position: absolute; inset: 0; }
+    #stars-far  { box-shadow:  /* 手动少量或用 JS 生成 */ ; opacity: 0.5; animation: drift 300s linear infinite; }
+    #stars-mid  { opacity: 0.7; animation: drift 200s linear infinite reverse; }
+    #stars-near { opacity: 0.85; animation: drift 140s linear infinite; }
 
-    /* 彗星层 */
+    @keyframes drift { 0% { transform: translate(0,0); } 100% { transform: translate(-5vw, -8vh); } }
+
+    /* 彗星 - 更稀疏、更优雅 */
     .comets-layer {
       position: fixed;
       inset: 0;
-      pointer-events: none;
       z-index: -1;
-      overflow: hidden;
+      pointer-events: none;
     }
 
     .comet {
       position: absolute;
-      width: 3px;
-      height: 3px;
-      background: radial-gradient(circle at 30% 30%, #fff, #a5f3ff 40%, transparent 70%);
+      width: 2.5px;
+      height: 2.5px;
+      background: #fff;
       border-radius: 50%;
-      box-shadow: 0 0 12px 4px #a5f3ff, 0 0 30px 10px #60a5fa;
+      box-shadow: 0 0 15px 6px var(--glow-blue);
       opacity: 0;
     }
 
@@ -117,174 +119,219 @@
       position: absolute;
       top: 50%;
       left: 100%;
-      height: 2.5px;
-      background: linear-gradient(to right, #a5f3ff, #60a5fa, transparent);
+      width: var(--tail, 160px);
+      height: 1.8px;
+      background: linear-gradient(to right, var(--glow-blue), transparent);
       transform: translateY(-50%);
-      opacity: 0.75;
-      filter: blur(1.8px);
-      width: var(--tail, 140px);
+      filter: blur(2px);
     }
 
-    @keyframes comet-move {
+    @keyframes comet-fly {
       0%   { transform: translate(0,0) rotate(var(--angle)); opacity: 0; }
-      10%  { opacity: 1; }
-      100% { transform: translate(180vw, 120vh) rotate(var(--angle)); opacity: 0; }
+      8%   { opacity: 0.9; }
+      100% { transform: translate(160vw, 100vh) rotate(var(--angle)); opacity: 0; }
     }
 
-    /* 玻璃面板 & neon 效果 */
+    /* UI 优化 */
     .glass-panel {
-      background: rgba(10, 15, 40, 0.38);
-      backdrop-filter: blur(18px) saturate(190%);
-      border: 1px solid rgba(0, 240, 255, 0.22);
-      box-shadow: 0 10px 40px rgba(0, 240, 255, 0.15);
-      border-radius: 1.2rem;
-      transition: all 0.4s ease;
+      background: rgba(8, 15, 40, 0.32);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(64,196,255,0.25);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6), inset 0 0 20px rgba(64,196,255,0.08);
+      border-radius: 1.25rem;
+      transition: all 0.5s ease;
     }
 
     .glass-panel:hover {
-      border-color: rgba(0, 240, 255, 0.45);
-      box-shadow: 0 15px 50px rgba(0, 240, 255, 0.25);
+      border-color: rgba(64,196,255,0.5);
+      box-shadow: 0 12px 48px rgba(64,196,255,0.3);
     }
 
     .neon-text {
-      text-shadow: 0 0 12px #00f0ff, 0 0 24px #00f0ff, 0 0 48px #8b00ff;
+      text-shadow: 0 0 10px var(--glow-blue), 0 0 20px var(--glow-purple);
     }
 
     .btn-neon {
-      background: linear-gradient(45deg, #00f0ff, #8b00ff);
-      border: none;
-      box-shadow: 0 0 24px rgba(0,240,255,0.6);
-      transition: all 0.35s;
+      background: linear-gradient(135deg, #40c4ff, #7c4dff);
+      box-shadow: 0 0 20px rgba(64,196,255,0.5);
+      transition: all 0.4s;
     }
 
     .btn-neon:hover {
-      box-shadow: 0 0 48px rgba(0,240,255,0.9), 0 0 70px rgba(139,0,255,0.7);
-      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 35px rgba(64,196,255,0.8), 0 0 60px rgba(124,77,255,0.6);
+      transform: scale(1.04);
     }
 
-    .price-flash { animation: neon-flash 1.3s ease-out; }
-    @keyframes neon-flash {
-      0%,100% { text-shadow: 0 0 10px #00f0ff; }
-      50%  { text-shadow: 0 0 25px #00f0ff, 0 0 50px #00f0ff; }
+    /* 主题切换 */
+    body.dark { --bg-dark: #000; filter: brightness(0.9); }
+    body.light { background: linear-gradient(#0a192f, #001233); color: #e3f2fd; }
+
+    /* 返回顶部 */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      background: rgba(64,196,255,0.3);
+      backdrop-filter: blur(10px);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: all 0.4s;
+      cursor: pointer;
     }
 
-    .row-highlight { background: rgba(0,240,255,0.15) !important; transition: background 1.5s; }
+    #back-to-top.show { opacity: 1; }
   </style>
 </head>
-<body class="min-h-screen relative">
+<body class="dark">
 
-  <!-- 星云动画层 -->
-  <div class="nebula-clouds"></div>
-
-  <!-- 星尘层 -->
+  <div class="nebula-flow"></div>
   <div class="stars-container">
     <div class="stars-layer" id="stars-far"></div>
     <div class="stars-layer" id="stars-mid"></div>
     <div class="stars-layer" id="stars-near"></div>
   </div>
-
-  <!-- 彗星层 -->
   <div class="comets-layer"></div>
 
   <!-- NAV -->
-  <nav class="glass-panel px-8 py-5 flex justify-between items-center sticky top-0 z-50 backdrop-blur-xl border-b border-genesis-blue/30">
-    <div class="flex items-center gap-4">
-      <h1 class="text-4xl font-orbitron font-bold neon-text tracking-wider">ASTROBRIDGE</h1>
-      <span class="text-xs px-3 py-1 bg-genesis-purple/20 rounded-full border border-genesis-purple/40">GENESIS TERMINAL</span>
+  <nav class="glass-panel px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20">
+    <div class="flex items-center gap-5">
+      <a href="#" id="home-btn" class="text-3xl text-genesis-blue hover:text-white transition"><i class="fas fa-home"></i></a>
+      <h1 class="text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
     </div>
-    <button id="connectBtn" class="btn-neon text-white px-6 py-3 rounded-full font-semibold text-sm uppercase tracking-wider">
-      <i class="fas fa-satellite-dish mr-2"></i> LINK NEURAL WALLET
-    </button>
+    <div class="flex items-center gap-4">
+      <button id="theme-toggle" class="text-xl text-genesis-blue hover:text-white"><i class="fas fa-moon"></i></button>
+      <button id="connectBtn" class="btn-neon px-6 py-2.5 rounded-full text-sm font-medium uppercase tracking-wide">
+        <i class="fas fa-wallet mr-2"></i> Connect Wallet
+      </button>
+    </div>
   </nav>
 
-  <!-- TOP TICKER -->
-  <div class="bg-void-black/70 border-b border-genesis-blue/20 py-3 px-8 overflow-x-auto whitespace-nowrap text-sm font-medium backdrop-blur-md">
-    <div id="topTicker" class="flex gap-10"></div>
-  </div>
-
-  <!-- MAIN CONTENT (你的原有网格布局保持不变，这里简化为占位，实际可粘贴完整内容) -->
-  <main class="grid md:grid-cols-4 gap-6 p-8 max-w-[1800px] mx-auto relative z-10">
-    <!-- 左侧 Markets + Chart -->
-    <section class="md:col-span-2 space-y-6">
-      <div class="glass-panel p-6">
-        <h2 class="text-2xl font-orbitron neon-text mb-4">Market Pulse</h2>
-        <!-- 你的市场表格代码放这里 -->
-        <p class="text-center opacity-70">实时行情数据区域（原有逻辑）</p>
-      </div>
-      <div class="glass-panel p-6">
-        <h2 class="text-xl font-orbitron neon-text mb-4">Quantum K-Line</h2>
-        <canvas id="kline" height="340"></canvas>
-      </div>
-    </section>
-
-    <!-- 右侧 Swap 等 -->
-    <section class="md:col-span-2 space-y-6">
-      <div class="glass-panel p-8">
-        <h2 class="text-2xl font-orbitron neon-text mb-6">Cross-Dimensional Swap</h2>
-        <!-- 你的 Swap 面板代码放这里 -->
-        <button id="swapBtn" class="btn-neon w-full py-4 rounded-xl text-lg font-bold uppercase tracking-widest mt-6">EXECUTE SWAP</button>
-      </div>
-      <!-- Top Gainers + Order Book 类似放这里 -->
-    </section>
+  <!-- 主内容区域（占位，你可以替换成完整的市场/K线/Swap 等） -->
+  <main class="p-8 max-w-7xl mx-auto relative z-10">
+    <div class="glass-panel p-8 mb-8">
+      <h2 class="text-3xl font-orbitron neon-text mb-6">Genesis Trading Interface</h2>
+      <p class="opacity-80">实时跨链交易终端 • 连接钱包后解锁完整功能</p>
+      <!-- 这里放你的 Swap、Market Table、Chart 等 -->
+      <button class="btn-neon mt-6 px-8 py-3 rounded-lg">Explore Markets</button>
+    </div>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Wallet Modal -->
+  <div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50">
+    <div class="glass-panel p-10 rounded-2xl max-w-md w-full border border-genesis-blue/40">
+      <div class="flex justify-between items-center mb-8">
+        <h3 class="text-2xl font-orbitron neon-text">Neural Vault Connection</h3>
+        <button id="closeWallet" class="text-2xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
+      </div>
+      <button class="w-full glass-panel py-4 mb-4 text-left px-6 rounded-xl hover:bg-genesis-blue/10 transition">MetaMask</button>
+      <button class="w-full glass-panel py-4 mb-4 text-left px-6 rounded-xl hover:bg-genesis-blue/10 transition">WalletConnect</button>
+      <button class="w-full glass-panel py-4 text-left px-6 rounded-xl hover:bg-genesis-blue/10 transition">Coinbase Wallet</button>
+    </div>
+  </div>
+
+  <!-- 回到顶部按钮 -->
+  <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- Footer -->
+  <footer class="glass-panel mt-20 py-6 text-center text-sm opacity-70 border-t border-genesis-blue/20">
+    © 2026 AstroBridge • Powered by Cosmic Intelligence • San Jose, CA
+  </footer>
+
   <script>
-    // 生成随机星尘粒子
-    function generateStars(layerId, count, sizeMin, sizeMax, opacity) {
-      let shadows = [];
-      for (let i = 0; i < count; i++) {
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
-        const size = Math.random() * (sizeMax - sizeMin) + sizeMin;
-        shadows.push(`${x}vw ${y}vh ${size}px #ffffff`);
+    // 星尘生成（少量精致）
+    function generateStars(id, count, min, max, op) {
+      let s = [];
+      for(let i=0; i<count; i++){
+        let x = Math.random()*100, y=Math.random()*100, sz = Math.random()*(max-min)+min;
+        s.push(`${x}vw ${y}vh ${sz}px #e3f2fd`);
       }
-      document.getElementById(layerId).style.boxShadow = shadows.join(', ');
-      document.getElementById(layerId).style.opacity = opacity;
+      document.getElementById(id).style.boxShadow = s.join(',');
+      document.getElementById(id).style.opacity = op;
     }
+    generateStars('stars-far', 80, 0.5, 1.2, 0.45);
+    generateStars('stars-mid', 40, 1.0, 1.8, 0.65);
+    generateStars('stars-near', 12, 1.5, 3.0, 0.8);
 
-    generateStars('stars-far',  140, 0.6, 1.3, 0.55);
-    generateStars('stars-mid',   70, 1.1, 2.2, 0.75);
-    generateStars('stars-near',  25, 2.0, 4.0, 0.88);
+    // 彗星 - 更慢更少
+    function createComet(){
+      const c = document.createElement('div');
+      c.className = 'comet';
+      const x = Math.random()*-40-20, y = Math.random()*60-30;
+      const ang = Math.random()*50 + 25;
+      const dur = Math.random()*12 + 10;
+      const tail = Math.random()*180 + 120;
+      const del = Math.random()*8;
 
-    // 随机彗星生成
-    function createComet() {
-      const comet = document.createElement('div');
-      comet.className = 'comet';
+      c.style.left = x+'vw';
+      c.style.top = y+'vh';
+      c.style.setProperty('--angle', ang+'deg');
+      c.style.setProperty('--tail', tail+'px');
+      c.style.animation = `comet-fly ${dur}s linear ${del}s forwards`;
 
-      const startX = Math.random() * -30 - 10;
-      const startY = Math.random() * 50 - 20;
-      const angle = Math.random() * 70 + 15;
-      const duration = Math.random() * 9 + 7;
-      const tail = Math.random() * 200 + 100;
-      const delay = Math.random() * 6;
-
-      comet.style.left = `${startX}vw`;
-      comet.style.top = `${startY}vh`;
-      comet.style.setProperty('--angle', `${angle}deg`);
-      comet.style.setProperty('--tail', `${tail}px`);
-      comet.style.animation = `comet-move ${duration}s linear ${delay}s forwards`;
-
-      document.querySelector('.comets-layer').appendChild(comet);
-
-      setTimeout(() => comet.remove(), (duration + delay + 2) * 1000);
+      document.querySelector('.comets-layer').appendChild(c);
+      setTimeout(()=>c.remove(), (dur+del+2)*1000);
     }
+    setInterval(createComet, 8000 + Math.random()*12000);
+    for(let i=0;i<2;i++) setTimeout(createComet, i*6000);
 
-    // 每隔一段时间生成一颗彗星
-    setInterval(createComet, 2200 + Math.random() * 2800);
+    // 钱包连接示例（模拟）
+    let connected = false;
+    let address = '';
 
-    // 页面加载时先放几颗
-    for (let i = 0; i < 4; i++) {
-      setTimeout(createComet, i * 1200);
-    }
+    $("#connectBtn").click(async () => {
+      if(connected){
+        if(confirm("Disconnect wallet?")) {
+          connected = false;
+          address = '';
+          $("#connectBtn").html('<i class="fas fa-wallet mr-2"></i> Connect Wallet');
+        }
+        return;
+      }
 
-    // 你的原有脚本逻辑（WebSocket、Chart、Swap 等）放在这里
-    // 示例占位：
-    $("#swapBtn").click(() => {
-      alert("Quantum Swap Executed in the Nebula... (Demo)");
+      $("#walletModal").removeClass("hidden");
     });
 
-    // ... 粘贴你之前的 Binance 数据、K线、Wallet 等完整脚本 ...
+    $("#closeWallet").click(() => $("#walletModal").addClass("hidden"));
+
+    // 模拟连接成功
+    $(".glass-panel button").click(() => {
+      address = '0x' + 'a'.repeat(40); // 模拟地址
+      $("#connectBtn").html(`<i class="fas fa-circle text-green-400 mr-2 text-xs"></i>${address.slice(0,6)}...${address.slice(-4)}`);
+      $("#walletModal").addClass("hidden");
+      connected = true;
+      alert("Wallet linked successfully!");
+    });
+
+    // 返回主页 / 滚动顶部
+    $("#home-btn").click(e => {
+      e.preventDefault();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+
+    // 回到顶部按钮
+    const backTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 400) backTop.classList.add('show');
+      else backTop.classList.remove('show');
+    });
+    backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+    // 主题切换
+    $("#theme-toggle").click(() => {
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
+      const icon = $("#theme-toggle i");
+      icon.toggleClass('fa-moon fa-sun');
+    });
+
+    // 你的其他逻辑（如 Binance WS、Chart 等）放这里
   </script>
 </body>
 </html>
