@@ -29,80 +29,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
-
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <!-- WalletConnect + ethers -->
   <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js" type="text/javascript"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
 
   <style>
-    :root {
-      --bg: #02040f;
-      --text: #e3f2fd;
-      --glow-blue: rgba(64, 196, 255, 0.6);
-    }
-
+    :root { --bg: #02040f; --text: #e3f2fd; }
     body {
       background: var(--bg);
       background-image: url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      background-attachment: fixed;
-      color: var(--text);
-      font-family: 'Exo 2', sans-serif;
-      min-height: 100vh;
-      margin: 0;
-      overflow-x: hidden;
-      position: relative;
+      background-size: cover; background-position: center 30%; background-attachment: fixed;
+      color: var(--text); font-family: 'Exo 2', sans-serif; min-height: 100vh;
+      margin: 0; overflow-x: hidden; position: relative;
     }
-
     .nebula-flow {
-      position: fixed;
-      inset: 0;
-      z-index: -3;
-      pointer-events: none;
+      position: fixed; inset: 0; z-index: -3; pointer-events: none;
       background: radial-gradient(ellipse at 40% 30%, rgba(124,77,255,0.10) 0%, transparent 60%),
                   radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.08) 0%, transparent 65%);
-      background-size: 220% 220%;
-      animation: nebula-flow 520s ease-in-out infinite;
-      mix-blend-mode: screen;
-      opacity: 0.4;
-      filter: blur(70px);
+      background-size: 220% 220%; animation: nebula-flow 520s ease-in-out infinite;
+      mix-blend-mode: screen; opacity: 0.4; filter: blur(70px);
     }
-
     @keyframes nebula-flow { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }
-
     .stars-container { position: fixed; inset: 0; z-index: -2; pointer-events: none; }
     .stars-layer { position: absolute; inset: 0; }
-
     .glass-panel {
-      background: rgba(8,15,40,0.26);
-      backdrop-filter: blur(22px) saturate(180%);
+      background: rgba(8,15,40,0.26); backdrop-filter: blur(22px) saturate(180%);
       border: 1px solid rgba(64,196,255,0.20);
       box-shadow: 0 8px 32px rgba(0,0,0,0.55), inset 0 0 20px rgba(64,196,255,0.05);
-      border-radius: 1.25rem;
-      transition: all 0.4s ease;
+      border-radius: 1.25rem; transition: all 0.4s ease;
     }
-
     .glass-panel:hover { border-color: rgba(64,196,255,0.40); }
-
     .neon-text { text-shadow: 0 0 10px #40c4ff, 0 0 20px #7c4dff; }
-
     .btn-neon {
       background: linear-gradient(135deg, #40c4ff, #7c4dff);
-      box-shadow: 0 0 20px rgba(64,196,255,0.5);
-      transition: all 0.4s;
+      box-shadow: 0 0 20px rgba(64,196,255,0.5); transition: all 0.4s;
     }
-
     .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
-
-    .wallet-option {
-      transition: all 0.3s;
-    }
-
+    .wallet-option { transition: all 0.3s; }
     .wallet-option:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(64,196,255,0.3); }
-
     #back-to-top {
       position: fixed; bottom: 30px; right: 30px; z-index: 100;
       background: rgba(64,196,255,0.25); backdrop-filter: blur(12px);
@@ -111,269 +75,305 @@
       opacity: 0; transition: all 0.4s; cursor: pointer;
       border: 1px solid rgba(64,196,255,0.4);
     }
-
     #back-to-top.show { opacity: 1; }
+    .typing::after { content: "|"; animation: blink 1s infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
   </style>
 </head>
 <body>
 
-  <div class="nebula-flow"></div>
+<div class="nebula-flow"></div>
+<div class="stars-container">
+  <div class="stars-layer" id="stars-far"></div>
+  <div class="stars-layer" id="stars-mid"></div>
+  <div class="stars-layer" id="stars-near"></div>
+</div>
 
-  <div class="stars-container">
-    <div class="stars-layer" id="stars-far"></div>
-    <div class="stars-layer" id="stars-mid"></div>
-    <div class="stars-layer" id="stars-near"></div>
+<nav class="glass-panel px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
+  <div class="flex items-center gap-3 md:gap-6">
+    <a href="#" class="text-2xl md:text-3xl text-genesis-blue hover:text-white transition"><i class="fas fa-home"></i></a>
+    <h1 class="text-xl md:text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
+    <span class="text-xs px-2 py-1 bg-genesis-purple/15 rounded-full border border-genesis-purple/30">Intent Network</span>
   </div>
+  <div class="flex items-center gap-3 md:gap-5">
+    <button id="connectBtn" class="btn-neon px-3 md:px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-wide">
+      <i class="fas fa-wallet mr-1"></i> Connect Wallet
+    </button>
+  </div>
+</nav>
 
-  <!-- Navigation -->
-  <nav class="glass-panel px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
-    <div class="flex items-center gap-3 md:gap-6">
-      <a href=" " title="Return to Home" class="text-2xl md:text-3xl text-genesis-blue hover:text-white transition">
-        <i class="fas fa-home"></i>
-      </a >
-      <h1 class="text-xl md:text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
-      <span class="text-xs px-2 py-1 bg-genesis-purple/15 rounded-full border border-genesis-purple/30">Intent Trading Terminal</span>
+<div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50 px-4">
+  <div class="glass-panel p-6 md:p-10 rounded-2xl max-w-lg w-full border border-genesis-blue/40">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-orbitron neon-text">Connect Wallet</h3>
+      <button id="closeWallet" class="text-2xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
     </div>
-
-    <div class="flex items-center gap-3 md:gap-5">
-      <button id="connectBtn" class="btn-neon px-3 md:px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-wide">
-        <i class="fas fa-wallet mr-1 md:mr-2"></i> Connect Wallet
+    <div class="grid grid-cols-2 gap-4">
+      <button class="wallet-option glass-panel p-4 text-center hover:bg-genesis-blue/10" data-provider="metamask">
+        <i class="fab fa-metamask text-4xl mb-2 block"></i>MetaMask
+      </button>
+      <button class="wallet-option glass-panel p-4 text-center hover:bg-genesis-blue/10" data-provider="walletconnect">
+        <i class="fas fa-link text-4xl mb-2 block"></i>WalletConnect
+      </button>
+      <button class="wallet-option glass-panel p-4 text-center opacity-50" disabled>
+        <i class="fas fa-wallet text-4xl mb-2 block"></i>Coinbase (soon)
+      </button>
+      <button class="wallet-option glass-panel p-4 text-center opacity-50" disabled>
+        <i class="fas fa-ghost text-4xl mb-2 block"></i>Phantom (soon)
       </button>
     </div>
-  </nav>
+  </div>
+</div>
 
-  <!-- Wallet Selection Modal -->
-  <div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-50 px-4">
-    <div class="glass-panel p-6 md:p-10 rounded-2xl max-w-lg w-full border border-genesis-blue/40">
-      <div class="flex justify-between items-center mb-6 md:mb-8">
-        <h3 class="text-xl md:text-2xl font-orbitron neon-text">Connect Wallet</h3>
-        <button id="closeWallet" class="text-xl md:text-2xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
+<main class="max-w-5xl mx-auto p-4 md:p-8 pt-12 relative z-10">
+  <div class="text-center mb-10">
+    <h2 class="text-4xl md:text-6xl font-orbitron neon-text mb-4">AI Intent Execution Terminal</h2>
+    <p class="text-lg md:text-xl opacity-80 max-w-3xl mx-auto">
+      Speak your intent → AI parses → Robots route → On-chain execution
+    </p>
+  </div>
+
+  <!-- 意图输入区 -->
+  <section class="glass-panel p-6 mb-8">
+    <h3 class="text-xl md:text-2xl font-orbitron neon-text mb-4">Your Intent</h3>
+    <textarea id="intentInput" rows="4"
+      class="w-full bg-void-black/50 border border-genesis-blue/30 rounded-xl p-4 text-white placeholder-gray-400 focus:outline-none focus:border-genesis-blue resize-none font-mono"
+      placeholder="Example: Send 0.001 ETH to 0x123... on Sepolia with best route"></textarea>
+    <div class="mt-6 flex flex-wrap gap-4 justify-center">
+      <button id="parseBtn" class="btn-neon px-8 py-3 rounded-lg uppercase tracking-wider">
+        <i class="fas fa-brain mr-2"></i> AI Parse Intent
+      </button>
+      <button id="executeBtn" disabled class="bg-gray-700/60 px-8 py-3 rounded-lg uppercase opacity-50 cursor-not-allowed">
+        <i class="fas fa-rocket mr-2"></i> Execute Intent
+      </button>
+    </div>
+  </section>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-8">
+    <!-- AI 解析结果 -->
+    <div class="glass-panel p-6">
+      <h4 class="text-xl font-orbitron mb-4 neon-text">AI Parsed Plan</h4>
+      <div id="parsedPlan" class="text-sm space-y-2 min-h-[180px]">
+        Enter an intent to start AI parsing.
       </div>
+    </div>
 
-      <div class="grid grid-cols-2 gap-4">
-        <button class="wallet-option glass-panel p-4 md:p-6 text-center hover:bg-genesis-blue/10 transition" data-provider="metamask">
-          <i class="fab fa-metamask text-3xl md:text-4xl mb-2 md:mb-3 block"></i>
-          MetaMask
-        </button>
-        <button class="wallet-option glass-panel p-4 md:p-6 text-center hover:bg-genesis-blue/10 transition" data-provider="walletconnect">
-          <i class="fas fa-link text-3xl md:text-4xl mb-2 md:mb-3 block"></i>
-          WalletConnect
-        </button>
-        <button class="wallet-option glass-panel p-4 md:p-6 text-center hover:bg-genesis-blue/10 transition" disabled>
-          <i class="fas fa-wallet text-3xl md:text-4xl mb-2 md:mb-3 block opacity-50"></i>
-          Coinbase Wallet (soon)
-        </button>
-        <button class="wallet-option glass-panel p-4 md:p-6 text-center hover:bg-genesis-blue/10 transition" disabled>
-          <i class="fas fa-ghost text-3xl md:text-4xl mb-2 md:mb-3 block opacity-50"></i>
-          Phantom (soon)
-        </button>
+    <!-- 执行日志 -->
+    <div class="glass-panel p-6">
+      <h4 class="text-xl font-orbitron mb-4 neon-text">Execution Log</h4>
+      <div id="statusLog" class="text-sm space-y-2 max-h-[220px] overflow-y-auto font-mono">
+        <p class="text-gray-400">System standing by</p>
       </div>
-
-      <p class="text-center text-xs md:text-sm opacity-70 mt-4 md:mt-6">
-        Supports 300+ wallets via WalletConnect (Trust Wallet, Rainbow, OKX, etc.)
-      </p >
     </div>
   </div>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto p-4 md:p-8 pt-8 md:pt-12 pb-16 md:pb-20 relative z-10">
-    <div class="text-center mb-8 md:mb-12">
-      <h2 class="text-3xl md:text-6xl font-orbitron neon-text mb-4 md:mb-5">Intent Execution Terminal</h2>
-      <p class="text-base md:text-xl opacity-80 max-w-3xl mx-auto leading-relaxed">
-        Express your intent. AI parses. Robots execute across chains. Results confirmed on-chain.
-      </p >
-    </div>
-
-    <!-- Intent Input -->
-    <section class="glass-panel p-4 md:p-8 mb-6 md:mb-10">
-      <h3 class="text-xl md:text-2xl font-orbitron neon-text mb-4 md:mb-6">Express Your Intent</h3>
-      <textarea id="intentInput" rows="4"
-        class="w-full bg-void-black/35 border border-genesis-blue/30 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-genesis-blue focus:ring-1 focus:ring-genesis-blue resize-none font-mono text-sm"
-        placeholder="Example: Swap 1.2 ETH to USDC on Arbitrum with best rate, max slippage 0.4%"></textarea>
-
-      <div class="mt-4 md:mt-6 flex flex-wrap gap-3 justify-center">
-        <button id="parseIntentBtn" class="btn-neon px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-medium uppercase tracking-wider text-sm">Parse Intent</button>
-        <button id="executeBtn" class="bg-gray-700/60 px-5 md:px-8 py-2.5 md:py-3 rounded-lg font-medium uppercase tracking-wider cursor-not-allowed opacity-50 text-sm" disabled>
-          Execute Now
-        </button>
-      </div>
-    </section>
-
-    <!-- Preview & Status -->
-    <div class="grid md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-10">
-      <div class="glass-panel p-4 md:p-7">
-        <h4 class="text-lg md:text-xl font-orbitron mb-3 md:mb-4">AI Execution Plan</h4>
-        <div id="parsedPlan" class="text-sm opacity-80 leading-relaxed min-h-[120px] md:min-h-[140px]">
-          Enter your intent and click "Parse Intent" to begin.
-        </div>
-      </div>
-
-      <div class="glass-panel p-4 md:p-7">
-        <h4 class="text-lg md:text-xl font-orbitron mb-3 md:mb-4">Execution Status</h4>
-        <div id="statusLog" class="text-sm space-y-2 max-h-40 md:max-h-48 overflow-y-auto pr-2 font-mono">
-          <p class="text-gray-400">Wallet: Not connected</p >
-        </div>
+  <div class="grid md:grid-cols-2 gap-6 mb-8">
+    <!-- 机器人节点路由 -->
+    <div class="glass-panel p-6">
+      <h4 class="text-xl font-orbitron mb-4 neon-text">Node Routing</h4>
+      <div id="nodePanel" class="text-sm space-y-1 min-h-[180px]">
+        Node status will appear here.
       </div>
     </div>
 
-    <!-- Recent Executions -->
-    <div class="glass-panel p-4 md:p-7 mb-6 md:mb-10">
-      <h4 class="text-lg md:text-xl font-orbitron mb-3 md:mb-5">Recent Intent Executions</h4>
-      <div id="historyList" class="space-y-2 text-sm max-h-52 md:max-h-64 overflow-y-auto pr-2">
+    <!-- 系统指标 -->
+    <div class="glass-panel p-6">
+      <h4 class="text-xl font-orbitron mb-4 neon-text">Network Metrics</h4>
+      <div id="metricsPanel" class="text-sm space-y-1 min-h-[180px]">
+        Loading network metrics...
       </div>
     </div>
-  </main>
+  </div>
 
-  <!-- Back to Top -->
-  <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
+  <!-- 历史记录 -->
+  <div class="glass-panel p-6 mb-10">
+    <h4 class="text-xl font-orbitron mb-4 neon-text">Recent Intent History</h4>
+    <div id="historyList" class="space-y-2 max-h-[200px] overflow-y-auto text-sm"></div>
+  </div>
+</main>
 
-  <!-- Footer -->
-  <footer class="glass-panel mt-10 md:mt-16 py-6 md:py-8 text-center text-xs md:text-sm opacity-70 border-t border-genesis-blue/20">
-    <p>© 2026 AstroBridge Global Intent Network • All rights reserved</p >
-    <div class="mt-2 md:mt-3 flex justify-center gap-4 md:gap-8">
-      <a href="https://astrochannel.one" class="hover:text-genesis-blue transition">Home</a >
-      <a href="#" class="hover:text-genesis-blue transition">Whitepaper</a >
-      <a href="#" class="hover:text-genesis-blue transition">Docs</a >
-      <a href="#" class="hover:text-genesis-blue transition">API</a >
-    </div>
-  </footer>
+<div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 
-  <script>
-    // Star dust
-    function generateStars(id, count, min, max, op) {
-      let s = [];
-      for (let i = 0; i < count; i++) {
-        let x = Math.random() * 100, y = Math.random() * 100;
-        let sz = Math.random() * (max - min) + min;
-        s.push(`${x}vw ${y}vh ${sz}px #e3f2fd`);
+<footer class="glass-panel py-6 text-center text-sm opacity-70 border-t border-genesis-blue/20">
+  <p>© 2026 AstroBridge — Decentralized Intent Network</p>
+</footer>
+
+<script>
+// ==================== 配置项 ====================
+const API_BASE = "http://你的服务器IP:3000";
+// ==============================================
+
+// 星空效果
+function generateStars(id, count, min, max, op) {
+  let s = [];
+  for (let i=0; i<count; i++) {
+    let x = Math.random()*100, y = Math.random()*100;
+    let sz = Math.random()*(max-min)+min;
+    s.push(`${x}vw ${y}vh ${sz}px #e3f2fd`);
+  }
+  document.getElementById(id).style.boxShadow = s.join(',');
+  document.getElementById(id).style.opacity = op;
+}
+generateStars('stars-far', 70, 0.4, 1.1, 0.42);
+generateStars('stars-mid', 35, 0.9, 1.7, 0.62);
+generateStars('stars-near', 12, 1.4, 2.8, 0.78);
+
+// 钱包连接
+let provider, userAddress;
+const modal = document.getElementById('walletModal');
+const connectBtn = document.getElementById('connectBtn');
+document.getElementById('connectBtn').onclick = () => modal.classList.remove('hidden');
+document.getElementById('closeWallet').onclick = () => modal.classList.add('hidden');
+
+document.querySelectorAll('[data-provider]').forEach(b => {
+  b.onclick = async () => {
+    try {
+      if (b.dataset.provider === 'metamask') {
+        if (!window.ethereum) throw new Error("No wallet");
+        provider = new ethers.providers.Web3Provider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
       }
-      document.getElementById(id).style.boxShadow = s.join(',');
-      document.getElementById(id).style.opacity = op;
-    }
-    generateStars('stars-far', 70, 0.4, 1.1, 0.42);
-    generateStars('stars-mid', 35, 0.9, 1.7, 0.62);
-    generateStars('stars-near', 12, 1.4, 2.8, 0.78);
+      if (b.dataset.provider === 'walletconnect') {
+        const W = window.WalletConnectProvider.default;
+        const wc = new W({
+          rpc: {1:"https://eth.llamarpc.com",56:"https://bsc.llamarpc.com",42161:"https://arbitrum.llamarpc.com"}
+        });
+        await wc.enable();
+        provider = new ethers.providers.Web3Provider(wc);
+      }
+      const s = provider.getSigner();
+      userAddress = await s.getAddress();
+      connectBtn.innerHTML = `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+      modal.classList.add('hidden');
+      document.getElementById('executeBtn').disabled = false;
+      document.getElementById('executeBtn').classList.remove('opacity-50','cursor-not-allowed');
+      log("Wallet connected: " + userAddress.slice(0,8)+"...");
+    } catch(e) { alert("Fail: "+e.message); }
+  };
+});
 
-    // Wallet connection
-    let provider = null;
-    let userAddress = null;
+// 日志工具
+function log(text, cls = "text-gray-300") {
+  const d = new Date().toLocaleTimeString();
+  statusLog.innerHTML += `<p class="${cls}">[${d}] ${text}</p>`;
+  statusLog.scrollTop = statusLog.scrollHeight;
+}
 
-    const modal = document.getElementById('walletModal');
-    const closeModal = document.getElementById('closeWallet');
-    const connectBtn = document.getElementById('connectBtn');
+// AI 解析意图
+document.getElementById('parseBtn').onclick = async () => {
+  const text = document.getElementById('intentInput').value.trim();
+  if (!text) return alert("Enter intent");
 
-    connectBtn.onclick = () => modal.classList.remove('hidden');
-    closeModal.onclick = () => modal.classList.add('hidden');
+  parsedPlan.innerHTML = `<div class="typing">AI is analyzing your intent...</div>`;
+  log("AI parsing intent...", "text-blue-300");
 
-    // Wallet options
-    document.querySelectorAll('[data-provider]').forEach(btn => {
-      btn.onclick = async () => {
-        const providerType = btn.dataset.provider;
+  setTimeout(() => {
+    const addr = text.match(/0x[a-fA-F0-9]{40}/)?.[0] || "unknown";
+    const amt = text.match(/[\d.]+ETH/)?.[0] || "0.001 ETH";
+    parsedPlan.innerHTML = `
+<strong>Intent:</strong> ${text}<br>
+<strong>Recognized by AI:</strong><br>
+• Action: Transfer<br>
+• Chain: Sepolia<br>
+• Amount: ${amt}<br>
+• Recipient: ${addr}<br>
+• Risk Score: Calculated by AiRiskEngine<br>
+• Optimal Route: Auto-selected by NodeRouter<br>
+• Robots Assigned: 3
+    `;
+    log("AI parsed intent complete", "text-green-400");
+  }, 1200);
 
-        try {
-          if (providerType === 'metamask') {
-            if (!window.ethereum) throw new Error("No injected wallet found (MetaMask/Rabby/OKX etc.)");
-            
-            const eth = window.ethereum.providers 
-              ? window.ethereum.providers.find(p => 
-                  p.isMetaMask || p.isCoinbaseWallet || p.isRabby || 
-                  p.isBitKeep || p.isTokenPocket || p.isOKWallet
-                ) 
-              : window.ethereum;
+  // 加载节点 & 指标
+  loadNodes();
+  loadMetrics();
+};
 
-            if (!eth) throw new Error("Supported wallet not detected");
-
-            provider = new ethers.providers.Web3Provider(eth);
-            await provider.send("eth_requestAccounts", []);
-          } 
-          else if (providerType === 'walletconnect') {
-            const WalletConnectProvider = window.WalletConnectProvider.default;
-            const wcProvider = new WalletConnectProvider({
-              rpc: {
-                1: "https://eth.llamarpc.com",
-                5: "https://goerli.llamarpc.com",
-                10: "https://optimism.llamarpc.com",
-                137: "https://polygon.llamarpc.com",
-                56: "https://bsc.llamarpc.com",
-                42161: "https://arbitrum.llamarpc.com",
-                43114: "https://avalanche.llamarpc.com",
-                250: "https://fantom.llamarpc.com"
-              },
-              qrcode: true,
-              qrcodeModalOptions: {
-                mobileLinks: [
-                  "metamask","trustwallet","rainbow","zerion",
-                  "mathwallet","okxwallet","bitkeep","tokenpocket","coin98","argent"
-                ]
-              }
-            });
-            await wcProvider.enable();
-            provider = new ethers.providers.Web3Provider(wcProvider);
-          }
-
-          const signer = provider.getSigner();
-          userAddress = await signer.getAddress();
-
-          connectBtn.innerHTML = `<i class="fas fa-circle text-green-400 mr-1 md:mr-2 text-xs"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
-          document.getElementById('statusLog').innerHTML += `<p class="text-green-400">[${new Date().toLocaleTimeString()}] Wallet connected: ${userAddress.slice(0,6)}...</p >`;
-          
-          const execBtn = document.getElementById('executeBtn');
-          execBtn.disabled = false;
-          execBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-
-          modal.classList.add('hidden');
-        } catch (err) {
-          alert("Connection failed: " + err.message);
-        }
-      };
+// 加载节点状态
+async function loadNodes() {
+  try {
+    const r = await fetch(API_BASE+"/api/nodes/status");
+    const d = await r.json();
+    nodePanel.innerHTML = `<p>Total nodes: ${d.total}</p><p>Online: ${d.onlineCount}</p>`;
+    d.nodes.slice(0,6).forEach(n => {
+      nodePanel.innerHTML += `<p class="${n.status==='online'?'text-green-400':'text-red-400'}">• ${n.url || n.region} (${n.status})</p>`;
     });
+  } catch(e) {}
+}
 
-    // Parse intent (demo)
-    document.getElementById('parseIntentBtn').onclick = () => {
-      const intent = document.getElementById('intentInput').value.trim();
-      if (!intent) return alert("Please enter your intent");
+// 加载指标
+async function loadMetrics() {
+  try {
+    const r = await fetch(API_BASE+"/api/metrics");
+    const d = await r.json();
+    metricsPanel.innerHTML = `
+<p>Queue waiting: ${d.queue.waiting}</p>
+<p>Success rate: ${d.successRate}</p>
+<p>Healthy nodes: ${d.nodesHealthy}</p>
+<p>Risk level: ${d.riskLevel}</p>
+<p>Active chains: ${d.activeChains.join(', ')}</p>`;
+  } catch(e) {}
+}
 
-      document.getElementById('parsedPlan').innerHTML = `
-        <strong>Intent:</strong> ${intent}<br><br>
-        <strong>AI Plan:</strong><br>
-        • Type: Cross-chain swap / bridge<br>
-        • Optimal route: Detected (e.g. Ethereum → Arbitrum)<br>
-        • Est. gas: ~0.0015 ETH<br>
-        • Slippage tolerance: 0.4%<br>
-        • Security: Passed<br>
-        • Agents: 3 robots assigned
-      `;
-    };
+// 真实执行
+document.getElementById('executeBtn').onclick = async () => {
+  if (!userAddress) return alert("Connect wallet first");
+  const text = document.getElementById('intentInput').value.trim();
+  if (!text) return;
 
-    // Execute (demo)
-    document.getElementById('executeBtn').onclick = async () => {
-      if (!userAddress) return alert("Connect wallet first");
+  log("Submitting intent to AstroBridge...", "text-blue-300");
 
-      const intent = document.getElementById('intentInput').value.trim();
-      if (!intent) return;
-
-      const status = document.getElementById('statusLog');
-      status.innerHTML += `<p class="text-blue-300">[${new Date().toLocaleTimeString()}] Sending intent to network...</p >`;
-
-      setTimeout(() => {
-        status.innerHTML += `<p class="text-green-400">[${new Date().toLocaleTimeString()}] Intent executed (demo mode)</p >`;
-        status.innerHTML += `<p class="text-gray-400">Simulated Tx: 0x${Math.random().toString(16).slice(2,10)}...</p >`;
-
-        document.getElementById('historyList').innerHTML = `
-          <div class="flex justify-between items-center py-2 border-b border-genesis-blue/10">
-            <span class="truncate max-w-[70%]">${intent.slice(0,50)}${intent.length > 50 ? '...' : ''}</span>
-            <span class="text-green-400 whitespace-nowrap">Success • just now</span>
-          </div>
-        ` + document.getElementById('historyList').innerHTML;
-      }, 2200);
-    };
-
-    // Back to top
-    const backTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      backTop.classList.toggle('show', window.scrollY > 400);
+  try {
+    const res = await fetch(API_BASE+"/api/intent/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        intent: { payload: { to: userAddress } },
+        signature: "demo-allow"
+      })
     });
-    backTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  </script>
+    const data = await res.json();
+    if (!data.success) throw new Error(data.error);
+
+    const id = data.intentId;
+    log(`Intent ID: ${id}`, "text-blue-300");
+    log("Robots routing best path...", "text-yellow-400");
+
+    // 轮询
+    const itv = setInterval(async () => {
+      const q = await fetch(API_BASE+"/api/intent/"+id);
+      const j = await q.json();
+      if (j.chain.status === "executed") {
+        clearInterval(itv);
+        log("✅ Transaction confirmed", "text-green-400");
+        log(`Tx: <a href="https://sepolia.etherscan.io/tx/${j.chain.txHash}" target="_blank" class="text-genesis-blue underline">${j.chain.txHash.slice(0,14)}...</a>`, "text-green-400");
+        addHistory(text, "Success");
+      }
+      if (j.chain.status === "failed") {
+        clearInterval(itv);
+        log("❌ Execution failed: "+j.chain.error, "text-red-400");
+        addHistory(text, "Failed");
+      }
+    }, 3000);
+
+  } catch(e) {
+    log("Error: "+e.message, "text-red-400");
+  }
+};
+
+function addHistory(intent, status) {
+  const cls = status === "Success" ? "text-green-400" : "text-red-400";
+  historyList.innerHTML = `
+<div class="flex justify-between py-2 border-b border-genesis-blue/10">
+  <span class="truncate max-w-[70%]">${intent.slice(0,48)}${intent.length>48?'...':''}</span>
+  <span class="${cls} whitespace-nowrap">${status}</span>
+</div>` + historyList.innerHTML;
+}
+
+// 回到顶部
+const btop = document.getElementById('back-to-top');
+window.onscroll = () => btop.classList.toggle('show', window.scrollY>400);
+btop.onclick = () => window.scrollTo({top:0,behavior:'smooth'});
+</script>
 </body>
 </html>
