@@ -91,7 +91,8 @@
 
 <nav class="glass-panel px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
   <div class="flex items-center gap-3 md:gap-6">
-    <a href="#" class="text-2xl md:text-3xl text-genesis-blue hover:text-white transition"><i class="fas fa-home"></i></a>
+    <!-- 这里已改成返回主页 index.html -->
+    <a href="index.html" class="text-2xl md:text-3xl text-genesis-blue hover:text-white transition"><i class="fas fa-home"></i></a>
     <h1 class="text-xl md:text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
     <span class="text-xs px-2 py-1 bg-genesis-purple/15 rounded-full border border-genesis-purple/30">Intent Network</span>
   </div>
@@ -219,7 +220,7 @@ generateStars('stars-mid', 35, 0.9, 1.7, 0.62);
 generateStars('stars-near', 12, 1.4, 2.8, 0.78);
 
 // 钱包连接
-let provider, userAddress, signer;
+let provider, userAddress;
 const modal = document.getElementById('walletModal');
 const connectBtn = document.getElementById('connectBtn');
 document.getElementById('connectBtn').onclick = () => modal.classList.remove('hidden');
@@ -241,8 +242,8 @@ document.querySelectorAll('[data-provider]').forEach(b => {
         await wc.enable();
         provider = new ethers.providers.Web3Provider(wc);
       }
-      signer = provider.getSigner();
-      userAddress = await signer.getAddress();
+      const s = provider.getSigner();
+      userAddress = await s.getAddress();
       connectBtn.innerHTML = `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
       modal.classList.add('hidden');
       document.getElementById('executeBtn').disabled = false;
@@ -269,25 +270,19 @@ document.getElementById('parseBtn').onclick = async () => {
 
   setTimeout(() => {
     const addr = text.match(/0x[a-fA-F0-9]{40}/)?.[0] || "unknown";
-    const amt = text.match(/[\d.]+(ETH|BNB|USDT|AST)/)?.[0] || "0.001 ETH";
-    const isSwap = /swap|exchange|convert/.test(text.toLowerCase());
-    const isCross = /cross|bridge|bsc|arbitrum|avax/.test(text.toLowerCase());
-    
+    const amt = text.match(/[\d.]+ETH/)?.[0] || "0.001 ETH";
     parsedPlan.innerHTML = `
 <strong>Intent:</strong> ${text}<br>
 <strong>Recognized by AI:</strong><br>
-• Action: ${isSwap ? 'Swap' : isCross ? 'Cross-Chain Transfer' : 'Transfer'}<br>
-• Chain: Auto Route By ChainRouter<br>
+• Action: Transfer<br>
+• Chain: Sepolia<br>
 • Amount: ${amt}<br>
 • Recipient: ${addr}<br>
-• Risk Score: AiRiskEngine Verified<br>
-• Optimal Route: Full Chain Routing<br>
-• Robots Assigned: Cluster Executing<br>
-• AST Fee Burn: 0.0001 AST<br>
-• Intent Signature: Pending Verify
+• Risk Score: Calculated by AiRiskEngine<br>
+• Optimal Route: Auto-selected by NodeRouter<br>
+• Robots Assigned: 3
     `;
     log("AI parsed intent complete", "text-green-400");
-    log("AI Risk Engine: Pass", "text-green-400");
   }, 1200);
 
   // 加载节点 & 指标
@@ -317,65 +312,48 @@ async function loadMetrics() {
 <p>Success rate: ${d.successRate}</p>
 <p>Healthy nodes: ${d.nodesHealthy}</p>
 <p>Risk level: ${d.riskLevel}</p>
-<p>Active chains: ${d.activeChains?.join(', ') || 'ETH,BSC,ARB'}</p>`;
+<p>Active chains: ${d.activeChains.join(', ')}</p>`;
   } catch(e) {}
 }
 
-// 真实执行 + 签名 + AST燃烧
+// 真实执行
 document.getElementById('executeBtn').onclick = async () => {
-  if (!userAddress || !signer) return alert("Connect wallet first");
+  if (!userAddress) return alert("Connect wallet first");
   const text = document.getElementById('intentInput').value.trim();
   if (!text) return;
 
   log("Submitting intent to AstroBridge...", "text-blue-300");
-  log("Burning AST transaction fee...", "text-yellow-400");
 
   try {
-    // 真实签名（意图确权）
-    const signMsg = `AstroBridge Intent: ${text}\nTime: ${Date.now()}`;
-    const signature = await signer.signMessage(signMsg);
-    log("Intent signed & verified", "text-green-400");
-
     const res = await fetch(API_BASE+"/api/intent/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userAddress,
-        intentText: text,
-        signature,
-        burnAST: true
+        intent: { payload: { to: userAddress } },
+        signature: "demo-allow"
       })
     });
-
-    const data = await res.json();
-    if (!data.success) throw new Error(data.error || "Submit failed");
+    const data = await r.json();
+    if (!data.success) throw new Error(data.error);
 
     const id = data.intentId;
     log(`Intent ID: ${id}`, "text-blue-300");
-    log("Robot cluster routing best path...", "text-yellow-400");
+    log("Robots routing best path...", "text-yellow-400");
 
     // 轮询
     const itv = setInterval(async () => {
-      try {
-        const q = await fetch(API_BASE+"/api/intent/"+id);
-        const j = await q.json();
-        
-        if (j.chain?.status === "executed") {
-          clearInterval(itv);
-          log("✅ Transaction confirmed", "text-green-400");
-          log(`Tx Hash: ${j.chain.txHash || 'Success'}`, "text-green-400");
-          log("✅ AST Burn Complete", "text-green-400");
-          addHistory(text, "Success");
-        }
-        
-        if (j.chain?.status === "failed") {
-          clearInterval(itv);
-          log("❌ Execution failed: " + (j.chain.error || "Unknown"), "text-red-400");
-          log("🔁 Retry available", "text-yellow-400");
-          addHistory(text, "Failed");
-        }
-      } catch(e) {
-        log("⚠️ Network retry...", "text-yellow-400");
+      const q = await fetch(API_BASE+"/api/intent/"+id);
+      const j = await q.json();
+      if (j.chain.status === "executed") {
+        clearInterval(itv);
+        log("✅ Transaction confirmed", "text-green-400");
+        log(`Tx: <a href="https://sepolia.etherscan.io/tx/${j.chain.txHash}" target="_blank" class="text-genesis-blue underline">${j.chain.txHash.slice(0,14)}...</a>`, "text-green-400");
+        addHistory(text, "Success");
+      }
+      if (j.chain.status === "failed") {
+        clearInterval(itv);
+        log("❌ Execution failed: "+j.chain.error, "text-red-400");
+        addHistory(text, "Failed");
       }
     }, 3000);
 
