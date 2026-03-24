@@ -13,8 +13,8 @@
           colors: {
             'genesis-blue': '#40c4ff',
             'genesis-purple': '#7c4dff',
-            'void-black': '#02040f',
-            'star-gold': '#ffd54f',
+            'void-black': '#02000d',
+            'star-gold': '#ffd700',
             'nebula-teal': '#26c6da',
           },
           fontFamily: {
@@ -34,7 +34,13 @@
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
 
   <style>
-    :root { --bg: #02040f; --text: #e3f2fd; }
+    /* 强制从左向右输入，修复翻译后文字反向问题 */
+    * {
+      direction: ltr !important;
+      unicode-bidi: normal !important;
+      text-align: left !important;
+    }
+    :root { --bg: #02000d; --text: #e3f2fd; }
     body {
       background: var(--bg);
       background-image: url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
@@ -44,7 +50,7 @@
     }
     .nebula-flow {
       position: fixed; inset: 0; z-index: -3; pointer-events: none;
-      background: radial-gradient(ellipse at 40% 30%, rgba(124,77,255,0.10) 0%, transparent 60%),
+      background: radial-gradient(ellipse at 40% 30%, rgba(124,7,255,0.10) 0%, transparent 60%),
                   radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.08) 0%, transparent 65%);
       background-size: 220% 220%; animation: nebula-flow 520s ease-in-out infinite;
       mix-blend-mode: screen; opacity: 0.4; filter: blur(70px);
@@ -78,6 +84,13 @@
     #back-to-top.show { opacity: 1; }
     .typing::after { content: "|"; animation: blink 1s infinite; }
     @keyframes blink { 50% { opacity: 0; } }
+
+    /* 输入框强制左对齐 */
+    input, textarea, select {
+      direction: ltr !important;
+      text-align: left !important;
+      unicode-bidi: plaintext !important;
+    }
   </style>
 </head>
 <body>
@@ -91,7 +104,6 @@
 
 <nav class="glass-panel px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
   <div class="flex items-center gap-3 md:gap-6">
-    <!-- 这里已改成返回主页 index.html -->
     <a href="index.html" class="text-2xl md:text-3xl text-genesis-blue hover:text-white transition"><i class="fas fa-home"></i></a>
     <h1 class="text-xl md:text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
     <span class="text-xs px-2 py-1 bg-genesis-purple/15 rounded-full border border-genesis-purple/30">Intent Network</span>
@@ -333,7 +345,7 @@ document.getElementById('executeBtn').onclick = async () => {
         signature: "demo-allow"
       })
     });
-    const data = await r.json();
+    const data = await res.json();
     if (!data.success) throw new Error(data.error);
 
     const id = data.intentId;
