@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AstroBridge • Intent Trading Terminal</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -25,16 +24,13 @@
       }
     }
   </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js" type="text/javascript"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
-
   <style>
-    /* 强制从左向右输入，修复翻译后文字反向问题 */
     * {
       direction: ltr !important;
       unicode-bidi: normal !important;
@@ -84,8 +80,6 @@
     #back-to-top.show { opacity: 1; }
     .typing::after { content: "|"; animation: blink 1s infinite; }
     @keyframes blink { 50% { opacity: 0; } }
-
-    /* 输入框强制左对齐 */
     input, textarea, select {
       direction: ltr !important;
       text-align: left !important;
@@ -94,7 +88,6 @@
   </style>
 </head>
 <body>
-
 <div class="nebula-flow"></div>
 <div class="stars-container">
   <div class="stars-layer" id="stars-far"></div>
@@ -163,15 +156,12 @@
   </section>
 
   <div class="grid md:grid-cols-2 gap-6 mb-8">
-    <!-- AI 解析结果 -->
     <div class="glass-panel p-6">
       <h4 class="text-xl font-orbitron mb-4 neon-text">AI Parsed Plan</h4>
       <div id="parsedPlan" class="text-sm space-y-2 min-h-[180px]">
         Enter an intent to start AI parsing.
       </div>
     </div>
-
-    <!-- 执行日志 -->
     <div class="glass-panel p-6">
       <h4 class="text-xl font-orbitron mb-4 neon-text">Execution Log</h4>
       <div id="statusLog" class="text-sm space-y-2 max-h-[220px] overflow-y-auto font-mono">
@@ -181,15 +171,12 @@
   </div>
 
   <div class="grid md:grid-cols-2 gap-6 mb-8">
-    <!-- 机器人节点路由 -->
     <div class="glass-panel p-6">
       <h4 class="text-xl font-orbitron mb-4 neon-text">Node Routing</h4>
       <div id="nodePanel" class="text-sm space-y-1 min-h-[180px]">
         Node status will appear here.
       </div>
     </div>
-
-    <!-- 系统指标 -->
     <div class="glass-panel p-6">
       <h4 class="text-xl font-orbitron mb-4 neon-text">Network Metrics</h4>
       <div id="metricsPanel" class="text-sm space-y-1 min-h-[180px]">
@@ -198,7 +185,6 @@
     </div>
   </div>
 
-  <!-- 历史记录 -->
   <div class="glass-panel p-6 mb-10">
     <h4 class="text-xl font-orbitron mb-4 neon-text">Recent Intent History</h4>
     <div id="historyList" class="space-y-2 max-h-[200px] overflow-y-auto text-sm"></div>
@@ -212,67 +198,31 @@
 </footer>
 
 <script>
-// ==================== 配置项 ====================
+// ==================== 配置 ====================
 const API_BASE = "http://45.76.150.100:3000";
-// ==============================================
 
-// 星空效果
-function generateStars(id, count, min, max, op) {
-  let s = [];
-  for (let i=0; i<count; i++) {
-    let x = Math.random()*100, y = Math.random()*100;
-    let sz = Math.random()*(max-min)+min;
-    s.push(`${x}vw ${y}vh ${sz}px #e3f2fd`);
-  }
-  document.getElementById(id).style.boxShadow = s.join(',');
-  document.getElementById(id).style.opacity = op;
-}
-generateStars('stars-far', 70, 0.4, 1.1, 0.42);
-generateStars('stars-mid', 35, 0.9, 1.7, 0.62);
-generateStars('stars-near', 12, 1.4, 2.8, 0.78);
+let userAddress = null;
+const statusLog = document.getElementById('statusLog');
+const parsedPlan = document.getElementById('parsedPlan');
+const historyList = document.getElementById('historyList');
 
-// 钱包连接
-let provider, userAddress;
-const modal = document.getElementById('walletModal');
-const connectBtn = document.getElementById('connectBtn');
-document.getElementById('connectBtn').onclick = () => modal.classList.remove('hidden');
-document.getElementById('closeWallet').onclick = () => modal.classList.add('hidden');
-
-document.querySelectorAll('[data-provider]').forEach(b => {
-  b.onclick = async () => {
-    try {
-      if (b.dataset.provider === 'metamask') {
-        if (!window.ethereum) throw new Error("No wallet");
-        provider = new ethers.providers.Web3Provider(window.ethereum);
-        await provider.send("eth_requestAccounts", []);
-      }
-      if (b.dataset.provider === 'walletconnect') {
-        const W = window.WalletConnectProvider.default;
-        const wc = new W({
-          rpc: {1:"https://eth.llamarpc.com",56:"https://bsc.llamarpc.com",42161:"https://arbitrum.llamarpc.com"}
-        });
-        await wc.enable();
-        provider = new ethers.providers.Web3Provider(wc);
-      }
-      const s = provider.getSigner();
-      userAddress = await s.getAddress();
-      connectBtn.innerHTML = `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
-      modal.classList.add('hidden');
-      document.getElementById('executeBtn').disabled = false;
-      document.getElementById('executeBtn').classList.remove('opacity-50','cursor-not-allowed');
-      log("Wallet connected: " + userAddress.slice(0,8)+"...");
-    } catch(e) { alert("Fail: "+e.message); }
-  };
-});
-
-// 日志工具
-function log(text, cls = "text-gray-300") {
-  const d = new Date().toLocaleTimeString();
-  statusLog.innerHTML += `<p class="${cls}">[${d}] ${text}</p>`;
+// 日志函数
+function log(text, colorClass = "text-gray-300") {
+  const time = new Date().toLocaleTimeString();
+  statusLog.innerHTML += `<p class="${colorClass}">[${time}] ${text}</p>`;
   statusLog.scrollTop = statusLog.scrollHeight;
 }
 
-// AI 解析意图
+// 连接钱包
+document.getElementById('connectBtn').onclick = () => {
+  document.getElementById('walletModal').classList.remove('hidden');
+};
+
+document.getElementById('closeWallet').onclick = () => {
+  document.getElementById('walletModal').classList.add('hidden');
+};
+
+// AI 解析（演示版）
 document.getElementById('parseBtn').onclick = async () => {
   const text = document.getElementById('intentInput').value.trim();
   if (!text) return alert("Enter intent");
@@ -281,7 +231,7 @@ document.getElementById('parseBtn').onclick = async () => {
   log("AI parsing intent...", "text-blue-300");
 
   setTimeout(() => {
-    const addr = text.match(/0x[a-fA-F0-9]{40}/)?.[0] || "unknown";
+    const addr = text.match(/0x[a-fA-F0-9]{40}/)?.[0] || "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
     const amt = text.match(/[\d.]+ETH/)?.[0] || "0.001 ETH";
     parsedPlan.innerHTML = `
 <strong>Intent:</strong> ${text}<br>
@@ -295,98 +245,89 @@ document.getElementById('parseBtn').onclick = async () => {
 • Robots Assigned: 3
     `;
     log("AI parsed intent complete", "text-green-400");
+    document.getElementById('executeBtn').disabled = false;
   }, 1200);
-
-  // 加载节点 & 指标
-  loadNodes();
-  loadMetrics();
 };
 
-// 加载节点状态
-async function loadNodes() {
-  try {
-    const r = await fetch(API_BASE+"/api/nodes/status");
-    const d = await r.json();
-    nodePanel.innerHTML = `<p>Total nodes: ${d.total}</p><p>Online: ${d.onlineCount}</p>`;
-    d.nodes.slice(0,6).forEach(n => {
-      nodePanel.innerHTML += `<p class="${n.status==='online'?'text-green-400':'text-red-400'}">• ${n.url || n.region} (${n.status})</p>`;
-    });
-  } catch(e) {}
-}
-
-// 加载指标
-async function loadMetrics() {
-  try {
-    const r = await fetch(API_BASE+"/api/metrics");
-    const d = await r.json();
-    metricsPanel.innerHTML = `
-<p>Queue waiting: ${d.queue.waiting}</p>
-<p>Success rate: ${d.successRate}</p>
-<p>Healthy nodes: ${d.nodesHealthy}</p>
-<p>Risk level: ${d.riskLevel}</p>
-<p>Active chains: ${d.activeChains.join(', ')}</p>`;
-  } catch(e) {}
-}
-
-// 真实执行
+// 执行意图（已优化）
 document.getElementById('executeBtn').onclick = async () => {
-  if (!userAddress) return alert("Connect wallet first");
-  const text = document.getElementById('intentInput').value.trim();
-  if (!text) return;
+  const intentText = document.getElementById('intentInput').value.trim();
+  if (!intentText) return alert("Please enter your intent");
 
   log("Submitting intent to AstroBridge...", "text-blue-300");
 
   try {
-    const res = await fetch(API_BASE+"/api/intent/submit", {
+    const response = await fetch(`${API_BASE}/api/intent/submit`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        intent: { payload: { to: userAddress } },
+        intent: {
+          type: "transfer",
+          payload: {
+            text: intentText,
+            amount: "0.001",
+            to: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
+          },
+          creator: userAddress || "0xTestUser",
+          timestamp: Date.now()
+        },
         signature: "demo-allow"
       })
     });
-    const data = await res.json();
-    if (!data.success) throw new Error(data.error);
 
-    const id = data.intentId;
-    log(`Intent ID: ${id}`, "text-blue-300");
-    log("Robots routing best path...", "text-yellow-400");
+    const data = await response.json();
 
-    // 轮询
-    const itv = setInterval(async () => {
-      const q = await fetch(API_BASE+"/api/intent/"+id);
-      const j = await q.json();
-      if (j.chain.status === "executed") {
-        clearInterval(itv);
-        log("✅ Transaction confirmed", "text-green-400");
-        log(`Tx: <a href="https://sepolia.etherscan.io/tx/${j.chain.txHash}" target="_blank" class="text-genesis-blue underline">${j.chain.txHash.slice(0,14)}...</a>`, "text-green-400");
-        addHistory(text, "Success");
-      }
-      if (j.chain.status === "failed") {
-        clearInterval(itv);
-        log("❌ Execution failed: "+j.chain.error, "text-red-400");
-        addHistory(text, "Failed");
-      }
-    }, 3000);
+    if (!data.success) throw new Error(data.error || "Submit failed");
 
-  } catch(e) {
-    log("Error: "+e.message, "text-red-400");
+    log(`✅ Intent submitted! ID: ${data.intentId}`, "text-green-400");
+    pollIntentStatus(data.intentId);
+
+  } catch (err) {
+    log(`❌ Submit failed: ${err.message}`, "text-red-400");
   }
 };
 
-function addHistory(intent, status) {
-  const cls = status === "Success" ? "text-green-400" : "text-red-400";
-  historyList.innerHTML = `
-<div class="flex justify-between py-2 border-b border-genesis-blue/10">
-  <span class="truncate max-w-[70%]">${intent.slice(0,48)}${intent.length>48?'...':''}</span>
-  <span class="${cls} whitespace-nowrap">${status}</span>
-</div>` + historyList.innerHTML;
+// 轮询状态
+function pollIntentStatus(intentId) {
+  let attempts = 0;
+  const interval = setInterval(async () => {
+    attempts++;
+    try {
+      const res = await fetch(`${API_BASE}/api/intent/${intentId}`);
+      const data = await res.json();
+
+      if (data.chain?.status === "executed" && data.chain.txHash) {
+        clearInterval(interval);
+        log(`✅ Transaction confirmed on Sepolia!`, "text-green-400");
+        log(`Tx: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash}</a>`, "text-green-400");
+        addToHistory(intentId, "Success");
+      } 
+      else if (data.chain?.status === "failed") {
+        clearInterval(interval);
+        log(`❌ Execution failed: ${data.chain.error || 'Unknown'}`, "text-red-400");
+        addToHistory(intentId, "Failed");
+      }
+    } catch (e) {}
+
+    if (attempts > 40) {
+      clearInterval(interval);
+      log("Polling timeout", "text-yellow-400");
+    }
+  }, 3000);
 }
 
-// 回到顶部
-const btop = document.getElementById('back-to-top');
-window.onscroll = () => btop.classList.toggle('show', window.scrollY>400);
-btop.onclick = () => window.scrollTo({top:0,behavior:'smooth'});
+function addToHistory(id, status) {
+  const color = status === "Success" ? "text-green-400" : "text-red-400";
+  historyList.innerHTML = `
+    <div class="flex justify-between py-2 border-b border-genesis-blue/10">
+      <span class="truncate max-w-[70%]">${id}</span>
+      <span class="${color}">${status}</span>
+    </div>
+  ` + historyList.innerHTML;
+}
+
+// 初始化
+log("🚀 AstroBridge Intent Terminal is ready", "text-green-400");
 </script>
 </body>
 </html>
