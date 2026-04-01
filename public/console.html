@@ -118,7 +118,7 @@
     <h3 class="text-xl md:text-2xl font-orbitron neon-text mb-4">Your Intent</h3>
     <textarea id="intentInput" rows="4"
       class="w-full bg-void-black/50 border border-genesis-blue/30 rounded-xl p-4 text-white placeholder-gray-400 focus:outline-none focus:border-genesis-blue resize-none font-mono"
-      placeholder="Example: Send 0.001 ETH to 0x123... on Sepolia with best route"></textarea>
+      placeholder="Example: Send 0.001 ETH to 0x123... on Sepolia"></textarea>
     <div class="mt-6 flex flex-wrap gap-4 justify-center">
       <button id="parseBtn" class="btn-neon px-8 py-3 rounded-lg uppercase tracking-wider">
         <i class="fas fa-brain mr-2"></i> AI Parse Intent
@@ -194,7 +194,7 @@ document.getElementById('closeWallet').addEventListener('click', () => {
   document.getElementById('walletModal').classList.add('hidden');
 });
 
-// MetaMask
+// MetaMask 连接
 document.querySelector('[data-provider="metamask"]').addEventListener('click', async () => {
   try {
     if (!window.ethereum) throw new Error("MetaMask is not installed");
@@ -214,9 +214,9 @@ document.querySelector('[data-provider="metamask"]').addEventListener('click', a
   }
 });
 
-// WalletConnect（暂不支持完整功能）
+// WalletConnect（暂时提示）
 document.querySelector('[data-provider="walletconnect"]').addEventListener('click', () => {
-  alert("WalletConnect support coming soon.");
+  alert("WalletConnect support is coming soon.");
 });
 
 // ==================== AI 解析（演示版） ====================
@@ -234,9 +234,8 @@ document.getElementById('parseBtn').onclick = async () => {
 • Action: Transfer<br>
 • Chain: Sepolia<br>
 • Amount: 0.001 ETH<br>
-• Recipient: extracted from input<br>
+• Recipient: extracted<br>
 • Risk Score: Calculated by AiRiskEngine<br>
-• Optimal Route: Auto-selected<br>
 • Robots Assigned: 3
     `;
     log("AI parsed intent complete", "text-green-400");
@@ -261,7 +260,7 @@ document.getElementById('executeBtn').onclick = async () => {
           payload: {
             text: intentText,
             amount: "0.001",
-            to: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"   // 你可以后续改成动态
+            to: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
           },
           creator: userAddress || "0xTestUser",
           timestamp: Date.now()
@@ -275,17 +274,16 @@ document.getElementById('executeBtn').onclick = async () => {
     if (!data.success) throw new Error(data.error || "Submit failed");
 
     log(`✅ Intent submitted successfully! ID: ${data.intentId}`, "text-green-400");
-
+    
     // 开始轮询结果
     pollIntentStatus(data.intentId);
 
   } catch (err) {
     log(`❌ Submit failed: ${err.message}`, "text-red-400");
-    console.error(err);
   }
 };
 
-// 轮询执行状态
+// 轮询状态
 function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -297,7 +295,7 @@ function pollIntentStatus(intentId) {
       if (data.chain?.status === "executed" && data.chain.txHash) {
         clearInterval(interval);
         log(`✅ Transaction confirmed on Sepolia!`, "text-green-400");
-        log(`Tx Hash → <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash}</a>`, "text-green-400");
+        log(`Tx Hash: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash}</a>`, "text-green-400");
         addToHistory(intentId, "Success");
       } 
       else if (data.chain?.status === "failed") {
@@ -309,7 +307,7 @@ function pollIntentStatus(intentId) {
 
     if (attempts > 40) {
       clearInterval(interval);
-      log("Polling timeout (max 2 minutes)", "text-yellow-400");
+      log("Polling timeout (2 minutes)", "text-yellow-400");
     }
   }, 3000);
 }
