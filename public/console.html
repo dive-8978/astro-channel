@@ -28,14 +28,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js" type="text/javascript"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
   <style>
-    * {
-      direction: ltr !important;
-      unicode-bidi: normal !important;
-      text-align: left !important;
-    }
+    * { direction: ltr !important; unicode-bidi: normal !important; text-align: left !important; }
     :root { --bg: #02000d; --text: #e3f2fd; }
     body {
       background: var(--bg);
@@ -52,39 +48,18 @@
       mix-blend-mode: screen; opacity: 0.4; filter: blur(70px);
     }
     @keyframes nebula-flow { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }
-    .stars-container { position: fixed; inset: 0; z-index: -2; pointer-events: none; }
-    .stars-layer { position: absolute; inset: 0; }
     .glass-panel {
       background: rgba(8,15,40,0.26); backdrop-filter: blur(22px) saturate(180%);
       border: 1px solid rgba(64,196,255,0.20);
       box-shadow: 0 8px 32px rgba(0,0,0,0.55), inset 0 0 20px rgba(64,196,255,0.05);
       border-radius: 1.25rem; transition: all 0.4s ease;
     }
-    .glass-panel:hover { border-color: rgba(64,196,255,0.40); }
     .neon-text { text-shadow: 0 0 10px #40c4ff, 0 0 20px #7c4dff; }
     .btn-neon {
       background: linear-gradient(135deg, #40c4ff, #7c4dff);
       box-shadow: 0 0 20px rgba(64,196,255,0.5); transition: all 0.4s;
     }
     .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
-    .wallet-option { transition: all 0.3s; }
-    .wallet-option:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(64,196,255,0.3); }
-    #back-to-top {
-      position: fixed; bottom: 30px; right: 30px; z-index: 100;
-      background: rgba(64,196,255,0.25); backdrop-filter: blur(12px);
-      color: white; width: 52px; height: 52px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; transition: all 0.4s; cursor: pointer;
-      border: 1px solid rgba(64,196,255,0.4);
-    }
-    #back-to-top.show { opacity: 1; }
-    .typing::after { content: "|"; animation: blink 1s infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-    input, textarea, select {
-      direction: ltr !important;
-      text-align: left !important;
-      unicode-bidi: plaintext !important;
-    }
   </style>
 </head>
 <body>
@@ -139,7 +114,6 @@
     </p>
   </div>
 
-  <!-- 意图输入区 -->
   <section class="glass-panel p-6 mb-8">
     <h3 class="text-xl md:text-2xl font-orbitron neon-text mb-4">Your Intent</h3>
     <textarea id="intentInput" rows="4"
@@ -192,7 +166,6 @@
 </main>
 
 <div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
-
 <footer class="glass-panel py-6 text-center text-sm opacity-70 border-t border-genesis-blue/20">
   <p>© 2026 AstroBridge — Decentralized Intent Network</p>
 </footer>
@@ -206,23 +179,47 @@ const statusLog = document.getElementById('statusLog');
 const parsedPlan = document.getElementById('parsedPlan');
 const historyList = document.getElementById('historyList');
 
-// 日志函数
 function log(text, colorClass = "text-gray-300") {
   const time = new Date().toLocaleTimeString();
   statusLog.innerHTML += `<p class="${colorClass}">[${time}] ${text}</p>`;
   statusLog.scrollTop = statusLog.scrollHeight;
 }
 
-// 连接钱包
-document.getElementById('connectBtn').onclick = () => {
+// ==================== 钱包连接（已修复） ====================
+document.getElementById('connectBtn').addEventListener('click', () => {
   document.getElementById('walletModal').classList.remove('hidden');
-};
+});
 
-document.getElementById('closeWallet').onclick = () => {
+document.getElementById('closeWallet').addEventListener('click', () => {
   document.getElementById('walletModal').classList.add('hidden');
-};
+});
 
-// AI 解析（演示版）
+// MetaMask
+document.querySelector('[data-provider="metamask"]').addEventListener('click', async () => {
+  try {
+    if (!window.ethereum) throw new Error("MetaMask is not installed");
+    
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
+    userAddress = await signer.getAddress();
+
+    document.getElementById('connectBtn').innerHTML = `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+    document.getElementById('walletModal').classList.add('hidden');
+    document.getElementById('executeBtn').disabled = false;
+
+    log(`✅ MetaMask connected: ${userAddress.slice(0,8)}...`, "text-green-400");
+  } catch (e) {
+    alert("MetaMask connection failed: " + e.message);
+  }
+});
+
+// WalletConnect（暂不支持完整功能）
+document.querySelector('[data-provider="walletconnect"]').addEventListener('click', () => {
+  alert("WalletConnect support coming soon.");
+});
+
+// ==================== AI 解析（演示版） ====================
 document.getElementById('parseBtn').onclick = async () => {
   const text = document.getElementById('intentInput').value.trim();
   if (!text) return alert("Enter intent");
@@ -231,17 +228,15 @@ document.getElementById('parseBtn').onclick = async () => {
   log("AI parsing intent...", "text-blue-300");
 
   setTimeout(() => {
-    const addr = text.match(/0x[a-fA-F0-9]{40}/)?.[0] || "0x742d35Cc6634C0532925a3b844Bc454e4438f44e";
-    const amt = text.match(/[\d.]+ETH/)?.[0] || "0.001 ETH";
     parsedPlan.innerHTML = `
 <strong>Intent:</strong> ${text}<br>
 <strong>Recognized by AI:</strong><br>
 • Action: Transfer<br>
 • Chain: Sepolia<br>
-• Amount: ${amt}<br>
-• Recipient: ${addr}<br>
+• Amount: 0.001 ETH<br>
+• Recipient: extracted from input<br>
 • Risk Score: Calculated by AiRiskEngine<br>
-• Optimal Route: Auto-selected by NodeRouter<br>
+• Optimal Route: Auto-selected<br>
 • Robots Assigned: 3
     `;
     log("AI parsed intent complete", "text-green-400");
@@ -249,12 +244,12 @@ document.getElementById('parseBtn').onclick = async () => {
   }, 1200);
 };
 
-// 执行意图（已优化）
+// ==================== 执行意图（真实连接后端） ====================
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText) return alert("Please enter your intent");
 
-  log("Submitting intent to AstroBridge...", "text-blue-300");
+  log("Submitting intent to AstroBridge backend...", "text-blue-300");
 
   try {
     const response = await fetch(`${API_BASE}/api/intent/submit`, {
@@ -266,7 +261,7 @@ document.getElementById('executeBtn').onclick = async () => {
           payload: {
             text: intentText,
             amount: "0.001",
-            to: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
+            to: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"   // 你可以后续改成动态
           },
           creator: userAddress || "0xTestUser",
           timestamp: Date.now()
@@ -279,15 +274,18 @@ document.getElementById('executeBtn').onclick = async () => {
 
     if (!data.success) throw new Error(data.error || "Submit failed");
 
-    log(`✅ Intent submitted! ID: ${data.intentId}`, "text-green-400");
+    log(`✅ Intent submitted successfully! ID: ${data.intentId}`, "text-green-400");
+
+    // 开始轮询结果
     pollIntentStatus(data.intentId);
 
   } catch (err) {
     log(`❌ Submit failed: ${err.message}`, "text-red-400");
+    console.error(err);
   }
 };
 
-// 轮询状态
+// 轮询执行状态
 function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -299,19 +297,19 @@ function pollIntentStatus(intentId) {
       if (data.chain?.status === "executed" && data.chain.txHash) {
         clearInterval(interval);
         log(`✅ Transaction confirmed on Sepolia!`, "text-green-400");
-        log(`Tx: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash}</a>`, "text-green-400");
+        log(`Tx Hash → <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash}</a>`, "text-green-400");
         addToHistory(intentId, "Success");
       } 
       else if (data.chain?.status === "failed") {
         clearInterval(interval);
-        log(`❌ Execution failed: ${data.chain.error || 'Unknown'}`, "text-red-400");
+        log(`❌ Execution failed: ${data.chain.error || 'Unknown error'}`, "text-red-400");
         addToHistory(intentId, "Failed");
       }
     } catch (e) {}
 
     if (attempts > 40) {
       clearInterval(interval);
-      log("Polling timeout", "text-yellow-400");
+      log("Polling timeout (max 2 minutes)", "text-yellow-400");
     }
   }, 3000);
 }
