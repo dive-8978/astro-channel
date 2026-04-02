@@ -28,9 +28,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  
-  <!-- ethers.js 必须在 script 之前加载 -->
-  <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
+
+  <!-- 使用更稳定的 cdnjs ethers v5.7.1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
 
   <style>
@@ -188,7 +188,7 @@ function log(text, colorClass = "text-gray-300") {
   statusLog.scrollTop = statusLog.scrollHeight;
 }
 
-// ==================== 钱包连接（已修复） ====================
+// ==================== 钱包连接（加强等待 ethers 加载） ====================
 document.getElementById('connectBtn').addEventListener('click', () => {
   document.getElementById('walletModal').classList.remove('hidden');
 });
@@ -200,7 +200,9 @@ document.getElementById('closeWallet').addEventListener('click', () => {
 // MetaMask
 document.querySelector('[data-provider="metamask"]').addEventListener('click', async () => {
   try {
-    if (typeof ethers === 'undefined') throw new Error("ethers library not loaded");
+    if (typeof ethers === 'undefined') {
+      throw new Error("ethers library is still loading, please wait a moment and try again");
+    }
     if (!window.ethereum) throw new Error("MetaMask is not installed");
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -219,12 +221,12 @@ document.querySelector('[data-provider="metamask"]').addEventListener('click', a
   }
 });
 
-// WalletConnect（暂不支持完整功能）
+// WalletConnect
 document.querySelector('[data-provider="walletconnect"]').addEventListener('click', () => {
   alert("WalletConnect support is coming soon.");
 });
 
-// ==================== AI 解析 ====================
+// ==================== AI 解析（保持演示逻辑） ====================
 document.getElementById('parseBtn').onclick = async () => {
   const text = document.getElementById('intentInput').value.trim();
   if (!text) return alert("Enter intent");
@@ -248,7 +250,7 @@ document.getElementById('parseBtn').onclick = async () => {
   }, 1200);
 };
 
-// ==================== 执行意图 ====================
+// 执行意图
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText) return alert("Please enter your intent");
@@ -300,8 +302,7 @@ function pollIntentStatus(intentId) {
         log(`✅ Transaction confirmed on Sepolia!`, "text-green-400");
         log(`Tx Hash: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash}</a>`, "text-green-400");
         addToHistory(intentId, "Success");
-      } 
-      else if (data.chain?.status === "failed") {
+      } else if (data.chain?.status === "failed") {
         clearInterval(interval);
         log(`❌ Execution failed: ${data.chain.error || 'Unknown error'}`, "text-red-400");
         addToHistory(intentId, "Failed");
