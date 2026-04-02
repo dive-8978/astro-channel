@@ -29,8 +29,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-  <!-- 使用更稳定的 cdnjs ethers v5.7.1 -->
+  <!-- ethers.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <!-- WalletConnect v1 (简单可靠，兼容性强) -->
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
 
   <style>
@@ -67,11 +68,6 @@
 </head>
 <body>
 <div class="nebula-flow"></div>
-<div class="stars-container">
-  <div class="stars-layer" id="stars-far"></div>
-  <div class="stars-layer" id="stars-mid"></div>
-  <div class="stars-layer" id="stars-near"></div>
-</div>
 
 <nav class="glass-panel px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
   <div class="flex items-center gap-3 md:gap-6">
@@ -92,19 +88,26 @@
       <h3 class="text-2xl font-orbitron neon-text">Connect Wallet</h3>
       <button id="closeWallet" class="text-2xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
     </div>
+    
     <div class="grid grid-cols-2 gap-4">
       <button class="wallet-option glass-panel p-4 text-center hover:bg-genesis-blue/10" data-provider="metamask">
         <i class="fab fa-metamask text-4xl mb-2 block"></i>MetaMask
       </button>
       <button class="wallet-option glass-panel p-4 text-center hover:bg-genesis-blue/10" data-provider="walletconnect">
-        <i class="fas fa-link text-4xl mb-2 block"></i>WalletConnect
+        <i class="fas fa-link text-4xl mb-2 block"></i>WalletConnect<br>
+        <span class="text-xs text-gray-400">(Trust, Rainbow, imToken...)</span>
+      </button>
+      <button class="wallet-option glass-panel p-4 text-center hover:bg-genesis-blue/10" data-provider="injected">
+        <i class="fas fa-plug text-4xl mb-2 block"></i>Other Injected<br>
+        <span class="text-xs text-gray-400">(Rabby, Binance, etc.)</span>
       </button>
       <button class="wallet-option glass-panel p-4 text-center opacity-50" disabled>
-        <i class="fas fa-wallet text-4xl mb-2 block"></i>Coinbase (soon)
+        <i class="fas fa-wallet text-4xl mb-2 block"></i>Coinbase Wallet (soon)
       </button>
-      <button class="wallet-option glass-panel p-4 text-center opacity-50" disabled>
-        <i class="fas fa-ghost text-4xl mb-2 block"></i>Phantom (soon)
-      </button>
+    </div>
+
+    <div class="mt-6 text-center text-xs text-gray-400">
+      支持全球主流钱包：MetaMask、Trust Wallet、Rainbow、imToken、TokenPocket、OKX Wallet 等
     </div>
   </div>
 </div>
@@ -168,7 +171,6 @@
   </div>
 </main>
 
-<div id="back-to-top"><i class="fas fa-arrow-up"></i></div>
 <footer class="glass-panel py-6 text-center text-sm opacity-70 border-t border-genesis-blue/20">
   <p>© 2026 AstroBridge — Decentralized Intent Network</p>
 </footer>
@@ -178,6 +180,7 @@
 const API_BASE = "http://45.76.150.100:3000";
 
 let userAddress = null;
+let provider = null;
 const statusLog = document.getElementById('statusLog');
 const parsedPlan = document.getElementById('parsedPlan');
 const historyList = document.getElementById('historyList');
@@ -188,7 +191,7 @@ function log(text, colorClass = "text-gray-300") {
   statusLog.scrollTop = statusLog.scrollHeight;
 }
 
-// ==================== 钱包连接（加强等待 ethers 加载） ====================
+// ==================== 钱包连接增强版 ====================
 document.getElementById('connectBtn').addEventListener('click', () => {
   document.getElementById('walletModal').classList.remove('hidden');
 });
@@ -200,33 +203,75 @@ document.getElementById('closeWallet').addEventListener('click', () => {
 // MetaMask
 document.querySelector('[data-provider="metamask"]').addEventListener('click', async () => {
   try {
-    if (typeof ethers === 'undefined') {
-      throw new Error("ethers library is still loading, please wait a moment and try again");
-    }
-    if (!window.ethereum) throw new Error("MetaMask is not installed");
-
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    if (!window.ethereum) throw new Error("MetaMask not installed");
+    provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
     userAddress = await signer.getAddress();
 
-    document.getElementById('connectBtn').innerHTML = `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+    updateConnectButton();
     document.getElementById('walletModal').classList.add('hidden');
     document.getElementById('executeBtn').disabled = false;
-
     log(`✅ MetaMask connected: ${userAddress.slice(0,8)}...`, "text-green-400");
   } catch (e) {
     alert("MetaMask connection failed: " + e.message);
-    console.error(e);
   }
 });
 
 // WalletConnect
-document.querySelector('[data-provider="walletconnect"]').addEventListener('click', () => {
-  alert("WalletConnect support is coming soon.");
+document.querySelector('[data-provider="walletconnect"]').addEventListener('click', async () => {
+  try {
+    const WalletConnectProvider = window.WalletConnectProvider.default;
+    const wcProvider = new WalletConnectProvider({
+      rpc: {
+        1: "https://eth.llamarpc.com",
+        56: "https://bsc.llamarpc.com",
+        42161: "https://arbitrum.llamarpc.com",
+        137: "https://polygon.llamarpc.com",
+        10: "https://optimism.llamarpc.com",
+        43114: "https://avalanche.llamarpc.com"
+      }
+    });
+
+    await wcProvider.enable();
+    provider = new ethers.providers.Web3Provider(wcProvider);
+    const signer = provider.getSigner();
+    userAddress = await signer.getAddress();
+
+    updateConnectButton();
+    document.getElementById('walletModal').classList.add('hidden');
+    document.getElementById('executeBtn').disabled = false;
+    log(`✅ WalletConnect connected: ${userAddress.slice(0,8)}...`, "text-green-400");
+  } catch (e) {
+    alert("WalletConnect failed: " + e.message);
+    console.error(e);
+  }
 });
 
-// ==================== AI 解析（保持演示逻辑） ====================
+// Other Injected Wallets (Rabby, Binance Web3, etc.)
+document.querySelector('[data-provider="injected"]').addEventListener('click', async () => {
+  try {
+    if (!window.ethereum) throw new Error("No injected wallet detected");
+    provider = new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
+    userAddress = await signer.getAddress();
+
+    updateConnectButton();
+    document.getElementById('walletModal').classList.add('hidden');
+    document.getElementById('executeBtn').disabled = false;
+    log(`✅ Injected wallet connected: ${userAddress.slice(0,8)}...`, "text-green-400");
+  } catch (e) {
+    alert("No other injected wallet found. Try MetaMask or WalletConnect.");
+  }
+});
+
+function updateConnectButton() {
+  document.getElementById('connectBtn').innerHTML = 
+    `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+}
+
+// ==================== AI Parse & Execute (保持原逻辑) ====================
 document.getElementById('parseBtn').onclick = async () => {
   const text = document.getElementById('intentInput').value.trim();
   if (!text) return alert("Enter intent");
@@ -250,10 +295,10 @@ document.getElementById('parseBtn').onclick = async () => {
   }, 1200);
 };
 
-// 执行意图
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText) return alert("Please enter your intent");
+  if (!userAddress) return alert("Please connect wallet first");
 
   log("Submitting intent to AstroBridge backend...", "text-blue-300");
 
@@ -264,12 +309,8 @@ document.getElementById('executeBtn').onclick = async () => {
       body: JSON.stringify({
         intent: {
           type: "transfer",
-          payload: {
-            text: intentText,
-            amount: "0.001",
-            to: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
-          },
-          creator: userAddress || "0xTestUser",
+          payload: { text: intentText, amount: "0.001", to: "0x742d35Cc6634C0532925a3b844Bc454e4438f44e" },
+          creator: userAddress,
           timestamp: Date.now()
         },
         signature: "demo-allow"
@@ -277,18 +318,15 @@ document.getElementById('executeBtn').onclick = async () => {
     });
 
     const data = await response.json();
-
     if (!data.success) throw new Error(data.error || "Submit failed");
 
     log(`✅ Intent submitted! ID: ${data.intentId}`, "text-green-400");
     pollIntentStatus(data.intentId);
-
   } catch (err) {
     log(`❌ Submit failed: ${err.message}`, "text-red-400");
   }
 };
 
-// 轮询状态
 function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -299,19 +337,19 @@ function pollIntentStatus(intentId) {
 
       if (data.chain?.status === "executed" && data.chain.txHash) {
         clearInterval(interval);
-        log(`✅ Transaction confirmed on Sepolia!`, "text-green-400");
+        log(`✅ Transaction confirmed!`, "text-green-400");
         log(`Tx Hash: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash}</a>`, "text-green-400");
         addToHistory(intentId, "Success");
       } else if (data.chain?.status === "failed") {
         clearInterval(interval);
-        log(`❌ Execution failed: ${data.chain.error || 'Unknown error'}`, "text-red-400");
+        log(`❌ Execution failed`, "text-red-400");
         addToHistory(intentId, "Failed");
       }
     } catch (e) {}
 
     if (attempts > 40) {
       clearInterval(interval);
-      log("Polling timeout (2 minutes)", "text-yellow-400");
+      log("Polling timeout", "text-yellow-400");
     }
   }, 3000);
 }
@@ -327,7 +365,7 @@ function addToHistory(id, status) {
 }
 
 // 初始化
-log("🚀 AstroBridge Intent Terminal is ready", "text-green-400");
+log("🚀 AstroBridge Enhanced Terminal ready — 支持 MetaMask + WalletConnect + Other Injected", "text-green-400");
 </script>
 </body>
 </html>
