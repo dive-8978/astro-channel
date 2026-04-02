@@ -28,8 +28,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  
+  <!-- ethers.js 必须在 script 之前加载 -->
   <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+
   <style>
     * { direction: ltr !important; unicode-bidi: normal !important; text-align: left !important; }
     :root { --bg: #02000d; --text: #e3f2fd; }
@@ -185,7 +188,7 @@ function log(text, colorClass = "text-gray-300") {
   statusLog.scrollTop = statusLog.scrollHeight;
 }
 
-// ==================== 钱包连接 ====================
+// ==================== 钱包连接（已修复） ====================
 document.getElementById('connectBtn').addEventListener('click', () => {
   document.getElementById('walletModal').classList.remove('hidden');
 });
@@ -197,8 +200,9 @@ document.getElementById('closeWallet').addEventListener('click', () => {
 // MetaMask
 document.querySelector('[data-provider="metamask"]').addEventListener('click', async () => {
   try {
+    if (typeof ethers === 'undefined') throw new Error("ethers library not loaded");
     if (!window.ethereum) throw new Error("MetaMask is not installed");
-    
+
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
@@ -211,10 +215,11 @@ document.querySelector('[data-provider="metamask"]').addEventListener('click', a
     log(`✅ MetaMask connected: ${userAddress.slice(0,8)}...`, "text-green-400");
   } catch (e) {
     alert("MetaMask connection failed: " + e.message);
+    console.error(e);
   }
 });
 
-// WalletConnect
+// WalletConnect（暂不支持完整功能）
 document.querySelector('[data-provider="walletconnect"]').addEventListener('click', () => {
   alert("WalletConnect support is coming soon.");
 });
@@ -234,7 +239,7 @@ document.getElementById('parseBtn').onclick = async () => {
 • Action: Transfer<br>
 • Chain: Sepolia<br>
 • Amount: 0.001 ETH<br>
-• Recipient: extracted from input<br>
+• Recipient: extracted<br>
 • Risk Score: Calculated by AiRiskEngine<br>
 • Robots Assigned: 3
     `;
@@ -243,7 +248,7 @@ document.getElementById('parseBtn').onclick = async () => {
   }, 1200);
 };
 
-// ==================== 执行意图（真实连接后端） ====================
+// ==================== 执行意图 ====================
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText) return alert("Please enter your intent");
@@ -281,7 +286,7 @@ document.getElementById('executeBtn').onclick = async () => {
   }
 };
 
-// 轮询执行状态
+// 轮询状态
 function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
