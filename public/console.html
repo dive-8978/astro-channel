@@ -64,6 +64,7 @@
 </head>
 <body>
 <div class="nebula-flow"></div>
+
 <nav class="glass-panel px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
   <div class="flex items-center gap-3 md:gap-6">
     <a href="index.html" class="text-2xl md:text-3xl text-genesis-blue hover:text-white transition"><i class="fas fa-home"></i></a>
@@ -124,6 +125,7 @@
       Speak your intent → AI parses → Robots route → On-chain execution
     </p>
   </div>
+
   <section class="glass-panel p-6 mb-8">
     <h3 id="intent-title" class="text-xl md:text-2xl font-orbitron neon-text mb-4">Your Intent</h3>
     <textarea id="intentInput" rows="4"
@@ -138,6 +140,7 @@
       </button>
     </div>
   </section>
+
   <div class="grid md:grid-cols-2 gap-6 mb-8">
     <div class="glass-panel p-6">
       <h4 id="parsed-title" class="text-xl font-orbitron mb-4 neon-text">AI Parsed Plan</h4>
@@ -152,6 +155,7 @@
       </div>
     </div>
   </div>
+
   <div class="grid md:grid-cols-2 gap-6 mb-8">
     <div class="glass-panel p-6">
       <h4 id="node-title" class="text-xl font-orbitron mb-4 neon-text">Node Routing</h4>
@@ -166,11 +170,13 @@
       </div>
     </div>
   </div>
+
   <div class="glass-panel p-6 mb-10">
     <h4 id="history-title" class="text-xl font-orbitron mb-4 neon-text">Recent Intent History</h4>
     <div id="historyList" class="space-y-2 max-h-[200px] overflow-y-auto text-sm"></div>
   </div>
 </main>
+
 <footer class="glass-panel py-6 text-center text-sm opacity-70 border-t border-genesis-blue/20">
   <p id="footer-text">© 2026 AstroBridge — Decentralized Intent Network</p>
 </footer>
@@ -206,11 +212,11 @@ const translations = {
     submitSuccess: "意图提交成功！", txConfirmed: "交易已在 Sepolia 网络确认！",
     langSwitched: "语言已切换为"
   },
-  es: { /* 你原来的 es 保持不变 */ navTitle: "ASTROBRIDGE", navSubtitle: "Red de Intenciones", modalTitle: "Conectar Wallet", modalSupport: "Soporta principales wallets globales", mainTitle: "Terminal de Ejecución de Intenciones AI", mainSubtitle: "Expresa tu intención → AI analiza → Robots enrutan → Ejecución en cadena", intentTitle: "Tu Intención", parseText: "Analizar con AI", executeText: "Ejecutar Intención", parsedTitle: "Plan Analizado por AI", logTitle: "Registro de Ejecución", nodeTitle: "Enrutamiento de Nodos", metricsTitle: "Métricas de Red", historyTitle: "Historial Reciente", footer: "© 2026 AstroBridge — Red de Intenciones Descentralizada", placeholder: "Ejemplo: Enviar 0.001 ETH a 0x123... en Sepolia", systemReady: "Sistema en espera", connectWallet: "Conectar Wallet", disconnect: "Desconectar", aiAnalyzing: "AI analizando tu intención...", aiParsed: "Análisis AI completado", submitSuccess: "¡Intención enviada!", txConfirmed: "¡Transacción confirmada en Sepolia!", langSwitched: "Idioma cambiado a" },
-  fr: { /* 你原来的 */ },
-  de: { /* 你原来的 */ },
-  ja: { /* 你原来的 */ },
-  ko: { /* 你原来的 */ }
+  es: { navTitle: "ASTROBRIDGE", navSubtitle: "Red de Intenciones", modalTitle: "Conectar Wallet", modalSupport: "Soporta principales wallets globales", mainTitle: "Terminal de Ejecución de Intenciones AI", mainSubtitle: "Expresa tu intención → AI analiza → Robots enrutan → Ejecución en cadena", intentTitle: "Tu Intención", parseText: "Analizar con AI", executeText: "Ejecutar Intención", parsedTitle: "Plan Analizado por AI", logTitle: "Registro de Ejecución", nodeTitle: "Enrutamiento de Nodos", metricsTitle: "Métricas de Red", historyTitle: "Historial Reciente", footer: "© 2026 AstroBridge — Red de Intenciones Descentralizada", placeholder: "Ejemplo: Enviar 0.001 ETH a 0x123... en Sepolia", systemReady: "Sistema en espera", connectWallet: "Conectar Wallet", disconnect: "Desconectar", aiAnalyzing: "AI analizando tu intención...", aiParsed: "Análisis AI completado", submitSuccess: "¡Intención enviada!", txConfirmed: "¡Transacción confirmada en Sepolia!", langSwitched: "Idioma cambiado a" },
+  fr: { /* 保持你原来的 */ },
+  de: { /* 保持你原来的 */ },
+  ja: { /* 保持你原来的 */ },
+  ko: { /* 保持你原来的 */ }
 };
 
 let currentLang = 'en';
@@ -236,8 +242,7 @@ function updateLanguage() {
   document.getElementById('history-title').textContent = t('historyTitle');
   document.getElementById('footer-text').textContent = t('footer');
   document.getElementById('intentInput').placeholder = t('placeholder');
-  
-  // 修复按钮文字跟随语言
+
   document.getElementById('connectBtn').innerHTML = `<i class="fas fa-wallet mr-1"></i> ${t('connectWallet')}`;
   document.getElementById('disconnectBtn').innerHTML = `<i class="fas fa-power-off"></i> ${t('disconnect')}`;
 }
@@ -275,10 +280,10 @@ function disconnectWallet() {
   document.getElementById('connectBtn').innerHTML = `<i class="fas fa-wallet mr-1"></i> ${t('connectWallet')}`;
   document.getElementById('disconnectBtn').classList.add('hidden');
   document.getElementById('executeBtn').disabled = true;
-  log("Wallet disconnected", "text-yellow-400");
+  log(t('disconnect') === "Disconnect" ? "Wallet disconnected" : "钱包已断开连接", "text-yellow-400");
 }
 
-// 钱包事件绑定
+// 钱包事件
 document.getElementById('connectBtn').addEventListener('click', () => document.getElementById('walletModal').classList.remove('hidden'));
 document.getElementById('closeWallet').addEventListener('click', () => document.getElementById('walletModal').classList.add('hidden'));
 document.getElementById('disconnectBtn').addEventListener('click', disconnectWallet);
