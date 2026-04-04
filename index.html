@@ -40,10 +40,7 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   color: #fff;
   transform: rotate(-90deg);
   transform-origin: left center;
-  text-shadow:
-    0 0 6px #4cc9f0,
-    0 0 12px #4cc9f0,
-    0 0 24px #4cc9f0;
+  text-shadow: 0 0 6px #4cc9f0, 0 0 12px #4cc9f0, 0 0 24px #4cc9f0;
   animation: flowBlue 3s infinite alternate ease-in-out;
   white-space: nowrap;
   pointer-events: none;
@@ -443,7 +440,17 @@ const hamburger=document.getElementById('hamburger');
 const navMenu=document.getElementById('navMenu');
 hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
 
-particlesJS("globe-particles",{particles:{number:{value:60},shape:{type:"circle"},color:{value:["#4cc9f0","#f72585","#ffffff"]},opacity:{value:0.6},size:{value:2.5},line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},move:{enable:true,speed:1}}});
+particlesJS("globe-particles",{
+  particles:{
+    number:{value:60},
+    shape:{type:"circle"},
+    color:{value:["#4cc9f0","#f72585","#ffffff"]},
+    opacity:{value:0.6},
+    size:{value:2.5},
+    line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},
+    move:{enable:true,speed:1}
+  }
+});
 
 document.addEventListener('click', function(e) {
   const navMenu = document.getElementById('navMenu');
@@ -564,108 +571,105 @@ particles.forEach(p=>{p.update();p.draw();});
 loop();
 
 const chains = [
-{name:"Ethereum",logo:"https://cryptologos.cc/logos/ethereum-eth-logo.png",api:"https://api.astrobridge.io/v1/port/eth"},
-{name:"BNB Chain",logo:"https://cryptologos.cc/logos/bnb-bnb-logo.png",api:"https://api.astrobridge.io/v1/port/bsc"},
-{name:"Bitcoin",logo:"https://cryptologos.cc/logos/bitcoin-btc-logo.png",api:"https://api.astrobridge.io/v1/port/btc"},
-{name:"Solana",logo:"https://cryptologos.cc/logos/solana-sol-logo.png",api:"https://api.astrobridge.io/v1/port/solana"},
-{name:"Avalanche",logo:"https://cryptologos.cc/logos/avalanche-avax-logo.png",api:"https://api.astrobridge.io/v1/port/avax"},
-{name:"Polygon",logo:"https://cryptologos.cc/logos/polygon-matic-logo.png",api:"https://api.astrobridge.io/v1/port/polygon"},
-{name:"Arbitrum",logo:"https://cryptologos.cc/logos/arbitrum-arb-logo.png",api:"https://api.astrobridge.io/v1/port/arbitrum"},
-{name:"Optimism",logo:"https://cryptologos.cc/logos/optimism-ethereum-op-logo.png",api:"https://api.astrobridge.io/v1/port/optimism"},
-{name:"Base",logo:"https://cryptologos.cc/logos/base-base-logo.png",api:"https://api.astrobridge.io/v1/port/base"},
-{name:"Aptos",logo:"https://cryptologos.cc/logos/aptos-apt-logo.png",api:"https://api.astrobridge.io/v1/port/aptos"},
-{name:"Sui",logo:"https://cryptologos.cc/logos/sui-sui-logo.png",api:"https://api.astrobridge.io/v1/port/sui"},
-{name:"Cosmos",logo:"https://cryptologos.cc/logos/cosmos-atom-logo.png",api:"https://api.astrobridge.io/v1/port/cosmos"},
-{name:"Osmosis",logo:"https://cryptologos.cc/logos/osmosis-osmo-logo.png",api:"https://api.astrobridge.io/v1/port/osmosis"},
-{name:"TRON",logo:"https://cryptologos.cc/logos/tron-trx-logo.png",api:"https://api.astrobridge.io/v1/port/tron"},
-{name:"Tezos",logo:"https://cryptologos.cc/logos/tezos-xtz-logo.png",api:"https://api.astrobridge.io/v1/port/tezos"},
-{name:"Cardano",logo:"https://cryptologos.cc/logos/cardano-ada-logo.png",api:"https://api.astrobridge.io/v1/port/cardano"},
-{name:"XRP",logo:"https://cryptologos.cc/logos/xrp-xrp-logo.png",api:"https://api.astrobridge.io/v1/port/xrp"},
-{name:"Stellar",logo:"https://cryptologos.cc/logos/stellar-xlm-logo.png",api:"https://api.astrobridge.io/v1/port/xlm"},
-{name:"Ton",logo:"https://cryptologos.cc/logos/toncoin-ton-logo.png",api:"https://api.astrobridge.io/v1/port/ton"},
-{name:"Dogecoin",logo:"https://cryptologos.cc/logos/dogecoin-doge-logo.png",api:"https://api.astrobridge.io/v1/port/doge"},
-{name:"Litecoin",logo:"https://cryptologos.cc/logos/litecoin-ltc-logo.png",api:"https://api.astrobridge.io/v1/port/ltc"},
-{name:"Fantom",logo:"https://cryptologos.cc/logos/fantom-ftm-logo.png",api:"https://api.astrobridge.io/v1/port/fantom"},
-{name:"Harmony",logo:"https://cryptologos.cc/logos/harmony-one-logo.png",api:"https://api.astrobridge.io/v1/port/harmony"},
-{name:"Celo",logo:"https://cryptologos.cc/logos/celo-celo-logo.png",api:"https://api.astrobridge.io/v1/port/celo"},
-{name:"Flow",logo:"https://cryptologos.cc/logos/flow-flow-logo.png",api:"https://api.astrobridge.io/v1/port/flow"},
-{name:"Immutable X",logo:"https://cryptologos.cc/logos/immutable-x-imx-logo.png",api:"https://api.astrobridge.io/v1/port/imx"},
-{name:"ZKsync",logo:"https://cryptologos.cc/logos/zksync-era-logo.png",api:"https://api.astrobridge.io/v1/port/zksync"},
-{name:"StarkNet",logo:"https://cryptologos.cc/logos/starknet-strk-logo.png",api:"https://api.astrobridge.io/v1/port/starknet"},
-{name:"Scroll",logo:"https://scroll.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/scroll"},
-{name:"Linea",logo:"https://linea.build/favicon.ico",api:"https://api.astrobridge.io/v1/port/linea"},
-{name:"Manta",logo:"https://cryptologos.cc/logos/manta-manta-logo.png",api:"https://api.astrobridge.io/v1/port/manta"},
-{name:"Kava",logo:"https://cryptologos.cc/logos/kava-kava-logo.png",api:"https://api.astrobridge.io/v1/port/kava"},
-{name:"KCC",logo:"https://cryptologos.cc/logos/kucoin-community-chain-kcc-logo.png",api:"https://api.astrobridge.io/v1/port/kcc"},
-{name:"OKXChain",logo:"https://cryptologos.cc/logos/okx-chain-logo.png",api:"https://api.astrobridge.io/v1/port/okx"},
-{name:"HECO",logo:"https://cryptologos.cc/logos/huobi-token-ht-logo.png",api:"https://api.astrobridge.io/v1/port/heco"},
-{name:"Bittorrent",logo:"https://cryptologos.cc/logos/bittorrent-btt-logo.png",api:"https://api.astrobridge.io/v1/port/btt"},
-{name:"Chiliz",logo:"https://cryptologos.cc/logos/chiliz-chz-logo.png",api:"https://api.astrobridge.io/v1/port/chz"},
-{name:"The Sandbox",logo:"https://cryptologos.cc/logos/the-sandbox-sand-logo.png",api:"https://api.astrobridge.io/v1/port/sandbox"},
-{name:"Decentraland",logo:"https://cryptologos.cc/logos/decentraland-mana-logo.png",api:"https://api.astrobridge.io/v1/port/decentraland"},
-{name:"Axie Infinity",logo:"https://cryptologos.cc/logos/axie-infinity-axs-logo.png",api:"https://api.astrobridge.io/v1/port/axie"},
-{name:"Magic Eden",logo:"https://magiceden.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/magiceden"},
-{name:"OpenSea",logo:"https://opensea.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/opensea"},
-{name:"Blur",logo:"https://blur.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/blur"},
-{name:"LooksRare",logo:"https://looksrare.org/favicon.ico",api:"https://api.astrobridge.io/v1/port/looksrare"},
-{name:"X2Y2",logo:"https://x2y2.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/x2y2"},
-{name:"Uniswap",logo:"https://cryptologos.cc/logos/uniswap-uni-logo.png",api:"https://api.astrobridge.io/v1/port/uniswap"},
-{name:"PancakeSwap",logo:"https://cryptologos.cc/logos/pancakeswap-cake-logo.png",api:"https://api.astrobridge.io/v1/port/pancake"},
-{name:"SushiSwap",logo:"https://cryptologos.cc/logos/sushiswap-sushi-logo.png",api:"https://api.astrobridge.io/v1/port/sushi"},
-{name:"Curve",logo:"https://cryptologos.cc/logos/curve-finance-crv-logo.png",api:"https://api.astrobridge.io/v1/port/curve"},
-{name:"Aave",logo:"https://cryptologos.cc/logos/aave-aave-logo.png",api:"https://api.astrobridge.io/v1/port/aave"},
-{name:"Compound",logo:"https://cryptologos.cc/logos/compound-comp-logo.png",api:"https://api.astrobridge.io/v1/port/compound"},
-{name:"MakerDAO",logo:"https://cryptologos.cc/logos/makerdao-mkr-logo.png",api:"https://api.astrobridge.io/v1/port/maker"},
-{name:"Arweave",logo:"https://cryptologos.cc/logos/arweave-ar-logo.png",api:"https://api.astrobridge.io/v1/port/arweave"},
-{name:"Filecoin",logo:"https://cryptologos.cc/logos/filecoin-fil-logo.png",api:"https://api.astrobridge.io/v1/port/filecoin"},
-{name:"Chainlink",logo:"https://cryptologos.cc/logos/chainlink-link-logo.png",api:"https://api.astrobridge.io/v1/port/chainlink"},
-{name:"The Graph",logo:"https://cryptologos.cc/logos/the-graph-grt-logo.png",api:"https://api.astrobridge.io/v1/port/graph"},
-{name:"Band Protocol",logo:"https://cryptologos.cc/logos/band-protocol-band-logo.png",api:"https://api.astrobridge.io/v1/port/band"},
-{name:"Qtum",logo:"https://cryptologos.cc/logos/qtum-qtum-logo.png",api:"https://api.astrobridge.io/v1/port/qtum"},
-{name:"NEO",logo:"https://cryptologos.cc/logos/neo-neo-logo.png",api:"https://api.astrobridge.io/v1/port/neo"},
-{name:"Ontology",logo:"https://cryptologos.cc/logos/ontology-ont-logo.png",api:"https://api.astrobridge.io/v1/port/ont"},
-{name:"Waves",logo:"https://cryptologos.cc/logos/waves-waves-logo.png",api:"https://api.astrobridge.io/v1/port/waves"},
-{name:"Zilliqa",logo:"https://cryptologos.cc/logos/zilliqa-zil-logo.png",api:"https://api.astrobridge.io/v1/port/zil"},
-{name:"Elrond",logo:"https://cryptologos.cc/logos/elrond-egld-logo.png",api:"https://api.astrobridge.io/v1/port/egld"},
-{name:"Algorand",logo:"https://cryptologos.cc/logos/algorand-algo-logo.png",api:"https://api.astrobridge.io/v1/port/algo"},
-{name:"Hedera",logo:"https://cryptologos.cc/logos/hedera-hbar-logo.png",api:"https://api.astrobridge.io/v1/port/hbar"},
-{name:"IOTA",logo:"https://cryptologos.cc/logos/iota-miota-logo.png",api:"https://api.astrobridge.io/v1/port/iota"},
-{name:"Nano",logo:"https://cryptologos.cc/logos/nano-nano-logo.png",api:"https://api.astrobridge.io/v1/port/nano"},
-{name:"Monero",logo:"https://cryptologos.cc/logos/monero-xmr-logo.png",api:"https://api.astrobridge.io/v1/port/xmr"},
-{name:"Zcash",logo:"https://cryptologos.cc/logos/zcash-zec-logo.png",api:"https://api.astrobridge.io/v1/port/zec"},
-{name:"Dash",logo:"https://cryptologos.cc/logos/dash-dash-logo.png",api:"https://api.astrobridge.io/v1/port/dash"},
-{name:"Ravencoin",logo:"https://cryptologos.cc/logos/ravencoin-rvn-logo.png",api:"https://api.astrobridge.io/v1/port/rvn"},
-{name:"Kusama",logo:"https://cryptologos.cc/logos/kusama-ksm-logo.png",api:"https://api.astrobridge.io/v1/port/ksm"},
-{name:"Polkadot",logo:"https://cryptologos.cc/logos/polkadot-dot-logo.png",api:"https://api.astrobridge.io/v1/port/dot"},
-{name:"Acala",logo:"https://cryptologos.cc/logos/acala-aca-logo.png",api:"https://api.astrobridge.io/v1/port/acala"},
-{name:"Karura",logo:"https://cryptologos.cc/logos/karura-kar-logo.png",api:"https://api.astrobridge.io/v1/port/karura"},
-{name:"Astar",logo:"https://cryptologos.cc/logos/astar-astr-logo.png",api:"https://api.astrobridge.io/v1/port/astar"},
-{name:"Shiden",logo:"https://cryptologos.cc/logos/shiden-sdn-logo.png",api:"https://api.astrobridge.io/v1/port/shiden"},
-{name:"Moonbeam",logo:"https://cryptologos.cc/logos/moonbeam-glmr-logo.png",api:"https://api.astrobridge.io/v1/port/moonbeam"},
-{name:"Moonriver",logo:"https://cryptologos.cc/logos/moonriver-movr-logo.png",api:"https://api.astrobridge.io/v1/port/moonriver"},
-{name:"Shibarium",logo:"https://cryptologos.cc/logos/shiba-inu-shib-logo.png",api:"https://api.astrobridge.io/v1/port/shibarium"},
-{name:"Core",logo:"https://cryptologos.cc/logos/core-core-logo.png",api:"https://api.astrobridge.io/v1/port/core"},
-{name:"EOS",logo:"https://cryptologos.cc/logos/eos-eos-logo.png",api:"https://api.astrobridge.io/v1/port/eos"},
-{name:"WAX",logo:"https://cryptologos.cc/logos/wax-waxp-logo.png",api:"https://api.astrobridge.io/v1/port/wax"},
-{name:"Velas",logo:"https://cryptologos.cc/logos/velas-vlx-logo.png",api:"https://api.astrobridge.io/v1/port/vlx"},
-{name:"Syscoin",logo:"https://cryptologos.cc/logos/syscoin-sys-logo.png",api:"https://api.astrobridge.io/v1/port/sys"},
-{name:"Horizen",logo:"https://cryptologos.cc/logos/horizen-zen-logo.png",api:"https://api.astrobridge.io/v1/port/zen"},
-{name:"Decred",logo:"https://cryptologos.cc/logos/decred-dcr-logo.png",api:"https://api.astrobridge.io/v1/port/dcr"},
-{name:"Komodo",logo:"https://cryptologos.cc/logos/komodo-kmd-logo.png",api:"https://api.astrobridge.io/v1/port/kmd"}
+{name:"Ethereum",api:"https://api.astrobridge.io/v1/port/eth"},
+{name:"BNB Chain",api:"https://api.astrobridge.io/v1/port/bsc"},
+{name:"Bitcoin",api:"https://api.astrobridge.io/v1/port/btc"},
+{name:"Solana",api:"https://api.astrobridge.io/v1/port/solana"},
+{name:"Avalanche",api:"https://api.astrobridge.io/v1/port/avax"},
+{name:"Polygon",api:"https://api.astrobridge.io/v1/port/polygon"},
+{name:"Arbitrum",api:"https://api.astrobridge.io/v1/port/arbitrum"},
+{name:"Optimism",api:"https://api.astrobridge.io/v1/port/optimism"},
+{name:"Base",api:"https://api.astrobridge.io/v1/port/base"},
+{name:"Aptos",api:"https://api.astrobridge.io/v1/port/aptos"},
+{name:"Sui",api:"https://api.astrobridge.io/v1/port/sui"},
+{name:"Cosmos",api:"https://api.astrobridge.io/v1/port/cosmos"},
+{name:"Osmosis",api:"https://api.astrobridge.io/v1/port/osmosis"},
+{name:"TRON",api:"https://api.astrobridge.io/v1/port/tron"},
+{name:"Tezos",api:"https://api.astrobridge.io/v1/port/tezos"},
+{name:"Cardano",api:"https://api.astrobridge.io/v1/port/cardano"},
+{name:"XRP",api:"https://api.astrobridge.io/v1/port/xrp"},
+{name:"Stellar",api:"https://api.astrobridge.io/v1/port/xlm"},
+{name:"Ton",api:"https://api.astrobridge.io/v1/port/ton"},
+{name:"Dogecoin",api:"https://api.astrobridge.io/v1/port/doge"},
+{name:"Litecoin",api:"https://api.astrobridge.io/v1/port/ltc"},
+{name:"Fantom",api:"https://api.astrobridge.io/v1/port/fantom"},
+{name:"Harmony",api:"https://api.astrobridge.io/v1/port/harmony"},
+{name:"Celo",api:"https://api.astrobridge.io/v1/port/celo"},
+{name:"Flow",api:"https://api.astrobridge.io/v1/port/flow"},
+{name:"Immutable X",api:"https://api.astrobridge.io/v1/port/imx"},
+{name:"ZKsync",api:"https://api.astrobridge.io/v1/port/zksync"},
+{name:"StarkNet",api:"https://api.astrobridge.io/v1/port/starknet"},
+{name:"Scroll",api:"https://api.astrobridge.io/v1/port/scroll"},
+{name:"Linea",api:"https://api.astrobridge.io/v1/port/linea"},
+{name:"Manta",api:"https://api.astrobridge.io/v1/port/manta"},
+{name:"Kava",api:"https://api.astrobridge.io/v1/port/kava"},
+{name:"KCC",api:"https://api.astrobridge.io/v1/port/kcc"},
+{name:"OKXChain",api:"https://api.astrobridge.io/v1/port/okx"},
+{name:"HECO",api:"https://api.astrobridge.io/v1/port/heco"},
+{name:"Bittorrent",api:"https://api.astrobridge.io/v1/port/btt"},
+{name:"Chiliz",api:"https://api.astrobridge.io/v1/port/chz"},
+{name:"The Sandbox",api:"https://api.astrobridge.io/v1/port/sandbox"},
+{name:"Decentraland",api:"https://api.astrobridge.io/v1/port/decentraland"},
+{name:"Axie Infinity",api:"https://api.astrobridge.io/v1/port/axie"},
+{name:"Magic Eden",api:"https://api.astrobridge.io/v1/port/magiceden"},
+{name:"OpenSea",api:"https://api.astrobridge.io/v1/port/opensea"},
+{name:"Blur",api:"https://api.astrobridge.io/v1/port/blur"},
+{name:"LooksRare",api:"https://api.astrobridge.io/v1/port/looksrare"},
+{name:"X2Y2",api:"https://api.astrobridge.io/v1/port/x2y2"},
+{name:"Uniswap",api:"https://api.astrobridge.io/v1/port/uniswap"},
+{name:"PancakeSwap",api:"https://api.astrobridge.io/v1/port/pancake"},
+{name:"SushiSwap",api:"https://api.astrobridge.io/v1/port/sushi"},
+{name:"Curve",api:"https://api.astrobridge.io/v1/port/curve"},
+{name:"Aave",api:"https://api.astrobridge.io/v1/port/aave"},
+{name:"Compound",api:"https://api.astrobridge.io/v1/port/compound"},
+{name:"MakerDAO",api:"https://api.astrobridge.io/v1/port/maker"},
+{name:"Arweave",api:"https://api.astrobridge.io/v1/port/arweave"},
+{name:"Filecoin",api:"https://api.astrobridge.io/v1/port/filecoin"},
+{name:"Chainlink",api:"https://api.astrobridge.io/v1/port/chainlink"},
+{name:"The Graph",api:"https://api.astrobridge.io/v1/port/graph"},
+{name:"Band Protocol",api:"https://api.astrobridge.io/v1/port/band"},
+{name:"Qtum",api:"https://api.astrobridge.io/v1/port/qtum"},
+{name:"NEO",api:"https://api.astrobridge.io/v1/port/neo"},
+{name:"Ontology",api:"https://api.astrobridge.io/v1/port/ont"},
+{name:"Waves",api:"https://api.astrobridge.io/v1/port/waves"},
+{name:"Zilliqa",api:"https://api.astrobridge.io/v1/port/zil"},
+{name:"Elrond",api:"https://api.astrobridge.io/v1/port/egld"},
+{name:"Algorand",api:"https://api.astrobridge.io/v1/port/algo"},
+{name:"Hedera",api:"https://api.astrobridge.io/v1/port/hbar"},
+{name:"IOTA",api:"https://api.astrobridge.io/v1/port/iota"},
+{name:"Nano",api:"https://api.astrobridge.io/v1/port/nano"},
+{name:"Monero",api:"https://api.astrobridge.io/v1/port/xmr"},
+{name:"Zcash",api:"https://api.astrobridge.io/v1/port/zec"},
+{name:"Dash",api:"https://api.astrobridge.io/v1/port/dash"},
+{name:"Ravencoin",api:"https://api.astrobridge.io/v1/port/rvn"},
+{name:"Kusama",api:"https://api.astrobridge.io/v1/port/ksm"},
+{name:"Polkadot",api:"https://api.astrobridge.io/v1/port/dot"},
+{name:"Acala",api:"https://api.astrobridge.io/v1/port/acala"},
+{name:"Karura",api:"https://api.astrobridge.io/v1/port/karura"},
+{name:"Astar",api:"https://api.astrobridge.io/v1/port/astar"},
+{name:"Shiden",api:"https://api.astrobridge.io/v1/port/shiden"},
+{name:"Moonbeam",api:"https://api.astrobridge.io/v1/port/moonbeam"},
+{name:"Moonriver",api:"https://api.astrobridge.io/v1/port/moonriver"},
+{name:"Shibarium",api:"https://api.astrobridge.io/v1/port/shibarium"},
+{name:"Core",api:"https://api.astrobridge.io/v1/port/core"},
+{name:"EOS",api:"https://api.astrobridge.io/v1/port/eos"},
+{name:"WAX",api:"https://api.astrobridge.io/v1/port/wax"},
+{name:"Velas",api:"https://api.astrobridge.io/v1/port/vlx"},
+{name:"Syscoin",api:"https://api.astrobridge.io/v1/port/sys"},
+{name:"Horizen",api:"https://api.astrobridge.io/v1/port/zen"},
+{name:"Decred",api:"https://api.astrobridge.io/v1/port/dcr"},
+{name:"Komodo",api:"https://api.astrobridge.io/v1/port/kmd"}
 ];
 
 const grid = document.getElementById('chainGrid');
 chains.forEach(chain => {
   const card = document.createElement('div');
   card.className = 'chain-card';
-  
-  // 【这里是唯一修改的地方】添加了 onerror 事件
-  // 作用：当原链接加载失败时，自动使用 SVG 画一个蓝色的圆，里面写上链名的首字母，保持美观不破图
-  const fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234cc9f0' opacity='0.15'/><text x='50' y='55' font-family='Inter, sans-serif' font-size='42' fill='%234cc9f0' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>${chain.name.charAt(0)}</text></svg>`;
-
+  const first = chain.name.charAt(0);
+  const svg = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='rgba(76,201,240,0.15)'/><text x='50' y='55' font-size='42' fill='#4cc9f0' text-anchor='middle' dominant-baseline='middle' font-weight='bold' font-family="Inter,sans-serif">${first}</text></svg>`;
   card.innerHTML = `
     <div class="chain-logo">
-      <img src="${chain.logo}" alt="${chain.name}" loading="lazy" onerror="this.onerror=null; this.src='${fallbackSvg}';">
+      <img src="${svg}" alt="${chain.name}">
     </div>
     <div class="chain-name">${chain.name}</div>
     <div class="chain-status">Connected ✅</div>
