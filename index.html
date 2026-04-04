@@ -260,10 +260,10 @@ nav{
   gap: 20px;
 }
 
-/* 方块样式 */
+/* 方块样式 - 高亮亮蓝色 */
 .chain-block {
-  background: rgba(76, 201, 240, 0.1);
-  border: 1px solid rgba(76, 201, 240, 0.3);
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(14, 165, 233, 0.6);
   border-radius: 8px;
   height: 70px;
   display: flex;
@@ -274,9 +274,8 @@ nav{
   font-size: 14px;
   cursor: pointer;
   transition: all 0.25s ease;
-  animation: rowFlow 2.4s infinite ease-in-out;
+  animation: rowFlow 2.2s infinite ease-in-out;
 }
-/* 轮流亮 */
 .chain-grid > div:nth-child(4n+1) { animation-delay: 0s; }
 .chain-grid > div:nth-child(4n+2) { animation-delay: 0.2s; }
 .chain-grid > div:nth-child(4n+3) { animation-delay: 0.4s; }
@@ -284,21 +283,20 @@ nav{
 
 @keyframes rowFlow {
   0%, 100% {
-    background: rgba(76, 201, 240, 0.1);
-    box-shadow: none;
+    background: rgba(14, 165, 233, 0.15);
+    box-shadow: 0 0 8px rgba(14, 165, 233, 0.3);
   }
   50% {
-    background: rgba(76, 201, 240, 0.25);
-    box-shadow: 0 0 12px rgba(76, 201, 240, 0.4);
+    background: linear-gradient(135deg, #0ea5e9, #4cc9f0);
+    box-shadow: 0 0 28px rgba(14, 165, 233, 0.9);
   }
 }
 
-/* 鼠标悬浮高亮 */
 .chain-block:hover {
-  background: #4cc9f0;
-  color: #020112;
-  box-shadow: 0 0 20px rgba(76, 201, 240, 0.8);
-  transform: scale(1.03);
+  background: linear-gradient(135deg, #0ea5e9, #4cc9f0);
+  color: #fff;
+  box-shadow: 0 0 35px rgba(14, 165, 233, 1);
+  transform: scale(1.04);
 }
 
 .card-grid{
@@ -389,7 +387,6 @@ footer{
 <p class="future-line" style="margin-top: 30px;">
 Building the infrastructure that will pave the road for the next decade of blockchain.
 </p>
-
 </div>
 
 <div class="globe-container">
@@ -434,7 +431,6 @@ Building the infrastructure that will pave the road for the next decade of block
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-
 const hamburger=document.getElementById('hamburger');
 const navMenu=document.getElementById('navMenu');
 hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
@@ -568,6 +564,7 @@ ctx.fillRect(0,0,w,h);
 particles.forEach(p=>{p.update();p.draw();});
 }
 loop();
+
 const chains = [
   "Ethereum", "BNB Chain", "Bitcoin", "Solana", "Avalanche",
   "Polygon", "Arbitrum", "Optimism", "Base", "Aptos",
@@ -610,29 +607,7 @@ const chains = [
   "Energy Web Chain", "Elastos Smart Chain", "ThunderCore",
   "Odyssey Chain", "Carbon EVM", "Acria IntelliChain",
   "Ennothem", "XDC", "Openpiece", "DCHAIN", "Doma",
-  "inEVM", "Xone", "MTT Network", "TBWG Chain", "Fenerbahçe Fan Token",
-  "Paris Saint-Germain Fan Token", "FC Barcelona Fan Token", "Juventus Fan Token",
-  "AS Roma Fan Token", "Galatasaray Fan Token", "Manchester City Fan Token",
-  "AC Milan Fan Token", "Inter Fan Token", "Liverpool Fan Token",
-  "Arsenal Fan Token", "Chelsea Fan Token", "Tottenham Hotspur Fan Token",
-  "Manchester United Fan Token", "Bayern Munich Fan Token", "Borussia Dortmund Fan Token",
-  "Real Madrid Fan Token", "Atlético Madrid Fan Token", "Valencia Fan Token",
-  "Sevilla Fan Token", "Napoli Fan Token", "Lazio Fan Token", "Fiorentina Fan Token",
-  "Torino Fan Token", "Udinese Fan Token", "Sampdoria Fan Token", "Cagliari Fan Token",
-  "Bologna Fan Token", "Atalanta Fan Token", "Verona Fan Token", "Empoli Fan Token",
-  "Salernitana Fan Token", "Spezia Fan Token", "Cremonese Fan Token", "Lecce Fan Token",
-  "Monza Fan Token", "Como Fan Token", "Brescia Fan Token", "Palermo Fan Token",
-  "Perugia Fan Token", "Venezia Fan Token", "Padova Fan Token", "Triestina Fan Token",
-  "Cittadella Fan Token", "SPAL Fan Token", "Pisa Fan Token", "Pescara Fan Token",
-  "Frosinone Fan Token", "Reggiana Fan Token", "Modena Fan Token", "Crotone Fan Token",
-  "Virtus Entella Fan Token", "Südtirol Fan Token", "Renate Fan Token", "Pro Vercelli Fan Token",
-  "Alessandria Fan Token", "Novara Fan Token", "Pavia Fan Token", "Lecco Fan Token",
-  "Monza Fan Token", "Como Fan Token", "Brescia Fan Token", "Palermo Fan Token",
-  "Perugia Fan Token", "Venezia Fan Token", "Padova Fan Token", "Triestina Fan Token",
-  "Cittadella Fan Token", "SPAL Fan Token", "Pisa Fan Token", "Pescara Fan Token",
-  "Frosinone Fan Token", "Reggiana Fan Token", "Modena Fan Token", "Crotone Fan Token",
-  "Virtus Entella Fan Token", "Südtirol Fan Token", "Renate Fan Token", "Pro Vercelli Fan Token",
-  "Alessandria Fan Token", "Novara Fan Token", "Pavia Fan Token", "Lecco Fan Token"
+  "inEVM", "Xone", "MTT Network", "TBWG Chain"
 ];
 
 const chainGrid = document.getElementById('chainGrid');
