@@ -262,7 +262,7 @@ nav{
 
 /* 方块样式 - 高亮亮蓝色 */
 .chain-block {
-  background: rgba(14, 165, 233, 0.15);
+  background: rgba(14, 165, 233, 0.5);
   border: 1px solid rgba(14, 165, 233, 0.6);
   border-radius: 8px;
   height: 70px;
@@ -282,14 +282,20 @@ nav{
 .chain-grid > div:nth-child(4n+4) { animation-delay: 0.6s; }
 
 @keyframes rowFlow {
-  0%, 100% {
-    background: rgba(14, 165, 233, 0.15);
-    box-shadow: 0 0 8px rgba(14, 165, 233, 0.3);
-  }
-  50% {
-    background: linear-gradient(135deg, #0ea5e9, #4cc9f0);
-    box-shadow: 0 0 28px rgba(14, 165, 233, 0.9);
-  }
+0%, 100% { opacity: 0.4; }
+5% { opacity: 1; }
+}
+
+.chain-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+gap: 20px;
+position: relative;
+}
+
+.chain-block {
+opacity: 0.4;
+transition: opacity 0.3s ease;
 }
 
 .chain-block:hover {
