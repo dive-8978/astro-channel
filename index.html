@@ -4,70 +4,364 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AstroBridge - Global Intent Network</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,600,700,800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 body{background:#020112;color:#fff;overflow-x:hidden}
-#sphereCanvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;opacity:0.8;background:#020112}
-#bridgeBuildingCanvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1;pointer-events:none}
-#progressText{position:fixed;z-index:2;left:calc(75vw + 60px);top:48vh;font-size:20px;font-weight:700;color:#fff;transform:rotate(-90deg);transform-origin:left center;text-shadow:0 0 6px #4cc9f0,0 0 12px #4cc9f0,0 0 24px #4cc9f0;animation:flowBlue 3s infinite alternate ease-in-out;white-space:nowrap;pointer-events:none}
-@keyframes flowBlue{0%{text-shadow:0 0 6px #4cc9f0,0 0 12px #4cc9f0,0 0 24px #4cc9f0}100%{text-shadow:0 0 10px #4cc9f0,0 0 20px #4cc9f0,0 0 40px #4cc9f0}}
+
+#sphereCanvas{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:0;
+  opacity:0.8;
+  background:#020112;
+}
+
+#bridgeBuildingCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#progressText {
+  position: fixed;
+  z-index: 2;
+  left: calc(75vw + 60px);
+  top: 48vh;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  transform: rotate(-90deg);
+  transform-origin: left center;
+  text-shadow:
+    0 0 6px #4cc9f0,
+    0 0 12px #4cc9f0,
+    0 0 24px #4cc9f0;
+  animation: flowBlue 3s infinite alternate ease-in-out;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@keyframes flowBlue {
+  0%   { text-shadow: 0 0 6px #4cc9f0, 0 0 12px #4cc9f0, 0 0 24px #4cc9f0; }
+  100% { text-shadow: 0 0 10px #4cc9f0, 0 0 20px #4cc9f0, 0 0 40px #4cc9f0; }
+}
+
 .container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:80px;position:relative;z-index:999}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:16px}
-.hamburger{display:flex;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer}
-.hamburger span{width:28px;height:2px;background:#4cc9f0;border-radius:2px}
-.nav-menu{position:absolute;top:100%;right:0;background:#0a1028;border:1px solid rgba(76,201,240,0.2);border-radius:16px;padding:24px;width:220px;display:flex;flex-direction:column;gap:14px;z-index:999}
-.nav-menu a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s;white-space:nowrap}
-.nav-menu a:hover{color:#4cc9f0}
-.nav-menu.hidden{display:none}
-.x-button{width:36px;height:36px;border-radius:50%;background:#121a33;border:1px solid #2a3558;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.2s}
-.x-button:hover{background:#4cc9f0;color:#000}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:80px;
+  position:relative;
+  z-index:999;
+}
+
+.logo{
+  font-size:2rem;
+  font-weight:800;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.hamburger{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:28px;
+  height:2px;
+  background:#4cc9f0;
+  border-radius:2px;
+}
+
+.nav-menu{
+  position:absolute;
+  top:100%;
+  right:0;
+  background:#0a1028;
+  border:1px solid rgba(76,201,240,0.2);
+  border-radius:16px;
+  padding:24px;
+  width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  z-index:999;
+}
+
+.nav-menu a{
+  color:#a8dadc;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+  white-space:nowrap;
+}
+
+.nav-menu a:hover{
+  color:#4cc9f0;
+}
+
+.nav-menu.hidden{
+  display:none;
+}
+
+.x-button{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#121a33;
+  border:1px solid #2a3558;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.x-button:hover{
+  background:#4cc9f0;
+  color:#000;
+}
+
 .hero{text-align:center;margin-bottom:80px}
-.hero h1{font-size:4rem;font-weight:800;line-height:1.2;margin-bottom:20px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{font-size:1.2rem;color:#a8dadc;max-width:600px;margin:0 auto 40px}
-.buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
-.btn{padding:16px 36px;border-radius:12px;font-weight:600;text-decoration:none;transition:.3s}
-.btn.primary{background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff}
-.btn.secondary{background:rgba(76,201,240,0.1);color:#4cc9f0;border:1px solid #4cc9f0}
-.btn:hover{transform:scale(1.05)}
-.future-line{margin-top:28px;font-size:1.1rem;color:#4cc9f0;opacity:0.9}
+
+.hero h1{
+  font-size:4rem;
+  font-weight:800;
+  line-height:1.2;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  font-size:1.2rem;
+  color:#a8dadc;
+  max-width:600px;
+  margin:0 auto 40px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:16px 36px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn.primary{
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  color:#fff;
+}
+
+.btn.secondary{
+  background:rgba(76,201,240,0.1);
+  color:#4cc9f0;
+  border:1px solid #4cc9f0;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.future-line{
+  margin-top:28px;
+  font-size:1.1rem;
+  color:#4cc9f0;
+  opacity:0.9;
+}
+
 .section{margin-bottom:60px}
-.section h2{font-size:2.2rem;font-weight:700;margin-bottom:20px;color:#fff}
-.section p{color:#a8dadc;font-size:1.1rem;line-height:1.7}
-.globe-container{position:relative;width:100%;height:360px;margin:60px 0;display:flex;align-items:center;justify-content:center;flex-direction:column}
-#globe-particles{position:absolute;width:100%;height:100%;z-index:1}
-.globe-text{position:relative;z-index:2;text-align:center}
-.globe-text h2{font-size:2.4rem;font-weight:700;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
-.globe-text p{font-size:1.2rem;color:#c4f1ff}
-.chain-portal-section{margin:50px 0}
-.chain-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:20px}
-.chain-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:22px 14px;text-align:center;cursor:pointer;transition:all 0.3s ease;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:160px}
-.chain-card:hover{transform:translateY(-4px);border-color:#4cc9f0;box-shadow:0 8px 24px rgba(76,201,240,0.15)}
-.chain-logo{width:48px;height:48px;margin-bottom:12px;display:flex;align-items:center;justify-content:center}
-.chain-logo img{width:100%;height:100%;object-fit:contain}
-.chain-name{font-size:14px;font-weight:600;color:#e0e0e0}
-.chain-status{font-size:11px;color:#28d9a7;margin-top:4px}
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:24px}
-.card h3{color:#4cc9f0;margin-bottom:10px}
-.card p{color:#a8dadc}
-footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc}
-@media(max-width:768px){.hero h1{font-size:2.4rem}.card-grid,.chain-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}.globe-container{height:300px}}
+
+.section h2{
+  font-size:2.2rem;
+  font-weight:700;
+  margin-bottom:20px;
+  color:#fff;
+}
+
+.section p{
+  color:#a8dadc;
+  font-size:1.1rem;
+  line-height:1.7;
+}
+
+.globe-container{
+  position:relative;
+  width:100%;
+  height:360px;
+  margin:60px 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+#globe-particles{
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index:1;
+}
+
+.globe-text{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.globe-text h2{
+  font-size:2.4rem;
+  font-weight:700;
+  background:linear-gradient(90deg,#4cc9f0,#f72585);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:10px;
+}
+
+.globe-text p{
+  font-size:1.2rem;
+  color:#c4f1ff;
+}
+
+.chain-portal-section {
+  margin: 50px 0;
+}
+.chain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+.chain-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(76,201,240,0.15);
+  border-radius: 16px;
+  padding: 22px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+}
+.chain-card:hover {
+  transform: translateY(-4px);
+  border-color: #4cc9f0;
+  box-shadow: 0 8px 24px rgba(76, 201, 240, 0.15);
+}
+.chain-logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chain-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.chain-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+.chain-status {
+  font-size: 11px;
+  color: #28d9a7;
+  margin-top: 4px;
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(76,201,240,0.15);
+  border-radius:16px;
+  padding:24px;
+}
+
+.card h3{
+  color:#4cc9f0;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#a8dadc;
+}
+
+footer{
+  text-align:center;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  color:#a8dadc;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2.4rem}
+.card-grid,.chain-grid{grid-template-columns:repeat(auto-fill, minmax(120px, 1fr))}
+.globe-container{height:300px}
+}
 </style>
 </head>
+
 <body>
+
 <canvas id="sphereCanvas"></canvas>
 <canvas id="bridgeBuildingCanvas"></canvas>
 <div id="progressText">Project Progress</div>
+
 <div class="container">
+
 <nav>
 <div class="logo">AstroBridge</div>
+
 <div class="nav-right">
-<div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
 <a href="https://x.com/Astro___Channel" target="_blank" class="x-button">𝕏</a>
 </div>
+
 <div class="nav-menu hidden" id="navMenu">
 <a href="vision.html">Vision</a>
 <a href="technology.html">Technology</a>
@@ -86,15 +380,22 @@ footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,
 <a href="engineering-structure.html">Engineering Structure</a>
 </div>
 </nav>
+
 <div class="hero">
 <h1>Global Intent Network</h1>
 <p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p>
+
 <div class="buttons">
 <a href="global-console.html" class="btn primary">Global Console</a>
 <a href="console.html" class="btn secondary">Demo Console</a>
 </div>
-<p class="future-line">Building the infrastructure that will pave the road for the next decade of blockchain.</p>
+
+<p class="future-line" style="margin-top: 30px;">
+Building the infrastructure that will pave the road for the next decade of blockchain.
+</p>
+
 </div>
+
 <div class="globe-container">
 <div id="globe-particles"></div>
 <div class="globe-text">
@@ -102,27 +403,167 @@ footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,
 <p>Truly Universal Chain Compatibility Across the Globe</p>
 </div>
 </div>
-<div class="chain-portal-section"><div class="chain-grid" id="chainGrid"></div></div>
+
+<div class="chain-portal-section">
+  <div class="chain-grid" id="chainGrid"></div>
+</div>
+
 <div class="section">
 <h2>What is AstroBridge</h2>
 <p>AstroBridge connects all chains, assets, and robots into one intent-driven network. You only need to say what you want, and AI does the rest.</p>
 </div>
+
 <div class="card-grid">
-<div class="card"><h3>AI Intent Routing</h3><p>Autonomous cross-chain execution with best price, speed, and security.</p></div>
-<div class="card"><h3>Global Network</h3><p>Decentralized nodes worldwide for ultra-low latency and reliability.</p></div>
-<div class="card"><h3>Robot Economy</h3><p>Built for AI agents to operate independently across chains 24/7.</p></div>
+<div class="card">
+<h3>AI Intent Routing</h3>
+<p>Autonomous cross-chain execution with best price, speed, and security.</p>
 </div>
-<footer><p>© 2026 AstroBridge | Global Intent Network</p></footer>
+
+<div class="card">
+<h3>Global Network</h3>
+<p>Decentralized nodes worldwide for ultra-low latency and reliability.</p>
 </div>
+
+<div class="card">
+<h3>Robot Economy</h3>
+<p>Built for AI agents to operate independently across chains 24/7.</p>
+</div>
+</div>
+
+<footer>
+<p>© 2026 AstroBridge | Global Intent Network</p>
+</footer>
+
+</div>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-const hamburger=document.getElementById('hamburger');const navMenu=document.getElementById('navMenu');hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
+
+const hamburger=document.getElementById('hamburger');
+const navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
+
 particlesJS("globe-particles",{particles:{number:{value:60},shape:{type:"circle"},color:{value:["#4cc9f0","#f72585","#ffffff"]},opacity:{value:0.6},size:{value:2.5},line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},move:{enable:true,speed:1}}});
-document.addEventListener('click',function(e){const navMenu=document.getElementById('navMenu');const hamburger=document.getElementById('hamburger');if(!navMenu.contains(e.target)&&!hamburger.contains(e.target)){navMenu.classList.add('hidden');}});
-(function buildBridgeProgress(){const canvas=document.getElementById('bridgeBuildingCanvas');const ctx=canvas.getContext('2d');let w=canvas.width=window.innerWidth;let h=canvas.height=window.innerHeight;window.addEventListener('resize',()=>{w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;});const totalDays=300;const currentVersion=3.0;const targetVersion=7.0;const startProgress=currentVersion/targetVersion;const perDayAdd=(targetVersion-currentVersion)/totalDays;function getCurrentProgress(){const now=Date.now();const start=now-3*24*60*60*1000;const daysPassed=(now-start)/(1000*60*60*24);let p=startProgress+daysPassed*perDayAdd;if(p>1)p=1;return p;}const windowCols=6;const windowRows=14;let lightFillProgress=0;function drawBridge(){ctx.clearRect(0,0,w,h);const progress=getCurrentProgress();const cx=w*0.75;const bottom=h*0.85;const height=h*0.55;const top=bottom-height;const width=100;const left=cx-width/2;ctx.globalAlpha=0.15;ctx.strokeStyle='#4cc9f0';ctx.lineWidth=3;ctx.strokeRect(left,top,width,height);ctx.globalAlpha=1;const colGap=width/windowCols;const rowGap=height/windowRows;const fillBottom=bottom-height*progress;const targetLightPos=bottom-fillBottom;const speed=1.5;if(lightFillProgress<targetLightPos)lightFillProgress+=speed;else if(lightFillProgress>targetLightPos+10)lightFillProgress=targetLightPos;ctx.strokeStyle='rgba(76,201,240,0.12)';ctx.lineWidth=0.6;for(let r=0;r<windowRows;r++){for(let c=0;c<windowCols;c++){const x=left+c*colGap;const y=top+r*rowGap;const ww=colGap;const hh=rowGap;ctx.strokeRect(x,y,ww,hh);const isInLightZone=(y+hh>=bottom-lightFillProgress);if(isInLightZone){ctx.fillStyle='#4cc9f0';ctx.fillRect(x+0.5,y+0.5,ww-1,hh-1);}}}ctx.globalAlpha=0.7;ctx.fillStyle='#ffffff';ctx.fillRect(left,fillBottom-2,width,2);ctx.globalAlpha=1;}function loop(){requestAnimationFrame(loop);drawBridge();}loop();})();
-const canvas=document.getElementById('sphereCanvas');const ctx=canvas.getContext('2d');let w=canvas.width=window.innerWidth;let h=canvas.height=window.innerHeight;window.addEventListener('resize',()=>{w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;});const particleCount=800;const radius=240;const speed=0.002;class Particle{constructor(){this.angle1=Math.random()*Math.PI*2;this.angle2=Math.random()*Math.PI*2;this.depth=Math.random()*0.8+0.2;this.size=Math.random()*3+1.5;this.color=Math.random()>0.5?'#4cc9f0':'#f72585';}update(){this.angle1+=speed;this.angle2+=speed*0.7;}draw(){const x=w/2+radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);const y=h/2+radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);const z=radius*this.depth*Math.cos(this.angle1);const scale=(z+radius)/(radius*2);ctx.beginPath();ctx.arc(x,y,this.size*scale,0,Math.PI*2);ctx.fillStyle=this.color+'80';ctx.fill();}}
-const particles=Array.from({length:particleCount},()=>new Particle());function loop(){requestAnimationFrame(loop);ctx.fillStyle='rgba(2,6,23,0.15)';ctx.fillRect(0,0,w,h);particles.forEach(p=>{p.update();p.draw();});}loop();
-const chains=[
+
+document.addEventListener('click', function(e) {
+  const navMenu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburger');
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+    navMenu.classList.add('hidden');
+  }
+});
+
+(function buildBridgeProgress() {
+  const canvas=document.getElementById('bridgeBuildingCanvas');
+  const ctx=canvas.getContext('2d');
+  let w=canvas.width=window.innerWidth;
+  let h=canvas.height=window.innerHeight;
+  window.addEventListener('resize', () => {
+    w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;
+  });
+  const totalDays=300;
+  const currentVersion=3.0;
+  const targetVersion=7.0;
+  const startProgress=currentVersion/targetVersion;
+  const perDayAdd=(targetVersion-currentVersion)/totalDays;
+  function getCurrentProgress() {
+    const now=Date.now();
+    const start=now-3*24*60*60*1000;
+    const daysPassed=(now-start)/(1000*60*60*24);
+    let p=startProgress+daysPassed*perDayAdd;
+    if (p > 1) p=1;
+    return p;
+  }
+  const windowCols=6;
+  const windowRows=14;
+  let lightFillProgress = 0;
+  function drawBridge() {
+    ctx.clearRect(0,0,w,h);
+    const progress=getCurrentProgress();
+    const cx=w*0.75;
+    const bottom=h*0.85;
+    const height=h*0.55;
+    const top=bottom-height;
+    const width=100;
+    const left=cx-width/2;
+    ctx.globalAlpha=0.15;
+    ctx.strokeStyle='#4cc9f0';
+    ctx.lineWidth=3;
+    ctx.strokeRect(left,top,width,height);
+    ctx.globalAlpha=1;
+    const colGap=width/windowCols;
+    const rowGap=height/windowRows;
+    const fillBottom=bottom-height*progress;
+    const targetLightPos = bottom - fillBottom;
+    const speed = 1.5;
+    if (lightFillProgress < targetLightPos) lightFillProgress += speed;
+    else if (lightFillProgress > targetLightPos + 10) lightFillProgress = targetLightPos;
+    ctx.strokeStyle='rgba(76,201,240,0.12)';
+    ctx.lineWidth=0.6;
+    for(let r=0;r<windowRows;r++){
+      for(let c=0;c<windowCols;c++){
+        const x=left+c*colGap;
+        const y=top+r*rowGap;
+        const ww=colGap;
+        const hh=rowGap;
+        ctx.strokeRect(x,y,ww,hh);
+        const isInLightZone = (y + hh >= bottom - lightFillProgress);
+        if(isInLightZone){
+          ctx.fillStyle = '#4cc9f0';
+          ctx.fillRect(x+0.5,y+0.5,ww-1,hh-1);
+        }
+      }
+    }
+    ctx.globalAlpha=0.7;
+    ctx.fillStyle='#ffffff';
+    ctx.fillRect(left,fillBottom-2,width,2);
+    ctx.globalAlpha=1;
+  }
+  function loop(){requestAnimationFrame(loop);drawBridge();}
+  loop();
+})();
+
+const canvas=document.getElementById('sphereCanvas');
+const ctx=canvas.getContext('2d');
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+window.addEventListener('resize',()=>{w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;});
+const particleCount=800;
+const radius=240;
+const speed=0.002;
+class Particle{
+constructor(){
+this.angle1=Math.random()*Math.PI*2;
+this.angle2=Math.random()*Math.PI*2;
+this.depth=Math.random()*0.8+0.2;
+this.size=Math.random()*3+1.5;
+this.color=Math.random()>0.5?'#4cc9f0':'#f72585';
+}
+update(){
+this.angle1+=speed;
+this.angle2+=speed*0.7;
+}
+draw(){
+const x=w/2+radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);
+const y=h/2+radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);
+const z=radius*this.depth*Math.cos(this.angle1);
+const scale=(z+radius)/(radius*2);
+ctx.beginPath();
+ctx.arc(x,y,this.size*scale,0,Math.PI*2);
+ctx.fillStyle=this.color+'80';
+ctx.fill();
+}
+}
+const particles=Array.from({length:particleCount},()=>new Particle());
+function loop(){
+requestAnimationFrame(loop);
+ctx.fillStyle='rgba(2,6,23,0.15)';
+ctx.fillRect(0,0,w,h);
+particles.forEach(p=>{p.update();p.draw();});
+}
+loop();
+
+const chains = [
 {name:"Ethereum",logo:"https://cryptologos.cc/logos/ethereum-eth-logo.png",api:"https://api.astrobridge.io/v1/port/eth"},
 {name:"BNB Chain",logo:"https://cryptologos.cc/logos/bnb-bnb-logo.png",api:"https://api.astrobridge.io/v1/port/bsc"},
 {name:"Bitcoin",logo:"https://cryptologos.cc/logos/bitcoin-btc-logo.png",api:"https://api.astrobridge.io/v1/port/btc"},
@@ -210,82 +651,29 @@ const chains=[
 {name:"Syscoin",logo:"https://cryptologos.cc/logos/syscoin-sys-logo.png",api:"https://api.astrobridge.io/v1/port/sys"},
 {name:"Horizen",logo:"https://cryptologos.cc/logos/horizen-zen-logo.png",api:"https://api.astrobridge.io/v1/port/zen"},
 {name:"Decred",logo:"https://cryptologos.cc/logos/decred-dcr-logo.png",api:"https://api.astrobridge.io/v1/port/dcr"},
-{name:"Komodo",logo:"https://cryptologos.cc/logos/komodo-kmd-logo.png",api:"https://api.astrobridge.io/v1/port/kmd"},
-{name:"DigiByte",logo:"https://cryptologos.cc/logos/digibyte-dgb-logo.png",api:"https://api.astrobridge.io/v1/port/dgb"},
-{name:"Vertcoin",logo:"https://cryptologos.cc/logos/vertcoin-vtc-logo.png",api:"https://api.astrobridge.io/v1/port/vtc"},
-{name:"PIVX",logo:"https://cryptologos.cc/logos/pivx-pivx-logo.png",api:"https://api.astrobridge.io/v1/port/pivx"},
-{name:"Reddcoin",logo:"https://cryptologos.cc/logos/reddcoin-rdd-logo.png",api:"https://api.astrobridge.io/v1/port/rdd"},
-{name:"Emercoin",logo:"https://cryptologos.cc/logos/emercoin-emc-logo.png",api:"https://api.astrobridge.io/v1/port/emc"},
-{name:"Namecoin",logo:"https://cryptologos.cc/logos/namecoin-nmc-logo.png",api:"https://api.astrobridge.io/v1/port/nmc"},
-{name:"Peercoin",logo:"https://cryptologos.cc/logos/peercoin-ppc-logo.png",api:"https://api.astrobridge.io/v1/port/ppc"},
-{name:"Groestlcoin",logo:"https://cryptologos.cc/logos/groestlcoin-grs-logo.png",api:"https://api.astrobridge.io/v1/port/grs"},
-{name:"Bitcore",logo:"https://cryptologos.cc/logos/bitcore-btx-logo.png",api:"https://api.astrobridge.io/v1/port/btx"},
-{name:"ZelCash",logo:"https://cryptologos.cc/logos/zelcash-zel-logo.png",api:"https://api.astrobridge.io/v1/port/zel"},
-{name:"Hush",logo:"https://cryptologos.cc/logos/hush-hush-logo.png",api:"https://api.astrobridge.io/v1/port/hush"},
-{name:"Snowgem",logo:"https://cryptologos.cc/logos/snowgem-sng-logo.png",api:"https://api.astrobridge.io/v1/port/sng"},
-{name:"BitSend",logo:"https://cryptologos.cc/logos/bitsend-bsd-logo.png",api:"https://api.astrobridge.io/v1/port/bsd"},
-{name:"Quant",logo:"https://cryptologos.cc/logos/quant-qnt-logo.png",api:"https://api.astrobridge.io/v1/port/qnt"},
-{name:"Elastos",logo:"https://cryptologos.cc/logos/elastos-ela-logo.png",api:"https://api.astrobridge.io/v1/port/ela"},
-{name:"Nuls",logo:"https://cryptologos.cc/logos/nuls-nuls-logo.png",api:"https://api.astrobridge.io/v1/port/nuls"},
-{name:"ICON",logo:"https://cryptologos.cc/logos/icon-icx-logo.png",api:"https://api.astrobridge.io/v1/port/icx"},
-{name:"Conflux",logo:"https://cryptologos.cc/logos/conflux-cfx-logo.png",api:"https://api.astrobridge.io/v1/port/cfx"},
-{name:"VeChain",logo:"https://cryptologos.cc/logos/vechain-vet-logo.png",api:"https://api.astrobridge.io/v1/port/vet"},
-{name:"Theta",logo:"https://cryptologos.cc/logos/theta-network-theta-logo.png",api:"https://api.astrobridge.io/v1/port/theta"},
-{name:"Coti",logo:"https://cryptologos.cc/logos/coti-coti-logo.png",api:"https://api.astrobridge.io/v1/port/coti"},
-{name:"Chia",logo:"https://cryptologos.cc/logos/chia-xch-logo.png",api:"https://api.astrobridge.io/v1/port/xch"},
-{name:"HOO",logo:"https://cryptologos.cc/logos/hoohoo-hoo-logo.png",api:"https://api.astrobridge.io/v1/port/hoo"},
-{name:"CoinEx",logo:"https://cryptologos.cc/logos/coinex-token-cet-logo.png",api:"https://api.astrobridge.io/v1/port/cet"},
-{name:"GateChain",logo:"https://cryptologos.cc/logos/gatechain-gt-logo.png",api:"https://api.astrobridge.io/v1/port/gt"},
-{name:"MXC",logo:"https://cryptologos.cc/logos/mxc-mxc-logo.png",api:"https://api.astrobridge.io/v1/port/mxc"},
-{name:"BitMart",logo:"https://cryptologos.cc/logos/bitmart-token-bmx-logo.png",api:"https://api.astrobridge.io/v1/port/bmx"},
-{name:"LBANK",logo:"https://cryptologos.cc/logos/lbank-token-lbk-logo.png",api:"https://api.astrobridge.io/v1/port/lbk"},
-{name:"Poloniex",logo:"https://cryptologos.cc/logos/poloniex-polo-logo.png",api:"https://api.astrobridge.io/v1/port/polo"},
-{name:"HitBTC",logo:"https://cryptologos.cc/logos/hitbtc-token-hit-logo.png",api:"https://api.astrobridge.io/v1/port/hit"},
-{name:"IDEX",logo:"https://cryptologos.cc/logos/idex-idex-logo.png",api:"https://api.astrobridge.io/v1/port/idex"},
-{name:"Bancor",logo:"https://cryptologos.cc/logos/bancor-bnt-logo.png",api:"https://api.astrobridge.io/v1/port/bnt"},
-{name:"Kyber",logo:"https://cryptologos.cc/logos/kyber-network-knc-logo.png",api:"https://api.astrobridge.io/v1/port/knc"},
-{name:"1inch",logo:"https://cryptologos.cc/logos/1inch-1inch-logo.png",api:"https://api.astrobridge.io/v1/port/1inch"},
-{name:"Loopring",logo:"https://cryptologos.cc/logos/loopring-lrc-logo.png",api:"https://api.astrobridge.io/v1/port/lrc"},
-{name:"dYdX",logo:"https://cryptologos.cc/logos/dydx-dydx-logo.png",api:"https://api.astrobridge.io/v1/port/dydx"},
-{name:"GMX",logo:"https://cryptologos.cc/logos/gmx-gmx-logo.png",api:"https://api.astrobridge.io/v1/port/gmx"},
-{name:"Gains",logo:"https://cryptologos.cc/logos/gains-network-gains-logo.png",api:"https://api.astrobridge.io/v1/port/gains"},
-{name:"Kwenta",logo:"https://cryptologos.cc/logos/kwenta-kwenta-logo.png",api:"https://api.astrobridge.io/v1/port/kwenta"},
-{name:"Perpetual",logo:"https://cryptologos.cc/logos/perpetual-protocol-perp-logo.png",api:"https://api.astrobridge.io/v1/port/perp"},
-{name:"Rage",logo:"https://cryptologos.cc/logos/rage-trade-rage-logo.png",api:"https://api.astrobridge.io/v1/port/rage"},
-{name:"Synthetix",logo:"https://cryptologos.cc/logos/synthetix-snx-logo.png",api:"https://api.astrobridge.io/v1/port/snx"},
-{name:"Thales",logo:"https://cryptologos.cc/logos/thales-thales-logo.png",api:"https://api.astrobridge.io/v1/port/thales"},
-{name:"Hegic",logo:"https://cryptologos.cc/logos/hegic-hegic-logo.png",api:"https://api.astrobridge.io/v1/port/hegic"},
-{name:"Opyn",logo:"https://cryptologos.cc/logos/opyn-ocy-logo.png",api:"https://api.astrobridge.io/v1/port/ocy"},
-{name:"Vega",logo:"https://cryptologos.cc/logos/vega-protocol-vega-logo.png",api:"https://api.astrobridge.io/v1/port/vega"},
-{name:"Serum",logo:"https://cryptologos.cc/logos/serum-srm-logo.png",api:"https://api.astrobridge.io/v1/port/srm"},
-{name:"Raydium",logo:"https://cryptologos.cc/logos/raydium-ray-logo.png",api:"https://api.astrobridge.io/v1/port/ray"},
-{name:"Orca",logo:"https://cryptologos.cc/logos/orca-orca-logo.png",api:"https://api.astrobridge.io/v1/port/orca"},
-{name:"Jupiter",logo:"https://cryptologos.cc/logos/jupiter-jup-logo.png",api:"https://api.astrobridge.io/v1/port/jup"},
-{name:"Meteora",logo:"https://cryptologos.cc/logos/meteora-mr-logo.png",api:"https://api.astrobridge.io/v1/port/mr"},
-{name:"Aldrin",logo:"https://cryptologos.cc/logos/aldrin-aldrin-logo.png",api:"https://api.astrobridge.io/v1/port/aldrin"},
-{name:"Crema",logo:"https://cryptologos.cc/logos/crema-crema-logo.png",api:"https://api.astrobridge.io/v1/port/crema"},
-{name:"Marinade",logo:"https://cryptologos.cc/logos/marinade-finance-mnde-logo.png",api:"https://api.astrobridge.io/v1/port/mnde"},
-{name:"Lido",logo:"https://cryptologos.cc/logos/lido-dao-ldo-logo.png",api:"https://api.astrobridge.io/v1/port/ldo"},
-{name:"RocketPool",logo:"https://cryptologos.cc/logos/rocket-pool-rpl-logo.png",api:"https://api.astrobridge.io/v1/port/rpl"},
-{name:"Stafi",logo:"https://cryptologos.cc/logos/stafi-fis-logo.png",api:"https://api.astrobridge.io/v1/port/fis"},
-{name:"Ankr",logo:"https://cryptologos.cc/logos/ankr-ankr-logo.png",api:"https://api.astrobridge.io/v1/port/ankr"},
-{name:"Frax",logo:"https://cryptologos.cc/logos/frax-frax-logo.png",api:"https://api.astrobridge.io/v1/port/frax"},
-{name:"Olympus",logo:"https://cryptologos.cc/logos/olympus-dao-ohm-logo.png",api:"https://api.astrobridge.io/v1/port/ohm"},
-{name:"Wonderland",logo:"https://cryptologos.cc/logos/wonderland-wmemo-logo.png",api:"https://api.astrobridge.io/v1/port/wmemo"},
-{name:"Redacted",logo:"https://cryptologos.cc/logos/redacted-cartel-btrfly-logo.png",api:"https://api.astrobridge.io/v1/port/btrfly"},
-{name:"Convex",logo:"https://cryptologos.cc/logos/convex-finance-cvx-logo.png",api:"https://api.astrobridge.io/v1/port/cvx"},
-{name:"Badger",logo:"https://cryptologos.cc/logos/badger-dao-badger-logo.png",api:"https://api.astrobridge.io/v1/port/badger"},
-{name:"Yearn",logo:"https://cryptologos.cc/logos/yearn-finance-yfi-logo.png",api:"https://api.astrobridge.io/v1/port/yfi"},
-{name:"Harvest",logo:"https://cryptologos.cc/logos/harvest-finance-farm-logo.png",api:"https://api.astrobridge.io/v1/port/farm"},
-{name:"Vesper",logo:"https://cryptologos.cc/logos/vesper-finance-vsp-logo.png",api:"https://api.astrobridge.io/v1/port/vsp"},
-{name:"Float",logo:"https://cryptologos.cc/logos/float-protocol-float-logo.png",api:"https://api.astrobridge.io/v1/port/float"},
-{name:"Reflexer",logo:"https://cryptologos.cc/logos/reflexer-rai-logo.png",api:"https://api.astrobridge.io/v1/port/rai"},
-{name:"IndexCoop",logo:"https://cryptologos.cc/logos/index-coop-index-logo.png",api:"https://api.astrobridge.io/v1/port/index"},
-{name:"DPI",logo:"https://cryptologos.cc/logos/defi-pulse-index-dpi-logo.png",api:"https://api.astrobridge.io/v1/port/dpi"},
-{name:"Pendle",logo:"https://cryptologos.cc/logos/pendle-pendle-logo.png",api:"https://api.astrobridge.io/v1/port/pendle"},
-{name:"APWine",logo:"https://cryptologos.cc/logos/apwine-apw-logo.png",api:"https://api.astrobridge.io/v1/port/apw"}
+{name:"Komodo",logo:"https://cryptologos.cc/logos/komodo-kmd-logo.png",api:"https://api.astrobridge.io/v1/port/kmd"}
 ];
-const grid=document.getElementById('chainGrid');chains.forEach(chain=>{const card=document.createElement('div');card.className='chain-card';card.innerHTML=`<div class="chain-logo"><img src="${chain.logo}" alt="${chain.name}" loading="lazy"></div><div class="chain-name">${chain.name}</div><div class="chain-status">Connected ✅</div>`;card.onclick=()=>window.open(chain.api,'_blank');grid.appendChild(card);});
+
+const grid = document.getElementById('chainGrid');
+chains.forEach(chain => {
+  const card = document.createElement('div');
+  card.className = 'chain-card';
+  
+  // 【这里是唯一修改的地方】添加了 onerror 事件
+  // 作用：当原链接加载失败时，自动使用 SVG 画一个蓝色的圆，里面写上链名的首字母，保持美观不破图
+  const fallbackSvg = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234cc9f0' opacity='0.15'/><text x='50' y='55' font-family='Inter, sans-serif' font-size='42' fill='%234cc9f0' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>${chain.name.charAt(0)}</text></svg>`;
+
+  card.innerHTML = `
+    <div class="chain-logo">
+      <img src="${chain.logo}" alt="${chain.name}" loading="lazy" onerror="this.onerror=null; this.src='${fallbackSvg}';">
+    </div>
+    <div class="chain-name">${chain.name}</div>
+    <div class="chain-status">Connected ✅</div>
+  `;
+  card.onclick = () => window.open(chain.api, '_blank');
+  grid.appendChild(card);
+});
+
 </script>
 </body>
 </html>
