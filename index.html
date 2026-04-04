@@ -10,335 +10,77 @@
 body{background:#020112;color:#fff;overflow-x:hidden}
 
 #sphereCanvas{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100vw;
-  height:100vh;
-  z-index:0;
-  opacity:0.8;
-  background:#020112;
+  position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;opacity:0.8;background:#020112;
 }
-
 #bridgeBuildingCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
+  position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1;pointer-events:none;
 }
-
 #progressText {
-  position: fixed;
-  z-index: 2;
-  left: calc(75vw + 60px);
-  top: 48vh;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  transform: rotate(-90deg);
-  transform-origin: left center;
-  text-shadow: 0 0 6px #4cc9f0, 0 0 12px #4cc9f0, 0 0 24px #4cc9f0;
-  animation: flowBlue 3s infinite alternate ease-in-out;
-  white-space: nowrap;
-  pointer-events: none;
+  position:fixed;z-index:2;left:calc(75vw + 60px);top:48vh;font-size:20px;font-weight:700;color:#fff;
+  transform:rotate(-90deg);transform-origin:left center;
+  text-shadow:0 0 6px #4cc9f0,0 0 12px #4cc9f0,0 0 24px #4cc9f0;
+  animation:flowBlue 3s infinite alternate ease-in-out;white-space:nowrap;pointer-events:none;
 }
-
 @keyframes flowBlue {
-  0%   { text-shadow: 0 0 6px #4cc9f0, 0 0 12px #4cc9f0, 0 0 24px #4cc9f0; }
-  100% { text-shadow: 0 0 10px #4cc9f0, 0 0 20px #4cc9f0, 0 0 40px #4cc9f0; }
+  0%{text-shadow:0 0 6px #4cc9f0,0 0 12px #4cc9f0,0 0 24px #4cc9f0;}
+  100%{text-shadow:0 0 10px #4cc9f0,0 0 20px #4cc9f0,0 0 40px #4cc9f0;}
 }
-
 .container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:80px;
-  position:relative;
-  z-index:999;
-}
-
-.logo{
-  font-size:2rem;
-  font-weight:800;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.nav-right{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
-.hamburger{
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-  background:transparent;
-  border:none;
-  cursor:pointer;
-}
-
-.hamburger span{
-  width:28px;
-  height:2px;
-  background:#4cc9f0;
-  border-radius:2px;
-}
-
-.nav-menu{
-  position:absolute;
-  top:100%;
-  right:0;
-  background:#0a1028;
-  border:1px solid rgba(76,201,240,0.2);
-  border-radius:16px;
-  padding:24px;
-  width:220px;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  z-index:999;
-}
-
-.nav-menu a{
-  color:#a8dadc;
-  text-decoration:none;
-  font-weight:500;
-  transition:.3s;
-  white-space:nowrap;
-}
-
-.nav-menu a:hover{
-  color:#4cc9f0;
-}
-
-.nav-menu.hidden{
-  display:none;
-}
-
-.x-button{
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  background:#121a33;
-  border:1px solid #2a3558;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  transition:.2s;
-}
-
-.x-button:hover{
-  background:#4cc9f0;
-  color:#000;
-}
-
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:80px;position:relative;z-index:999;}
+.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.hamburger{display:flex;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;}
+.hamburger span{width:28px;height:2px;background:#4cc9f0;border-radius:2px;}
+.nav-menu{position:absolute;top:100%;right:0;background:#0a1028;border:1px solid rgba(76,201,240,0.2);border-radius:16px;padding:24px;width:220px;display:flex;flex-direction:column;gap:14px;z-index:999;}
+.nav-menu a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s;white-space:nowrap;}
+.nav-menu a:hover{color:#4cc9f0;}
+.nav-menu.hidden{display:none;}
+.x-button{width:36px;height:36px;border-radius:50%;background:#121a33;border:1px solid #2a3558;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.2s;}
+.x-button:hover{background:#4cc9f0;color:#000;}
 .hero{text-align:center;margin-bottom:80px}
-
-.hero h1{
-  font-size:4rem;
-  font-weight:800;
-  line-height:1.2;
-  margin-bottom:20px;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-  font-size:1.2rem;
-  color:#a8dadc;
-  max-width:600px;
-  margin:0 auto 40px;
-}
-
-.buttons{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:16px 36px;
-  border-radius:12px;
-  font-weight:600;
-  text-decoration:none;
-  transition:.3s;
-}
-
-.btn.primary{
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  color:#fff;
-}
-
-.btn.secondary{
-  background:rgba(76,201,240,0.1);
-  color:#4cc9f0;
-  border:1px solid #4cc9f0;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-.future-line{
-  margin-top:28px;
-  font-size:1.1rem;
-  color:#4cc9f0;
-  opacity:0.9;
-}
-
+.hero h1{font-size:4rem;font-weight:800;line-height:1.2;margin-bottom:20px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero p{font-size:1.2rem;color:#a8dadc;max-width:600px;margin:0 auto 40px;}
+.buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+.btn{padding:16px 36px;border-radius:12px;font-weight:600;text-decoration:none;transition:.3s;}
+.btn.primary{background:linear-gradient(90deg,#4cc9f0,#f72585);color:#fff;}
+.btn.secondary{background:rgba(76,201,240,0.1);color:#4cc9f0;border:1px solid #4cc9f0;}
+.btn:hover{transform:scale(1.05);}
+.future-line{margin-top:28px;font-size:1.1rem;color:#4cc9f0;opacity:0.9;}
 .section{margin-bottom:60px}
+.section h2{font-size:2.2rem;font-weight:700;margin-bottom:20px;color:#fff;}
+.section p{color:#a8dadc;font-size:1.1rem;line-height:1.7;}
+.globe-container{position:relative;width:100%;height:360px;margin:60px 0;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+#globe-particles{position:absolute;width:100%;height:100%;z-index:1;}
+.globe-text{position:relative;z-index:2;text-align:center;}
+.globe-text h2{font-size:2.4rem;font-weight:700;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;}
+.globe-text p{font-size:1.2rem;color:#c4f1ff;}
 
-.section h2{
-  font-size:2.2rem;
-  font-weight:700;
-  margin-bottom:20px;
-  color:#fff;
-}
+.chain-portal-section{margin:50px 0;}
+.chain-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:16px;}
+.chain-card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:14px;padding:18px 10px;text-align:center;cursor:pointer;
+transition:all 0.3s ease;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:140px;}
+.chain-card:hover{transform:translateY(-4px);border-color:#4cc9f0;box-shadow:0 6px 18px rgba(76,201,240,0.15);}
 
-.section p{
-  color:#a8dadc;
-  font-size:1.1rem;
-  line-height:1.7;
-}
+.chain-icon{width:32px;height:32px;border-radius:50%;background:rgba(76,201,240,0.1);border:1px solid rgba(76,201,240,0.3);
+display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#4cc9f0;margin-bottom:10px;
+box-shadow:0 0 6px rgba(76,201,240,0.3);transition:all 0.3s;}
+.chain-card:hover .chain-icon{transform:scale(1.1);background:rgba(76,201,240,0.2);box-shadow:0 0 12px #4cc9f0;}
+.chain-name{font-size:13px;font-weight:600;color:#e0e0e0;}
+.chain-status{font-size:11px;color:#28d9a7;margin-top:4px;}
 
-.globe-container{
-  position:relative;
-  width:100%;
-  height:360px;
-  margin:60px 0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-}
-
-#globe-particles{
-  position:absolute;
-  width:100%;
-  height:100%;
-  z-index:1;
-}
-
-.globe-text{
-  position:relative;
-  z-index:2;
-  text-align:center;
-}
-
-.globe-text h2{
-  font-size:2.4rem;
-  font-weight:700;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:10px;
-}
-
-.globe-text p{
-  font-size:1.2rem;
-  color:#c4f1ff;
-}
-
-.chain-portal-section {
-  margin: 50px 0;
-}
-.chain-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 20px;
-}
-.chain-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(76,201,240,0.15);
-  border-radius: 16px;
-  padding: 22px 14px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 160px;
-}
-.chain-card:hover {
-  transform: translateY(-4px);
-  border-color: #4cc9f0;
-  box-shadow: 0 8px 24px rgba(76, 201, 240, 0.15);
-}
-.chain-logo {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.chain-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.chain-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #e0e0e0;
-}
-.chain-status {
-  font-size: 11px;
-  color: #28d9a7;
-  margin-top: 4px;
-}
-
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.card{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(76,201,240,0.15);
-  border-radius:16px;
-  padding:24px;
-}
-
-.card h3{
-  color:#4cc9f0;
-  margin-bottom:10px;
-}
-
-.card p{
-  color:#a8dadc;
-}
-
-footer{
-  text-align:center;
-  padding-top:40px;
-  border-top:1px solid rgba(255,255,255,0.08);
-  color:#a8dadc;
-}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:rgba(255,255,255,0.04);border:1px solid rgba(76,201,240,0.15);border-radius:16px;padding:24px;}
+.card h3{color:#4cc9f0;margin-bottom:10px;}
+.card p{color:#a8dadc;}
+footer{text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,0.08);color:#a8dadc;}
 
 @media(max-width:768px){
 .hero h1{font-size:2.4rem}
-.card-grid,.chain-grid{grid-template-columns:repeat(auto-fill, minmax(120px, 1fr))}
+.card-grid,.chain-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
 .globe-container{height:300px}
 }
 </style>
 </head>
-
 <body>
 
 <canvas id="sphereCanvas"></canvas>
@@ -346,19 +88,12 @@ footer{
 <div id="progressText">Project Progress</div>
 
 <div class="container">
-
 <nav>
 <div class="logo">AstroBridge</div>
-
 <div class="nav-right">
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+<div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
 <a href="https://x.com/Astro___Channel" target="_blank" class="x-button">𝕏</a>
 </div>
-
 <div class="nav-menu hidden" id="navMenu">
 <a href="vision.html">Vision</a>
 <a href="technology.html">Technology</a>
@@ -381,16 +116,11 @@ footer{
 <div class="hero">
 <h1>Global Intent Network</h1>
 <p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p>
-
 <div class="buttons">
 <a href="global-console.html" class="btn primary">Global Console</a>
 <a href="console.html" class="btn secondary">Demo Console</a>
 </div>
-
-<p class="future-line" style="margin-top: 30px;">
-Building the infrastructure that will pave the road for the next decade of blockchain.
-</p>
-
+<p class="future-line">Building the infrastructure that will pave the road for the next decade of blockchain.</p>
 </div>
 
 <div class="globe-container">
@@ -402,7 +132,7 @@ Building the infrastructure that will pave the road for the next decade of block
 </div>
 
 <div class="chain-portal-section">
-  <div class="chain-grid" id="chainGrid"></div>
+<div class="chain-grid" id="chainGrid"></div>
 </div>
 
 <div class="section">
@@ -411,413 +141,112 @@ Building the infrastructure that will pave the road for the next decade of block
 </div>
 
 <div class="card-grid">
-<div class="card">
-<h3>AI Intent Routing</h3>
-<p>Autonomous cross-chain execution with best price, speed, and security.</p>
-</div>
-
-<div class="card">
-<h3>Global Network</h3>
-<p>Decentralized nodes worldwide for ultra-low latency and reliability.</p>
-</div>
-
-<div class="card">
-<h3>Robot Economy</h3>
-<p>Built for AI agents to operate independently across chains 24/7.</p>
-</div>
+<div class="card"><h3>AI Intent Routing</h3><p>Autonomous cross-chain execution with best price, speed, and security.</p></div>
+<div class="card"><h3>Global Network</h3><p>Decentralized nodes worldwide for ultra-low latency and reliability.</p></div>
+<div class="card"><h3>Robot Economy</h3><p>Built for AI agents to operate independently across chains 24/7.</p></div>
 </div>
 
 <footer>
 <p>© 2026 AstroBridge | Global Intent Network</p>
 </footer>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => { navMenu.classList.toggle('hidden'); });
 
-const hamburger=document.getElementById('hamburger');
-const navMenu=document.getElementById('navMenu');
-hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
-
-particlesJS("globe-particles",{
-  particles:{
-    number:{value:60},
-    shape:{type:"circle"},
-    color:{value:["#4cc9f0","#f72585","#ffffff"]},
-    opacity:{value:0.6},
-    size:{value:2.5},
-    line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},
-    move:{enable:true,speed:1}
-  }
+document.addEventListener('click', (e) => {
+  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) navMenu.classList.add('hidden');
 });
 
-document.addEventListener('click', function(e) {
-  const navMenu = document.getElementById('navMenu');
-  const hamburger = document.getElementById('hamburger');
-  if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-    navMenu.classList.add('hidden');
-  }
+particlesJS("globe-particles",{
+  particles:{number:{value:60},shape:{type:"circle"},color:{value:["#4cc9f0","#f72585","#fff"]},
+  opacity:{value:0.6},size:{value:2.5},line_linked:{enable:true,distance:120,color:"#4cc9f0",opacity:0.2},move:{enable:true,speed:1}}
 });
 
 (function buildBridgeProgress() {
-  const canvas=document.getElementById('bridgeBuildingCanvas');
-  const ctx=canvas.getContext('2d');
-  let w=canvas.width=window.innerWidth;
-  let h=canvas.height=window.innerHeight;
-  window.addEventListener('resize', () => {
-    w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;
-  });
-  const totalDays=300;
-  const currentVersion=3.0;
-  const targetVersion=7.0;
-  const startProgress=currentVersion/targetVersion;
-  const perDayAdd=(targetVersion-currentVersion)/totalDays;
-  function getCurrentProgress() {
-    const now=Date.now();
-    const start=now-3*24*60*60*1000;
-    const daysPassed=(now-start)/(1000*60*60*24);
-    let p=startProgress+daysPassed*perDayAdd;
-    if (p > 1) p=1;
-    return p;
+  const canvas = document.getElementById('bridgeBuildingCanvas');
+  const ctx = canvas.getContext('2d');
+  let w = canvas.width = window.innerWidth;
+  let h = canvas.height = window.innerHeight;
+  window.addEventListener('resize', () => { w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight; });
+  const totalDays = 300;
+  const currentVersion = 3.0;
+  const targetVersion = 7.0;
+  const startProgress = currentVersion / targetVersion;
+  const perDayAdd = (targetVersion - currentVersion) / totalDays;
+  function getProgress() {
+    const daysPassed = (Date.now() - (Date.now() - 3*86400000)) / 86400000;
+    let p = startProgress + daysPassed * perDayAdd;
+    return p > 1 ? 1 : p;
   }
-  const windowCols=6;
-  const windowRows=14;
-  let lightFillProgress = 0;
-  function drawBridge() {
+  const cols = 6, rows = 14;
+  let lightProgress = 0;
+  function draw() {
     ctx.clearRect(0,0,w,h);
-    const progress=getCurrentProgress();
-    const cx=w*0.75;
-    const bottom=h*0.85;
-    const height=h*0.55;
-    const top=bottom-height;
-    const width=100;
-    const left=cx-width/2;
-    ctx.globalAlpha=0.15;
-    ctx.strokeStyle='#4cc9f0';
-    ctx.lineWidth=3;
-    ctx.strokeRect(left,top,width,height);
-    ctx.globalAlpha=1;
-    const colGap=width/windowCols;
-    const rowGap=height/windowRows;
-    const fillBottom=bottom-height*progress;
-    const targetLightPos = bottom - fillBottom;
-    const speed = 1.5;
-    if (lightFillProgress < targetLightPos) lightFillProgress += speed;
-    else if (lightFillProgress > targetLightPos + 10) lightFillProgress = targetLightPos;
-    ctx.strokeStyle='rgba(76,201,240,0.12)';
-    ctx.lineWidth=0.6;
-    for(let r=0;r<windowRows;r++){
-      for(let c=0;c<windowCols;c++){
-        const x=left+c*colGap;
-        const y=top+r*rowGap;
-        const ww=colGap;
-        const hh=rowGap;
-        ctx.strokeRect(x,y,ww,hh);
-        const isInLightZone = (y + hh >= bottom - lightFillProgress);
-        if(isInLightZone){
-          ctx.fillStyle = '#4cc9f0';
-          ctx.fillRect(x+0.5,y+0.5,ww-1,hh-1);
-        }
+    const p = getProgress();
+    const cx = w*0.75, bottom = h*0.85, height = h*0.55, top = bottom-height, barW = 100;
+    const left = cx - barW/2;
+    ctx.globalAlpha = 0.15; ctx.strokeStyle='#4cc9f0'; ctx.lineWidth=3; ctx.strokeRect(left,top,barW,height);
+    ctx.globalAlpha = 1;
+    const cw = barW/cols, ch = height/rows;
+    const fillBottom = bottom - height*p;
+    const target = bottom - fillBottom;
+    if (lightProgress < target) lightProgress += 1.5;
+    else if (lightProgress > target + 10) lightProgress = target;
+    ctx.strokeStyle='rgba(76,201,240,0.12)'; ctx.lineWidth=0.6;
+    for(let r=0;r<rows;r++){
+      for(let c=0;c<cols;c++){
+        const x = left + c*cw;
+        const y = top + r*ch;
+        ctx.strokeRect(x,y,cw,ch);
+        if (y+ch >= bottom - lightProgress) { ctx.fillStyle='#4cc9f0'; ctx.fillRect(x+0.5,y+0.5,cw-1,ch-1); }
       }
     }
-    ctx.globalAlpha=0.7;
-    ctx.fillStyle='#ffffff';
-    ctx.fillRect(left,fillBottom-2,width,2);
-    ctx.globalAlpha=1;
+    ctx.globalAlpha=0.7; ctx.fillStyle='#fff'; ctx.fillRect(left,fillBottom-2,barW,2); ctx.globalAlpha=1;
   }
-  function loop(){requestAnimationFrame(loop);drawBridge();}
-  loop();
+  function loop(){requestAnimationFrame(loop);draw();} loop();
 })();
 
-const canvas=document.getElementById('sphereCanvas');
-const ctx=canvas.getContext('2d');
-let w=canvas.width=window.innerWidth;
-let h=canvas.height=window.innerHeight;
-window.addEventListener('resize',()=>{w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;});
-const particleCount=800;
-const radius=240;
-const speed=0.002;
-class Particle{
-constructor(){
-this.angle1=Math.random()*Math.PI*2;
-this.angle2=Math.random()*Math.PI*2;
-this.depth=Math.random()*0.8+0.2;
-this.size=Math.random()*3+1.5;
-this.color=Math.random()>0.5?'#4cc9f0':'#f72585';
-}
-update(){
-this.angle1+=speed;
-this.angle2+=speed*0.7;
-}
-draw(){
-const x=w/2+radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);
-const y=h/2+radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);
-const z=radius*this.depth*Math.cos(this.angle1);
-const scale=(z+radius)/(radius*2);
-ctx.beginPath();
-ctx.arc(x,y,this.size*scale,0,Math.PI*2);
-ctx.fillStyle=this.color+'80';
-ctx.fill();
-}
-}
-const particles=Array.from({length:particleCount},()=>new Particle());
-function loop(){
-requestAnimationFrame(loop);
-ctx.fillStyle='rgba(2,6,23,0.15)';
-ctx.fillRect(0,0,w,h);
-particles.forEach(p=>{p.update();p.draw();});
-}
+const canvas = document.getElementById('sphereCanvas');
+const ctx = canvas.getContext('2d');
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
+window.addEventListener('resize', () => { w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight; });
+const particles = [];
+const count = 800, radius = 240, speed = 0.002;
+class Pt{constructor(){this.a1=Math.random()*Math.PI*2;this.a2=Math.random()*Math.PI*2;this.d=Math.random()*0.8+0.2;this.s=Math.random()*3+1.5;this.c=Math.random()>0.5?'#4cc9f0':'#f72585';}
+update(){this.a1+=speed;this.a2+=speed*0.7;}
+draw(){const x=w/2+radius*this.d*Math.sin(this.a1)*Math.cos(this.a2);
+const y=h/2+radius*this.d*Math.sin(this.a1)*Math.sin(this.a2);
+const z=radius*this.d*Math.cos(this.a1);
+const s=(z+radius)/(radius*2);
+ctx.beginPath();ctx.arc(x,y,this.s*s,0,Math.PI*2);ctx.fillStyle=this.c+'80';ctx.fill();}}
+for(let i=0;i<count;i++)particles.push(new Pt());
+function loop(){requestAnimationFrame(loop);ctx.fillStyle='rgba(2,6,23,0.15)';ctx.fillRect(0,0,w,h);particles.forEach(p=>{p.update();p.draw();});}
 loop();
 
 const chains = [
-{name:"Ethereum",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/eth@latest/eth.png",api:"https://api.astrobridge.io/v1/port/eth"},
-{name:"BNB Chain",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/bnb@latest/bnb.png",api:"https://api.astrobridge.io/v1/port/bsc"},
-{name:"Bitcoin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/btc@latest/btc.png",api:"https://api.astrobridge.io/v1/port/btc"},
-{name:"Solana",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sol@latest/sol.png",api:"https://api.astrobridge.io/v1/port/solana"},
-{name:"Avalanche",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/avax@latest/avax.png",api:"https://api.astrobridge.io/v1/port/avax"},
-{name:"Polygon",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/matic@latest/matic.png",api:"https://api.astrobridge.io/v1/port/polygon"},
-{name:"Arbitrum",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/arb@latest/arb.png",api:"https://api.astrobridge.io/v1/port/arbitrum"},
-{name:"Optimism",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/op@latest/op.png",api:"https://api.astrobridge.io/v1/port/optimism"},
-{name:"Base",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/base@latest/base.png",api:"https://api.astrobridge.io/v1/port/base"},
-{name:"Aptos",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/apt@latest/apt.png",api:"https://api.astrobridge.io/v1/port/aptos"},
-{name:"Sui",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sui@latest/sui.png",api:"https://api.astrobridge.io/v1/port/sui"},
-{name:"Cosmos",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/atom@latest/atom.png",api:"https://api.astrobridge.io/v1/port/cosmos"},
-{name:"Osmosis",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/osmo@latest/osmo.png",api:"https://api.astrobridge.io/v1/port/osmosis"},
-{name:"TRON",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/trx@latest/trx.png",api:"https://api.astrobridge.io/v1/port/tron"},
-{name:"Tezos",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xtz@latest/xtz.png",api:"https://api.astrobridge.io/v1/port/tezos"},
-{name:"Cardano",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ada@latest/ada.png",api:"https://api.astrobridge.io/v1/port/cardano"},
-{name:"XRP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xrp@latest/xrp.png",api:"https://api.astrobridge.io/v1/port/xrp"},
-{name:"Stellar",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xlm@latest/xlm.png",api:"https://api.astrobridge.io/v1/port/xlm"},
-{name:"Ton",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ton@latest/ton.png",api:"https://api.astrobridge.io/v1/port/ton"},
-{name:"Dogecoin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/doge@latest/doge.png",api:"https://api.astrobridge.io/v1/port/doge"},
-{name:"Litecoin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ltc@latest/ltc.png",api:"https://api.astrobridge.io/v1/port/ltc"},
-{name:"Fantom",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ftm@latest/ftm.png",api:"https://api.astrobridge.io/v1/port/fantom"},
-{name:"Harmony",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/one@latest/one.png",api:"https://api.astrobridge.io/v1/port/harmony"},
-{name:"Celo",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/celo@latest/celo.png",api:"https://api.astrobridge.io/v1/port/celo"},
-{name:"Flow",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/flow@latest/flow.png",api:"https://api.astrobridge.io/v1/port/flow"},
-{name:"Immutable X",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/imx@latest/imx.png",api:"https://api.astrobridge.io/v1/port/imx"},
-{name:"ZKsync",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/era@latest/era.png",api:"https://api.astrobridge.io/v1/port/zksync"},
-{name:"StarkNet",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/strk@latest/strk.png",api:"https://api.astrobridge.io/v1/port/starknet"},
-{name:"Scroll",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/scroll@latest/scroll.png",api:"https://api.astrobridge.io/v1/port/scroll"},
-{name:"Linea",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/linea@latest/linea.png",api:"https://api.astrobridge.io/v1/port/linea"},
-{name:"Manta",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/manta@latest/manta.png",api:"https://api.astrobridge.io/v1/port/manta"},
-{name:"Kava",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/kava@latest/kava.png",api:"https://api.astrobridge.io/v1/port/kava"},
-{name:"KCC",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/kcc@latest/kcc.png",api:"https://api.astrobridge.io/v1/port/kcc"},
-{name:"OKXChain",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/okx@latest/okx.png",api:"https://api.astrobridge.io/v1/port/okx"},
-{name:"HECO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ht@latest/ht.png",api:"https://api.astrobridge.io/v1/port/heco"},
-{name:"Bittorrent",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/btt@latest/btt.png",api:"https://api.astrobridge.io/v1/port/btt"},
-{name:"Chiliz",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/chz@latest/chz.png",api:"https://api.astrobridge.io/v1/port/chz"},
-{name:"The Sandbox",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sand@latest/sand.png",api:"https://api.astrobridge.io/v1/port/sandbox"},
-{name:"Decentraland",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/mana@latest/mana.png",api:"https://api.astrobridge.io/v1/port/decentraland"},
-{name:"Axie Infinity",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/axs@latest/axs.png",api:"https://api.astrobridge.io/v1/port/axie"},
-{name:"Magic Eden",logo:"https://magiceden.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/magiceden"},
-{name:"OpenSea",logo:"https://opensea.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/opensea"},
-{name:"Blur",logo:"https://blur.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/blur"},
-{name:"LooksRare",logo:"https://looksrare.org/favicon.ico",api:"https://api.astrobridge.io/v1/port/looksrare"},
-{name:"X2Y2",logo:"https://x2y2.io/favicon.ico",api:"https://api.astrobridge.io/v1/port/x2y2"},
-{name:"Uniswap",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/uni@latest/uni.png",api:"https://api.astrobridge.io/v1/port/uniswap"},
-{name:"PancakeSwap",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/cake@latest/cake.png",api:"https://api.astrobridge.io/v1/port/pancake"},
-{name:"SushiSwap",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sushi@latest/sushi.png",api:"https://api.astrobridge.io/v1/port/sushi"},
-{name:"Curve",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/crv@latest/crv.png",api:"https://api.astrobridge.io/v1/port/curve"},
-{name:"Aave",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/aave@latest/aave.png",api:"https://api.astrobridge.io/v1/port/aave"},
-{name:"Compound",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/comp@latest/comp.png",api:"https://api.astrobridge.io/v1/port/compound"},
-{name:"MakerDAO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/mkr@latest/mkr.png",api:"https://api.astrobridge.io/v1/port/maker"},
-{name:"Arweave",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ar@latest/ar.png",api:"https://api.astrobridge.io/v1/port/arweave"},
-{name:"Filecoin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/fil@latest/fil.png",api:"https://api.astrobridge.io/v1/port/filecoin"},
-{name:"Chainlink",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/link@latest/link.png",api:"https://api.astrobridge.io/v1/port/chainlink"},
-{name:"The Graph",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/grt@latest/grt.png",api:"https://api.astrobridge.io/v1/port/graph"},
-{name:"Band Protocol",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/band@latest/band.png",api:"https://api.astrobridge.io/v1/port/band"},
-{name:"Qtum",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/qtum@latest/qtum.png",api:"https://api.astrobridge.io/v1/port/qtum"},
-{name:"NEO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/neo@latest/neo.png",api:"https://api.astrobridge.io/v1/port/neo"},
-{name:"Ontology",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ont@latest/ont.png",api:"https://api.astrobridge.io/v1/port/ont"},
-{name:"Waves",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/waves@latest/waves.png",api:"https://api.astrobridge.io/v1/port/waves"},
-{name:"Zilliqa",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zil@latest/zil.png",api:"https://api.astrobridge.io/v1/port/zil"},
-{name:"Elrond",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/egld@latest/egld.png",api:"https://api.astrobridge.io/v1/port/egld"},
-{name:"Algorand",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/algo@latest/algo.png",api:"https://api.astrobridge.io/v1/port/algo"},
-{name:"Hedera",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/hbar@latest/hbar.png",api:"https://api.astrobridge.io/v1/port/hbar"},
-{name:"IOTA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/miota@latest/miota.png",api:"https://api.astrobridge.io/v1/port/iota"},
-{name:"Nano",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/nano@latest/nano.png",api:"https://api.astrobridge.io/v1/port/nano"},
-{name:"Monero",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xmr@latest/xmr.png",api:"https://api.astrobridge.io/v1/port/xmr"},
-{name:"Zcash",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zec@latest/zec.png",api:"https://api.astrobridge.io/v1/port/zec"},
-{name:"Dash",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dash@latest/dash.png",api:"https://api.astrobridge.io/v1/port/dash"},
-{name:"Ravencoin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/rvn@latest/rvn.png",api:"https://api.astrobridge.io/v1/port/rvn"},
-{name:"Kusama",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ksm@latest/ksm.png",api:"https://api.astrobridge.io/v1/port/ksm"},
-{name:"Polkadot",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dot@latest/dot.png",api:"https://api.astrobridge.io/v1/port/dot"},
-{name:"Acala",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/aca@latest/aca.png",api:"https://api.astrobridge.io/v1/port/acala"},
-{name:"Karura",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/kar@latest/kar.png",api:"https://api.astrobridge.io/v1/port/karura"},
-{name:"Astar",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/astr@latest/astr.png",api:"https://api.astrobridge.io/v1/port/astar"},
-{name:"Shiden",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sdn@latest/sdn.png",api:"https://api.astrobridge.io/v1/port/shiden"},
-{name:"Moonbeam",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/glmr@latest/glmr.png",api:"https://api.astrobridge.io/v1/port/moonbeam"},
-{name:"Moonriver",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/movr@latest/movr.png",api:"https://api.astrobridge.io/v1/port/moonriver"},
-{name:"Shibarium",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/shib@latest/shib.png",api:"https://api.astrobridge.io/v1/port/shibarium"},
-{name:"Core",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/core@latest/core.png",api:"https://api.astrobridge.io/v1/port/core"},
-{name:"EOS",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/eos@latest/eos.png",api:"https://api.astrobridge.io/v1/port/eos"},
-{name:"WAX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/waxp@latest/waxp.png",api:"https://api.astrobridge.io/v1/port/wax"},
-{name:"Velas",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/vlx@latest/vlx.png",api:"https://api.astrobridge.io/v1/port/vlx"},
-{name:"Syscoin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sys@latest/sys.png",api:"https://api.astrobridge.io/v1/port/sys"},
-{name:"Horizen",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zen@latest/zen.png",api:"https://api.astrobridge.io/v1/port/zen"},
-{name:"Decred",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dcr@latest/dcr.png",api:"https://api.astrobridge.io/v1/port/dcr"},
-{name:"Komodo",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/kmd@latest/kmd.png",api:"https://api.astrobridge.io/v1/port/kmd"},
-{name:"Terra Classic",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/lunc@latest/lunc.png",api:"https://api.astrobridge.io/v1/port/lunc"},
-{name:"Terra",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/luna@latest/luna.png",api:"https://api.astrobridge.io/v1/port/luna"},
-{name:"Ronin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ron@latest/ron.png",api:"https://api.astrobridge.io/v1/port/ronin"},
-{name:"Gnosis",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/gno@latest/gno.png",api:"https://api.astrobridge.io/v1/port/gnosis"},
-{name:"Theta",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/theta@latest/theta.png",api:"https://api.astrobridge.io/v1/port/theta"},
-{name:"KuCoin",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/kcs@latest/kcs.png",api:"https://api.astrobridge.io/v1/port/kcs"},
-{name:"Huobi",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ht@latest/ht.png",api:"https://api.astrobridge.io/v1/port/ht"},
-{name:"BitTorrent Chain",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/bttc@latest/bttc.png",api:"https://api.astrobridge.io/v1/port/bttc"},
-{name:"Shiba Inu",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/shib@latest/shib.png",api:"https://api.astrobridge.io/v1/port/shib"},
-{name:"Dai",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dai@latest/dai.png",api:"https://api.astrobridge.io/v1/port/dai"},
-{name:"USDC",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/usdc@latest/usdc.png",api:"https://api.astrobridge.io/v1/port/usdc"},
-{name:"USDT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/usdt@latest/usdt.png",api:"https://api.astrobridge.io/v1/port/usdt"},
-{name:"BUSD",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/busd@latest/busd.png",api:"https://api.astrobridge.io/v1/port/busd"},
-{name:"Tether USD",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/usdt@latest/usdt.png",api:"https://api.astrobridge.io/v1/port/usdt"},
-{name:"FRAX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/frax@latest/frax.png",api:"https://api.astrobridge.io/v1/port/frax"},
-{name:"LUSD",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/lusd@latest/lusd.png",api:"https://api.astrobridge.io/v1/port/lusd"},
-{name:"sUSD",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/susd@latest/susd.png",api:"https://api.astrobridge.io/v1/port/susd"},
-{name:"MAKER",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/mkr@latest/mkr.png",api:"https://api.astrobridge.io/v1/port/mkr"},
-{name:"UNI",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/uni@latest/uni.png",api:"https://api.astrobridge.io/v1/port/uni"},
-{name:"SUSHI",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sushi@latest/sushi.png",api:"https://api.astrobridge.io/v1/port/sushi"},
-{name:"CRV",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/crv@latest/crv.png",api:"https://api.astrobridge.io/v1/port/crv"},
-{name:"YFI",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/yfi@latest/yfi.png",api:"https://api.astrobridge.io/v1/port/yfi"},
-{name:"SNX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/snx@latest/snx.png",api:"https://api.astrobridge.io/v1/port/snx"},
-{name:"REN",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ren@latest/ren.png",api:"https://api.astrobridge.io/v1/port/ren"},
-{name:"ENJ",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/enj@latest/enj.png",api:"https://api.astrobridge.io/v1/port/enj"},
-{name:"MANA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/mana@latest/mana.png",api:"https://api.astrobridge.io/v1/port/mana"},
-{name:"SAND",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sand@latest/sand.png",api:"https://api.astrobridge.io/v1/port/sand"},
-{name:"CHZ",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/chz@latest/chz.png",api:"https://api.astrobridge.io/v1/port/chz"},
-{name:"BAT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/bat@latest/bat.png",api:"https://api.astrobridge.io/v1/port/bat"},
-{name:"OMG",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/omg@latest/omg.png",api:"https://api.astrobridge.io/v1/port/omg"},
-{name:"ZRX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zrx@latest/zrx.png",api:"https://api.astrobridge.io/v1/port/zrx"},
-{name:"REP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/rep@latest/rep.png",api:"https://api.astrobridge.io/v1/port/rep"},
-{name:"ANT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ant@latest/ant.png",api:"https://api.astrobridge.io/v1/port/ant"},
-{name:"GRT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/grt@latest/grt.png",api:"https://api.astrobridge.io/v1/port/grt"},
-{name:"1INCH",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/1inch@latest/1inch.png",api:"https://api.astrobridge.io/v1/port/1inch"},
-{name:"MOVR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/movr@latest/movr.png",api:"https://api.astrobridge.io/v1/port/movr"},
-{name:"GLMR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/glmr@latest/glmr.png",api:"https://api.astrobridge.io/v1/port/glmr"},
-{name:"MOVR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/movr@latest/movr.png",api:"https://api.astrobridge.io/v1/port/movr"},
-{name:"KSM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ksm@latest/ksm.png",api:"https://api.astrobridge.io/v1/port/ksm"},
-{name:"DOT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dot@latest/dot.png",api:"https://api.astrobridge.io/v1/port/dot"},
-{name:"ATOM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/atom@latest/atom.png",api:"https://api.astrobridge.io/v1/port/atom"},
-{name:"OSMO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/osmo@latest/osmo.png",api:"https://api.astrobridge.io/v1/port/osmo"},
-{name:"JUNO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/juno@latest/juno.png",api:"https://api.astrobridge.io/v1/port/juno"},
-{name:"EVMOS",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/evmos@latest/evmos.png",api:"https://api.astrobridge.io/v1/port/evmos"},
-{name:"STRIDE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/stride@latest/stride.png",api:"https://api.astrobridge.io/v1/port/stride"},
-{name:"QUICKSILVER",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/qck@latest/qck.png",api:"https://api.astrobridge.io/v1/port/qck"},
-{name:"SCRT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/scrt@latest/scrt.png",api:"https://api.astrobridge.io/v1/port/scrt"},
-{name:"IRIS",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/iris@latest/iris.png",api:"https://api.astrobridge.io/v1/port/iris"},
-{name:"REGEN",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/regen@latest/regen.png",api:"https://api.astrobridge.io/v1/port/regen"},
-{name:"SOMM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/somm@latest/somm.png",api:"https://api.astrobridge.io/v1/port/somm"},
-{name:"STARGAZE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/stars@latest/stars.png",api:"https://api.astrobridge.io/v1/port/stars"},
-{name:"UMEE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/umee@latest/umee.png",api:"https://api.astrobridge.io/v1/port/umee"},
-{name:"AXELAR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/axl@latest/axl.png",api:"https://api.astrobridge.io/v1/port/axelar"},
-{name:"NEUTRON",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ntrn@latest/ntrn.png",api:"https://api.astrobridge.io/v1/port/neutron"},
-{name:"DYDX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dydx@latest/dydx.png",api:"https://api.astrobridge.io/v1/port/dydx"},
-{name:"OPTIMISM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/op@latest/op.png",api:"https://api.astrobridge.io/v1/port/op"},
-{name:"ARBITRUM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/arb@latest/arb.png",api:"https://api.astrobridge.io/v1/port/arb"},
-{name:"ZKSYNC",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/era@latest/era.png",api:"https://api.astrobridge.io/v1/port/era"},
-{name:"STARKNET",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/strk@latest/strk.png",api:"https://api.astrobridge.io/v1/port/strk"},
-{name:"SCROLL",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/scroll@latest/scroll.png",api:"https://api.astrobridge.io/v1/port/scroll"},
-{name:"LINEA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/linea@latest/linea.png",api:"https://api.astrobridge.io/v1/port/linea"},
-{name:"BASE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/base@latest/base.png",api:"https://api.astrobridge.io/v1/port/base"},
-{name:"METIS",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/metis@latest/metis.png",api:"https://api.astrobridge.io/v1/port/metis"},
-{name:"BOBA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/boba@latest/boba.png",api:"https://api.astrobridge.io/v1/port/boba"},
-{name:"REAL",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/real@latest/real.png",api:"https://api.astrobridge.io/v1/port/real"},
-{name:"CELO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/celo@latest/celo.png",api:"https://api.astrobridge.io/v1/port/celo"},
-{name:"ALGORAND",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/algo@latest/algo.png",api:"https://api.astrobridge.io/v1/port/algo"},
-{name:"HEDERA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/hbar@latest/hbar.png",api:"https://api.astrobridge.io/v1/port/hbar"},
-{name:"ICP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/icp@latest/icp.png",api:"https://api.astrobridge.io/v1/port/icp"},
-{name:"STEEM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/steem@latest/steem.png",api:"https://api.astrobridge.io/v1/port/steem"},
-{name:"HIVE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/hive@latest/hive.png",api:"https://api.astrobridge.io/v1/port/hive"},
-{name:"LISK",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/lsk@latest/lsk.png",api:"https://api.astrobridge.io/v1/port/lsk"},
-{name:"ARDROR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ardr@latest/ardr.png",api:"https://api.astrobridge.io/v1/port/ardr"},
-{name:"WAVES",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/waves@latest/waves.png",api:"https://api.astrobridge.io/v1/port/waves"},
-{name:"KOMODO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/kmd@latest/kmd.png",api:"https://api.astrobridge.io/v1/port/kmd"},
-{name:"DCR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dcr@latest/dcr.png",api:"https://api.astrobridge.io/v1/port/dcr"},
-{name:"PIVX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/pivx@latest/pivx.png",api:"https://api.astrobridge.io/v1/port/pivx"},
-{name:"ZCASH",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zec@latest/zec.png",api:"https://api.astrobridge.io/v1/port/zec"},
-{name:"HORIZEN",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zen@latest/zen.png",api:"https://api.astrobridge.io/v1/port/zen"},
-{name:"RAVENCOIN",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/rvn@latest/rvn.png",api:"https://api.astrobridge.io/v1/port/rvn"},
-{name:"DASH",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dash@latest/dash.png",api:"https://api.astrobridge.io/v1/port/dash"},
-{name:"MONERO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xmr@latest/xmr.png",api:"https://api.astrobridge.io/v1/port/xmr"},
-{name:"VERGE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xvg@latest/xvg.png",api:"https://api.astrobridge.io/v1/port/xvg"},
-{name:"DOGE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/doge@latest/doge.png",api:"https://api.astrobridge.io/v1/port/doge"},
-{name:"LTC",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ltc@latest/ltc.png",api:"https://api.astrobridge.io/v1/port/ltc"},
-{name:"BCH",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/bch@latest/bch.png",api:"https://api.astrobridge.io/v1/port/bch"},
-{name:"BSV",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/bsv@latest/bsv.png",api:"https://api.astrobridge.io/v1/port/bsv"},
-{name:"BTC",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/btc@latest/btc.png",api:"https://api.astrobridge.io/v1/port/btc"},
-{name:"ETH",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/eth@latest/eth.png",api:"https://api.astrobridge.io/v1/port/eth"},
-{name:"SOL",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sol@latest/sol.png",api:"https://api.astrobridge.io/v1/port/sol"},
-{name:"AVAX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/avax@latest/avax.png",api:"https://api.astrobridge.io/v1/port/avax"},
-{name:"MATIC",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/matic@latest/matic.png",api:"https://api.astrobridge.io/v1/port/matic"},
-{name:"ATOM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/atom@latest/atom.png",api:"https://api.astrobridge.io/v1/port/atom"},
-{name:"DOT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/dot@latest/dot.png",api:"https://api.astrobridge.io/v1/port/dot"},
-{name:"KSM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ksm@latest/ksm.png",api:"https://api.astrobridge.io/v1/port/ksm"},
-{name:"XRP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xrp@latest/xrp.png",api:"https://api.astrobridge.io/v1/port/xrp"},
-{name:"XLM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xlm@latest/xlm.png",api:"https://api.astrobridge.io/v1/port/xlm"},
-{name:"ADA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ada@latest/ada.png",api:"https://api.astrobridge.io/v1/port/ada"},
-{name:"TRX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/trx@latest/trx.png",api:"https://api.astrobridge.io/v1/port/trx"},
-{name:"XTZ",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/xtz@latest/xtz.png",api:"https://api.astrobridge.io/v1/port/xtz"},
-{name:"ALGO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/algo@latest/algo.png",api:"https://api.astrobridge.io/v1/port/algo"},
-{name:"HBAR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/hbar@latest/hbar.png",api:"https://api.astrobridge.io/v1/port/hbar"},
-{name:"ICP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/icp@latest/icp.png",api:"https://api.astrobridge.io/v1/port/icp"},
-{name:"FIL",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/fil@latest/fil.png",api:"https://api.astrobridge.io/v1/port/fil"},
-{name:"AR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ar@latest/ar.png",api:"https://api.astrobridge.io/v1/port/ar"},
-{name:"LINK",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/link@latest/link.png",api:"https://api.astrobridge.io/v1/port/link"},
-{name:"UNI",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/uni@latest/uni.png",api:"https://api.astrobridge.io/v1/port/uni"},
-{name:"CAKE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/cake@latest/cake.png",api:"https://api.astrobridge.io/v1/port/cake"},
-{name:"SUSHI",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sushi@latest/sushi.png",api:"https://api.astrobridge.io/v1/port/sushi"},
-{name:"CRV",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/crv@latest/crv.png",api:"https://api.astrobridge.io/v1/port/crv"},
-{name:"AAVE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/aave@latest/aave.png",api:"https://api.astrobridge.io/v1/port/aave"},
-{name:"COMP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/comp@latest/comp.png",api:"https://api.astrobridge.io/v1/port/comp"},
-{name:"SNX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/snx@latest/snx.png",api:"https://api.astrobridge.io/v1/port/snx"},
-{name:"YFI",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/yfi@latest/yfi.png",api:"https://api.astrobridge.io/v1/port/yfi"},
-{name:"MKR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/mkr@latest/mkr.png",api:"https://api.astrobridge.io/v1/port/mkr"},
-{name:"REN",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ren@latest/ren.png",api:"https://api.astrobridge.io/v1/port/ren"},
-{name:"ENJ",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/enj@latest/enj.png",api:"https://api.astrobridge.io/v1/port/enj"},
-{name:"MANA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/mana@latest/mana.png",api:"https://api.astrobridge.io/v1/port/mana"},
-{name:"SAND",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sand@latest/sand.png",api:"https://api.astrobridge.io/v1/port/sand"},
-{name:"CHZ",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/chz@latest/chz.png",api:"https://api.astrobridge.io/v1/port/chz"},
-{name:"BAT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/bat@latest/bat.png",api:"https://api.astrobridge.io/v1/port/bat"},
-{name:"ZRX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zrx@latest/zrx.png",api:"https://api.astrobridge.io/v1/port/zrx"},
-{name:"OMG",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/omg@latest/omg.png",api:"https://api.astrobridge.io/v1/port/omg"},
-{name:"REP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/rep@latest/rep.png",api:"https://api.astrobridge.io/v1/port/rep"},
-{name:"ANT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ant@latest/ant.png",api:"https://api.astrobridge.io/v1/port/ant"},
-{name:"GRT",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/grt@latest/grt.png",api:"https://api.astrobridge.io/v1/port/grt"},
-{name:"1INCH",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/1inch@latest/1inch.png",api:"https://api.astrobridge.io/v1/port/1inch"},
-{name:"FTM",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/ftm@latest/ftm.png",api:"https://api.astrobridge.io/v1/port/ftm"},
-{name:"ONE",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/one@latest/one.png",api:"https://api.astrobridge.io/v1/port/one"},
-{name:"KAVA",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/kava@latest/kava.png",api:"https://api.astrobridge.io/v1/port/kava"},
-{name:"CELO",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/celo@latest/celo.png",api:"https://api.astrobridge.io/v1/port/celo"},
-{name:"GLMR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/glmr@latest/glmr.png",api:"https://api.astrobridge.io/v1/port/glmr"},
-{name:"MOVR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/movr@latest/movr.png",api:"https://api.astrobridge.io/v1/port/movr"},
-{name:"ASTR",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/astr@latest/astr.png",api:"https://api.astrobridge.io/v1/port/astr"},
-{name:"SDN",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sdn@latest/sdn.png",api:"https://api.astrobridge.io/v1/port/sdn"},
-{name:"EGLD",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/egld@latest/egld.png",api:"https://api.astrobridge.io/v1/port/egld"},
-{name:"ZIL",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/zil@latest/zil.png",api:"https://api.astrobridge.io/v1/port/zil"},
-{name:"WAXP",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/waxp@latest/waxp.png",api:"https://api.astrobridge.io/v1/port/waxp"},
-{name:"VLX",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/vlx@latest/vlx.png",api:"https://api.astrobridge.io/v1/port/vlx"},
-{name:"SYS",logo:"https://cdn.jsdelivr.net/npm/@cryptologos/sys@latest/sys.png",api:"https://api.astrobridge.io/v1/port/sys"}
+"Ethereum","BNB Chain","Bitcoin","Solana","Avalanche","Polygon","Arbitrum","Optimism","Base","Aptos","Sui","Cosmos","Osmosis",
+"TRON","Tezos","Cardano","XRP","Stellar","Ton","Dogecoin","Litecoin","Fantom","Celo","Flow","Immutable X","ZKsync","StarkNet",
+"Scroll","Linea","Manta","Kava","OKXChain","Gnosis","Ronin","Shibarium","Core","EOS","Algorand","Hedera","Filecoin","Arweave",
+"Chainlink","Uniswap","PancakeSwap","SushiSwap","Curve","Aave","MakerDAO","Polkadot","Kusama","Moonbeam","Moonriver","Astar"
 ];
 
 const grid = document.getElementById('chainGrid');
-chains.forEach(chain => {
+chains.forEach(name => {
   const card = document.createElement('div');
   card.className = 'chain-card';
-  const first = chain.name.charAt(0);
-  const svg = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='rgba(76,201,240,0.15)'/><text x='50' y='55' font-size='42' fill='#4cc9f0' text-anchor='middle' dominant-baseline='middle' font-weight='bold' font-family="Inter,sans-serif">${first}</text></svg>`;
+  const initial = name.charAt(0);
   card.innerHTML = `
-    <div class="chain-logo">
-      <img src="${svg}" alt="${chain.name}">
-    </div>
-    <div class="chain-name">${chain.name}</div>
+    <div class="chain-icon">${initial}</div>
+    <div class="chain-name">${name}</div>
     <div class="chain-status">Connected ✅</div>
   `;
-  card.onclick = () => window.open(chain.api, '_blank');
   grid.appendChild(card);
 });
-
 </script>
 </body>
 </html>
