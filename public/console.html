@@ -5,31 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AstroBridge • Intent Trading Terminal</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'genesis-blue': '#40c4ff',
-            'genesis-purple': '#7c4dff',
-            'void-black': '#02000d',
-            'star-gold': '#ffd700',
-            'nebula-teal': '#26c6da',
-          },
-          fontFamily: {
-            'orbitron': ['Orbitron', 'sans-serif'],
-            'exo': ['Exo 2', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
   <style>
     * { direction: ltr !important; unicode-bidi: normal !important; text-align: left !important; }
     :root { --bg: #02000d; --text: #e3f2fd; }
@@ -74,7 +54,7 @@
   </div>
   <div class="flex items-center gap-4">
     <select id="languageSelect" class="bg-void-black/70 border border-genesis-blue/30 text-white px-3 py-1.5 rounded-lg text-sm focus:outline-none focus:border-genesis-blue">
-      <option value="en">English</option>
+      <option value="en" selected>English</option>
       <option value="zh">中文 (简体)</option>
     </select>
     <button id="connectBtn" class="btn-neon px-3 md:px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-wide">
@@ -164,10 +144,11 @@
 </footer>
 
 <script>
-// ==================== 多语言支持（完整保留 + 强化） ====================
+// ==================== 多语言支持（主语言为 English） ====================
 const translations = {
   en: {
-    navTitle: "ASTROBRIDGE", navSubtitle: "Intent Network",
+    navTitle: "ASTROBRIDGE", 
+    navSubtitle: "Intent Network",
     modalTitle: "Connect Wallet",
     mainTitle: "AI Intent Execution Terminal",
     mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution",
@@ -184,7 +165,8 @@ const translations = {
     disconnectText: "Disconnect"
   },
   zh: {
-    navTitle: "ASTROBRIDGE", navSubtitle: "意图网络",
+    navTitle: "ASTROBRIDGE", 
+    navSubtitle: "意图网络",
     modalTitle: "连接钱包",
     mainTitle: "AI 意图执行终端",
     mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行",
@@ -202,7 +184,7 @@ const translations = {
   }
 };
 
-let currentLang = 'zh';
+let currentLang = 'en';   // 默认主语言为 English
 
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
@@ -262,7 +244,7 @@ function disconnectWallet() {
   log("Wallet disconnected", "text-yellow-400");
 }
 
-// ==================== 钱包连接（完整保留 + 强化） ====================
+// ==================== 钱包连接（完整保留） ====================
 document.getElementById('connectBtn').addEventListener('click', () => document.getElementById('walletModal').classList.remove('hidden'));
 document.getElementById('closeWallet').addEventListener('click', () => document.getElementById('walletModal').classList.add('hidden'));
 document.getElementById('disconnectBtn').addEventListener('click', disconnectWallet);
@@ -280,7 +262,7 @@ document.querySelector('[data-provider="metamask"]').addEventListener('click', a
   } catch (e) { alert("MetaMask connection failed: " + e.message); }
 });
 
-// WalletConnect（完整保留）
+// WalletConnect
 document.querySelector('[data-provider="walletconnect"]').addEventListener('click', async () => {
   try {
     log("Initializing WalletConnect...", "text-blue-300");
@@ -315,7 +297,7 @@ document.querySelector('[data-provider="injected"]').addEventListener('click', a
 // ==================== AI Parse ====================
 document.getElementById('parseBtn').onclick = () => {
   const text = document.getElementById('intentInput').value.trim();
-  if (!text) return alert(t('intentTitle') === "Your Intent" ? "Please enter your intent" : "请输入你的意图");
+  if (!text) return alert("Please enter your intent");
   
   parsedPlan.innerHTML = `<div class="typing">AI is analyzing your intent...</div>`;
   log("AI parsing intent...", "text-blue-300");
@@ -327,7 +309,7 @@ document.getElementById('parseBtn').onclick = () => {
   }, 1200);
 };
 
-// ==================== 真实 Execute Intent（核心功能） ====================
+// ==================== 真实 Execute Intent ====================
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText || !userAddress) {
@@ -421,7 +403,7 @@ function addToHistory(id, status) {
 // ==================== 初始化 ====================
 updateLanguage();
 log("🚀 AstroBridge Intent Terminal ready", "text-green-400");
-log("v3.2 Real Chain Execution Enabled + 多语言支持", "text-green-400");
+log("v3.2 Real Chain Execution Enabled", "text-green-400");
 </script>
 </body>
 </html>
