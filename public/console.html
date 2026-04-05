@@ -504,6 +504,97 @@ function addToHistory(id, status) {
 updateLanguage();
 log("🚀 AstroBridge ready", "text-green-400");
 log("v3.2 Real Chain Execution", "text-green-400");
+  
+// ==================== 【新增】真实后端调用 - Execute Intent ====================
+document.getElementById('executeBtn').onclick = async () => {
+  const intentText = document.getElementById('intentInput').value.trim();
+  if (!intentText || !userAddress) {
+    alert(t('intentTitle') + " & " + t('connectText') + " required");
+    return;
+  }
+
+  const executeBtn = document.getElementById('executeBtn');
+  const originalHTML = executeBtn.innerHTML;
+  executeBtn.disabled = true;
+  executeBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...`;
+
+  log("📤 Submitting intent to backend...", "text-blue-300");
+
+  try {
+    const intentData = {
+      id: `intent_${Date.now()}`,
+      type: "user_intent",
+      description: intentText,
+      creator: userAddress,
+      timestamp: Date.now(),
+      payload: { 
+        rawIntent: intentText, 
+        preferredChain: "sepolia", 
+        amount: "0.001" 
+      }
+    };
+
+    const response = await fetch(`${API_BASE}/api/intent/submit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        intent: intentData,
+        signature: "user_signature_v32"
+      })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      log(`✅ Intent submitted! ID: ${result.intentId}`, "text-green-400");
+      log(`Estimated execution: ~${result.estimatedExecutionSeconds || 15} seconds`, "text-green-400");
+
+      // 更新解析区域
+      document.getElementById('parsedPlan').innerHTML = `
+        <strong>✅ Submitted Successfully</strong><br>
+        <strong>ID:</strong> ${result.intentId}<br>
+        <strong>Status:</strong> Queued<br>
+        <strong>Risk Score:</strong> ${result.riskScore || 'Low'}<br>
+        <strong>Message:</strong> ${result.message || 'Waiting for execution'}
+      `;
+
+      addToHistory(result.intentId, "Queued");
+      pollIntentStatus(result.intentId);   // 实时查询状态
+    } else {
+      log(`❌ Error: ${result.error || 'Unknown'}`, "text-red-400");
+    }
+  } catch (err) {
+    console.error(err);
+    log(`❌ Cannot connect to server: ${err.message}`, "text-red-400");
+  } finally {
+    executeBtn.disabled = false;
+    executeBtn.innerHTML = originalHTML;
+  }
+};
+
+// 实时轮询意图状态（新增）
+async function pollIntentStatus(intentId) {
+  let attempts = 0;
+  const interval = setInterval(async () => {
+    attempts++;
+    try {
+      const res = await fetch(`${API_BASE}/api/intent/${intentId}`);
+      const data = await res.json();
+      if (data.success && data.chain && data.chain.status === 'executed') {
+        log(`🎉 Intent ${intentId} executed on Sepolia!`, "text-green-400");
+        if (data.chain.txHash) {
+          log(`Tx Hash: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash.substring(0,20)}...</a>`, "text-green-400");
+        }
+        clearInterval(interval);
+      }
+    } catch (e) {}
+    if (attempts >= 20) clearInterval(interval);
+  }, 4000);
+}
+
+// 把这行加到你的初始化部分下面（updateLanguage(); 之后）
+log("🚀 AstroBridge ready with real backend call", "text-green-400");
+  
 </script>
 </body>
 </html>
