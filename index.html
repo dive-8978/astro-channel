@@ -342,6 +342,8 @@ footer{
 .card-grid,.chain-grid{grid-template-columns:repeat(auto-fill, minmax(120px, 1fr))}
 .globe-container{height:300px}
 }
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
 </style>
 </head>
 
@@ -354,7 +356,7 @@ footer{
 <div class="container">
 
 <nav>
-<div class="logo"><img src="/favicon.ico" style="height:1.5em; margin-right:8px; vertical-align:middle;">AstroBridge</div>
+<div class="logo" style="animation:spin 8s linear infinite;"><img src="/favicon.ico" style="height:1.5em; margin-right:8px; vertical-align:middle;">AstroBridge</div>
 <div class="nav-right">
 <div class="hamburger" id="hamburger">
 <span></span>
