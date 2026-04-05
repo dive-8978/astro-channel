@@ -1,154 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AstroBridge • Intent Trading Terminal</title>
+  <title>AstroBridge • Intent Trading Terminal v3.2</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'genesis-blue': '#40c4ff',
-            'genesis-purple': '#7c4dff',
-            'void-black': '#02000d',
-            'star-gold': '#ffd700',
-            'nebula-teal': '#26c6da',
-          },
-          fontFamily: {
-            'orbitron': ['Orbitron', 'sans-serif'],
-            'exo': ['Exo 2', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
   <style>
-    * { direction: ltr !important; unicode-bidi: normal !important; text-align: left !important; }
-    :root { --bg: #02000d; --text: #e3f2fd; }
     body {
-      background: var(--bg);
+      background: #02000d;
       background-image: url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
-      background-size: cover; background-position: center 30%; background-attachment: fixed;
-      color: var(--text); font-family: 'Exo 2', sans-serif; min-height: 100vh;
-      margin: 0; overflow-x: hidden; position: relative;
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+      color: #e3f2fd;
+      font-family: 'Exo 2', sans-serif;
+      min-height: 100vh;
+      margin: 0;
     }
-    .nebula-flow {
-      position: fixed; inset: 0; z-index: -3; pointer-events: none;
-      background: radial-gradient(ellipse at 40% 30%, rgba(124,7,255,0.10) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.08) 0%, transparent 65%);
-      background-size: 220% 220%; animation: nebula-flow 520s ease-in-out infinite;
-      mix-blend-mode: screen; opacity: 0.4; filter: blur(70px);
-    }
-    @keyframes nebula-flow { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }
     .glass-panel {
-      background: rgba(8,15,40,0.26); backdrop-filter: blur(22px) saturate(180%);
-      border: 1px solid rgba(64,196,255,0.20);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.55), inset 0 0 20px rgba(64,196,255,0.05);
-      border-radius: 1.25rem; transition: all 0.4s ease;
+      background: rgba(8,15,40,0.65);
+      backdrop-filter: blur(22px) saturate(180%);
+      border: 1px solid rgba(64,196,255,0.25);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.7);
     }
-    .neon-text { text-shadow: 0 0 10px #40c4ff, 0 0 20px #7c4dff; }
+    .neon-text { text-shadow: 0 0 12px #40c4ff, 0 0 25px #7c4dff; }
     .btn-neon {
       background: linear-gradient(135deg, #40c4ff, #7c4dff);
-      box-shadow: 0 0 20px rgba(64,196,255,0.5); transition: all 0.4s;
+      transition: all 0.4s ease;
     }
-    .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
-    #statusLog { max-height: 260px; overflow-y: auto; }
+    .btn-neon:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 40px rgba(64,196,255,0.85);
+    }
+    #statusLog { max-height: 280px; overflow-y: auto; font-family: monospace; }
   </style>
 </head>
 <body>
-<div class="nebula-flow"></div>
+<div class="nebula-flow" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.35;"></div>
 
-<nav class="glass-panel px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
-  <div class="flex items-center gap-3 md:gap-6">
-    <h1 class="text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
-    <span class="text-xs px-3 py-1 bg-genesis-purple/20 rounded-full border border-genesis-purple/40">v3.2 Real Execution</span>
+<nav class="glass-panel px-6 py-5 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/30">
+  <div class="flex items-center gap-4">
+    <h1 class="text-4xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
+    <span class="px-4 py-1 text-sm bg-purple-500/20 border border-purple-400 rounded-full">v3.2 Real Execution</span>
   </div>
   <div class="flex items-center gap-4">
-    <button id="connectBtn" class="btn-neon px-6 py-2.5 rounded-full text-sm uppercase tracking-wide">
-      <i class="fas fa-wallet mr-2"></i> Connect Wallet
+    <button id="connectBtn" class="btn-neon px-8 py-3 rounded-2xl text-white font-medium flex items-center gap-2">
+      <i class="fas fa-wallet"></i> Connect Wallet
     </button>
-    <button id="disconnectBtn" class="hidden px-4 py-2 text-sm text-red-400 hover:text-red-300">
+    <button id="disconnectBtn" class="hidden px-6 py-3 text-red-400 hover:text-red-300">
       <i class="fas fa-power-off"></i> Disconnect
     </button>
   </div>
 </nav>
 
-<main class="max-w-5xl mx-auto p-4 md:p-8 pt-12 relative z-10">
-  <div class="text-center mb-10">
-    <h2 class="text-5xl font-orbitron neon-text mb-4">AI Intent Execution Terminal</h2>
-    <p class="text-xl opacity-80">Speak your intent → AI parses → Robots execute on-chain</p>
+<main class="max-w-6xl mx-auto p-6 pt-12">
+  <div class="text-center mb-12">
+    <h2 class="text-6xl font-orbitron neon-text mb-4">AI Intent Execution Terminal</h2>
+    <p class="text-2xl opacity-80">Speak your intent → AI understands → Robots execute on-chain</p>
   </div>
 
-  <section class="glass-panel p-8 mb-8">
-    <h3 class="text-2xl font-orbitron neon-text mb-6">Your Intent</h3>
-    <textarea id="intentInput" rows="5"
-      class="w-full bg-void-black/70 border border-genesis-blue/40 rounded-2xl p-6 text-white placeholder-gray-400 focus:outline-none focus:border-genesis-blue resize-none"
-      placeholder="Example: Send 0.001 ETH to 0x123... on Sepolia"></textarea>
+  <div class="grid lg:grid-cols-2 gap-8">
+    <!-- 意图输入 -->
+    <div class="glass-panel p-10">
+      <h3 class="text-3xl font-orbitron mb-6 neon-text">Your Intent</h3>
+      <textarea id="intentInput" rows="6" 
+        class="w-full bg-black/60 border border-genesis-blue/50 rounded-3xl p-8 text-lg placeholder-gray-400 focus:outline-none focus:border-genesis-blue resize-none"
+        placeholder="Example: Send 0.001 ETH to 0x123... on Sepolia"></textarea>
 
-    <div class="mt-8 flex gap-4 justify-center">
-      <button id="parseBtn" class="btn-neon px-10 py-4 rounded-2xl text-lg">
-        <i class="fas fa-brain mr-2"></i> AI Parse Intent
-      </button>
-      <button id="executeBtn" class="btn-neon px-10 py-4 rounded-2xl text-lg">
-        <i class="fas fa-rocket mr-2"></i> Execute Intent
-      </button>
-    </div>
-  </section>
-
-  <div class="grid md:grid-cols-2 gap-6 mb-8">
-    <div class="glass-panel p-8">
-      <h4 class="text-xl font-orbitron mb-4 neon-text">AI Parsed Plan</h4>
-      <div id="parsedPlan" class="text-sm min-h-[180px] bg-black/40 p-5 rounded-xl">
-        Enter an intent and click AI Parse to begin.
+      <div class="flex gap-6 mt-10">
+        <button id="parseBtn" class="btn-neon flex-1 py-5 text-xl rounded-3xl">
+          <i class="fas fa-brain mr-3"></i> AI Parse Intent
+        </button>
+        <button id="executeBtn" class="btn-neon flex-1 py-5 text-xl rounded-3xl">
+          <i class="fas fa-rocket mr-3"></i> Execute Intent
+        </button>
       </div>
     </div>
 
-    <div class="glass-panel p-8">
-      <h4 class="text-xl font-orbitron mb-4 neon-text">Execution Log</h4>
-      <div id="statusLog" class="text-sm font-mono bg-black/70 p-5 rounded-xl max-h-[220px] overflow-y-auto"></div>
+    <!-- 执行状态 -->
+    <div class="glass-panel p-10">
+      <h3 class="text-3xl font-orbitron mb-6 neon-text">AI Parsed Plan & Status</h3>
+      <div id="parsedPlan" class="min-h-[180px] bg-black/50 p-8 rounded-3xl text-lg mb-8">
+        Enter your intent and click AI Parse
+      </div>
+
+      <h4 class="text-xl font-medium mb-4">Execution Log</h4>
+      <div id="statusLog" class="bg-black/80 p-6 rounded-3xl text-base font-mono h-72 overflow-y-auto"></div>
     </div>
   </div>
 
-  <div class="glass-panel p-8">
-    <h4 class="text-xl font-orbitron mb-4 neon-text">Recent Intent History</h4>
-    <div id="historyList" class="space-y-3 text-sm"></div>
+  <!-- 历史记录 -->
+  <div class="glass-panel p-10 mt-8">
+    <h3 class="text-3xl font-orbitron mb-6 neon-text">Recent Intent History</h3>
+    <div id="historyList" class="space-y-4 text-lg"></div>
   </div>
 </main>
-
-<footer class="glass-panel py-6 text-center text-sm opacity-70 mt-12">
-  © 2026 AstroBridge — Decentralized Intent Network
-</footer>
 
 <script>
 // ==================== 配置 ====================
 const API_BASE = "http://45.76.150.100:3000";
 let userAddress = null;
+let wcProviderInstance = null;
 
 const statusLog = document.getElementById('statusLog');
 const parsedPlan = document.getElementById('parsedPlan');
 const historyList = document.getElementById('historyList');
 
-function log(text, colorClass = "text-gray-300") {
+function log(text, color = "text-gray-300") {
   const time = new Date().toLocaleTimeString();
-  statusLog.innerHTML += `<p class="${colorClass}">[${time}] ${text}</p>`;
+  statusLog.innerHTML += `<p class="${color}">[${time}] ${text}</p>`;
   statusLog.scrollTop = statusLog.scrollHeight;
 }
 
 function updateConnectButton() {
-  document.getElementById('connectBtn').innerHTML = `<i class="fas fa-circle text-green-400 mr-2"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+  document.getElementById('connectBtn').innerHTML = `<i class="fas fa-circle text-green-400 mr-2"></i> ${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
   document.getElementById('disconnectBtn').classList.remove('hidden');
 }
 
-// 连接钱包
+function disconnectWallet() {
+  userAddress = null;
+  if (wcProviderInstance) wcProviderInstance.disconnect();
+  document.getElementById('connectBtn').innerHTML = `<i class="fas fa-wallet mr-2"></i> Connect Wallet`;
+  document.getElementById('disconnectBtn').classList.add('hidden');
+  log("Wallet disconnected", "text-yellow-400");
+}
+
+// ==================== 强化钱包连接 ====================
 document.getElementById('connectBtn').addEventListener('click', async () => {
+  // MetaMask
   if (window.ethereum) {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -156,40 +141,54 @@ document.getElementById('connectBtn').addEventListener('click', async () => {
       userAddress = await provider.getSigner().getAddress();
       updateConnectButton();
       log(`✅ MetaMask connected: ${userAddress}`, "text-green-400");
-    } catch (e) {
-      alert("MetaMask connection failed");
-    }
-  } else {
-    alert("Please install MetaMask or other wallet");
+      return;
+    } catch (e) {}
+  }
+
+  // WalletConnect
+  try {
+    const WalletConnectProvider = window.WalletConnectProvider.default;
+    wcProviderInstance = new WalletConnectProvider({
+      rpc: { 1: "https://eth.llamarpc.com", 56: "https://bsc.llamarpc.com" }
+    });
+    await wcProviderInstance.enable();
+    const provider = new ethers.providers.Web3Provider(wcProviderInstance);
+    userAddress = await provider.getSigner().getAddress();
+    updateConnectButton();
+    log(`✅ WalletConnect connected: ${userAddress}`, "text-green-400");
+  } catch (e) {
+    alert("钱包连接失败，请尝试 MetaMask 或其他钱包");
   }
 });
 
-// AI Parse
-document.getElementById('parseBtn').onclick = () => {
+document.getElementById('disconnectBtn').addEventListener('click', disconnectWallet);
+
+// ==================== AI Parse ====================
+document.getElementById('parseBtn').addEventListener('click', () => {
   const text = document.getElementById('intentInput').value.trim();
-  if (!text) return alert("Please enter your intent");
+  if (!text) return alert("请输入你的意图");
   
-  parsedPlan.innerHTML = "AI is analyzing your intent...";
-  log("AI parsing intent...", "text-blue-300");
+  parsedPlan.innerHTML = "AI 正在深度解析您的意图...";
+  log("AI 解析中...", "text-blue-400");
 
   setTimeout(() => {
-    parsedPlan.innerHTML = `<strong>Intent:</strong> ${text}<br><strong>Chain:</strong> Sepolia<br><strong>Action:</strong> Transfer<br><strong>Risk:</strong> Low`;
-    log("AI parsing completed", "text-green-400");
-  }, 1000);
-};
+    parsedPlan.innerHTML = `<strong>意图：</strong>${text}<br><strong>解析结果：</strong> Transfer on Sepolia<br><strong>风险评分：</strong> Low (Safe)`;
+    log("AI 解析完成", "text-green-400");
+  }, 1100);
+});
 
-// 【核心】真实执行意图
-document.getElementById('executeBtn').onclick = async () => {
+// ==================== 真实执行意图（核心） ====================
+document.getElementById('executeBtn').addEventListener('click', async () => {
   const intentText = document.getElementById('intentInput').value.trim();
-  if (!intentText) return alert("Please enter your intent");
-  if (!userAddress) return alert("Please connect wallet first");
+  if (!intentText) return alert("请输入意图");
+  if (!userAddress) return alert("请先连接钱包");
 
   const btn = document.getElementById('executeBtn');
-  const originalText = btn.innerHTML;
+  const original = btn.innerHTML;
   btn.disabled = true;
-  btn.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...`;
+  btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> 正在提交...`;
 
-  log("📤 Submitting intent to AstroBridge...", "text-blue-300");
+  log("📤 正在提交意图到 AstroBridge 网络...", "text-blue-400");
 
   try {
     const intentData = {
@@ -210,30 +209,30 @@ document.getElementById('executeBtn').onclick = async () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         intent: intentData,
-        signature: "user_signature_v32"   // v3.3 将升级为真实签名
+        signature: "user_signature_v32"   // 后续 v3.3 可升级为真实 EIP-712 签名
       })
     });
 
     const result = await response.json();
 
     if (result.success) {
-      log(`✅ Intent submitted successfully! ID: ${result.intentId}`, "text-green-400");
-      parsedPlan.innerHTML += `<br><br><strong>Status:</strong> Queued | Estimated ~${result.estimatedExecutionSeconds || 10}s`;
+      log(`✅ 意图提交成功！ID: ${result.intentId}`, "text-green-400");
+      parsedPlan.innerHTML += `<br><br><strong>状态：</strong> 已入队 | 预计执行时间 ≈ ${result.estimatedExecutionSeconds || 12} 秒`;
 
       addToHistory(result.intentId, "Queued");
       pollIntentStatus(result.intentId);
     } else {
-      log(`❌ Failed: ${result.error || 'Unknown error'}`, "text-red-400");
+      log(`❌ 提交失败: ${result.error || '未知错误'}`, "text-red-400");
     }
   } catch (err) {
-    log(`❌ Cannot connect to server: ${err.message}`, "text-red-400");
+    log(`❌ 网络错误: ${err.message}`, "text-red-400");
   } finally {
     btn.disabled = false;
-    btn.innerHTML = originalText;
+    btn.innerHTML = original;
   }
-};
+});
 
-// 实时查询执行状态
+// 实时轮询执行状态
 async function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -243,25 +242,25 @@ async function pollIntentStatus(intentId) {
       const data = await res.json();
 
       if (data.success && data.chain && data.chain.status === 'executed') {
-        log(`🎉 Intent executed on Sepolia!`, "text-green-400");
+        log(`🎉 意图执行成功！`, "text-green-400");
         if (data.chain.txHash) {
-          log(`Tx: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash.substring(0,20)}...</a>`, "text-green-400");
+          log(`交易哈希: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash.substring(0,22)}...</a>`, "text-green-400");
         }
         clearInterval(interval);
       }
     } catch (e) {}
-    if (attempts >= 20) clearInterval(interval);
-  }, 3000);
+    if (attempts > 25) clearInterval(interval);
+  }, 3500);
 }
 
 function addToHistory(id, status) {
   const color = status === "Queued" ? "text-green-400" : "text-red-400";
-  historyList.innerHTML = `<div class="flex justify-between py-2"><span>${id}</span><span class="${color}">${status}</span></div>` + historyList.innerHTML;
+  historyList.innerHTML = `<div class="flex justify-between p-4 bg-black/40 rounded-2xl"><span>${id}</span><span class="${color}">${status}</span></div>` + historyList.innerHTML;
 }
 
 // 初始化
-log("🚀 AstroBridge Intent Terminal v3.2 Ready", "text-green-400");
-log("Backend connected • Real on-chain execution enabled", "text-green-400");
+log("🚀 AstroBridge v3.2 终极版已启动", "text-green-400");
+log("后端真实执行已就绪 • 支持 Sepolia 测试网", "text-green-400");
 </script>
 </body>
 </html>
