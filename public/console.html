@@ -31,7 +31,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
   <script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
   <style>
-    * { direction: ltr !important; unicode-bidi: normal !important; text-align: left !important; }
+    * { direction: ltr !important; unicode-bidi: normal !important; }
     :root { --bg: #02000d; --text: #e3f2fd; }
     body {
       background: var(--bg);
@@ -72,14 +72,20 @@
   </div>
   <div class="flex items-center gap-4">
     <select id="languageSelect" class="bg-void-black/70 border border-genesis-blue/30 text-white px-3 py-1.5 rounded-lg text-sm focus:outline-none focus:border-genesis-blue">
-      <option value="en">English</option>
+      <option value="en" selected>English</option>
       <option value="zh">中文 (简体)</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
     </select>
     <button id="connectBtn" class="btn-neon px-3 md:px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-wide">
-      <i class="fas fa-wallet mr-1"></i> Connect Wallet
+      <i class="fas fa-wallet mr-1"></i> <span id="connect-text">Connect Wallet</span>
     </button>
     <button id="disconnectBtn" class="hidden px-4 py-2 text-sm text-red-400 hover:text-red-300">
-      <i class="fas fa-power-off"></i> Disconnect
+      <i class="fas fa-power-off"></i> <span id="disconnect-text">Disconnect</span>
     </button>
   </div>
 </nav>
@@ -153,36 +159,233 @@
 <footer class="glass-panel py-6 text-center text-sm opacity-70 border-t border-genesis-blue/20">
   <p id="footer-text">© 2026 AstroBridge — Decentralized Intent Network</p>
 </footer>
+
 <script>
-// ==================== 配置 ====================
-const API_BASE = "http://45.76.150.100:3000"; // 改成你自己的服务器地址
+// ==================== 多语言翻译包 ====================
+const translations = {
+  en: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Intent Network",
+    modalTitle: "Connect Wallet",
+    mainTitle: "AI Intent Execution Terminal",
+    mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution",
+    intentTitle: "Your Intent",
+    parseText: "AI Parse Intent",
+    executeText: "Execute Intent",
+    parsedTitle: "AI Parsed Plan",
+    logTitle: "Execution Log",
+    nodeTitle: "Node Routing",
+    metricsTitle: "Network Metrics",
+    historyTitle: "Recent Intent History",
+    footer: "© 2026 AstroBridge — Decentralized Intent Network",
+    connectText: "Connect Wallet",
+    disconnectText: "Disconnect",
+    parsedDefault: "Enter an intent and click AI Parse to begin.",
+  },
+  zh: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "意图网络",
+    modalTitle: "连接钱包",
+    mainTitle: "AI 意图执行终端",
+    mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行",
+    intentTitle: "你的意图",
+    parseText: "AI 解析意图",
+    executeText: "执行意图",
+    parsedTitle: "AI 解析方案",
+    logTitle: "执行日志",
+    nodeTitle: "节点路由",
+    metricsTitle: "网络指标",
+    historyTitle: "最近意图历史",
+    footer: "© 2026 AstroBridge — 去中心化意图网络",
+    connectText: "连接钱包",
+    disconnectText: "断开连接",
+    parsedDefault: "输入意图并点击 AI 解析开始。",
+  },
+  es: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Red de Intención",
+    modalTitle: "Conectar Billetera",
+    mainTitle: "Terminal de Ejecución de Intención AI",
+    mainSubtitle: "Di tu intención → IA analiza → Robots enrutan → Ejecución en cadena",
+    intentTitle: "Tu Intención",
+    parseText: "IA Analizar Intención",
+    executeText: "Ejecutar Intención",
+    parsedTitle: "Plan Analizado por IA",
+    logTitle: "Registro de Ejecución",
+    nodeTitle: "Enrutamiento de Nodos",
+    metricsTitle: "Métricas de Red",
+    historyTitle: "Historial Reciente",
+    footer: "© 2026 AstroBridge — Red Descentralizada de Intención",
+    connectText: "Conectar Billetera",
+    disconnectText: "Desconectar",
+    parsedDefault: "Ingresa una intención y haz clic en Analizar.",
+  },
+  fr: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Réseau d’Intention",
+    modalTitle: "Connecter Portefeuille",
+    mainTitle: "Terminal d’Exécution d’Intention IA",
+    mainSubtitle: "Exprimez votre intention → IA analyse → Robots routent → Exécution sur chaîne",
+    intentTitle: "Votre Intention",
+    parseText: "IA Analyser l’Intention",
+    executeText: "Exécuter l’Intention",
+    parsedTitle: "Plan Analysé par IA",
+    logTitle: "Journal d’Exécution",
+    nodeTitle: "Routage de Nœuds",
+    metricsTitle: "Métriques Réseau",
+    historyTitle: "Historique Récent",
+    footer: "© 2026 AstroBridge — Réseau d’Intention Décentralisé",
+    connectText: "Connecter Portefeuille",
+    disconnectText: "Déconnecter",
+    parsedDefault: "Entrez une intention et analysez-la avec l’IA.",
+  },
+  ja: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "インテントネットワーク",
+    modalTitle: "ウォレット接続",
+    mainTitle: "AIインテント実行ターミナル",
+    mainSubtitle: "意図を入力 → AI解析 → ロボットルーティング → オンチェーン実行",
+    intentTitle: "あなたの意図",
+    parseText: "AI解析",
+    executeText: "実行",
+    parsedTitle: "AI解析結果",
+    logTitle: "実行ログ",
+    nodeTitle: "ノードルーティング",
+    metricsTitle: "ネットワーク指標",
+    historyTitle: "履歴",
+    footer: "© 2026 AstroBridge — 分散型インテントネットワーク",
+    connectText: "ウォレット接続",
+    disconnectText: "切断",
+    parsedDefault: "意図を入力してAI解析を開始してください。",
+  },
+  ko: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "인텐트 네트워크",
+    modalTitle: "지갑 연결",
+    mainTitle: "AI 인텐트 실행 터미널",
+    mainSubtitle: "의도 입력 → AI 분석 → 로봇 라우팅 → 온체인 실행",
+    intentTitle: "당신의 의도",
+    parseText: "AI 분석",
+    executeText: "실행",
+    parsedTitle: "AI 분석 결과",
+    logTitle: "실행 로그",
+    nodeTitle: "노드 라우팅",
+    metricsTitle: "네트워크 지표",
+    historyTitle: "최근 기록",
+    footer: "© 2026 AstroBridge — 탈중앙화 인텐트 네트워크",
+    connectText: "지갑 연결",
+    disconnectText: "연결 해제",
+    parsedDefault: "의도를 입력하고 AI 분석을 시작하세요.",
+  },
+  de: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Absichtsnetzwerk",
+    modalTitle: "Wallet verbinden",
+    mainTitle: "KI-Absichtsausführungsterminal",
+    mainSubtitle: "Sage deine Absicht → KI analysiert → Roboter leiten → On-Chain-Ausführung",
+    intentTitle: "Deine Absicht",
+    parseText: "KI-Absichtsanalyse",
+    executeText: "Absicht ausführen",
+    parsedTitle: "KI-analysierter Plan",
+    logTitle: "Ausführungsprotokoll",
+    nodeTitle: "Knotenweiterleitung",
+    metricsTitle: "Netzwerkmetriken",
+    historyTitle: "Verlauf",
+    footer: "© 2026 AstroBridge — Dezentrales Absichtsnetzwerk",
+    connectText: "Wallet verbinden",
+    disconnectText: "Trennen",
+    parsedDefault: "Geben Sie eine Absicht ein und analysieren Sie sie.",
+  },
+  ru: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Сеть Намерений",
+    modalTitle: "Подключить Кошелек",
+    mainTitle: "Терминал Выполнения Намерений ИИ",
+    mainSubtitle: "Введите намерение → ИИ анализирует → Роботы маршрутизируют → Выполнение в блокчейне",
+    intentTitle: "Ваше Намерение",
+    parseText: "Анализ ИИ",
+    executeText: "Выполнить",
+    parsedTitle: "План от ИИ",
+    logTitle: "Журнал Выполнения",
+    nodeTitle: "Маршрутизация Узлов",
+    metricsTitle: "Метрики Сети",
+    historyTitle: "История",
+    footer: "© 2026 AstroBridge — Децентрализованная Сеть Намерений",
+    connectText: "Подключить Кошелек",
+    disconnectText: "Отключиться",
+    parsedDefault: "Введите намерение и начните анализ ИИ.",
+  }
+};
+
+let currentLang = 'en';
+
+function t(key) {
+  return translations[currentLang]?.[key] || translations.en[key];
+}
+
+function updateLanguage() {
+  document.getElementById('nav-title').textContent = t('navTitle');
+  document.getElementById('nav-subtitle').textContent = t('navSubtitle');
+  document.getElementById('modal-title').textContent = t('modalTitle');
+  document.getElementById('main-title').textContent = t('mainTitle');
+  document.getElementById('main-subtitle').textContent = t('mainSubtitle');
+  document.getElementById('intent-title').textContent = t('intentTitle');
+  document.getElementById('parse-text').textContent = t('parseText');
+  document.getElementById('execute-text').textContent = t('executeText');
+  document.getElementById('parsed-title').textContent = t('parsedTitle');
+  document.getElementById('log-title').textContent = t('logTitle');
+  document.getElementById('node-title').textContent = t('nodeTitle');
+  document.getElementById('metrics-title').textContent = t('metricsTitle');
+  document.getElementById('history-title').textContent = t('historyTitle');
+  document.getElementById('footer-text').textContent = t('footer');
+  document.getElementById('connect-text').textContent = t('connectText');
+  document.getElementById('disconnect-text').textContent = t('disconnectText');
+  document.getElementById('parsedPlan').textContent = t('parsedDefault');
+}
+
+document.getElementById('languageSelect').addEventListener('change', (e) => {
+  currentLang = e.target.value;
+  updateLanguage();
+});
+
+// ==================== 原有业务逻辑 ====================
+const API_BASE = "http://45.76.150.100:3000";
 let userAddress = null;
 let wcProviderInstance = null;
 const statusLog = document.getElementById('statusLog');
 const parsedPlan = document.getElementById('parsedPlan');
 const historyList = document.getElementById('historyList');
+
 function log(text, colorClass = "text-gray-300") {
   const time = new Date().toLocaleTimeString();
   statusLog.innerHTML += `<p class="${colorClass}">[${time}] ${text}</p>`;
   statusLog.scrollTop = statusLog.scrollHeight;
 }
+
 function updateConnectButton() {
-  document.getElementById('connectBtn').innerHTML = `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+  document.getElementById('connectBtn').innerHTML =
+    `<i class="fas fa-circle text-green-400 mr-1"></i>${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
   document.getElementById('disconnectBtn').classList.remove('hidden');
 }
+
 function disconnectWallet() {
   userAddress = null;
   if (wcProviderInstance) wcProviderInstance.disconnect();
-  document.getElementById('connectBtn').innerHTML = `<i class="fas fa-wallet mr-1"></i> Connect Wallet`;
+  document.getElementById('connectBtn').innerHTML =
+    `<i class="fas fa-wallet mr-1"></i> <span id="connect-text">${t('connectText')}</span>`;
   document.getElementById('disconnectBtn').classList.add('hidden');
   document.getElementById('executeBtn').disabled = true;
-  log("Wallet disconnected", "text-yellow-400");
+  log(t('disconnectText'), "text-yellow-400");
 }
-// ==================== 钱包连接（保持原有逻辑） ====================
-document.getElementById('connectBtn').addEventListener('click', () => document.getElementById('walletModal').classList.remove('hidden'));
-document.getElementById('closeWallet').addEventListener('click', () => document.getElementById('walletModal').classList.add('hidden'));
+
+document.getElementById('connectBtn').addEventListener('click', () => {
+  document.getElementById('walletModal').classList.remove('hidden');
+});
+document.getElementById('closeWallet').addEventListener('click', () => {
+  document.getElementById('walletModal').classList.add('hidden');
+});
 document.getElementById('disconnectBtn').addEventListener('click', disconnectWallet);
-// MetaMask
+
 document.querySelector('[data-provider="metamask"]').addEventListener('click', async () => {
   try {
     if (!window.ethereum) throw new Error("MetaMask is not installed");
@@ -191,14 +394,31 @@ document.querySelector('[data-provider="metamask"]').addEventListener('click', a
     userAddress = await provider.getSigner().getAddress();
     updateConnectButton();
     document.getElementById('walletModal').classList.add('hidden');
-    log(`✅ MetaMask connected: ${userAddress.slice(0,8)}...`, "text-green-400");
+    log(`✅ MetaMask: ${userAddress.slice(0,8)}...`, "text-green-400");
   } catch (e) { alert("MetaMask connection failed: " + e.message); }
 });
-// WalletConnect 和其他钱包保持你原来的逻辑，这里省略（如果你需要我补全也可以说）
-// ==================== AI Parse（保持简单） ====================
+
+document.querySelector('[data-provider="walletconnect"]').addEventListener('click', async () => {
+  try {
+    log("Initializing WalletConnect...", "text-blue-300");
+    const WalletConnectProvider = window.WalletConnectProvider.default;
+    wcProviderInstance = new WalletConnectProvider({
+      rpc: {1:"https://eth.llamarpc.com", 56:"https://bsc.llamarpc.com"}
+    });
+    await wcProviderInstance.enable();
+    const provider = new ethers.providers.Web3Provider(wcProviderInstance);
+    userAddress = await provider.getSigner().getAddress();
+    updateConnectButton();
+    document.getElementById('walletModal').classList.add('hidden');
+    log(`✅ WalletConnect: ${userAddress.slice(0,8)}...`, "text-green-400");
+  } catch (e) {
+    log(e.message.includes("User closed") ? "Cancelled" : `WC failed: ${e.message}`, "text-red-400");
+  }
+});
+
 document.getElementById('parseBtn').onclick = () => {
   const text = document.getElementById('intentInput').value.trim();
-  if (!text) return alert("Please enter your intent");
+  if (!text) return alert(t('intentTitle') + " is required");
   parsedPlan.innerHTML = `<div class="typing">AI is analyzing your intent...</div>`;
   log("AI parsing intent...", "text-blue-300");
   setTimeout(() => {
@@ -207,18 +427,19 @@ document.getElementById('parseBtn').onclick = () => {
     document.getElementById('executeBtn').disabled = false;
   }, 1200);
 };
-// ==================== 【核心升级】真实 Execute Intent ====================
+
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText || !userAddress) {
-    alert("Please enter your intent and connect wallet first");
+    alert(t('intentTitle') + " & " + t('connectText') + " required");
     return;
   }
   const executeBtn = document.getElementById('executeBtn');
   const originalHTML = executeBtn.innerHTML;
   executeBtn.disabled = true;
-  executeBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> Submitting to AstroBridge Network...`;
-  log("📤 Submitting intent to backend...", "text-blue-300");
+  executeBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...`;
+  log("📤 Submitting intent...", "text-blue-300");
+
   try {
     const intentData = {
       id: `intent_${Date.now()}`,
@@ -226,45 +447,36 @@ document.getElementById('executeBtn').onclick = async () => {
       description: intentText,
       creator: userAddress,
       timestamp: Date.now(),
-      payload: {
-        rawIntent: intentText,
-        preferredChain: "sepolia",
-        amount: "0.001"
-      }
+      payload: { rawIntent: intentText, preferredChain: "sepolia", amount: "0.001" }
     };
     const response = await fetch(`${API_BASE}/api/intent/submit`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        intent: intentData,
-        signature: "user_signature_pending" // v3.3 将替换为真实签名
-      })
+      body: JSON.stringify({ intent: intentData, signature: "user_signature_pending" })
     });
     const result = await response.json();
     if (result.success) {
       log(`✅ Intent submitted! ID: ${result.intentId}`, "text-green-400");
-      log(`Estimated execution: ~${result.estimatedExecutionSeconds || 15} seconds`, "text-green-400");
       parsedPlan.innerHTML = `
-        <strong>✅ Submitted Successfully</strong><br>
-        <strong>ID:</strong> ${result.intentId}<br>
-        <strong>Status:</strong> Queued<br>
-        <strong>Risk Score:</strong> ${result.riskScore || 'Low'}<br>
-        <strong>Message:</strong> ${result.message}
-      `;
+        <strong>✅ Submitted</strong><br>
+        ID: ${result.intentId}<br>
+        Status: Queued<br>
+        Risk: ${result.riskScore || 'Low'}<br>
+        Msg: ${result.message}`;
       addToHistory(result.intentId, "Queued");
-      pollIntentStatus(result.intentId); // 实时查询状态
+      pollIntentStatus(result.intentId);
     } else {
-      log(`❌ Failed: ${result.error || 'Unknown error'}`, "text-red-400");
+      log(`❌ Error: ${result.error || 'Unknown'}`, "text-red-400");
     }
   } catch (err) {
     console.error(err);
-    log(`❌ Cannot connect to server: ${err.message}`, "text-red-400");
+    log(`❌ Server error: ${err.message}`, "text-red-400");
   } finally {
     executeBtn.disabled = false;
     executeBtn.innerHTML = originalHTML;
   }
 };
-// 实时轮询意图执行状态
+
 async function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -272,25 +484,26 @@ async function pollIntentStatus(intentId) {
     try {
       const res = await fetch(`${API_BASE}/api/intent/${intentId}`);
       const data = await res.json();
-      if (data.success && data.chain && data.chain.status === 'executed') {
-        log(`🎉 Intent ${intentId} executed on Sepolia!`, "text-green-400");
-        if (data.chain.txHash) {
-          log(`Tx Hash: <a href="https://sepolia.etherscan.io/tx/${data.chain.txHash}" target="_blank" class="text-genesis-blue underline">${data.chain.txHash.substring(0, 20)}...</a>`, "text-green-400");
-        }
+      if (data.success && data.chain?.status === 'executed') {
+        log(`🎉 Executed!`, "text-green-400");
         clearInterval(interval);
       }
     } catch (e) {}
     if (attempts >= 15) clearInterval(interval);
   }, 4000);
 }
+
 function addToHistory(id, status) {
-  const color = status === "Queued" || status === "Success" ? "text-green-400" : "text-red-400";
-  historyList.innerHTML = `<div class="flex justify-between py-2 border-b border-genesis-blue/10"><span>${id}</span><span class="${color}">${status}</span></div>` + historyList.innerHTML;
+  const color = status === "Queued" ? "text-green-400" : "text-red-400";
+  historyList.innerHTML =
+    `<div class="flex justify-between py-2 border-b border-genesis-blue/10"><span>${id}</span><span class="${color}">${status}</span></div>`
+    + historyList.innerHTML;
 }
-// 初始化
-log("🚀 AstroBridge Intent Terminal ready", "text-green-400");
-log("v3.2 Real Chain Execution Enabled", "text-green-400");
+
+// 初始化语言 & 日志
+updateLanguage();
+log("🚀 AstroBridge ready", "text-green-400");
+log("v3.2 Real Chain Execution", "text-green-400");
 </script>
 </body>
 </html>
- 
