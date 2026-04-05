@@ -122,17 +122,6 @@
     </div>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-6 mb-8">
-    <div class="glass-panel p-6">
-      <h4 id="node-title" class="text-xl font-orbitron mb-4 neon-text">Node Routing</h4>
-      <div id="nodePanel" class="text-sm space-y-1 min-h-[180px]"></div>
-    </div>
-    <div class="glass-panel p-6">
-      <h4 id="metrics-title" class="text-xl font-orbitron mb-4 neon-text">Network Metrics</h4>
-      <div id="metricsPanel" class="text-sm space-y-1 min-h-[180px]"></div>
-    </div>
-  </div>
-
   <div class="glass-panel p-6 mb-10">
     <h4 id="history-title" class="text-xl font-orbitron mb-4 neon-text">Recent Intent History</h4>
     <div id="historyList" class="space-y-2 max-h-[200px] overflow-y-auto text-sm"></div>
@@ -144,7 +133,7 @@
 </footer>
 
 <script>
-// ==================== 多语言支持（主语言为 English） ====================
+// ==================== 多语言支持（主语言 English） ====================
 const translations = {
   en: {
     navTitle: "ASTROBRIDGE", 
@@ -157,8 +146,6 @@ const translations = {
     executeText: "Execute Intent",
     parsedTitle: "AI Parsed Plan",
     logTitle: "Execution Log",
-    nodeTitle: "Node Routing",
-    metricsTitle: "Network Metrics",
     historyTitle: "Recent Intent History",
     footer: "© 2026 AstroBridge — Decentralized Intent Network",
     connectText: "Connect Wallet",
@@ -175,8 +162,6 @@ const translations = {
     executeText: "执行意图",
     parsedTitle: "AI 解析结果",
     logTitle: "执行日志",
-    nodeTitle: "节点路由",
-    metricsTitle: "网络指标",
     historyTitle: "最近意图历史",
     footer: "© 2026 AstroBridge — 去中心化意图网络",
     connectText: "连接钱包",
@@ -201,8 +186,6 @@ function updateLanguage() {
   document.getElementById('execute-text').textContent = t('executeText');
   document.getElementById('parsed-title').textContent = t('parsedTitle');
   document.getElementById('log-title').textContent = t('logTitle');
-  document.getElementById('node-title').textContent = t('nodeTitle');
-  document.getElementById('metrics-title').textContent = t('metricsTitle');
   document.getElementById('history-title').textContent = t('historyTitle');
   document.getElementById('footer-text').textContent = t('footer');
   document.getElementById('connectText').textContent = t('connectText');
@@ -244,7 +227,7 @@ function disconnectWallet() {
   log("Wallet disconnected", "text-yellow-400");
 }
 
-// ==================== 钱包连接（完整保留） ====================
+// ==================== 钱包连接 ====================
 document.getElementById('connectBtn').addEventListener('click', () => document.getElementById('walletModal').classList.remove('hidden'));
 document.getElementById('closeWallet').addEventListener('click', () => document.getElementById('walletModal').classList.add('hidden'));
 document.getElementById('disconnectBtn').addEventListener('click', disconnectWallet);
@@ -279,19 +262,6 @@ document.querySelector('[data-provider="walletconnect"]').addEventListener('clic
   } catch (e) {
     log(e.message.includes("User closed") ? "Connection cancelled" : `WalletConnect failed: ${e.message}`, "text-red-400");
   }
-});
-
-// Other Injected
-document.querySelector('[data-provider="injected"]').addEventListener('click', async () => {
-  try {
-    if (!window.ethereum) throw new Error("No injected wallet detected");
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    await provider.send("eth_requestAccounts", []);
-    userAddress = await provider.getSigner().getAddress();
-    updateConnectButton();
-    document.getElementById('walletModal').classList.add('hidden');
-    log(`✅ Injected wallet connected: ${userAddress.slice(0,8)}...`, "text-green-400");
-  } catch (e) { alert("No other injected wallet found."); }
 });
 
 // ==================== AI Parse ====================
