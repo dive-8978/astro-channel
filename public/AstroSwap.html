@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AstroBridge | Mini Swap + Side Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'genesis-blue': '#40c4ff',
+            'genesis-purple': '#7c4dff',
+            'void-black': '#02000d',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <style>
+    body{background:#02000d;min-height:100vh;}
+    .glass-sm{background:rgba(8,15,40,0.35);backdrop-filter:blur(16px);border:1px solid rgba(64,196,255,0.25);border-radius:1rem;}
+    .btn-swap{background:linear-gradient(135deg,#40c4ff,#7c4dff);box-shadow:0 0 15px rgba(64,196,255,0.4);}
+    .btn-swap:hover{box-shadow:0 0 30px rgba(64,196,255,0.7);transform:scale(1.02);}
+    /* 侧边窄仪表盘固定宽度 */
+    .side-dash{width:280px;max-height:90vh;}
+    /* 数字跳动动画 */
+    @keyframes pulse-num{0%,100%{opacity:1;}50%{opacity:0.7;}}
+    .num-live{animation:pulse-num 1.2s infinite;}
+  </style>
+</head>
+<body class="flex items-start justify-center gap-4 p-6 font-sans flex-wrap">
+
+<!-- 左侧：Uniswap极简兑换主窗口 -->
+<div class="glass-sm p-5 w-full max-w-md">
+  <div class="flex justify-between items-center mb-4">
+    <h1 class="text-xl font-orbitron text-genesis-blue">Astro Mini Swap</h1>
+    <button id="connBtn" class="btn-swap px-3 py-1.5 rounded-lg text-sm">Connect</button>
+  </div>
+
+  <div class="mb-3">
+    <div class="flex justify-between text-xs text-gray-400 mb-1"><span>From</span><span>Balance: --</span></div>
+    <div class="flex gap-2">
+      <select class="bg-void-black/80 border border-genesis-blue/30 rounded-lg p-2 text-sm text-white w-1/3">
+        <option>BSC</option><option selected>Sepolia</option><option>ETH</option>
+      </select>
+      <input type="text" placeholder="0.00" class="bg-void-black/80 border border-genesis-blue/30 rounded-lg p-2 text-white w-2/3 text-right">
+    </div>
+  </div>
+
+  <div class="flex justify-center my-2"><button class="p-2 rounded-full border border-genesis-blue/40 text-genesis-blue">⇅</button></div>
+
+  <div class="mb-4">
+    <div class="flex justify-between text-xs text-gray-400 mb-1"><span>To</span></div>
+    <div class="flex gap-2">
+      <select class="bg-void-black/80 border border-genesis-blue/30 rounded-lg p-2 text-sm text-white w-1/3">
+        <option selected>Sepolia</option><option>BSC</option><option>ETH</option>
+      </select>
+      <input type="text" placeholder="Receive Address" class="bg-void-black/80 border border-genesis-blue/30 rounded-lg p-2 text-white w-2/3 text-right font-mono text-xs">
+    </div>
+  </div>
+
+  <div class="text-xs text-gray-400 mb-4 flex justify-between"><span>Slippage: 0.5%</span><span class="text-genesis-blue">Mini Cross-Chain</span></div>
+  <button id="sendBtn" disabled class="btn-swap w-full py-3 rounded-xl font-medium disabled:opacity-40 disabled:cursor-not-allowed">Confirm Transfer</button>
+
+  <div class="glass-sm p-3 mt-4 max-h-28 overflow-y-auto text-xs font-mono text-gray-300" id="miniLog"></div>
+</div>
+
+<!-- 右侧：细长动态迷你仪表盘【关键】 -->
+<div class="glass-sm side-dash p-4 sticky top-6">
+  <h2 class="text-base font-orbitron text-genesis-blue mb-4 text-center border-b border-genesis-blue/20 pb-2">Live Dashboard</h2>
+  
+  <div class="space-y-4 text-sm">
+    <div class="flex justify-between"><span class="text-gray-400">Health Nodes</span><span id="liveNodes" class="text-green-400 num-live font-orbitron">180</span></div>
+    <div class="flex justify-between"><span class="text-gray-400">Queue Waiting</span><span id="liveQueue" class="text-genesis-blue font-orbitron">0</span></div>
+    <div class="flex justify-between"><span class="text-gray-400">Success Rate</span><span id="liveRate" class="text-green-400 font-orbitron">0.00%</span></div>
+  </div>
+
+  <div class="mt-4 pt-3 border-t border-genesis-blue/20">
+    <p class="text-xs text-gray-400 mb-2">Recent Tx Hash</p >
+    <div id="txRoll" class="text-xs font-mono text-gray-300 max-h-32 overflow-y-auto break-all"></div>
+  </div>
+</div>
+
+<script>
+let userAddress = null, web3Provider = null;
+const miniLog = document.getElementById('miniLog');
+const API_BASE = "http://45.76.150.100:3000";
+
+// 本地日志
+function logTxt(s){miniLog.innerHTML += `> ${s}\n`;miniLog.scrollTop=miniLog.scrollHeight;}
+
+// 钱包连接
+document.getElementById('connBtn').onclick = async ()=>{
+  if(!window.ethereum) return logTxt("No wallet detected");
+  web3Provider = new ethers.providers.Web3Provider(window.ethereum);
+  await window.ethereum.request({method:'eth_requestAccounts'});
+  const signer = web3Provider.getSigner();
+  userAddress = await signer.getAddress();
+  document.getElementById('connBtn').innerText = userAddress.slice(0,6)+"...";
+  document.getElementById('sendBtn').disabled = false;
+  logTxt("Wallet connected: "+userAddress.slice(0,10)+"...");
+};
+
+// 极简提交对接后端
+document.getElementById('sendBtn').onclick = async ()=>{
+  if(!userAddress)return;
+  logTxt("Requesting signature...");
+  try{
+    const sig = await web3Provider.getSigner().signMessage("AstroMini "+Date.now());
+    logTxt("Signature done, submitting...");
+    await fetch(`${API_BASE}/api/intent/submit`,{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({from:userAddress,sig:sig,simpleCross:true})
+    });
+    logTxt("Tx queued on network");
+  }catch(e){logTxt("Fail: "+e.message.slice(0,25))}
+};
+
+// 侧边仪表盘动态轮询，实时拉你API数据、同步日志180节点
+async function refreshSideDash(){
+  try{
+    const res = await fetch(`${API_BASE}/api/metrics`);
+    const d = await res.json();
+    if(d.success){
+      document.getElementById('liveNodes').innerText = d.nodesHealthy||180;
+      document.getElementById('liveQueue').innerText = d.queue?.waiting||0;
+      document.getElementById('liveRate').innerText = d.successRate||"0.00%";
+    }
+  }catch(e){}
+}
+// 3秒自动刷新侧边仪表盘数据
+setInterval(refreshSideDash,3000);
+refreshSideDash();
+
+// 灌入你刚才成功的交易哈希到侧边滚动栏
+document.getElementById('txRoll').innerHTML += 
+`${Date.now().toString(16)} | 0x4d328818d5eea28c178627e3feee3a42275a33149f7e07423017dd3dc2c3b2ab\n`;
+
+logTxt("Mini Swap + Side Dashboard Ready");
+</script>
+</body>
+</html>
