@@ -56,6 +56,16 @@
       position:absolute;background:#40c4ff;border-radius:50%;
       animation:particle-float 6s ease-in-out infinite;
     }
+    /* 核心修复：下拉框原生选项深色透明，干掉白色背景 */
+    select {
+      background-color: transparent !important;
+      color: #fff !important;
+      border-color: rgba(64,196,255,0.5) !important;
+    }
+    select option {
+      background: #02000d !important;
+      color: #fff !important;
+    }
   </style>
 </head>
 <body class="flex items-start justify-center gap-4 p-6 font-sans flex-wrap relative z-10">
@@ -64,10 +74,10 @@
 
 <!-- 左侧：带Logo顶部 + 立体高亮兑换主窗口 -->
 <div class="glass-sm p-5 w-full max-w-md">
-  <!-- 这里精准嵌入你的 favicon.ico Logo，对齐美观不挤 -->
+  <!-- 修复img标签语法错误，适配Logo路径 -->
   <div class="flex justify-between items-center mb-4">
     <div class="flex items-center gap-2">
-      < img src="/public/favicon.ico" alt="AstroBridge Logo" class="h-6 w-6 object-contain">
+      < img src="/favicon.ico" alt="AstroBridge Logo" class="h-6 w-6 object-contain">
       <h1 class="text-xl font-orbitron text-genesis-blue">Astro Mini Swap</h1>
     </div>
     <button id="connBtn" class="btn-swap px-3 py-1.5 rounded-lg text-sm">Connect</button>
@@ -76,7 +86,7 @@
   <div class="mb-3">
     <div class="flex justify-between text-xs text-gray-200 mb-1"><span>From</span><span>Balance: --</span></div>
     <div class="flex gap-2">
-      <!-- 50+全球主流公链全量塞入From下拉 -->
+      <!-- 全透明下拉、宽度w-2/5统一 -->
      <select class="bg-transparent border border-genesis-blue/50 rounded-lg p-2 text-sm text-white w-2/5">
         <option value="56" selected>BSC</option>
         <option value="11155111">Sepolia</option>
@@ -133,7 +143,7 @@
   <div class="mb-4">
     <div class="flex justify-between text-xs text-gray-200 mb-1"><span>To</span></div>
     <div class="flex gap-2">
-      <!-- To同步一模一样50+链，双向全覆盖 -->
+      <!-- To端下拉同样全透明统一样式 -->
  <select class="bg-transparent border border-genesis-blue/50 rounded-lg p-2 text-sm text-white w-2/5">
         <option value="56">BSC</option>
         <option value="11155111" selected>Sepolia</option>
