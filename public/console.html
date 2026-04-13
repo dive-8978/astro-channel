@@ -42,7 +42,7 @@
       position: fixed; inset: 0; z-index: -3; pointer-events: none;
       background: radial-gradient(ellipse at 40% 30%, rgba(124,7,255,0.10) 0%, transparent 60%),
                   radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.08) 0%, transparent 65%);
-      background-size: 220% 220%; animation: nebula-flow 520s ease-in-out infinite;
+      animation: nebula-flow 520s ease-in-out infinite;
       mix-blend-mode: screen; opacity: 0.4; filter: blur(70px);
     }
     @keyframes nebula-flow { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }
@@ -58,7 +58,7 @@
       box-shadow: 0 0 20px rgba(64,196,255,0.5); transition: all 0.4s;
     }
     .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
-    #nodePanel { height: 320px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #40c4ff40 #1a1a2e; }
+    #nodePanel { height: 340px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #40c4ff40 #1a1a2e; }
     #nodePanel::-webkit-scrollbar { width: 6px; }
     #nodePanel::-webkit-scrollbar-thumb { background: #40c4ff40; border-radius: 20px; }
   </style>
@@ -92,30 +92,22 @@
   </div>
 </nav>
 
+<!-- Wallet Modal -->
 <div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-[60] px-4">
-  <div class="glass-panel p-8 rounded-3xl max-w-md w-full">
+  <div class="glass-panel p-8 rounded-3xl max-w-lg w-full">
     <div class="flex justify-between items-center mb-8">
       <h3 id="modal-title" class="text-2xl font-orbitron neon-text">Connect Wallet</h3>
       <button id="closeWallet" class="text-3xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
     </div>
     <div class="grid grid-cols-2 gap-4">
-      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="metamask">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" class="w-14 h-14 mx-auto mb-3" alt="MetaMask">
-        <div class="font-medium">MetaMask</div>
-      </button>
-      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="walletconnect">
-        <i class="fas fa-link text-5xl mb-3 block"></i>
-        <div class="font-medium">WalletConnect</div>
-      </button>
-      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="coinbase">
-        <i class="fas fa-coins text-5xl mb-3 block"></i>
-        <div class="font-medium">Coinbase Wallet</div>
-      </button>
-      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="injected">
-        <i class="fas fa-plug text-5xl mb-3 block"></i>
-        <div class="font-medium">Any Wallet</div>
-      </button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="metamask">MetaMask</button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="phantom">Phantom</button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="okx">OKX Wallet</button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="coinbase">Coinbase Wallet</button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="walletconnect">WalletConnect</button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="injected">Other Wallets</button>
     </div>
+    <p class="text-center text-xs opacity-60 mt-6">Supports MetaMask, Phantom, OKX, Coinbase, Trust Wallet, Rainbow and most global wallets</p>
   </div>
 </div>
 
@@ -176,166 +168,34 @@
 </footer>
 
 <script>
-// ==================== 核心变量 ====================
+// ==================== 多语言包 ====================
+const translations = {
+  en: { navTitle: "ASTROBRIDGE", navSubtitle: "Global Intelligent Intent Network v7.0", mainTitle: "AI Intent Execution Terminal", mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution", intentTitle: "Your Intent", parseText: "AI Parse Intent", executeText: "Execute Intent", parsedTitle: "AI Parsed Plan", logTitle: "Execution Log", nodeTitle: "Node Routing", metricsTitle: "Network Metrics", historyTitle: "Recent Intent History", connectText: "Connect Wallet", disconnectText: "Disconnect", modalTitle: "Connect Wallet", footerText: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0" },
+  zh: { navTitle: "星桥", navSubtitle: "全球智能意图网络 v7.0", mainTitle: "AI 意图执行终端", mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行", intentTitle: "你的意图", parseText: "AI 解析意图", executeText: "执行意图", parsedTitle: "AI 解析计划", logTitle: "执行日志", nodeTitle: "节点路由", metricsTitle: "网络指标", historyTitle: "最近意图历史", connectText: "连接钱包", disconnectText: "断开连接", modalTitle: "连接钱包", footerText: "© 2026 AstroBridge — 全球智能意图网络 • 白皮书 V7.0" },
+  es: { navTitle: "ASTROBRIDGE", navSubtitle: "Red Global de Intenciones Inteligentes v7.0", mainTitle: "Terminal de Ejecución de Intenciones con IA", mainSubtitle: "Expresa tu intención → IA analiza → Robots enrutan → Ejecución en cadena", intentTitle: "Tu Intención", parseText: "Analizar con IA", executeText: "Ejecutar Intención", parsedTitle: "Plan Analizado por IA", logTitle: "Registro de Ejecución", nodeTitle: "Enrutamiento de Nodos", metricsTitle: "Métricas de Red", historyTitle: "Historial Reciente", connectText: "Conectar Wallet", disconnectText: "Desconectar", modalTitle: "Conectar Wallet", footerText: "© 2026 AstroBridge — Red Global de Intenciones Inteligentes • Whitepaper V7.0" },
+  fr: { navTitle: "ASTROBRIDGE", navSubtitle: "Réseau Global d'Intentions Intelligentes v7.0", mainTitle: "Terminal d'Exécution d'Intentions IA", mainSubtitle: "Exprimez votre intention → IA analyse → Robots routent → Exécution on-chain", intentTitle: "Votre Intention", parseText: "Analyser avec IA", executeText: "Exécuter l'Intention", parsedTitle: "Plan Analysé par IA", logTitle: "Journal d'Exécution", nodeTitle: "Routage des Nœuds", metricsTitle: "Métriques Réseau", historyTitle: "Historique Récent", connectText: "Connecter Wallet", disconnectText: "Déconnecter", modalTitle: "Connecter Wallet", footerText: "© 2026 AstroBridge — Réseau Global d'Intentions Intelligentes • Livre Blanc V7.0" },
+  ja: { navTitle: "ASTROBRIDGE", navSubtitle: "グローバルインテリジェントインテントネットワーク v7.0", mainTitle: "AI意図実行ターミナル", mainSubtitle: "意図を述べる → AIが解析 → ロボットがルーティング → オン-chain実行", intentTitle: "あなたの意図", parseText: "AIで解析", executeText: "意図を実行", parsedTitle: "AI解析プラン", logTitle: "実行ログ", nodeTitle: "ノードルーティング", metricsTitle: "ネットワークメトリクス", historyTitle: "最近の履歴", connectText: "ウォレットを接続", disconnectText: "切断", modalTitle: "ウォレットを接続", footerText: "© 2026 AstroBridge — グローバルインテリジェントインテントネットワーク • ホワイトペーパー V7.0" },
+  ko: { navTitle: "ASTROBRIDGE", navSubtitle: "글로벌 지능형 의도 네트워크 v7.0", mainTitle: "AI 의도 실행 터미널", mainSubtitle: "의도를 말하세요 → AI 분석 → 로봇 라우팅 → 온체인 실행", intentTitle: "당신의 의도", parseText: "AI 분석", executeText: "의도 실행", parsedTitle: "AI 분석 계획", logTitle: "실행 로그", nodeTitle: "노드 라우팅", metricsTitle: "네트워크 지표", historyTitle: "최근 의도 기록", connectText: "지갑 연결", disconnectText: "연결 해제", modalTitle: "지갑 연결", footerText: "© 2026 AstroBridge — 글로벌 지능형 의도 네트워크 • 백서 V7.0" },
+  de: { navTitle: "ASTROBRIDGE", navSubtitle: "Globales Intelligentes Intent-Netzwerk v7.0", mainTitle: "KI-Intent-Ausführungs-Terminal", mainSubtitle: "Sprich deine Absicht aus → KI analysiert → Roboter routen → On-Chain-Ausführung", intentTitle: "Deine Absicht", parseText: "Mit KI analysieren", executeText: "Absicht ausführen", parsedTitle: "KI-analysierter Plan", logTitle: "Ausführungsprotokoll", nodeTitle: "Knoten-Routing", metricsTitle: "Netzwerk-Metriken", historyTitle: "Letzte Intent-Historie", connectText: "Wallet verbinden", disconnectText: "Trennen", modalTitle: "Wallet verbinden", footerText: "© 2026 AstroBridge — Globales Intelligentes Intent-Netzwerk • Whitepaper V7.0" },
+  ru: { navTitle: "ASTROBRIDGE", navSubtitle: "Глобальная интеллектуальная сеть намерений v7.0", mainTitle: "Терминал выполнения намерений с ИИ", mainSubtitle: "Выскажите своё намерение → ИИ разбирает → Роботы маршрутизируют → Выполнение на блокчейне", intentTitle: "Ваше намерение", parseText: "Разобрать ИИ", executeText: "Выполнить намерение", parsedTitle: "План, разобранный ИИ", logTitle: "Журнал выполнения", nodeTitle: "Маршрутизация узлов", metricsTitle: "Метрики сети", historyTitle: "Недавняя история намерений", connectText: "Подключить кошелёк", disconnectText: "Отключить", modalTitle: "Подключить кошелёк", footerText: "© 2026 AstroBridge — Глобальная интеллектуальная сеть намерений • Белая книга V7.0" }
+};
+
 let currentLang = 'en';
 let userAddress = null;
 let web3Provider = null;
 
-// ==================== 完整多语言包 ====================
-const translations = {
-  en: {
-    navTitle: "ASTROBRIDGE",
-    navSubtitle: "Global Intelligent Intent Network v7.0",
-    mainTitle: "AI Intent Execution Terminal",
-    mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution",
-    intentTitle: "Your Intent",
-    parseText: "AI Parse Intent",
-    executeText: "Execute Intent",
-    parsedTitle: "AI Parsed Plan",
-    logTitle: "Execution Log",
-    nodeTitle: "Node Routing",
-    metricsTitle: "Network Metrics",
-    historyTitle: "Recent Intent History",
-    connectText: "Connect Wallet",
-    disconnectText: "Disconnect",
-    modalTitle: "Connect Wallet",
-    footerText: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0"
-  },
-  zh: {
-    navTitle: "星桥",
-    navSubtitle: "全球智能意图网络 v7.0",
-    mainTitle: "AI 意图执行终端",
-    mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行",
-    intentTitle: "你的意图",
-    parseText: "AI 解析意图",
-    executeText: "执行意图",
-    parsedTitle: "AI 解析计划",
-    logTitle: "执行日志",
-    nodeTitle: "节点路由",
-    metricsTitle: "网络指标",
-    historyTitle: "最近意图历史",
-    connectText: "连接钱包",
-    disconnectText: "断开连接",
-    modalTitle: "连接钱包",
-    footerText: "© 2026 AstroBridge — 全球智能意图网络 • 白皮书 V7.0"
-  },
-  es: {
-    navTitle: "ASTROBRIDGE",
-    navSubtitle: "Red Global de Intenciones Inteligentes v7.0",
-    mainTitle: "Terminal de Ejecución de Intenciones con IA",
-    mainSubtitle: "Expresa tu intención → IA analiza → Robots enrutan → Ejecución en cadena",
-    intentTitle: "Tu Intención",
-    parseText: "Analizar con IA",
-    executeText: "Ejecutar Intención",
-    parsedTitle: "Plan Analizado por IA",
-    logTitle: "Registro de Ejecución",
-    nodeTitle: "Enrutamiento de Nodos",
-    metricsTitle: "Métricas de Red",
-    historyTitle: "Historial Reciente",
-    connectText: "Conectar Wallet",
-    disconnectText: "Desconectar",
-    modalTitle: "Conectar Wallet",
-    footerText: "© 2026 AstroBridge — Red Global de Intenciones Inteligentes • Whitepaper V7.0"
-  },
-  fr: {
-    navTitle: "ASTROBRIDGE",
-    navSubtitle: "Réseau Global d'Intentions Intelligentes v7.0",
-    mainTitle: "Terminal d'Exécution d'Intentions IA",
-    mainSubtitle: "Exprimez votre intention → IA analyse → Robots routent → Exécution on-chain",
-    intentTitle: "Votre Intention",
-    parseText: "Analyser avec IA",
-    executeText: "Exécuter l'Intention",
-    parsedTitle: "Plan Analysé par IA",
-    logTitle: "Journal d'Exécution",
-    nodeTitle: "Routage des Nœuds",
-    metricsTitle: "Métriques Réseau",
-    historyTitle: "Historique Récent",
-    connectText: "Connecter Wallet",
-    disconnectText: "Déconnecter",
-    modalTitle: "Connecter Wallet",
-    footerText: "© 2026 AstroBridge — Réseau Global d'Intentions Intelligentes • Livre Blanc V7.0"
-  },
-  ja: {
-    navTitle: "ASTROBRIDGE",
-    navSubtitle: "グローバルインテリジェントインテントネットワーク v7.0",
-    mainTitle: "AI意図実行ターミナル",
-    mainSubtitle: "意図を述べる → AIが解析 → ロボットがルーティング → オン-chain実行",
-    intentTitle: "あなたの意図",
-    parseText: "AIで解析",
-    executeText: "意図を実行",
-    parsedTitle: "AI解析プラン",
-    logTitle: "実行ログ",
-    nodeTitle: "ノードルーティング",
-    metricsTitle: "ネットワークメトリクス",
-    historyTitle: "最近の履歴",
-    connectText: "ウォレットを接続",
-    disconnectText: "切断",
-    modalTitle: "ウォレットを接続",
-    footerText: "© 2026 AstroBridge — グローバルインテリジェントインテントネットワーク • ホワイトペーパー V7.0"
-  },
-  ko: {
-    navTitle: "ASTROBRIDGE",
-    navSubtitle: "글로벌 지능형 의도 네트워크 v7.0",
-    mainTitle: "AI 의도 실행 터미널",
-    mainSubtitle: "의도를 말하세요 → AI 분석 → 로봇 라우팅 → 온체인 실행",
-    intentTitle: "당신의 의도",
-    parseText: "AI 분석",
-    executeText: "의도 실행",
-    parsedTitle: "AI 분석 계획",
-    logTitle: "실행 로그",
-    nodeTitle: "노드 라우팅",
-    metricsTitle: "네트워크 지표",
-    historyTitle: "최근 의도 기록",
-    connectText: "지갑 연결",
-    disconnectText: "연결 해제",
-    modalTitle: "지갑 연결",
-    footerText: "© 2026 AstroBridge — 글로벌 지능형 의도 네트워크 • 백서 V7.0"
-  },
-  de: {
-    navTitle: "ASTROBRIDGE",
-    navSubtitle: "Globales Intelligentes Intent-Netzwerk v7.0",
-    mainTitle: "KI-Intent-Ausführungs-Terminal",
-    mainSubtitle: "Sprich deine Absicht aus → KI analysiert → Roboter routen → On-Chain-Ausführung",
-    intentTitle: "Deine Absicht",
-    parseText: "Mit KI analysieren",
-    executeText: "Absicht ausführen",
-    parsedTitle: "KI-analysierter Plan",
-    logTitle: "Ausführungsprotokoll",
-    nodeTitle: "Knoten-Routing",
-    metricsTitle: "Netzwerk-Metriken",
-    historyTitle: "Letzte Intent-Historie",
-    connectText: "Wallet verbinden",
-    disconnectText: "Trennen",
-    modalTitle: "Wallet verbinden",
-    footerText: "© 2026 AstroBridge — Globales Intelligentes Intent-Netzwerk • Whitepaper V7.0"
-  },
-  ru: {
-    navTitle: "ASTROBRIDGE",
-    navSubtitle: "Глобальная интеллектуальная сеть намерений v7.0",
-    mainTitle: "Терминал выполнения намерений с ИИ",
-    mainSubtitle: "Выскажите своё намерение → ИИ разбирает → Роботы маршрутизируют → Выполнение на блокчейне",
-    intentTitle: "Ваше намерение",
-    parseText: "Разобрать ИИ",
-    executeText: "Выполнить намерение",
-    parsedTitle: "План, разобранный ИИ",
-    logTitle: "Журнал выполнения",
-    nodeTitle: "Маршрутизация узлов",
-    metricsTitle: "Метрики сети",
-    historyTitle: "Недавняя история намерений",
-    connectText: "Подключить кошелёк",
-    disconnectText: "Отключить",
-    modalTitle: "Подключить кошелёк",
-    footerText: "© 2026 AstroBridge — Глобальная интеллектуальная сеть намерений • Белая книга V7.0"
-  }
-};
+// 自动适配你的后端服务器地址
+const API_BASE = window.location.hostname.includes('astrochannel.one') 
+  ? 'https://45.76.150.100' 
+  : 'http://45.76.150.100:3000';
 
+// ==================== 翻译函数 ====================
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
 }
 
 function updateLanguage() {
   currentLang = document.getElementById('languageSelect').value;
-  
   document.getElementById('nav-title').textContent = t('navTitle');
   document.getElementById('nav-subtitle').textContent = t('navSubtitle');
   document.getElementById('main-title').textContent = t('mainTitle');
@@ -364,18 +224,38 @@ function log(message, colorClass = "text-white") {
   logEl.scrollTop = logEl.scrollHeight;
 }
 
-// ==================== 钱包连接（已彻底修复断开重连） ====================
+// ==================== 钱包连接（支持全球大多数钱包） ====================
 async function connectWallet(providerType = 'metamask') {
   try {
     log(`🔌 Connecting to ${providerType}...`, "text-blue-300");
 
-    if (!window.ethereum) {
-      alert("MetaMask not detected. Please install MetaMask.");
-      return;
+    let provider;
+    if (providerType === "metamask" || providerType === "injected") {
+      if (!window.ethereum) throw new Error("MetaMask not detected");
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      provider = window.ethereum;
+    } else if (providerType === "phantom") {
+      if (!window.phantom?.ethereum) throw new Error("Phantom not detected");
+      await window.phantom.ethereum.request({ method: 'eth_requestAccounts' });
+      provider = window.phantom.ethereum;
+    } else if (providerType === "okx") {
+      if (!window.okxwallet) throw new Error("OKX Wallet not detected");
+      await window.okxwallet.request({ method: 'eth_requestAccounts' });
+      provider = window.okxwallet;
+    } else if (providerType === "coinbase") {
+      if (!window.coinbaseWalletExtension) throw new Error("Coinbase Wallet not detected");
+      await window.coinbaseWalletExtension.request({ method: 'eth_requestAccounts' });
+      provider = window.coinbaseWalletExtension;
+    } else {
+      if (window.ethereum) {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        provider = window.ethereum;
+      } else {
+        throw new Error("No compatible wallet found");
+      }
     }
 
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
-    web3Provider = new ethers.providers.Web3Provider(window.ethereum);
+    web3Provider = new ethers.providers.Web3Provider(provider);
     const signer = web3Provider.getSigner();
     userAddress = await signer.getAddress();
 
@@ -400,7 +280,82 @@ function disconnectWallet() {
   log("🔌 Wallet disconnected", "text-yellow-400");
 }
 
+// ==================== 后端真实调用 ====================
+async function parseIntent() {
+  const text = document.getElementById('intentInput').value.trim();
+  if (!text) return log("❌ Please enter an intent", "text-red-400");
+  if (!userAddress) return log("❌ Please connect wallet first", "text-red-400");
+
+  log("🤖 Sending to AI parser...", "text-blue-300");
+  document.getElementById('executeBtn').disabled = true;
+
+  try {
+    const res = await fetch(`${API_BASE}/api/intent/parse`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, userAddress })
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      document.getElementById('parsedPlan').innerHTML = `<pre class="whitespace-pre-wrap text-green-400">${JSON.stringify(data.parsed || data, null, 2)}</pre>`;
+      document.getElementById('executeBtn').disabled = false;
+      log("✅ AI parsed successfully", "text-green-400");
+    } else {
+      log(`❌ Parse failed: ${data.error || 'Unknown error'}`, "text-red-400");
+    }
+  } catch (err) {
+    log(`❌ Network error: ${err.message}`, "text-red-400");
+  }
+}
+
+async function executeIntent() {
+  if (!userAddress || !web3Provider) return log("❌ Please connect wallet first", "text-red-400");
+
+  const text = document.getElementById('intentInput').value.trim();
+  log("🚀 Submitting intent to execution engine...", "text-blue-300");
+
+  try {
+    const signer = web3Provider.getSigner();
+    const signature = await signer.signMessage(`AstroBridge Intent: ${text}`);
+
+    const res = await fetch(`${API_BASE}/api/intent/submit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, userAddress, signature })
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      log(`✅ Intent submitted! ID: ${data.intentId}`, "text-green-400");
+      pollIntentStatus(data.intentId);
+    } else {
+      log(`❌ Submit failed: ${data.error}`, "text-red-400");
+    }
+  } catch (err) {
+    log(`❌ Execution error: ${err.message}`, "text-red-400");
+  }
+}
+
+async function pollIntentStatus(intentId) {
+  let attempts = 0;
+  const interval = setInterval(async () => {
+    attempts++;
+    try {
+      const res = await fetch(`${API_BASE}/api/intent/${intentId}`);
+      const data = await res.json();
+      if (data.success && data.status === 'completed') {
+        log(`🎉 Intent ${intentId} executed successfully on-chain!`, "text-green-400");
+        clearInterval(interval);
+      }
+    } catch (e) {}
+    if (attempts > 40) clearInterval(interval);
+  }, 3000);
+}
+
 // ==================== 事件绑定 ====================
+document.getElementById('parseBtn').onclick = parseIntent;
+document.getElementById('executeBtn').onclick = executeIntent;
 document.getElementById('connectBtn').onclick = () => document.getElementById('walletModal').classList.remove('hidden');
 document.getElementById('closeWallet').onclick = () => document.getElementById('walletModal').classList.add('hidden');
 document.getElementById('disconnectBtn').onclick = disconnectWallet;
@@ -413,8 +368,8 @@ document.getElementById('languageSelect').addEventListener('change', updateLangu
 
 // ==================== 初始化 ====================
 updateLanguage();
-log("🚀 AstroBridge Global Console v7.0 is ready for users worldwide", "text-green-400");
-log("✅ Multi-language switching enabled • Wallet reconnection fixed", "text-green-400");
+log("🚀 AstroBridge Global Console v7.0 is ready", "text-green-400");
+log("🌐 Connected to your backend server (45.76.150.100) • Global wallets & languages supported", "text-green-400");
 
 </script>
 </body>
