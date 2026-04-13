@@ -329,12 +329,11 @@ const translations = {
     modalTitle: "Подключить кошелёк",
     footerText: "© 2026 AstroBridge — Глобальная интеллектуальная сеть намерений • Белая книга V7.0"
   }
-};
+};  
 let currentLang = 'en';
 let userAddress = null;
 let web3Provider = null;
 
-// 翻译函数（原代码保留）
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
 }
@@ -390,7 +389,7 @@ async function connectWallet(providerType = 'metamask') {
       await window.coinbaseWalletExtension.request({ method: 'eth_requestAccounts' });
       provider = window.coinbaseWalletExtension;
     } else if (providerType === "walletconnect") {
-      alert("WalletConnect QR code support coming soon. Please use MetaMask or Phantom for now.");
+      alert("WalletConnect QR code support coming soon.");
       return;
     } else {
       if (window.ethereum) {
@@ -422,17 +421,24 @@ function disconnectWallet() {
   log("🔌 Wallet disconnected", "text-yellow-400");
 }
 
-// ==================== API 调用核心函数（新增） ====================
-const API_BASE = '';  // 同域调用
+// ==================== 关键修复：指向你的服务器 API ====================
+const API_BASE = 'http://45.76.150.100';   // ← 这里改成你的服务器 IP（临时测试用）
+
+// 如果你已经有域名解析到服务器，可以改成：
+// const API_BASE = 'https://www.astrochannel.one';   // 后期 HTTPS 配好后使用
 
 async function callApi(endpoint, options = {}) {
   try {
-    const res = await fetch(`${API_BASE}${endpoint}`, {
+    const url = `${API_BASE}${endpoint.startsWith('/') ? '' : '/'}${endpoint}`;
+    const res = await fetch(url, {
       method: options.method || 'GET',
       headers: { 'Content-Type': 'application/json' },
       body: options.body ? JSON.stringify(options.body) : undefined
     });
-    if (!res.ok) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`HTTP ${res.status}: ${text.substring(0, 100)}`);
+    }
     return await res.json();
   } catch (err) {
     console.error(err);
@@ -441,7 +447,7 @@ async function callApi(endpoint, options = {}) {
   }
 }
 
-// ==================== 执行意图（核心新增，适配你的后端） ====================
+// ==================== 执行意图 ====================
 async function executeIntent() {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText) {
@@ -458,7 +464,7 @@ async function executeIntent() {
   executeBtn.disabled = true;
   executeBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-3"></i> Submitting...`;
 
-  log("🚀 Submitting intent to AstroBridge AI Risk Engine...", "text-blue-300");
+  log("🚀 Submitting intent to AstroBridge...", "text-blue-300");
 
   try {
     const payload = {
@@ -467,20 +473,17 @@ async function executeIntent() {
         user: userAddress,
         timestamp: Date.now()
       },
-      signature: "0x" + "0".repeat(130)   // TODO: 后续替换为真实 EIP-712 签名
+      signature: "0x" + "0".repeat(130)   // 临时假签名，后续换真实签名
     };
 
-    const result = await callApi('/api/intent/submit', {
-      method: 'POST',
-      body: payload
-    });
+    const result = await callApi('/api/intent/submit', { method: 'POST', body: payload });
 
     if (result.success) {
       log(`✅ Intent submitted! ID: <strong>${result.intentId}</strong>`, "text-green-400");
-      log(`Risk Decision: ${result.riskDecision || 'SAFE'} | Est. ${result.estimatedExecutionSeconds || '?'}s`, "text-green-400");
+      if (result.riskDecision) log(`Risk Decision: ${result.riskDecision}`, "text-green-400");
       pollIntentStatus(result.intentId);
     } else {
-      log(`❌ Submit failed: ${result.error || 'Unknown error'}`, "text-red-400");
+      log(`❌ ${result.error || 'Submit failed'}`, "text-red-400");
     }
   } catch (err) {
     log(`❌ Execution error: ${err.message}`, "text-red-400");
@@ -490,29 +493,24 @@ async function executeIntent() {
   }
 }
 
-// ==================== 状态轮询 ====================
 async function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
     try {
       const data = await callApi(`/api/intent/${intentId}`);
-      if (data.success) {
-        document.getElementById('parsedPlan').innerHTML = `
-          <strong>Intent ID:</strong> ${data.intentId}<br>
-          <strong>Status:</strong> ${data.status || 'processing'}<br>
-          <strong>Chain:</strong> ${data.chain?.status || 'pending'}
-        `;
-        if (['COMPLETED', 'FAILED'].includes(data.status) || attempts > 25) {
-          clearInterval(interval);
-          log(`🎯 Intent ${data.status || 'completed'}`, data.status === 'COMPLETED' ? "text-green-400" : "text-red-400");
-        }
+      document.getElementById('parsedPlan').innerHTML = `
+        <strong>Intent ID:</strong> ${data.intentId || intentId}<br>
+        <strong>Status:</strong> ${data.status || 'processing'}<br>
+        <strong>Chain Status:</strong> ${data.chain?.status || 'pending'}
+      `;
+      if (['COMPLETED', 'FAILED'].includes(data.status) || attempts > 25) {
+        clearInterval(interval);
       }
     } catch (e) {}
     attempts++;
   }, 3000);
 }
 
-// ==================== 加载 Metrics & Nodes ====================
 async function loadMetricsAndNodes() {
   try {
     const [metrics, nodesData] = await Promise.all([
@@ -520,59 +518,48 @@ async function loadMetricsAndNodes() {
       callApi('/api/nodes/status')
     ]);
 
-    // Metrics Panel
     document.getElementById('metricsPanel').innerHTML = `
       <div class="bg-black/30 p-4 rounded-xl"><strong>Healthy Nodes</strong><br>${nodesData.onlineCount || 0}</div>
       <div class="bg-black/30 p-4 rounded-xl"><strong>Success Rate</strong><br>${metrics.successRate || '0%'}</div>
-      <div class="bg-black/30 p-4 rounded-xl"><strong>Queue</strong><br>${metrics.queue?.waiting || 0}</div>
+      <div class="bg-black/30 p-4 rounded-xl"><strong>Queue Waiting</strong><br>${metrics.queue?.waiting || 0}</div>
     `;
 
-    // Node Panel
-    let nodeHTML = '';
-    if (nodesData.nodes && nodesData.nodes.length > 0) {
-      nodeHTML = nodesData.nodes.map(n => `
-        <div class="flex justify-between items-center bg-black/30 p-3 rounded-xl">
-          <span>${n.name || n.region}</span>
-          <span class="${n.status === 'online' ? 'text-green-400' : 'text-red-400'}">${n.status}</span>
-        </div>
-      `).join('');
-    } else {
-      nodeHTML = '<div class="text-gray-400">No nodes data available</div>';
-    }
+    let nodeHTML = nodesData.nodes ? nodesData.nodes.map(n => `
+      <div class="flex justify-between bg-black/30 p-3 rounded-xl">
+        <span>${n.name || n.region}</span>
+        <span class="${n.status === 'online' ? 'text-green-400' : 'text-red-400'}">${n.status}</span>
+      </div>
+    `).join('') : '<div class="text-gray-400">Loading nodes...</div>';
     document.getElementById('nodePanel').innerHTML = nodeHTML;
   } catch (err) {
-    console.warn("Metrics/Nodes load failed", err);
+    console.warn("Metrics load failed", err);
   }
 }
 
-// ==================== 事件绑定（原代码 + 新增） ====================
+// ==================== 事件绑定 ====================
 document.getElementById('connectBtn').onclick = () => document.getElementById('walletModal').classList.remove('hidden');
 document.getElementById('closeWallet').onclick = () => document.getElementById('walletModal').classList.add('hidden');
 document.getElementById('disconnectBtn').onclick = disconnectWallet;
 
 document.querySelectorAll('.wallet-option').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const provider = btn.getAttribute('data-provider');
-    connectWallet(provider);
-  });
+  btn.addEventListener('click', () => connectWallet(btn.getAttribute('data-provider')));
 });
 
 document.getElementById('languageSelect').addEventListener('change', updateLanguage);
 document.getElementById('executeBtn').addEventListener('click', executeIntent);
 document.getElementById('parseBtn').addEventListener('click', () => {
-  log("🧠 AI Parse Intent triggered (frontend simulation)", "text-purple-400");
+  log("🧠 AI Parse Intent triggered", "text-purple-400");
   document.getElementById('parsedPlan').innerHTML = `<span class="text-green-400">AI is analyzing your intent...</span>`;
 });
 
-// ==================== 初始化（原代码保留 + 新增自动刷新） ====================
+// ==================== 初始化 ====================
 updateLanguage();
-log("🚀 AstroBridge Global Console v7.0 is ready for users worldwide", "text-green-400");
-log("🌍 Supports MetaMask, Phantom, OKX, Coinbase and most global wallets", "text-green-400");
+log("🚀 AstroBridge Global Console v7.0 is ready", "text-green-400");
+log("🌍 Wallet + Intent Execution connected to backend", "text-green-400");
 
-// 页面加载完成后自动加载指标
 window.onload = () => {
   loadMetricsAndNodes();
-  setInterval(loadMetricsAndNodes, 15000);  // 每15秒刷新一次
+  setInterval(loadMetricsAndNodes, 15000);
 };
 </script>
 </body>
