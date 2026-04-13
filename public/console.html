@@ -95,7 +95,6 @@
     </button>
   </div>
 </nav>
-
 <!-- Wallet Modal -->
 <div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-[60] px-4">
   <div class="glass-panel p-6 rounded-3xl max-w-md w-full max-h-[90vh] overflow-auto">
@@ -113,13 +112,11 @@
     </div>
   </div>
 </div>
-
 <main class="max-w-6xl mx-auto p-4 sm:p-6 pt-8 md:pt-16">
   <div class="text-center mb-10">
     <h2 id="main-title" class="text-3xl md:text-5xl lg:text-6xl font-orbitron neon-text mb-4">AI Intent Execution Terminal v7.0</h2>
     <p id="main-subtitle" class="text-base md:text-xl opacity-90">Intent Sovereignty → AI Autonomous Parse → Global Node Routing → On-chain Burn Execution</p>
   </div>
-
   <section class="glass-panel p-4 sm:p-8 mb-8">
     <h3 id="intent-title" class="text-xl md:text-2xl font-orbitron neon-text mb-4">Your Intent</h3>
     <textarea id="intentInput" rows="4"
@@ -140,7 +137,6 @@
       </button>
     </div>
   </section>
-
   <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
     <div class="glass-panel p-4 sm:p-8">
       <h4 id="parsed-title" class="text-xl md:text-2xl font-orbitron neon-text mb-4">AI Parsed Plan (v7.0 Sovereignty)</h4>
@@ -151,7 +147,6 @@
       <div id="statusLog" class="font-mono text-sm max-h-[280px] overflow-y-auto space-y-1"></div>
     </div>
   </div>
-
   <div class="grid lg:grid-cols-2 gap-6 md:gap-8 mt-6 md:mt-8">
     <div class="glass-panel p-4 sm:p-8">
       <h4 id="node-title" class="text-xl md:text-2xl font-orbitron neon-text mb-4">Global Node Routing (FreeNodeNetwork)</h4>
@@ -162,36 +157,29 @@
       <div id="metricsPanel" class="grid grid-cols-2 gap-4 md:gap-6 text-sm"></div>
     </div>
   </div>
-
   <div class="glass-panel p-4 sm:p-8 mt-6 md:mt-8">
     <h4 id="history-title" class="text-xl md:text-2xl font-orbitron neon-text mb-4">Recent Intents</h4>
     <div id="historyList" class="space-y-3 max-h-[200px] overflow-y-auto"></div>
   </div>
 </main>
-
 <footer class="glass-panel py-6 text-center text-sm opacity-75 mt-10 border-t border-genesis-blue/20 px-4">
   <p id="footer-text">© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0</p>
 </footer>
-
 <script>
 // ==================== 多语言 & 全局变量 ====================
 const translations = {
   en: { navTitle: "ASTROBRIDGE", navSubtitle: "Global Intelligent Intent Network v7.0", mainTitle: "AI Intent Execution Terminal v7.0", mainSubtitle: "Intent Sovereignty → AI Parse → Global Nodes → On-chain Burn Execution", intentTitle: "Your Intent", parseText: "AI Parse Intent", executeText: "Execute Intent", parsedTitle: "AI Parsed Plan (v7.0 Sovereignty)", logTitle: "Execution Log", nodeTitle: "Node Routing (FreeNodeNetwork)", metricsTitle: "Network Metrics (AiOrchestrator + EconomyLoop)", historyTitle: "Recent Intents", connectText: "Connect Wallet", modalTitle: "Connect Wallet", footerText: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0" },
   zh: { navTitle: "星桥", navSubtitle: "全球智能意图网络 v7.0", mainTitle: "AI 意图执行终端 v7.0", mainSubtitle: "意图主权确权 → AI 自治解析 → 全球节点路由 → 链上燃烧执行", intentTitle: "你的意图", parseText: "AI 解析意图", executeText: "执行意图", parsedTitle: "AI 解析计划（v7.0 主权确权）", logTitle: "执行日志", nodeTitle: "全球节点路由（FreeNodeNetwork）", metricsTitle: "网络指标（AiOrchestrator + EconomyLoop）", historyTitle: "最近意图历史", connectText: "连接钱包", modalTitle: "连接钱包", footerText: "© 2026 AstroBridge — 全球智能意图网络 • 白皮书 V7.0" }
 };
-
 let currentLang = 'en';
 let userAddress = null;
 let provider = null;
-
 const API_BASE = window.location.hostname.includes('astrochannel.one')
   ? 'https://45.76.150.100'
   : 'http://45.76.150.100:3000';
-
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
 }
-
 function updateLanguage() {
   currentLang = document.getElementById('languageSelect').value;
   document.getElementById('nav-title').textContent = t('navTitle');
@@ -209,7 +197,6 @@ function updateLanguage() {
   document.getElementById('modal-title').textContent = t('modalTitle');
   document.getElementById('footer-text').textContent = t('footerText');
 }
-
 // 日志
 function log(message, colorClass = "text-white") {
   const logEl = document.getElementById('statusLog');
@@ -219,45 +206,35 @@ function log(message, colorClass = "text-white") {
   logEl.appendChild(entry);
   logEl.scrollTop = logEl.scrollHeight;
 }
-
 // 快捷意图
 function quickIntent(text) {
   document.getElementById('intentInput').value = text;
   log(`✅ Intent loaded: ${text}`, "text-blue-300");
   parseIntent();
 }
-
-// ==================== 修复钱包连接（ethers v6 可用） ====================
+// ==================== 修复后的钱包连接（确保弹出） ====================
 async function connectWallet(providerType = 'metamask') {
   try {
     log(`🔌 Connecting to ${providerType}...`, "text-blue-300");
-
     if (!window.ethereum) {
       throw new Error("No wallet injected (MetaMask/OKX/Phantom)");
     }
-
-    // 请求账号
+    // 关键修复：先请求账户，触发钱包弹出
     const accounts = await window.ethereum.request({
       method: 'eth_requestAccounts'
     });
-
-    // ethers v6 写法
     provider = new ethers.BrowserProvider(window.ethereum);
     const signer = await provider.getSigner();
     userAddress = await signer.getAddress();
-
     document.getElementById('connectBtn').classList.add('hidden');
     document.getElementById('disconnectBtn').classList.remove('hidden');
     document.getElementById('connect-text').textContent = `${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
-
     log(`✅ Wallet connected: ${userAddress}`, "text-green-400");
     document.getElementById('walletModal').classList.add('hidden');
-
   } catch (error) {
     log(`❌ Connection failed: ${error.message}`, "text-red-400");
   }
 }
-
 function disconnectWallet() {
   userAddress = null;
   provider = null;
@@ -266,23 +243,19 @@ function disconnectWallet() {
   document.getElementById('connect-text').textContent = t('connectText');
   log("🔌 Wallet disconnected", "text-yellow-400");
 }
-
-// AI 解析
+// AI 解析（保持不变）
 async function parseIntent() {
   const text = document.getElementById('intentInput').value.trim();
   if (!text) return log("❌ Please enter an intent", "text-red-400");
   if (!userAddress) return log("❌ Please connect wallet first", "text-red-400");
-
   log("🤖 Calling v7.0 AI Sovereignty Parser...", "text-blue-300");
   document.getElementById('executeBtn').disabled = true;
-
   try {
     const res = await fetch(`${API_BASE}/api/intent/parse`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text, userAddress })
     });
-
     const data = await res.json();
     if (data.success) {
       let html = `<div class="space-y-6 p-4 bg-black/30 rounded-2xl">`;
@@ -304,28 +277,23 @@ async function parseIntent() {
     log(`❌ Network error: ${err.message}`, "text-red-400");
   }
 }
-
-// 执行意图
+// 执行意图（保持不变）
 async function executeIntent() {
   const btn = document.getElementById('executeBtn');
   const original = btn.innerHTML;
   btn.disabled = true;
   btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Executing...`;
-
   const text = document.getElementById('intentInput').value.trim();
   log("🚀 Submitting intent to backend...", "text-blue-300");
-
   try {
     if (!provider) throw new Error("Wallet not connected");
     const signer = await provider.getSigner();
     const signature = await signer.signMessage(`AstroBridge Intent: ${text}`);
-
     const res = await fetch(`${API_BASE}/api/intent/submit`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ intent: { text, user: userAddress }, signature })
     });
-
     const data = await res.json();
     if (data.success) {
       log(`✅ Intent submitted successfully! ID: ${data.intentId}`, "text-green-400");
@@ -341,8 +309,7 @@ async function executeIntent() {
     btn.innerHTML = original;
   }
 }
-
-// 轮询状态
+// 轮询状态（保持不变）
 async function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -361,8 +328,7 @@ async function pollIntentStatus(intentId) {
     if (attempts > 40) clearInterval(interval);
   }, 3000);
 }
-
-// 渲染全球节点
+// 渲染全球节点（保持不变）
 function renderNodes() {
   const panel = document.getElementById('nodePanel');
   panel.innerHTML = `
@@ -372,8 +338,7 @@ function renderNodes() {
     <div class="flex items-center justify-between text-xs"><span>Node 23</span><span class="text-yellow-400">○ Routing</span></div>
     <div class="text-xs opacity-60 mt-4">27 active nodes • FreeNodeNetwork v7.0</div>`;
 }
-
-// 渲染实时指标
+// 渲染实时指标（保持不变）
 function renderMetrics() {
   const panel = document.getElementById('metricsPanel');
   panel.innerHTML = `
@@ -382,20 +347,16 @@ function renderMetrics() {
     <div class="glass-panel p-4"><div class="text-xs opacity-70">Node Health</div><div class="text-3xl font-bold text-blue-400">99.2%</div></div>
     <div class="glass-panel p-4"><div class="text-xs opacity-70">Avg Execution</div><div class="text-3xl font-bold">4.8s</div></div>`;
 }
-
-// 事件绑定
+// 事件绑定（保持不变）
 document.getElementById('parseBtn').onclick = parseIntent;
 document.getElementById('executeBtn').onclick = executeIntent;
 document.getElementById('connectBtn').onclick = () => document.getElementById('walletModal').classList.remove('hidden');
 document.getElementById('closeWallet').onclick = () => document.getElementById('walletModal').classList.add('hidden');
 document.getElementById('disconnectBtn').onclick = disconnectWallet;
-
 document.querySelectorAll('.wallet-option').forEach(btn => {
   btn.addEventListener('click', () => connectWallet(btn.getAttribute('data-provider')));
 });
-
 document.getElementById('languageSelect').addEventListener('change', updateLanguage);
-
 // 初始化
 updateLanguage();
 log("🚀 AstroBridge Global Console v7.0 is ready", "text-green-400");
