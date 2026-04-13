@@ -114,29 +114,26 @@
 <main class="max-w-6xl mx-auto p-6 pt-16">
   <div class="text-center mb-12">
     <h2 id="main-title" class="text-5xl md:text-6xl font-orbitron neon-text mb-4">AI Intent Execution Terminal</h2>
-    <p id="main-subtitle" class="text-xl opacity-90">Speak your intent → AI parses → Robots route → On-chain execution</p>
+    <p id="main-subtitle" class="text-xl opacity-90">Speak your intent → Submit → On-chain execution</p>
   </div>
 
   <section class="glass-panel p-8 mb-10">
     <h3 id="intent-title" class="text-2xl font-orbitron neon-text mb-6">Your Intent</h3>
     <textarea id="intentInput" rows="4"
       class="w-full bg-void-black/70 border border-genesis-blue/40 rounded-2xl p-6 text-white placeholder-gray-400 focus:outline-none focus:border-genesis-blue resize-none font-mono text-base"
-      placeholder="Example: Send 0.05 ETH to 0x123... on BSC with 0.001 USDT burn"></textarea>
+      placeholder="Example: Send 0.05 ETH to 0x742d35Cc6634C0532925a3b844Bc454e4438f44e on Sepolia"></textarea>
     
     <div class="flex flex-wrap gap-4 justify-center mt-8">
-      <button id="parseBtn" class="btn-neon px-10 py-4 rounded-2xl text-base font-medium tracking-wider">
-        <i class="fas fa-brain mr-3"></i> <span id="parse-text">AI Parse Intent</span>
-      </button>
-      <button id="executeBtn" class="btn-neon px-10 py-4 rounded-2xl text-base font-medium tracking-wider" disabled>
-        <i class="fas fa-rocket mr-3"></i> <span id="execute-text">Execute Intent</span>
+      <button id="submitBtn" class="btn-neon px-12 py-4 rounded-2xl text-base font-medium tracking-wider">
+        <i class="fas fa-paper-plane mr-3"></i> <span id="submit-text">Submit Intent</span>
       </button>
     </div>
   </section>
 
   <div class="grid lg:grid-cols-2 gap-8">
     <div class="glass-panel p-8">
-      <h4 id="parsed-title" class="text-2xl font-orbitron neon-text mb-6">AI Parsed Plan</h4>
-      <div id="parsedPlan" class="min-h-[280px] text-sm leading-relaxed"></div>
+      <h4 id="result-title" class="text-2xl font-orbitron neon-text mb-6">Execution Result</h4>
+      <div id="resultPanel" class="min-h-[280px] text-sm leading-relaxed"></div>
     </div>
 
     <div class="glass-panel p-8">
@@ -145,20 +142,8 @@
     </div>
   </div>
 
-  <div class="grid lg:grid-cols-2 gap-8 mt-8">
-    <div class="glass-panel p-8">
-      <h4 id="node-title" class="text-2xl font-orbitron neon-text mb-6">Node Routing</h4>
-      <div id="nodePanel" class="space-y-5 text-sm"></div>
-    </div>
-
-    <div class="glass-panel p-8">
-      <h4 id="metrics-title" class="text-2xl font-orbitron neon-text mb-6">Network Metrics</h4>
-      <div id="metricsPanel" class="grid grid-cols-2 gap-6 text-sm"></div>
-    </div>
-  </div>
-
   <div class="glass-panel p-8 mt-8">
-    <h4 id="history-title" class="text-2xl font-orbitron neon-text mb-6">Recent Intent History</h4>
+    <h4 id="history-title" class="text-2xl font-orbitron neon-text mb-6">Recent Intents</h4>
     <div id="historyList" class="space-y-3 max-h-[200px] overflow-y-auto"></div>
   </div>
 </main>
@@ -170,26 +155,19 @@
 <script>
 // ==================== 多语言包 ====================
 const translations = {
-  en: { navTitle: "ASTROBRIDGE", navSubtitle: "Global Intelligent Intent Network v7.0", mainTitle: "AI Intent Execution Terminal", mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution", intentTitle: "Your Intent", parseText: "AI Parse Intent", executeText: "Execute Intent", parsedTitle: "AI Parsed Plan", logTitle: "Execution Log", nodeTitle: "Node Routing", metricsTitle: "Network Metrics", historyTitle: "Recent Intent History", connectText: "Connect Wallet", disconnectText: "Disconnect", modalTitle: "Connect Wallet", footerText: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0" },
-  zh: { navTitle: "星桥", navSubtitle: "全球智能意图网络 v7.0", mainTitle: "AI 意图执行终端", mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行", intentTitle: "你的意图", parseText: "AI 解析意图", executeText: "执行意图", parsedTitle: "AI 解析计划", logTitle: "执行日志", nodeTitle: "节点路由", metricsTitle: "网络指标", historyTitle: "最近意图历史", connectText: "连接钱包", disconnectText: "断开连接", modalTitle: "连接钱包", footerText: "© 2026 AstroBridge — 全球智能意图网络 • 白皮书 V7.0" },
-  es: { navTitle: "ASTROBRIDGE", navSubtitle: "Red Global de Intenciones Inteligentes v7.0", mainTitle: "Terminal de Ejecución de Intenciones con IA", mainSubtitle: "Expresa tu intención → IA analiza → Robots enrutan → Ejecución en cadena", intentTitle: "Tu Intención", parseText: "Analizar con IA", executeText: "Ejecutar Intención", parsedTitle: "Plan Analizado por IA", logTitle: "Registro de Ejecución", nodeTitle: "Enrutamiento de Nodos", metricsTitle: "Métricas de Red", historyTitle: "Historial Reciente", connectText: "Conectar Wallet", disconnectText: "Desconectar", modalTitle: "Conectar Wallet", footerText: "© 2026 AstroBridge — Red Global de Intenciones Inteligentes • Whitepaper V7.0" },
-  fr: { navTitle: "ASTROBRIDGE", navSubtitle: "Réseau Global d'Intentions Intelligentes v7.0", mainTitle: "Terminal d'Exécution d'Intentions IA", mainSubtitle: "Exprimez votre intention → IA analyse → Robots routent → Exécution on-chain", intentTitle: "Votre Intention", parseText: "Analyser avec IA", executeText: "Exécuter l'Intention", parsedTitle: "Plan Analysé par IA", logTitle: "Journal d'Exécution", nodeTitle: "Routage des Nœuds", metricsTitle: "Métriques Réseau", historyTitle: "Historique Récent", connectText: "Connecter Wallet", disconnectText: "Déconnecter", modalTitle: "Connecter Wallet", footerText: "© 2026 AstroBridge — Réseau Global d'Intentions Intelligentes • Livre Blanc V7.0" },
-  ja: { navTitle: "ASTROBRIDGE", navSubtitle: "グローバルインテリジェントインテントネットワーク v7.0", mainTitle: "AI意図実行ターミナル", mainSubtitle: "意図を述べる → AIが解析 → ロボットがルーティング → オン-chain実行", intentTitle: "あなたの意図", parseText: "AIで解析", executeText: "意図を実行", parsedTitle: "AI解析プラン", logTitle: "実行ログ", nodeTitle: "ノードルーティング", metricsTitle: "ネットワークメトリクス", historyTitle: "最近の履歴", connectText: "ウォレットを接続", disconnectText: "切断", modalTitle: "ウォレットを接続", footerText: "© 2026 AstroBridge — グローバルインテリジェントインテントネットワーク • ホワイトペーパー V7.0" },
-  ko: { navTitle: "ASTROBRIDGE", navSubtitle: "글로벌 지능형 의도 네트워크 v7.0", mainTitle: "AI 의도 실행 터미널", mainSubtitle: "의도를 말하세요 → AI 분석 → 로봇 라우팅 → 온체인 실행", intentTitle: "당신의 의도", parseText: "AI 분석", executeText: "의도 실행", parsedTitle: "AI 분석 계획", logTitle: "실행 로그", nodeTitle: "노드 라우팅", metricsTitle: "네트워크 지표", historyTitle: "최근 의도 기록", connectText: "지갑 연결", disconnectText: "연결 해제", modalTitle: "지갑 연결", footerText: "© 2026 AstroBridge — 글로벌 지능형 의도 네트워크 • 백서 V7.0" },
-  de: { navTitle: "ASTROBRIDGE", navSubtitle: "Globales Intelligentes Intent-Netzwerk v7.0", mainTitle: "KI-Intent-Ausführungs-Terminal", mainSubtitle: "Sprich deine Absicht aus → KI analysiert → Roboter routen → On-Chain-Ausführung", intentTitle: "Deine Absicht", parseText: "Mit KI analysieren", executeText: "Absicht ausführen", parsedTitle: "KI-analysierter Plan", logTitle: "Ausführungsprotokoll", nodeTitle: "Knoten-Routing", metricsTitle: "Netzwerk-Metriken", historyTitle: "Letzte Intent-Historie", connectText: "Wallet verbinden", disconnectText: "Trennen", modalTitle: "Wallet verbinden", footerText: "© 2026 AstroBridge — Globales Intelligentes Intent-Netzwerk • Whitepaper V7.0" },
-  ru: { navTitle: "ASTROBRIDGE", navSubtitle: "Глобальная интеллектуальная сеть намерений v7.0", mainTitle: "Терминал выполнения намерений с ИИ", mainSubtitle: "Выскажите своё намерение → ИИ разбирает → Роботы маршрутизируют → Выполнение на блокчейне", intentTitle: "Ваше намерение", parseText: "Разобрать ИИ", executeText: "Выполнить намерение", parsedTitle: "План, разобранный ИИ", logTitle: "Журнал выполнения", nodeTitle: "Маршрутизация узлов", metricsTitle: "Метрики сети", historyTitle: "Недавняя история намерений", connectText: "Подключить кошелёк", disconnectText: "Отключить", modalTitle: "Подключить кошелёк", footerText: "© 2026 AstroBridge — Глобальная интеллектуальная сеть намерений • Белая книга V7.0" }
+  en: { navTitle: "ASTROBRIDGE", navSubtitle: "Global Intelligent Intent Network v7.0", mainTitle: "AI Intent Execution Terminal", mainSubtitle: "Speak your intent → Submit → On-chain execution", intentTitle: "Your Intent", submitText: "Submit Intent", resultTitle: "Execution Result", logTitle: "Execution Log", historyTitle: "Recent Intents", connectText: "Connect Wallet", disconnectText: "Disconnect", modalTitle: "Connect Wallet", footerText: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0" },
+  zh: { navTitle: "星桥", navSubtitle: "全球智能意图网络 v7.0", mainTitle: "AI 意图执行终端", mainSubtitle: "说出你的意图 → 提交 → 链上执行", intentTitle: "你的意图", submitText: "提交意图", resultTitle: "执行结果", logTitle: "执行日志", historyTitle: "最近意图", connectText: "连接钱包", disconnectText: "断开连接", modalTitle: "连接钱包", footerText: "© 2026 AstroBridge — 全球智能意图网络 • 白皮书 V7.0" }
 };
 
 let currentLang = 'en';
 let userAddress = null;
 let web3Provider = null;
 
-// 自动适配你的后端服务器地址
 const API_BASE = window.location.hostname.includes('astrochannel.one') 
   ? 'https://45.76.150.100' 
   : 'http://45.76.150.100:3000';
 
-// ==================== 翻译函数 ====================
+// 翻译函数
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
 }
@@ -197,23 +175,19 @@ function t(key) {
 function updateLanguage() {
   currentLang = document.getElementById('languageSelect').value;
   document.getElementById('nav-title').textContent = t('navTitle');
-  document.getElementById('nav-subtitle').textContent = t('navSubtitle');
   document.getElementById('main-title').textContent = t('mainTitle');
   document.getElementById('main-subtitle').textContent = t('mainSubtitle');
   document.getElementById('intent-title').textContent = t('intentTitle');
-  document.getElementById('parse-text').textContent = t('parseText');
-  document.getElementById('execute-text').textContent = t('executeText');
-  document.getElementById('parsed-title').textContent = t('parsedTitle');
+  document.getElementById('submit-text').textContent = t('submitText');
+  document.getElementById('result-title').textContent = t('resultTitle');
   document.getElementById('log-title').textContent = t('logTitle');
-  document.getElementById('node-title').textContent = t('nodeTitle');
-  document.getElementById('metrics-title').textContent = t('metricsTitle');
   document.getElementById('history-title').textContent = t('historyTitle');
   document.getElementById('connect-text').textContent = t('connectText');
   document.getElementById('modal-title').textContent = t('modalTitle');
   document.getElementById('footer-text').textContent = t('footerText');
 }
 
-// ==================== 日志函数 ====================
+// 日志
 function log(message, colorClass = "text-white") {
   const logEl = document.getElementById('statusLog');
   if (!logEl) return;
@@ -224,12 +198,12 @@ function log(message, colorClass = "text-white") {
   logEl.scrollTop = logEl.scrollHeight;
 }
 
-// ==================== 钱包连接（支持全球大多数钱包） ====================
+// 钱包连接（支持全球主流钱包）
 async function connectWallet(providerType = 'metamask') {
   try {
     log(`🔌 Connecting to ${providerType}...`, "text-blue-300");
-
     let provider;
+
     if (providerType === "metamask" || providerType === "injected") {
       if (!window.ethereum) throw new Error("MetaMask not detected");
       await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -280,40 +254,13 @@ function disconnectWallet() {
   log("🔌 Wallet disconnected", "text-yellow-400");
 }
 
-// ==================== 后端真实调用 ====================
-async function parseIntent() {
+// ==================== 真实提交意图（调用你的后端） ====================
+async function submitIntent() {
   const text = document.getElementById('intentInput').value.trim();
   if (!text) return log("❌ Please enter an intent", "text-red-400");
-  if (!userAddress) return log("❌ Please connect wallet first", "text-red-400");
-
-  log("🤖 Sending to AI parser...", "text-blue-300");
-  document.getElementById('executeBtn').disabled = true;
-
-  try {
-    const res = await fetch(`${API_BASE}/api/intent/parse`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, userAddress })
-    });
-    const data = await res.json();
-
-    if (data.success) {
-      document.getElementById('parsedPlan').innerHTML = `<pre class="whitespace-pre-wrap text-green-400">${JSON.stringify(data.parsed || data, null, 2)}</pre>`;
-      document.getElementById('executeBtn').disabled = false;
-      log("✅ AI parsed successfully", "text-green-400");
-    } else {
-      log(`❌ Parse failed: ${data.error || 'Unknown error'}`, "text-red-400");
-    }
-  } catch (err) {
-    log(`❌ Network error: ${err.message}`, "text-red-400");
-  }
-}
-
-async function executeIntent() {
   if (!userAddress || !web3Provider) return log("❌ Please connect wallet first", "text-red-400");
 
-  const text = document.getElementById('intentInput').value.trim();
-  log("🚀 Submitting intent to execution engine...", "text-blue-300");
+  log("🚀 Submitting intent to backend...", "text-blue-300");
 
   try {
     const signer = web3Provider.getSigner();
@@ -322,21 +269,32 @@ async function executeIntent() {
     const res = await fetch(`${API_BASE}/api/intent/submit`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, userAddress, signature })
+      body: JSON.stringify({ 
+        intent: { text, user: userAddress }, 
+        signature 
+      })
     });
 
     const data = await res.json();
+
     if (data.success) {
       log(`✅ Intent submitted! ID: ${data.intentId}`, "text-green-400");
+      document.getElementById('resultPanel').innerHTML = `
+        <div class="text-green-400">
+          <p>Intent ID: <strong>${data.intentId}</strong></p>
+          <p>Status: ${data.status || 'queued'}</p>
+          <p>Estimated: ${data.estimatedExecutionSeconds || '?'} seconds</p>
+        </div>`;
       pollIntentStatus(data.intentId);
     } else {
-      log(`❌ Submit failed: ${data.error}`, "text-red-400");
+      log(`❌ Submit failed: ${data.error || 'Unknown error'}`, "text-red-400");
     }
   } catch (err) {
-    log(`❌ Execution error: ${err.message}`, "text-red-400");
+    log(`❌ Network error: ${err.message}`, "text-red-400");
   }
 }
 
+// 轮询状态
 async function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -344,9 +302,12 @@ async function pollIntentStatus(intentId) {
     try {
       const res = await fetch(`${API_BASE}/api/intent/${intentId}`);
       const data = await res.json();
-      if (data.success && data.status === 'completed') {
-        log(`🎉 Intent ${intentId} executed successfully on-chain!`, "text-green-400");
-        clearInterval(interval);
+      if (data.success) {
+        log(`📊 Intent ${intentId} status: ${data.status || 'processing'}`, "text-blue-300");
+        if (data.status === 'completed' || data.chain?.status === 'executed') {
+          log(`🎉 Intent ${intentId} executed successfully!`, "text-green-400");
+          clearInterval(interval);
+        }
       }
     } catch (e) {}
     if (attempts > 40) clearInterval(interval);
@@ -354,8 +315,7 @@ async function pollIntentStatus(intentId) {
 }
 
 // ==================== 事件绑定 ====================
-document.getElementById('parseBtn').onclick = parseIntent;
-document.getElementById('executeBtn').onclick = executeIntent;
+document.getElementById('submitBtn').onclick = submitIntent;
 document.getElementById('connectBtn').onclick = () => document.getElementById('walletModal').classList.remove('hidden');
 document.getElementById('closeWallet').onclick = () => document.getElementById('walletModal').classList.add('hidden');
 document.getElementById('disconnectBtn').onclick = disconnectWallet;
@@ -368,8 +328,8 @@ document.getElementById('languageSelect').addEventListener('change', updateLangu
 
 // ==================== 初始化 ====================
 updateLanguage();
-log("🚀 AstroBridge Global Console v7.0 is ready", "text-green-400");
-log("🌐 Connected to your backend server (45.76.150.100) • Global wallets & languages supported", "text-green-400");
+log("🚀 AstroBridge Console v7.0 is ready for real customer experience", "text-green-400");
+log("🌐 Connected to your backend server • Submit intents directly", "text-green-400");
 
 </script>
 </body>
