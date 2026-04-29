@@ -599,7 +599,7 @@ document.getElementById('parseBtn').onclick = () => {
   }, 900);
 };
 
-// Execute Intent（加强后端确权字段）
+// Execute Intent（已优化 payload 结构，解决缺少 intent 或 signature）
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText || !userAddress || !web3Provider) {
@@ -623,8 +623,10 @@ document.getElementById('executeBtn').onclick = async () => {
 
     log("✅ 用户签名成功", "text-green-400");
 
+    // ====================== 优化后的 Payload（关键修复） ======================
     const intentData = {
       id: `intent_${Date.now()}`,
+      type: "native_transfer",
       description: intentText,
       creator: userAddress,
       timestamp: timestamp,
@@ -633,10 +635,11 @@ document.getElementById('executeBtn').onclick = async () => {
     };
 
     const payload = {
-      sign: signature,
-      address: userAddress,
-      intent: intentData
+      intent: intentData,      // 必须包含 intent 对象
+      signature: signature,    // 必须包含 signature
+      address: userAddress     // 部分后端也需要 address
     };
+    // =====================================================================
 
     executeBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...`;
 
@@ -649,9 +652,10 @@ document.getElementById('executeBtn').onclick = async () => {
     const result = await response.json();
 
     if (result.success) {
-      log(`✅ 意图提交成功！ID: ${result.intentId} | Chain: ${currentDetectedChainName.toUpperCase()}`, "text-green-400");
+      log(`✅ 意图提交成功！ID: ${result.intentId || '未知'}`, "text-green-400");
+      addToHistory(result.intentId || intentData.id, "Queued");
     } else {
-      log(`❌ 提交失败: ${result.error || result.message || 'Unknown'}`, "text-red-400");
+      log(`❌ 提交失败: ${result.error || result.message || 'Unknown error'}`, "text-red-400");
     }
   } catch (err) {
     console.error(err);
