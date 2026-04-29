@@ -199,9 +199,6 @@
 </footer>
 
 <script>
-// ==================== v7.0 生产环境真实意图交易配置 ====================
-const API_BASE = 'https://api.astrochannel.one';   // 固定真实后端
-
 // ==================== 日志函数 ====================
 function log(message, colorClass = "text-white") {
   const logEl = document.getElementById('statusLog');
@@ -375,7 +372,47 @@ let web3Provider = null;
 let currentDetectedChainId = '0xaa36a7';
 let currentDetectedChainName = 'sepolia';
 
-// ==================== 修复后的钱包连接（适配 ethers v6） ====================
+const API_BASE = (window.location.hostname === '45.76.150.100' || 
+                  window.location.hostname === 'localhost' || 
+                  window.location.hostname === '127.0.0.1') 
+                 ? 'http://45.76.150.100:3000' 
+                 : window.location.origin;
+
+function t(key) {
+  return translations[currentLang]?.[key] || translations.en[key] || key;
+}
+
+function updateLanguage() {
+  const els = {
+    'nav-title': 'navTitle',
+    'nav-subtitle': 'navSubtitle',
+    'modal-title': 'modalTitle',
+    'main-title': 'mainTitle',
+    'main-subtitle': 'mainSubtitle',
+    'intent-title': 'intentTitle',
+    'parse-text': 'parseText',
+    'execute-text': 'executeText',
+    'parsed-title': 'parsedTitle',
+    'log-title': 'logTitle',
+    'node-title': 'nodeTitle',
+    'metrics-title': 'metricsTitle',
+    'history-title': 'historyTitle',
+    'footer-text': 'footer',
+    'connect-text': 'connectText'
+  };
+
+  Object.keys(els).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(els[id]);
+  });
+
+  const parsedEl = document.getElementById('parsedPlan');
+  if (parsedEl && (parsedEl.innerHTML.trim() === '' || parsedEl.innerHTML.includes('parsedDefault'))) {
+    parsedEl.textContent = t('parsedDefault');
+  }
+}
+
+// ==================== 修复后的钱包连接（重点修复小狐狸不弹窗） ====================
 async function connectWallet(providerType) {
   try {
     log(`🔌 正在连接 ${providerType}...`, "text-blue-300");
@@ -385,8 +422,10 @@ async function connectWallet(providerType) {
         alert("未检测到 MetaMask，请安装 MetaMask 浏览器扩展后重试。");
         return;
       }
-      web3Provider = new ethers.BrowserProvider(window.ethereum);
-      await web3Provider.send("eth_requestAccounts", []);
+      // 关键修复：强制请求账号，弹出钱包窗口
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      web3Provider = new ethers.providers.Web3Provider(window.ethereum);
+
     } else if (providerType === "walletconnect") {
       alert("WalletConnect 暂未完全集成，请优先使用 MetaMask 测试。");
       return;
@@ -395,12 +434,12 @@ async function connectWallet(providerType) {
       return;
     }
 
-    const signer = await web3Provider.getSigner();
+    const signer = web3Provider.getSigner();
     userAddress = await signer.getAddress();
 
+    // 自动检测网络
     try {
-      const network = await web3Provider.getNetwork();
-      currentDetectedChainId = '0x' + network.chainId.toString(16);
+      currentDetectedChainId = await window.ethereum.request({ method: 'eth_chainId' });
       const chainMap = {
         '0x1': 'ethereum', '0x89': 'polygon', '0x38': 'bsc', '0x2105': 'base',
         '0xa': 'optimism', '0xa4b1': 'arbitrum', '0xaa36a7': 'sepolia'
@@ -411,13 +450,16 @@ async function connectWallet(providerType) {
       log(`[网络检测] 使用默认 Sepolia`, "text-yellow-400");
     }
 
+    // 更新 UI
     document.getElementById('connectBtn').classList.add('hidden');
     document.getElementById('disconnectBtn').classList.remove('hidden');
     document.getElementById('connect-text').textContent = `${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
 
     log(`✅ 钱包连接成功: ${userAddress}`, "text-green-400");
+
     document.getElementById('walletModal').classList.add('hidden');
 
+    // 监听变化
     if (window.ethereum) {
       window.ethereum.on('accountsChanged', (accounts) => {
         if (accounts.length === 0) disconnectWallet();
@@ -459,45 +501,11 @@ document.querySelectorAll('.wallet-option').forEach(btn => {
   });
 });
 
+// ==================== 其余原有功能全部保留（不做任何删除） ====================
 document.getElementById('languageSelect').addEventListener('change', (e) => {
   currentLang = e.target.value;
   updateLanguage();
 });
-
-// ==================== 其余所有代码（从这里开始到结束）全部保留不变 ====================
-function t(key) {
-  return translations[currentLang]?.[key] || translations.en[key] || key;
-}
-
-function updateLanguage() {
-  const els = {
-    'nav-title': 'navTitle',
-    'nav-subtitle': 'navSubtitle',
-    'modal-title': 'modalTitle',
-    'main-title': 'mainTitle',
-    'main-subtitle': 'mainSubtitle',
-    'intent-title': 'intentTitle',
-    'parse-text': 'parseText',
-    'execute-text': 'executeText',
-    'parsed-title': 'parsedTitle',
-    'log-title': 'logTitle',
-    'node-title': 'nodeTitle',
-    'metrics-title': 'metricsTitle',
-    'history-title': 'historyTitle',
-    'footer-text': 'footer',
-    'connect-text': 'connectText'
-  };
-
-  Object.keys(els).forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = t(els[id]);
-  });
-
-  const parsedEl = document.getElementById('parsedPlan');
-  if (parsedEl && (parsedEl.innerHTML.trim() === '' || parsedEl.innerHTML.includes('parsedDefault'))) {
-    parsedEl.textContent = t('parsedDefault');
-  }
-}
 
 async function loadNodeRouting() {
   const nodePanel = document.getElementById('nodePanel');
@@ -543,7 +551,7 @@ async function loadMetrics() {
   }
 }
 
-// AI Parse（完全保留）
+// ==================== AI Parse（完全保留） ====================
 document.getElementById('parseBtn').onclick = () => {
   const rawText = document.getElementById('intentInput').value.trim();
   if (!rawText) return alert("请输入你的意图");
@@ -600,7 +608,7 @@ document.getElementById('parseBtn').onclick = () => {
   }, 900);
 };
 
-// Execute Intent（保留原有逻辑 + 修复签名）
+// ==================== Execute Intent（使用已检测到的链） ====================
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
   if (!intentText || !userAddress || !web3Provider) {
@@ -616,7 +624,8 @@ document.getElementById('executeBtn').onclick = async () => {
   log("🔏 正在请求用户签名...", "text-blue-300");
 
   try {
-    const signer = await web3Provider.getSigner();
+    const signer = web3Provider.getSigner();
+
     const timestamp = Date.now();
     const message = `AstroBridge Intent\n\nIntent: ${intentText}\nFrom: ${userAddress}\nTime: ${timestamp}\n\nPlease sign to confirm execution.`;
 
@@ -624,13 +633,39 @@ document.getElementById('executeBtn').onclick = async () => {
 
     log("✅ 用户签名成功", "text-green-400");
 
+    // 使用连接时已检测到的链信息
+    let currentChainId = currentDetectedChainId || '0xaa36a7';
+    let currentChainName = currentDetectedChainName || 'sepolia';
+
+    log(`[前端链检测] 使用已记录的链信息: ${currentChainName.toUpperCase()}`, "text-blue-300");
+
+    const isERC20 = /USDC|USDT|DAI|WBTC/i.test(intentText);
+    const tokenMatch = intentText.match(/(USDC|USDT|DAI|WBTC)/i);
+    const tokenSymbol = tokenMatch ? tokenMatch[0].toUpperCase() : null;
+
+    const amountMatch = intentText.match(/(\d+\.?\d*)/);
+    const amount = amountMatch ? amountMatch[1] : "0.001";
+
+    const addressMatch = intentText.match(/0x[a-fA-F0-9]{40}/i);
+    const toAddress = addressMatch ? addressMatch[0] : null;
+
     const intentData = {
       id: `intent_${Date.now()}`,
+      type: isERC20 ? "erc20_transfer" : "native_transfer",
       description: intentText,
       creator: userAddress,
       timestamp: timestamp,
+      message: message,
       signature: signature,
-      chain: currentDetectedChainName || 'sepolia'
+      chainId: currentChainId,
+      chain: currentChainName,
+      payload: {
+        rawIntent: intentText,
+        preferredChain: currentChainName,
+        amount: amount,
+        token: tokenSymbol,
+        to: toAddress
+      }
     };
 
     executeBtn.innerHTML = `<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...`;
@@ -644,13 +679,17 @@ document.getElementById('executeBtn').onclick = async () => {
     const result = await response.json();
 
     if (result.success) {
-      log(`✅ 意图提交成功！ID: ${result.intentId}`, "text-green-400");
+      log(`✅ 意图提交成功！ID: ${result.intentId} | Chain: ${currentChainName.toUpperCase()}`, "text-green-400");
+
       parsedPlan.innerHTML = `
         <strong class="text-green-400 text-xl">✅ 提交成功（已签名）</strong><br><br>
         ID: ${result.intentId}<br>
-        Chain: ${currentDetectedChainName.toUpperCase()}<br>
+        Chain: ${currentChainName.toUpperCase()}<br>
+        To: ${toAddress || '（后端处理）'}<br>
+        Amount: ${amount} ${tokenSymbol || 'ETH'}<br>
         Status: Queued<br>
       `;
+
       addToHistory(result.intentId, "Queued");
       pollIntentStatus(result.intentId);
     } else {
@@ -694,8 +733,11 @@ updateLanguage();
 loadNodeRouting();
 loadMetrics();
 
-log("🚀 AstroBridge v7.0 真实意图交易版已就绪", "text-green-400");
-log(`API_BASE = "${API_BASE}"（已连接真实后端）`, "text-purple-400");
+log("🚀 AstroBridge v7.0 终极版已就绪（真实后端调用）", "text-green-400");
+log("Node Routing & Metrics 已切换为真实 API", "text-purple-400");
+log("多语言切换 + Log 系统已修复", "text-purple-400");
+log("✅ Node Routing 窗口已固定大小", "text-green-400");
+log("✅ 前端已支持连接后自动识别钱包网络 + 支持切换网络", "text-green-400");
 
 </script>
 </body>
