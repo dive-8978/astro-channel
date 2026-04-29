@@ -63,9 +63,25 @@
     }
     .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
 
-    #nodePanel { height: 320px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #40c4ff40 #1a1a2e; }
-    #nodePanel::-webkit-scrollbar { width: 6px; }
-    #nodePanel::-webkit-scrollbar-thumb { background: #40c4ff40; border-radius: 20px; }
+    #nodePanel {
+      height: 320px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #40c4ff40 #1a1a2e;
+    }
+    #nodePanel::-webkit-scrollbar {
+      width: 6px;
+    }
+    #nodePanel::-webkit-scrollbar-thumb {
+      background: #40c4ff40;
+      border-radius: 20px;
+    }
+
+    .health-bar { height: 8px; background: #334155; border-radius: 9999px; margin: 12px 0; overflow: hidden; }
+    .health-fill { height: 100%; transition: width 0.8s ease; }
+    .healthy { background: #22c55e; }
+    .warning { background: #eab308; }
+    .critical { background: #ef4444; }
   </style>
 </head>
 <body>
@@ -181,7 +197,7 @@
 </footer>
 
 <script>
-// ==================== 配置 ====================
+// ==================== v7.0 生产环境真实意图交易配置 ====================
 const API_BASE = 'https://api.astrochannel.one';
 
 // ==================== 日志函数 ====================
@@ -195,30 +211,169 @@ function log(message, colorClass = "text-white") {
   logEl.scrollTop = logEl.scrollHeight;
 }
 
-// ==================== 多语言翻译 ====================
+// ==================== 完整多语言翻译包 ====================
 const translations = {
-  en: { navTitle: "ASTROBRIDGE", navSubtitle: "Global Intelligent Intent Network v7.0", modalTitle: "Connect Wallet", mainTitle: "AI Intent Execution Terminal", mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution", intentTitle: "Your Intent", parseText: "AI Parse Intent", executeText: "Execute Intent", parsedTitle: "AI Parsed Plan", logTitle: "Execution Log", nodeTitle: "Node Routing", metricsTitle: "Network Metrics", historyTitle: "Recent Intent History", footer: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0", connectText: "Connect Wallet", disconnectText: "Disconnect", parsedDefault: "AI parsed result will appear here..." },
-  zh: { navTitle: "星桥网络", navSubtitle: "全球智能意图网络 v7.0", modalTitle: "连接钱包", mainTitle: "AI 意图执行终端", mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行", intentTitle: "你的意图", parseText: "AI 解析意图", executeText: "执行意图", parsedTitle: "AI 解析结果", logTitle: "执行日志", nodeTitle: "节点路由", metricsTitle: "网络指标", historyTitle: "最近意图记录", footer: "© 2026 星桥网络 — 全球智能意图网络 • 白皮书 V7.0", connectText: "连接钱包", disconnectText: "断开连接", parsedDefault: "AI 解析结果将显示在这里..." },
-  es: { navTitle: "ASTROBRIDGE", navSubtitle: "Red Global de Intención Inteligente", modalTitle: "Conectar Wallet", mainTitle: "Terminal de Ejecución de Intención IA", mainSubtitle: "Di tu intención → IA analiza → Robots enrutan → Ejecución en cadena", intentTitle: "Tu Intención", parseText: "Analizar con IA", executeText: "Ejecutar Intención", parsedTitle: "Plan Analizado por IA", logTitle: "Registro de Ejecución", nodeTitle: "Enrutamiento de Nodos", metricsTitle: "Métricas de Red", historyTitle: "Historial Reciente", footer: "© 2026 AstroBridge — Red Global de Intención Inteligente", connectText: "Conectar Wallet", disconnectText: "Desconectar", parsedDefault: "El resultado de IA aparecerá aquí..." },
-  fr: { navTitle: "ASTROBRIDGE", navSubtitle: "Réseau Global d'Intention Intelligente", modalTitle: "Connecter Wallet", mainTitle: "Terminal d'Exécution d'Intention IA", mainSubtitle: "Exprime ton intention → IA analyse → Robots routent → Exécution on-chain", intentTitle: "Ton Intention", parseText: "Analyser avec IA", executeText: "Exécuter l'Intention", parsedTitle: "Plan Analysé par IA", logTitle: "Journal d'Exécution", nodeTitle: "Routage des Nœuds", metricsTitle: "Métriques Réseau", historyTitle: "Historique Récent", footer: "© 2026 AstroBridge — Réseau Global d'Intention Intelligente", connectText: "Connecter Wallet", disconnectText: "Déconnecter", parsedDefault: "Le résultat IA apparaîtra ici..." },
-  ja: { navTitle: "アストロブリッジ", navSubtitle: "グローバルインテントネットワーク", modalTitle: "ウォレット接続", mainTitle: "AI インテント実行ターミナル", mainSubtitle: "意図を伝える → AI解析 → ロボットルーティング → オンチェーン実行", intentTitle: "あなたの意図", parseText: "AIで解析", executeText: "インテント実行", parsedTitle: "AI解析プラン", logTitle: "実行ログ", nodeTitle: "ノードルーティング", metricsTitle: "ネットワーク指標", historyTitle: "最近のインテント履歴", footer: "© 2026 AstroBridge — グローバルインテントネットワーク", connectText: "ウォレット接続", disconnectText: "切断", parsedDefault: "AI解析結果がここに表示されます..." },
-  ko: { navTitle: "아스트로브릿지", navSubtitle: "글로벌 인텐트 네트워크", modalTitle: "지갑 연결", mainTitle: "AI 인텐트 실행 터미널", mainSubtitle: "의도를 말하세요 → AI 분석 → 로봇 라우팅 → 온체인 실행", intentTitle: "당신의 인텐트", parseText: "AI 분석", executeText: "인텐트 실행", parsedTitle: "AI 분석 계획", logTitle: "실행 로그", nodeTitle: "노드 라우팅", metricsTitle: "네트워크 지표", historyTitle: "최근 인텐트 기록", footer: "© 2026 AstroBridge — 글로벌 인텐트 네트워크", connectText: "지갑 연결", disconnectText: "연결 해제", parsedDefault: "AI 분석 결과가 여기에 표시됩니다..." },
-  de: { navTitle: "ASTROBRIDGE", navSubtitle: "Globales Intelligentes Intent-Netzwerk", modalTitle: "Wallet verbinden", mainTitle: "KI-Intent-Ausführungsterminal", mainSubtitle: "Sage deine Absicht → KI analysiert → Roboter routen → On-Chain-Ausführung", intentTitle: "Deine Absicht", parseText: "KI-Analyse", executeText: "Intent ausführen", parsedTitle: "KI-Analyseplan", logTitle: "Ausführungsprotokoll", nodeTitle: "Knoten-Routing", metricsTitle: "Netzwerkmetriken", historyTitle: "Letzte Intents", footer: "© 2026 AstroBridge — Globales Intelligentes Intent-Netzwerk", connectText: "Wallet verbinden", disconnectText: "Trennen", parsedDefault: "KI-Analyseergebnis wird here angezeigt..." },
-  ru: { navTitle: "ASTROBRIDGE", navSubtitle: "Глобальная сеть интеллектуальных намерений", modalTitle: "Подключить кошелек", mainTitle: "Терминал выполнения намерений ИИ", mainSubtitle: "Выразите свое намерение → ИИ анализирует → Роботы маршрутизируют → Выполнение на блокчейне", intentTitle: "Ваше намерение", parseText: "Анализ ИИ", executeText: "Выполнить намерение", parsedTitle: "План, проанализированный ИИ", logTitle: "Журнал выполнения", nodeTitle: "Маршрутизация узлов", metricsTitle: "Метрики сети", historyTitle: "Недавние намерения", footer: "© 2026 AstroBridge — Глобальная сеть интеллектуальных намерений", connectText: "Подключить кошелек", disconnectText: "Отключить", parsedDefault: "Результат анализа ИИ появится здесь..." }
+  en: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Global Intelligent Intent Network v7.0",
+    modalTitle: "Connect Wallet",
+    mainTitle: "AI Intent Execution Terminal",
+    mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution",
+    intentTitle: "Your Intent",
+    parseText: "AI Parse Intent",
+    executeText: "Execute Intent",
+    parsedTitle: "AI Parsed Plan",
+    logTitle: "Execution Log",
+    nodeTitle: "Node Routing",
+    metricsTitle: "Network Metrics",
+    historyTitle: "Recent Intent History",
+    footer: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0",
+    connectText: "Connect Wallet",
+    disconnectText: "Disconnect",
+    parsedDefault: "AI parsed result will appear here..."
+  },
+  zh: {
+    navTitle: "星桥网络",
+    navSubtitle: "全球智能意图网络 v7.0",
+    modalTitle: "连接钱包",
+    mainTitle: "AI 意图执行终端",
+    mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行",
+    intentTitle: "你的意图",
+    parseText: "AI 解析意图",
+    executeText: "执行意图",
+    parsedTitle: "AI 解析结果",
+    logTitle: "执行日志",
+    nodeTitle: "节点路由",
+    metricsTitle: "网络指标",
+    historyTitle: "最近意图记录",
+    footer: "© 2026 星桥网络 — 全球智能意图网络 • 白皮书 V7.0",
+    connectText: "连接钱包",
+    disconnectText: "断开连接",
+    parsedDefault: "AI 解析结果将显示在这里..."
+  },
+  es: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Red Global de Intención Inteligente",
+    modalTitle: "Conectar Wallet",
+    mainTitle: "Terminal de Ejecución de Intención IA",
+    mainSubtitle: "Di tu intención → IA analiza → Robots enrutan → Ejecución en cadena",
+    intentTitle: "Tu Intención",
+    parseText: "Analizar con IA",
+    executeText: "Ejecutar Intención",
+    parsedTitle: "Plan Analizado por IA",
+    logTitle: "Registro de Ejecución",
+    nodeTitle: "Enrutamiento de Nodos",
+    metricsTitle: "Métricas de Red",
+    historyTitle: "Historial Reciente",
+    footer: "© 2026 AstroBridge — Red Global de Intención Inteligente",
+    connectText: "Conectar Wallet",
+    disconnectText: "Desconectar",
+    parsedDefault: "El resultado de IA aparecerá aquí..."
+  },
+  fr: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Réseau Global d'Intention Intelligente",
+    modalTitle: "Connecter Wallet",
+    mainTitle: "Terminal d'Exécution d'Intention IA",
+    mainSubtitle: "Exprime ton intention → IA analyse → Robots routent → Exécution on-chain",
+    intentTitle: "Ton Intention",
+    parseText: "Analyser avec IA",
+    executeText: "Exécuter l'Intention",
+    parsedTitle: "Plan Analysé par IA",
+    logTitle: "Journal d'Exécution",
+    nodeTitle: "Routage des Nœuds",
+    metricsTitle: "Métriques Réseau",
+    historyTitle: "Historique Récent",
+    footer: "© 2026 AstroBridge — Réseau Global d'Intention Intelligente",
+    connectText: "Connecter Wallet",
+    disconnectText: "Déconnecter",
+    parsedDefault: "Le résultat IA apparaîtra ici..."
+  },
+  ja: {
+    navTitle: "アストロブリッジ",
+    navSubtitle: "グローバルインテントネットワーク",
+    modalTitle: "ウォレット接続",
+    mainTitle: "AI インテント実行ターミナル",
+    mainSubtitle: "意図を伝える → AI解析 → ロボットルーティング → オンチェーン実行",
+    intentTitle: "あなたの意図",
+    parseText: "AIで解析",
+    executeText: "インテント実行",
+    parsedTitle: "AI解析プラン",
+    logTitle: "実行ログ",
+    nodeTitle: "ノードルーティング",
+    metricsTitle: "ネットワーク指標",
+    historyTitle: "最近のインテント履歴",
+    footer: "© 2026 AstroBridge — グローバルインテントネットワーク",
+    connectText: "ウォレット接続",
+    disconnectText: "切断",
+    parsedDefault: "AI解析結果がここに表示されます..."
+  },
+  ko: {
+    navTitle: "아스트로브릿지",
+    navSubtitle: "글로벌 인텐트 네트워크",
+    modalTitle: "지갑 연결",
+    mainTitle: "AI 인텐트 실행 터미널",
+    mainSubtitle: "의도를 말하세요 → AI 분석 → 로봇 라우팅 → 온체인 실행",
+    intentTitle: "당신의 인텐트",
+    parseText: "AI 분석",
+    executeText: "인텐트 실행",
+    parsedTitle: "AI 분석 계획",
+    logTitle: "실행 로그",
+    nodeTitle: "노드 라우팅",
+    metricsTitle: "네트워크 지표",
+    historyTitle: "최근 인텐트 기록",
+    footer: "© 2026 AstroBridge — 글로벌 인텐트 네트워크",
+    connectText: "지갑 연결",
+    disconnectText: "연결 해제",
+    parsedDefault: "AI 분석 결과가 여기에 표시됩니다..."
+  },
+  de: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Globales Intelligentes Intent-Netzwerk",
+    modalTitle: "Wallet verbinden",
+    mainTitle: "KI-Intent-Ausführungsterminal",
+    mainSubtitle: "Sage deine Absicht → KI analysiert → Roboter routen → On-Chain-Ausführung",
+    intentTitle: "Deine Absicht",
+    parseText: "KI-Analyse",
+    executeText: "Intent ausführen",
+    parsedTitle: "KI-Analyseplan",
+    logTitle: "Ausführungsprotokoll",
+    nodeTitle: "Knoten-Routing",
+    metricsTitle: "Netzwerkmetriken",
+    historyTitle: "Letzte Intents",
+    footer: "© 2026 AstroBridge — Globales Intelligentes Intent-Netzwerk",
+    connectText: "Wallet verbinden",
+    disconnectText: "Trennen",
+    parsedDefault: "KI-Analyseergebnis wird here angezeigt..."
+  },
+  ru: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Глобальная сеть интеллектуальных намерений",
+    modalTitle: "Подключить кошелек",
+    mainTitle: "Терминал выполнения намерений ИИ",
+    mainSubtitle: "Выразите свое намерение → ИИ анализирует → Роботы маршрутизируют → Выполнение на блокчейне",
+    intentTitle: "Ваше намерение",
+    parseText: "Анализ ИИ",
+    executeText: "Выполнить намерение",
+    parsedTitle: "План, проанализированный ИИ",
+    logTitle: "Журнал выполнения",
+    nodeTitle: "Маршрутизация узлов",
+    metricsTitle: "Метрики сети",
+    historyTitle: "Недавние намерения",
+    footer: "© 2026 AstroBridge — Глобальная сеть интеллектуальных намерений",
+    connectText: "Подключить кошелек",
+    disconnectText: "Отключить",
+    parsedDefault: "Результат анализа ИИ появится здесь..."
+  }
 };
 
-function t(key) {
-  return translations[currentLang]?.[key] || translations.en[key] || key;
-}
-
-// 全局变量
 let currentLang = 'en';
 let userAddress = null;
 let web3Provider = null;
 let currentDetectedChainId = '0xaa36a7';
 let currentDetectedChainName = 'sepolia';
 
-// DOM 元素
+// ==================== DOM 元素 ====================
 let parsedPlan, statusLog, historyList, nodePanel, metricsPanel;
 
 document.addEventListener('DOMContentLoaded', () => {
