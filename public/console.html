@@ -199,6 +199,9 @@
 </footer>
 
 <script>
+// ==================== v7.0 生产环境真实意图交易配置 ====================
+const API_BASE = 'https://api.astrochannel.one';   // 固定指向真实后端
+
 // ==================== 日志函数 ====================
 function log(message, colorClass = "text-white") {
   const logEl = document.getElementById('statusLog');
@@ -424,7 +427,7 @@ async function connectWallet(providerType) {
       }
       // 关键修复：强制请求账号，弹出钱包窗口
       await window.ethereum.request({ method: 'eth_requestAccounts' });
-      web3Provider = new ethers.providers.Web3Provider(window.ethereum);
+      web3Provider = new ethers.BrowserProvider(window.ethereum);
 
     } else if (providerType === "walletconnect") {
       alert("WalletConnect 暂未完全集成，请优先使用 MetaMask 测试。");
@@ -434,7 +437,7 @@ async function connectWallet(providerType) {
       return;
     }
 
-    const signer = web3Provider.getSigner();
+    const signer = await web3Provider.getSigner();
     userAddress = await signer.getAddress();
 
     // 自动检测网络
