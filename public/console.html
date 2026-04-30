@@ -62,7 +62,6 @@
       box-shadow: 0 0 20px rgba(64,196,255,0.5); transition: all 0.4s;
     }
     .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
-
     #nodePanel {
       height: 320px;
       overflow-y: auto;
@@ -76,7 +75,6 @@
       background: #40c4ff40;
       border-radius: 20px;
     }
-
     .health-bar { height: 8px; background: #334155; border-radius: 9999px; margin: 12px 0; overflow: hidden; }
     .health-fill { height: 100%; transition: width 0.8s ease; }
     .healthy { background: #22c55e; }
@@ -86,7 +84,6 @@
 </head>
 <body>
 <div class="nebula-flow"></div>
-
 <nav class="glass-panel px-6 py-5 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
   <div class="flex items-center gap-4">
     <a href="index.html" class="text-3xl text-genesis-blue hover:text-white"><i class="fas fa-home"></i></a>
@@ -112,7 +109,6 @@
     </button>
   </div>
 </nav>
-
 <div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-[60] px-4">
   <div class="glass-panel p-8 rounded-3xl max-w-md w-full">
     <div class="flex justify-between items-center mb-8">
@@ -129,8 +125,8 @@
         <div class="font-medium">WalletConnect</div>
       </button>
       <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="coinbase">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.com_logo.svg/1200px-Bitcoin.com_logo.svg.png" 
-     onerror="this.src='https://cdn-icons-png.flaticon.com/512/5968/5968890.png';" 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.com_logo.svg/1200px-Bitcoin.com_logo.svg.png"
+     onerror="this.src='https://cdn-icons-png.flaticon.com/512/5968/5968890.png';"
      class="w-14 h-14 mx-auto mb-3" alt="Coinbase">
         <div class="font-medium">Coinbase Wallet</div>
       </button>
@@ -142,13 +138,11 @@
     <p class="text-center text-xs opacity-60 mt-6">Supports MetaMask, WalletConnect, Coinbase, Trust Wallet, Rainbow, Phantom, and all EIP-1193 wallets</p>
   </div>
 </div>
-
 <main class="max-w-6xl mx-auto p-6 pt-16">
   <div class="text-center mb-12">
     <h2 id="main-title" class="text-5xl md:text-6xl font-orbitron neon-text mb-4">AI Intent Execution Terminal</h2>
     <p id="main-subtitle" class="text-xl opacity-90">Speak your intent → AI parses → Robots route → On-chain execution</p>
   </div>
-
   <section class="glass-panel p-8 mb-10">
     <h3 id="intent-title" class="text-2xl font-orbitron neon-text mb-6">Your Intent</h3>
     <textarea id="intentInput" rows="4"
@@ -163,37 +157,31 @@
       </button>
     </div>
   </section>
-
   <div class="grid lg:grid-cols-2 gap-8">
     <div class="glass-panel p-8">
       <h4 id="parsed-title" class="text-2xl font-orbitron neon-text mb-6">AI Parsed Plan</h4>
       <div id="parsedPlan" class="min-h-[280px] text-sm leading-relaxed"></div>
     </div>
-
     <div class="glass-panel p-8">
       <h4 id="log-title" class="text-2xl font-orbitron neon-text mb-6">Execution Log</h4>
       <div id="statusLog" class="font-mono text-sm max-h-[280px] overflow-y-auto space-y-1"></div>
     </div>
   </div>
-
   <div class="grid lg:grid-cols-2 gap-8 mt-8">
     <div class="glass-panel p-8">
       <h4 id="node-title" class="text-2xl font-orbitron neon-text mb-6">Node Routing</h4>
       <div id="nodePanel" class="space-y-5 text-sm"></div>
     </div>
-
     <div class="glass-panel p-8">
       <h4 id="metrics-title" class="text-2xl font-orbitron neon-text mb-6">Network Metrics</h4>
       <div id="metricsPanel" class="grid grid-cols-2 gap-6 text-sm"></div>
     </div>
   </div>
-
   <div class="glass-panel p-8 mt-8">
     <h4 id="history-title" class="text-2xl font-orbitron neon-text mb-6">Recent Intent History</h4>
     <div id="historyList" class="space-y-3 max-h-[200px] overflow-y-auto"></div>
   </div>
 </main>
-
 <footer class="glass-panel py-8 text-center text-sm opacity-75 mt-12 border-t border-genesis-blue/20">
   <p id="footer-text">© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0</p>
 </footer>
@@ -201,7 +189,6 @@
 <script>
 // ==================== v7.0 生产环境真实意图交易配置 ====================
 const API_BASE = 'https://api.astrochannel.one';
-
 // ==================== 日志函数 ====================
 function log(message, colorClass = "text-white") {
   const logEl = document.getElementById('statusLog');
@@ -212,7 +199,6 @@ function log(message, colorClass = "text-white") {
   logEl.appendChild(entry);
   logEl.scrollTop = logEl.scrollHeight;
 }
-
 // ==================== 完整多语言翻译包（全部补全） ====================
 const translations = {
   en: {
@@ -368,12 +354,14 @@ const translations = {
     parsedDefault: "Результат анализа ИИ появится здесь..."
   }
 };
-
 let currentLang = 'en';
 let userAddress = null;
 let web3Provider = null;
 let currentDetectedChainId = '0xaa36a7';
 let currentDetectedChainName = 'sepolia';
+
+// ==================== 新增：地址显示相关变量 ====================
+let addressDisplayElement = null;
 
 // ==================== 修复后的钱包连接 ====================
 async function connectWallet(providerType) {
@@ -411,9 +399,21 @@ async function connectWallet(providerType) {
       log(`[网络检测] 使用默认 Sepolia`, "text-yellow-400");
     }
 
-    document.getElementById('connectBtn').classList.add('hidden');
+    // ==================== 新增：可靠的地址显示逻辑 ====================
+    document.getElementById('connectBtn').style.display = 'none';           // 新增
+    // document.getElementById('connectBtn').classList.add('hidden');       // 原有代码保留（已注释）
+    
     document.getElementById('disconnectBtn').classList.remove('hidden');
-    document.getElementById('connect-text').textContent = `${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+    document.getElementById('disconnectBtn').style.display = 'inline-flex'; // 新增
+
+    // 创建并显示地址
+    if (!addressDisplayElement) {
+      addressDisplayElement = document.createElement('div');
+      addressDisplayElement.id = 'addressDisplay';
+      addressDisplayElement.className = 'px-4 py-2 bg-black/50 rounded-2xl font-mono text-sm border border-genesis-blue/30 ml-3';
+      document.querySelector('nav > div:last-child').appendChild(addressDisplayElement);
+    }
+    addressDisplayElement.textContent = `${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
 
     log(`✅ 钱包连接成功: ${userAddress}`, "text-green-400");
     document.getElementById('walletModal').classList.add('hidden');
@@ -435,39 +435,39 @@ async function connectWallet(providerType) {
 function disconnectWallet() {
   userAddress = null;
   web3Provider = null;
-  document.getElementById('connectBtn').classList.remove('hidden');
+  document.getElementById('connectBtn').style.display = 'inline-flex';     // 新增
+  // document.getElementById('connectBtn').classList.remove('hidden');     // 原有代码保留（已注释）
   document.getElementById('disconnectBtn').classList.add('hidden');
+  
+  if (addressDisplayElement) {
+    addressDisplayElement.remove();
+    addressDisplayElement = null;
+  }
+  
   document.getElementById('connect-text').textContent = "Connect Wallet";
   log("🔌 钱包已断开", "text-yellow-400");
 }
-
 // ==================== 事件绑定 ====================
 document.getElementById('connectBtn').onclick = () => {
   document.getElementById('walletModal').classList.remove('hidden');
 };
-
 document.getElementById('closeWallet').onclick = () => {
   document.getElementById('walletModal').classList.add('hidden');
 };
-
 document.getElementById('disconnectBtn').onclick = disconnectWallet;
-
 document.querySelectorAll('.wallet-option').forEach(btn => {
   btn.addEventListener('click', () => {
     const providerType = btn.getAttribute('data-provider');
     connectWallet(providerType);
   });
 });
-
 document.getElementById('languageSelect').addEventListener('change', (e) => {
   currentLang = e.target.value;
   updateLanguage();
 });
-
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
 }
-
 function updateLanguage() {
   const els = {
     'nav-title': 'navTitle',
@@ -486,18 +486,15 @@ function updateLanguage() {
     'footer-text': 'footer',
     'connect-text': 'connectText'
   };
-
   Object.keys(els).forEach(id => {
     const el = document.getElementById(id);
     if (el) el.textContent = t(els[id]);
   });
-
   const parsedEl = document.getElementById('parsedPlan');
   if (parsedEl && (parsedEl.innerHTML.trim() === '' || parsedEl.innerHTML.includes('parsedDefault'))) {
     parsedEl.textContent = t('parsedDefault');
   }
 }
-
 async function loadNodeRouting() {
   const nodePanel = document.getElementById('nodePanel');
   nodePanel.innerHTML = '<div class="text-blue-400">Loading nodes from backend...</div>';
@@ -520,7 +517,6 @@ async function loadNodeRouting() {
     nodePanel.innerHTML = '<div class="text-red-400">Failed to load nodes (check backend)</div>';
   }
 }
-
 async function loadMetrics() {
   const metricsPanel = document.getElementById('metricsPanel');
   metricsPanel.innerHTML = '<div class="text-blue-400">Loading metrics...</div>';
@@ -541,7 +537,6 @@ async function loadMetrics() {
     metricsPanel.innerHTML = '<div class="text-red-400">Failed to load metrics (check backend)</div>';
   }
 }
-
 // AI Parse（完全保留）
 document.getElementById('parseBtn').onclick = () => {
   const rawText = document.getElementById('intentInput').value.trim();
@@ -598,7 +593,6 @@ document.getElementById('parseBtn').onclick = () => {
     document.getElementById('executeBtn').disabled = false;
   }, 900);
 };
-
 // Execute Intent（保留你原来的逻辑）
 document.getElementById('executeBtn').onclick = async () => {
   const intentText = document.getElementById('intentInput').value.trim();
@@ -693,7 +687,6 @@ document.getElementById('executeBtn').onclick = async () => {
     executeBtn.innerHTML = originalHTML;
   }
 };
-
 function addToHistory(id, status) {
   const color = status === "Queued" ? "text-green-400" : "text-red-400";
   historyList.innerHTML = 
@@ -701,7 +694,6 @@ function addToHistory(id, status) {
       <span class="font-mono">${id}</span><span class="${color}">${status}</span>
     </div>` + historyList.innerHTML;
 }
-
 async function pollIntentStatus(intentId) {
   let attempts = 0;
   const interval = setInterval(async () => {
@@ -717,7 +709,6 @@ async function pollIntentStatus(intentId) {
     if (attempts >= 25) clearInterval(interval);
   }, 4000);
 }
-
 // ==================== 初始化 ====================
 updateLanguage();
 loadNodeRouting();
@@ -725,6 +716,28 @@ loadMetrics();
 
 log("🚀 AstroBridge v7.0 真实意图交易版已就绪", "text-green-400");
 log(`API_BASE = "${API_BASE}"（已连接真实后端）`, "text-purple-400");
+
+// ==================== 新增：页面加载时自动检测已连接钱包 ====================
+window.addEventListener('load', async () => {
+  if (window.ethereum) {
+    try {
+      const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+      if (accounts.length > 0) {
+        userAddress = accounts[0];
+        web3Provider = new ethers.BrowserProvider(window.ethereum);
+        document.getElementById('connectBtn').style.display = 'none';
+        if (!addressDisplayElement) {
+          addressDisplayElement = document.createElement('div');
+          addressDisplayElement.id = 'addressDisplay';
+          addressDisplayElement.className = 'px-4 py-2 bg-black/50 rounded-2xl font-mono text-sm border border-genesis-blue/30 ml-3';
+          document.querySelector('nav > div:last-child').appendChild(addressDisplayElement);
+        }
+        addressDisplayElement.textContent = `${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+        log(`✅ 已检测到已连接钱包: ${userAddress}`, "text-green-400");
+      }
+    } catch (e) {}
+  }
+});
 
 </script>
 </body>
