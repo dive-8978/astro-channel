@@ -375,7 +375,7 @@ const API_BASE = (window.location.hostname === '45.76.150.100' ||
                   window.location.hostname === 'localhost' || 
                   window.location.hostname === '127.0.0.1') 
                  ? 'http://45.76.150.100:3000' 
-                 : window.location.origin;
+                 :'https://www.api.astrochannel.one';
 
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
