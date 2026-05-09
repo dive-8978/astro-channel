@@ -375,7 +375,7 @@ const API_BASE = (window.location.hostname === '45.76.150.100' ||
                   window.location.hostname === 'localhost' || 
                   window.location.hostname === '127.0.0.1') 
                  ? 'http://45.76.150.100:3000' 
-                 : window.location.origin;
+                 : 'https://api.astrochannel.one';
 
 // v7.0 Fix: 增加全局 provider 引用，确保 ethers v6 加载完成
 let ethersLoaded = false;
