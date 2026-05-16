@@ -8,25 +8,23 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body {
-  background: radial-gradient(circle at 50% 10%, rgba(76,201,240,0.25) 0%, rgba(247,37,133,0.15) 40%, #020112 70%);
+  background: #020112;
   color: #fff;
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
-  position: relative;
 }
 body::before {
   content: '';
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(45deg, transparent, rgba(76,201,240,0.08), transparent);
-  animation: auroraFlow 25s linear infinite;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(76,201,240,0.15), rgba(247,37,133,0.12), rgba(192,132,252,0.08));
+  animation: aurora 25s linear infinite;
   z-index: 1;
   pointer-events: none;
 }
-@keyframes auroraFlow {
-  0% { transform: translateX(-30%) rotate(0deg); }
-  100% { transform: translateX(30%) rotate(8deg); }
+@keyframes aurora {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  100% { transform: translateX(50%) rotate(8deg); }
 }
 
 #sphereCanvas, #bridgeBuildingCanvas {
@@ -71,32 +69,44 @@ nav {
 }
 .logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 700;
   background: linear-gradient(90deg, #4cc9f0, #f72585, #c084fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -2px;
-  text-shadow: 0 0 30px rgba(76,201,240,0.6);
 }
-.x-button {
+.hamburger {
   width: 52px; height: 52px;
-  border-radius: 50%;
-  background: rgba(18,26,51,0.9);
-  border: 1px solid rgba(76,201,240,0.6);
-  backdrop-filter: blur(20px);
-  color: #fff; 
-  font-size: 1.5rem;
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  transition: .4s;
-  box-shadow: 0 0 25px rgba(76,201,240,0.5);
+  display: flex; flex-direction: column; justify-content: center; gap: 7px;
+  cursor: pointer; z-index: 100;
 }
-.x-button:hover { 
-  transform: scale(1.25) rotate(20deg); 
-  box-shadow: 0 0 50px #f72585; 
+.hamburger span {
+  height: 3px; background: #4cc9f0; border-radius: 3px;
+  transition: 0.4s; box-shadow: 0 0 10px #4cc9f0;
 }
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
+
+.nav-menu {
+  position: fixed;
+  top: 0; right: -100%;
+  width: 340px; height: 100vh;
+  background: rgba(10,16,40,0.98);
+  backdrop-filter: blur(30px);
+  border-left: 1px solid rgba(76,201,240,0.5);
+  padding: 120px 40px 40px;
+  transition: 0.6s cubic-bezier(0.32,0.72,0,1);
+  z-index: 999;
+  overflow-y: auto;
+}
+.nav-menu.active { right: 0; }
+.nav-menu a {
+  display: block; padding: 16px 0; color: #c4f1ff; text-decoration: none; font-size: 1.18rem;
+  transition: 0.3s;
+}
+.nav-menu a:hover { color: #4cc9f0; padding-left: 16px; }
 
 .hero {
   text-align: center; 
@@ -105,7 +115,7 @@ nav {
 }
 .hero h1 {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 5.8rem;
+  font-size: 6.2rem;
   line-height: 1.05;
   font-weight: 700;
   background: linear-gradient(90deg, #4cc9f0, #f72585, #c084fc);
@@ -113,11 +123,6 @@ nav {
   -webkit-text-fill-color: transparent;
   margin-bottom: 32px;
   letter-spacing: -4px;
-  animation: titleGlow 4s ease-in-out infinite alternate;
-}
-@keyframes titleGlow {
-  from { filter: brightness(1) drop-shadow(0 0 20px #4cc9f0); }
-  to { filter: brightness(1.15) drop-shadow(0 0 60px #f72585); }
 }
 .hero p {
   font-size: 1.55rem; 
@@ -136,28 +141,13 @@ nav {
   border-radius: 9999px;
   font-weight: 600;
   font-size: 1.2rem;
+  text-decoration: none;
   transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
-  position: relative;
-  overflow: hidden;
 }
 .btn.primary {
   background: linear-gradient(90deg, #4cc9f0, #f72585);
   color: #fff;
-  box-shadow: 0 0 60px rgba(76,201,240,0.8);
-}
-.btn.primary::after {
-  content: '';
-  position: absolute;
-  top: -50%; left: -50%;
-  width: 40%; height: 200%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
-  transform: skewX(-30deg);
-  animation: shine 3s infinite;
-}
-@keyframes shine {
-  0% { transform: translateX(-150%) skewX(-30deg); }
-  20% { transform: translateX(300%) skewX(-30deg); }
-  100% { transform: translateX(300%) skewX(-30deg); }
+  box-shadow: 0 0 70px rgba(76,201,240,0.8);
 }
 .btn:hover { 
   transform: translateY(-8px) scale(1.08); 
@@ -173,7 +163,6 @@ nav {
   background: linear-gradient(90deg, #4cc9f0, #f72585); 
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(76,201,240,0.5);
 }
 .card-grid {
   display: grid;
@@ -187,19 +176,7 @@ nav {
   padding: 42px;
   backdrop-filter: blur(24px);
   transition: all 0.6s ease;
-  position: relative;
-  overflow: hidden;
 }
-.card::before {
-  content: '';
-  position: absolute;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: radial-gradient(circle, rgba(76,201,240,0.3) 0%, transparent 60%);
-  opacity: 0;
-  transition: 0.8s;
-}
-.card:hover::before { opacity: 1; }
 .card:hover {
   transform: translateY(-20px) scale(1.04);
   border-color: #f72585;
@@ -209,7 +186,6 @@ nav {
   color: #4cc9f0; 
   font-size: 1.65rem; 
   margin-bottom: 20px; 
-  text-shadow: 0 0 15px #4cc9f0;
 }
 
 .notice {
@@ -221,7 +197,6 @@ nav {
   border-radius: 20px; 
   font-weight: 600; 
   font-size: 1.15rem;
-  box-shadow: 0 0 40px rgba(247,37,133,0.3);
 }
 .eco-tags {
   text-align: center; 
@@ -247,12 +222,30 @@ footer {
 <div class="container">
 <nav>
   <div class="logo"><img src="/favicon.ico" style="height:1.6em; margin-right:10px; vertical-align:middle;">AstroBridge</div>
-  <div class="nav-right">
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-    <a href="https://x.com/Astro___Channel" target="_blank" class="x-button">𝕏</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
   </div>
 </nav>
 
+<div class="nav-menu" id="navMenu">
+  <a href="vision.html">Vision</a>
+  <a href="technology.html">Technology</a>
+  <a href="astro-dev-3d.html">Developer</a>
+  <a href="products.html">Products</a>
+  <a href="progress.html">Progress</a>
+  <a href="roadmap.html">Roadmap</a>
+  <a href="tokenomics.html">Tokenomics</a>
+  <a href="team.html">Team</a>
+  <a href="whitepaper.html">Whitepaper</a>
+  <a href="painpoints.html">Pain Points</a>
+  <a href="community.html">Community</a>
+  <a href="memeastro.html">MemeAstro</a>
+  <a href="global-console.html">Global Console</a>
+  <a href="console.html">Demo Console</a>
+  <a href="AstroSwap.html">AstroSwap</a>
+</div>
+
+<!-- ==================== Official Notice + Ecosystem Tags ==================== -->
 <div class="notice">
   <strong>Official Notice</strong>｜<span style="color:#f72585;">MEME Astro (MA)</span> – The ONLY Airdrop Pass for AstroBridge Mainnet
 </div>
@@ -271,6 +264,7 @@ footer {
   </div>
 </div>
 
+<!-- ==================== Project Positioning ==================== -->
 <div class="section">
   <h2>Project Positioning</h2>
   <p style="text-align:center;max-width:860px;margin:0 auto;font-size:1.25rem;color:#c4f1ff;">
@@ -278,6 +272,7 @@ footer {
   </p>
 </div>
 
+<!-- ==================== Core Architecture ==================== -->
 <div class="section">
   <h2>Core Architecture</h2>
   <div class="card-grid">
@@ -290,26 +285,31 @@ footer {
   </div>
 </div>
 
+<!-- ==================== Pi Network Channel ==================== -->
 <div class="section">
   <h2>Pi Network Dedicated Intent Channel</h2>
   <p style="text-align:center;max-width:800px;margin:0 auto;">AstroBridge × Pi Network Special Intent Channel (Testnet Live). Pi is one dedicated channel within AstroBridge’s full-chain ecosystem. We support all public chains.<br><strong>API Channel:</strong> https://api.astrochannel.one/pi-network/intent-channel</p>
 </div>
 
+<!-- ==================== AstroWallet AI ==================== -->
 <div class="section">
   <h2>AstroWallet AI - Official Local AI Wallet</h2>
   <p style="text-align:center;max-width:800px;margin:0 auto;">Privacy-first local wallet with multi-chain management, 40% loss auto-protection, local AI intent parsing, and high-priority API submission.</p>
 </div>
 
+<!-- ==================== ASTRO Token Economics ==================== -->
 <div class="section">
   <h2>ASTRO Token Economics</h2>
   <p style="text-align:center;font-size:1.2rem;">• BNB Chain (BSC) BEP20 • Total Supply: 10,000,000,000 • No pre-mine, no inflation • 100% on-chain burn • Annual burn cap: 5%</p>
 </div>
 
+<!-- ==================== MEME Astro (MA) ==================== -->
 <div class="section">
   <h2>MEME Astro (MA) — Official Airdrop Pass for AstroBridge Mainnet</h2>
   <p style="text-align:center;max-width:800px;margin:0 auto;">Hold MemeAstro (MA) for 6 FULL CONSECUTIVE MONTHS to qualify for the AstroBridge Mainnet Token Airdrop. MA is the ONLY PASSPORT.</p>
 </div>
 
+<!-- ==================== Public API ==================== -->
 <div class="section">
   <h2>AstroBridge Public API (Open for All)</h2>
   <p style="text-align:center;">No key. No login. Anyone can call directly.</p>
@@ -325,10 +325,15 @@ curl https://api.astrochannel.one/api/nodes/status</pre>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-const hamburger=document.getElementById('hamburger');
-const navMenu=document.getElementById('navMenu');
-hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
+// Hamburger Menu
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
 
+// Original Particles
 particlesJS("globe-particles",{
   particles:{
     number:{value:60},
@@ -341,15 +346,15 @@ particlesJS("globe-particles",{
   }
 });
 
+// Click outside to close menu
 document.addEventListener('click', function(e) {
-  const navMenu = document.getElementById('navMenu');
-  const hamburger = document.getElementById('hamburger');
   if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-    navMenu.classList.add('hidden');
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
   }
 });
 
-// 原有 bridge + sphere 完整脚本保留
+// Bridge Progress (original)
 (function buildBridgeProgress() {
   const canvas=document.getElementById('bridgeBuildingCanvas');
   const ctx=canvas.getContext('2d');
@@ -420,6 +425,7 @@ document.addEventListener('click', function(e) {
   loop();
 })();
 
+// Sphere Particles (original)
 const canvas=document.getElementById('sphereCanvas');
 const ctx=canvas.getContext('2d');
 let w=canvas.width=window.innerWidth;
@@ -460,14 +466,17 @@ particles.forEach(p=>{p.update();p.draw();});
 }
 loop();
 
-const chains = [ /* 你的 chains 数组完整保留 */ ];
+// Chain Grid (original)
+const chains = ["Ethereum", "BNB Chain", "Bitcoin", "Solana", "Avalanche", "Polygon", "Arbitrum", "Optimism", "Base", "Aptos", "Sui", "Cosmos", "TRON", "Tezos", "Cardano", "XRP Ledger", "Stellar", "Ton", "Dogecoin", "Litecoin", "Fantom", "Harmony", "Celo", "Flow", "Immutable X", "ZKsync", "StarkNet", "Scroll", "Linea", "Manta", "Kava", "KCC", "OKXChain", "HECO", "Bittorrent", "Chiliz", "The Sandbox", "Decentraland", "Axie Infinity", "Magic Eden", "OpenSea", "Blur", "LooksRare", "X2Y2", "Uniswap", "PancakeSwap", "SushiSwap", "Curve", "Aave", "Compound", "MakerDAO", "Arweave", "Filecoin", "Chainlink", "The Graph", "Band Protocol", "Qtum", "NEO", "Ontology", "Waves", "Zilliqa", "Elrond", "Algorand", "Hedera", "IOTA", "Nano", "Monero", "Zcash", "Dash", "Ravencoin", "Kusama", "Polkadot", "Acala", "Karura", "Astar", "Shiden", "Moonbeam", "Moonriver", "Shibarium", "Core", "EOS", "WAX", "Velas", "Syscoin", "Horizen", "Decred", "Komodo", "Terra Classic", "Terra", "Ronin", "Gnosis", "Theta", "KuCoin", "Huobi", "BitTorrent Chain", "Shiba Inu", "Dai", "USDC", "USDT", "BUSD", "FRAX", "LUSD", "sUSD", "MAKER", "UNI", "SUSHI", "CRV", "YFI", "SNX", "REN", "ENJ", "MANA", "SAND", "CHZ", "BAT", "OMG", "ZRX", "REP", "ANT", "GRT", "1INCH", "MOVR", "GLMR", "KSM", "DOT", "ATOM", "OSMO", "JUNO", "EVMOS", "STRIDE", "QUICKSILVER", "SCRT", "IRIS", "REGEN", "SOMM", "STARGAZE", "UMEE", "AXELAR", "NEUTRON", "DYDX", "METIS", "BOBA", "REAL", "ICP", "STEEM", "HIVE", "LISK", "ARDROR", "PIVX", "VERGE", "BCH", "BSV", "Ethereum Classic", "Cronos", "Kadena", "Shardeum", "Cartesi", "Eclipse", "Neon EVM", "Oasis Emerald", "Conflux eSpace", "IoTeX Network", "Chiliz Chain", "BitTorrent Chain", "Evmos", "Zilliqa 2", "Lightlink Phoenix", "Astar zkEVM", "U2U Solaris", "Xpla", "Planq", "Syscoin", "Hoo Smart Chain", "IDChain", "Mix", "LACHAIN", "JIBCHAIN", "Form Network", "DXchain", "SoterOne", "Omax", "Step Network", "ZKFair", "Energy Web Chain", "Elastos Smart Chain", "ThunderCore", "Odyssey Chain", "Carbon EVM", "Acria IntelliChain", "Ennothem", "XDC", "Openpiece", "DCHAIN", "Doma", "inEVM", "Xone", "MTT Network", "TBWG Chain"];
 const chainGrid = document.getElementById('chainGrid');
-chains.forEach(chain => {
-  const div = document.createElement('div');
-  div.className = 'chain-block';
-  div.textContent = chain;
-  chainGrid.appendChild(div);
-});
+if(chainGrid) {
+  chains.forEach(chain => {
+    const div = document.createElement('div');
+    div.className = 'chain-block';
+    div.textContent = chain;
+    chainGrid.appendChild(div);
+  });
+}
 </script>
 </body>
 </html>
