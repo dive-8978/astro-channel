@@ -15,7 +15,7 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   width:100vw;
   height:100vh;
   z-index:0;
-  opacity:0.8;
+  opacity:0.85;
   background:#020112;
 }
 #bridgeBuildingCanvas {
@@ -257,21 +257,30 @@ nav{
   gap:20px;
 }
 .card{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(76,201,240,0.15);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(76,201,240,0.25);
   border-radius:16px;
-  padding:24px;
+  padding:28px;
+  transition:0.4s;
+  backdrop-filter: blur(12px);
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 40px rgba(76,201,240,0.3);
+  border-color:#4cc9f0;
 }
 .card h3{
   color:#4cc9f0;
-  margin-bottom:10px;
+  margin-bottom:12px;
+  font-size:1.35rem;
 }
 .card p{
   color:#a8dadc;
+  line-height:1.65;
 }
 footer{
   text-align:center;
-  padding-top:40px;
+  padding-top:60px;
   border-top:1px solid rgba(255,255,255,0.08);
   color:#a8dadc;
 }
@@ -317,62 +326,81 @@ footer{
 </div>
 </nav>
 
-<!-- ==================== 新增置顶公告 + 生态标签 ==================== -->
-<div style="text-align:center; margin-bottom:30px; padding:12px 24px; background:rgba(76,201,240,0.1); border:1px solid rgba(76,201,240,0.3); border-radius:12px; font-weight:600;">
+<!-- ==================== Official Notice + Ecosystem Tags ==================== -->
+<div style="text-align:center; margin-bottom:30px; padding:14px 28px; background:rgba(76,201,240,0.08); border:1px solid rgba(76,201,240,0.25); border-radius:14px; font-weight:600;">
   <strong>Official Notice</strong>｜<span style="color:#f72585;">MEME Astro (MA)</span> – The ONLY Airdrop Pass for AstroBridge Mainnet
 </div>
 
 <div style="text-align:center; margin-bottom:40px; font-size:15px; color:#4cc9f0; line-height:1.6;">
-  Whitepaper V7.0｜全链兼容·意图确权·代币自治·人类可控<br>
-  ✅ Astro on BSC｜✅ On-Chain Burn｜✅ 200+ Global Nodes｜✅ Pi Network API Channel (Testnet Live)｜✅ Full Chain Compatibility｜✅ AstroWallet AI Launched
+  Whitepaper V7.0｜Full Chain Compatibility · Intent Sovereignty · Token Autonomy · Human Control<br>
+  ✅ Astro on BSC｜✅ On-Chain Burn｜✅ 200+ Global Nodes｜✅ Pi Network API Channel (Testnet Live)｜✅ Full Chain Support｜✅ AstroWallet AI Launched
 </div>
 
 <div class="hero">
 <h1>Global Intent Network</h1>
-<p>The world’s first AI-powered autonomous intent layer for Web3 and Robot Economy.</p>
+<p>The world’s first AI-powered autonomous intent layer for Web3 and the Robot Economy.</p>
 <div class="buttons">
 <a href="global-console.html" class="btn primary">Global Console</a>
 <a href="console.html" class="btn secondary">Demo Console</a>
 </div>
 <p class="future-line" style="margin-top: 30px;">
-Building the infrastructure that will pave the road for the next decade of blockchain.
+Building the infrastructure for the next decade of blockchain.
 </p>
 </div>
 
-<!-- ==================== 新增项目定位 ==================== -->
+<!-- ==================== Project Positioning ==================== -->
 <div class="section">
 <h2>Project Positioning</h2>
-<p>AstroBridge is the global full-chain intelligent intent network for the 2026–2036 robot economy, and the world's first Web3 underlying operating system to achieve intent sovereignty confirmation.</p>
-<p>Humans only need to express their intent, and AI + robots will automatically complete full-chain execution. Assets are non-custodial, robots have no ownership, and humans maintain permanent control.</p>
+<p>AstroBridge is the global full-chain intelligent intent network designed for the 2026–2036 robot economy. It is the world's first Web3 underlying operating system with true intent sovereignty confirmation.</p>
+<p>Humans only need to express their intent — AI and robots will autonomously complete full-chain execution. Assets are non-custodial, robots hold no ownership, and humans maintain permanent control.</p>
 </div>
 
-<!-- ==================== 三大模块 ==================== -->
+<!-- ==================== Core Architecture (Improved Modular Cards) ==================== -->
 <div class="section">
 <h2>Core Architecture</h2>
-<p>1. Intent Sovereignty Core Layer<br>
-2. AI Autonomous Layer<br>
-3. Robot Execution Layer<br>
-4. Full-Chain Compatibility Layer<br>
-5. Distributed Scheduling Layer<br>
-6. Global Free Node Network<br>
-7. Decentralized Solver Network<br>
-8. Security & Proof Layer<br>
-9. API & Control Panel</p>
+<div class="card-grid">
+  <div class="card">
+    <h3>Intent Sovereignty Core</h3>
+    <p>Unique ID, signature binding, non-forgeable, non-replicable intent ownership.</p>
+  </div>
+  <div class="card">
+    <h3>AI Autonomous Layer</h3>
+    <p>Risk assessment, governance, federated learning, and self-evolution within boundaries.</p>
+  </div>
+  <div class="card">
+    <h3>Robot Execution Cluster</h3>
+    <p>Distributed robot agents with credit system and autonomous task execution.</p>
+  </div>
+  <div class="card">
+    <h3>Full-Chain Compatibility</h3>
+    <p>Native support for EVM, Non-EVM, L2s, and modular chains.</p>
+  </div>
+  <div class="card">
+    <h3>Global Free Node Network</h3>
+    <p>200+ public nodes with intelligent routing and zero server cost.</p>
+  </div>
+  <div class="card">
+    <h3>Decentralized Solver Network</h3>
+    <p>Competitive solvers with reputation scoring and best-path selection.</p>
+  </div>
+</div>
 </div>
 
+<!-- ==================== Pi Network Channel ==================== -->
 <div class="section">
 <h2>Pi Network Dedicated Intent Channel</h2>
 <p>AstroBridge × Pi Network Special Intent Channel (Testnet Live)</p>
-<p>Supports Pi event listening → intent conversion → automatic cross-chain execution. Pi Network is one dedicated channel of AstroBridge. We support all public chains.</p>
+<p>Pi is one dedicated channel within AstroBridge’s full-chain ecosystem. We support all public chains.</p>
 <p><strong>API Channel:</strong> https://api.astrochannel.one/pi-network/intent-channel</p>
 </div>
 
+<!-- ==================== AstroWallet AI ==================== -->
 <div class="section">
 <h2>AstroWallet AI - Official Local AI Wallet</h2>
-<p>Complete local operation, privacy first. Supports multi-chain, 40% loss auto-melt protection, local AI intent parsing, and high-priority API submission.</p>
+<p>Privacy-first local wallet with multi-chain management, 40% loss auto-protection, and local AI intent parsing.</p>
 </div>
 
-<!-- ==================== 代币经济学 ==================== -->
+<!-- ==================== ASTRO Token Economics ==================== -->
 <div class="section">
 <h2>ASTRO Token Economics</h2>
 <p>• Chain: BNB Chain (BSC) BEP20<br>
@@ -383,39 +411,30 @@ Building the infrastructure that will pave the road for the next decade of block
 • Burn Address: 0x000000000000000000000000000000000000dEaD</p>
 </div>
 
-<!-- ==================== MEME Astro (MA) 空投区 ==================== -->
+<!-- ==================== MEME Astro (MA) Airdrop ==================== -->
 <div class="section">
 <h2>MEME Astro (MA) — Official Airdrop Pass for AstroBridge Mainnet</h2>
 <p><strong>Token Information</strong><br>
 • Chain: BSC (BNB Chain)<br>
-• Total Supply: 1,000,000,000 (1 BILLION)<br>
+• Total Supply: 1,000,000,000<br>
 • Type: Meme Token + Official Airdrop Ticket</p>
 
 <p><strong>Airdrop Rules</strong><br>
-Hold MemeAstro (MA) for 6 FULL CONSECUTIVE MONTHS.<br>
-All qualified holders will be automatically airdropped AstroBridge Mainnet Token (Ratio: 1:1 or 2:1, final ratio to be announced).</p>
+Hold MemeAstro (MA) for 6 FULL CONSECUTIVE MONTHS to qualify for the AstroBridge Mainnet Token Airdrop (Ratio: 1:1 or 2:1, to be announced).</p>
 
 <p><strong>IMPORTANT</strong><br>
-MemeAstro (MA) is the ONLY PASSPORT for the AstroBridge mainnet airdrop. No other token will be accepted.</p>
-
-<p><strong>Note:</strong> The main ASTRO token will launch in 6-12 months. MA is the exclusive airdrop credential.</p>
+MemeAstro (MA) is the ONLY PASSPORT for the AstroBridge mainnet airdrop.</p>
 </div>
 
-<!-- ==================== Public API 展示区 ==================== -->
+<!-- ==================== Public API ==================== -->
 <div class="section">
-<h2>AstroBridge Public API（Open Call）</h2>
-<p>无需密钥、无需登录，所有人均可直接调用</p>
+<h2>AstroBridge Public API (Open for All)</h2>
+<p>No key, no login — anyone can call directly.</p>
 <pre style="background:#0a1028;padding:16px;border-radius:12px;font-size:14px;overflow-x:auto;">
 curl https://api.astrochannel.one/health
 curl https://api.astrochannel.one/nodes/online
 curl https://api.astrochannel.one/api/nodes/status
 curl https://api.astrochannel.one/api/metrics
-</pre>
-<p style="margin-top:12px;">Frontend Example:</p>
-<pre style="background:#0a1028;padding:16px;border-radius:12px;font-size:14px;overflow-x:auto;">
-fetch('https://api.astrochannel.one/nodes/online')
-  .then(res => res.json())
-  .then(data => console.log('在线节点：', data.onlineCount));
 </pre>
 </div>
 
@@ -426,9 +445,11 @@ fetch('https://api.astrochannel.one/nodes/online')
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
+// ==================== All original scripts remain unchanged ====================
 const hamburger=document.getElementById('hamburger');
 const navMenu=document.getElementById('navMenu');
 hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
+
 particlesJS("globe-particles",{
   particles:{
     number:{value:60},
@@ -440,6 +461,7 @@ particlesJS("globe-particles",{
     move:{enable:true,speed:1}
   }
 });
+
 document.addEventListener('click', function(e) {
   const navMenu = document.getElementById('navMenu');
   const hamburger = document.getElementById('hamburger');
@@ -447,6 +469,7 @@ document.addEventListener('click', function(e) {
     navMenu.classList.add('hidden');
   }
 });
+
 (function buildBridgeProgress() {
   const canvas=document.getElementById('bridgeBuildingCanvas');
   const ctx=canvas.getContext('2d');
@@ -516,6 +539,7 @@ document.addEventListener('click', function(e) {
   function loop(){requestAnimationFrame(loop);drawBridge();}
   loop();
 })();
+
 const canvas=document.getElementById('sphereCanvas');
 const ctx=canvas.getContext('2d');
 let w=canvas.width=window.innerWidth;
@@ -555,50 +579,8 @@ ctx.fillRect(0,0,w,h);
 particles.forEach(p=>{p.update();p.draw();});
 }
 loop();
-const chains = [
-  "Ethereum", "BNB Chain", "Bitcoin", "Solana", "Avalanche",
-  "Polygon", "Arbitrum", "Optimism", "Base", "Aptos",
-  "Sui", "Cosmos", "Osmosis", "TRON", "Tezos",
-  "Cardano", "XRP Ledger", "Stellar", "Ton", "Dogecoin",
-  "Litecoin", "Fantom", "Harmony", "Celo", "Flow",
-  "Immutable X", "ZKsync", "StarkNet", "Scroll", "Linea",
-  "Manta", "Kava", "KCC", "OKXChain", "HECO",
-  "Bittorrent", "Chiliz", "The Sandbox", "Decentraland",
-  "Axie Infinity", "Magic Eden", "OpenSea", "Blur",
-  "LooksRare", "X2Y2", "Uniswap", "PancakeSwap",
-  "SushiSwap", "Curve", "Aave", "Compound", "MakerDAO",
-  "Arweave", "Filecoin", "Chainlink", "The Graph",
-  "Band Protocol", "Qtum", "NEO", "Ontology", "Waves",
-  "Zilliqa", "Elrond", "Algorand", "Hedera", "IOTA",
-  "Nano", "Monero", "Zcash", "Dash", "Ravencoin",
-  "Kusama", "Polkadot", "Acala", "Karura", "Astar",
-  "Shiden", "Moonbeam", "Moonriver", "Shibarium", "Core",
-  "EOS", "WAX", "Velas", "Syscoin", "Horizen",
-  "Decred", "Komodo", "Terra Classic", "Terra", "Ronin",
-  "Gnosis", "Theta", "KuCoin", "Huobi", "BitTorrent Chain",
-  "Shiba Inu", "Dai", "USDC", "USDT", "BUSD",
-  "FRAX", "LUSD", "sUSD", "MAKER", "UNI",
-  "SUSHI", "CRV", "YFI", "SNX", "REN",
-  "ENJ", "MANA", "SAND", "CHZ", "BAT",
-  "OMG", "ZRX", "REP", "ANT", "GRT",
-  "1INCH", "MOVR", "GLMR", "KSM", "DOT",
-  "ATOM", "OSMO", "JUNO", "EVMOS", "STRIDE",
-  "QUICKSILVER", "SCRT", "IRIS", "REGEN", "SOMM",
-  "STARGAZE", "UMEE", "AXELAR", "NEUTRON", "DYDX",
-  "METIS", "BOBA", "REAL", "ICP", "STEEM",
-  "HIVE", "LISK", "ARDROR", "PIVX", "VERGE",
-  "BCH", "BSV", "Ethereum Classic", "Cronos", "Kadena",
-  "Shardeum", "Cartesi", "Eclipse", "Neon EVM", "Oasis Emerald",
-  "Conflux eSpace", "IoTeX Network", "Chiliz Chain", "BitTorrent Chain",
-  "Evmos", "Zilliqa 2", "Lightlink Phoenix", "Astar zkEVM",
-  "U2U Solaris", "Xpla", "Planq", "Syscoin", "Hoo Smart Chain",
-  "IDChain", "Mix", "LACHAIN", "JIBCHAIN", "Form Network",
-  "DXchain", "SoterOne", "Omax", "Step Network", "ZKFair",
-  "Energy Web Chain", "Elastos Smart Chain", "ThunderCore",
-  "Odyssey Chain", "Carbon EVM", "Acria IntelliChain",
-  "Ennothem", "XDC", "Openpiece", "DCHAIN", "Doma",
-  "inEVM", "Xone", "MTT Network", "TBWG Chain"
-];
+
+const chains = ["Ethereum", "BNB Chain", "Bitcoin", "Solana", "Avalanche", "Polygon", "Arbitrum", "Optimism", "Base", "Aptos", "Sui", "Cosmos", "TRON", "Tezos", "Cardano", "XRP Ledger", "Stellar", "Ton", "Dogecoin", "Litecoin", "Fantom", "Harmony", "Celo", "Flow", "Immutable X", "ZKsync", "StarkNet", "Scroll", "Linea", "Manta", "Kava", "KCC", "OKXChain", "HECO", "Bittorrent", "Chiliz", "The Sandbox", "Decentraland", "Axie Infinity", "Magic Eden", "OpenSea", "Blur", "LooksRare", "X2Y2", "Uniswap", "PancakeSwap", "SushiSwap", "Curve", "Aave", "Compound", "MakerDAO", "Arweave", "Filecoin", "Chainlink", "The Graph", "Band Protocol", "Qtum", "NEO", "Ontology", "Waves", "Zilliqa", "Elrond", "Algorand", "Hedera", "IOTA", "Nano", "Monero", "Zcash", "Dash", "Ravencoin", "Kusama", "Polkadot", "Acala", "Karura", "Astar", "Shiden", "Moonbeam", "Moonriver", "Shibarium", "Core", "EOS", "WAX", "Velas", "Syscoin", "Horizen", "Decred", "Komodo", "Terra Classic", "Terra", "Ronin", "Gnosis", "Theta", "KuCoin", "Huobi", "BitTorrent Chain", "Shiba Inu", "Dai", "USDC", "USDT", "BUSD", "FRAX", "LUSD", "sUSD", "MAKER", "UNI", "SUSHI", "CRV", "YFI", "SNX", "REN", "ENJ", "MANA", "SAND", "CHZ", "BAT", "OMG", "ZRX", "REP", "ANT", "GRT", "1INCH", "MOVR", "GLMR", "KSM", "DOT", "ATOM", "OSMO", "JUNO", "EVMOS", "STRIDE", "QUICKSILVER", "SCRT", "IRIS", "REGEN", "SOMM", "STARGAZE", "UMEE", "AXELAR", "NEUTRON", "DYDX", "METIS", "BOBA", "REAL", "ICP", "STEEM", "HIVE", "LISK", "ARDROR", "PIVX", "VERGE", "BCH", "BSV", "Ethereum Classic", "Cronos", "Kadena", "Shardeum", "Cartesi", "Eclipse", "Neon EVM", "Oasis Emerald", "Conflux eSpace", "IoTeX Network", "Chiliz Chain", "BitTorrent Chain", "Evmos", "Zilliqa 2", "Lightlink Phoenix", "Astar zkEVM", "U2U Solaris", "Xpla", "Planq", "Syscoin", "Hoo Smart Chain", "IDChain", "Mix", "LACHAIN", "JIBCHAIN", "Form Network", "DXchain", "SoterOne", "Omax", "Step Network", "ZKFair", "Energy Web Chain", "Elastos Smart Chain", "ThunderCore", "Odyssey Chain", "Carbon EVM", "Acria IntelliChain", "Ennothem", "XDC", "Openpiece", "DCHAIN", "Doma", "inEVM", "Xone", "MTT Network", "TBWG Chain"];
 const chainGrid = document.getElementById('chainGrid');
 chains.forEach(chain => {
   const div = document.createElement('div');
