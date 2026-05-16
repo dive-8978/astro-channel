@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AstroBridge • 极速跨链模式 (v8.0)</title>
+  <link rel="icon" href="/dashboard/static/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+
+  <style>
+    body {
+      background: #02000d;
+      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
+      background-size: cover; background-position: center; background-attachment: fixed;
+      color: #e3f2fd; font-family: 'Exo 2', sans-serif;
+    }
+    .glass { background: rgba(15,23,50,0.75); backdrop-filter: blur(20px); border: 1px solid rgba(64,196,255,0.3); }
+    .neon-cyan { text-shadow: 0 0 20px #22d3ee; }
+    .btn-fast { background: linear-gradient(90deg, #22d3ee, #06b6d4); box-shadow: 0 0 30px #22d3ee; }
+    .btn-fast:hover { transform: scale(1.05); box-shadow: 0 0 45px #22d3ee; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<div class="max-w-3xl mx-auto pt-10 px-6">
+
+  <!-- Header -->
+  <div class="flex justify-between items-center mb-8">
+    <div>
+      <h1 class="text-4xl font-orbitron neon-cyan">🚀 ASTROBRIDGE</h1>
+      <p class="text-cyan-400 text-sm">极速跨链模式 • v8.0</p>
+    </div>
+    <div class="flex items-center gap-4">
+      <select id="languageSelect" class="bg-black/70 border border-cyan-400/30 text-white px-4 py-2 rounded-2xl text-sm">
+        <option value="zh">中文</option>
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
+      <button id="connectBtn" class="btn-fast px-6 py-3 rounded-2xl flex items-center gap-2">
+        <i class="fas fa-wallet"></i> <span id="connectText">连接钱包</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="glass rounded-3xl p-8">
+
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-3 bg-cyan-500/10 text-cyan-400 px-6 py-2.5 rounded-2xl text-sm font-medium">
+        ⚡ 最快 3-8 秒到账 · 支持全球交易所与机构调用
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <div>
+        <label id="toLabel" class="block text-sm text-gray-400 mb-2">接收地址</label>
+        <input id="toAddress" type="text" 
+               class="w-full bg-black/70 border border-cyan-400/40 rounded-2xl px-6 py-5 text-white font-mono focus:outline-none focus:border-cyan-400"
+               placeholder="0x742d35Cc6634C0532925a3b844Bc454e4438f44e">
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <label id="amountLabel" class="block text-sm text-gray-400 mb-2">转账金额</label>
+          <input id="amount" type="text" 
+                 class="w-full bg-black/70 border border-cyan-400/40 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-cyan-400"
+                 placeholder="0.05">
+        </div>
+        <div>
+          <label id="tokenLabel" class="block text-sm text-gray-400 mb-2">代币</label>
+          <select id="token" class="w-full bg-black/70 border border-cyan-400/40 rounded-2xl px-6 py-5 text-white focus:outline-none">
+            <option value="ETH">ETH</option>
+            <option value="BNB">BNB</option>
+            <option value="USDT">USDT</option>
+            <option value="USDC">USDC</option>
+            <option value="ASTRO">ASTRO (官方代币)</option>
+            
+            <!-- 扩展代币列表（60+种） -->
+            <option value="DAI">DAI</option>
+            <option value="WBTC">WBTC</option>
+            <option value="LINK">Chainlink (LINK)</option>
+            <option value="UNI">Uniswap (UNI)</option>
+            <option value="AAVE">Aave (AAVE)</option>
+            <option value="MKR">Maker (MKR)</option>
+            <option value="COMP">Compound (COMP)</option>
+            <option value="SUSHI">SushiSwap (SUSHI)</option>
+            <option value="CRV">Curve (CRV)</option>
+            <option value="SNX">Synthetix (SNX)</option>
+            <option value="YFI">Yearn Finance (YFI)</option>
+            <option value="CAKE">PancakeSwap (CAKE)</option>
+            <option value="MATIC">Polygon (MATIC)</option>
+            <option value="AVAX">Avalanche (AVAX)</option>
+            <option value="SOL">Solana (SOL)</option>
+            <option value="ADA">Cardano (ADA)</option>
+            <option value="DOT">Polkadot (DOT)</option>
+            <option value="ATOM">Cosmos (ATOM)</option>
+            <option value="NEAR">NEAR Protocol</option>
+            <option value="FTM">Fantom (FTM)</option>
+            <option value="ARB">Arbitrum (ARB)</option>
+            <option value="OP">Optimism (OP)</option>
+            <option value="BASE">Base Chain Token</option>
+            <option value="TON">TON Coin</option>
+            <option value="TRX">TRON (TRX)</option>
+            <option value="XRP">XRP</option>
+            <option value="DOGE">Dogecoin (DOGE)</option>
+            <option value="SHIB">Shiba Inu (SHIB)</option>
+            <option value="PEPE">PEPE</option>
+            <option value="BONK">BONK</option>
+            <option value="WIF">dogwifhat (WIF)</option>
+            <option value="PENDLE">Pendle (PENDLE)</option>
+            <option value="GMX">GMX</option>
+            <option value="INJ">Injective (INJ)</option>
+            <option value="TIA">Celestia (TIA)</option>
+            <option value="SEI">Sei (SEI)</option>
+            <option value="SUI">Sui (SUI)</option>
+            <option value="APT">Aptos (APT)</option>
+            <option value="KAS">Kaspa (KAS)</option>
+            <option value="ALGO">Algorand (ALGO)</option>
+            <option value="FIL">Filecoin (FIL)</option>
+            <option value="VET">VeChain (VET)</option>
+            <option value="HBAR">Hedera (HBAR)</option>
+            <option value="XLM">Stellar (XLM)</option>
+            <option value="EOS">EOS</option>
+            <option value="XTZ">Tezos (XTZ)</option>
+            <option value="THETA">Theta Network</option>
+            <option value="MANA">Decentraland (MANA)</option>
+            <option value="SAND">The Sandbox (SAND)</option>
+            <option value="AXS">Axie Infinity (AXS)</option>
+            <option value="GALA">Gala (GALA)</option>
+            <option value="IMX">Immutable (IMX)</option>
+            <option value="RNDR">Render (RNDR)</option>
+            <option value="FET">Fetch.ai (FET)</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label id="chainLabel" class="block text-sm text-gray-400 mb-2">目标链</label>
+        <div class="grid grid-cols-4 gap-3">
+          <button onclick="selectChain(this)" data-chain="ETH" class="chain-btn active glass py-4 rounded-2xl text-sm font-medium">ETH</button>
+          <button onclick="selectChain(this)" data-chain="BSC" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">BSC</button>
+          <button onclick="selectChain(this)" data-chain="BASE" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">BASE</button>
+          <button onclick="selectChain(this)" data-chain="ARBITRUM" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">ARB</button>
+        </div>
+      </div>
+    </div>
+
+    <button id="executeBtn" class="w-full mt-10 btn-fast py-7 rounded-3xl text-2xl font-medium flex items-center justify-center gap-3">
+      <i class="fas fa-bolt"></i> <span id="executeText">立即极速转账</span>
+    </button>
+
+    <div id="result" class="hidden mt-8 p-6 glass rounded-2xl text-center"></div>
+  </div>
+
+  <div class="text-center text-xs text-gray-500 mt-10">
+    AstroBridge 极速跨链模式 · 开放给全球交易所、钱包、机构调用
+  </div>
+</div>
+
+<script>
+// ==================== 多语言支持 ====================
+const translations = {
+  zh: { toLabel: "接收地址", amountLabel: "转账金额", tokenLabel: "代币", chainLabel: "目标链", connectText: "连接钱包", executeText: "立即极速转账" },
+  en: { toLabel: "Recipient Address", amountLabel: "Amount", tokenLabel: "Token", chainLabel: "Destination Chain", connectText: "Connect Wallet", executeText: "Send Instantly" },
+  es: { toLabel: "Dirección de Destino", amountLabel: "Cantidad", tokenLabel: "Token", chainLabel: "Cadena Destino", connectText: "Conectar Wallet", executeText: "Enviar Instantáneamente" },
+  fr: { toLabel: "Adresse Destinataire", amountLabel: "Montant", tokenLabel: "Token", chainLabel: "Chaîne Destination", connectText: "Connecter Wallet", executeText: "Envoyer Instantanément" },
+  ja: { toLabel: "受取アドレス", amountLabel: "金額", tokenLabel: "トークン", chainLabel: "対象チェーン", connectText: "ウォレット接続", executeText: "即時送信" },
+  ko: { toLabel: "받는 주소", amountLabel: "금액", tokenLabel: "토큰", chainLabel: "대상 체인", connectText: "지갑 연결", executeText: "즉시 전송" }
+};
+
+let currentLang = 'zh';
+
+function t(key) {
+  return translations[currentLang]?.[key] || translations.zh[key] || key;
+}
+
+function updateLanguage() {
+  document.getElementById('toLabel').textContent = t('toLabel');
+  document.getElementById('amountLabel').textContent = t('amountLabel');
+  document.getElementById('tokenLabel').textContent = t('tokenLabel');
+  document.getElementById('chainLabel').textContent = t('chainLabel');
+  document.getElementById('connectText').textContent = t('connectText');
+  document.getElementById('executeText').textContent = t('executeText');
+}
+
+// ==================== 钱包连接 ====================
+let userAddress = null;
+let provider = null;
+let selectedChain = "ETH";
+
+document.getElementById('connectBtn').onclick = async () => {
+  if (!window.ethereum) return alert("请安装 MetaMask 或其他 EVM 钱包");
+
+  try {
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    provider = new ethers.BrowserProvider(window.ethereum);
+    userAddress = accounts[0];
+
+    const short = userAddress.slice(0,6) + '...' + userAddress.slice(-4);
+    document.getElementById('connectText').textContent = short;
+    log(`✅ 已连接 ${short}`, 'text-cyan-400');
+  } catch (e) {
+    log('连接失败', 'text-red-400');
+  }
+};
+
+// ==================== 链选择 ====================
+function selectChain(el) {
+  document.querySelectorAll('.chain-btn').forEach(b => b.classList.remove('active', 'bg-cyan-400/30'));
+  el.classList.add('active', 'bg-cyan-400/30');
+  selectedChain = el.dataset.chain;
+}
+
+// ==================== 执行极速转账 ====================
+document.getElementById('executeBtn').onclick = async () => {
+  const to = document.getElementById('toAddress').value.trim();
+  const amount = document.getElementById('amount').value.trim();
+
+  if (!userAddress) return alert(t('connectText') + " 先");
+  if (!to || !amount) return alert("请输入地址和金额");
+
+  const btn = document.getElementById('executeBtn');
+  btn.disabled = true;
+  btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${currentLang === 'zh' ? '签名中...' : 'Signing...'}`;
+
+  try {
+    const signer = await provider.getSigner();
+    const tx = await signer.sendTransaction({
+      to: to,
+      value: ethers.parseEther(amount)
+    });
+
+    const result = document.getElementById('result');
+    result.classList.remove('hidden');
+    result.innerHTML = `
+      <p class="text-green-400 text-lg">✅ 交易已广播</p>
+      <p class="font-mono text-xs break-all mt-2">${tx.hash}</p>
+      <p class="text-xs text-cyan-400 mt-4">${selectedChain} 链 · 预计 3-12 秒确认</p>
+    `;
+
+    // 提交到后端（极速模式）
+    fetch('/api/intent/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        mode: "fast",
+        from: userAddress,
+        to: to,
+        amount: amount,
+        chain: selectedChain,
+        txHash: tx.hash
+      })
+    });
+
+  } catch (err) {
+    alert("交易失败: " + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = `<i class="fas fa-bolt"></i> ${t('executeText')}`;
+  }
+};
+
+function log(msg, color = 'text-white') {
+  console.log(`%c${msg}`, `color: ${color === 'text-cyan-400' ? '#22d3ee' : '#67e8f9'}`);
+}
+
+// 初始化
+document.getElementById('languageSelect').onchange = (e) => {
+  currentLang = e.target.value;
+  updateLanguage();
+};
+
+updateLanguage();
+log("🚀 AstroBridge 极速跨链模式 已就绪 (v8.0)", "text-cyan-400");
+</script>
+</body>
+</html>
