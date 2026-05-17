@@ -253,7 +253,7 @@ nav{
 }
 .marquee {
   display: inline-flex;
-  animation: marquee 35s linear infinite;
+  animation: marquee 55s linear infinite;   /* ← 这里已调慢 */
   gap: 24px;
 }
 .marquee:hover {
@@ -558,7 +558,7 @@ document.addEventListener('click', function(e) {
   if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) navMenu.classList.add('hidden');
 });
 
-// Bridge Progress
+// Bridge Progress（保持不变）
 (function buildBridgeProgress() {
   const canvas=document.getElementById('bridgeBuildingCanvas');
   const ctx=canvas.getContext('2d');
@@ -642,11 +642,10 @@ particles.forEach(p=>{p.update();p.draw();});
 }
 loop();
 
-// Scrolling Marquee Chains (无缝循环)
+// Marquee Chains
 const chains = ["Ethereum","BNB Chain","Bitcoin","Solana","Avalanche","Polygon","Arbitrum","Optimism","Base","Aptos","Sui","Cosmos","Osmosis","TRON","Tezos","Cardano","XRP Ledger","Stellar","Ton","Dogecoin","Litecoin","Fantom","Harmony","Celo","Flow","Immutable X","ZKsync","StarkNet","Scroll","Linea","Manta","Kava","KCC","OKXChain","HECO","Bittorrent","Chiliz","The Sandbox","Decentraland","Axie Infinity","Magic Eden","OpenSea","Blur","LooksRare","X2Y2","Uniswap","PancakeSwap","SushiSwap","Curve","Aave","Compound","MakerDAO","Arweave","Filecoin","Chainlink","The Graph","Band Protocol","Qtum","NEO","Ontology","Waves","Zilliqa","Elrond","Algorand","Hedera","IOTA","Nano","Monero","Zcash","Dash","Ravencoin","Kusama","Polkadot","Acala","Karura","Astar","Shiden","Moonbeam","Moonriver","Shibarium","Core","EOS","WAX","Velas","Syscoin","Horizen","Decred","Komodo","Terra Classic","Terra","Ronin","Gnosis","Theta","KuCoin","Huobi","BitTorrent Chain","Shiba Inu","Dai","USDC","USDT","BUSD","FRAX","LUSD","sUSD","MAKER","UNI","SUSHI","CRV","YFI","SNX","REN","ENJ","MANA","SAND","CHZ","BAT","OMG","ZRX","REP","ANT","GRT","1INCH","MOVR","GLMR","KSM","DOT","ATOM","OSMO","JUNO","EVMOS","STRIDE","QUICKSILVER","SCRT","IRIS","REGEN","SOMM","STARGAZE","UMEE","AXELAR","NEUTRON","DYDX","METIS","BOBA","REAL","ICP","STEEM","HIVE","LISK","ARDROR","PIVX","VERGE","BCH","BSV","Ethereum Classic","Cronos","Kadena","Shardeum","Cartesi","Eclipse","Neon EVM","Oasis Emerald","Conflux eSpace","IoTeX Network","Chiliz Chain","BitTorrent Chain","Evmos","Zilliqa 2","Lightlink Phoenix","Astar zkEVM","U2U Solaris","Xpla","Planq","Syscoin","Hoo Smart Chain","IDChain","Mix","LACHAIN","JIBCHAIN","Form Network","DXchain","SoterOne","Omax","Step Network","ZKFair","Energy Web Chain","Elastos Smart Chain","ThunderCore","Odyssey Chain","Carbon EVM","Acria IntelliChain","Ennothem","XDC","Openpiece","DCHAIN","Doma","inEVM","Xone","MTT Network","TBWG Chain"];
-
 const marquee = document.getElementById('marquee');
-const allChains = [...chains, ...chains]; // Duplicate for seamless loop
+const allChains = [...chains, ...chains];
 allChains.forEach(chain => {
   const div = document.createElement('div');
   div.className = 'chain-block';
@@ -654,7 +653,7 @@ allChains.forEach(chain => {
   marquee.appendChild(div);
 });
 
-// 3D Particle Grid Globe
+// 3D Globe（粒子网格科技感）
 function initInteractiveParticleGlobe() {
   const container = document.getElementById('globe-container');
   const scene = new THREE.Scene();
@@ -700,11 +699,7 @@ function initInteractiveParticleGlobe() {
 
   const nodeGeo = new THREE.SphereGeometry(0.085, 8, 8);
   const nodeMat = new THREE.MeshBasicMaterial({ color: 0xf72585 });
-  const highlightNodes = [
-    {lat:40.7,lng:-74},{lat:51.5,lng:-0.1},{lat:35.7,lng:139.7},
-    {lat:-33.9,lng:151.2},{lat:22.3,lng:114.2},{lat:1.35,lng:103.8},
-    {lat:55.75,lng:37.6},{lat:19.07,lng:72.88}
-  ];
+  const highlightNodes = [{lat:40.7,lng:-74},{lat:51.5,lng:-0.1},{lat:35.7,lng:139.7},{lat:-33.9,lng:151.2},{lat:22.3,lng:114.2},{lat:1.35,lng:103.8},{lat:55.75,lng:37.6},{lat:19.07,lng:72.88}];
   highlightNodes.forEach(n => {
     const pos = new THREE.Vector3();
     const phi = (90 - n.lat) * Math.PI / 180;
