@@ -671,7 +671,7 @@ function initInteractiveGlobe() {
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);
     if (raycaster.intersectObject(globe).length > 0) {
-      alert("🌍 AstroBridge Global Node Network\n\nTouch and drag to rotate the Earth.\nNodes are distributed worldwide for ultra-low latency.");
+      alert("🌍 AstroBridge Global Node Network\n\nDrag with mouse or finger to rotate the Earth.\nNodes are distributed worldwide for ultra-low latency.");
     }
   });
 
