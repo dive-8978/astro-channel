@@ -536,7 +536,7 @@ document.addEventListener('click', function(e) {
   if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) navMenu.classList.add('hidden');
 });
 
-// Bridge Progress (保持不变)
+// Bridge Progress
 (function buildBridgeProgress() {
   const canvas=document.getElementById('bridgeBuildingCanvas');
   const ctx=canvas.getContext('2d');
@@ -585,7 +585,7 @@ document.addEventListener('click', function(e) {
   loop();
 })();
 
-// Sphere Particles
+// Sphere Particles Background
 const canvas=document.getElementById('sphereCanvas');
 const ctx=canvas.getContext('2d');
 let w=canvas.width=window.innerWidth;
@@ -630,35 +630,61 @@ chains.forEach(chain => {
   chainGrid.appendChild(div);
 });
 
-// ==================== 可交互3D地球仪 ====================
-function initInteractiveGlobe() {
+// ==================== 粒子网格科技感可交互3D地球仪 ====================
+function initInteractiveParticleGlobe() {
   const container = document.getElementById('globe-container');
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 100);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(window.devicePixelRatio);
   container.appendChild(renderer.domElement);
 
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
-  controls.dampingFactor = 0.08;
+  controls.dampingFactor = 0.1;
   controls.enableZoom = true;
   controls.minDistance = 8;
   controls.maxDistance = 25;
 
-  const globeGeo = new THREE.SphereGeometry(5, 64, 64);
-  const textureLoader = new THREE.TextureLoader();
-  const earthTexture = textureLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/earth_atmos_2048.jpg');
-  const earthMat = new THREE.MeshPhongMaterial({ map: earthTexture, shininess: 5 });
-  const globe = new THREE.Mesh(globeGeo, earthMat);
+  // 线框地球（科技网格感）
+  const globeGeo = new THREE.SphereGeometry(5, 48, 48);
+  const globeMat = new THREE.MeshBasicMaterial({
+    color: 0x4cc9f0,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.25
+  });
+  const globe = new THREE.Mesh(globeGeo, globeMat);
   scene.add(globe);
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-  scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(5, 3, 5);
-  scene.add(directionalLight);
+  // 密集粒子网格点（科技感核心）
+  const particleCount = 2500;
+  const particleGeo = new THREE.BufferGeometry();
+  const positions = new Float32Array(particleCount * 3);
+  const colors = new Float32Array(particleCount * 3);
+
+  for (let i = 0; i < particleCount * 3; i += 3) {
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+    const r = 5.05;
+    positions[i]     = r * Math.sin(phi) * Math.cos(theta);
+    positions[i + 1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i + 2] = r * Math.cos(phi);
+    colors[i] = 0.3; colors[i+1] = 0.8; colors[i+2] = 1;
+  }
+
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+  const particleMat = new THREE.PointsMaterial({
+    size: 0.035,
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.9
+  });
+  const particlesMesh = new THREE.Points(particleGeo, particleMat);
+  scene.add(particlesMesh);
 
   camera.position.z = 13;
 
@@ -671,14 +697,15 @@ function initInteractiveGlobe() {
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);
     if (raycaster.intersectObject(globe).length > 0) {
-      alert("🌍 AstroBridge Global Node Network\n\nDrag with mouse or finger to rotate.\nNodes are distributed worldwide.");
+      alert("🌍 AstroBridge Global Node Network\n\nDrag with mouse or finger to rotate the Earth.\n200+ nodes distributed worldwide.");
     }
   });
 
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
-    globe.rotation.y += 0.0005;
+    globe.rotation.y += 0.0008;
+    particlesMesh.rotation.y += 0.0008;
     renderer.render(scene, camera);
   }
   animate();
@@ -690,7 +717,7 @@ function initInteractiveGlobe() {
   });
 }
 
-window.addEventListener('load', initInteractiveGlobe);
+window.addEventListener('load', initInteractiveParticleGlobe);
 
 // Copy functions
 function copyToClipboard(text) {
