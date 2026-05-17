@@ -665,7 +665,7 @@ allChains.forEach(chain => {
   marquee.appendChild(div);
 });
 
-// 3D Globe（粒子网格科技感）
+// 3D Globe（粒子网格科技感 + 节点流光射线 + 修复滚动）
 function initInteractiveParticleGlobe() {
   const container = document.getElementById('globe-container');
   const scene = new THREE.Scene();
@@ -674,6 +674,9 @@ function initInteractiveParticleGlobe() {
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   container.appendChild(renderer.domElement);
+
+  // 修复页面滑动：默认不拦截鼠标事件
+  renderer.domElement.style.pointerEvents = 'none';
 
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
@@ -711,7 +714,12 @@ function initInteractiveParticleGlobe() {
 
   const nodeGeo = new THREE.SphereGeometry(0.085, 8, 8);
   const nodeMat = new THREE.MeshBasicMaterial({ color: 0xf72585 });
-  const highlightNodes = [{lat:40.7,lng:-74},{lat:51.5,lng:-0.1},{lat:35.7,lng:139.7},{lat:-33.9,lng:151.2},{lat:22.3,lng:114.2},{lat:1.35,lng:103.8},{lat:55.75,lng:37.6},{lat:19.07,lng:72.88}];
+  const highlightNodes = [
+    {lat:40.7,lng:-74},{lat:51.5,lng:-0.1},{lat:35.7,lng:139.7},{lat:-33.9,lng:151.2},
+    {lat:22.3,lng:114.2},{lat:1.35,lng:103.8},{lat:55.75,lng:37.6},{lat:19.07,lng:72.88}
+  ];
+
+  let nodeList = [];
   highlightNodes.forEach(n => {
     const pos = new THREE.Vector3();
     const phi = (90 - n.lat) * Math.PI / 180;
@@ -722,22 +730,69 @@ function initInteractiveParticleGlobe() {
     const dot = new THREE.Mesh(nodeGeo, nodeMat);
     dot.position.copy(pos);
     scene.add(dot);
+    nodeList.push(dot);
   });
 
   camera.position.z = 13.5;
 
-  const raycaster = new THREE.Raycaster();
-  const mouse = new THREE.Vector2();
-  container.addEventListener('click', (event) => {
-    const rect = container.getBoundingClientRect();
-    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-    raycaster.setFromCamera(mouse, camera);
-    if (raycaster.intersectObject(globe).length > 0) {
-      alert("🌍 Global Node Network\n\n200+ nodes distributed worldwide.\nDrag to rotate • Pinch to zoom.");
-    }
+  // ====================== 节点之间流光射线 ======================
+  let rayMaterial = new THREE.LineBasicMaterial({
+    color: 0x00e9ff,
+    transparent: true,
+    opacity: 0.9
   });
 
+  let currentRay = null;
+  let rayStart = null;
+  let rayEnd = null;
+  let rayProgress = 0;
+
+  function pickNewNodes() {
+    if (nodeList.length < 2) return;
+    rayStart = nodeList[Math.floor(Math.random() * nodeList.length)].position;
+    rayEnd = nodeList[Math.floor(Math.random() * nodeList.length)].position;
+    while (rayStart === rayEnd) {
+      rayEnd = nodeList[Math.floor(Math.random() * nodeList.length)].position;
+    }
+    rayProgress = 0;
+  }
+
+  function updateRay() {
+    if (!rayStart || !rayEnd) pickNewNodes();
+    rayProgress += 0.012;
+
+    if (rayProgress > 1) {
+      pickNewNodes();
+      return;
+    }
+
+    const midA = rayStart.clone().lerp(rayEnd, Math.max(0, rayProgress - 0.15));
+    const midB = rayStart.clone().lerp(rayEnd, rayProgress);
+
+    if (currentRay) scene.remove(currentRay);
+    const geo = new THREE.BufferGeometry().setFromPoints([midA, midB]);
+    currentRay = new THREE.Line(geo, rayMaterial);
+    scene.add(currentRay);
+  }
+
+  // ====================== 动画循环 ======================
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    globe.rotation.y += 0.0006;
+    particlesMesh.rotation.y += 0.0006;
+    updateRay(); // 流光更新
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+  });
+}
+  
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
