@@ -523,8 +523,8 @@ footer{
 </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
 
 <script>
 // Hamburger Menu
@@ -536,7 +536,7 @@ document.addEventListener('click', function(e) {
   if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) navMenu.classList.add('hidden');
 });
 
-// Bridge Progress
+// Bridge Progress (保持不变)
 (function buildBridgeProgress() {
   const canvas=document.getElementById('bridgeBuildingCanvas');
   const ctx=canvas.getContext('2d');
@@ -630,19 +630,19 @@ chains.forEach(chain => {
   chainGrid.appendChild(div);
 });
 
-// ==================== 可交互3D地球仪（支持手机旋转 + 点击） ====================
+// ==================== 可交互3D地球仪 ====================
 function initInteractiveGlobe() {
   const container = document.getElementById('globe-container');
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 100);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   container.appendChild(renderer.domElement);
 
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
-  controls.dampingFactor = 0.1;
+  controls.dampingFactor = 0.08;
   controls.enableZoom = true;
   controls.minDistance = 8;
   controls.maxDistance = 25;
@@ -656,11 +656,11 @@ function initInteractiveGlobe() {
 
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
   scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
   directionalLight.position.set(5, 3, 5);
   scene.add(directionalLight);
 
-  camera.position.z = 12;
+  camera.position.z = 13;
 
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
@@ -671,14 +671,14 @@ function initInteractiveGlobe() {
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);
     if (raycaster.intersectObject(globe).length > 0) {
-      alert("🌍 AstroBridge Global Node Network\n\nDrag with mouse or finger to rotate the Earth.\nNodes are distributed worldwide for ultra-low latency.");
+      alert("🌍 AstroBridge Global Node Network\n\nDrag with mouse or finger to rotate.\nNodes are distributed worldwide.");
     }
   });
 
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
-    globe.rotation.y += 0.0008;
+    globe.rotation.y += 0.0005;
     renderer.render(scene, camera);
   }
   animate();
