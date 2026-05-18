@@ -427,6 +427,24 @@ footer{
   ✅ Astro on BSC｜✅ On-Chain Burn｜✅ 200+ Global Nodes｜✅ Pi Network API Channel (Testnet Live)｜✅ Full Chain Support｜✅ AstroWallet AI Launched
 </div>
 
+<!-- ✅ API 窗口放在地球上方，显眼位置 -->
+<div class="section">
+  <h2>Public API (Open for All)</h2>
+  <div class="api-terminal" style="max-width:520px; margin:0 auto; border:1px solid #4cc9f0; box-shadow:0 0 30px #4cc9f0; background:rgba(11,15,31,0.8); backdrop-filter:blur(12px);">
+    <div class="api-header">
+      <div class="api-dot" style="background:#ff5f57;"></div>
+      <div class="api-dot" style="background:#ffbd2e;"></div>
+      <div class="api-dot" style="background:#28ca42;"></div>
+    </div>
+    <div class="api-body" style="text-align:center; padding:24px;">
+      POST https://api.astrochannel.one/api/intent/submit
+      <span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:14px; font-weight:600;">copy</span>
+    </div>
+  </div>
+  <p style="text-align:center; font-size:1rem; color:#a8dadc; margin-top:12px;">No key. No login. Anyone can call directly.</p>
+</div>
+
+<!-- ✅ 地球 -->
 <div class="globe-container">
   <div class="globe-title">Global Node Network</div>
   <div id="globe-container"></div>
@@ -638,23 +656,7 @@ allChains.forEach(chain => {
   marquee.appendChild(div);
 });
 
-<div class="section">
-  <h2>Public API (Open for All)</h2>
-  <div class="api-terminal" style="max-width:520px; border:1px solid #4cc9f0; box-shadow:0 0 30px #4cc9f0; background:rgba(11,15,31,0.7); backdrop-filter:blur(10px);">
-    <div class="api-header">
-      <div class="api-dot" style="background:#ff5f57;"></div>
-      <div class="api-dot" style="background:#ffbd2e;"></div>
-      <div class="api-dot" style="background:#28ca42;"></div>
-    </div>
-    <div class="api-body" id="apiContent" style="text-align:center;">
-      POST https://api.astrochannel.one/api/intent/submit
-      <span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:12px;">copy</span>
-    </div>
-  </div>
-  <p style="text-align:center;font-size:1rem;color:#a8dadc;">No key. No login. Anyone can call directly.</p>
-</div>
-  
-// ==================== 3D Globe (已修复) ====================
+// 3D Globe
 function initInteractiveParticleGlobe() {
   const container = document.getElementById('globe-container');
   const scene = new THREE.Scene();
@@ -720,7 +722,6 @@ function initInteractiveParticleGlobe() {
 
   camera.position.z = 13.5;
 
-  // 流光射线
   let rayMaterial = new THREE.LineBasicMaterial({ color: 0x00e9ff, transparent: true, opacity: 0.9 });
   let currentRay = null;
   let rayStart = null;
@@ -766,9 +767,11 @@ function initInteractiveParticleGlobe() {
 
 window.addEventListener('load', initInteractiveParticleGlobe);
 
-// Copy functions
+// Copy API 复制功能
 function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).catch(() => {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log('Copied');
+  }).catch(() => {
     const textarea = document.createElement('textarea');
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -777,22 +780,14 @@ function copyToClipboard(text) {
     document.body.removeChild(textarea);
   });
 }
-document.querySelectorAll('.api-copy').forEach(el => {
-  el.addEventListener('click', () => {
-    const text = el.previousSibling.textContent.trim();
-    copyToClipboard(text);
-    el.textContent = '✓ Copied';
-    setTimeout(() => el.textContent = 'copy', 1500);
-  });
-});
-document.getElementById('copyAllBtn').addEventListener('click', () => {
-  const content = document.getElementById('apiContent').innerText.replace(/copy|✓ Copied/g, '').trim();
-  copyToClipboard(content);
-  const btn = document.getElementById('copyAllBtn');
-  btn.innerHTML = '✓';
+
+document.querySelector('.api-copy').addEventListener('click', (e) => {
+  const text = "https://api.astrochannel.one/api/intent/submit";
+  copyToClipboard(text);
+  e.target.textContent = "✓ Copied";
   setTimeout(() => {
-    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="#a8dadc" width="18" height="18"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>`;
-  }, 1800);
+    e.target.textContent = "copy";
+  }, 1500);
 });
 </script>
 </body>
