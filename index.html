@@ -526,26 +526,6 @@ footer{
   </div>
 </div>
 
-<div class="section">
-  <h2>Public API (Open for All)</h2>
-  <div class="api-terminal">
-    <div class="api-header">
-      <div class="api-dot" style="background:#ff5f57;"></div>
-      <div class="api-dot" style="background:#ffbd2e;"></div>
-      <div class="api-dot" style="background:#28ca42;"></div>
-      <div class="api-copy-all" id="copyAllBtn" style="margin-left:auto;cursor:pointer;">
-        <svg viewBox="0 0 24 24" fill="#a8dadc" width="18" height="18"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-      </div>
-    </div>
-    <div class="api-body" id="apiContent">
-      curl https://api.astrochannel.one/health <span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:12px;">copy</span><br><br>
-      curl https://api.astrochannel.one/nodes/online <span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:12px;">copy</span><br><br>
-      curl https://api.astrochannel.one/api/nodes/status <span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:12px;">copy</span>
-    </div>
-  </div>
-  <p style="text-align:center;font-size:1rem;color:#a8dadc;">No key. No login. Anyone can call directly.</p>
-</div>
-
 <footer>
 <p>© 2026 AstroBridge | Global Intent Network</p>
 </footer>
@@ -658,6 +638,22 @@ allChains.forEach(chain => {
   marquee.appendChild(div);
 });
 
+<div class="section">
+  <h2>Public API (Open for All)</h2>
+  <div class="api-terminal" style="max-width:520px; border:1px solid #4cc9f0; box-shadow:0 0 30px #4cc9f0; background:rgba(11,15,31,0.7); backdrop-filter:blur(10px);">
+    <div class="api-header">
+      <div class="api-dot" style="background:#ff5f57;"></div>
+      <div class="api-dot" style="background:#ffbd2e;"></div>
+      <div class="api-dot" style="background:#28ca42;"></div>
+    </div>
+    <div class="api-body" id="apiContent" style="text-align:center;">
+      POST https://api.astrochannel.one/api/intent/submit
+      <span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:12px;">copy</span>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:1rem;color:#a8dadc;">No key. No login. Anyone can call directly.</p>
+</div>
+  
 // ==================== 3D Globe (已修复) ====================
 function initInteractiveParticleGlobe() {
   const container = document.getElementById('globe-container');
