@@ -1,175 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstroBridge - Roadmap</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#020617;color:#fff;overflow-x:hidden}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroWallet AI - 本地主权智能钱包</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .title-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
 
-#particles{
-  position:fixed;top:0;left:0;
-  width:100%;height:100%;
-  z-index:0;opacity:0.5
-}
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
 
-.container{
-  max-width:1000px;margin:auto;
-  padding:40px 20px;position:relative;z-index:2
-}
+        .neon-cyan {
+            text-shadow: 0 0 20px #4cc9f0,
+                        0 0 40px #4cc9f0;
+        }
 
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-bottom:50px;flex-wrap:wrap;gap:16px
-}
+        .screenshot {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .screenshot:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 0 60px rgba(76, 201, 240, 0.5);
+        }
 
-.logo{
-  font-size:2rem;font-weight:800;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent
-}
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(76, 201, 240, 0.6);
+            animation: floatParticle 25s linear infinite;
+        }
 
-.nav-right{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-.nav-links{display:flex;gap:22px;flex-wrap:wrap}
-.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
-.nav-links a:hover{color:#4cc9f0}
-
-.x-icon{
-  width:34px;height:34px;background:#000;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:.3s;border:1px solid #4cc9f0
-}
-.x-icon:hover{transform:scale(1.1);border-color:#f72585}
-.x-icon svg{width:15px;height:15px;fill:#fff}
-
-.page-title{
-  font-size:2.8rem;margin-bottom:12px;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent
-}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:40px}
-
-.btn-home{
-  display:inline-block;padding:10px 20px;border-radius:10px;
-  background:rgba(76,201,240,0.1);border:1px solid #4cc9f0;
-  color:#4cc9f0;font-weight:600;text-decoration:none;
-  transition:.3s;margin-bottom:30px
-}
-.btn-home:hover{background:#4cc9f0;color:#000}
-
-.roadmap-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:24px;margin-bottom:60px
-}
-
-.roadmap-box{
-  background:linear-gradient(135deg,#111833,#070b1f);
-  border:1px solid rgba(76,201,240,0.2);
-  border-radius:18px;padding:30px;
-  position:relative;overflow:hidden;transition:all 0.4s
-}
-.roadmap-box::before{
-  content:'';position:absolute;top:0;left:0;
-  width:100%;height:4px;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-}
-.roadmap-box:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 30px rgba(76,201,240,0.15);
-  border-color:rgba(76,201,240,0.4)
-}
-
-.roadmap-tag{
-  display:inline-block;padding:6px 14px;border-radius:30px;
-  font-size:0.85rem;font-weight:700;margin-bottom:16px;
-  background:rgba(76,201,240,0.1);color:#4cc9f0
-}
-.roadmap-box h3{font-size:1.3rem;margin-bottom:12px;color:#fff}
-.roadmap-box p{color:#a8dadc;line-height:1.7;font-size:0.95rem}
-
-footer{
-  margin-top:60px;padding-top:30px;
-  border-top:1px solid rgba(255,255,255,0.08);
-  color:#a8dadc;text-align:center
-}
-
-@media(max-width:768px){.page-title{font-size:2rem}}
-</style>
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) scale(1); }
+            100% { transform: translateY(-100vh) scale(0.5); }
+        }
+    </style>
 </head>
-<body>
+<body class="min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center text-2xl">🌌</div>
+                <span class="title-font text-2xl font-bold tracking-tighter">AstroWallet <span class="text-cyan-400">AI</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-cyan-400 transition-colors">首页</a>
+                <a href="#features" class="hover:text-cyan-400 transition-colors">功能</a>
+                <a href="#screenshots" class="hover:text-cyan-400 transition-colors">界面</a>
+                <a href="#whitepaper" class="hover:text-cyan-400 transition-colors">白皮书</a>
+                <a href="#subscribe" class="hover:text-cyan-400 transition-colors">VIP订阅</a>
+            </div>
+            <a href="#" 
+               class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl font-semibold hover:scale-105 transition-all">
+                下载 App
+            </a>
+        </div>
+    </nav>
 
-<div id="particles"></div>
-<div class="container">
+    <!-- Hero -->
+    <section id="home" class="hero-bg pt-32 pb-24 relative min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/5 border border-cyan-500/30 rounded-full px-5 py-2 text-sm">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    V1.2 正式版 已上线
+                </div>
+                
+                <h1 class="title-font text-6xl md:text-7xl font-bold leading-none tracking-tighter">
+                    你的<br>本地 AI<br>资产管家
+                </h1>
+                
+                <p class="text-xl text-gray-300 max-w-lg">
+                    完全本地运行 · 主权控制 ·<br>
+                    自然语言执行意图 · AstroBridge 专用通道
+                </p>
 
-<nav>
-  <div class="logo">AstroBridge</div>
-  <div class="nav-right">
-    <div class="nav-links">
-      <a href="vision.html">Vision</a>
-      <a href="painpoints.html">Pain Points</a>
-      <a href="technology.html">Technology</a>
-      <a href="progress.html">Progress</a>
-    </div>
-    <div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
-      <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-    </div>
-  </div>
-</nav>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#screenshots" 
+                       class="px-8 py-4 bg-white text-black font-semibold rounded-3xl flex items-center gap-3 hover:bg-cyan-400 transition-all">
+                        <span>立即体验界面</span>
+                        <span class="text-2xl">→</span>
+                    </a>
+                    <a href="#whitepaper" 
+                       class="px-8 py-4 border border-cyan-500/50 hover:border-cyan-400 font-medium rounded-3xl transition-all">
+                        阅读白皮书
+                    </a>
+                </div>
 
-<a href="index.html" class="btn-home">← Back to Home</a>
+                <div class="flex items-center gap-8 text-sm pt-6">
+                    <div>
+                        <div class="text-cyan-400 font-mono text-3xl font-bold">0x0edb...e525</div>
+                        <div class="text-gray-500">你的钱包地址</div>
+                    </div>
+                    <div class="h-12 w-px bg-gray-700"></div>
+                    <div>
+                        <div class="text-emerald-400 font-bold text-3xl">$12,132,456,432,786.75</div>
+                        <div class="text-gray-500">总资产价值</div>
+                    </div>
+                </div>
+            </div>
 
-<h1 class="page-title">Roadmap</h1>
-<p class="page-desc">Four-Stage Development Path | AstroBridge Global Intent Network</p>
+            <!-- Hero 主图 -->
+            <div class="relative">
+                <img src="IMG_9785.PNG" alt="AstroWallet AI 首页" 
+                     class="rounded-3xl shadow-2xl border border-cyan-500/30 screenshot">
+                <div class="absolute -bottom-6 -right-6 bg-black/90 border border-cyan-400/30 rounded-2xl p-6 max-w-[220px]">
+                    <div class="text-emerald-400 flex items-center gap-2 mb-3">
+                        <span class="text-xl">🛡️</span>
+                        <span class="font-semibold">Protection: Safe</span>
+                    </div>
+                    <div class="text-xs text-gray-400">40% 亏损自动熔断保护已激活</div>
+                </div>
+            </div>
+        </div>
 
-<div class="roadmap-grid">
-  <div class="roadmap-box">
-    <div class="roadmap-tag">Stage 1 ✅</div>
-    <h3>Core Protocol Completed</h3>
-    <p>Full-chain compatibility, intent sovereignty, AI risk control and basic robot execution layer finished.</p>
-  </div>
+        <!-- 漂浮粒子 -->
+        <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+    </section>
 
-  <div class="roadmap-box">
-    <div class="roadmap-tag">Stage 2 🔵</div>
-    <h3>Token & Governance</h3>
-    <p>ASTRO token deployment, on-chain burn mechanism, API open and developer tool platform.</p>
-  </div>
+    <!-- 5张截图展示 -->
+    <section id="screenshots" class="py-24 bg-black border-t border-b border-cyan-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-5xl font-bold mb-4">真实界面预览</h2>
+                <p class="text-gray-400 text-lg">完全本地运行 · 极致简洁 · 安全至上</p>
+            </div>
 
-  <div class="roadmap-box">
-    <div class="roadmap-tag">Stage 3 🚀</div>
-    <h3>Global Node Network</h3>
-    <p>200+ global decentralized nodes, AI scheduling, high-availability cross-chain execution.</p>
-  </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="IMG_9785.PNG" alt="首页" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+                <img src="IMG_9786.PNG" alt="AI Assistant" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+                <img src="IMG_9787.PNG" alt="资产页面" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+                <img src="IMG_9788.PNG" alt="AI Auto Earn" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+                <img src="IMG_9789.PNG" alt="设置页面" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+            </div>
+        </div>
+    </section>
 
-  <div class="roadmap-box">
-    <div class="roadmap-tag">Stage 4 🌌</div>
-    <h3>Robot Economy Ecosystem</h3>
-    <p>Become the Web3 intent OS for global DApps, robots, enterprises and full ecosystem adoption.</p>
-  </div>
-</div>
+    <!-- 白皮书摘要 -->
+    <section id="whitepaper" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="title-font text-5xl font-bold text-center mb-12">AstroWallet AI 白皮书 V1.2</h2>
+            
+            <div class="prose prose-invert max-w-none text-gray-300 space-y-8">
+                <p class="text-xl leading-relaxed">
+                    AstroWallet AI 是 <strong class="text-cyan-400">AstroBridge 全球智能意图网络</strong> 的官方本地钱包客户端。
+                    完全运行在用户手机本地，内置轻量 AI 引擎，通过 AstroBridge 专用钱包通道（/api/wallet/intent/submit）实现智能意图执行。
+                </p>
 
-<footer>
-  <p>© 2026 AstroBridge | Global Intent Network</p>
-</footer>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-zinc-950 border border-cyan-500/20 rounded-3xl p-8">
+                        <h3 class="text-cyan-400 font-semibold mb-4">核心理念</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> 本地优先 · 隐私至上</li>
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> 用户主权 · 意图确权</li>
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> AI 为用户服务</li>
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> 控制权始终在用户手中</li>
+                        </ul>
+                    </div>
+                    <div class="bg-zinc-950 border border-cyan-500/20 rounded-3xl p-8">
+                        <h3 class="text-cyan-400 font-semibold mb-4">关键功能</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 自然语言意图执行</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 40% 亏损自动熔断保护</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 多链资产 + 实时行情</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 摄像头扫码 + 相册识别</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 生物识别 + 本地加密</li>
+                        </ul>
+                    </div>
+                </div>
 
-</div>
+                <div class="text-center bg-gradient-to-br from-zinc-900 to-black border border-cyan-500/30 rounded-3xl p-10">
+                    <p class="text-2xl font-medium mb-6">
+                        持有 <span class="text-yellow-400 font-bold">70,000 ASTRO</span> 即可解锁
+                    </p>
+                    <p class="text-4xl title-font font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
+                        AI Auto Earn 专业版
+                    </p>
+                    <p class="mt-4 text-gray-400">自主策略优化 · 40% 亏损保护 · 优先级 Bridge</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-particlesJS("particles",{
-  particles:{
-    number:{value:80},
-    color:{value:["#4cc9f0","#f72585"]},
-    opacity:{value:0.4,random:true},
-    size:{value:3,random:true},
-    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15},
-    move:{enable:true,speed:1.5,random:true}
-  },
-  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
-  retina_detect:true
-})
-</script>
+    <!-- VIP 订阅 -->
+    <section id="subscribe" class="py-24 bg-gradient-to-b from-black to-zinc-950">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block bg-yellow-400/10 border border-yellow-400 rounded-3xl px-8 py-3 mb-8">
+                <span class="text-yellow-400 font-semibold">VIP 专业订阅</span>
+            </div>
+            <h2 class="title-font text-5xl font-bold mb-6">AI Auto Earn 已激活</h2>
+            <p class="text-xl text-gray-400 mb-12">持有 70,000 ASTRO 代币即可享受持续的 VIP 自动赚钱服务</p>
+            
+            <div class="bg-zinc-900 rounded-3xl p-12 border border-yellow-400/30">
+                <img src="IMG_9788.PNG" alt="AI Auto Earn" class="mx-auto rounded-2xl mb-10 shadow-2xl">
+                <button onclick="alert('VIP 功能已激活！🚀')"
+                        class="w-full py-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-xl font-bold rounded-3xl hover:scale-105 transition-all">
+                    VIP Auto Activated
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-cyan-900/30 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-3 mb-8">
+                <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center text-3xl">🌌</div>
+            </div>
+            <p class="text-gray-500">
+                AstroWallet AI —— 你的本地 AI 资产管家<br>
+                与 AstroBridge 全球智能意图网络官方配套
+            </p>
+            <p class="text-xs text-gray-600 mt-12">
+                © 2026 AstroWallet AI • 隐私至上 • 主权第一
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 粒子效果
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 60; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.opacity = Math.random() * 0.6 + 0.2;
+                particle.style.animationDuration = `${Math.random() * 30 + 20}s`;
+                particle.style.animationDelay = `-${Math.random() * 30}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+
+        // Tailwind 脚本
+        tailwind.config = {
+            content: [],
+            theme: {
+                extend: {}
+            }
+        }
+
+        window.onload = () => {
+            createParticles();
+        };
+    </script>
 </body>
 </html>
