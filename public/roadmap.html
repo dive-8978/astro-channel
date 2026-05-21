@@ -26,10 +26,11 @@
 
         .screenshot {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: perspective(1200px) translateZ(0);
         }
         
         .screenshot:hover {
-            transform: translateY(-12px) scale(1.03);
+            transform: translateY(-12px) scale(1.03) perspective(1200px) translateZ(20px);
             box-shadow: 0 0 60px rgba(76, 201, 240, 0.5);
         }
 
@@ -50,10 +51,8 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-cyan-500/20">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <img src="3377.png" alt="Astro Icon" class="w-10 h-10 object-contain rounded-2xl">
-                <div class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center text-2xl">🌌</div>
-                <span class="title-font text-2xl font-bold tracking-tighter">AstroWallet <span class="text-cyan-400">AI</span></span>
+            <div class="flex items-center">
+                <span class="title-font text-3xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AstroBridge</span>
             </div>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -89,17 +88,17 @@
                 <h2 class="title-font text-5xl font-bold mb-4">Current Product Preview</h2>
                 <p class="text-gray-400 text-lg">V1.2 Official Screenshots</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <img src="IMG_9785.PNG" alt="Home Screen" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
-                <img src="IMG_9786.PNG" alt="AI Assistant" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
-                <img src="IMG_9787.PNG" alt="Assets Page" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
-                <img src="IMG_9788.PNG" alt="AI Auto Earn" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
-                <img src="IMG_9789.PNG" alt="Settings" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <img src="IMG_9785.PNG" alt="Home Screen" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+                <img src="IMG_9786.PNG" alt="AI Assistant" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+                <img src="IMG_9787.PNG" alt="Assets Page" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+                <img src="IMG_9788.PNG" alt="AI Auto Earn" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+                <img src="IMG_9789.PNG" alt="Settings" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
             </div>
         </div>
     </section>
 
-    <!-- Whitepaper Section (新增重点内容) -->
+    <!-- Whitepaper Section -->
     <section id="whitepaper" class="py-24 bg-zinc-950">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="title-font text-5xl font-bold text-center mb-12">AstroWallet AI Whitepaper V1.2</h2>
@@ -137,7 +136,7 @@
                         </ul>
                     </div>
                     <div class="bg-black/50 border border-cyan-500/30 rounded-3xl p-8">
-                        <h3 class="text-cyan-400 font-semibold mb-4">Security &amp; Privacy</h3>
+                        <h3 class="text-cyan-400 font-semibold mb-4">Security & Privacy</h3>
                         <ul class="space-y-3 text-sm">
                             <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Biometric Authentication</li>
                             <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> All Data Stored Locally</li>
@@ -153,7 +152,6 @@
     <section id="roadmap" class="py-24 bg-black">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="title-font text-5xl font-bold text-center mb-16">Development Roadmap</h2>
-            <!-- （保持原 Roadmap 内容） -->
             <div class="space-y-12">
                 <div class="flex gap-8">
                     <div class="w-32 text-right flex-shrink-0">
@@ -171,7 +169,6 @@
                         </ul>
                     </div>
                 </div>
-                <!-- 其他版本可继续添加 -->
             </div>
         </div>
     </section>
