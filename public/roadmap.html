@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroWallet AI - 本地主权智能钱包</title>
+    <title>AstroWallet AI - Local Sovereign Smart Wallet</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -52,7 +52,7 @@
     </style>
 </head>
 <body class="min-h-screen">
-    <!-- 导航栏 -->
+    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-cyan-500/20">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -60,15 +60,15 @@
                 <span class="title-font text-2xl font-bold tracking-tighter">AstroWallet <span class="text-cyan-400">AI</span></span>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#home" class="hover:text-cyan-400 transition-colors">首页</a>
-                <a href="#features" class="hover:text-cyan-400 transition-colors">功能</a>
-                <a href="#screenshots" class="hover:text-cyan-400 transition-colors">界面</a>
-                <a href="#whitepaper" class="hover:text-cyan-400 transition-colors">白皮书</a>
-                <a href="#subscribe" class="hover:text-cyan-400 transition-colors">VIP订阅</a>
+                <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
+                <a href="#features" class="hover:text-cyan-400 transition-colors">Features</a>
+                <a href="#screenshots" class="hover:text-cyan-400 transition-colors">Screenshots</a>
+                <a href="#whitepaper" class="hover:text-cyan-400 transition-colors">Whitepaper</a>
+                <a href="#subscribe" class="hover:text-cyan-400 transition-colors">VIP Subscription</a>
             </div>
             <a href="#" 
                class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl font-semibold hover:scale-105 transition-all">
-                下载 App
+                Download App
             </a>
         </div>
     </nav>
@@ -79,137 +79,140 @@
             <div class="space-y-8">
                 <div class="inline-flex items-center gap-2 bg-white/5 border border-cyan-500/30 rounded-full px-5 py-2 text-sm">
                     <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                    V1.2 正式版 已上线
+                    V1.2 Official Version Live
                 </div>
                 
                 <h1 class="title-font text-6xl md:text-7xl font-bold leading-none tracking-tighter">
-                    你的<br>本地 AI<br>资产管家
+                    Your Local<br>AI Asset<br>Steward
                 </h1>
                 
                 <p class="text-xl text-gray-300 max-w-lg">
-                    完全本地运行 · 主权控制 ·<br>
-                    自然语言执行意图 · AstroBridge 专用通道
+                    Fully Local Execution • Sovereign Control •<br>
+                    Natural Language Intent Execution • AstroBridge Dedicated Channel
                 </p>
 
                 <div class="flex flex-wrap gap-4">
                     <a href="#screenshots" 
                        class="px-8 py-4 bg-white text-black font-semibold rounded-3xl flex items-center gap-3 hover:bg-cyan-400 transition-all">
-                        <span>立即体验界面</span>
+                        <span>Explore Interface</span>
                         <span class="text-2xl">→</span>
                     </a>
                     <a href="#whitepaper" 
                        class="px-8 py-4 border border-cyan-500/50 hover:border-cyan-400 font-medium rounded-3xl transition-all">
-                        阅读白皮书
+                        Read Whitepaper
                     </a>
                 </div>
 
                 <div class="flex items-center gap-8 text-sm pt-6">
                     <div>
                         <div class="text-cyan-400 font-mono text-3xl font-bold">0x0edb...e525</div>
-                        <div class="text-gray-500">你的钱包地址</div>
+                        <div class="text-gray-500">Your Wallet Address</div>
                     </div>
                     <div class="h-12 w-px bg-gray-700"></div>
                     <div>
                         <div class="text-emerald-400 font-bold text-3xl">$12,132,456,432,786.75</div>
-                        <div class="text-gray-500">总资产价值</div>
+                        <div class="text-gray-500">Total Asset Value</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Hero 主图 -->
+            <!-- Hero Main Image -->
             <div class="relative">
-                <img src="IMG_9785.PNG" alt="AstroWallet AI 首页" 
+                <img src="IMG_9785.PNG" alt="AstroWallet AI Home" 
                      class="rounded-3xl shadow-2xl border border-cyan-500/30 screenshot">
                 <div class="absolute -bottom-6 -right-6 bg-black/90 border border-cyan-400/30 rounded-2xl p-6 max-w-[220px]">
                     <div class="text-emerald-400 flex items-center gap-2 mb-3">
                         <span class="text-xl">🛡️</span>
                         <span class="font-semibold">Protection: Safe</span>
                     </div>
-                    <div class="text-xs text-gray-400">40% 亏损自动熔断保护已激活</div>
+                    <div class="text-xs text-gray-400">40% Loss Automatic Circuit Breaker Activated</div>
                 </div>
             </div>
         </div>
 
-        <!-- 漂浮粒子 -->
+        <!-- Floating Particles -->
         <div id="particles" class="absolute inset-0 pointer-events-none"></div>
     </section>
 
-    <!-- 5张截图展示 -->
+    <!-- Screenshots -->
     <section id="screenshots" class="py-24 bg-black border-t border-b border-cyan-900/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="title-font text-5xl font-bold mb-4">真实界面预览</h2>
-                <p class="text-gray-400 text-lg">完全本地运行 · 极致简洁 · 安全至上</p>
+                <h2 class="title-font text-5xl font-bold mb-4">Real Interface Preview</h2>
+                <p class="text-gray-400 text-lg">Fully Local • Extremely Clean • Security First</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <img src="IMG_9785.PNG" alt="首页" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+                <img src="IMG_9785.PNG" alt="Home Screen" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
                 <img src="IMG_9786.PNG" alt="AI Assistant" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
-                <img src="IMG_9787.PNG" alt="资产页面" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+                <img src="IMG_9787.PNG" alt="Assets Page" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
                 <img src="IMG_9788.PNG" alt="AI Auto Earn" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
-                <img src="IMG_9789.PNG" alt="设置页面" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
+                <img src="IMG_9789.PNG" alt="Settings" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl">
             </div>
         </div>
     </section>
 
-    <!-- 白皮书摘要 -->
+    <!-- Whitepaper -->
     <section id="whitepaper" class="py-24">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="title-font text-5xl font-bold text-center mb-12">AstroWallet AI 白皮书 V1.2</h2>
+            <h2 class="title-font text-5xl font-bold text-center mb-12">AstroWallet AI Whitepaper V1.2</h2>
             
             <div class="prose prose-invert max-w-none text-gray-300 space-y-8">
                 <p class="text-xl leading-relaxed">
-                    AstroWallet AI 是 <strong class="text-cyan-400">AstroBridge 全球智能意图网络</strong> 的官方本地钱包客户端。
-                    完全运行在用户手机本地，内置轻量 AI 引擎，通过 AstroBridge 专用钱包通道（/api/wallet/intent/submit）实现智能意图执行。
+                    AstroWallet AI is the <strong class="text-cyan-400">official local wallet client</strong> of 
+                    <strong class="text-cyan-400">AstroBridge Global Intelligent Intent Network</strong>.
+                    It runs completely on the user's device with a lightweight AI engine built-in, 
+                    submitting intents via AstroBridge's dedicated wallet channel 
+                    (<code>/api/wallet/intent/submit</code>).
                 </p>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-zinc-950 border border-cyan-500/20 rounded-3xl p-8">
-                        <h3 class="text-cyan-400 font-semibold mb-4">核心理念</h3>
+                        <h3 class="text-cyan-400 font-semibold mb-4">Core Philosophy</h3>
                         <ul class="space-y-3 text-sm">
-                            <li class="flex gap-3"><span class="text-cyan-400">●</span> 本地优先 · 隐私至上</li>
-                            <li class="flex gap-3"><span class="text-cyan-400">●</span> 用户主权 · 意图确权</li>
-                            <li class="flex gap-3"><span class="text-cyan-400">●</span> AI 为用户服务</li>
-                            <li class="flex gap-3"><span class="text-cyan-400">●</span> 控制权始终在用户手中</li>
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> Local First • Privacy Above All</li>
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> User Sovereignty • Intent Confirmation</li>
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> AI Serves the User</li>
+                            <li class="flex gap-3"><span class="text-cyan-400">●</span> Full Control Always Remains with the User</li>
                         </ul>
                     </div>
                     <div class="bg-zinc-950 border border-cyan-500/20 rounded-3xl p-8">
-                        <h3 class="text-cyan-400 font-semibold mb-4">关键功能</h3>
+                        <h3 class="text-cyan-400 font-semibold mb-4">Key Features</h3>
                         <ul class="space-y-3 text-sm">
-                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 自然语言意图执行</li>
-                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 40% 亏损自动熔断保护</li>
-                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 多链资产 + 实时行情</li>
-                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 摄像头扫码 + 相册识别</li>
-                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 生物识别 + 本地加密</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Natural Language On-Chain Intent Execution</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> 40% Loss Automatic Protection</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Multi-Chain Assets + Real-time Prices</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Camera Scanner + Photo Album Support</li>
+                            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Biometric + Local Encryption</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="text-center bg-gradient-to-br from-zinc-900 to-black border border-cyan-500/30 rounded-3xl p-10">
                     <p class="text-2xl font-medium mb-6">
-                        持有 <span class="text-yellow-400 font-bold">70,000 ASTRO</span> 即可解锁
+                        Hold <span class="text-yellow-400 font-bold">70,000 ASTRO</span> to unlock
                     </p>
                     <p class="text-4xl title-font font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">
-                        AI Auto Earn 专业版
+                        AI Auto Earn Professional Edition
                     </p>
-                    <p class="mt-4 text-gray-400">自主策略优化 · 40% 亏损保护 · 优先级 Bridge</p>
+                    <p class="mt-4 text-gray-400">Autonomous Strategy Optimization • 40% Loss Protection • Priority Bridge</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VIP 订阅 -->
+    <!-- VIP Subscription -->
     <section id="subscribe" class="py-24 bg-gradient-to-b from-black to-zinc-950">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div class="inline-block bg-yellow-400/10 border border-yellow-400 rounded-3xl px-8 py-3 mb-8">
-                <span class="text-yellow-400 font-semibold">VIP 专业订阅</span>
+                <span class="text-yellow-400 font-semibold">VIP Professional Subscription</span>
             </div>
-            <h2 class="title-font text-5xl font-bold mb-6">AI Auto Earn 已激活</h2>
-            <p class="text-xl text-gray-400 mb-12">持有 70,000 ASTRO 代币即可享受持续的 VIP 自动赚钱服务</p>
+            <h2 class="title-font text-5xl font-bold mb-6">AI Auto Earn Activated</h2>
+            <p class="text-xl text-gray-400 mb-12">Hold 70,000 ASTRO tokens to enjoy continuous VIP Auto Earning Service</p>
             
             <div class="bg-zinc-900 rounded-3xl p-12 border border-yellow-400/30">
                 <img src="IMG_9788.PNG" alt="AI Auto Earn" class="mx-auto rounded-2xl mb-10 shadow-2xl">
-                <button onclick="alert('VIP 功能已激活！🚀')"
+                <button onclick="alert('VIP Feature Activated! 🚀')"
                         class="w-full py-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-xl font-bold rounded-3xl hover:scale-105 transition-all">
                     VIP Auto Activated
                 </button>
@@ -224,17 +227,17 @@
                 <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center text-3xl">🌌</div>
             </div>
             <p class="text-gray-500">
-                AstroWallet AI —— 你的本地 AI 资产管家<br>
-                与 AstroBridge 全球智能意图网络官方配套
+                AstroWallet AI — Your Local AI Asset Steward<br>
+                Official Companion Wallet of AstroBridge Global Intelligent Intent Network
             </p>
             <p class="text-xs text-gray-600 mt-12">
-                © 2026 AstroWallet AI • 隐私至上 • 主权第一
+                © 2026 AstroWallet AI • Privacy First • Sovereignty First
             </p>
         </div>
     </footer>
 
     <script>
-        // 粒子效果
+        // Particle Effect
         function createParticles() {
             const container = document.getElementById('particles');
             for (let i = 0; i < 60; i++) {
@@ -250,14 +253,6 @@
                 particle.style.animationDelay = `-${Math.random() * 30}s`;
                 
                 container.appendChild(particle);
-            }
-        }
-
-        // Tailwind 脚本
-        tailwind.config = {
-            content: [],
-            theme: {
-                extend: {}
             }
         }
 
