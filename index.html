@@ -864,88 +864,137 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
 });
 
 // 顶部霓虹脉冲桥（用户要求放在Global Intent Network正上方）
+// 升级版顶部霓虹脉冲桥（强立体感 + 超亮流光）
 (function initTopBridge() {
-const container = document.getElementById('bridge-top');
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(60, container.clientWidth / 240, 0.1, 100);
-camera.position.set(0, 4, 14); // 拉远镜头，桥更大
+    const container = document.getElementById('bridge-top');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(58, container.clientWidth / 260, 0.1, 100);
+    camera.position.set(0, 8, 22);
 
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-renderer.setSize(container.clientWidth, 240);
-renderer.setPixelRatio(window.devicePixelRatio);
-container.appendChild(renderer.domElement);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(container.clientWidth, 260);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    container.appendChild(renderer.domElement);
 
-const bridgeGroup = new THREE.Group();
-scene.add(bridgeGroup);
+    const bridgeGroup = new THREE.Group();
+    scene.add(bridgeGroup);
 
-// ===== 桥放大三倍 =====
-const length = 30;
-const width = 6;
-const seg = 60;
-const points = [];
+    const length = 38;
+    const width = 7.5;
+    const height = 3.8;
 
-for (let i = 0; i <= seg; i++) {
-const x = -length / 2 + (length / seg) * i;
-const y = Math.sin((x / length) * Math.PI) * 2.4;
-points.push(new THREE.Vector3(x, y, -width/2), new THREE.Vector3(x, y, width/2));
-}
-for (let side = -1; side <= 1; side += 2) {
-for (let i = 0; i < seg; i++) {
-const x1 = -length/2 + (length/seg)*i;
-const x2 = -length/2 + (length/seg)*(i+1);
-const y1 = Math.sin((x1/length)*Math.PI)*2.4;
-const y2 = Math.sin((x2/length)*Math.PI)*2.4;
-points.push(new THREE.Vector3(x1, y1, side*width/2), new THREE.Vector3(x2, y2, side*width/2));
-}
-}
+    // 主桥体（立体管状）
+    const curve = new THREE.CatmullRomCurve3([
+        new THREE.Vector3(-length/2, 0, -width/2),
+        new THREE.Vector3(-length/2 * 0.6, height, -width/2 * 0.9),
+        new THREE.Vector3(0, height * 1.1, 0),
+        new THREE.Vector3(length/2 * 0.6, height, width/2 * 0.9),
+        new THREE.Vector3(length/2, 0, width/2)
+    ]);
 
-const bridgeGeo = new THREE.BufferGeometry().setFromPoints(points);
-const bridgeMat = new THREE.LineBasicMaterial({
-color: 0x4cc9f0,
-transparent: true,
-opacity: 0.4
-});
-const bridge = new THREE.LineSegments(bridgeGeo, bridgeMat);
-bridgeGroup.add(bridge);
+    const tubeGeo = new THREE.TubeGeometry(curve, 120, 1.8, 12, false);
+    const tubeMat = new THREE.MeshBasicMaterial({
+        color: 0x4cc9f0,
+        transparent: true,
+        opacity: 0.35,
+        side: THREE.DoubleSide
+    });
+    const mainBridge = new THREE.Mesh(tubeGeo, tubeMat);
+    bridgeGroup.add(mainBridge);
 
-// ===== 超亮脉冲 =====
-const pulseGeo = new THREE.BufferGeometry();
-const pulseMat = new THREE.LineBasicMaterial({
-color: 0xf72585,
-transparent: true,
-opacity: 1
-});
-const pulse = new THREE.Line(pulseGeo, pulseMat);
-bridgeGroup.add(pulse);
+    // 亮边线
+    const edgeMat = new THREE.MeshBasicMaterial({
+        color: 0x88eeff,
+        transparent: true,
+        opacity: 0.6
+    });
+    const edgeBridge = mainBridge.clone();
+    edgeBridge.material = edgeMat;
+    edgeBridge.scale.set(1.08, 1.08, 1.08);
+    bridgeGroup.add(edgeBridge);
 
-let pos = -length / 2;
-const speed = 0.4; // 更快脉冲
+    // 脉冲流光
+    const pulseMat = new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 0.95,
+        blending: THREE.AdditiveBlending
+    });
 
-function animate() {
-requestAnimationFrame(animate);
-pos += speed;
-if (pos > length/2) pos = -length/2;
-const y = Math.sin((pos/length)*Math.PI) * 2.4;
-const w = width / 2;
+    let pulseMesh = null;
+    let pulseProgress = 0;
 
-const pts = [
-new THREE.Vector3(pos-0.8, y, -w),
-new THREE.Vector3(pos+0.8, y, -w),
-new THREE.Vector3(pos+0.8, y, w),
-new THREE.Vector3(pos-0.8, y, w)
-];
-pulseGeo.setFromPoints(pts);
+    function createPulse() {
+        const pulseCurve = curve.clone();
+        const pulseTube = new THREE.TubeGeometry(pulseCurve, 140, 0.95, 8, false);
+        if (pulseMesh) bridgeGroup.remove(pulseMesh);
+        pulseMesh = new THREE.Mesh(pulseTube, pulseMat);
+        bridgeGroup.add(pulseMesh);
+    }
+    createPulse();
 
-bridgeGroup.rotation.y += 0.001;
-renderer.render(scene, camera);
-}
-animate();
+    // 残影拖尾
+    let trailMesh = null;
+    const trailMat = new THREE.MeshBasicMaterial({
+        color: 0xf72585,
+        transparent: true,
+        opacity: 0.45,
+        blending: THREE.AdditiveBlending
+    });
 
-window.addEventListener('resize', () => {
-camera.aspect = container.clientWidth / 240;
-camera.updateProjectionMatrix();
-renderer.setSize(container.clientWidth, 240);
-});
+    // 桥墩
+    const pillarGeo = new THREE.BoxGeometry(2.2, 7, 2.2);
+    const pillarMat = new THREE.MeshBasicMaterial({ color: 0x2a4a6b });
+    for (let i = -1; i <= 1; i++) {
+        const pillar = new THREE.Mesh(pillarGeo, pillarMat);
+        pillar.position.set(i * length * 0.38, -2.5, 0);
+        bridgeGroup.add(pillar);
+    }
+
+    let time = 0;
+
+    function animate() {
+        requestAnimationFrame(animate);
+        time += 0.018;
+
+        // 呼吸动画
+        mainBridge.scale.y = 1 + Math.sin(time * 1.8) * 0.015;
+        edgeBridge.scale.y = 1 + Math.sin(time * 1.8) * 0.015;
+
+        // 脉冲移动
+        pulseProgress += 0.028;
+        if (pulseProgress > 1.3) {
+            pulseProgress = -0.3;
+            createPulse();
+        }
+
+        if (pulseMesh) {
+            pulseMesh.position.x = (pulseProgress - 0.5) * length * 0.92;
+            pulseMesh.material.opacity = 0.9 + Math.sin(time * 12) * 0.1;
+        }
+
+        // 残影
+        if (!trailMesh) {
+            trailMesh = pulseMesh.clone();
+            trailMesh.material = trailMat;
+            bridgeGroup.add(trailMesh);
+        }
+        if (trailMesh) {
+            trailMesh.position.x = pulseMesh.position.x - 2.5;
+            trailMesh.material.opacity = 0.35 * (1 - Math.max(0, pulseProgress));
+        }
+
+        bridgeGroup.rotation.y = Math.sin(time * 0.3) * 0.06;
+
+        renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+        camera.aspect = container.clientWidth / 260;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, 260);
+    });
 })();
 </script>
 </body>
