@@ -22,29 +22,29 @@ body{background:#020112;color:#fff;overflow-x:hidden}
   position: fixed;
   top: 0;
   left: 0;
-  width:100vw;
-  height:100vh;
-  z-index:1;
-  pointer-events:none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
 }
 #progressText {
   position: fixed;
-  z-index:2;
-  left:calc(75vw + 60px);
-  top:48vh;
-  font-size:20px;
-  font-weight:700;
-  color:#fff;
-  transform:rotate(-90deg);
-  transform-origin:left center;
-  text-shadow:0 0 6px #4cc9f0,0 0 12px #4cc9f0,0 0 24px #4cc9f0;
-  animation:flowBlue 3s infinite alternate ease-in-out;
-  white-space:nowrap;
-  pointer-events:none;
+  z-index: 2;
+  left: calc(75vw + 60px);
+  top: 48vh;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  transform: rotate(-90deg);
+  transform-origin: left center;
+  text-shadow: 0 0 6px #4cc9f0, 0 0 12px #4cc9f0, 0 0 24px #4cc9f0;
+  animation: flowBlue 3s infinite alternate ease-in-out;
+  white-space: nowrap;
+  pointer-events: none;
 }
 @keyframes flowBlue {
-  0%{text-shadow:0 0 6px #4cc9f0,0 0 12px #4cc9f0,0 0 24px #4cc9f0;}
-  100%{text-shadow:0 0 10px #4cc9f0,0 0 20px #4cc9f0,0 0 40px #4cc9f0;}
+  0% { text-shadow: 0 0 6px #4cc9f0, 0 0 12px #4cc9f0, 0 0 24px #4cc9f0; }
+  100% { text-shadow: 0 0 10px #4cc9f0, 0 0 20px #4cc9f0, 0 0 40px #4cc9f0; }
 }
 .container{max-width:1280px;margin:auto;padding:40px 40px;position:relative;z-index:2}
 nav{
@@ -131,7 +131,7 @@ nav{
   color:#000;
   transform:scale(1.1);
 }
-.hero{text-align:center;margin-bottom:120px;position:relative;z-index:2;}
+.hero{text-align:center;margin-bottom:120px}
 .hero h1{
   font-size:4.2rem;
   font-weight:800;
@@ -198,22 +198,22 @@ nav{
   margin:0 auto;
 }
 .notice {
-  text-align:center;
-  margin:50px 0 70px;
-  padding:28px 56px;
-  background:rgba(247,37,133,0.12);
-  border:1px solid rgba(247,37,133,0.6);
-  border-radius:28px;
-  font-weight:600;
-  font-size:1.18rem;
-  box-shadow:0 0 60px rgba(247,37,133,0.3);
+  text-align: center;
+  margin: 50px 0 70px;
+  padding: 28px 56px;
+  background: rgba(247,37,133,0.12);
+  border: 1px solid rgba(247,37,133,0.6);
+  border-radius: 28px;
+  font-weight: 600;
+  font-size: 1.18rem;
+  box-shadow: 0 0 60px rgba(247,37,133,0.3);
 }
 .eco-tags {
-  text-align:center;
-  margin-bottom:90px;
-  color:#4cc9f0;
-  font-size:1.05rem;
-  line-height:1.9;
+  text-align: center;
+  margin-bottom: 90px;
+  color: #4cc9f0;
+  font-size: 1.05rem;
+  line-height: 1.9;
 }
 .globe-container{
   position:relative;
@@ -240,52 +240,52 @@ nav{
 #globe-container {
   width:100%;
   height:100%;
-  touch-action:pan-y;
+  touch-action: pan-y;
 }
 .chain-portal-section {
-  margin:60px 0 90px;
+  margin: 60px 0 90px;
   overflow:hidden;
 }
 .marquee-container {
-  overflow:hidden;
-  white-space:nowrap;
-  padding:20px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
 }
 .marquee {
-  display:inline-flex;
-  animation:marquee 130s linear infinite;
-  gap:24px;
+  display: inline-flex;
+  animation: marquee 130s linear infinite;
+  gap: 24px;
 }
 .marquee:hover {
-  animation-play-state:paused;
+  animation-play-state: paused;
 }
 .chain-block {
-  background:rgba(14,165,233,0.45);
-  border:1px solid rgba(14,165,233,0.7);
-  border-radius:12px;
-  height:76px;
-  min-width:160px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#ffffff;
-  font-weight:700;
-  font-size:14.5px;
-  cursor:pointer;
-  transition:all 0.3s ease;
+  background: rgba(14, 165, 233, 0.45);
+  border: 1px solid rgba(14, 165, 233, 0.7);
+  border-radius: 12px;
+  height: 76px;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .chain-block:hover {
-  background:linear-gradient(135deg,#0ea5e9,#4cc9f0);
-  box-shadow:0 0 40px rgba(14,165,233,0.9);
-  transform:scale(1.08);
+  background: linear-gradient(135deg, #0ea5e9, #4cc9f0);
+  box-shadow: 0 0 40px rgba(14, 165, 233, 0.9);
+  transform: scale(1.08);
 }
 @keyframes marquee {
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 .card-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));
   gap:32px;
 }
 .card{
@@ -294,7 +294,7 @@ nav{
   border-radius:24px;
   padding:36px 32px;
   transition:all 0.5s ease;
-  backdrop-filter:blur(20px);
+  backdrop-filter: blur(20px);
 }
 .card:hover{
   transform:translateY(-12px);
@@ -312,7 +312,7 @@ nav{
   font-size:1.02rem;
   line-height:1.65;
 }
-.pi-block,.wallet-block,.token-block,.ma-block {
+.pi-block, .wallet-block, .token-block, .ma-block {
   display:flex;
   align-items:center;
   justify-content:center;
@@ -324,29 +324,33 @@ nav{
   border-radius:24px;
   margin-top:20px;
 }
-.pi-icon,.wallet-icon,.token-icon,.ma-icon {
-  width:64px;height:64px;flex-shrink:0;
+.pi-icon, .wallet-icon, .token-icon, .ma-icon {
+  width:64px;
+  height:64px;
+  flex-shrink:0;
 }
 .api-terminal {
-  background:#0b0f1f;
-  border-radius:20px;
-  max-width:760px;
-  margin:32px auto;
-  overflow:hidden;
-  border:1px solid rgba(76,201,240,0.3);
-  box-shadow:0 0 60px rgba(76,201,240,0.15);
+  background: #0b0f1f;
+  border-radius: 20px;
+  max-width: 760px;
+  margin: 32px auto;
+  overflow: hidden;
+  border: 1px solid rgba(76,201,240,0.3);
+  box-shadow: 0 0 60px rgba(76,201,240,0.15);
 }
 .api-header {
-  background:#121a33;
-  padding:16px 24px;
-  display:flex;
-  align-items:center;
-  gap:10px;
+  background: #121a33;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.api-dot {width:13px;height:13px;border-radius:50%;}
+.api-dot {
+  width:13px; height:13px; border-radius:50%;
+}
 .api-body {
-  padding:32px;
-  font-family:ui-monospace,monospace;
+  padding: 32px;
+  font-family: ui-monospace, monospace;
   font-size:15px;
   color:#c4f1ff;
   line-height:1.9;
@@ -358,19 +362,11 @@ footer{
   color:#a8dadc;
   font-size:0.98rem;
 }
-#bridge-top {
-  position:relative;
-  width:100%;
-  height:220px;
-  margin:0 auto;
-  z-index:1;
-}
 @media(max-width:768px){
 .hero h1{font-size:2.8rem}
 .container{padding:20px 20px}
-.card-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card-grid{grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
 .globe-container{height:420px;}
-#bridge-top{height:160px;}
 }
 </style>
 </head>
@@ -381,7 +377,7 @@ footer{
 
 <div class="container">
 <nav>
-<div class="logo"><img src="/favicon.ico" style="height:1.6em;margin-right:10px;vertical-align:middle;">AstroBridge</div>
+<div class="logo"><img src="/favicon.ico" style="height:1.6em; margin-right:10px; vertical-align:middle;">AstroBridge</div>
 <div class="nav-right">
 <div class="hamburger" id="hamburger">
 <span></span><span></span><span></span>
@@ -408,20 +404,26 @@ footer{
 </nav>
 
 <div class="hero">
-  <div id="bridge-top"></div>
-  <h1>Global Intent Network</h1>
-  <p>The world’s first AI-powered autonomous intent layer for Web3 and the Robot Economy.</p>
-  <div class="buttons">
-  <a href="global-console.html" class="btn primary">Global Console</a>
-  <a href="console.html" class="btn secondary">Demo Console</a>
-  <a href="products.html" class="btn primary">Fast Trading Demo</a>
-  </div>
-  <p class="future-line">Building the infrastructure that will pave the road for the next decade of blockchain.</p>
+ 
+<!-- 顶部霓虹脉冲桥（用户要求放在Global Intent Network正上方） -->
+<div id="bridge-top" style="width:100%; height:240px; margin-bottom:30px; display:flex; align-items:center; justify-content:center;"></div>
+
+<!-- 用户要求新增的描述文字 -->
+<p style="text-align:center;font-size:1.38rem;font-weight:700;margin-bottom:28px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.5px;">AstroBridge: Web3 infrastructure powered by AI intent, fully chain-compatible, redefining value connectivity</p>
+
+<h1>Global Intent Network</h1>
+<p>The world’s first AI-powered autonomous intent layer for Web3 and the Robot Economy.</p>
+<div class="buttons">
+<a href="global-console.html" class="btn primary">Global Console</a>
+<a href="console.html" class="btn secondary">Demo Console</a>
+<a href="products.html" class="btn primary">Fast Trading Demo</a>
+</div>
+<p class="future-line">Building the infrastructure that will pave the road for the next decade of blockchain.</p>
 </div>
 
 <div class="notice">
   <strong>Official Notice</strong>｜
-  <a href="https://www.astrochannel.one/memeastro.html" style="display:inline-block;font-size:1.5rem;font-weight:700;color:#fff;text-shadow:0 0 8px #4cc9f0,0 0 16px #4cc9f0;border:2px solid #4cc9f0;border-radius:8px;padding:4px 12px;text-decoration:none;animation:pulse 1.5s infinite;">
+  <a href="https://www.astrochannel.one/memeastro.html" style="display:inline-block; font-size:1.5rem; font-weight:700; color:#fff; text-shadow: 0 0 8px #4cc9f0, 0 0 16px #4cc9f0; border: 2px solid #4cc9f0; border-radius: 8px; padding:4px 12px; text-decoration:none; animation:pulse 1.5s infinite;">
     MEME Astro (MA)
   </a>
   — The ONLY Airdrop Pass for AstroBridge Mainnet
@@ -432,55 +434,99 @@ footer{
   ✅ Astro on BSC｜✅ On-Chain Burn｜✅ 200+ Global Nodes｜✅ Pi Network API Channel (Testnet Live)｜✅ Full Chain Support｜✅ AstroWallet AI Launched
 </div>
 
-<a href="https://www.astrochannel.one/roadmap.html" style="display:block;text-decoration:none;">
-<div style="max-width:520px;margin:0 auto 24px;background:rgba(30,30,40,0.7);backdrop-filter:blur(12px);border-radius:20px;border:1px solid rgba(255,215,0,0.3);box-shadow:0 0 40px rgba(255,215,0,0.5),inset 0 0 20px rgba(255,215,0,0.15);padding:32px 24px;text-align:center;">
-<h3 style="color:#fff;margin:0 0 24px;font-size:2.2rem;font-weight:600;text-shadow:0 0 12px rgba(255,215,0,0.6);">AstroWallet AI</h3>
-<svg width="140" height="120" viewBox="0 0 140 120" style="margin:0 auto 24px;filter:drop-shadow(0 0 10px rgba(255,215,0,0.8));">
-<path d="M40 30h60a10 10 0 0 1 10 10v50a10 10 0 0 1-10 10H40a10 10 0 0 1-10-10V40a10 10 0 0 1 10-10z" stroke="#ffd700" stroke-width="4" fill="none"/>
-<path d="M50 20h40a8 8 0 0 1 8 8v12H42v-12a8 8 0 0 1 8-8z" stroke="#ffd700" stroke-width="3" fill="none"/>
-<path d="M90 55a10 10 0 0 1 10 10v10a10 10 0 0 1-10 10H80v-30h10z" stroke="#ffd700" stroke-width="3" fill="none"/>
-<circle cx="95" cy="65" r="3" fill="#ffd700"/>
-</svg>
-<p style="font-size:0.95rem;color:rgba(255,255,255,0.6);margin:0;">Auto Earn · Full Chain · Dedicated Channel</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Ecosystem</title>
+    <style>
+        body {
+            background-color: #121218;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 🪙 AstroWallet AI 卡片 -->
+<a href="https://www.astrochannel.one/roadmap.html" style="display:block; text-decoration:none;">
+    <div style="max-width: 520px; margin: 0 auto 24px;
+                background: rgba(30,30,40,0.7); backdrop-filter: blur(12px);
+                border-radius: 20px; border: 1px solid rgba(255,215,0,0.3);
+                box-shadow: 0 0 40px rgba(255,215,0,0.5), inset 0 0 20px rgba(255,215,0,0.15);
+                padding: 32px 24px; text-align: center;">
+        <h3 style="color: #fff; margin: 0 0 24px; font-size: 2.2rem; font-weight: 600; text-shadow: 0 0 12px rgba(255,215,0,0.6);">AstroWallet AI</h3>
+        
+        <!-- 金色霓虹钱包图标 -->
+        <svg width="140" height="120" viewBox="0 0 140 120" style="margin: 0 auto 24px; filter: drop-shadow(0 0 10px rgba(255,215,0,0.8));">
+            <!-- 钱包主体 -->
+            <path d="M40 30h60a10 10 0 0 1 10 10v50a10 10 0 0 1-10 10H40a10 10 0 0 1-10-10V40a10 10 0 0 1 10-10z" 
+                  stroke="#ffd700" stroke-width="4" fill="none"/>
+            <!-- 顶部卡槽 -->
+            <path d="M50 20h40a8 8 0 0 1 8 8v12H42v-12a8 8 0 0 1 8-8z" 
+                  stroke="#ffd700" stroke-width="3" fill="none"/>
+            <!-- 右侧按扣 -->
+            <path d="M90 55a10 10 0 0 1 10 10v10a10 10 0 0 1-10 10H80v-30h10z" 
+                  stroke="#ffd700" stroke-width="3" fill="none"/>
+            <circle cx="95" cy="65" r="3" fill="#ffd700"/>
+        </svg>
+
+        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.6); margin: 0;">
+            Auto Earn · Full Chain · Dedicated Channel
+        </p>
+    </div>
 </a>
 
-<div style="max-width:520px;margin:0 auto 24px;background:rgba(30,30,40,0.7);backdrop-filter:blur(12px);border-radius:20px;border:1px solid rgba(80,180,255,0.3);box-shadow:0 0 40px rgba(80,180,255,0.5),inset 0 0 20px rgba(80,180,255,0.15);padding:32px 24px;text-align:center;">
-<h3 style="color:#fff;margin:0 0 24px;font-size:2.2rem;font-weight:600;text-shadow:0 0 12px rgba(80,180,255,0.6);">Astro Chat</h3>
-<svg width="140" height="120" viewBox="0 0 140 120" style="margin:0 auto 24px;filter:drop-shadow(0 0 10px rgba(80,180,255,0.8));">
-<path d="M40 40h60a12 12 0 0 1 12 12v36a12 12 0 0 1-12 12H70l-15 15v-15H40a12 12 0 0 1-12-12V52a12 12 0 0 1 12-12z" stroke="#50b4ff" stroke-width="4" fill="none"/>
-<circle cx="60" cy="65" r="4" fill="#50b4ff"/>
-<circle cx="80" cy="65" r="4" fill="#50b4ff"/>
-<circle cx="100" cy="65" r="4" fill="#50b4ff"/>
-</svg>
-<p style="font-size:1rem;color:rgba(180,220,255,0.7);margin:0;">Decentralized · P2P · Encrypted · Voice & Video Calls</p>
-</div>
+    <!-- 💬 Astro Chat 卡片 -->
+    <div style="max-width: 520px; margin: 0 auto 24px;
+                background: rgba(30,30,40,0.7); backdrop-filter: blur(12px);
+                border-radius: 20px; border: 1px solid rgba(80,180,255,0.3);
+                box-shadow: 0 0 40px rgba(80,180,255,0.5), inset 0 0 20px rgba(80,180,255,0.15);
+                padding: 32px 24px; text-align: center;">
+        <h3 style="color: #fff; margin: 0 0 24px; font-size: 2.2rem; font-weight: 600; text-shadow: 0 0 12px rgba(80,180,255,0.6);">Astro Chat</h3>
+        
+        <!-- 蓝色霓虹聊天气泡图标 -->
+        <svg width="140" height="120" viewBox="0 0 140 120" style="margin: 0 auto 24px; filter: drop-shadow(0 0 10px rgba(80,180,255,0.8));">
+            <path d="M40 40h60a12 12 0 0 1 12 12v36a12 12 0 0 1-12 12H70l-15 15v-15H40a12 12 0 0 1-12-12V52a12 12 0 0 1 12-12z" 
+                  stroke="#50b4ff" stroke-width="4" fill="none"/>
+            <circle cx="60" cy="65" r="4" fill="#50b4ff"/>
+            <circle cx="80" cy="65" r="4" fill="#50b4ff"/>
+            <circle cx="100" cy="65" r="4" fill="#50b4ff"/>
+        </svg>
 
+        <p style="font-size: 1rem; color: rgba(180,220,255,0.7); margin: 0;">Decentralized · P2P · Encrypted · Voice & Video Calls</p>
+    </div>
+<!-- ✅ API 窗口放在地球上方，显眼位置 -->
 <div class="section">
-<h2>Public API (Open for All)</h2>
-<div class="api-terminal" style="max-width:520px;margin:0 auto;border:1px solid #4cc9f0;box-shadow:0 0 30px #4cc9f0;background:rgba(11,15,31,0.8);backdrop-filter:blur(12px);">
-<div class="api-header">
-<div class="api-dot" style="background:#ff5f57;"></div>
-<div class="api-dot" style="background:#ffbd2e;"></div>
-<div class="api-dot" style="background:#28ca42;"></div>
+  <h2>Public API (Open for All)</h2>
+  <div class="api-terminal" style="max-width:520px; margin:0 auto; border:1px solid #4cc9f0; box-shadow:0 0 30px #4cc9f0; background:rgba(11,15,31,0.8); backdrop-filter:blur(12px);">
+    <div class="api-header">
+      <div class="api-dot" style="background:#ff5f57;"></div>
+      <div class="api-dot" style="background:#ffbd2e;"></div>
+      <div class="api-dot" style="background:#28ca42;"></div>
+    </div>
+    <div class="api-body" style="text-align:center; padding:24px;">
+      POST https://api.astrochannel.one/api/intent/submit
+      <span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:14px; font-weight:600;">copy</span>
+    </div>
+  </div>
+  <p style="text-align:center; font-size:1rem; color:#a8dadc; margin-top:12px;">No key. No login. Anyone can call directly.</p>
 </div>
-<div class="api-body" style="text-align:center;padding:24px;">
-POST https://api.astrochannel.one/api/intent/submit
-<span class="api-copy" style="color:#4cc9f0;cursor:pointer;margin-left:14px;font-weight:600;">copy</span>
-</div>
-</div>
-<p style="text-align:center;font-size:1rem;color:#a8dadc;margin-top:12px;">No key. No login. Anyone can call directly.</p>
-</div>
-
+  
+</body>
+</html>
+<!-- ✅ 地球 -->
 <div class="globe-container">
-<div class="globe-title">Global Node Network</div>
-<div id="globe-container"></div>
+  <div class="globe-title">Global Node Network</div>
+  <div id="globe-container"></div>
 </div>
 
 <div class="chain-portal-section">
-<div class="marquee-container">
-<div class="marquee" id="marquee"></div>
-</div>
+  <div class="marquee-container">
+    <div class="marquee" id="marquee"></div>
+  </div>
 </div>
 
 <div class="section">
@@ -489,86 +535,86 @@ POST https://api.astrochannel.one/api/intent/submit
 </div>
 
 <div class="section">
-<h2>Core Architecture</h2>
-<div class="card-grid">
-<div class="card">
-<div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"/></svg></div>
-<h3>Intent Sovereignty Core</h3><p>Unique ID, signature binding, non-forgeable, non-replicable intent ownership.</p>
-</div>
-<div class="card">
-<div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/><path d="M12 6v6l4 4 1.5-1.5-3.5-3.5V6z"/></svg></div>
-<h3>AI Autonomous Layer</h3><p>Risk assessment, governance, federated learning, self-evolution within boundaries.</p>
-</div>
-<div class="card">
-<div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M22.7 14.2l-4.2 4.2c-.4.4-1 .4-1.4 0l-2.1-2.1c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4 3.5-3.5c.4-.4 1-.4 1.4 0s.4 1 0 1.4zM12 18c-.6 0-1-.4-1-1s.4-1 1-1c1.7 0 3-1.3 3-3 0-.6.4-1 1-1s1 .4 1 1c0 2.8-2.2 5-5 5zM12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8c.6 0 1-.4 1-1s-.4-1-1-1c-3.3 0-6-2.7-6-6s2.7-6 6-6c3.3 0 6 2.7 6 6 0 .6.4 1 1 1s1-.4 1-1c0-4.4-3.6-8-8-8z"/></svg></div>
-<h3>Robot Execution Cluster</h3><p>Distributed robot agents with credit system and autonomous task execution.</p>
-</div>
-<div class="card">
-<div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M17.5 12c0-1.9-1.2-3.6-3-4.3V5.1c1.4.7 2.5 2 2.5 3.6 0 1.6-1.1 2.9-2.5 3.6v2.6c1.8-.7 3-2.4 3-4.3zM12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8c.6 0 1-.4 1-1s-.4-1-1-1c-3.3 0-6-2.7-6-6s2.7-6 6-6c3.3 0 6 2.7 6 6 0 .6.4 1 1 1s1-.4 1-1c0-4.4-3.6-8-8-8z"/></svg></div>
-<h3>Full-Chain Compatibility</h3><p>Native support for EVM, Non-EVM, L2s, and modular chains.</p>
-</div>
-<div class="card">
-<div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 2C8.1 2 5 5.1 5 9c0 3.5 2.7 6.5 6.3 6.9l-.2.9v1.1h3v-1.1l-.2-.9c3.6-.4 6.3-3.4 6.3-6.9 0-3.9-3.1-7-7-7zm0 9c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg></div>
-<h3>Global Node Distribution</h3>
-<p>200+ Global Nodes, Faster and More Stable Transactions.</p>
-</div>
-<div class="card">
-<div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 2L4.5 5.5v5c0 4.4 2.7 8.3 6.8 9.7.4.1.8.1 1.2 0 4.1-1.4 6.8-5.3 6.8-9.7v-5L12 2zm0 18c-2.7 0-5.2-1.7-6.2-4.2-.3-.8.1-1.7.9-2.1.8-.3 1.7.1 2.1.9.6 1.5 2.1 2.5 3.8 2.5s3.2-1 3.8-2.5c.4-.8 1.3-1.2 2.1-.9.8.4 1.2 1.3.9 2.1C17.2 18.3 14.7 20 12 20zm4.2-11.2L12 7l-4.2 1.8 1.8 4.2 4.2-1.8-1.8-4.2z"/></svg></div>
-<h3>Decentralized Solver Network</h3><p>Competitive solvers with reputation scoring and best-path selection.</p>
-</div>
-</div>
-</div>
-
-<div class="section">
-<h2>Pi Network Dedicated Intent Channel</h2>
-<div class="pi-block">
-<div class="pi-icon">
-<svg viewBox="0 0 24 24" fill="#4cc9f0" width="64" height="64"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1.5-5.5V7h1v5.5h3V14h-4v-2.5zM6.5 12c0-1.6 1.1-2.9 2.5-3.6V5.1c-1.8.7-3 2.4-3 4.3s1.2 3.6 3 4.3v-2.6c-1.4-.7-2.5-2-2.5-3.6z"/></svg>
-</div>
-<div style="text-align:center;max-width:420px;">
-<p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">Testnet Live</p>
-<p style="font-size:1.05rem;color:#a8dadc;">https://api.astrochannel.one/pi-network/intent-channel</p>
-</div>
-</div>
+  <h2>Core Architecture</h2>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"/></svg></div>
+      <h3>Intent Sovereignty Core</h3><p>Unique ID, signature binding, non-forgeable, non-replicable intent ownership.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/><path d="M12 6v6l4 4 1.5-1.5-3.5-3.5V6z"/></svg></div>
+      <h3>AI Autonomous Layer</h3><p>Risk assessment, governance, federated learning, self-evolution within boundaries.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M22.7 14.2l-4.2 4.2c-.4.4-1 .4-1.4 0l-2.1-2.1c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4 3.5-3.5c.4-.4 1-.4 1.4 0s.4 1 0 1.4zM12 18c-.6 0-1-.4-1-1s.4-1 1-1c1.7 0 3-1.3 3-3 0-.6.4-1 1-1s1 .4 1 1c0 2.8-2.2 5-5 5zM12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8c.6 0 1-.4 1-1s-.4-1-1-1c-3.3 0-6-2.7-6-6s2.7-6 6-6c3.3 0 6 2.7 6 6 0 .6.4 1 1 1s1-.4 1-1c0-4.4-3.6-8-8-8z"/></svg></div>
+      <h3>Robot Execution Cluster</h3><p>Distributed robot agents with credit system and autonomous task execution.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M17.5 12c0-1.9-1.2-3.6-3-4.3V5.1c1.4.7 2.5 2 2.5 3.6 0 1.6-1.1 2.9-2.5 3.6v2.6c1.8-.7 3-2.4 3-4.3zM12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm-1.5-5.5V7h1v5.5h3V14h-4v-2.5zM6.5 12c0-1.6 1.1-2.9 2.5-3.6V5.1c-1.8.7-3 2.4-3 4.3s1.2 3.6 3 4.3v-2.6c-1.4-.7-2.5-2-2.5-3.6z"/></svg></div>
+      <h3>Full-Chain Compatibility</h3><p>Native support for EVM, Non-EVM, L2s, and modular chains.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 2C8.1 2 5 5.1 5 9c0 3.5 2.7 6.5 6.3 6.9l-.2.9v1.1h3v-1.1l-.2-.9c3.6-.4 6.3-3.4 6.3-6.9 0-3.9-3.1-7-7-7zm0 9c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg></div>
+      <h3>Global Node Distribution</h3>
+      <p>200+ Global Nodes, Faster and More Stable Transactions.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><svg viewBox="0 0 24 24" fill="#4cc9f0" width="48" height="48"><path d="M12 2L4.5 5.5v5c0 4.4 2.7 8.3 6.8 9.7.4.1.8.1 1.2 0 4.1-1.4 6.8-5.3 6.8-9.7v-5L12 2zm0 18c-2.7 0-5.2-1.7-6.2-4.2-.3-.8.1-1.7.9-2.1.8-.3 1.7.1 2.1.9.6 1.5 2.1 2.5 3.8 2.5s3.2-1 3.8-2.5c.4-.8 1.3-1.2 2.1-.9.8.4 1.2 1.3.9 2.1C17.2 18.3 14.7 20 12 20zm4.2-11.2L12 7l-4.2 1.8 1.8 4.2 4.2-1.8-1.8-4.2z"/></svg></div>
+      <h3>Decentralized Solver Network</h3><p>Competitive solvers with reputation scoring and best-path selection.</p>
+    </div>
+  </div>
 </div>
 
 <div class="section">
-<h2>AstroWallet AI</h2>
-<div class="wallet-block">
-<div class="wallet-icon">
-<svg viewBox="0 0 24 24" fill="#4cc9f0" width="64" height="64"><path d="M21 7.3c0-1.5-1.2-2.7-2.7-2.7H5.7C4.2 4.6 3 5.8 3 7.3v9.5c0 1.5 1.2 2.7 2.7 2.7h12.5c1.5 0 2.7-1.2 2.7-2.7V7.3zm-2.7-.9c.5 0 .9.4.9.9v1.2h-14V7.3c0-.5.4-.9.9-.9h12.2zm-12.5 11.3c-.5 0-.9-.4-.9-.9V9.9h14v6.9c0 .5-.4.9-.9.9H5.7zm9-5.5c0 .8-.7 1.5-1.5 1.5h-4c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h4c.8 0 1.5.7 1.5 1.5z"/></svg>
-</div>
-<div style="text-align:center;max-width:420px;">
-<p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">Privacy-first Local AI Wallet</p>
-<p style="font-size:1.05rem;color:#a8dadc;">40% Loss Auto-Protection · Local AI Intent Parsing · High-Priority API</p>
-</div>
-</div>
-</div>
-
-<div class="section">
-<h2>ASTRO Token Economics</h2>
-<div class="token-block">
-<div class="token-icon">
-<svg viewBox="0 0 24 24" fill="#4cc9f0" width="64" height="64"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13h-1v5h5v-1h-4V7z"/></svg>
-</div>
-<div style="text-align:center;max-width:420px;">
-<p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">BSC BEP20 • Total Supply 10,000,000,000</p>
-<p style="font-size:1.05rem;color:#a8dadc;">No Pre-mine · 100% On-Chain Burn · Max 5% Annual Burn</p>
-</div>
-</div>
+  <h2>Pi Network Dedicated Intent Channel</h2>
+  <div class="pi-block">
+    <div class="pi-icon">
+      <svg viewBox="0 0 24 24" fill="#4cc9f0" width="64" height="64"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/><path d="M17 12h-5V7h-2v5H7v2h5v5h2v-5h5z"/></svg>
+    </div>
+    <div style="text-align:center;max-width:420px;">
+      <p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">Testnet Live</p>
+      <p style="font-size:1.05rem;color:#a8dadc;">https://api.astrochannel.one/pi-network/intent-channel</p>
+    </div>
+  </div>
 </div>
 
 <div class="section">
-<h2>MEME Astro (MA) — Official Airdrop Pass</h2>
-<div class="ma-block">
-<div class="ma-icon">
-<svg viewBox="0 0 24 24" fill="#f72585" width="64" height="64"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-11h2v2h-2v-2zm0 4h2v6h-2v-6z"/></svg>
+  <h2>AstroWallet AI</h2>
+  <div class="wallet-block">
+    <div class="wallet-icon">
+      <svg viewBox="0 0 24 24" fill="#4cc9f0" width="64" height="64"><path d="M21 7.3c0-1.5-1.2-2.7-2.7-2.7H5.7C4.2 4.6 3 5.8 3 7.3v9.5c0 1.5 1.2 2.7 2.7 2.7h12.5c1.5 0 2.7-1.2 2.7-2.7V7.3zm-2.7-.9c.5 0 .9.4.9.9v1.2h-14V7.3c0-.5.4-.9.9-.9h12.2zm-12.5 11.3c-.5 0-.9-.4-.9-.9V9.9h14v6.9c0 .5-.4.9-.9.9H5.7zm9-5.5c0 .8-.7 1.5-1.5 1.5h-4c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h4c.8 0 1.5.7 1.5 1.5z"/></svg>
+    </div>
+    <div style="text-align:center;max-width:420px;">
+      <p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">Privacy-first Local AI Wallet</p>
+      <p style="font-size:1.05rem;color:#a8dadc;">40% Loss Auto-Protection · Local AI Intent Parsing · High-Priority API</p>
+    </div>
+  </div>
 </div>
-<div style="text-align:center;max-width:420px;">
-<p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">Hold for 6 Consecutive Months</p>
-<p style="font-size:1.05rem;color:#a8dadc;">Qualify for AstroBridge Mainnet Token Airdrop. MA is the ONLY passport.</p>
+
+<div class="section">
+  <h2>ASTRO Token Economics</h2>
+  <div class="token-block">
+    <div class="token-icon">
+      <svg viewBox="0 0 24 24" fill="#4cc9f0" width="64" height="64"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13h-1v5h5v-1h-4V7z"/></svg>
+    </div>
+    <div style="text-align:center;max-width:420px;">
+      <p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">BSC BEP20 • Total Supply 10,000,000,000</p>
+      <p style="font-size:1.05rem;color:#a8dadc;">No Pre-mine · 100% On-Chain Burn · Max 5% Annual Burn</p>
+    </div>
+  </div>
 </div>
-</div>
+
+<div class="section">
+  <h2>MEME Astro (MA) — Official Airdrop Pass</h2>
+  <div class="ma-block">
+    <div class="ma-icon">
+      <svg viewBox="0 0 24 24" fill="#f72585" width="64" height="64"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-11h2v2h-2v-2zm0 4h2v6h-2v-6z"/></svg>
+    </div>
+    <div style="text-align:center;max-width:420px;">
+      <p style="font-size:1.35rem;font-weight:600;margin-bottom:8px;">Hold for 6 Consecutive Months</p>
+      <p style="font-size:1.05rem;color:#a8dadc;">Qualify for AstroBridge Mainnet Token Airdrop. MA is the ONLY passport.</p>
+    </div>
+  </div>
 </div>
 
 <footer>
@@ -576,98 +622,25 @@ POST https://api.astrochannel.one/api/intent/submit
 </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
 
 <script>
-// 顶部霓虹脉冲桥
-(function initTopBridge() {
-  const container = document.getElementById('bridge-top');
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(60, container.clientWidth / 220, 0.1, 100);
-  camera.position.set(0, 2.5, 8);
-
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setSize(container.clientWidth, 220);
-  renderer.setPixelRatio(window.devicePixelRatio);
-  container.appendChild(renderer.domElement);
-
-  const bridgeGroup = new THREE.Group();
-  scene.add(bridgeGroup);
-
-  const length = 10;
-  const width = 2;
-  const seg = 40;
-  const points = [];
-
-  for (let i = 0; i <= seg; i++) {
-    const x = -length / 2 + (length / seg) * i;
-    const y = Math.sin((x / length) * Math.PI) * 0.8;
-    points.push(new THREE.Vector3(x, y, -width/2), new THREE.Vector3(x, y, width/2));
-  }
-  for (let side = -1; side <= 1; side += 2) {
-    for (let i = 0; i < seg; i++) {
-      const x1 = -length/2 + (length/seg)*i;
-      const x2 = -length/2 + (length/seg)*(i+1);
-      const y1 = Math.sin((x1/length)*Math.PI)*0.8;
-      const y2 = Math.sin((x2/length)*Math.PI)*0.8;
-      points.push(new THREE.Vector3(x1, y1, side*width/2), new THREE.Vector3(x2, y2, side*width/2));
-    }
-  }
-
-  const bridgeGeo = new THREE.BufferGeometry().setFromPoints(points);
-  const bridgeMat = new THREE.LineBasicMaterial({ color: 0x0066ff, transparent: true, opacity: 0.25 });
-  const bridge = new THREE.LineSegments(bridgeGeo, bridgeMat);
-  bridgeGroup.add(bridge);
-
-  const pulseGeo = new THREE.BufferGeometry();
-  const pulseMat = new THREE.LineBasicMaterial({ color: 0x00aaff });
-  const pulse = new THREE.Line(pulseGeo, pulseMat);
-  bridgeGroup.add(pulse);
-
-  let pos = -length / 2;
-  const speed = 0.25;
-
-  function animate() {
-    requestAnimationFrame(animate);
-    pos += speed;
-    if (pos > length/2) pos = -length/2;
-    const y = Math.sin((pos/length)*Math.PI)*0.8;
-    const w = width/2;
-    const pts = [
-      new THREE.Vector3(pos-0.22, y, -w),
-      new THREE.Vector3(pos+0.22, y, -w),
-      new THREE.Vector3(pos+0.22, y, w),
-      new THREE.Vector3(pos-0.22, y, w)
-    ];
-    pulseGeo.setFromPoints(pts);
-    bridgeGroup.rotation.y += 0.001;
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  window.addEventListener('resize', () => {
-    camera.aspect = container.clientWidth / 220;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, 220);
-  });
-})();
-
-// 菜单
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('navMenu');
-hamburger.addEventListener('click', () => { navMenu.classList.toggle('hidden'); });
-document.addEventListener('click', e => {
+// Hamburger Menu
+const hamburger=document.getElementById('hamburger');
+const navMenu=document.getElementById('navMenu');
+hamburger.addEventListener('click',()=>{navMenu.classList.toggle('hidden');});
+document.addEventListener('click', function(e) {
   if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) navMenu.classList.add('hidden');
 });
 
-// 右侧进度塔
+// Bridge Progress
 (function buildBridgeProgress() {
-  const canvas = document.getElementById('bridgeBuildingCanvas');
-  const ctx = canvas.getContext('2d');
-  let w = canvas.width = window.innerWidth;
-  let h = canvas.height = window.innerHeight;
-  window.addEventListener('resize', () => { w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight; });
+  const canvas=document.getElementById('bridgeBuildingCanvas');
+  const ctx=canvas.getContext('2d');
+  let w=canvas.width=window.innerWidth;
+  let h=canvas.height=window.innerHeight;
+  window.addEventListener('resize', () => {w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;});
   const totalDays=300; const currentVersion=3.0; const targetVersion=7.0;
   const startProgress=currentVersion/targetVersion;
   const perDayAdd=(targetVersion-currentVersion)/totalDays;
@@ -675,9 +648,9 @@ document.addEventListener('click', e => {
     const now=Date.now();
     const start=now-3*24*60*60*1000;
     const daysPassed=(now-start)/(1000*60*60*24);
-    let p=startProgress+daysPassed*perDayAdd; if(p>1)p=1; return p;
+    let p=startProgress+daysPassed*perDayAdd; if (p > 1) p=1; return p;
   }
-  const windowCols=6; const windowRows=14; let lightFillProgress=0;
+  const windowCols=6; const windowRows=14; let lightFillProgress = 0;
   function drawBridge() {
     ctx.clearRect(0,0,w,h);
     const progress=getCurrentProgress();
@@ -687,17 +660,20 @@ document.addEventListener('click', e => {
     ctx.strokeRect(left,top,width,height); ctx.globalAlpha=1;
     const colGap=width/windowCols; const rowGap=height/windowRows;
     const fillBottom=bottom-height*progress;
-    const targetLightPos=bottom-fillBottom;
-    const speed=1.5;
-    if(lightFillProgress<targetLightPos)lightFillProgress+=speed;
-    else if(lightFillProgress>targetLightPos+10)lightFillProgress=targetLightPos;
+    const targetLightPos = bottom - fillBottom;
+    const speed = 1.5;
+    if (lightFillProgress < targetLightPos) lightFillProgress += speed;
+    else if (lightFillProgress > targetLightPos + 10) lightFillProgress = targetLightPos;
     ctx.strokeStyle='rgba(76,201,240,0.12)'; ctx.lineWidth=0.6;
     for(let r=0;r<windowRows;r++){
       for(let c=0;c<windowCols;c++){
         const x=left+c*colGap; const y=top+r*rowGap;
         const ww=colGap; const hh=rowGap;
         ctx.strokeRect(x,y,ww,hh);
-        if(y+hh>=bottom-lightFillProgress){ctx.fillStyle='#4cc9f0';ctx.fillRect(x+0.5,y+0.5,ww-1,hh-1);}
+        if(y + hh >= bottom - lightFillProgress){
+          ctx.fillStyle = '#4cc9f0';
+          ctx.fillRect(x+0.5,y+0.5,ww-1,hh-1);
+        }
       }
     }
     ctx.globalAlpha=0.7; ctx.fillStyle='#ffffff';
@@ -707,7 +683,7 @@ document.addEventListener('click', e => {
   loop();
 })();
 
-// 粒子球体背景
+// Sphere Particles Background
 const canvas=document.getElementById('sphereCanvas');
 const ctx=canvas.getContext('2d');
 let w=canvas.width=window.innerWidth;
@@ -715,15 +691,23 @@ let h=canvas.height=window.innerHeight;
 window.addEventListener('resize',()=>{w=canvas.width=window.innerWidth;h=canvas.height=window.innerHeight;});
 const particleCount=800; const radius=240; const speed=0.002;
 class Particle{
-constructor(){this.angle1=Math.random()*Math.PI*2;this.angle2=Math.random()*Math.PI*2;this.depth=Math.random()*0.8+0.2;this.size=Math.random()*3+1.5;this.color=Math.random()>0.5?'#4cc9f0':'#f72585';}
+constructor(){
+this.angle1=Math.random()*Math.PI*2;
+this.angle2=Math.random()*Math.PI*2;
+this.depth=Math.random()*0.8+0.2;
+this.size=Math.random()*3+1.5;
+this.color=Math.random()>0.5?'#4cc9f0':'#f72585';
+}
 update(){this.angle1+=speed;this.angle2+=speed*0.7;}
 draw(){
 const x=w/2+radius*this.depth*Math.sin(this.angle1)*Math.cos(this.angle2);
 const y=h/2+radius*this.depth*Math.sin(this.angle1)*Math.sin(this.angle2);
 const z=radius*this.depth*Math.cos(this.angle1);
 const scale=(z+radius)/(radius*2);
-ctx.beginPath();ctx.arc(x,y,this.size*scale,0,Math.PI*2);
-ctx.fillStyle=this.color+'80';ctx.fill();
+ctx.beginPath();
+ctx.arc(x,y,this.size*scale,0,Math.PI*2);
+ctx.fillStyle=this.color+'80';
+ctx.fill();
 }}
 const particles=Array.from({length:particleCount},()=>new Particle());
 function loop(){
@@ -734,7 +718,7 @@ particles.forEach(p=>{p.update();p.draw();});
 }
 loop();
 
-// 公链走马灯
+// Marquee Chains
 const chains = ["Ethereum","BNB Chain","Bitcoin","Solana","Avalanche","Polygon","Arbitrum","Optimism","Base","Aptos","Sui","Cosmos","Osmosis","TRON","Tezos","Cardano","XRP Ledger","Stellar","Ton","Dogecoin","Litecoin","Fantom","Harmony","Celo","Flow","Immutable X","ZKsync","StarkNet","Scroll","Linea","Manta","Kava","KCC","OKXChain","HECO","Bittorrent","Chiliz","The Sandbox","Decentraland","Axie Infinity","Magic Eden","OpenSea","Blur","LooksRare","X2Y2","Uniswap","PancakeSwap","SushiSwap","Curve","Aave","Compound","MakerDAO","Arweave","Filecoin","Chainlink","The Graph","Band Protocol","Qtum","NEO","Ontology","Waves","Zilliqa","Elrond","Algorand","Hedera","IOTA","Nano","Monero","Zcash","Dash","Ravencoin","Kusama","Polkadot","Acala","Karura","Astar","Shiden","Moonbeam","Moonriver","Shibarium","Core","EOS","WAX","Velas","Syscoin","Horizen","Decred","Komodo","Terra Classic","Terra","Ronin","Gnosis","Theta","KuCoin","Huobi","BitTorrent Chain","Shiba Inu","Dai","USDC","USDT","BUSD","FRAX","LUSD","sUSD","MAKER","UNI","SUSHI","CRV","YFI","SNX","REN","ENJ","MANA","SAND","CHZ","BAT","OMG","ZRX","REP","ANT","GRT","1INCH","MOVR","GLMR","KSM","DOT","ATOM","OSMO","JUNO","EVMOS","STRIDE","QUICKSILVER","SCRT","IRIS","REGEN","SOMM","STARGAZE","UMEE","AXELAR","NEUTRON","DYDX","METIS","BOBA","REAL","ICP","STEEM","HIVE","LISK","ARDROR","PIVX","VERGE","BCH","BSV","Ethereum Classic","Cronos","Kadena","Shardeum","Cartesi","Eclipse","Neon EVM","Oasis Emerald","Conflux eSpace","IoTeX Network","Chiliz Chain","BitTorrent Chain","Evmos","Zilliqa 2","Lightlink Phoenix","Astar zkEVM","U2U Solaris","Xpla","Planq","Syscoin","Hoo Smart Chain","IDChain","Mix","LACHAIN","JIBCHAIN","Form Network","DXchain","SoterOne","Omax","Step Network","ZKFair","Energy Web Chain","Elastos Smart Chain","ThunderCore","Odyssey Chain","Carbon EVM","Acria IntelliChain","Ennothem","XDC","Openpiece","DCHAIN","Doma","inEVM","Xone","MTT Network","TBWG Chain"];
 const marquee = document.getElementById('marquee');
 const allChains = [...chains, ...chains];
@@ -745,7 +729,7 @@ allChains.forEach(chain => {
   marquee.appendChild(div);
 });
 
-// 3D地球
+// 3D Globe
 function initInteractiveParticleGlobe() {
   const container = document.getElementById('globe-container');
   const scene = new THREE.Scene();
@@ -763,53 +747,86 @@ function initInteractiveParticleGlobe() {
   controls.maxDistance = 24;
 
   const globeGeo = new THREE.SphereGeometry(5, 48, 48);
-  const globeMat = new THREE.MeshBasicMaterial({ color: 0x4cc9f0, wireframe: true, transparent: true, opacity: 0.22  });
+  const globeMat = new THREE.MeshBasicMaterial({ color: 0x4cc9f0, wireframe: true, transparent: true, opacity: 0.22 });
   const globe = new THREE.Mesh(globeGeo, globeMat);
   scene.add(globe);
 
-  const pointGeo = new THREE.SphereGeometry(5.05, 48, 48);
-  const positions = pointGeo.attributes.position;
-  const points = [];
-  for (let i = 0; i < positions.count; i++) {
-    const v = new THREE.Vector3().fromBufferAttribute(positions, i);
-    if (Math.random() > 0.25) continue;
-    points.push(v);
+  const particleCount = 2500;
+  const particleGeo = new THREE.BufferGeometry();
+  const positions = new Float32Array(particleCount * 3);
+  const colors = new Float32Array(particleCount * 3);
+
+  for (let i = 0; i < particleCount * 3; i += 3) {
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+    const r = 5.05;
+    positions[i]     = r * Math.sin(phi) * Math.cos(theta);
+    positions[i + 1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i + 2] = r * Math.cos(phi);
+    colors[i] = 0.4; colors[i+1] = 0.85; colors[i+2] = 1.0;
   }
 
-  const pointGeometry = new THREE.BufferGeometry().setFromPoints(points);
-  const pointMaterial = new THREE.PointsMaterial({
-    color: 0x4cc9f0,
-    size: 0.08,
-    transparent: true,
-    opacity: 0.9
-  });
-  const particles = new THREE.Points(pointGeometry, pointMaterial);
-  scene.add(particles);
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-  const linePoints = [];
-  const lineCount = 36;
-  for (let i = 0; i < lineCount; i++) {
-    const a = points[Math.floor(Math.random() * points.length)];
-    const b = points[Math.floor(Math.random() * points.length)];
-    linePoints.push(a, b);
+  const particleMat = new THREE.PointsMaterial({ size: 0.038, vertexColors: true, transparent: true, opacity: 0.95 });
+  const particlesMesh = new THREE.Points(particleGeo, particleMat);
+  scene.add(particlesMesh);
+
+  const nodeGeo = new THREE.SphereGeometry(0.085, 8, 8);
+  const nodeMat = new THREE.MeshBasicMaterial({ color: 0xf72585 });
+  const highlightNodes = [
+    {lat:40.7,lng:-74},{lat:51.5,lng:-0.1},{lat:35.7,lng:139.7},{lat:-33.9,lng:151.2},
+    {lat:22.3,lng:114.2},{lat:1.35,lng:103.8},{lat:55.75,lng:37.6},{lat:19.07,lng:72.88}
+  ];
+  let nodeList = [];
+  highlightNodes.forEach(n => {
+    const pos = new THREE.Vector3();
+    const phi = (90 - n.lat) * Math.PI / 180;
+    const theta = (n.lng + 180) * Math.PI / 180;
+    pos.x = 5.1 * Math.sin(phi) * Math.cos(theta);
+    pos.y = 5.1 * Math.cos(phi);
+    pos.z = 5.1 * Math.sin(phi) * Math.sin(theta);
+    const dot = new THREE.Mesh(nodeGeo, nodeMat);
+    dot.position.copy(pos);
+    scene.add(dot);
+    nodeList.push(dot);
+  });
+
+  camera.position.z = 13.5;
+
+  let rayMaterial = new THREE.LineBasicMaterial({ color: 0x00e9ff, transparent: true, opacity: 0.9 });
+  let currentRay = null;
+  let rayStart = null;
+  let rayEnd = null;
+  let rayProgress = 0;
+
+  function pickNewNodes() {
+    if (nodeList.length < 2) return;
+    rayStart = nodeList[Math.floor(Math.random()*nodeList.length)].position;
+    rayEnd = nodeList[Math.floor(Math.random()*nodeList.length)].position;
+    while (rayStart === rayEnd) rayEnd = nodeList[Math.floor(Math.random()*nodeList.length)].position;
+    rayProgress = 0;
   }
-  const lineGeometry = new THREE.BufferGeometry().setFromPoints(linePoints);
-  const lineMaterial = new THREE.LineBasicMaterial({
-    color: 0xf72585,
-    transparent: true,
-    opacity: 0.25
-  });
-  const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
-  scene.add(lines);
 
-  camera.position.set(0, 0, 14);
+  function updateRay() {
+    if (!rayStart || !rayEnd) pickNewNodes();
+    rayProgress += 0.012;
+    if (rayProgress > 1) { pickNewNodes(); return; }
+    const midA = rayStart.clone().lerp(rayEnd, Math.max(0, rayProgress - 0.15));
+    const midB = rayStart.clone().lerp(rayEnd, rayProgress);
+    if (currentRay) scene.remove(currentRay);
+    const geo = new THREE.BufferGeometry().setFromPoints([midA, midB]);
+    currentRay = new THREE.Line(geo, rayMaterial);
+    scene.add(currentRay);
+  }
 
   function animate() {
     requestAnimationFrame(animate);
-    globe.rotation.y += 0.0015;
-    particles.rotation.y += 0.0015;
-    lines.rotation.y += 0.0015;
     controls.update();
+    globe.rotation.y += 0.0006;
+    particlesMesh.rotation.y += 0.0006;
+    updateRay();
     renderer.render(scene, camera);
   }
   animate();
@@ -821,9 +838,115 @@ function initInteractiveParticleGlobe() {
   });
 }
 
-window.addEventListener('load', () => {
-  initInteractiveParticleGlobe();
+window.addEventListener('load', initInteractiveParticleGlobe);
+
+// Copy API 复制功能
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log('Copied');
+  }).catch(() => {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  });
+}
+
+document.querySelector('.api-copy').addEventListener('click', (e) => {
+  const text = "https://api.astrochannel.one/api/intent/submit";
+  copyToClipboard(text);
+  e.target.textContent = "✓ Copied";
+  setTimeout(() => {
+    e.target.textContent = "copy";
+  }, 1500);
 });
+
+// 顶部霓虹脉冲桥（用户要求放在Global Intent Network正上方）
+(function initTopBridge() {
+const container = document.getElementById('bridge-top');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, container.clientWidth / 240, 0.1, 100);
+camera.position.set(0, 4, 14); // 拉远镜头，桥更大
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(container.clientWidth, 240);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+const bridgeGroup = new THREE.Group();
+scene.add(bridgeGroup);
+
+// ===== 桥放大三倍 =====
+const length = 30;
+const width = 6;
+const seg = 60;
+const points = [];
+
+for (let i = 0; i <= seg; i++) {
+const x = -length / 2 + (length / seg) * i;
+const y = Math.sin((x / length) * Math.PI) * 2.4;
+points.push(new THREE.Vector3(x, y, -width/2), new THREE.Vector3(x, y, width/2));
+}
+for (let side = -1; side <= 1; side += 2) {
+for (let i = 0; i < seg; i++) {
+const x1 = -length/2 + (length/seg)*i;
+const x2 = -length/2 + (length/seg)*(i+1);
+const y1 = Math.sin((x1/length)*Math.PI)*2.4;
+const y2 = Math.sin((x2/length)*Math.PI)*2.4;
+points.push(new THREE.Vector3(x1, y1, side*width/2), new THREE.Vector3(x2, y2, side*width/2));
+}
+}
+
+const bridgeGeo = new THREE.BufferGeometry().setFromPoints(points);
+const bridgeMat = new THREE.LineBasicMaterial({
+color: 0x4cc9f0,
+transparent: true,
+opacity: 0.4
+});
+const bridge = new THREE.LineSegments(bridgeGeo, bridgeMat);
+bridgeGroup.add(bridge);
+
+// ===== 超亮脉冲 =====
+const pulseGeo = new THREE.BufferGeometry();
+const pulseMat = new THREE.LineBasicMaterial({
+color: 0xf72585,
+transparent: true,
+opacity: 1
+});
+const pulse = new THREE.Line(pulseGeo, pulseMat);
+bridgeGroup.add(pulse);
+
+let pos = -length / 2;
+const speed = 0.4; // 更快脉冲
+
+function animate() {
+requestAnimationFrame(animate);
+pos += speed;
+if (pos > length/2) pos = -length/2;
+const y = Math.sin((pos/length)*Math.PI) * 2.4;
+const w = width / 2;
+
+const pts = [
+new THREE.Vector3(pos-0.8, y, -w),
+new THREE.Vector3(pos+0.8, y, -w),
+new THREE.Vector3(pos+0.8, y, w),
+new THREE.Vector3(pos-0.8, y, w)
+];
+pulseGeo.setFromPoints(pts);
+
+bridgeGroup.rotation.y += 0.001;
+renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+camera.aspect = container.clientWidth / 240;
+camera.updateProjectionMatrix();
+renderer.setSize(container.clientWidth, 240);
+});
+})();
 </script>
 </body>
 </html>
