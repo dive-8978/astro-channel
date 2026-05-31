@@ -374,6 +374,7 @@ footer{
 <canvas id="sphereCanvas"></canvas>
 <canvas id="bridgeBuildingCanvas"></canvas>
 <div id="progressText">Project Progress</div>
+
 <div class="container">
 <nav>
 <div class="logo"><img src="/favicon.ico" style="height:1.6em; margin-right:10px; vertical-align:middle;">AstroBridge</div>
@@ -401,11 +402,15 @@ footer{
 <a href="AstroSwap.html">AstroSwap</a>
 </div>
 </nav>
+
 <div class="hero">
-<!-- 顶部霓虹脉冲桥 -->
+ 
+<!-- 顶部霓虹脉冲桥（用户要求放在Global Intent Network正上方） -->
 <div id="bridge-top" style="width:100%; height:240px; margin-bottom:30px; display:flex; align-items:center; justify-content:center;"></div>
-<!-- 描述文字 -->
+
+<!-- 用户要求新增的描述文字 -->
 <p style="text-align:center;font-size:1.38rem;font-weight:700;margin-bottom:28px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.5px;">AstroBridge: Web3 infrastructure powered by AI intent, fully chain-compatible, redefining value connectivity</p>
+
 <h1>Global Intent Network</h1>
 <p>The world’s first AI-powered autonomous intent layer for Web3 and the Robot Economy.</p>
 <div class="buttons">
@@ -429,7 +434,23 @@ footer{
   ✅ Astro on BSC｜✅ On-Chain Burn｜✅ 200+ Global Nodes｜✅ Pi Network API Channel (Testnet Live)｜✅ Full Chain Support｜✅ AstroWallet AI Launched
 </div>
 
-<!-- AstroWallet AI 卡片 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Ecosystem</title>
+    <style>
+        body {
+            background-color: #121218;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 🪙 AstroWallet AI 卡片 -->
 <a href="https://www.astrochannel.one/roadmap.html" style="display:block; text-decoration:none;">
     <div style="max-width: 520px; margin: 0 auto 24px;
                 background: rgba(30,30,40,0.7); backdrop-filter: blur(12px);
@@ -437,39 +458,47 @@ footer{
                 box-shadow: 0 0 40px rgba(255,215,0,0.5), inset 0 0 20px rgba(255,215,0,0.15);
                 padding: 32px 24px; text-align: center;">
         <h3 style="color: #fff; margin: 0 0 24px; font-size: 2.2rem; font-weight: 600; text-shadow: 0 0 12px rgba(255,215,0,0.6);">AstroWallet AI</h3>
+        
+        <!-- 金色霓虹钱包图标 -->
         <svg width="140" height="120" viewBox="0 0 140 120" style="margin: 0 auto 24px; filter: drop-shadow(0 0 10px rgba(255,215,0,0.8));">
-            <path d="M40 30h60a10 10 0 0 1 10 10v50a10 10 0 0 1-10 10H40a10 10 0 0 1-10-10V40a10 10 0 0 1 10-10z"
+            <!-- 钱包主体 -->
+            <path d="M40 30h60a10 10 0 0 1 10 10v50a10 10 0 0 1-10 10H40a10 10 0 0 1-10-10V40a10 10 0 0 1 10-10z" 
                   stroke="#ffd700" stroke-width="4" fill="none"/>
-            <path d="M50 20h40a8 8 0 0 1 8 8v12H42v-12a8 8 0 0 1 8-8z"
+            <!-- 顶部卡槽 -->
+            <path d="M50 20h40a8 8 0 0 1 8 8v12H42v-12a8 8 0 0 1 8-8z" 
                   stroke="#ffd700" stroke-width="3" fill="none"/>
-            <path d="M90 55a10 10 0 0 1 10 10v10a10 10 0 0 1-10 10H80v-30h10z"
+            <!-- 右侧按扣 -->
+            <path d="M90 55a10 10 0 0 1 10 10v10a10 10 0 0 1-10 10H80v-30h10z" 
                   stroke="#ffd700" stroke-width="3" fill="none"/>
             <circle cx="95" cy="65" r="3" fill="#ffd700"/>
         </svg>
+
         <p style="font-size: 0.95rem; color: rgba(255,255,255,0.6); margin: 0;">
             Auto Earn · Full Chain · Dedicated Channel
         </p>
     </div>
 </a>
 
-<!-- Astro Chat 卡片 -->
-<div style="max-width: 520px; margin: 0 auto 24px;
-            background: rgba(30,30,40,0.7); backdrop-filter: blur(12px);
-            border-radius: 20px; border: 1px solid rgba(80,180,255,0.3);
-            box-shadow: 0 0 40px rgba(80,180,255,0.5), inset 0 0 20px rgba(80,180,255,0.15);
-            padding: 32px 24px; text-align: center;">
-    <h3 style="color: #fff; margin: 0 0 24px; font-size: 2.2rem; font-weight: 600; text-shadow: 0 0 12px rgba(80,180,255,0.6);">Astro Chat</h3>
-    <svg width="140" height="120" viewBox="0 0 140 120" style="margin: 0 auto 24px; filter: drop-shadow(0 0 10px rgba(80,180,255,0.8));">
-        <path d="M40 40h60a12 12 0 0 1 12 12v36a12 12 0 0 1-12 12H70l-15 15v-15H40a12 12 0 0 1-12-12V52a12 12 0 0 1 12-12z"
-              stroke="#50b4ff" stroke-width="4" fill="none"/>
-        <circle cx="60" cy="65" r="4" fill="#50b4ff"/>
-        <circle cx="80" cy="65" r="4" fill="#50b4ff"/>
-        <circle cx="100" cy="65" r="4" fill="#50b4ff"/>
-    </svg>
-    <p style="font-size: 1rem; color: rgba(180,220,255,0.7); margin: 0;">Decentralized · P2P · Encrypted · Voice & Video Calls</p>
-</div>
+    <!-- 💬 Astro Chat 卡片 -->
+    <div style="max-width: 520px; margin: 0 auto 24px;
+                background: rgba(30,30,40,0.7); backdrop-filter: blur(12px);
+                border-radius: 20px; border: 1px solid rgba(80,180,255,0.3);
+                box-shadow: 0 0 40px rgba(80,180,255,0.5), inset 0 0 20px rgba(80,180,255,0.15);
+                padding: 32px 24px; text-align: center;">
+        <h3 style="color: #fff; margin: 0 0 24px; font-size: 2.2rem; font-weight: 600; text-shadow: 0 0 12px rgba(80,180,255,0.6);">Astro Chat</h3>
+        
+        <!-- 蓝色霓虹聊天气泡图标 -->
+        <svg width="140" height="120" viewBox="0 0 140 120" style="margin: 0 auto 24px; filter: drop-shadow(0 0 10px rgba(80,180,255,0.8));">
+            <path d="M40 40h60a12 12 0 0 1 12 12v36a12 12 0 0 1-12 12H70l-15 15v-15H40a12 12 0 0 1-12-12V52a12 12 0 0 1 12-12z" 
+                  stroke="#50b4ff" stroke-width="4" fill="none"/>
+            <circle cx="60" cy="65" r="4" fill="#50b4ff"/>
+            <circle cx="80" cy="65" r="4" fill="#50b4ff"/>
+            <circle cx="100" cy="65" r="4" fill="#50b4ff"/>
+        </svg>
 
-<!-- Public API -->
+        <p style="font-size: 1rem; color: rgba(180,220,255,0.7); margin: 0;">Decentralized · P2P · Encrypted · Voice & Video Calls</p>
+    </div>
+<!-- ✅ API 窗口放在地球上方，显眼位置 -->
 <div class="section">
   <h2>Public API (Open for All)</h2>
   <div class="api-terminal" style="max-width:520px; margin:0 auto; border:1px solid #4cc9f0; box-shadow:0 0 30px #4cc9f0; background:rgba(11,15,31,0.8); backdrop-filter:blur(12px);">
@@ -485,8 +514,10 @@ footer{
   </div>
   <p style="text-align:center; font-size:1rem; color:#a8dadc; margin-top:12px;">No key. No login. Anyone can call directly.</p>
 </div>
-
-<!-- 地球 -->
+  
+</body>
+</html>
+<!-- ✅ 地球 -->
 <div class="globe-container">
   <div class="globe-title">Global Node Network</div>
   <div id="globe-container"></div>
@@ -593,6 +624,7 @@ footer{
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+
 <script>
 // Hamburger Menu
 const hamburger=document.getElementById('hamburger');
@@ -706,34 +738,41 @@ function initInteractiveParticleGlobe() {
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   container.appendChild(renderer.domElement);
+
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.12;
   controls.enableZoom = true;
   controls.minDistance = 9;
   controls.maxDistance = 24;
+
   const globeGeo = new THREE.SphereGeometry(5, 48, 48);
   const globeMat = new THREE.MeshBasicMaterial({ color: 0x4cc9f0, wireframe: true, transparent: true, opacity: 0.22 });
   const globe = new THREE.Mesh(globeGeo, globeMat);
   scene.add(globe);
+
   const particleCount = 2500;
   const particleGeo = new THREE.BufferGeometry();
   const positions = new Float32Array(particleCount * 3);
   const colors = new Float32Array(particleCount * 3);
+
   for (let i = 0; i < particleCount * 3; i += 3) {
     const theta = Math.random() * Math.PI * 2;
     const phi = Math.acos(2 * Math.random() - 1);
     const r = 5.05;
-    positions[i] = r * Math.sin(phi) * Math.cos(theta);
+    positions[i]     = r * Math.sin(phi) * Math.cos(theta);
     positions[i + 1] = r * Math.sin(phi) * Math.sin(theta);
     positions[i + 2] = r * Math.cos(phi);
     colors[i] = 0.4; colors[i+1] = 0.85; colors[i+2] = 1.0;
   }
+
   particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
   const particleMat = new THREE.PointsMaterial({ size: 0.038, vertexColors: true, transparent: true, opacity: 0.95 });
   const particlesMesh = new THREE.Points(particleGeo, particleMat);
   scene.add(particlesMesh);
+
   const nodeGeo = new THREE.SphereGeometry(0.085, 8, 8);
   const nodeMat = new THREE.MeshBasicMaterial({ color: 0xf72585 });
   const highlightNodes = [
@@ -753,12 +792,15 @@ function initInteractiveParticleGlobe() {
     scene.add(dot);
     nodeList.push(dot);
   });
+
   camera.position.z = 13.5;
+
   let rayMaterial = new THREE.LineBasicMaterial({ color: 0x00e9ff, transparent: true, opacity: 0.9 });
   let currentRay = null;
   let rayStart = null;
   let rayEnd = null;
   let rayProgress = 0;
+
   function pickNewNodes() {
     if (nodeList.length < 2) return;
     rayStart = nodeList[Math.floor(Math.random()*nodeList.length)].position;
@@ -766,6 +808,7 @@ function initInteractiveParticleGlobe() {
     while (rayStart === rayEnd) rayEnd = nodeList[Math.floor(Math.random()*nodeList.length)].position;
     rayProgress = 0;
   }
+
   function updateRay() {
     if (!rayStart || !rayEnd) pickNewNodes();
     rayProgress += 0.012;
@@ -777,6 +820,7 @@ function initInteractiveParticleGlobe() {
     currentRay = new THREE.Line(geo, rayMaterial);
     scene.add(currentRay);
   }
+
   function animate() {
     requestAnimationFrame(animate);
     controls.update();
@@ -786,17 +830,21 @@ function initInteractiveParticleGlobe() {
     renderer.render(scene, camera);
   }
   animate();
+
   window.addEventListener('resize', () => {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
   });
 }
+
 window.addEventListener('load', initInteractiveParticleGlobe);
 
-// Copy API
+// Copy API 复制功能
 function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => {}).catch(() => {
+  navigator.clipboard.writeText(text).then(() => {
+    console.log('Copied');
+  }).catch(() => {
     const textarea = document.createElement('textarea');
     textarea.value = text;
     document.body.appendChild(textarea);
@@ -805,138 +853,88 @@ function copyToClipboard(text) {
     document.body.removeChild(textarea);
   });
 }
+
 document.querySelector('.api-copy').addEventListener('click', (e) => {
   const text = "https://api.astrochannel.one/api/intent/submit";
   copyToClipboard(text);
   e.target.textContent = "✓ Copied";
-  setTimeout(() => { e.target.textContent = "copy"; }, 1500);
+  setTimeout(() => {
+    e.target.textContent = "copy";
+  }, 1500);
 });
 
-// ==================== 改进版顶部 Bridge（球在桥上移动） ====================
+// 顶部霓虹脉冲桥（用户要求放在Global Intent Network正上方）
 (function initTopBridge() {
-  const container = document.getElementById('bridge-top');
-  if (!container) return;
-
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(55, container.clientWidth / 240, 0.1, 100);
-  camera.position.set(0, 9, 22);
-  camera.lookAt(0, 3, 0);
-
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setSize(container.clientWidth, 240);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  container.innerHTML = '';
-  container.appendChild(renderer.domElement);
-
-  const bridgeGroup = new THREE.Group();
-  scene.add(bridgeGroup);
-
-  const length = 36;
-  const towerHeight = 11;
-  const segments = 90;
-
-  // 桥塔
-  const towerMat = new THREE.LineBasicMaterial({ color: 0x66eeff, transparent: true, opacity: 0.95 });
-  const leftTower = new THREE.Line(new THREE.BufferGeometry().setFromPoints([
-    new THREE.Vector3(-length/2, 0, 0), new THREE.Vector3(-length/2, towerHeight, 0)
-  ]), towerMat);
-  const rightTower = leftTower.clone();
-  rightTower.position.x = length;
-  bridgeGroup.add(leftTower, rightTower);
-
-  // 主缆
-  const mainCablePoints = [];
-  for (let i = 0; i <= segments; i++) {
-    const t = i / segments;
-    const x = -length/2 + length * t;
-    const y = towerHeight - Math.pow(Math.sin(t * Math.PI), 1.1) * 8;
-    mainCablePoints.push(new THREE.Vector3(x, y, 0));
-  }
-  bridgeGroup.add(new THREE.Line(
-    new THREE.BufferGeometry().setFromPoints(mainCablePoints),
-    new THREE.LineBasicMaterial({ color: 0x88ffff, linewidth: 4 })
-  ));
-
-  // 桥面
-  const deckPoints = [];
-  for (let i = 0; i <= segments; i++) {
-    const t = i / segments;
-    const x = -length/2 + length * t;
-    const y = 1.8 + Math.sin(t * Math.PI) * 0.8;
-    deckPoints.push(new THREE.Vector3(x, y, -3));
-    deckPoints.push(new THREE.Vector3(x, y, 3));
-  }
-  bridgeGroup.add(new THREE.LineSegments(
-    new THREE.BufferGeometry().setFromPoints(deckPoints),
-    new THREE.LineBasicMaterial({ color: 0x44ddff })
-  ));
-
-  // 吊索
-  for (let i = 3; i < segments - 3; i += 3) {
-    const t = i / segments;
-    const x = -length/2 + length * t;
-    const yTop = towerHeight - Math.pow(Math.sin(t * Math.PI), 1.1) * 8;
-    const yBottom = 1.8 + Math.sin(t * Math.PI) * 0.8;
-    bridgeGroup.add(new THREE.Line(
-      new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x, yTop, 0), new THREE.Vector3(x, yBottom, 0)]),
-      new THREE.LineBasicMaterial({ color: 0x77eeff })
-    ));
-  }
-
-  // 移动的球体
-  const sphereData = [
-    { color: 0x627EEA, baseX: -14 }, { color: 0xF3BA2F, baseX: -8 },
-    { color: 0x00FFBD, baseX: -3 },  { color: 0xFF2D95, baseX:  4 },
-    { color: 0x4A9EFF, baseX: 10 },  { color: 0x9D4EFF, baseX: 15 }
-  ];
-
-  const spheres = [];
-  sphereData.forEach((data, i) => {
-    const geo = new THREE.SphereGeometry(1.35, 28, 28);
-    const mat = new THREE.MeshPhongMaterial({
-      color: data.color, emissive: data.color, emissiveIntensity: 0.8,
-      shininess: 30, transparent: true, opacity: 0.95
-    });
-    const sphere = new THREE.Mesh(geo, mat);
-    sphere.userData = { baseX: data.baseX, offset: i * 1.8, speed: 0.9 + Math.random() * 0.4 };
-    sphere.position.set(data.baseX, 6, 0);
-    bridgeGroup.add(sphere);
-    spheres.push(sphere);
-
-    const glow = new THREE.Mesh(new THREE.SphereGeometry(1.8, 24, 24),
-      new THREE.MeshBasicMaterial({ color: data.color, transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending }));
-    sphere.add(glow);
-  });
-
-  const ambient = new THREE.AmbientLight(0x6688ff, 0.7);
-  scene.add(ambient);
-  const pointLight = new THREE.PointLight(0xffffff, 1.5, 100);
-  pointLight.position.set(0, 15, 25);
-  scene.add(pointLight);
-
-  let time = 0;
-  function animate() {
-    requestAnimationFrame(animate);
-    time += 0.022;
-
-    spheres.forEach((sphere, i) => {
-      const progress = (time * sphere.userData.speed + sphere.userData.offset) % (length + 8) - length/2 - 4;
-      const x = progress;
-      const y = 4.5 + Math.sin(time * 2 + i) * 1.2;
-      const z = Math.sin(time * 1.5 + i) * 1.8;
-      sphere.position.set(x, y, z);
-      sphere.rotation.y += 0.012;
-    });
-
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  window.addEventListener('resize', () => {
-    camera.aspect = container.clientWidth / 240;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, 240);
-  });
+const container = document.getElementById('bridge-top');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, container.clientWidth / 240, 0.1, 100);
+camera.position.set(0, 4, 14); // 拉远镜头，桥更大
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(container.clientWidth, 240);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+const bridgeGroup = new THREE.Group();
+scene.add(bridgeGroup);
+// ===== 桥放大三倍 =====
+const length = 30;
+const width = 6;
+const seg = 60;
+const points = [];
+for (let i = 0; i <= seg; i++) {
+const x = -length / 2 + (length / seg) * i;
+const y = Math.sin((x / length) * Math.PI) * 2.4;
+points.push(new THREE.Vector3(x, y, -width/2), new THREE.Vector3(x, y, width/2));
+}
+for (let side = -1; side <= 1; side += 2) {
+for (let i = 0; i < seg; i++) {
+const x1 = -length/2 + (length/seg)*i;
+const x2 = -length/2 + (length/seg)*(i+1);
+const y1 = Math.sin((x1/length)*Math.PI)*2.4;
+const y2 = Math.sin((x2/length)*Math.PI)*2.4;
+points.push(new THREE.Vector3(x1, y1, side*width/2), new THREE.Vector3(x2, y2, side*width/2));
+}
+}
+const bridgeGeo = new THREE.BufferGeometry().setFromPoints(points);
+const bridgeMat = new THREE.LineBasicMaterial({
+color: 0x4cc9f0,
+transparent: true,
+opacity: 0.4
+});
+const bridge = new THREE.LineSegments(bridgeGeo, bridgeMat);
+bridgeGroup.add(bridge);
+// ===== 超亮脉冲 =====
+const pulseGeo = new THREE.BufferGeometry();
+const pulseMat = new THREE.LineBasicMaterial({
+color: 0xf72585,
+transparent: true,
+opacity: 1
+});
+const pulse = new THREE.Line(pulseGeo, pulseMat);
+bridgeGroup.add(pulse);
+let pos = -length / 2;
+const speed = 0.4; // 更快脉冲
+function animate() {
+requestAnimationFrame(animate);
+pos += speed;
+if (pos > length/2) pos = -length/2;
+const y = Math.sin((pos/length)*Math.PI) * 2.4;
+const w = width / 2;
+const pts = [
+new THREE.Vector3(pos-0.8, y, -w),
+new THREE.Vector3(pos+0.8, y, -w),
+new THREE.Vector3(pos+0.8, y, w),
+new THREE.Vector3(pos-0.8, y, w)
+];
+pulseGeo.setFromPoints(pts);
+bridgeGroup.rotation.y += 0.001;
+renderer.render(scene, camera);
+}
+animate();
+window.addEventListener('resize', () => {
+camera.aspect = container.clientWidth / 240;
+camera.updateProjectionMatrix();
+renderer.setSize(container.clientWidth, 240);
+});
 })();
 </script>
 </body>
