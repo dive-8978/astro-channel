@@ -863,129 +863,155 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
   }, 1500);
 });
 
-// 顶部经典金门大桥（固定不转 + 高亮线条 + 好看链球）
+<script>
+// 顶部霓虹脉冲金门大桥 - 升级真实版（更像原图）
 (function initTopBridge() {
   const container = document.getElementById('bridge-top');
+  if (!container) return;
+
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(60, container.clientWidth / 240, 0.1, 100);
-  camera.position.set(0, 6, 18);
+  const camera = new THREE.PerspectiveCamera(52, container.clientWidth / 240, 0.1, 200);
+  camera.position.set(0, 12, 26);
+  camera.lookAt(0, 5, 0);
+
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(container.clientWidth, 240);
-  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  container.innerHTML = '';
   container.appendChild(renderer.domElement);
 
   const bridgeGroup = new THREE.Group();
   scene.add(bridgeGroup);
 
-  // ========== 经典金门大桥结构 ==========
-  const length = 34;
-  const towerHeight = 9;
-  const cableSeg = 60;
-  const points = [];
+  const length = 42;
+  const towerHeight = 16;
+  const segments = 120;
 
-  // 左桥塔
-  points.push(
-    new THREE.Vector3(-length/2, 0, 0),
-    new THREE.Vector3(-length/2, towerHeight, 0)
+  // ==================== 真实桥塔 ====================
+  const towerMat = new THREE.LineBasicMaterial({ color: 0x88eeff, transparent: true, opacity: 0.9 });
+  const createTower = (xPos) => {
+    const tower = new THREE.Group();
+    // 主竖柱
+    const points = [
+      new THREE.Vector3(xPos, 0, -2.5), new THREE.Vector3(xPos, towerHeight, -2.5),
+      new THREE.Vector3(xPos, 0, 2.5),  new THREE.Vector3(xPos, towerHeight, 2.5)
+    ];
+    // 横梁
+    for (let y = 4; y < towerHeight; y += 3) {
+      points.push(new THREE.Vector3(xPos-2.5, y, -2.5), new THREE.Vector3(xPos+2.5, y, -2.5));
+      points.push(new THREE.Vector3(xPos-2.5, y, 2.5),  new THREE.Vector3(xPos+2.5, y, 2.5));
+    }
+    const towerLines = new THREE.LineSegments(
+      new THREE.BufferGeometry().setFromPoints(points),
+      towerMat
+    );
+    tower.add(towerLines);
+    return tower;
+  };
+  bridgeGroup.add(createTower(-length/2));
+  bridgeGroup.add(createTower(length/2));
+
+  // ==================== 主悬索（经典大弧线）===================
+  const cablePoints = [];
+  for (let i = 0; i <= segments; i++) {
+    const t = i / segments;
+    const x = -length/2 + length * t;
+    const y = towerHeight - 7.5 * Math.pow(Math.sin(t * Math.PI), 1.15);
+    cablePoints.push(new THREE.Vector3(x, y, 0));
+  }
+  const mainCable = new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints(cablePoints),
+    new THREE.LineBasicMaterial({ color: 0x99ffff, linewidth: 5 })
   );
-  // 右桥塔
-  points.push(
-    new THREE.Vector3(length/2, 0, 0),
-    new THREE.Vector3(length/2, towerHeight, 0)
-  );
+  bridgeGroup.add(mainCable);
 
-  // 桥面
-  for (let i = 0; i <= cableSeg; i++) {
-    const t = i / cableSeg;
+  // ==================== 桥面 + 密集吊索 ====================
+  const deckMat = new THREE.LineBasicMaterial({ color: 0x55ccff, transparent: true, opacity: 0.75 });
+  for (let i = 0; i <= segments; i += 2) {
+    const t = i / segments;
     const x = -length/2 + length * t;
-    const y = 1 + Math.sin(t * Math.PI) * 0.8;
-    points.push(new THREE.Vector3(x, y, -2.5));
-    points.push(new THREE.Vector3(x, y, 2.5));
+    const yDeck = 2.2 + Math.sin(t * Math.PI) * 1.1;
+    const yCable = towerHeight - 7.5 * Math.pow(Math.sin(t * Math.PI), 1.15);
+
+    // 垂直吊索
+    bridgeGroup.add(new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(x, yCable, 0),
+        new THREE.Vector3(x, yDeck, 0)
+      ]),
+      deckMat
+    ));
+
+    // 桥面横线
+    bridgeGroup.add(new THREE.LineSegments(
+      new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(x, yDeck, -3.5),
+        new THREE.Vector3(x, yDeck, 3.5)
+      ]),
+      deckMat
+    ));
   }
 
-  // 主悬索（金门大桥标志性弧线）
-  for (let i = 0; i <= cableSeg; i++) {
-    const t = i / cableSeg;
-    const x = -length/2 + length * t;
-    const y = towerHeight - Math.sin(t * Math.PI) * 6.5;
-    points.push(new THREE.Vector3(x, y, 0));
-  }
-
-  // 密集垂直拉索
-  for (let i = 0; i <= cableSeg; i += 3) {
-    const t = i / cableSeg;
-    const x = -length/2 + length * t;
-    const yCable = towerHeight - Math.sin(t * Math.PI) * 6.5;
-    const yDeck = 1 + Math.sin(t * Math.PI) * 0.8;
-    points.push(new THREE.Vector3(x, yCable, 0));
-    points.push(new THREE.Vector3(x, yDeck, 0));
-  }
-
-  const bridgeGeo = new THREE.BufferGeometry().setFromPoints(points);
-  const bridgeMat = new THREE.LineBasicMaterial({
-    color: 0x4cc9f0,
-    transparent: true,
-    opacity: 0.9
-  });
-  const bridge = new THREE.LineSegments(bridgeGeo, bridgeMat);
-  bridgeGroup.add(bridge);
-
-  // ========== 干净好看的链球（只自转，不公转） ==========
-  const spheres = [];
-  const balls = [
-    { x: -10, y: 5, color: 0x627EEA }, // ETH
-    { x: 10,  y: 5, color: 0xF3BA2F }, // BSC
-    { x: -5,  y: 7, color: 0x00FFBD }, // SOL
-    { x: 5,   y: 7, color: 0x2579E5 }, // SUI
-    { x: 0,   y: 6, color: 0xf72585 }  // ASTRO
+  // ==================== 移动的链球 ====================
+  const sphereData = [
+    {color: 0x627EEA, baseX: -16}, {color: 0xF3BA2F, baseX: -10},
+    {color: 0x00FFBD, baseX: -4},  {color: 0xFF2D95, baseX:  3},
+    {color: 0x4A9EFF, baseX: 10},  {color: 0x9D4EFF, baseX: 16}
   ];
 
-  balls.forEach(info => {
-    const g = new THREE.SphereGeometry(1.2, 12, 10);
-    const m = new THREE.MeshBasicMaterial({
-      color: info.color,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.8
-    });
-    const s = new THREE.Mesh(g, m);
-    s.position.set(info.x, info.y, 0);
-    bridgeGroup.add(s);
-    spheres.push(s);
+  const spheres = [];
+  sphereData.forEach((data, i) => {
+    const sphere = new THREE.Mesh(
+      new THREE.SphereGeometry(1.45, 32, 32),
+      new THREE.MeshPhongMaterial({
+        color: data.color,
+        emissive: data.color,
+        emissiveIntensity: 0.85,
+        shininess: 40,
+        transparent: true,
+        opacity: 0.95
+      })
+    );
+    sphere.userData = { baseX: data.baseX, offset: i * 1.4, speed: 0.75 + Math.random() * 0.5 };
+    sphere.position.set(data.baseX, 6, 0);
+    bridgeGroup.add(sphere);
+    spheres.push(sphere);
+
+    // 辉光
+    const glow = new THREE.Mesh(
+      new THREE.SphereGeometry(2.0, 24, 24),
+      new THREE.MeshBasicMaterial({ color: data.color, transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending })
+    );
+    sphere.add(glow);
   });
 
-  // ========== 粉色脉冲光 ==========
-  const pulseGeo = new THREE.BufferGeometry();
-  const pulseMat = new THREE.LineBasicMaterial({
-    color: 0xf72585,
-    transparent: true,
-    opacity: 1
-  });
-  const pulse = new THREE.Line(pulseGeo, pulseMat);
-  bridgeGroup.add(pulse);
+  // 灯光
+  scene.add(new THREE.AmbientLight(0x7799ff, 0.75));
+  const pLight = new THREE.PointLight(0xffffff, 1.6, 100);
+  pLight.position.set(8, 22, 28);
+  scene.add(pLight);
 
-  let pos = -length / 2;
-  const speed = 0.4;
+  let time = 0;
+  let pulsePos = -length / 2;
 
   function animate() {
     requestAnimationFrame(animate);
+    time += 0.022;
 
-    // 脉冲移动
-    pos += speed;
-    if (pos > length/2) pos = -length/2;
-    const t = (pos + length/2) / length;
-    const y = 1 + Math.sin(t * Math.PI) * 0.8;
-    const pts = [
-      new THREE.Vector3(pos-1, y, -2.5),
-      new THREE.Vector3(pos+1, y, -2.5),
-      new THREE.Vector3(pos+1, y, 2.5),
-      new THREE.Vector3(pos-1, y, 2.5)
-    ];
-    pulseGeo.setFromPoints(pts);
+    // 脉冲
+    pulsePos += 0.52;
+    if (pulsePos > length/2) pulsePos = -length/2;
+    const t = (pulsePos + length/2) / length;
+    const py = 2.2 + Math.sin(t * Math.PI) * 1.1;
+    // 这里可以再加一个脉冲Line，如果你想要
 
-    // 只有球自转，桥完全不动
-    spheres.forEach(s => {
-      s.rotation.y += 0.006;
+    // 球体沿桥移动
+    spheres.forEach((s, i) => {
+      const prog = (time * s.userData.speed + s.userData.offset) % (length + 12) - length/2 - 6;
+      s.position.x = prog;
+      s.position.y = 5.8 + Math.sin(time * 3 + i) * 1.4;
+      s.position.z = Math.cos(time * 2 + i) * 2.1;
+      s.rotation.y += 0.013;
     });
 
     renderer.render(scene, camera);
