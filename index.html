@@ -864,15 +864,15 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
 });
 
 
-// AstroBridge - 极致接近原图版（高细节金门大桥 + 动态球体）
+// 高度还原原图版 - AstroBridge 3D
 (function initTopBridge() {
   const container = document.getElementById('bridge-top');
   if (!container) return;
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(48, container.clientWidth / 240, 0.1, 300);
-  camera.position.set(2, 14, 32);
-  camera.lookAt(0, 5, 0);
+  const camera = new THREE.PerspectiveCamera(46, container.clientWidth / 240, 0.1, 300);
+  camera.position.set(1, 16, 36);
+  camera.lookAt(0, 6.5, 0);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(container.clientWidth, 240);
@@ -883,122 +883,122 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
   const bridgeGroup = new THREE.Group();
   scene.add(bridgeGroup);
 
-  const length = 48;
-  const towerHeight = 19;
-  const segments = 180; // 极高密度
+  const length = 52;
+  const towerHeight = 21;
+  const segments = 220;
 
-  // ==================== 复杂桥塔 ====================
-  const towerMat = new THREE.LineBasicMaterial({ color: 0x77ddff, transparent: true, opacity: 0.92 });
+  // 复杂桥塔
+  const towerMat = new THREE.LineBasicMaterial({ color: 0x77ddff, transparent: true, opacity: 0.9 });
   const createTower = (x) => {
-    const group = new THREE.Group();
+    const g = new THREE.Group();
     const pts = [];
-    // 主塔柱（双柱）
-    for (let z of [-2.8, 2.8]) {
+    for (let z of [-3.5, 3.5]) {
       pts.push(new THREE.Vector3(x, 0, z), new THREE.Vector3(x, towerHeight, z));
     }
-    // 横梁 + 加强筋（大量）
-    for (let y = 3; y < towerHeight; y += 1.6) {
-      pts.push(new THREE.Vector3(x-3.5, y, -3), new THREE.Vector3(x+3.5, y, -3));
-      pts.push(new THREE.Vector3(x-3.5, y, 3),  new THREE.Vector3(x+3.5, y, 3));
-      // 斜撑
-      pts.push(new THREE.Vector3(x-3.5, y, -3), new THREE.Vector3(x+3.5, y+2.8, 3));
+    for (let y = 4; y < towerHeight; y += 1.5) {
+      pts.push(new THREE.Vector3(x-4.5, y, -3.5), new THREE.Vector3(x+4.5, y, -3.5));
+      pts.push(new THREE.Vector3(x-4.5, y, 3.5), new THREE.Vector3(x+4.5, y, 3.5));
+      pts.push(new THREE.Vector3(x-4, y, -3.5), new THREE.Vector3(x+4, y+3, 3.5));
     }
-    group.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts), towerMat));
-    return group;
+    g.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts), towerMat));
+    return g;
   };
   bridgeGroup.add(createTower(-length/2));
   bridgeGroup.add(createTower(length/2));
 
-  // ==================== 多层主悬索 ====================
-  const cableMat = new THREE.LineBasicMaterial({ color: 0x99ffff, linewidth: 4.5 });
+  // 多层主悬索
+  const cableMat = new THREE.LineBasicMaterial({ color: 0x88ffff, linewidth: 5.5 });
   for (let layer = -1; layer <= 1; layer++) {
-    const cable = [];
+    const pts = [];
     for (let i = 0; i <= segments; i++) {
       const t = i / segments;
       const x = -length/2 + length * t;
-      const y = towerHeight - 9.2 * Math.pow(Math.sin(t * Math.PI), 1.1) + layer * 0.4;
-      cable.push(new THREE.Vector3(x, y, layer * 1.2));
+      const y = towerHeight - 10.2 * Math.pow(Math.sin(t * Math.PI), 1.1) + layer * 0.6;
+      pts.push(new THREE.Vector3(x, y, layer * 1.8));
     }
-    bridgeGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(cable), cableMat));
+    bridgeGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), cableMat));
   }
 
-  // ==================== 超密集垂直吊索 + 桥面 ====================
-  const hangerMat = new THREE.LineBasicMaterial({ color: 0x55ccff, transparent: true, opacity: 0.8 });
-  const deckMat = new THREE.LineBasicMaterial({ color: 0x44bbff, transparent: true, opacity: 0.85 });
-
-  for (let i = 0; i <= segments; i += 1.8) {
+  // 极密集吊索 + 桥面
+  for (let i = 0; i <= segments; i += 1) {
     const t = i / segments;
     const x = -length/2 + length * t;
-    const yDeck = 2.6 + Math.sin(t * Math.PI) * 1.2;
-    const yTop = towerHeight - 9.2 * Math.pow(Math.sin(t * Math.PI), 1.1);
+    const yDeck = 2.8 + Math.sin(t * Math.PI) * 1.3;
+    const yCable = towerHeight - 10.2 * Math.pow(Math.sin(t * Math.PI), 1.1);
 
-    // 垂直吊索（密集）
     bridgeGroup.add(new THREE.Line(
-      new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x, yTop, 0), new THREE.Vector3(x, yDeck, 0)]),
-      hangerMat
+      new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x, yCable, 0), new THREE.Vector3(x, yDeck, 0)]),
+      new THREE.LineBasicMaterial({ color: 0x55ccff, transparent: true, opacity: 0.78 })
     ));
 
-    // 桥面横梁
     bridgeGroup.add(new THREE.LineSegments(
       new THREE.BufferGeometry().setFromPoints([
-        new THREE.Vector3(x, yDeck, -4.5),
-        new THREE.Vector3(x, yDeck, 4.5)
+        new THREE.Vector3(x, yDeck, -5), new THREE.Vector3(x, yDeck, 5)
       ]),
-      deckMat
+      new THREE.LineBasicMaterial({ color: 0x44bbff, transparent: true, opacity: 0.85 })
     ));
   }
 
-  // ==================== 球体 + 连接线（接近原图）===================
-  const labels = ["EVM", "BSC", "Solana", "Sui", "Aptos", "Soroban", "Cosmos"];
-  const colors = [0x627EEA, 0xF3BA2F, 0x00FFBD, 0xFF2D95, 0x4A9EFF, 0x9D4EFF, 0x00BFFF];
-  const basePositions = [-18, -12, -6, 0, 7, 14, 20];
+  // ==================== 球体 (接近原图位置) ====================
+  const chainData = [
+    {color:0x627EEA, x:-20, y:9, z:-7},   // EVM
+    {color:0xF3BA2F, x:-13, y:13, z:5},   // BSC
+    {color:0x00FFBD, x:-7, y:7, z:-9},    // Solana
+    {color:0xFF2D95, x:3, y:6.5, z:6},    // Sui
+    {color:0x4A9EFF, x:14, y:12, z:-6},   // Aptos
+    {color:0x9D4EFF, x:21, y:8.5, z:8},   // Soroban
+    {color:0x00BFFF, x:0, y:15, z:0}      // Cosmos
+  ];
 
   const spheres = [];
-  const connections = [];
-
-  labels.forEach((label, i) => {
+  chainData.forEach((data, i) => {
     const sphere = new THREE.Mesh(
-      new THREE.SphereGeometry(1.65, 36, 36),
+      new THREE.SphereGeometry(1.75, 48, 48),
       new THREE.MeshPhongMaterial({
-        color: colors[i],
-        emissive: colors[i],
-        emissiveIntensity: 0.9,
-        shininess: 60,
+        color: data.color,
+        emissive: data.color,
+        emissiveIntensity: 1.2,
+        shininess: 90,
         transparent: true,
-        opacity: 0.97
+        opacity: 0.98
       })
     );
-    sphere.userData = { baseX: basePositions[i], offset: i * 1.1, speed: 0.7 + Math.random() * 0.6 };
-    sphere.position.set(basePositions[i], 7.5, (i % 2 ? 3 : -3));
+    sphere.position.set(data.x, data.y, data.z);
+    sphere.userData = { baseX: data.x, phase: i * 0.8 };
     bridgeGroup.add(sphere);
     spheres.push(sphere);
 
-    // 辉光
+    // 强辉光
     const glow = new THREE.Mesh(
-      new THREE.SphereGeometry(2.2, 32, 32),
-      new THREE.MeshBasicMaterial({ color: colors[i], transparent: true, opacity: 0.3, blending: THREE.AdditiveBlending })
+      new THREE.SphereGeometry(2.4, 36, 36),
+      new THREE.MeshBasicMaterial({
+        color: data.color,
+        transparent: true,
+        opacity: 0.4,
+        blending: THREE.AdditiveBlending
+      })
     );
     sphere.add(glow);
   });
 
   // 灯光
-  scene.add(new THREE.AmbientLight(0x99aaff, 1.1));
-  const light1 = new THREE.PointLight(0xffffff, 2, 150);
-  light1.position.set(10, 28, 35);
-  scene.add(light1);
+  scene.add(new THREE.AmbientLight(0x99bbff, 1.3));
+  const light = new THREE.PointLight(0xffffff, 2.5, 200);
+  light.position.set(20, 32, 45);
+  scene.add(light);
 
   let time = 0;
 
   function animate() {
     requestAnimationFrame(animate);
-    time += 0.018;
+    time += 0.017;
 
     spheres.forEach((s, i) => {
-      const prog = (time * s.userData.speed + s.userData.offset) % (length + 20) - length/2 - 10;
-      s.position.x = prog;
-      s.position.y = 6.8 + Math.sin(time * 2.8 + i) * 2.2;
-      s.position.z = Math.sin(time * 1.8 + i) * 3.5;
-      s.rotation.y += 0.012;
+      const angle = time * 0.65 + s.userData.phase;
+      s.position.x = s.userData.baseX + Math.sin(angle) * 4.5;
+      s.position.y = 7.5 + Math.sin(angle * 1.4) * 4.5;
+      s.position.z = Math.cos(angle * 0.9) * 6;
+      s.rotation.y += 0.008;
     });
 
     renderer.render(scene, camera);
