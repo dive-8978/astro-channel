@@ -863,16 +863,16 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
   }, 1500);
 });
 
-<script>
-// 顶部霓虹脉冲金门大桥 - 升级真实版（更像原图）
+  
+// 超复杂金门大桥 - 密集结构版（大量线条 + 多层细节）
 (function initTopBridge() {
   const container = document.getElementById('bridge-top');
   if (!container) return;
 
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(52, container.clientWidth / 240, 0.1, 200);
-  camera.position.set(0, 12, 26);
-  camera.lookAt(0, 5, 0);
+  const camera = new THREE.PerspectiveCamera(50, container.clientWidth / 240, 0.1, 200);
+  camera.position.set(0, 13, 29);
+  camera.lookAt(0, 6, 0);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(container.clientWidth, 240);
@@ -883,112 +883,122 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
   const bridgeGroup = new THREE.Group();
   scene.add(bridgeGroup);
 
-  const length = 42;
-  const towerHeight = 16;
-  const segments = 120;
+  const length = 44;
+  const towerHeight = 17.5;
+  const segments = 160;   // 极高密度
 
-  // ==================== 真实桥塔 ====================
-  const towerMat = new THREE.LineBasicMaterial({ color: 0x88eeff, transparent: true, opacity: 0.9 });
-  const createTower = (xPos) => {
-    const tower = new THREE.Group();
-    // 主竖柱
-    const points = [
-      new THREE.Vector3(xPos, 0, -2.5), new THREE.Vector3(xPos, towerHeight, -2.5),
-      new THREE.Vector3(xPos, 0, 2.5),  new THREE.Vector3(xPos, towerHeight, 2.5)
-    ];
-    // 横梁
-    for (let y = 4; y < towerHeight; y += 3) {
-      points.push(new THREE.Vector3(xPos-2.5, y, -2.5), new THREE.Vector3(xPos+2.5, y, -2.5));
-      points.push(new THREE.Vector3(xPos-2.5, y, 2.5),  new THREE.Vector3(xPos+2.5, y, 2.5));
+  // ==================== 超复杂桥塔 ====================
+  const towerMat = new THREE.LineBasicMaterial({ color: 0x99eeff, transparent: true, opacity: 0.85 });
+  const createComplexTower = (xPos) => {
+    const group = new THREE.Group();
+    const points = [];
+    // 主竖柱（内外两层）
+    for (let z of [-3, 3]) {
+      points.push(new THREE.Vector3(xPos-1.5, 0, z), new THREE.Vector3(xPos-1.5, towerHeight, z));
+      points.push(new THREE.Vector3(xPos+1.5, 0, z), new THREE.Vector3(xPos+1.5, towerHeight, z));
     }
-    const towerLines = new THREE.LineSegments(
-      new THREE.BufferGeometry().setFromPoints(points),
-      towerMat
-    );
-    tower.add(towerLines);
-    return tower;
+    // 大量横梁 + 斜撑
+    for (let y = 3; y < towerHeight; y += 1.8) {
+      points.push(new THREE.Vector3(xPos-3, y, -3), new THREE.Vector3(xPos+3, y, -3));
+      points.push(new THREE.Vector3(xPos-3, y, 3),  new THREE.Vector3(xPos+3, y, 3));
+      // 斜撑
+      points.push(new THREE.Vector3(xPos-3, y, -3), new THREE.Vector3(xPos+3, y+2.5, 3));
+      points.push(new THREE.Vector3(xPos-3, y, 3),  new THREE.Vector3(xPos+3, y+2.5, -3));
+    }
+    group.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(points), towerMat));
+    return group;
   };
-  bridgeGroup.add(createTower(-length/2));
-  bridgeGroup.add(createTower(length/2));
 
-  // ==================== 主悬索（经典大弧线）===================
-  const cablePoints = [];
+  bridgeGroup.add(createComplexTower(-length/2));
+  bridgeGroup.add(createComplexTower(length/2));
+
+  // ==================== 主悬索（多层）===================
+  const cableMat = new THREE.LineBasicMaterial({ color: 0xaaffff, linewidth: 4 });
+  for (let offset of [-0.6, 0, 0.6]) {
+    const cablePoints = [];
+    for (let i = 0; i <= segments; i++) {
+      const t = i / segments;
+      const x = -length/2 + length * t;
+      const y = towerHeight - 8.5 * Math.pow(Math.sin(t * Math.PI), 1.12) + offset;
+      cablePoints.push(new THREE.Vector3(x, y, offset*1.2));
+    }
+    bridgeGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(cablePoints), cableMat));
+  }
+
+  // ==================== 超密集桥面 + 吊索 + 横梁 ====================
+  const deckMat = new THREE.LineBasicMaterial({ color: 0x66ddff, transparent: true, opacity: 0.7 });
+  for (let i = 0; i <= segments; i += 1.5) {
+    const t = i / segments;
+    const x = -length/2 + length * t;
+    const yDeck = 2.4 + Math.sin(t * Math.PI) * 1.15;
+    const yCable = towerHeight - 8.5 * Math.pow(Math.sin(t * Math.PI), 1.12);
+
+    // 垂直吊索（密集）
+    bridgeGroup.add(new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x, yCable, 0), new THREE.Vector3(x, yDeck, 0)]),
+      deckMat
+    ));
+
+    // 桥面横梁
+    bridgeGroup.add(new THREE.LineSegments(
+      new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(x, yDeck, -4.2),
+        new THREE.Vector3(x, yDeck, 4.2)
+      ]),
+      deckMat
+    ));
+  }
+
+  // 桥面纵向主梁
+  const mainDeckPoints = [];
   for (let i = 0; i <= segments; i++) {
     const t = i / segments;
     const x = -length/2 + length * t;
-    const y = towerHeight - 7.5 * Math.pow(Math.sin(t * Math.PI), 1.15);
-    cablePoints.push(new THREE.Vector3(x, y, 0));
+    const y = 2.4 + Math.sin(t * Math.PI) * 1.15;
+    mainDeckPoints.push(new THREE.Vector3(x, y, -3.8));
+    mainDeckPoints.push(new THREE.Vector3(x, y, 3.8));
   }
-  const mainCable = new THREE.Line(
-    new THREE.BufferGeometry().setFromPoints(cablePoints),
-    new THREE.LineBasicMaterial({ color: 0x99ffff, linewidth: 5 })
-  );
-  bridgeGroup.add(mainCable);
+  bridgeGroup.add(new THREE.LineSegments(
+    new THREE.BufferGeometry().setFromPoints(mainDeckPoints),
+    new THREE.LineBasicMaterial({ color: 0x44bbff, linewidth: 2.5 })
+  ));
 
-  // ==================== 桥面 + 密集吊索 ====================
-  const deckMat = new THREE.LineBasicMaterial({ color: 0x55ccff, transparent: true, opacity: 0.75 });
-  for (let i = 0; i <= segments; i += 2) {
-    const t = i / segments;
-    const x = -length/2 + length * t;
-    const yDeck = 2.2 + Math.sin(t * Math.PI) * 1.1;
-    const yCable = towerHeight - 7.5 * Math.pow(Math.sin(t * Math.PI), 1.15);
-
-    // 垂直吊索
-    bridgeGroup.add(new THREE.Line(
-      new THREE.BufferGeometry().setFromPoints([
-        new THREE.Vector3(x, yCable, 0),
-        new THREE.Vector3(x, yDeck, 0)
-      ]),
-      deckMat
-    ));
-
-    // 桥面横线
-    bridgeGroup.add(new THREE.LineSegments(
-      new THREE.BufferGeometry().setFromPoints([
-        new THREE.Vector3(x, yDeck, -3.5),
-        new THREE.Vector3(x, yDeck, 3.5)
-      ]),
-      deckMat
-    ));
-  }
-
-  // ==================== 移动的链球 ====================
+  // ==================== 移动的球体（在桥上）===================
   const sphereData = [
-    {color: 0x627EEA, baseX: -16}, {color: 0xF3BA2F, baseX: -10},
-    {color: 0x00FFBD, baseX: -4},  {color: 0xFF2D95, baseX:  3},
-    {color: 0x4A9EFF, baseX: 10},  {color: 0x9D4EFF, baseX: 16}
+    {color: 0x627EEA, baseX: -17}, {color: 0xF3BA2F, baseX: -11},
+    {color: 0x00FFBD, baseX: -5},  {color: 0xFF2D95, baseX:  2},
+    {color: 0x4A9EFF, baseX: 9},   {color: 0x9D4EFF, baseX: 15}
   ];
 
   const spheres = [];
   sphereData.forEach((data, i) => {
     const sphere = new THREE.Mesh(
-      new THREE.SphereGeometry(1.45, 32, 32),
+      new THREE.SphereGeometry(1.4, 32, 32),
       new THREE.MeshPhongMaterial({
         color: data.color,
         emissive: data.color,
-        emissiveIntensity: 0.85,
-        shininess: 40,
+        emissiveIntensity: 0.9,
+        shininess: 50,
         transparent: true,
-        opacity: 0.95
+        opacity: 0.96
       })
     );
-    sphere.userData = { baseX: data.baseX, offset: i * 1.4, speed: 0.75 + Math.random() * 0.5 };
-    sphere.position.set(data.baseX, 6, 0);
+    sphere.userData = { baseX: data.baseX, offset: i * 1.3, speed: 0.8 + Math.random() * 0.6 };
+    sphere.position.set(data.baseX, 6.5, 0);
     bridgeGroup.add(sphere);
     spheres.push(sphere);
 
-    // 辉光
     const glow = new THREE.Mesh(
-      new THREE.SphereGeometry(2.0, 24, 24),
-      new THREE.MeshBasicMaterial({ color: data.color, transparent: true, opacity: 0.25, blending: THREE.AdditiveBlending })
+      new THREE.SphereGeometry(1.95, 28, 28),
+      new THREE.MeshBasicMaterial({ color: data.color, transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending })
     );
     sphere.add(glow);
   });
 
-  // 灯光
-  scene.add(new THREE.AmbientLight(0x7799ff, 0.75));
-  const pLight = new THREE.PointLight(0xffffff, 1.6, 100);
-  pLight.position.set(8, 22, 28);
+  // 灯光增强
+  scene.add(new THREE.AmbientLight(0x88aaff, 0.9));
+  const pLight = new THREE.PointLight(0xffffff, 1.8, 120);
+  pLight.position.set(10, 25, 30);
   scene.add(pLight);
 
   let time = 0;
@@ -996,22 +1006,19 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
 
   function animate() {
     requestAnimationFrame(animate);
-    time += 0.022;
+    time += 0.02;
 
-    // 脉冲
-    pulsePos += 0.52;
+    // 粉色脉冲
+    pulsePos += 0.55;
     if (pulsePos > length/2) pulsePos = -length/2;
-    const t = (pulsePos + length/2) / length;
-    const py = 2.2 + Math.sin(t * Math.PI) * 1.1;
-    // 这里可以再加一个脉冲Line，如果你想要
 
-    // 球体沿桥移动
+    // 球体在桥上移动
     spheres.forEach((s, i) => {
-      const prog = (time * s.userData.speed + s.userData.offset) % (length + 12) - length/2 - 6;
+      const prog = (time * s.userData.speed + s.userData.offset) % (length + 15) - length/2 - 7.5;
       s.position.x = prog;
-      s.position.y = 5.8 + Math.sin(time * 3 + i) * 1.4;
-      s.position.z = Math.cos(time * 2 + i) * 2.1;
-      s.rotation.y += 0.013;
+      s.position.y = 5.6 + Math.sin(time * 3.2 + i) * 1.6;
+      s.position.z = Math.sin(time * 2.1 + i) * 2.4;
+      s.rotation.y += 0.015;
     });
 
     renderer.render(scene, camera);
