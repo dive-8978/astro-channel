@@ -863,78 +863,140 @@ document.querySelector('.api-copy').addEventListener('click', (e) => {
   }, 1500);
 });
 
-// 顶部霓虹脉冲桥（用户要求放在Global Intent Network正上方）
+// 顶部经典金门大桥（固定不转 + 高亮线条 + 好看链球）
 (function initTopBridge() {
-const container = document.getElementById('bridge-top');
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(60, container.clientWidth / 240, 0.1, 100);
-camera.position.set(0, 4, 14); // 拉远镜头，桥更大
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-renderer.setSize(container.clientWidth, 240);
-renderer.setPixelRatio(window.devicePixelRatio);
-container.appendChild(renderer.domElement);
-const bridgeGroup = new THREE.Group();
-scene.add(bridgeGroup);
-// ===== 桥放大三倍 =====
-const length = 30;
-const width = 6;
-const seg = 60;
-const points = [];
-for (let i = 0; i <= seg; i++) {
-const x = -length / 2 + (length / seg) * i;
-const y = Math.sin((x / length) * Math.PI) * 2.4;
-points.push(new THREE.Vector3(x, y, -width/2), new THREE.Vector3(x, y, width/2));
-}
-for (let side = -1; side <= 1; side += 2) {
-for (let i = 0; i < seg; i++) {
-const x1 = -length/2 + (length/seg)*i;
-const x2 = -length/2 + (length/seg)*(i+1);
-const y1 = Math.sin((x1/length)*Math.PI)*2.4;
-const y2 = Math.sin((x2/length)*Math.PI)*2.4;
-points.push(new THREE.Vector3(x1, y1, side*width/2), new THREE.Vector3(x2, y2, side*width/2));
-}
-}
-const bridgeGeo = new THREE.BufferGeometry().setFromPoints(points);
-const bridgeMat = new THREE.LineBasicMaterial({
-color: 0x4cc9f0,
-transparent: true,
-opacity: 0.4
-});
-const bridge = new THREE.LineSegments(bridgeGeo, bridgeMat);
-bridgeGroup.add(bridge);
-// ===== 超亮脉冲 =====
-const pulseGeo = new THREE.BufferGeometry();
-const pulseMat = new THREE.LineBasicMaterial({
-color: 0xf72585,
-transparent: true,
-opacity: 1
-});
-const pulse = new THREE.Line(pulseGeo, pulseMat);
-bridgeGroup.add(pulse);
-let pos = -length / 2;
-const speed = 0.4; // 更快脉冲
-function animate() {
-requestAnimationFrame(animate);
-pos += speed;
-if (pos > length/2) pos = -length/2;
-const y = Math.sin((pos/length)*Math.PI) * 2.4;
-const w = width / 2;
-const pts = [
-new THREE.Vector3(pos-0.8, y, -w),
-new THREE.Vector3(pos+0.8, y, -w),
-new THREE.Vector3(pos+0.8, y, w),
-new THREE.Vector3(pos-0.8, y, w)
-];
-pulseGeo.setFromPoints(pts);
-bridgeGroup.rotation.y += 0.001;
-renderer.render(scene, camera);
-}
-animate();
-window.addEventListener('resize', () => {
-camera.aspect = container.clientWidth / 240;
-camera.updateProjectionMatrix();
-renderer.setSize(container.clientWidth, 240);
-});
+  const container = document.getElementById('bridge-top');
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, container.clientWidth / 240, 0.1, 100);
+  camera.position.set(0, 6, 18);
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(container.clientWidth, 240);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  container.appendChild(renderer.domElement);
+
+  const bridgeGroup = new THREE.Group();
+  scene.add(bridgeGroup);
+
+  // ========== 经典金门大桥结构 ==========
+  const length = 34;
+  const towerHeight = 9;
+  const cableSeg = 60;
+  const points = [];
+
+  // 左桥塔
+  points.push(
+    new THREE.Vector3(-length/2, 0, 0),
+    new THREE.Vector3(-length/2, towerHeight, 0)
+  );
+  // 右桥塔
+  points.push(
+    new THREE.Vector3(length/2, 0, 0),
+    new THREE.Vector3(length/2, towerHeight, 0)
+  );
+
+  // 桥面
+  for (let i = 0; i <= cableSeg; i++) {
+    const t = i / cableSeg;
+    const x = -length/2 + length * t;
+    const y = 1 + Math.sin(t * Math.PI) * 0.8;
+    points.push(new THREE.Vector3(x, y, -2.5));
+    points.push(new THREE.Vector3(x, y, 2.5));
+  }
+
+  // 主悬索（金门大桥标志性弧线）
+  for (let i = 0; i <= cableSeg; i++) {
+    const t = i / cableSeg;
+    const x = -length/2 + length * t;
+    const y = towerHeight - Math.sin(t * Math.PI) * 6.5;
+    points.push(new THREE.Vector3(x, y, 0));
+  }
+
+  // 密集垂直拉索
+  for (let i = 0; i <= cableSeg; i += 3) {
+    const t = i / cableSeg;
+    const x = -length/2 + length * t;
+    const yCable = towerHeight - Math.sin(t * Math.PI) * 6.5;
+    const yDeck = 1 + Math.sin(t * Math.PI) * 0.8;
+    points.push(new THREE.Vector3(x, yCable, 0));
+    points.push(new THREE.Vector3(x, yDeck, 0));
+  }
+
+  const bridgeGeo = new THREE.BufferGeometry().setFromPoints(points);
+  const bridgeMat = new THREE.LineBasicMaterial({
+    color: 0x4cc9f0,
+    transparent: true,
+    opacity: 0.9
+  });
+  const bridge = new THREE.LineSegments(bridgeGeo, bridgeMat);
+  bridgeGroup.add(bridge);
+
+  // ========== 干净好看的链球（只自转，不公转） ==========
+  const spheres = [];
+  const balls = [
+    { x: -10, y: 5, color: 0x627EEA }, // ETH
+    { x: 10,  y: 5, color: 0xF3BA2F }, // BSC
+    { x: -5,  y: 7, color: 0x00FFBD }, // SOL
+    { x: 5,   y: 7, color: 0x2579E5 }, // SUI
+    { x: 0,   y: 6, color: 0xf72585 }  // ASTRO
+  ];
+
+  balls.forEach(info => {
+    const g = new THREE.SphereGeometry(1.2, 12, 10);
+    const m = new THREE.MeshBasicMaterial({
+      color: info.color,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.8
+    });
+    const s = new THREE.Mesh(g, m);
+    s.position.set(info.x, info.y, 0);
+    bridgeGroup.add(s);
+    spheres.push(s);
+  });
+
+  // ========== 粉色脉冲光 ==========
+  const pulseGeo = new THREE.BufferGeometry();
+  const pulseMat = new THREE.LineBasicMaterial({
+    color: 0xf72585,
+    transparent: true,
+    opacity: 1
+  });
+  const pulse = new THREE.Line(pulseGeo, pulseMat);
+  bridgeGroup.add(pulse);
+
+  let pos = -length / 2;
+  const speed = 0.4;
+
+  function animate() {
+    requestAnimationFrame(animate);
+
+    // 脉冲移动
+    pos += speed;
+    if (pos > length/2) pos = -length/2;
+    const t = (pos + length/2) / length;
+    const y = 1 + Math.sin(t * Math.PI) * 0.8;
+    const pts = [
+      new THREE.Vector3(pos-1, y, -2.5),
+      new THREE.Vector3(pos+1, y, -2.5),
+      new THREE.Vector3(pos+1, y, 2.5),
+      new THREE.Vector3(pos-1, y, 2.5)
+    ];
+    pulseGeo.setFromPoints(pts);
+
+    // 只有球自转，桥完全不动
+    spheres.forEach(s => {
+      s.rotation.y += 0.006;
+    });
+
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = container.clientWidth / 240;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, 240);
+  });
 })();
 </script>
 </body>
