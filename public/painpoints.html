@@ -1,158 +1,332 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstroBridge - Pain Points</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#020617;color:#fff;overflow-x:hidden}
-#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.5}
-.container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
-
-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav-right{display:flex;align-items:center;gap:24px}
-.nav-links{display:flex;gap:22px}
-.nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
-.nav-links a:hover{color:#4cc9f0}
-.x-icon{width:34px;height:34px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s;border:1px solid #4cc9f0}
-.x-icon:hover{transform:scale(1.1);border-color:#f72585}
-.x-icon svg{width:15px;height:15px;fill:#fff}
-
-.page-title{font-size:2.8rem;margin-bottom:12px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.page-desc{color:#a8dadc;font-size:1.1rem;margin-bottom:60px}
-
-.pain-grid{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:32px;
-  margin-bottom:60px;
-}
-.pain-circle{
-  width:100%;
-  aspect-ratio:1/1;
-  border-radius:50%;
-  background:rgba(255,255,255,0.02);
-  border:2px solid rgba(76,201,240,0.3);
-  box-shadow:0 0 28px rgba(76,201,240,0.3),
-             inset 0 0 22px rgba(76,201,240,0.12);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px;
-  transition:all 0.4s ease;
-}
-.pain-circle:hover{
-  border-color:rgba(247,37,133,0.5);
-  box-shadow:0 0 40px rgba(247,37,133,0.4),
-             inset 0 0 28px rgba(247,37,133,0.2);
-  transform:translateY(-6px);
-}
-.pain-circle h3{
-  color:#4cc9f0;
-  font-size:1.4rem;
-  margin-bottom:14px;
-}
-.pain-circle p{
-  color:#a8dadc;
-  font-size:1.05rem;
-  line-height:1.7;
-}
-
-.btn-home{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 30px;
-  background:linear-gradient(90deg,#4cc9f0,#f72585);
-  color:#fff;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-}
-
-footer{
-  margin-top:60px;
-  padding-top:30px;
-  border-top:1px solid rgba(255,255,255,0.08);
-  color:#a8dadc;
-  text-align:center;
-}
-
-@media(max-width:768px){
-  .page-title{font-size:2rem}
-  .pain-grid{grid-template-columns:1fr}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="MA is AstroBridge's private P2P messenger and wallet. Chat, transfer, and connect through a dedicated signed channel.">
+  <title>MA | Private Chat. Native Value.</title>
+  <link rel="icon" type="image/png" href="assets/app_icon_ma.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --ink: #05070b;
+      --panel: rgba(12, 18, 28, .74);
+      --line: rgba(144, 196, 255, .18);
+      --muted: #aab6c8;
+      --cyan: #73dcff;
+      --blue: #5e87ff;
+      --green: #52e6a2;
+      --white: #f7fbff;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--white);
+      font-family: Inter, system-ui, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: url("assets/splash_background.jpg") center 38% / cover no-repeat;
+      opacity: .22;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(5,7,11,.55), #05070b 86%);
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(4, 7, 11, .72);
+      backdrop-filter: blur(20px) saturate(140%);
+    }
+    .nav-inner { height: 76px; display: flex; align-items: center; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 12px; margin-right: auto; font-family: "Space Grotesk"; font-size: 22px; font-weight: 700; }
+    .brand img { width: 46px; height: 46px; border-radius: 12px; object-fit: cover; box-shadow: 0 0 28px rgba(92,176,255,.32); }
+    .brand small { display: block; color: var(--muted); font: 500 10px/1.1 Inter; text-transform: uppercase; }
+    .links { display: flex; gap: 26px; color: #d9e3ef; font-size: 14px; font-weight: 600; }
+    .links a:hover { color: var(--cyan); }
+    .icon-button {
+      width: 42px; height: 42px; display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 8px;
+      background: rgba(255,255,255,.05); color: var(--white); cursor: pointer;
+    }
+    .menu { display: none; }
+    .hero {
+      min-height: 96svh;
+      padding: 132px 0 62px;
+      display: grid;
+      align-items: center;
+      position: relative;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 56px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--cyan); font-size: 13px; font-weight: 700; text-transform: uppercase; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 16px var(--green); }
+    h1, h2, h3 { font-family: "Space Grotesk", Inter, sans-serif; letter-spacing: 0; }
+    h1 { margin: 22px 0 20px; max-width: 760px; font-size: clamp(54px, 7vw, 92px); line-height: .98; }
+    h1 span { color: var(--cyan); }
+    .lead { max-width: 650px; margin: 0 0 30px; color: #c0cbd9; font-size: clamp(17px, 2vw, 21px); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 20px; border: 1px solid var(--line); border-radius: 8px; font-weight: 700; }
+    .btn-primary { color: #041017; border-color: transparent; background: var(--cyan); }
+    .btn-secondary { background: rgba(255,255,255,.06); backdrop-filter: blur(14px); }
+    .micro { margin-top: 23px; display: flex; flex-wrap: wrap; gap: 18px; color: #90a0b4; font-size: 12px; }
+    .micro span { display: flex; align-items: center; gap: 7px; }
+    .device-stage { position: relative; min-height: 620px; display: grid; place-items: center; }
+    .device {
+      position: relative;
+      width: min(300px, 72vw);
+      aspect-ratio: 1080 / 2412;
+      padding: 8px;
+      border: 1px solid rgba(190,225,255,.38);
+      border-radius: 38px;
+      background: rgba(1,4,9,.92);
+      box-shadow: 0 36px 100px rgba(0,0,0,.6), 0 0 70px rgba(72,153,255,.22);
+      transform: rotate(3deg);
+    }
+    .device img { width: 100%; height: 100%; display: block; object-fit: cover; border-radius: 30px; }
+    .live-chip {
+      position: absolute; right: 0; top: 22%; width: 210px;
+      padding: 14px; border: 1px solid var(--line); border-radius: 8px;
+      background: rgba(10,17,27,.82); backdrop-filter: blur(18px);
+      box-shadow: 0 18px 50px rgba(0,0,0,.34);
+    }
+    .live-chip strong { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+    .live-chip code { display: block; margin-top: 6px; color: var(--muted); font-size: 10px; word-break: break-all; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); background: rgba(8,13,21,.72); backdrop-filter: blur(20px); }
+    .metric { padding: 26px; border-right: 1px solid var(--line); }
+    .metric:last-child { border-right: 0; }
+    .metric strong { display: block; font: 700 30px "Space Grotesk"; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    section { padding: 110px 0; }
+    .section-head { max-width: 720px; margin-bottom: 50px; }
+    .section-head h2 { margin: 10px 0 14px; font-size: clamp(38px, 5vw, 60px); line-height: 1.03; }
+    .section-head p { color: var(--muted); font-size: 17px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .feature { min-height: 250px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(9,14,23,.56); }
+    .feature i { color: var(--cyan); }
+    .feature h3 { margin: 52px 0 10px; font-size: 21px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14px; }
+    .transfer { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; }
+    .transfer-art { position: relative; min-height: 560px; overflow: hidden; border: 1px solid var(--line); background: rgba(8,13,22,.6); }
+    .transfer-art > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .34; }
+    .chat {
+      position: absolute; inset: 12% 9%; display: flex; flex-direction: column; justify-content: center; gap: 14px;
+    }
+    .bubble { width: fit-content; max-width: 78%; padding: 13px 16px; border: 1px solid var(--line); border-radius: 8px; background: rgba(7,12,20,.8); backdrop-filter: blur(15px); font-size: 14px; }
+    .bubble.me { align-self: flex-end; color: #031219; border-color: transparent; background: var(--cyan); }
+    .pay { width: 76%; align-self: flex-end; padding: 18px; border: 1px solid rgba(115,220,255,.5); border-radius: 8px; background: rgba(12,28,39,.9); }
+    .pay strong { display: block; margin: 8px 0; font: 700 28px "Space Grotesk"; }
+    .checks { display: grid; gap: 16px; margin-top: 30px; }
+    .check { display: flex; gap: 13px; color: #d4dfec; }
+    .check i { flex: 0 0 auto; color: var(--green); }
+    .architecture { background: #080d15; border-block: 1px solid var(--line); }
+    .channel { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .endpoint { padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.025); }
+    .endpoint code { display: block; margin: 18px 0 10px; color: var(--cyan); font-size: clamp(13px, 2vw, 17px); overflow-wrap: anywhere; }
+    .endpoint p { margin: 0; color: var(--muted); font-size: 13px; }
+    .cta { text-align: center; }
+    .cta img { width: 108px; height: 108px; border-radius: 26px; box-shadow: 0 0 46px rgba(86,171,255,.34); }
+    .cta h2 { margin: 26px auto 16px; max-width: 760px; font-size: clamp(40px, 6vw, 72px); line-height: 1; }
+    .cta p { margin: 0 auto 28px; max-width: 600px; color: var(--muted); }
+    footer { padding: 34px 0; border-top: 1px solid var(--line); color: #8290a2; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+    [data-lang="zh"] { display: none !important; }
+    body.zh [data-lang="en"] { display: none !important; }
+    body.zh [data-lang="zh"] { display: initial !important; }
+    @media (max-width: 900px) {
+      .links { display: none; }
+      .hero { padding-top: 118px; }
+      .hero-grid, .transfer, .channel { grid-template-columns: 1fr; }
+      .hero-copy, .device-stage { min-width: 0; }
+      .hero-copy { text-align: center; }
+      .eyebrow, .actions, .micro { justify-content: center; }
+      .device-stage { min-height: 570px; }
+      .live-chip { right: 3%; }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      .nav-inner { height: 68px; }
+      .brand { font-size: 18px; }
+      .brand img { width: 40px; height: 40px; border-radius: 10px; }
+      .hero { min-height: auto; padding-bottom: 38px; }
+      h1 { font-size: 44px; overflow-wrap: anywhere; }
+      .lead { font-size: 16px; }
+      .actions .btn { width: 100%; }
+      .device-stage { min-height: 510px; }
+      .device { width: 236px; border-radius: 31px; }
+      .device img { border-radius: 24px; }
+      .live-chip { right: 0; top: 28%; width: 158px; }
+      .micro { align-items: center; flex-direction: column; }
+      .metrics, .feature-grid { grid-template-columns: 1fr; }
+      .metric { border-right: 0; border-bottom: 1px solid var(--line); }
+      .metric:last-child { border-bottom: 0; }
+      section { padding: 78px 0; }
+      .feature { min-height: 210px; }
+      .feature h3 { margin-top: 35px; }
+      .transfer-art { min-height: 460px; }
+      .footer-inner { display: block; }
+    }
+  </style>
 </head>
 <body>
-
-<div id="particles"></div>
-<div class="container">
-
-<nav>
-  <div class="logo">AstroBridge</div>
-  <div class="nav-right">
-    <div class="nav-links">
-      <a href="vision.html">Vision</a>
-      <a href="painpoints.html">Pain Points</a>
-      <a href="technology.html">Technology</a>
-      <a href="progress.html">Progress</a>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="MA home">
+        <img src="assets/app_icon_ma.png" alt="MA">
+        <span>MA <small>by AstroBridge</small></span>
+      </a>
+      <div class="links">
+        <a href="#product"><span data-lang="en">Product</span><span data-lang="zh">产品</span></a>
+        <a href="#security"><span data-lang="en">Security</span><span data-lang="zh">安全</span></a>
+        <a href="#channel"><span data-lang="en">Channel</span><span data-lang="zh">通道</span></a>
+        <a href="https://www.astrochannel.one/roadmap.html">AstroWallet AI</a>
+      </div>
+      <button class="icon-button" id="lang" title="Language" aria-label="Switch language"><i data-lucide="languages"></i></button>
     </div>
-    <div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
-      <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span><span data-lang="en">AstroBridge dedicated channel</span><span data-lang="zh">AstroBridge 专属通道</span></div>
+          <h1><span data-lang="en">Private chat.<br><span>Native value.</span></span><span data-lang="zh">私密聊天。<br><span>价值直达。</span></span></h1>
+          <p class="lead" data-lang="en">MA brings familiar, effortless messaging together with a self-custody wallet and signed P2P delivery.</p>
+          <p class="lead" data-lang="zh">MA 将熟悉顺手的即时聊天、自托管钱包与签名 P2P 投递融为一个入口。</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#download"><i data-lucide="download"></i><span data-lang="en">Get MA for Android</span><span data-lang="zh">下载 Android 版</span></a>
+            <a class="btn btn-secondary" href="#product"><i data-lucide="message-circle-more"></i><span data-lang="en">Explore MA</span><span data-lang="zh">探索 MA</span></a>
+          </div>
+          <div class="micro">
+            <span><i data-lucide="shield-check" size="15"></i><span data-lang="en">Wallet signature identity</span><span data-lang="zh">钱包签名身份</span></span>
+            <span><i data-lucide="languages" size="15"></i><span data-lang="en">7 languages</span><span data-lang="zh">支持 7 种语言</span></span>
+            <span><i data-lucide="hard-drive" size="15"></i><span data-lang="en">Local-first data</span><span data-lang="zh">数据本地优先</span></span>
+          </div>
+        </div>
+        <div class="device-stage" aria-label="MA application preview">
+          <div class="device"><img src="ma-device-preview.png" alt="MA running on Android"></div>
+          <div class="live-chip">
+            <strong><span class="status-dot"></span><span data-lang="en">P2P channel online</span><span data-lang="zh">P2P 通道在线</span></strong>
+            <code>wss://p2p.astrochannel.one/chat</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap metrics">
+      <div class="metric"><strong id="nodes">180+</strong><span data-lang="en">Global healthy nodes</span><span data-lang="zh">全球健康节点</span></div>
+      <div class="metric"><strong>2</strong><span data-lang="en">Dedicated AstroBridge channels</span><span data-lang="zh">AstroBridge 专属通道</span></div>
+      <div class="metric"><strong>7</strong><span data-lang="en">Interface languages</span><span data-lang="zh">界面语言</span></div>
     </div>
-  </div>
-</nav>
 
-<h1 class="page-title">Pain Points</h1>
-<p class="page-desc">The critical problems Web3 is facing today.</p>
+    <section id="product">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow"><span data-lang="en">One conversation. More possibility.</span><span data-lang="zh">一段会话，更多可能。</span></div>
+          <h2><span data-lang="en">Messaging designed around people, not protocols.</span><span data-lang="zh">围绕人与交流设计，而不是围绕协议。</span></h2>
+          <p data-lang="en">MA keeps the interaction calm and familiar while placing identity, value, and network control in your hands.</p>
+          <p data-lang="zh">MA 保持安静、熟悉的交互体验，同时把身份、价值和网络控制权交回你手中。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><i data-lucide="messages-square"></i><h3><span data-lang="en">Focused private chat</span><span data-lang="zh">专注私聊</span></h3><p data-lang="en">Direct P2P message delivery with presence and delivery state synchronization.</p><p data-lang="zh">通过专属 P2P 通道精准投递消息，并同步在线与送达状态。</p></article>
+          <article class="feature"><i data-lucide="send-horizontal"></i><h3><span data-lang="en">Transfer inside chat</span><span data-lang="zh">聊天内转账</span></h3><p data-lang="en">Send value from the same place you speak, without breaking the conversation.</p><p data-lang="zh">无需跳出会话，在聊天中直接发起价值转移。</p></article>
+          <article class="feature"><i data-lucide="wallet-cards"></i><h3><span data-lang="en">Self-custody wallet</span><span data-lang="zh">自托管钱包</span></h3><p data-lang="en">Asset view, transfer, receive, swap entry, and transaction history in one app.</p><p data-lang="zh">资产、转账、收款、兑换入口与交易记录集中管理。</p></article>
+          <article class="feature"><i data-lucide="fingerprint"></i><h3><span data-lang="en">Signed identity</span><span data-lang="zh">签名身份</span></h3><p data-lang="en">Wallet signatures authenticate the connection without handing over custody.</p><p data-lang="zh">用钱包签名认证连接，不交出资产托管权。</p></article>
+          <article class="feature"><i data-lucide="network"></i><h3><span data-lang="en">Live network status</span><span data-lang="zh">实时网络状态</span></h3><p data-lang="en">See AstroBridge API, P2P channel, node health, and queue state directly.</p><p data-lang="zh">直接查看 API、P2P 通道、节点健康度与队列状态。</p></article>
+          <article class="feature"><i data-lucide="scan-line"></i><h3><span data-lang="en">Scan and connect</span><span data-lang="zh">扫码连接</span></h3><p data-lang="en">Use QR entry points for addresses and streamlined value actions.</p><p data-lang="zh">通过二维码识别地址，快速完成价值操作。</p></article>
+        </div>
+      </div>
+    </section>
 
-<div class="pain-grid">
-  <div class="pain-circle">
-    <h3>Fragmented Ecosystem</h3>
-    <p>Users switch between chains, wallets, bridges, and interfaces. Experience is broken.</p>
-  </div>
-  <div class="pain-circle">
-    <h3>Complexity & High Risk</h3>
-    <p>Cross-chain operations are technical, error-prone, and expose users to serious risks.</p>
-  </div>
-  <div class="pain-circle">
-    <h3>No Autonomous Execution</h3>
-    <p>All actions require manual steps. Automation is centralized and insecure.</p>
-  </div>
-  <div class="pain-circle">
-    <h3>Robot Economy Unready</h3>
-    <p>Blockchain was not designed for large-scale AI agent automation and execution.</p>
-  </div>
-</div>
+    <section id="security">
+      <div class="wrap transfer">
+        <div class="transfer-art">
+          <img src="assets/wallet_illustration.png" alt="">
+          <div class="chat">
+            <div class="bubble"><span data-lang="en">Dinner was on me. Send your share whenever.</span><span data-lang="zh">晚餐我先付了，方便时把你的部分转来。</span></div>
+            <div class="pay"><span data-lang="en">MA Transfer</span><span data-lang="zh">MA 转账</span><strong>24.80 USDT</strong><span data-lang="en">Signed and ready</span><span data-lang="zh">已签名，等待发送</span></div>
+            <div class="bubble me"><span data-lang="en">Sent. That was quick.</span><span data-lang="zh">已发出，很快。</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="eyebrow"><span data-lang="en">Conversation meets value</span><span data-lang="zh">聊天连接价值</span></div>
+          <div class="section-head">
+            <h2><span data-lang="en">Transfer without leaving the moment.</span><span data-lang="zh">不离开当下，直接完成转账。</span></h2>
+            <p data-lang="en">MA makes a transfer feel like a natural part of conversation while keeping signature confirmation visible and deliberate.</p>
+            <p data-lang="zh">MA 让转账自然融入会话，同时保留清晰、可确认的钱包签名步骤。</p>
+          </div>
+          <div class="checks">
+            <div class="check"><i data-lucide="check-circle-2"></i><span data-lang="en">Sender identity bound to the authenticated socket</span><span data-lang="zh">发送者身份与已认证连接绑定</span></div>
+            <div class="check"><i data-lucide="check-circle-2"></i><span data-lang="en">Delivery acknowledgement and clear error states</span><span data-lang="zh">提供送达确认与明确错误状态</span></div>
+            <div class="check"><i data-lucide="check-circle-2"></i><span data-lang="en">Biometric access and local-first storage controls</span><span data-lang="zh">生物识别访问与本地优先存储控制</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a href="index.html" class="btn-home">← Back to Home</a>
+    <section class="architecture" id="channel">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow"><span data-lang="en">Built on AstroBridge</span><span data-lang="zh">由 AstroBridge 驱动</span></div>
+          <h2><span data-lang="en">Two dedicated channels. One coherent experience.</span><span data-lang="zh">两条专属通道，一个连贯体验。</span></h2>
+        </div>
+        <div class="channel">
+          <article class="endpoint"><i data-lucide="route"></i><code>https://api.astrochannel.one</code><p data-lang="en">Assets, transaction broadcast, intent submission, user validation, and ecosystem APIs.</p><p data-lang="zh">承载资产查询、交易广播、意图提交、用户校验与生态接口。</p></article>
+          <article class="endpoint"><i data-lucide="radio-tower"></i><code>wss://p2p.astrochannel.one/chat</code><p data-lang="en">Real-time private messages, presence synchronization, and signed P2P transport.</p><p data-lang="zh">承载实时私聊、状态同步与签名 P2P 传输。</p></article>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <p>© 2026 AstroBridge</p>
-</footer>
+    <section class="cta" id="download">
+      <div class="wrap">
+        <img src="assets/app_icon_ma.png" alt="MA icon">
+        <h2><span data-lang="en">Say it. Send it.<br>Own the connection.</span><span data-lang="zh">开口即聊，随聊即转。<br>连接由你掌握。</span></h2>
+        <p data-lang="en">MA for Android is entering active product testing. The official download will be published here after release signing and final security review.</p>
+        <p data-lang="zh">MA Android 版正在进行产品测试。完成正式签名与最终安全审查后，官方下载将在这里发布。</p>
+        <a class="btn btn-secondary" href="https://www.astrochannel.one"><i data-lucide="arrow-up-right"></i><span data-lang="en">Visit AstroBridge</span><span data-lang="zh">访问 AstroBridge</span></a>
+      </div>
+    </section>
+  </main>
 
-</div>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 MA by AstroBridge</span>
+      <span data-lang="en">Private messaging · Self-custody value · Dedicated channel</span><span data-lang="zh">私密通信 · 自托管价值 · 专属通道</span>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-particlesJS("particles",{
-  particles:{
-    number:{value:80,density:{enable:true,value_area:800}},
-    color:{value:["#4cc9f0","#f72585"]},
-    opacity:{value:0.4,random:true},
-    size:{value:3,random:true},
-    line_linked:{enable:true,distance:150,color:"#4cc9f0",opacity:0.15,width:1},
-    move:{enable:true,speed:1.5,random:true}
-  },
-  interactivity:{events:{onhover:{enable:true,mode:"grab"}}},
-  retina_detect:true
-});
-</script>
-
+  <script>
+    lucide.createIcons();
+    document.getElementById("lang").addEventListener("click", () => document.body.classList.toggle("zh"));
+    fetch("https://api.astrochannel.one/nodes/online")
+      .then(response => response.ok ? response.json() : Promise.reject())
+      .then(data => {
+        const candidates = [data.count, data.total, data.onlineNodes, data.healthyNodes, data.nodes];
+        const value = candidates.find(item => Number.isFinite(Number(item)) && typeof item !== "boolean");
+        if (value) document.getElementById("nodes").textContent = value;
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>
