@@ -356,17 +356,60 @@ nav{
   line-height:1.9;
 }
 footer{
-  text-align:center;
-  padding:80px 0 60px;
-  border-top:1px solid rgba(255,255,255,0.1);
+  padding:0 0 60px;
   color:#a8dadc;
   font-size:0.98rem;
+}
+.enterprise-footer{
+  margin-top:90px;
+  border-top:1px solid rgba(76,201,240,0.18);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(76,201,240,0.18), transparent 34%),
+    radial-gradient(circle at 80% 10%, rgba(247,37,133,0.16), transparent 32%),
+    linear-gradient(180deg, rgba(5,10,32,0.6), rgba(2,1,18,0.96));
+  border-radius:34px 34px 0 0;
+  overflow:hidden;
+  box-shadow:0 -40px 120px rgba(76,201,240,0.12);
+}
+.ecosystem-strip{padding:34px 0 28px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.ecosystem-title{text-align:center;color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px;opacity:.9}
+.brand-rail-wrap{overflow:hidden;mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);-webkit-mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)}
+.brand-rail{display:flex;width:max-content;gap:18px;animation:brandFlow 38s linear infinite}
+.chain-logo{
+  width:112px;height:72px;border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  background:rgba(255,255,255,0.055);border:1px solid rgba(255,255,255,0.12);
+  box-shadow:inset 0 0 24px rgba(255,255,255,0.035),0 0 24px rgba(76,201,240,0.08);
+  color:#fff;flex:0 0 auto;animation:logoPulse 2.8s ease-in-out infinite;
+}
+.chain-logo strong{font-size:1.1rem;letter-spacing:.08em}
+.chain-logo span{color:#9edff5;font-size:.72rem;letter-spacing:.05em}
+.chain-logo:nth-child(3n){animation-delay:.35s}.chain-logo:nth-child(4n){animation-delay:.7s}.chain-logo:nth-child(5n){animation-delay:1.05s}
+.chain-logo.btc{border-color:rgba(247,147,26,.38);box-shadow:0 0 34px rgba(247,147,26,.16)}
+.chain-logo.bsc{border-color:rgba(243,186,47,.42);box-shadow:0 0 34px rgba(243,186,47,.16)}
+.chain-logo.sol{border-color:rgba(20,241,149,.4);box-shadow:0 0 34px rgba(20,241,149,.14)}
+.chain-logo.eth{border-color:rgba(98,126,234,.4);box-shadow:0 0 34px rgba(98,126,234,.16)}
+.chain-logo.spcxb{border-color:rgba(247,37,133,.42);box-shadow:0 0 34px rgba(247,37,133,.16)}
+@keyframes brandFlow{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes logoPulse{0%,100%{transform:translateY(0);filter:brightness(1)}50%{transform:translateY(-4px);filter:brightness(1.35)}}
+.footer-main{padding:46px 42px 28px;display:grid;grid-template-columns:minmax(260px,1.4fr) repeat(4,minmax(150px,1fr));gap:34px;text-align:left}
+.footer-brand h2{font-size:2rem;margin-bottom:14px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.footer-brand p{color:#a8dadc;line-height:1.65;max-width:360px}
+.footer-col h4{color:#fff;font-size:.88rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.footer-col a,.footer-col span{display:block;color:#9ec8d8;text-decoration:none;margin:10px 0;transition:.25s}
+.footer-col a:hover{color:#4cc9f0;transform:translateX(4px)}
+.status-row{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
+.status-pill{border:1px solid rgba(76,201,240,0.35);background:rgba(76,201,240,0.08);border-radius:999px;padding:8px 12px;color:#c4f1ff;font-size:.82rem}
+.footer-bottom{margin:0 42px;padding:24px 0 0;border-top:1px solid rgba(255,255,255,0.09);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#7faabc}
+.phase-note{color:#7faabc;max-width:760px;line-height:1.55}
 }
 @media(max-width:768px){
 .hero h1{font-size:2.8rem}
 .container{padding:20px 20px}
 .card-grid{grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
 .globe-container{height:420px;}
+.footer-main{grid-template-columns:1fr;padding:34px 24px}
+.footer-bottom{margin:0 24px}
+.chain-logo{width:96px;height:64px}
 }
 </style>
 </head>
@@ -510,9 +553,7 @@ footer{
                 box-shadow: 0 0 40px rgba(76,201,240,0.45), inset 0 0 20px rgba(247,37,133,0.12);
                 padding: 32px 24px; text-align: center;">
         <h3 style="color: #fff; margin: 0 0 20px; font-size: 2rem; font-weight: 600; text-shadow: 0 0 12px rgba(76,201,240,0.65);">Internal Security Certification</h3>
-        <p style="font-size: 1rem; color: rgba(196,241,255,0.78); margin: 0 0 16px; line-height: 1.7;">
-            AstroBridge v7 Production Pilot · Build Passed · Tests Passed · Production Dependency Audit Clean
-        </p>
+        <p style="font-size: 1rem; color: rgba(196,241,255,0.78); margin: 0 0 16px; line-height: 1.7;">AstroBridge v7 Production Pilot · Build Passed · Tests Passed · Production Dependency Audit Clean</p>
         <span style="display:inline-block; color:#4cc9f0; border:1px solid rgba(76,201,240,0.55); border-radius:999px; padding:8px 18px; font-weight:700;">View Certification</span>
     </div>
 </a>
@@ -635,8 +676,83 @@ footer{
   </div>
 </div>
 
-<footer>
-<p>© 2026 AstroBridge | Global Intent Network</p>
+<footer class="enterprise-footer">
+  <div class="ecosystem-strip">
+    <div class="ecosystem-title">Full-Chain Connectivity Layer</div>
+    <div class="brand-rail-wrap">
+      <div class="brand-rail">
+        <div class="chain-logo btc"><strong>BTC</strong><span>Bitcoin</span></div>
+        <div class="chain-logo eth"><strong>ETH</strong><span>Ethereum</span></div>
+        <div class="chain-logo bsc"><strong>BSC</strong><span>BNB Chain</span></div>
+        <div class="chain-logo sol"><strong>SOL</strong><span>Solana</span></div>
+        <div class="chain-logo spcxb"><strong>SPCXB</strong><span>SpaceXBridge</span></div>
+        <div class="chain-logo"><strong>SUI</strong><span>Sui</span></div>
+        <div class="chain-logo"><strong>APT</strong><span>Aptos</span></div>
+        <div class="chain-logo"><strong>ARB</strong><span>Arbitrum</span></div>
+        <div class="chain-logo"><strong>BASE</strong><span>Base</span></div>
+        <div class="chain-logo"><strong>OP</strong><span>Optimism</span></div>
+        <div class="chain-logo"><strong>POL</strong><span>Polygon</span></div>
+        <div class="chain-logo"><strong>STR</strong><span>Stellar</span></div>
+        <div class="chain-logo btc"><strong>BTC</strong><span>Bitcoin</span></div>
+        <div class="chain-logo eth"><strong>ETH</strong><span>Ethereum</span></div>
+        <div class="chain-logo bsc"><strong>BSC</strong><span>BNB Chain</span></div>
+        <div class="chain-logo sol"><strong>SOL</strong><span>Solana</span></div>
+        <div class="chain-logo spcxb"><strong>SPCXB</strong><span>SpaceXBridge</span></div>
+        <div class="chain-logo"><strong>SUI</strong><span>Sui</span></div>
+        <div class="chain-logo"><strong>APT</strong><span>Aptos</span></div>
+        <div class="chain-logo"><strong>ARB</strong><span>Arbitrum</span></div>
+        <div class="chain-logo"><strong>BASE</strong><span>Base</span></div>
+        <div class="chain-logo"><strong>OP</strong><span>Optimism</span></div>
+        <div class="chain-logo"><strong>POL</strong><span>Polygon</span></div>
+        <div class="chain-logo"><strong>STR</strong><span>Stellar</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-brand">
+      <h2>AstroBridge</h2>
+      <p>Non-custodial full-chain intelligent intent API network for wallets, exchanges, Web3 apps, robots, and AI agents.</p>
+      <div class="status-row">
+        <span class="status-pill">Production Pilot</span>
+        <span class="status-pill">Non-Custodial</span>
+        <span class="status-pill">P2P Ready</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Network</h4>
+      <a href="global-console.html">Global Console</a>
+      <a href="progress.html">Project Progress</a>
+      <a href="technology.html">Technology</a>
+      <a href="whitepaper.html">Whitepaper</a>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="roadmap.html">AstroWallet AI</a>
+      <a href="products.html">Fast Trading</a>
+      <a href="painpoints.html">Astro Chat</a>
+      <a href="AstroSwap.html">AstroSwap</a>
+    </div>
+    <div class="footer-col">
+      <h4>Security</h4>
+      <a href="astrobridge-internal-certification.html">Internal Certification</a>
+      <span>Owner Signature Lock</span>
+      <span>Signed Intent Channel</span>
+      <span>Runtime Dependency Audit</span>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="team.html">Team</a>
+      <a href="community.html">Community</a>
+      <a href="https://x.com/Astro___Channel" target="_blank">X / Twitter</a>
+      <a href="memeastro.html">MemeAstro</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 AstroBridge · Global Intent Network</div>
+    <div class="phase-note">AstroBridge is currently in the Public Channel / Production Pilot phase. Astro token economics are reserved for a future phase and are not active in the current public-channel phase.</div>
+  </div>
 </footer>
 </div>
 
