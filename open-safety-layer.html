@@ -30,8 +30,8 @@
       <div class="eyebrow">Free public-interest Web3 infrastructure</div>
       <h1>Astro Open Safety Layer</h1>
       <p class="lead">A non-custodial boundary for fingerprinting, simulating and assessing blockchain intents before authorization, then issuing a verifiable safety receipt.</p>
-      <div class="actions"><a class="button primary" href="#api">Explore the API</a><a class="button" href="#status">Implementation status</a><a class="button" href="open-infrastructure.html#rfc">Read the RFC index</a></div>
-      <div class="status"><span>Reference service v0.1 implemented</span><span>Apache-2.0</span><span>No private keys or custody</span></div>
+      <div class="actions"><a class="button primary" href="https://astro-open-safety-layer.vercel.app/.well-known/astro-safety">Open the live API</a><a class="button" href="#status">Implementation status</a><a class="button" href="open-infrastructure.html#rfc">Read the RFC index</a></div>
+      <div class="status"><span>Public beta API live</span><span>Apache-2.0</span><span>No private keys or custody</span></div>
     </div></section>
 
     <section class="band"><div class="wrap"><div class="section-head"><div class="kicker">Shared safety boundary</div><h2>One check between intent and execution</h2><p class="muted">Wallets, dapps, agents and bridges can use the same machine-readable decision without handing Astro control of user assets.</p></div>
@@ -66,7 +66,7 @@ decision: "allow" | "review" | "block"
 signals: explainable evidence[]</pre>
     </div></section>
 
-    <section class="band" id="api"><div class="wrap"><div class="section-head"><div class="kicker">Open API · v0.1</div><h2>Small surface, portable integration</h2><p class="muted">The TypeScript reference implementation includes OpenAPI discovery, an SDK, Docker deployment and request controls.</p></div>
+    <section class="band" id="api"><div class="wrap"><div class="section-head"><div class="kicker">Open API · v0.1</div><h2>Small surface, portable integration</h2><p class="muted">The TypeScript reference implementation includes OpenAPI discovery, an SDK, Docker deployment and request controls. Public beta base URL: <a href="https://astro-open-safety-layer.vercel.app">astro-open-safety-layer.vercel.app</a>.</p></div>
       <table class="api-table"><thead><tr><th>Method</th><th>Endpoint</th><th>Purpose</th></tr></thead><tbody>
         <tr><td>POST</td><td><code>/v1/intents/fingerprint</code></td><td>Validate and fingerprint an AOI intent envelope.</td></tr>
         <tr><td>POST</td><td><code>/v1/simulate</code></td><td>Run deterministic checks and optional chain simulation.</td></tr>
@@ -80,8 +80,8 @@ signals: explainable evidence[]</pre>
 
     <section class="band alt" id="status"><div class="wrap"><div class="section-head"><div class="kicker">Transparent delivery status</div><h2>Implemented claims stay separate from rollout plans</h2></div>
       <div class="truth">
-        <section class="ready"><h3>Implemented and tested</h3><ul><li>Intent schema and canonical fingerprints</li><li>Static security rules and explainable scoring</li><li>Allowlisted EVM RPC simulation adapter</li><li>Route candidate ranking</li><li>Signed receipt issue and verification</li><li>Safety-feed lookup and moderated submission</li><li>TypeScript SDK, Docker and automated tests</li></ul></section>
-        <section class="next"><h3>Next public rollout</h3><ul><li>Persistent production signing key and key history</li><li>Public hosted endpoint and uptime dashboard</li><li>Append-only receipt storage</li><li>Reviewed threat-intelligence dataset</li><li>Independent security audit</li><li>Wallet and dapp compatibility pilots</li><li>Additional chain-specific simulation adapters</li></ul></section>
+        <section class="ready"><h3>Implemented and tested</h3><ul><li>Public beta endpoint with persistent Ed25519 signing key</li><li>Intent schema and canonical fingerprints</li><li>Static security rules and explainable scoring</li><li>Allowlisted EVM RPC simulation adapter</li><li>Route candidate ranking</li><li>Signed receipt issue and verification</li><li>Safety-feed lookup and moderated submission</li><li>TypeScript SDK, Docker and automated tests</li></ul></section>
+        <section class="next"><h3>Next public rollout</h3><ul><li>Custom API domain, key history and uptime dashboard</li><li>Append-only receipt storage</li><li>Reviewed threat-intelligence dataset</li><li>Independent security audit</li><li>Wallet and dapp compatibility pilots</li><li>Additional chain-specific simulation adapters</li></ul></section>
       </div>
     </div></section>
 
