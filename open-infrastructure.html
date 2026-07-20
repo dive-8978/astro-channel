@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Astro Open Infrastructure is the open protocol framework connecting AstroBridge, AstroChat, AstroWallet AI, AstroAI Chain and AstroRealms.">
+  <title>Astro Open Infrastructure</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070b12;
+      --surface: #0d1520;
+      --surface-2: #111d2b;
+      --line: #24384a;
+      --text: #f4f7fa;
+      --muted: #9fb2c3;
+      --cyan: #4cc9f0;
+      --green: #6ee7a8;
+      --gold: #f4c96b;
+      --pink: #f06292;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(7, 11, 18, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; }
+    .brand img { width: 28px; height: 28px; }
+    .back { color: var(--muted); text-decoration: none; font-size: .92rem; }
+    .back:hover { color: var(--cyan); }
+    .hero {
+      min-height: min(660px, calc(100vh - 68px));
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(rgba(7, 11, 18, .82), rgba(7, 11, 18, .96)),
+        url("assets/astrobridge-open-infrastructure.png") center/cover no-repeat;
+    }
+    .hero-copy { max-width: 820px; padding: 90px 0 80px; }
+    .eyebrow { color: var(--green); font-weight: 800; text-transform: uppercase; font-size: .78rem; }
+    h1 { margin: 16px 0 18px; font-size: clamp(2.5rem, 8vw, 5.8rem); line-height: 1.02; letter-spacing: 0; }
+    .lead { max-width: 720px; color: #c6d3df; font-size: clamp(1.05rem, 2.2vw, 1.32rem); }
+    .status {
+      margin-top: 34px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--gold);
+      background: rgba(13, 21, 32, .9);
+      color: #dce5ec;
+    }
+    .status strong { color: var(--gold); }
+    .jump-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+    .jump-links a {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: #c6d3df;
+      font-size: .9rem;
+    }
+    .jump-links a:hover { border-color: var(--cyan); color: var(--cyan); }
+    .band { padding: 78px 0; border-bottom: 1px solid var(--line); }
+    .band.alt { background: var(--surface); }
+    .section-head { max-width: 760px; margin-bottom: 38px; }
+    .kicker { color: var(--cyan); font-weight: 800; font-size: .78rem; text-transform: uppercase; }
+    h2 { margin: 8px 0 12px; font-size: clamp(1.85rem, 4vw, 3rem); letter-spacing: 0; }
+    h3 { margin: 0 0 8px; font-size: 1.1rem; }
+    p { margin: 0; }
+    .muted { color: var(--muted); }
+    .principles, .governance, .ecosystem { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .principles { grid-template-columns: repeat(3, 1fr); }
+    .governance { grid-template-columns: repeat(2, 1fr); }
+    .ecosystem { grid-template-columns: repeat(5, 1fr); }
+    .unit { background: var(--surface-2); padding: 24px; min-width: 0; }
+    .unit b { display: block; color: var(--green); margin-bottom: 7px; }
+    .unit p { color: var(--muted); font-size: .94rem; }
+    .flow { counter-reset: step; display: grid; gap: 0; border-top: 1px solid var(--line); }
+    .flow li {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      color: #c6d3df;
+    }
+    .flow li::before { counter-increment: step; content: counter(step, decimal-leading-zero); color: var(--pink); font-weight: 800; }
+    .rfc {
+      display: grid;
+      grid-template-columns: 210px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .rfc-code { color: var(--cyan); font-weight: 800; }
+    .draft { color: var(--gold); font-size: .84rem; text-transform: uppercase; }
+    .contribute { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; }
+    .clean-list { margin: 18px 0 0; padding: 0; }
+    .clean-list li { list-style: none; padding: 10px 0; border-bottom: 1px solid var(--line); color: #c6d3df; }
+    .notice { margin-top: 32px; color: var(--muted); font-size: .9rem; }
+    footer { padding: 30px 0; color: #8298aa; font-size: .88rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    @media (max-width: 900px) {
+      .principles, .ecosystem { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .hero { min-height: calc(100vh - 68px); }
+      .hero-copy { padding: 64px 0; }
+      .principles, .governance, .ecosystem, .contribute { grid-template-columns: 1fr; }
+      .rfc { grid-template-columns: 1fr; gap: 5px; }
+      .band { padding: 58px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="/favicon.ico" alt="">Astro Open Infrastructure</a>
+      <a class="back" href="index.html">Back to AstroBridge</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-copy">
+        <div class="eyebrow">International open-protocol initiative</div>
+        <h1>Astro Open Infrastructure</h1>
+        <p class="lead">An open framework for expressing, verifying, routing and proving blockchain intents without surrendering private keys.</p>
+        <div class="status"><strong>Current status:</strong> an unincorporated international open-protocol initiative. It is not a registered company, foundation, charity or government-recognized standards body.</div>
+        <nav class="jump-links" aria-label="Page sections">
+          <a href="#charter">Charter</a>
+          <a href="#governance">Governance</a>
+          <a href="#rfc">RFC</a>
+          <a href="#contribute">Contribute</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="band" id="charter">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Founding Charter · Version 0.1</div><h2>Infrastructure in the public interest</h2><p class="muted">Human authorization remains above autonomous execution. Public specifications define how independent products and operators interoperate.</p></div>
+        <div class="principles">
+          <div class="unit"><b>Human control</b><p>Every asset-affecting action remains bound to explicit authorization.</p></div>
+          <div class="unit"><b>Non-custodial</b><p>Private keys remain under the control of users and compatible wallets.</p></div>
+          <div class="unit"><b>Privacy by proof</b><p>Public fingerprints minimize exposed identity and transaction material.</p></div>
+          <div class="unit"><b>Open specifications</b><p>Protocols, compatibility tests and security disclosures are public.</p></div>
+          <div class="unit"><b>Interoperability</b><p>Implementations remain portable and avoid forced token dependency.</p></div>
+          <div class="unit"><b>Verifiable claims</b><p>Running capabilities, test activity and future plans remain clearly separated.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Ecosystem framework</div><h2>Five systems, clear responsibilities</h2></div>
+        <div class="ecosystem">
+          <div class="unit"><b>AstroBridge</b><p>Safety assessment, intent routing and execution coordination.</p></div>
+          <div class="unit"><b>AstroChat</b><p>Human-to-human and human-to-agent intent entry.</p></div>
+          <div class="unit"><b>AstroWallet AI</b><p>Non-custodial asset control and signature entry.</p></div>
+          <div class="unit"><b>AstroAI Chain</b><p>Intent fingerprints, contribution records and execution proofs.</p></div>
+          <div class="unit"><b>AstroRealms</b><p>Mobile node participation and world-state experience.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="governance">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Governance</div><h2>Open decisions with recorded rationale</h2><p class="muted">Initial bodies are defined by responsibility. Membership and voting records must be published before any body claims active representative authority.</p></div>
+        <div class="governance">
+          <div class="unit"><h3>Protocol Council</h3><p>Maintains RFCs, compatibility rules, versioning and public technical rationale.</p></div>
+          <div class="unit"><h3>Security Council</h3><p>Coordinates vulnerability intake, emergency response and independent audits.</p></div>
+          <div class="unit"><h3>Node Operator Assembly</h3><p>Represents mobile, home and edge-server operators in network policy.</p></div>
+          <div class="unit"><h3>Contributor Community</h3><p>Connects developers, designers, translators, researchers and educators.</p></div>
+        </div>
+        <ol class="flow">
+          <li>Publish a proposal as an Astro RFC.</li>
+          <li>Announce a minimum public review period.</li>
+          <li>Document security and compatibility impact.</li>
+          <li>Record votes, rationale and dissenting opinions.</li>
+          <li>Assign accepted changes a protocol version and test vectors.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band alt" id="rfc">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Open specifications</div><h2>Astro RFC index</h2></div>
+        <div class="rfc">
+          <div class="rfc-code">RFC-0001</div>
+          <div><h3>Astro Intent Proof Protocol</h3><p class="muted">The non-custodial path from signed intent to safety assessment, edge contribution and verifiable execution proof.</p></div>
+          <div class="draft">Draft · v0.1</div>
+        </div>
+        <p class="notice">RFC-0001 describes the current reference architecture. It has not received an independent production security audit and is not presented as a finalized international standard.</p>
+      </div>
+    </section>
+
+    <section class="band" id="contribute">
+      <div class="wrap contribute">
+        <div><div class="kicker">Contribute</div><h2>Build the protocol in public</h2><p class="muted">Participation is open across protocol engineering, security, nodes, SDKs, research, translation and technical education.</p></div>
+        <div>
+          <ul class="clean-list">
+            <li>Submit RFCs and compatibility tests.</li>
+            <li>Operate test nodes and publish reproducible reliability data.</li>
+            <li>Add wallet, agent, game and chain integrations.</li>
+            <li>Translate specifications and improve technical education.</li>
+            <li>Report vulnerabilities privately before disclosure.</li>
+          </ul>
+          <p class="notice">Never submit private keys, production secrets or personal wallet records. Contribution accounting is not a promise of market value or investment return.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row"><span>© 2026 Astro Open Infrastructure</span><span>Founding charter v0.1 · RFC process in public draft</span></div>
+  </footer>
+</body>
+</html>
