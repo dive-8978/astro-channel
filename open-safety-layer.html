@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Astro Open Safety Layer is free, open infrastructure for blockchain intent fingerprinting, simulation, safety assessment, route ranking and verifiable receipts.">
+  <title>Astro Open Safety Layer</title>
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root{color-scheme:dark;--bg:#071016;--ink:#f4f7f8;--muted:#aab8bd;--line:#29404a;--cyan:#55d7ee;--green:#69dea4;--gold:#f0c76a;--red:#f07878;--violet:#b3a6ff;--panel:#0d1a21}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.62}a{color:inherit}.wrap{width:min(1140px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,16,22,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;text-decoration:none}.brand span{color:var(--cyan)}.back{color:var(--muted);text-decoration:none;font-size:.92rem}.back:hover{color:var(--green)}
+    .hero{min-height:min(690px,calc(100vh - 68px));display:flex;align-items:center;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(7,16,22,.97) 0%,rgba(7,16,22,.80) 58%,rgba(7,16,22,.9) 100%),url("assets/astrobridge-open-infrastructure.png") center/cover no-repeat}.hero-copy{max-width:850px;padding:88px 0 76px}.eyebrow,.kicker{font-size:.78rem;font-weight:800;text-transform:uppercase;color:var(--green)}h1{font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.02;letter-spacing:0;margin:15px 0 20px}.lead{font-size:clamp(1.05rem,2.1vw,1.3rem);color:#d0dadd;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;text-decoration:none;border:1px solid var(--line);font-weight:700;font-size:.92rem}.button.primary{background:var(--cyan);border-color:var(--cyan);color:#041015}.button:hover{border-color:var(--green)}.status{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}.status span{border-left:3px solid var(--green);background:rgba(13,26,33,.92);padding:9px 12px;color:#dce5e7;font-size:.86rem}.status span:nth-child(2){border-color:var(--gold)}.status span:nth-child(3){border-color:var(--violet)}
+    .band{padding:76px 0;border-bottom:1px solid var(--line)}.band.alt{background:#0a151b}.section-head{max-width:780px;margin-bottom:38px}h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:0;line-height:1.15;margin:8px 0 12px}h3{font-size:1.05rem;margin:0 0 7px}.muted{color:var(--muted);margin:0}
+    .pipeline{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line)}.stage{padding:22px;min-width:0;background:var(--panel);border-right:1px solid var(--line)}.stage:last-child{border-right:0}.stage strong{display:block;color:var(--cyan);font-size:.82rem;margin-bottom:8px}.stage p{margin:0;color:var(--muted);font-size:.92rem}.stage:nth-child(2) strong{color:var(--gold)}.stage:nth-child(3) strong{color:var(--red)}.stage:nth-child(4) strong{color:var(--violet)}.stage:nth-child(5) strong{color:var(--green)}
+    .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.8fr);gap:52px;align-items:start}.rules{margin:0;padding:0;border-top:1px solid var(--line)}.rules li{list-style:none;display:grid;grid-template-columns:150px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}.rules b{color:var(--green)}.rules span{color:var(--muted)}
+    .terminal{background:#050a0d;border:1px solid var(--line);padding:22px;overflow:auto;color:#c9e5d5;font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace}.terminal .method{color:var(--gold)}.terminal .path{color:var(--cyan)}
+    .api-table{width:100%;border-collapse:collapse;border-top:1px solid var(--line)}.api-table th,.api-table td{text-align:left;padding:15px 14px;border-bottom:1px solid var(--line);vertical-align:top}.api-table th{font-size:.75rem;text-transform:uppercase;color:var(--muted)}.api-table code{color:var(--cyan)}.api-table td:last-child{color:var(--muted)}
+    .truth{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}.truth section{background:var(--panel);padding:26px}.truth ul{margin:14px 0 0;padding:0}.truth li{list-style:none;color:var(--muted);padding:9px 0;border-bottom:1px solid var(--line)}.truth .ready h3{color:var(--green)}.truth .next h3{color:var(--gold)}
+    .standards{display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--line)}.standard{flex:1 1 260px;padding:20px 24px 20px 0;border-bottom:1px solid var(--line)}.standard b{display:block;color:var(--violet);margin-bottom:5px}.standard span{color:var(--muted);font-size:.93rem}
+    footer{padding:28px 0;color:#82969e;font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    @media(max-width:900px){.pipeline{grid-template-columns:1fr 1fr}.stage{border-bottom:1px solid var(--line)}.split{grid-template-columns:1fr}.truth{grid-template-columns:1fr}}
+    @media(max-width:620px){.wrap{width:min(100% - 28px,1140px)}.hero{min-height:calc(100vh - 68px)}.hero-copy{padding:58px 0}.pipeline{grid-template-columns:1fr}.stage{border-right:0}.rules li{grid-template-columns:1fr;gap:4px}.api-table th:nth-child(1),.api-table td:nth-child(1){display:none}.api-table th,.api-table td{padding:13px 8px}.band{padding:56px 0}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="brand" href="index.html">Astro <span>Open Safety Layer</span></a><a class="back" href="open-infrastructure.html">Open Infrastructure</a></div></header>
+  <main>
+    <section class="hero"><div class="wrap hero-copy">
+      <div class="eyebrow">Free public-interest Web3 infrastructure</div>
+      <h1>Astro Open Safety Layer</h1>
+      <p class="lead">A non-custodial boundary for fingerprinting, simulating and assessing blockchain intents before authorization, then issuing a verifiable safety receipt.</p>
+      <div class="actions"><a class="button primary" href="#api">Explore the API</a><a class="button" href="#status">Implementation status</a><a class="button" href="open-infrastructure.html#rfc">Read the RFC index</a></div>
+      <div class="status"><span>Reference service v0.1 implemented</span><span>Apache-2.0</span><span>No private keys or custody</span></div>
+    </div></section>
+
+    <section class="band"><div class="wrap"><div class="section-head"><div class="kicker">Shared safety boundary</div><h2>One check between intent and execution</h2><p class="muted">Wallets, dapps, agents and bridges can use the same machine-readable decision without handing Astro control of user assets.</p></div>
+      <div class="pipeline">
+        <div class="stage"><strong>01 · ENVELOPE</strong><p>Normalize actor, actions, constraints, nonce and deadline.</p></div>
+        <div class="stage"><strong>02 · FINGERPRINT</strong><p>Generate a deterministic SHA-256 identity for the complete intent.</p></div>
+        <div class="stage"><strong>03 · SIMULATE</strong><p>Run static policy checks and optional allowlisted RPC calls.</p></div>
+        <div class="stage"><strong>04 · ASSESS</strong><p>Return explainable signals and allow, review or block.</p></div>
+        <div class="stage"><strong>05 · RECEIPT</strong><p>Sign the result using a published Ed25519 verification key.</p></div>
+      </div>
+    </div></section>
+
+    <section class="band alt"><div class="wrap split">
+      <div><div class="kicker">Deterministic policy</div><h2>Safety decisions with evidence</h2><p class="muted">The reference engine checks what it can prove and labels what it cannot. Unknown never silently becomes safe.</p>
+        <ul class="rules"><li><b>Destinations</b><span>Invalid EVM and zero-address detection.</span></li><li><b>Permissions</b><span>ERC-20 unlimited approval and operator-wide NFT approval detection.</span></li><li><b>Constraints</b><span>Deadline, aggregate value and human approval thresholds.</span></li><li><b>Simulation</b><span>Optional eth_call and gas estimation through configured RPC endpoints.</span></li><li><b>Threat feed</b><span>Evidence submissions remain pending until reviewed.</span></li></ul>
+      </div>
+      <pre class="terminal"><span class="method">POST</span> <span class="path">/v1/check</span>
+
+{
+  "intent": {
+    "version": "aoi.intent/0.1",
+    "actor": { "type": "agent" },
+    "actions": [ ... ],
+    "constraints": {
+      "requireHumanApprovalAbove": "20"
+    }
+  },
+  "liveRpc": true
+}
+
+decision: "allow" | "review" | "block"
+signals: explainable evidence[]</pre>
+    </div></section>
+
+    <section class="band" id="api"><div class="wrap"><div class="section-head"><div class="kicker">Open API · v0.1</div><h2>Small surface, portable integration</h2><p class="muted">The TypeScript reference implementation includes OpenAPI discovery, an SDK, Docker deployment and request controls.</p></div>
+      <table class="api-table"><thead><tr><th>Method</th><th>Endpoint</th><th>Purpose</th></tr></thead><tbody>
+        <tr><td>POST</td><td><code>/v1/intents/fingerprint</code></td><td>Validate and fingerprint an AOI intent envelope.</td></tr>
+        <tr><td>POST</td><td><code>/v1/simulate</code></td><td>Run deterministic checks and optional chain simulation.</td></tr>
+        <tr><td>POST</td><td><code>/v1/check</code></td><td>Return simulation plus an explainable safety decision.</td></tr>
+        <tr><td>POST</td><td><code>/v1/route</code></td><td>Rank integrator-supplied routes by fee, speed and safety.</td></tr>
+        <tr><td>POST</td><td><code>/v1/receipts</code></td><td>Issue an Ed25519-signed safety receipt.</td></tr>
+        <tr><td>POST</td><td><code>/v1/receipts/verify</code></td><td>Verify receipt integrity against the published key.</td></tr>
+        <tr><td>GET</td><td><code>/v1/safety/{chain}/{subject}</code></td><td>Query the open safety feed without assuming unknown is safe.</td></tr>
+      </tbody></table>
+    </div></section>
+
+    <section class="band alt" id="status"><div class="wrap"><div class="section-head"><div class="kicker">Transparent delivery status</div><h2>Implemented claims stay separate from rollout plans</h2></div>
+      <div class="truth">
+        <section class="ready"><h3>Implemented and tested</h3><ul><li>Intent schema and canonical fingerprints</li><li>Static security rules and explainable scoring</li><li>Allowlisted EVM RPC simulation adapter</li><li>Route candidate ranking</li><li>Signed receipt issue and verification</li><li>Safety-feed lookup and moderated submission</li><li>TypeScript SDK, Docker and automated tests</li></ul></section>
+        <section class="next"><h3>Next public rollout</h3><ul><li>Persistent production signing key and key history</li><li>Public hosted endpoint and uptime dashboard</li><li>Append-only receipt storage</li><li>Reviewed threat-intelligence dataset</li><li>Independent security audit</li><li>Wallet and dapp compatibility pilots</li><li>Additional chain-specific simulation adapters</li></ul></section>
+      </div>
+    </div></section>
+
+    <section class="band"><div class="wrap"><div class="section-head"><div class="kicker">Standards alignment</div><h2>Built to connect, not replace</h2></div><div class="standards">
+      <div class="standard"><b>ERC-7683</b><span>Solver-facing cross-chain intent resolution and assumptions.</span></div><div class="standard"><b>EIP-5792</b><span>Wallet call batches, status and capability discovery.</span></div><div class="standard"><b>CAIP references</b><span>Chain-agnostic identifiers for accounts, chains and assets.</span></div><div class="standard"><b>W3C credentials</b><span>Future portable attestations for operators and contributors.</span></div>
+    </div></div></section>
+  </main>
+  <footer><div class="wrap footer-row"><span>© 2026 Astro Open Infrastructure</span><span>Reference implementation v0.1 · Not an execution or custody service</span></div></footer>
+</body>
+</html>
