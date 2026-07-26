@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official news, engineering updates and global Web3 headlines from Astro Open Infrastructure.">
+  <title>Newsroom | Astro Open Infrastructure</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="news/newsroom.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="index.html">
+        <img src="/favicon.ico" alt="">
+        <span>Astro Open Infrastructure</span>
+      </a>
+      <nav aria-label="Newsroom navigation">
+        <a href="#official">Official</a>
+        <a href="#wire">Global Wire</a>
+        <a href="open-infrastructure.html">Institution</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="news-hero">
+      <div class="shell hero-inner">
+        <div>
+          <p class="eyebrow">Official Newsroom</p>
+          <h1>Infrastructure,<br>made accountable.</h1>
+          <p class="hero-copy">Direct reporting from Astro Open Infrastructure, plus a live index of Web3 reporting from original publishers.</p>
+        </div>
+        <a class="lead-story" href="news/article.html?slug=open-safety-layer-public-beta">
+          <span class="story-label">Engineering Update</span>
+          <strong>Astro Open Safety Layer public beta is live</strong>
+          <span>Read the verified release note <b aria-hidden="true">↗</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section shell" id="official">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">From the institution</p>
+          <h2>Official dispatches</h2>
+        </div>
+        <p>Founder notes, protocol briefs, product updates and reproducible engineering status.</p>
+      </div>
+      <div class="filter-bar" role="tablist" aria-label="Filter official stories">
+        <button class="filter active" type="button" data-filter="All" role="tab" aria-selected="true">All</button>
+        <button class="filter" type="button" data-filter="Institution" role="tab" aria-selected="false">Institution</button>
+        <button class="filter" type="button" data-filter="Protocol" role="tab" aria-selected="false">Protocol</button>
+        <button class="filter" type="button" data-filter="Engineering" role="tab" aria-selected="false">Engineering</button>
+        <button class="filter" type="button" data-filter="Products" role="tab" aria-selected="false">Products</button>
+      </div>
+      <div class="story-grid" id="storyGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="wire-band" id="wire">
+      <div class="shell">
+        <div class="section-heading wire-heading">
+          <div>
+            <p class="eyebrow">Global Web3 Wire</p>
+            <h2>Across the network</h2>
+          </div>
+          <div class="wire-note">
+            <span id="wireStatus">Loading current headlines…</span>
+            <span>Headlines and excerpts link to original publishers.</span>
+          </div>
+        </div>
+        <div class="wire-list" id="wireList" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="standards-band">
+      <div class="shell standards-layout">
+        <div>
+          <p class="eyebrow">Open record</p>
+          <h2>Claims should be inspectable.</h2>
+        </div>
+        <div class="standards-copy">
+          <p>We separate working code, public services, reference implementations and future research. No article in this newsroom should imply an audit, partnership, mainnet launch or adoption metric that cannot be independently checked.</p>
+          <a href="open-infrastructure.html">Read the charter and RFC framework <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="news-footer">
+    <div class="shell footer-row">
+      <span>© 2026 Astro Open Infrastructure</span>
+      <div><a href="index.html">AstroBridge</a><a href="open-safety-layer.html">Open Safety Layer</a><a href="https://x.com/Astro___Channel" target="_blank" rel="noopener">X</a></div>
+    </div>
+  </footer>
+
+  <script src="news/articles.js"></script>
+  <script src="news/newsroom.js"></script>
+</body>
+</html>
