@@ -1,0 +1,13 @@
+{
+  "name": "astro-open-infrastructure-news-wire",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "refresh": "node crawler.mjs",
+    "check": "node crawler.mjs --check"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5"
+  }
+}
