@@ -1,0 +1,38 @@
+name: Refresh global Web3 wire
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: news/package-lock.json
+      - name: Install crawler dependencies
+        run: npm ci --prefix news
+      - name: Refresh attributed headlines
+        run: npm run refresh --prefix news
+      - name: Commit updated wire
+        run: |
+          if git diff --quiet -- news/feed.json; then
+            echo "No headline changes"
+            exit 0
+          fi
+          git config user.name "astro-news-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add news/feed.json
+          git commit -m "chore(news): refresh global Web3 wire"
+          git push
