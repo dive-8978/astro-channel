@@ -1,0 +1,701 @@
+{
+  "generatedAt": "2026-07-25T17:03:44.059Z",
+  "policy": {
+    "mode": "headline-index",
+    "fullTextStored": false,
+    "attributionRequired": true,
+    "refreshHours": 6
+  },
+  "sources": [
+    {
+      "name": "CoinDesk",
+      "status": "ok",
+      "itemCount": 25,
+      "error": null
+    },
+    {
+      "name": "Cointelegraph",
+      "status": "ok",
+      "itemCount": 30,
+      "error": null
+    },
+    {
+      "name": "Decrypt",
+      "status": "ok",
+      "itemCount": 35,
+      "error": null
+    },
+    {
+      "name": "Blockworks",
+      "status": "ok",
+      "itemCount": 50,
+      "error": null
+    },
+    {
+      "name": "Bitcoin Magazine",
+      "status": "ok",
+      "itemCount": 10,
+      "error": null
+    },
+    {
+      "name": "CryptoSlate",
+      "status": "ok",
+      "itemCount": 10,
+      "error": null
+    },
+    {
+      "name": "The Block",
+      "status": "ok",
+      "itemCount": 20,
+      "error": null
+    },
+    {
+      "name": "Ethereum Foundation",
+      "status": "ok",
+      "itemCount": 630,
+      "error": null
+    }
+  ],
+  "items": [
+    {
+      "id": "19c8f354f597eaba142e",
+      "source": "CoinDesk",
+      "title": "Russia’s largest bank Sberbank plans crypto trading infrastructure by December",
+      "summary": "New regulations for crypto trading, custody, and settlement in Russia take effect Sept. 1, with requirements for licensed intermediaries applying from July 2027.",
+      "url": "https://www.coindesk.com/business/2026/07/25/russia-s-largest-bank-sberbank-plans-crypto-trading-infrastructure-by-december",
+      "publishedAt": "2026-07-25T16:59:36.000Z"
+    },
+    {
+      "id": "902125511bf1cae5fd2c",
+      "source": "CryptoSlate",
+      "title": "Trump jokes about 4th term as $17 million in TRUMP tokens move onto exchanges",
+      "summary": "President Donald Trump joked about seeking a fourth term as millions of dollars in his namesake meme coin moved toward exchanges. Trump used the White House Correspondents’ Association dinner to revive one of his longest-running political provocations,…",
+      "url": "https://cryptoslate.com/trump-jokes-about-4th-term-as-17-million-in-trump-tokens-move-toward-exchanges/",
+      "publishedAt": "2026-07-25T16:05:51.000Z"
+    },
+    {
+      "id": "f8be55f74f74af17acce",
+      "source": "Cointelegraph",
+      "title": "Wise to resubmit US charter application under GENIUS Act",
+      "summary": "The OCC denied the UK company’s application this week citing AML/CFT risks, despite approving similar charters for digital asset companies in the last year.",
+      "url": "https://cointelegraph.com/news/wise-resubmit-occ-charter-application-genius-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-25T16:05:31.000Z"
+    },
+    {
+      "id": "f897bee1c21efb3e986a",
+      "source": "CoinDesk",
+      "title": "North Korea arrests hackers accused of laundering stolen funds from country's bank via crypto",
+      "summary": "The group allegedly breached Central Bank systems, converted crypto to cash via Chinese brokers, and used small transfers to evade detection.",
+      "url": "https://www.coindesk.com/business/2026/07/25/north-korea-arrests-hackers-accused-of-laundering-stolen-funds-from-country-s-bank-via-crypto",
+      "publishedAt": "2026-07-25T15:46:05.000Z"
+    },
+    {
+      "id": "25d747fbe1eebd53af39",
+      "source": "CryptoSlate",
+      "title": "US Senate has 4 days to save CLARITY Act as odds fall to 30% – Galaxy Digital says",
+      "summary": "Galaxy Digital said the Senate has four working days to save the CLARITY Act, as it cut passage odds to 30%. In a July 24 note to clients, the crypto investment firm lowered its estimate for CLARITY Act chances this year from 50%, saying lawmakers need a…",
+      "url": "https://cryptoslate.com/us-senate-has-4-days-to-save-clarity-act-as-passage-odds-fall-to-30-galaxy-digital-says/",
+      "publishedAt": "2026-07-25T14:50:50.000Z"
+    },
+    {
+      "id": "0f597041ed29a966daf2",
+      "source": "Decrypt",
+      "title": "What Is an AI Kill Switch and Why Do US Lawmakers Want One?",
+      "summary": "The AI Kill Switch Act would let Homeland Security order frontier AI throttled or shut down, with fines up to $20 million a day for defying it.",
+      "url": "https://decrypt.co/374332/what-is-ai-kill-switch-openai-hack-hugging-face",
+      "publishedAt": "2026-07-25T14:01:03.000Z"
+    },
+    {
+      "id": "2e04b1775441be86187e",
+      "source": "The Block",
+      "title": "Bitcoin ETF weekly trading volume falls to lowest since October 2024 as ether funds lead inflows again",
+      "summary": "Ether funds have drawn nearly as much capital as bitcoin ETFs over the past three weeks despite holding about one-eighth as much in net assets.",
+      "url": "https://www.theblock.co/post/409660/bitcoin-etf-weekly-trading-volume-falls-to-lowest-since-october-2024-as-ether-funds-lead-inflows-again?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-25T13:59:06.000Z"
+    },
+    {
+      "id": "2fb158c2203f2796221a",
+      "source": "CryptoSlate",
+      "title": "Bitcoin is now fighting the ECB’s €51.8 billion bond wall for a shrinking pool of capital",
+      "summary": "Bitcoin traded around $64,000 on July 25 after changing hands near $65,000 around the ECB’s July 23 decision as the central bank kept rates unchanged, its bond portfolios continued shrinking, and euro-area banks tightened access to business and housing…",
+      "url": "https://cryptoslate.com/bitcoin-is-now-fighting-the-ecbs-e51-8-billion-bond-wall-for-a-shrinking-pool-of-capital/",
+      "publishedAt": "2026-07-25T13:35:56.000Z"
+    },
+    {
+      "id": "115b034dffd375ba3af7",
+      "source": "Cointelegraph",
+      "title": "North Korea arrests bank hacking ring tied to crypto laundering: Report",
+      "summary": "Daily NK reported that North Korea arrested former state cyber operators accused of hacking two state banks and laundering funds through crypto.",
+      "url": "https://cointelegraph.com/news/north-korea-bank-hacking-ring-crypto-laundering-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-25T13:14:18.000Z"
+    },
+    {
+      "id": "a0507d232019aea91987",
+      "source": "CoinDesk",
+      "title": "Democratizing weather derivatives through tokenization could be crypto's most important real-world use case",
+      "summary": "Main Street, which faces the most significant climate-related financial risk, currently lacks an avenue to hedge weather-related risks, argues CoinDesk’s Omkar Godbole.",
+      "url": "https://www.coindesk.com/opinion/2026/07/25/democratizing-weather-derivatives-through-tokenization-could-be-crypto-s-most-important-real-world-use-case",
+      "publishedAt": "2026-07-25T13:00:00.000Z"
+    },
+    {
+      "id": "d1ddd982a865ded07c3c",
+      "source": "CryptoSlate",
+      "title": "8x faster than US cash: The $1T network settling millions while banks sleep on weekends",
+      "summary": "Stablecoin supply has roughly doubled since January 2024, while entity-adjusted transaction volume has grown fourfold to fivefold, according to Coinbase Institutional, opening a wide gap between the amount of dollar liquidity held onchain and the volume of…",
+      "url": "https://cryptoslate.com/the-most-important-stablecoin-metric-isnt-market-cap-anymore/",
+      "publishedAt": "2026-07-25T12:25:49.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-25T12:06:01.000Z"
+    },
+    {
+      "id": "cbc14b54bbb38af32839",
+      "source": "CryptoSlate",
+      "title": "These 10 altcoins are still worth $12B after a 97% collapse – but do users pay enough to them keep running?",
+      "summary": "Ten once-prominent cryptocurrency networks now carry a combined market value of $12.06 billion, trading an average of 97.13% below their all-time highs. A recent report by Taurex noted that recovery needs across the group range from roughly 21.5x for…",
+      "url": "https://cryptoslate.com/these-10-altcoins-are-still-worth-12-billion-after-a-97-collapse-but-do-users-pay-enough-to-them-keep-running/",
+      "publishedAt": "2026-07-25T11:35:49.000Z"
+    },
+    {
+      "id": "59069d9ad807dac987f3",
+      "source": "Cointelegraph",
+      "title": "Fidelity joins push for Senate passage of CLARITY Act",
+      "summary": "Fidelity called on the US Senate to pass the CLARITY Act, joining industry groups and crypto firms pushing for market structure legislation.",
+      "url": "https://cointelegraph.com/news/fidelity-push-senate-passage-of-clarity-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-25T11:30:15.000Z"
+    },
+    {
+      "id": "d8a4a134bb7184969059",
+      "source": "CryptoSlate",
+      "title": "Bitcoin broke away from AI stocks but now $96 oil could turn its escape into a trap",
+      "summary": "Bitcoin's daily correlation with the S&P 500 fell to 0.12 during the second quarter, down from 0.58 in the fourth quarter of 2025, according to a joint report from Coinbase Institutional and Glassnode covering data through June 30. Its correlation with the…",
+      "url": "https://cryptoslate.com/bitcoin-broke-away-from-ai-stocks-but-now-96-oil-could-turn-its-escape-into-a-trap/",
+      "publishedAt": "2026-07-25T10:30:58.000Z"
+    },
+    {
+      "id": "dd4137fbf43ee83630ba",
+      "source": "Cointelegraph",
+      "title": "Dango’s perp DEX taps out nearly 4 months after launch",
+      "summary": "Dango will close its network on Aug. 13, joining BitMEX, Odos and Satori Finance in a wave of recent crypto shutdowns.",
+      "url": "https://cointelegraph.com/news/dangos-perp-dex-taps-nearly-months-launch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-25T10:01:26.000Z"
+    },
+    {
+      "id": "6a8b4ddc0b5fa68b3731",
+      "source": "CoinDesk",
+      "title": "Robinhood Chain's real-world assets jump fivefold as tokenized stocks start trading in bigger size",
+      "summary": "The chain built to put equities onchain has tripled in size since mid-July, and a dozen tokenized stocks are now each clearing $500,000 a day. Real-world assets are growing fast, though memecoins and stablecoins still dominate the chain.",
+      "url": "https://www.coindesk.com/business/2026/07/25/robinhood-chain-s-real-world-assets-jump-fivefold-as-tokenized-stocks-start-trading-in-bigger-size",
+      "publishedAt": "2026-07-25T10:00:00.000Z"
+    },
+    {
+      "id": "2b0c91748c526c3eb835",
+      "source": "CryptoSlate",
+      "title": "Two Ethereum bridges lose $31.7M within hours as third protocol halts staking",
+      "summary": "About $31.69M in combined bridge losses and B²'s July 22 staking suspension reveal three distinct control failures. The post Two Ethereum bridges lose $31.7M within hours as third protocol halts staking appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/two-ethereum-bridges-lose-31-7m-within-hours-as-third-protocol-halts-staking/",
+      "publishedAt": "2026-07-25T09:13:07.000Z"
+    },
+    {
+      "id": "45c85c1680e94a523273",
+      "source": "Cointelegraph",
+      "title": "Ethereum ETFs close week in red, end 5-day inflow streak",
+      "summary": "Ethereum ETFs snapped a five-day inflow streak and Bitcoin ETFs logged a second day of outflows, though both funds extended their weekly inflow streaks to three.",
+      "url": "https://cointelegraph.com/markets/ethereum-etfs-week-red-end-inflow-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-25T07:40:35.000Z"
+    },
+    {
+      "id": "d33394f879e66af234df",
+      "source": "The Block",
+      "title": "Bitcoin Policy Institute, Palantir and Anduril join US State Department’s Freedom Tech Excellence Program",
+      "summary": "The Bitcoin Policy Institute, Palantir and Anduril are partners in the U.S. State Department's Freedom Tech Excellence Program.",
+      "url": "https://www.theblock.co/post/409652/bitcoin-policy-institute-palantir-anduril-us-state-departments-freedom-tech-excellence-program?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-24T22:21:01.000Z"
+    },
+    {
+      "id": "79788156eb75446b95f0",
+      "source": "Bitcoin Magazine",
+      "title": "Morgan Stanley Bitcoin ETF Nearly Notches $400M in Assets",
+      "summary": "Bitcoin Magazine Morgan Stanley Bitcoin ETF Nearly Notches $400M in Assets Investors were cashing out of Bitcoin ETFs this week — but Morgan Stanley's product received fresh cash. This post Morgan Stanley Bitcoin ETF Nearly Notches $400M in Assets first…",
+      "url": "https://bitcoinmagazine.com/news/morgan-stanley-bitcoin-etf-400-million",
+      "publishedAt": "2026-07-24T22:16:22.000Z"
+    },
+    {
+      "id": "848db5fa469f440bbab0",
+      "source": "Decrypt",
+      "title": "Stocks Just Topped Crypto on Hyperliquid. ARK Says That Changes Everything",
+      "summary": "For the first time, real-world assets—stocks, commodities, and market indices—outpaced crypto on the world's biggest decentralized derivatives exchange.",
+      "url": "https://decrypt.co/374334/stocks-crypto-hyperliquid-ark-invest",
+      "publishedAt": "2026-07-24T22:03:16.000Z"
+    },
+    {
+      "id": "544647f1785136165134",
+      "source": "Cointelegraph",
+      "title": "EU authorities include HTX exchange in Russian sanctions",
+      "summary": "The exchange, already sanctioned by the UK, is now on a list of 18 entities “providing crypto-assets services or payment services“ in defiance of the EU’s measures against Russia.",
+      "url": "https://cointelegraph.com/news/htx-exchange-european-union-russia-sanctions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T21:53:05.000Z"
+    },
+    {
+      "id": "466c5e58f209e7e5a180",
+      "source": "Cointelegraph",
+      "title": "Strive’s SATA recovers most of June decline, trades within 3% of par",
+      "summary": "Jan3 CEO Samson Mow says the recovery could signal renewed confidence in preferred-share products used by Bitcoin treasury companies.",
+      "url": "https://cointelegraph.com/news/strives-sata-recovers-most-of-june-decline-trades-within-3-of-par?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T21:02:22.000Z"
+    },
+    {
+      "id": "52fccaa1bf39a79af5a7",
+      "source": "Bitcoin Magazine",
+      "title": "$7 Trillion Investment Giant Fidelity Backs New Crypto Clarity Act",
+      "summary": "Bitcoin Magazine $7 Trillion Investment Giant Fidelity Backs New Crypto Clarity Act The investment giant is the latest big player to back the bill. This post $7 Trillion Investment Giant Fidelity Backs New Crypto Clarity Act first appeared on Bitcoin…",
+      "url": "https://bitcoinmagazine.com/news/fidelity-backs-crypto-clarity-act",
+      "publishedAt": "2026-07-24T20:36:04.000Z"
+    },
+    {
+      "id": "2e104c462151290abda2",
+      "source": "CryptoSlate",
+      "title": "Strategy now publishes the Bitcoin return threshold below which it may have to restructure",
+      "summary": "Strategy has published a financial metric showing that Bitcoin could decline at a constant annual rate of 11.34% across the weighted duration of the company’s credit structure before its modeled coverage falls below 1.0x. The BTC Floor ARR stood at -11.34%…",
+      "url": "https://cryptoslate.com/strategy-now-publishes-the-bitcoin-return-threshold-below-which-it-may-have-to-restructure/",
+      "publishedAt": "2026-07-24T20:35:22.000Z"
+    },
+    {
+      "id": "a0fa1cb863bb8e11908f",
+      "source": "Bitcoin Magazine",
+      "title": "State Department to Debut Freedom Tech Program with Bitcoin Policy Institute, Palantir as Founding Partners",
+      "summary": "Bitcoin Magazine State Department to Debut Freedom Tech Program with Bitcoin Policy Institute, Palantir as Founding Partners The initiative wants to protect free expression online. This post State Department to Debut Freedom Tech Program with Bitcoin Policy…",
+      "url": "https://bitcoinmagazine.com/news/state-department-tech-program-with-bitcoin",
+      "publishedAt": "2026-07-24T20:20:05.000Z"
+    },
+    {
+      "id": "a245a8b38310e3b2ceee",
+      "source": "Cointelegraph",
+      "title": "House passes bill on lawmakers using insider information for stock trading",
+      "summary": "According to Senator Elizabeth Warren, the House bill “won’t solve the problem“ of insider trading in Congress as lawmakers will still be allowed to own and sell stocks.",
+      "url": "https://cointelegraph.com/news/house-bill-lawmakers-insider-information-stock-trading?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T20:05:50.000Z"
+    },
+    {
+      "id": "615e734a60a11a07ff56",
+      "source": "Decrypt",
+      "title": "Samsung Wallet Will Add Stablecoin Support, Including USDC",
+      "summary": "Samsung showed a wallet mockup holding Circle's USDC at Galaxy Unpacked. But details are scarce.",
+      "url": "https://decrypt.co/374324/samsung-wallet-stablecoin-support-usdc",
+      "publishedAt": "2026-07-24T19:30:01.000Z"
+    },
+    {
+      "id": "367ea556fd50371f09c9",
+      "source": "CryptoSlate",
+      "title": "FBI used Google cookies, 500 food orders and a Monero seed phrase to identify Steam malware funder",
+      "summary": "A 15-page federal criminal complaint details how investigators combined a Bitcoin trail with Google cookies, phone records, and more than 500 Uber Eats deliveries to identify Zyaire Dontaevious Zamarion Wilkins as the alleged financier and marketer of a…",
+      "url": "https://cryptoslate.com/fbi-used-google-cookies-500-food-orders-and-a-monero-seed-phrase-to-identify-steam-malware-funder/",
+      "publishedAt": "2026-07-24T19:10:08.000Z"
+    },
+    {
+      "id": "b31fd568689937865c98",
+      "source": "The Block",
+      "title": "Cardano co-founder Hoskinson says Bitcoin could lose top spot if governance fails quantum test",
+      "summary": "Cardano’s governance and ability to enact upgrades make it better equipped to respond to existential technical threats, said Hoskinson.",
+      "url": "https://www.theblock.co/post/409627/cardano-co-founder-hoskinson-bitcoin-lose-top-spot-governance-fails-quantum-test?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-24T19:01:53.000Z"
+    },
+    {
+      "id": "367d3d0acf04d2905691",
+      "source": "Decrypt",
+      "title": "Claude Opus 5 Outscores Fable 5 on Most Benchmarks—At Half the Price",
+      "summary": "Anthropic's new everyday model undercuts its own frontier product on cost and beats it almost everywhere that counts.",
+      "url": "https://decrypt.co/374305/claude-opus-5-outscores-fable-5-most-benchmarks-half-price",
+      "publishedAt": "2026-07-24T18:28:43.000Z"
+    },
+    {
+      "id": "f61d4c5c03d86f0e6c2d",
+      "source": "Decrypt",
+      "title": "Clarity Act on the Ropes as Ethics Fight and Shrinking Calendar Threaten Passage",
+      "summary": "Senate Majority Leader John Thune signals the crypto market-structure bill likely won't clear the chamber before the August recess, as Democrats reject the GOP's ethics language and analysts slash the odds of passage.",
+      "url": "https://decrypt.co/374300/clarity-act-ethics-fight-shrinking-calendar-threaten-passage",
+      "publishedAt": "2026-07-24T17:50:26.000Z"
+    },
+    {
+      "id": "24c30daf77d599e70494",
+      "source": "CryptoSlate",
+      "title": "BlackRock’s IBIT accounted for 90% of a $225 million Bitcoin ETF reversal after a seven-day buying streak",
+      "summary": "US spot Bitcoin ETFs recorded $225 million in net outflows on July 23, ending a seven-session inflow streak as net redemptions from BlackRock’s iShares Bitcoin Trust dominated the reversal. IBIT posted a $202 million net outflow, accounting for 89.96% of the…",
+      "url": "https://cryptoslate.com/blackrocks-ibit-accounted-for-90-of-a-225-million-bitcoin-etf-reversal-after-a-seven-day-buying-streak/",
+      "publishedAt": "2026-07-24T17:45:51.000Z"
+    },
+    {
+      "id": "16eb1a5d5fa6f000e36b",
+      "source": "Decrypt",
+      "title": "Poolin, Once One of Bitcoin's Biggest Mining Pools, Files for Bankruptcy",
+      "summary": "The Singapore-based pool never recovered from freezing withdrawals in 2022. Now it's auctioning off its last Texas mining sites to pay back 11,700 users still holding IOUs.",
+      "url": "https://decrypt.co/374289/poolin-bitcoin-biggest-mining-pools-files-bankruptcy",
+      "publishedAt": "2026-07-24T17:44:48.000Z"
+    },
+    {
+      "id": "e546185c864caa455a30",
+      "source": "The Block",
+      "title": "Wise plans to resubmit national trust bank application under GENIUS Act framework",
+      "summary": "The OCC has granted conditional approval to several stablecoin-focused entities since December.",
+      "url": "https://www.theblock.co/post/409631/wise-plans-resubmit-national-trust-bank-application-under-genius-act-framework?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-24T17:37:34.000Z"
+    },
+    {
+      "id": "356bd6b0a9127c550e3d",
+      "source": "Bitcoin Magazine",
+      "title": "National Fraternal Order of Police Gives Green Light to Clarity Act in Latest Support for Crypto Bill",
+      "summary": "Bitcoin Magazine National Fraternal Order of Police Gives Green Light to Clarity Act in Latest Support for Crypto Bill A number of organizations have thrown support behind the bill this week. This post National Fraternal Order of Police Gives Green Light to…",
+      "url": "https://bitcoinmagazine.com/news/fraternal-order-police-support-clarity-act",
+      "publishedAt": "2026-07-24T17:07:18.000Z"
+    },
+    {
+      "id": "de44c67f8c7d24488e74",
+      "source": "Cointelegraph",
+      "title": "Crypto advocacy groups support CLARITY passage as ethics rules face pushback",
+      "summary": "The window for US lawmakers to address a comprehensive crypto market structure bill before the 2026 elections is closing, and industry organizations are calling for action.",
+      "url": "https://cointelegraph.com/news/crypto-advocacy-groups-support-clarity-act-pushback-ethics-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T16:55:14.000Z"
+    },
+    {
+      "id": "497e1cc36e4b17fe1a9a",
+      "source": "Decrypt",
+      "title": "Nvidia, Meta, and Microsoft Tell Washington: Don't Kill Open-Source AI",
+      "summary": "Twenty-five companies signed a letter defending open-weight models days after a Chinese AI helped Hugging Face survive a hack triggered by OpenAI's own systems.",
+      "url": "https://decrypt.co/374282/nvidia-meta-microsoft-washington-dont-kill-open-source-ai",
+      "publishedAt": "2026-07-24T16:34:25.000Z"
+    },
+    {
+      "id": "16e04e48d08a084494d9",
+      "source": "Decrypt",
+      "title": "Strategy Overhauls Bitcoin Metrics, Debuting 'Net Bitcoin Per Share'",
+      "summary": "The firm says its \"digital credit\" shift needs new yardsticks that strip out debt and preferred claims to show what common shareholders own.",
+      "url": "https://decrypt.co/374281/strategy-overhauls-bitcoin-metrics-debuting-net-bitcoin-per-share",
+      "publishedAt": "2026-07-24T16:21:52.000Z"
+    },
+    {
+      "id": "dde745130026cea58169",
+      "source": "Bitcoin Magazine",
+      "title": "Sealed in Foil: BMAG’s New Focus on Trading Cards",
+      "summary": "Bitcoin Magazine Sealed in Foil: BMAG’s New Focus on Trading Cards From rare pulls to provable ownership, BMAG explores why trading cards and Bitcoin share the same foundations of authenticity, scarcity, and value. This post Sealed in Foil: BMAG’s New Focus…",
+      "url": "https://bitcoinmagazine.com/culture/sealed-in-foil-bmags-new-focus-on-trading-cards",
+      "publishedAt": "2026-07-24T16:20:25.000Z"
+    },
+    {
+      "id": "30cf6389c8c7f3fe4a08",
+      "source": "Decrypt",
+      "title": "Bitcoin ETFs Shed $225M, Snapping Seven-Day Inflow Streak as Iran Tensions Spook Markets",
+      "summary": "BlackRock's IBIT led the exit as Bitcoin briefly dipped under $65,000 and stocks fell on renewed US-Iran hostilities—though the week still closed in the green.",
+      "url": "https://decrypt.co/374260/bitcoin-etfs-shed-225m-snapping-inflow-streak-iran-tensions",
+      "publishedAt": "2026-07-24T16:17:37.000Z"
+    },
+    {
+      "id": "fe1682199dafdbb0d77c",
+      "source": "Bitcoin Magazine",
+      "title": "Top Crypto Industry Groups Pen Letter to Senate Leaders Urging Them To Support the Clarity Act",
+      "summary": "Bitcoin Magazine Top Crypto Industry Groups Pen Letter to Senate Leaders Urging Them To Support the Clarity Act Three advocacy groups are the latest to throw their support behind the crypto market structure bill. This post Top Crypto Industry Groups Pen…",
+      "url": "https://bitcoinmagazine.com/news/crypto-industry-groups-support-the-clarity",
+      "publishedAt": "2026-07-24T16:05:35.000Z"
+    },
+    {
+      "id": "12b718d0d6a65a35d048",
+      "source": "Cointelegraph",
+      "title": "Internet Freedom Foundation calls India’s BitChat GitHub takedown order ‘unconstitutional’",
+      "summary": "The digital rights group says India’s order to remove Jack Dorsey’s BitChat repositories from GitHub exceeds the government’s legal authority and threatens free speech.",
+      "url": "https://cointelegraph.com/news/internet-freedom-foundation-calls-indias-bitchat-github-takedown-order-unconstitutional?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T16:04:30.000Z"
+    },
+    {
+      "id": "1b66cbd35a3060d23711",
+      "source": "Cointelegraph",
+      "title": "Crypto Biz: Is the AI-to-crypto rotation underway?",
+      "summary": "Bitcoin ETF inflows, cooling AI momentum and potential regulatory progress under the CLARITY Act are fueling speculation that capital is rotating back into crypto.",
+      "url": "https://cointelegraph.com/news/crypto-biz-ai-to-crypto-rotation-bitcoin-etf-inflows-clarity-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T15:15:57.000Z"
+    },
+    {
+      "id": "870e43446ddaf61f4e6a",
+      "source": "The Block",
+      "title": "Galaxy cuts Clarity Act passage odds to 30%, says bill needs ‘last-ditch effort’",
+      "summary": "Seven Democratic negotiators say the latest Clarity Act draft needs stronger ethics and consumer protections.",
+      "url": "https://www.theblock.co/post/409608/galaxy-says-clarity-act-now-needs-last-ditch-effort-cuts-passage-odds-30?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-24T15:11:17.000Z"
+    },
+    {
+      "id": "eca55a5f701f1d6ca88a",
+      "source": "Cointelegraph",
+      "title": "World Foundation raises $52.5M in Pantera-led funding to expand World ID infrastructure",
+      "summary": "The organization sold locked WLD tokens to strategic investors as it seeks to grow its biometric identity network amid rising demand for human verification online.",
+      "url": "https://cointelegraph.com/news/world-foundation-funding-led-by-pantera-world-id-infrastructure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T15:09:33.000Z"
+    },
+    {
+      "id": "f89ad9717268ed4b5c45",
+      "source": "CoinDesk",
+      "title": "Senate Dems should accept the victory they won on Trump's crypto limits: White House",
+      "summary": "U.S. Senate Democrats got President Donald Trump to accept potential limits on his lucrative crypto dealings, but they say the Clarity Act's restrictions aren't enough.",
+      "url": "https://www.coindesk.com/policy/2026/07/24/senate-dems-should-accept-the-victory-they-won-on-trump-s-crypto-limits-white-house",
+      "publishedAt": "2026-07-24T15:01:46.000Z"
+    },
+    {
+      "id": "8aad175e70d0d80ec481",
+      "source": "CoinDesk",
+      "title": "Sam Altman-backed World Network secures $52.5 million in fresh funding to fight online AI deepfakes",
+      "summary": "The project is moving away from basic network expansion to focus entirely on integrating its biometric screening devices across enterprise software suites.",
+      "url": "https://www.coindesk.com/business/2026/07/24/sam-altman-backed-world-network-secures-fresh-funding-to-fight-online-ai-deepfakes",
+      "publishedAt": "2026-07-24T15:00:00.000Z"
+    },
+    {
+      "id": "87c04723d9b821ea7442",
+      "source": "Decrypt",
+      "title": "World Foundation Raises $52.5M to Scale Sam Altman’s ‘Proof of Human’ ID",
+      "summary": "Pantera Capital led the one-year locked token sale, joined by Bain Capital Crypto, as World scales its ID network for AI agents.",
+      "url": "https://decrypt.co/374216/world-foundation-raises-52-5m-to-scale-sam-altmans-proof-of-human-id",
+      "publishedAt": "2026-07-24T14:57:56.000Z"
+    },
+    {
+      "id": "866eed09e1f8e141080c",
+      "source": "The Block",
+      "title": "World Foundation raises $52.5 million in WLD token sale with one-year lockup",
+      "summary": "The \"first close\" of the WLD token sale was led by Pantera and included Bain Capital Crypto, Eightco Holdings, Selini, Susquehanna other investors.",
+      "url": "https://www.theblock.co/post/409610/world-foundation-wld-token-sale-funding?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-24T14:50:40.000Z"
+    },
+    {
+      "id": "0b170f6f2a5764c2f154",
+      "source": "CoinDesk",
+      "title": "Institutional crypto trading platform LMAX is exploring sale, IPO",
+      "summary": "LMAX is working with Morgan Stanley and investment bank KBW to assess its options, which could lead to a sale or a public offering.",
+      "url": "https://www.coindesk.com/business/2026/05/22/institutional-crypto-trading-platform-lmax-is-exploring-sale-ipo",
+      "publishedAt": "2026-07-24T14:36:16.000Z"
+    },
+    {
+      "id": "9fa2b71f9008496f786b",
+      "source": "Cointelegraph",
+      "title": "Bitcoin falls under $64K as surging US bond yields boost Fed rate-hike odds",
+      "summary": "Bitcoin saw several dips under the $64,000 mark as a Binance “plunge protection team” reemerged with bid liquidity to avoid a deeper BTC price rout.",
+      "url": "https://cointelegraph.com/markets/bitcoin-falls-under-64k-us-bond-yields-fed-rate-hike-odds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T14:28:03.000Z"
+    },
+    {
+      "id": "bd85289b060ff13a30f1",
+      "source": "Decrypt",
+      "title": "EU Names Justin Sun's HTX in Russia Sanctions, Two Months After UK",
+      "summary": "The 21st package stops short of a full asset freeze for HTX, which it accused of \"significantly frustrating\" its Russia measures.",
+      "url": "https://decrypt.co/374245/eu-names-justin-suns-htx-in-russia-sanctions-two-months-after-uk",
+      "publishedAt": "2026-07-24T14:21:37.000Z"
+    },
+    {
+      "id": "3f869be7779c2cd3072d",
+      "source": "Bitcoin Magazine",
+      "title": "Democrats Push Back on GOP Ethics Text as Thune Doubts a Pre-Recess Clarity Vote",
+      "summary": "Bitcoin Magazine Democrats Push Back on GOP Ethics Text as Thune Doubts a Pre-Recess Clarity Vote Senate Democrats have rejected the ethics provision in the latest Clarity Act draft in blunt terms, and Majority Leader John Thune cast doubt on Thursday that…",
+      "url": "https://bitcoinmagazine.com/news/democrats-push-back-on-clarity-ethics-text",
+      "publishedAt": "2026-07-24T13:34:09.000Z"
+    },
+    {
+      "id": "4eb04f6c532dfc37fc30",
+      "source": "Cointelegraph",
+      "title": "A quantum roadmap would push Bitcoin much higher: Charles Edwards",
+      "summary": "A Bitcoin development roadmap that addresses quantum computing risks could see the price surge by “double digits” very quickly, according to Charles Edwards.",
+      "url": "https://cointelegraph.com/magazine/bitcoins-biggest-bull-catalyst-may-come-from-fixing-its-biggest-risk-edwards?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T13:30:00.000Z"
+    },
+    {
+      "id": "8ee031f64c2d04879e9b",
+      "source": "CoinDesk",
+      "title": "Saylor and team overhaul Strategy's bitcoin metrics as bear market persists",
+      "summary": "New framework gives common shareholders a clearer view of net bitcoin exposure after preferred stock and convertible debt obligations",
+      "url": "https://www.coindesk.com/markets/2026/07/24/saylor-and-team-overhaul-strategy-s-bitcoin-metrics-as-bear-market-persists",
+      "publishedAt": "2026-07-24T13:15:15.000Z"
+    },
+    {
+      "id": "ec645a32717f8f1020e2",
+      "source": "CoinDesk",
+      "title": "Brazilian farmers tokenized dairy cows to get loans, bypassing bank lending limits",
+      "summary": "Smart collars monitor herd health in real time to prevent fraud, allowing local agricultural businesses to secure thousands in funding backed by livestock.",
+      "url": "https://www.coindesk.com/markets/2026/07/24/brazilian-farmers-tokenized-dairy-cows-to-get-loans-bypassing-bank-lending-limits",
+      "publishedAt": "2026-07-24T13:03:03.000Z"
+    },
+    {
+      "id": "ebffea398bdccd2a7599",
+      "source": "Cointelegraph",
+      "title": "Thailand SEC files complaint against Bitkub over alleged false disclosures",
+      "summary": "Thailand’s SEC filed a criminal complaint against Bitkub and two former directors over alleged false disclosures linked to a 2021 cyberattack involving $50 million in assets.",
+      "url": "https://cointelegraph.com/news/bitkub-criminal-complaint-thailand-sec?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T12:46:27.000Z"
+    },
+    {
+      "id": "31b6708b1ba911d73882",
+      "source": "The Block",
+      "title": "Arthur Hayes, BitMEX co-founders face fraud claims over alleged ‘Insider Trading Desk’ as exchange winds down",
+      "summary": "BitMEX, Arthur Hayes, Samuel Reed and Benjamin Delo face a proposed class action alleging insider trading and deliberate server freezes.",
+      "url": "https://www.theblock.co/post/409595/arthur-hayes-bitmex-co-founders-face-fraud-claims-over-alleged-insider-trading-desk-as-exchange-winds-down?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-24T12:38:21.000Z"
+    },
+    {
+      "id": "8cc881c0f4c6667b5115",
+      "source": "Decrypt",
+      "title": "Morning Minute: Bitcoin's New $15M Quantum Defense Fund",
+      "summary": "Plus, the Clarity Act is no longer expected to progress before the August recess. And Vlad Tenev's X was hacked to post a meme coin...",
+      "url": "https://decrypt.co/374222/morning-minute-bitcoins-new-15m-quantum-defense-fund",
+      "publishedAt": "2026-07-24T12:29:34.000Z"
+    },
+    {
+      "id": "dccd87235db1f57e9882",
+      "source": "Decrypt",
+      "title": "India Orders GitHub to Take Down Jack Dorsey's Bitchat Amid Protests",
+      "summary": "The order gave GitHub three hours to pull three code repositories, citing the messaging app's use during protest internet shutdowns.",
+      "url": "https://decrypt.co/374239/india-orders-github-to-take-down-jack-dorseys-bitchat-amid-protests",
+      "publishedAt": "2026-07-24T12:20:01.000Z"
+    },
+    {
+      "id": "79ddd26c99f4f63f23a4",
+      "source": "Cointelegraph",
+      "title": "Odos Protocol to shut down, gives users until July 30 to withdraw assets",
+      "summary": "Odos Protocol will shut down on July 30, giving users one week to withdraw assets. The team did not provide a reason for the decision.",
+      "url": "https://cointelegraph.com/news/odos-protocol-shut-down-4-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T11:59:42.000Z"
+    },
+    {
+      "id": "ea0971a841e0e5b94af4",
+      "source": "CoinDesk",
+      "title": "EU hits Russia with massive 21st sanctions package targeting $120B crypto network",
+      "summary": "The EU is considering a ban on third-country crypto services providers for the first time and is targeting 14 crypto companies, which it has not named yet.",
+      "url": "https://www.coindesk.com/policy/2026/07/24/eu-hits-russia-with-massive-21st-sanctions-package-targeting-usd120b-crypto-network",
+      "publishedAt": "2026-07-24T11:58:06.000Z"
+    },
+    {
+      "id": "402f68d84db37261c9e8",
+      "source": "CoinDesk",
+      "title": "Crypto market maker B2C2 held sale talks with multiple potential buyers",
+      "summary": "The SBI-owned crypto trading firm is said to have attracted takeover interest from a number of suitors over the past 18 months, but valuation has been a sticking point.",
+      "url": "https://www.coindesk.com/business/2026/06/29/crypto-market-maker-b2c2-held-sale-talks-with-multiple-potential-buyers",
+      "publishedAt": "2026-07-24T11:49:06.000Z"
+    },
+    {
+      "id": "47ea2b88641d2f5a43e9",
+      "source": "Cointelegraph",
+      "title": "RWAs become Hyperliquid’s largest trading category",
+      "summary": "Tokenized RWA trading became Hyperliquid’s largest trading category for the first time, accounting for more than half of the decentralized exchange’s weekly trading volume.",
+      "url": "https://cointelegraph.com/news/hyperliquid-rwa-volume-crypto-trading-first-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T11:42:32.000Z"
+    },
+    {
+      "id": "39cc575523698a27b5cf",
+      "source": "CoinDesk",
+      "title": "Crypto's institutional influx has killed the memecoin craze",
+      "summary": "Your day-ahead look for July 24, 2026",
+      "url": "https://www.coindesk.com/daybook-us/2026/07/24/crypto-s-institutional-influx-has-killed-the-memecoin-craze",
+      "publishedAt": "2026-07-24T11:35:48.000Z"
+    },
+    {
+      "id": "af935e1bc12c25c57f3f",
+      "source": "CoinDesk",
+      "title": "A $5 billion cluster has formed in bitcoin options. It tells a bullish story",
+      "summary": "Bitcoin's $70,000 and $72,000 call strikes on Deribit have accumulated nearly $5 billion in open interest, with calls outnumbering puts by a significant margin.",
+      "url": "https://www.coindesk.com/markets/2026/07/24/a-usd5-billion-cluster-has-formed-in-bitcoin-options-it-tells-a-bullish-story",
+      "publishedAt": "2026-07-24T11:34:53.000Z"
+    },
+    {
+      "id": "3caf3ca0de5470642cdc",
+      "source": "CoinDesk",
+      "title": "Bitcoin settles near $65,000 as oil's march toward $100 fails to spook the market",
+      "summary": "BTC held just under $65,000 and crypto broadly rose on Friday even as Brent crude surged to $97.66, its highest since May, as the Iran conflict persists and traditional markets stay muted.",
+      "url": "https://www.coindesk.com/markets/2026/07/24/bitcoin-settles-near-usd65-000-as-oil-s-march-toward-usd100-fails-to-spook-the-market",
+      "publishedAt": "2026-07-24T11:19:38.000Z"
+    },
+    {
+      "id": "10807e089750205d8406",
+      "source": "CoinDesk",
+      "title": "Poolin was bitcoin's biggest mining pool and now it's filing for bankruptcy",
+      "summary": "The Singapore-based company once controlled nearly a fifth of Bitcoin's global hashrate. Now it owes $173 million and is selling off what's left.",
+      "url": "https://www.coindesk.com/markets/2026/07/24/poolin-was-bitcoin-s-biggest-mining-pool-and-now-it-s-filing-for-bankruptcy",
+      "publishedAt": "2026-07-24T11:09:40.000Z"
+    },
+    {
+      "id": "51f65e81aa74873dd3ed",
+      "source": "CoinDesk",
+      "title": "Bitcoin treasury companies sell up, repay debt, pivot to AI as share prices collapse",
+      "summary": "Falling share prices, debt obligations and difficult market conditions are forcing former bitcoin accumulators to sell their holdings and restructure operations.",
+      "url": "https://www.coindesk.com/markets/2026/07/24/bitcoin-treasury-companies-sell-up-repay-debt-pivot-to-ai-as-share-prices-collapse",
+      "publishedAt": "2026-07-24T10:53:52.000Z"
+    },
+    {
+      "id": "4d725f1fcb37b8d70bdf",
+      "source": "Cointelegraph",
+      "title": "Brazil puts tokenized cows to work as loan collateral: Report",
+      "summary": "Ten tokenized dairy cows backed a $19,600 loan registered on Brazil’s B3, in one of Brazil’s first uses of tokenized livestock as loan collateral.",
+      "url": "https://cointelegraph.com/news/brazils-b3-rwa-credit-tokenized-cows-collateral?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T10:29:49.000Z"
+    },
+    {
+      "id": "76a96c386ae5768cf03f",
+      "source": "CoinDesk",
+      "title": "India orders takedown of Jack Dorsey’s bitcoin-linked messaging app Bitchat",
+      "summary": "The order targets Bitchat, an offline Bluetooth mesh app built to relay encrypted messages and bitcoin transactions, as 'Cockroach Janta Party' protesters in Delhi use mesh tools to communicate through internet shutdowns.",
+      "url": "https://www.coindesk.com/tech/2026/07/24/india-orders-takedown-of-jack-dorsey-s-bitcoin-linked-messaging-app-bitchat",
+      "publishedAt": "2026-07-24T10:10:42.000Z"
+    },
+    {
+      "id": "21428e49cc8f8d1b331d",
+      "source": "Cointelegraph",
+      "title": "Samsung Wallet plans stablecoin support in digital payments expansion",
+      "summary": "Samsung Electronics plans to add stablecoin support to Samsung Wallet, expanding its mobile payments and rewards platform to include digital assets.",
+      "url": "https://cointelegraph.com/news/samsung-wallet-stablecoin-support-galaxy-unpacked?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T10:10:07.000Z"
+    },
+    {
+      "id": "66979b4eadb790d01e2b",
+      "source": "Cointelegraph",
+      "title": "Philippine bank BPI plans stablecoin payments pilot",
+      "summary": "The Philippine bank is preparing a stablecoin settlement pilot intended to speed up and reduce the cost of overseas payments to Filipino remote workers.",
+      "url": "https://cointelegraph.com/news/philippine-bank-bpi-plans-stablecoin-payments-pilot?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T10:01:01.000Z"
+    },
+    {
+      "id": "f1992af7c075a577a86f",
+      "source": "CoinDesk",
+      "title": "BitMEX faces proposed class-action suit for theft, insider trading as crypto exchange shuts down",
+      "summary": "The complaint claims BitMEX designed a system to retain customer collateral and alleges an internal desk accessed private user data during server freezes.",
+      "url": "https://www.coindesk.com/business/2026/07/24/bitmex-faces-proposed-class-action-suit-for-theft-insider-trading-as-crypto-exchange-shuts-down",
+      "publishedAt": "2026-07-24T09:54:00.000Z"
+    },
+    {
+      "id": "4e84f6847209cad14687",
+      "source": "The Block",
+      "title": "Former bitcoin miner Poolin files Chapter 11, sets $52 million floor bid for Texas operations",
+      "summary": "Poolin Technology filed for Chapter 11 with $173 million in claims, lining up a $52 million stalking-horse bid for its Texas mining assets.",
+      "url": "https://www.theblock.co/post/409587/former-bitcoin-miner-poolin-files-chapter-11-sets-52-million-floor-bid-for-texas-operations?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-24T09:52:26.000Z"
+    },
+    {
+      "id": "89a5549cb4cd6a09b714",
+      "source": "Cointelegraph",
+      "title": "BTC supply in profit eyes 60%, but analysis hints recovery may ‘roll back over’",
+      "summary": "Bitcoin supply profitability improved versus its 2026 low, but analysis warned that a fake recovery had already broken down at the start of June.",
+      "url": "https://cointelegraph.com/markets/btc-supply-profit-analysis-hints-recovery-roll-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T09:43:07.000Z"
+    },
+    {
+      "id": "f3379d94a3e9fc57c6ae",
+      "source": "Decrypt",
+      "title": "Polymarket Account in Farage Backer's Name Took $9M in Crypto From Unknown Sources: FT",
+      "summary": "The \"GCottrell93\" account bet the funds on Trump's election win and cashed out the profit, though who paid in and who collected is unclear.",
+      "url": "https://decrypt.co/374212/polymarket-account-in-farage-backers-name-took-9m-in-crypto-from-unknown-sources-ft",
+      "publishedAt": "2026-07-24T09:40:50.000Z"
+    },
+    {
+      "id": "d430c3a6e66b3d17ba25",
+      "source": "Cointelegraph",
+      "title": "South Korea’s Korbit to rebrand as Digital X under Mirae: Report",
+      "summary": "Mirae Asset reportedly plans to use the South Korean crypto exchange as a hub for tokenized assets, stablecoins and digital finance.",
+      "url": "https://cointelegraph.com/news/korbit-rebrand-digital-x-mirae-asset?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-24T08:51:13.000Z"
+    }
+  ]
+}
