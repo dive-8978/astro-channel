@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T19:39:24.038Z",
+  "generatedAt": "2026-07-27T04:07:23.086Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,78 @@
     }
   ],
   "items": [
+    {
+      "id": "16a564e6f7242238b5eb",
+      "source": "Cointelegraph",
+      "title": "Garden Finance disables app as Blockaid reports $450,000 exploit",
+      "summary": "Garden Finance said no user funds or smart contracts were affected after an attacker compromised an independent solver’s off-chain database and inserted fraudulent swap records.",
+      "url": "https://cointelegraph.com/news/garden-finance-app-offline-450k-htlc-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T01:58:54.000Z"
+    },
+    {
+      "id": "eedeba84fbf5b93b678e",
+      "source": "Cointelegraph",
+      "title": "Storj files for bankruptcy, explores equity path for tokenholders",
+      "summary": "The decentralized storage provider says its network will continue operating during Chapter 11 as it explores a court-approved ownership mechanism for STORJ holders.",
+      "url": "https://cointelegraph.com/news/storj-chapter-11-bankruptcy-tokenholder-equity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T01:01:43.000Z"
+    },
+    {
+      "id": "2b509e57ecdfad933f3b",
+      "source": "Cointelegraph",
+      "title": "CLARITY hopes fade, BitMEX shuts as lawsuit looms: Hodler’s Digest, July 26",
+      "summary": "Despite support from Goldman Sachs, Fidelity and law enforcement bodies, the Clarity Act’s chances dim. BitMEX to close as crypto consolidates into five big players.",
+      "url": "https://cointelegraph.com/magazine/clarity-hopes-fade-bitmex-shuts-as-lawsuit-looms-hodlers-digest-july-27?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T00:03:44.000Z"
+    },
+    {
+      "id": "0b2d5f9be68c1cac40f6",
+      "source": "CoinDesk",
+      "title": "South Korea trading giant puts receivables onchain in tokenization test with LG CNS",
+      "summary": "POSCO International and LG CNS is tapping Injective network to tokenize live commercial invoices, another sign blockchain rails are moving deeper into corporate finance.",
+      "url": "https://www.coindesk.com/business/2026/07/26/south-korea-trading-giant-puts-receivables-onchain-in-tokenization-test-with-lg-cns",
+      "publishedAt": "2026-07-27T00:00:00.000Z"
+    },
+    {
+      "id": "1f8ab060d75a8ffb46e6",
+      "source": "Cointelegraph",
+      "title": "WEMIX says attacker moved about $724,000 after contract breach",
+      "summary": "WEMIX suspended bridges, liquidity-pool trading and several services after an attacker compromised a WEMIX$-linked contract and moved 724,198 USDC.e.",
+      "url": "https://cointelegraph.com/news/wemix-attacker-moves-724k-contract-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-26T22:53:55.000Z"
+    },
+    {
+      "id": "80757adb432ac6cd55f0",
+      "source": "The Block",
+      "title": "Triple-A hot wallet losses climb to $11.8 million as new deposits keep being swept: report",
+      "summary": "Triple-A said it is investigating and that customer funds are not affected, though it has not fully addressed the incident publicly.",
+      "url": "https://www.theblock.co/post/409678/triple-a-hot-wallet-losses-climb-to-11-8-million-as-new-deposits-keep-being-swept-report?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-26T22:38:54.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-26T21:30:00.000Z"
+    },
+    {
+      "id": "63be281332b274546d12",
+      "source": "The Block",
+      "title": "Michael Saylor teases ‘another color’ after four straight weeks without a Strategy bitcoin buy",
+      "summary": "Strategy holds 843,775 BTC at an average cost of $75,476, leaving the position roughly $9.3 billion underwater with bitcoin near $64,600.",
+      "url": "https://www.theblock.co/post/409675/michael-saylor-teases-another-color-after-four-straight-weeks-without-a-strategy-bitcoin-buy?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-26T20:49:10.000Z"
+    },
+    {
+      "id": "0ce11fa9fb03b668d0f0",
+      "source": "CryptoSlate",
+      "title": "Why Hashdex’s new crypto ETF keeps 100% of your initial staking yields and 40% of everything else",
+      "summary": "Provider fees come first; above the annual threshold, excess net staking income is split 40% to Hashdex and 60% to the trust. The post Why Hashdex’s new crypto ETF keeps 100% of your initial staking yields and 40% of everything else appeared first on…",
+      "url": "https://cryptoslate.com/why-hashdexs-new-crypto-etf-keeps-100-of-your-initial-staking-yields-and-40-of-everything-else/",
+      "publishedAt": "2026-07-26T19:50:38.000Z"
+    },
     {
       "id": "a3be12236e2a576fbb6d",
       "source": "CryptoSlate",
@@ -200,14 +272,6 @@
       "summary": "As MiCA beds in and the U.K. finalizes its crypto framework, stringent regulation could spur mergers, acquisitions and closer ties with banks.",
       "url": "https://www.coindesk.com/policy/2026/07/26/europe-s-high-regulatory-bar-could-spark-new-crypto-industry-m-and-a-wave",
       "publishedAt": "2026-07-26T10:00:00.000Z"
-    },
-    {
-      "id": "e34ec07f38fca620e91f",
-      "source": "CryptoSlate",
-      "title": "Bitcoin is about to give miners a 16% lifeline, but $19 billion in AI deals is luring them away anyway",
-      "summary": "Bitcoin could lower mining difficulty by roughly 16% when its next adjustment arrives around July 26, handing the machines that remain online a considerably larger expected share of the network’s rewards while doing almost nothing to resolve the expensive…",
-      "url": "https://cryptoslate.com/bitcoin-is-about-to-give-miners-a-16-lifeline-but-19-billion-in-ai-deals-is-luring-them-away-anyway/",
-      "publishedAt": "2026-07-26T09:30:20.000Z"
     },
     {
       "id": "1e307b9f099e0ef9acfd",
@@ -632,70 +696,6 @@
       "summary": "A Bitcoin development roadmap that addresses quantum computing risks could see the price surge by “double digits” very quickly, according to Charles Edwards.",
       "url": "https://cointelegraph.com/magazine/bitcoins-biggest-bull-catalyst-may-come-from-fixing-its-biggest-risk-edwards?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-24T13:30:00.000Z"
-    },
-    {
-      "id": "8ee031f64c2d04879e9b",
-      "source": "CoinDesk",
-      "title": "Saylor and team overhaul Strategy's bitcoin metrics as bear market persists",
-      "summary": "New framework gives common shareholders a clearer view of net bitcoin exposure after preferred stock and convertible debt obligations",
-      "url": "https://www.coindesk.com/markets/2026/07/24/saylor-and-team-overhaul-strategy-s-bitcoin-metrics-as-bear-market-persists",
-      "publishedAt": "2026-07-24T13:15:15.000Z"
-    },
-    {
-      "id": "ec645a32717f8f1020e2",
-      "source": "CoinDesk",
-      "title": "Brazilian farmers tokenized dairy cows to get loans, bypassing bank lending limits",
-      "summary": "Smart collars monitor herd health in real time to prevent fraud, allowing local agricultural businesses to secure thousands in funding backed by livestock.",
-      "url": "https://www.coindesk.com/markets/2026/07/24/brazilian-farmers-tokenized-dairy-cows-to-get-loans-bypassing-bank-lending-limits",
-      "publishedAt": "2026-07-24T13:03:03.000Z"
-    },
-    {
-      "id": "ebffea398bdccd2a7599",
-      "source": "Cointelegraph",
-      "title": "Thailand SEC files complaint against Bitkub over alleged false disclosures",
-      "summary": "Thailand’s SEC filed a criminal complaint against Bitkub and two former directors over alleged false disclosures linked to a 2021 cyberattack involving $50 million in assets.",
-      "url": "https://cointelegraph.com/news/bitkub-criminal-complaint-thailand-sec?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-24T12:46:27.000Z"
-    },
-    {
-      "id": "31b6708b1ba911d73882",
-      "source": "The Block",
-      "title": "Arthur Hayes, BitMEX co-founders face fraud claims over alleged ‘Insider Trading Desk’ as exchange winds down",
-      "summary": "BitMEX, Arthur Hayes, Samuel Reed and Benjamin Delo face a proposed class action alleging insider trading and deliberate server freezes.",
-      "url": "https://www.theblock.co/post/409595/arthur-hayes-bitmex-co-founders-face-fraud-claims-over-alleged-insider-trading-desk-as-exchange-winds-down?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-24T12:38:21.000Z"
-    },
-    {
-      "id": "8cc881c0f4c6667b5115",
-      "source": "Decrypt",
-      "title": "Morning Minute: Bitcoin's New $15M Quantum Defense Fund",
-      "summary": "Plus, the Clarity Act is no longer expected to progress before the August recess. And Vlad Tenev's X was hacked to post a meme coin...",
-      "url": "https://decrypt.co/374222/morning-minute-bitcoins-new-15m-quantum-defense-fund",
-      "publishedAt": "2026-07-24T12:29:34.000Z"
-    },
-    {
-      "id": "dccd87235db1f57e9882",
-      "source": "Decrypt",
-      "title": "India Orders GitHub to Take Down Jack Dorsey's Bitchat Amid Protests",
-      "summary": "The order gave GitHub three hours to pull three code repositories, citing the messaging app's use during protest internet shutdowns.",
-      "url": "https://decrypt.co/374239/india-orders-github-to-take-down-jack-dorseys-bitchat-amid-protests",
-      "publishedAt": "2026-07-24T12:20:01.000Z"
-    },
-    {
-      "id": "79ddd26c99f4f63f23a4",
-      "source": "Cointelegraph",
-      "title": "Odos Protocol to shut down, gives users until July 30 to withdraw assets",
-      "summary": "Odos Protocol will shut down on July 30, giving users one week to withdraw assets. The team did not provide a reason for the decision.",
-      "url": "https://cointelegraph.com/news/odos-protocol-shut-down-4-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-24T11:59:42.000Z"
-    },
-    {
-      "id": "ea0971a841e0e5b94af4",
-      "source": "CoinDesk",
-      "title": "EU hits Russia with massive 21st sanctions package targeting $120B crypto network",
-      "summary": "The EU is considering a ban on third-country crypto services providers for the first time and is targeting 14 crypto companies, which it has not named yet.",
-      "url": "https://www.coindesk.com/policy/2026/07/24/eu-hits-russia-with-massive-21st-sanctions-package-targeting-usd120b-crypto-network",
-      "publishedAt": "2026-07-24T11:58:06.000Z"
     }
   ]
 }
