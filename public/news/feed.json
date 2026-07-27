@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T15:17:56.774Z",
+  "generatedAt": "2026-07-27T19:58:43.563Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 33,
+      "itemCount": 53,
       "error": null
     },
     {
@@ -58,6 +58,198 @@
   ],
   "items": [
     {
+      "id": "ff30da0f4a01346aa12b",
+      "source": "CoinDesk",
+      "title": "Bitcoin shrugs off AI selloff but high-stakes Fed meeting could determine what's next",
+      "summary": "BTC held near $65,000 even as Nvidia and AI stocks fell sharply. This week's Fed decision could determine whether bitcoin finally breaks higher or revisits June's lows, analysts said.",
+      "url": "https://www.coindesk.com/markets/2026/07/27/bitcoin-shrugs-off-ai-selloff-but-high-stakes-fed-meeting-could-determine-what-s-next",
+      "publishedAt": "2026-07-27T19:55:45.000Z"
+    },
+    {
+      "id": "2c57460b62c95b65043d",
+      "source": "Decrypt",
+      "title": "Fanatics Buys CFTC-Registered Exchange in Prediction Markets Land Grab",
+      "summary": "The deal for BGC's Water Street Labs and CX Clearinghouse lets Fanatics list and settle its own event contracts, echoing DraftKings and FanDuel as sports-betting giants scramble for a foothold in the sector.",
+      "url": "https://decrypt.co/374449/fanatics-buys-cftc-registered-exchange-prediction-markets",
+      "publishedAt": "2026-07-27T19:45:31.000Z"
+    },
+    {
+      "id": "30a42327547bb28a1440",
+      "source": "Cointelegraph",
+      "title": "Bitmine keeps buying Ether as ETH outperforms Bitcoin",
+      "summary": "The company added nearly 10,000 ETH over the past week, bringing its holdings to 5.79 million Ether, about 85% of which is staked through its validator operations.",
+      "url": "https://cointelegraph.com/news/bitmine-keeps-buying-ether-as-eth-outperforms-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T19:22:59.000Z"
+    },
+    {
+      "id": "81b7fc8b8d5b8d1b5a3f",
+      "source": "Bitcoin Magazine",
+      "title": "Republicans Hope For Democratic Support on Crypto Clarity Act",
+      "summary": "Bitcoin Magazine Republicans Hope For Democratic Support on Crypto Clarity Act Lawmakers are hoping to push through the crypto market structure bill this week but the Democrats are holding things back, according to Senator Dave McCormick. Speaking to Fox…",
+      "url": "https://bitcoinmagazine.com/news/republicans-want-democrats-clarity-support",
+      "publishedAt": "2026-07-27T19:20:43.000Z"
+    },
+    {
+      "id": "43aeb830d86602424de5",
+      "source": "Decrypt",
+      "title": "Microsoft Says MDASH Beats Claude Mythos and GPT-5.6 Sol in Cybersecurity Test",
+      "summary": "Microsoft says its new cyber model lets more than 100 AI agents find software flaws at half the cost of its current best MDASH configuration.",
+      "url": "https://decrypt.co/374441/microsoft-mdash-beats-claude-mythos-gpt-5-6-sol-cybersecurity",
+      "publishedAt": "2026-07-27T19:01:04.000Z"
+    },
+    {
+      "id": "3a68c61637e613e424fc",
+      "source": "The Block",
+      "title": "Ethereum, Solana and Avalanche get busier and cheaper even as token prices fall: Bitwise",
+      "summary": "Although activity rose, revenues declined and ETH, SOL and AVAX are all down over 50% when compared to a year ago.",
+      "url": "https://www.theblock.co/post/409799/ethereum-solana-avalanche-get-busier-cheaper-even-as-token-prices-fall-bitwise?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-27T19:00:16.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T18:51:58.000Z"
+    },
+    {
+      "id": "0b14e0ced6aed7d9cbd9",
+      "source": "Cointelegraph",
+      "title": "Securitize Capital becomes SEC-registered investment adviser",
+      "summary": "The registration expands Securitize’s regulated platform for tokenized assets, adding investment advisory services to its institutional offering.",
+      "url": "https://cointelegraph.com/news/securitize-becomes-sec-registered-investment-adviser-through-capital-unit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T18:41:30.000Z"
+    },
+    {
+      "id": "248f2042a193d444533b",
+      "source": "Decrypt",
+      "title": "Your Shared Claude Chats Were Being Quietly Published on Google",
+      "summary": "A missing line of code meant \"share with a link\" and \"searchable by anyone\" were the same thing—and someone already saved 11,241 of those messages to GitHub.",
+      "url": "https://decrypt.co/374412/anthropic-share-button-quietly-publishing-claude-chats-google",
+      "publishedAt": "2026-07-27T18:24:29.000Z"
+    },
+    {
+      "id": "5166773d94a4c4c60428",
+      "source": "The Block",
+      "title": "Securitize expands regulated platform with SEC adviser license",
+      "summary": "This will enable Securitize to work more closely with asset managers and institutional investors on tokenized investment strategies.",
+      "url": "https://www.theblock.co/post/409821/securitize-expands-regulated-platform-with-sec-adviser-license?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-27T18:08:44.000Z"
+    },
+    {
+      "id": "9f31d6d11d8a0e348f68",
+      "source": "CryptoSlate",
+      "title": "Compromised owner contract just let hackers print 5.2 million WEMIX stablecoins out of thin air, forcing a complete network freeze",
+      "summary": "WEMIX says the issuance became WEMIX and USDC.e, but final losses and user impact remain unknown. The post Compromised owner contract just let hackers print 5.2 million WEMIX stablecoins out of thin air, forcing a complete network freeze appeared first on…",
+      "url": "https://cryptoslate.com/wemix-owner-breach-minted-5-23m-tokens-outside-its-100-backed-stablecoin-controls/",
+      "publishedAt": "2026-07-27T18:05:48.000Z"
+    },
+    {
+      "id": "df6b3f936ba15287981f",
+      "source": "CoinDesk",
+      "title": "Crypto’s favorite $90 trillion trading product is coming to Wall Street, but big banks are taking it slow",
+      "summary": "Regulated perpetual futures are officially landing in the U.S., but while agile trading firms and crypto exchanges race to capture massive retail demand, traditional Wall Street banks are holding back until liquidity, rules, and infrastructure mature.",
+      "url": "https://www.coindesk.com/markets/2026/07/22/crypto-s-favorite-usd90-trillion-trading-product-is-coming-to-wall-street-but-big-banks-are-taking-it-slow",
+      "publishedAt": "2026-07-27T18:00:00.000Z"
+    },
+    {
+      "id": "314c78d8b8371048c417",
+      "source": "Decrypt",
+      "title": "Nvidia, Microsoft and IBM Launch Open Secure AI Alliance to Strengthen AI Cybersecurity",
+      "summary": "More than 40 technology companies and organizations have allied to develop open-source AI security tools and standards for cyber defense.",
+      "url": "https://decrypt.co/374401/nvidia-microsoft-ibm-open-secure-ai-alliance-cybersecurity",
+      "publishedAt": "2026-07-27T17:58:46.000Z"
+    },
+    {
+      "id": "9803258c67a4f1bf3be6",
+      "source": "Decrypt",
+      "title": "A Man Gave Border Agents His Phone Passcode. It Wiped Everything. Now He's Facing Federal Charges",
+      "summary": "Samuel Tunick allegedly triggered a GrapheneOS duress password during a warrantless airport search. Federal prosecutors call it destruction of property. His lawyers call it a digital right.",
+      "url": "https://decrypt.co/374394/border-agents-phone-duress-passcode-grapheneos",
+      "publishedAt": "2026-07-27T17:40:36.000Z"
+    },
+    {
+      "id": "815ace2244560eb65b8d",
+      "source": "The Block",
+      "title": "TD Cowen cuts David Bailey’s Nakamoto target 58% after bitcoin outlook reset",
+      "summary": "The firm updated its valuation for David Bailey-led Nakamoto, citing pressure from BTC's decline on the company's capital structure.",
+      "url": "https://www.theblock.co/post/409797/td-cowen-cuts-david-bailey-nakamoto-target-58-bitcoin-outlook-reset?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-27T17:10:25.000Z"
+    },
+    {
+      "id": "377e59c912e98200b795",
+      "source": "CoinDesk",
+      "title": "Digital asset trading platform Uphold cuts 17% of global headcount as crypto winter bites",
+      "summary": "The crypto trading platform said the layoffs reflect a strategic shift toward its fast-growing enterprise business.",
+      "url": "https://www.coindesk.com/business/2026/07/27/digital-asset-trading-platform-uphold-cuts-17-of-global-headcount-as-crypto-winter-bites",
+      "publishedAt": "2026-07-27T16:47:06.000Z"
+    },
+    {
+      "id": "3c49586cc0220c9b33e8",
+      "source": "Cointelegraph",
+      "title": "Tether’s XAUt gold token receives Shariah certification to expand Islamic finance access",
+      "summary": "The certification could expand access to Tether’s gold-backed token among Islamic financial institutions and investors seeking Shariah-compliant exposure to physical gold.",
+      "url": "https://cointelegraph.com/news/tether-xaut-gold-token-receives-shariah-certification-islamic-finance-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T16:44:03.000Z"
+    },
+    {
+      "id": "834bb405e44194f7fde1",
+      "source": "Cointelegraph",
+      "title": "Kraken parent Payward acquires Magic Labs’ wallet business",
+      "summary": "The deal brings wallet technology to Payward’s enterprise platform, potentially reducing the number of infrastructure providers businesses need to integrate with.",
+      "url": "https://cointelegraph.com/news/kraken-parent-payward-acquires-magic-labs-wallet-business?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T16:40:39.000Z"
+    },
+    {
+      "id": "7063d6c16bbe849ca3d4",
+      "source": "CryptoSlate",
+      "title": "Lawsuit claims BitMEX used server freezes and internal trading to seize 622 Bitcoin ahead of its September closure",
+      "summary": "The new complaint alleges an internal desk exploited customer data, while BitMEX says the case has no basis. The post Lawsuit claims BitMEX used server freezes and internal trading to seize 622 Bitcoin ahead of its September closure appeared first on…",
+      "url": "https://cryptoslate.com/lawsuit-claims-bitmex-used-server-freezes-and-internal-trading-to-seize-622-bitcoin-ahead-of-its-september-closure/",
+      "publishedAt": "2026-07-27T16:35:08.000Z"
+    },
+    {
+      "id": "a1c06837bd12d48a2269",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin ETFs Bled Nearly Half a Billion Dollars End of Last Week, Reversing Sentiment",
+      "summary": "Bitcoin Magazine Bitcoin ETFs Bled Nearly Half a Billion Dollars End of Last Week, Reversing Sentiment Investors cashed out of American Bitcoin exchange-traded funds at the end of last week, ending a seven days winning streak. Data from Farside Investors…",
+      "url": "https://bitcoinmagazine.com/markets/bitcoin-etfs-see-investor-reversal",
+      "publishedAt": "2026-07-27T16:24:09.000Z"
+    },
+    {
+      "id": "8041650bd69c7e6ccf28",
+      "source": "The Block",
+      "title": "Ondo launches new execution network, calling it ‘evolution’ of Ondo Chain",
+      "summary": "CEO Ian De Bode said the Ondo Network is the \"evolution\" of the company's earlier Ondo Chain initiative and now underpins Ondo Perps.",
+      "url": "https://www.theblock.co/post/409792/ondo-launches-new-execution-network-calling-it-evolution-of-ondo-chain?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-27T16:00:03.000Z"
+    },
+    {
+      "id": "21cc080d7d847b382270",
+      "source": "Decrypt",
+      "title": "Bitmine Nears Goal of Controlling 5% of Ethereum Supply With $11.8 Billion Treasury",
+      "summary": "The company says it now holds 5.79 million ETH, equal to 4.8% of the cryptocurrency's circulating supply, while expanding its staking operations and share buyback program.",
+      "url": "https://decrypt.co/374389/bitmine-nears-5-percent-ethereum-supply-with-11-8-billion-treasury",
+      "publishedAt": "2026-07-27T15:42:54.000Z"
+    },
+    {
+      "id": "5a4ebcdf4fd4c5246e51",
+      "source": "Bitcoin Magazine",
+      "title": "Russia’s Sberbank Sets December Deadline for Crypto Buildout: Report",
+      "summary": "Bitcoin Magazine Russia’s Sberbank Sets December Deadline for Crypto Buildout: Report Russia’s largest bank, Sberbank, will build crypto infrastructure by December, according to a report by Russian news agency Interfax. A key piece will be a digital…",
+      "url": "https://bitcoinmagazine.com/news/russia-to-build-out-crypto-infrastructure",
+      "publishedAt": "2026-07-27T15:39:39.000Z"
+    },
+    {
+      "id": "d9981f7b7f42752048fc",
+      "source": "Decrypt",
+      "title": "Circle Buys IBM Blockchain Patent Estate—And Becomes America's Biggest Holder",
+      "summary": "The USDC issuer acquired nearly 1,000 patents from IBM in a single deal, but IBM is still backing USDC's most dangerous rival.",
+      "url": "https://decrypt.co/374388/circle-ibm-blockchain-patent-estate",
+      "publishedAt": "2026-07-27T15:35:25.000Z"
+    },
+    {
       "id": "6e49dcaee0986707f3dc",
       "source": "The Block",
       "title": "Metaplanet’s brokerage deal ‘badly undersells’ plans for bitcoin-backed ‘Bitbonds,’ Benchmark says",
@@ -85,7 +277,7 @@
       "id": "543db4e020edf16bb2d0",
       "source": "CoinDesk",
       "title": "What are perps, anyway? Everything you need to know about crypto’s hottest trading instrument",
-      "summary": "Perps, which launched on BitMEX in 2015, have become one of the most traded financial products in the world.",
+      "summary": "Perps, which launched on BitMEX in 2016, have become one of the most traded financial products in the world.",
       "url": "https://www.coindesk.com/business/2026/07/27/what-are-perps-anyway-everything-you-need-to-know-about-crypto-s-hottest-trading-instrument",
       "publishedAt": "2026-07-27T15:00:00.000Z"
     },
@@ -504,198 +696,6 @@
       "summary": "ETH outperforms BTC, hinting at potential altcoin rally, as the U.S. and Iran hold fire and oil drops.",
       "url": "https://www.coindesk.com/markets/2026/07/27/bitcoin-is-back-above-usd65-000-as-u-s-iran-hold-fire-oil-drops-5",
       "publishedAt": "2026-07-27T04:21:26.000Z"
-    },
-    {
-      "id": "16a564e6f7242238b5eb",
-      "source": "Cointelegraph",
-      "title": "Garden Finance disables app as Blockaid reports $450,000 exploit",
-      "summary": "Garden Finance said no user funds or smart contracts were affected after an attacker compromised an independent solver’s off-chain database and inserted fraudulent swap records.",
-      "url": "https://cointelegraph.com/news/garden-finance-app-offline-450k-htlc-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-27T01:58:54.000Z"
-    },
-    {
-      "id": "eedeba84fbf5b93b678e",
-      "source": "Cointelegraph",
-      "title": "Storj files for bankruptcy, explores equity path for tokenholders",
-      "summary": "The decentralized storage provider says its network will continue operating during Chapter 11 as it explores a court-approved ownership mechanism for STORJ holders.",
-      "url": "https://cointelegraph.com/news/storj-chapter-11-bankruptcy-tokenholder-equity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-27T01:01:43.000Z"
-    },
-    {
-      "id": "2b509e57ecdfad933f3b",
-      "source": "Cointelegraph",
-      "title": "CLARITY hopes fade, BitMEX shuts as lawsuit looms: Hodler’s Digest, July 26",
-      "summary": "Despite support from Goldman Sachs, Fidelity and law enforcement bodies, the Clarity Act’s chances dim. BitMEX to close as crypto consolidates into five big players.",
-      "url": "https://cointelegraph.com/magazine/clarity-hopes-fade-bitmex-shuts-as-lawsuit-looms-hodlers-digest-july-27?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-27T00:03:44.000Z"
-    },
-    {
-      "id": "0b2d5f9be68c1cac40f6",
-      "source": "CoinDesk",
-      "title": "South Korea trading giant puts receivables onchain in tokenization test with LG CNS",
-      "summary": "POSCO International and LG CNS is tapping Injective network to tokenize live commercial invoices, another sign blockchain rails are moving deeper into corporate finance.",
-      "url": "https://www.coindesk.com/business/2026/07/26/south-korea-trading-giant-puts-receivables-onchain-in-tokenization-test-with-lg-cns",
-      "publishedAt": "2026-07-27T00:00:00.000Z"
-    },
-    {
-      "id": "1f8ab060d75a8ffb46e6",
-      "source": "Cointelegraph",
-      "title": "WEMIX says attacker moved about $724,000 after contract breach",
-      "summary": "WEMIX suspended bridges, liquidity-pool trading and several services after an attacker compromised a WEMIX$-linked contract and moved 724,198 USDC.e.",
-      "url": "https://cointelegraph.com/news/wemix-attacker-moves-724k-contract-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T22:53:55.000Z"
-    },
-    {
-      "id": "80757adb432ac6cd55f0",
-      "source": "The Block",
-      "title": "Triple-A hot wallet losses climb to $11.8 million as new deposits keep being swept: report",
-      "summary": "Triple-A said it is investigating and that customer funds are not affected, though it has not fully addressed the incident publicly.",
-      "url": "https://www.theblock.co/post/409678/triple-a-hot-wallet-losses-climb-to-11-8-million-as-new-deposits-keep-being-swept-report?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-26T22:38:54.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T21:40:00.000Z"
-    },
-    {
-      "id": "63be281332b274546d12",
-      "source": "The Block",
-      "title": "Michael Saylor teases ‘another color’ after four straight weeks without a Strategy bitcoin buy",
-      "summary": "Strategy holds 843,775 BTC at an average cost of $75,476, leaving the position roughly $9.3 billion underwater with bitcoin near $64,600.",
-      "url": "https://www.theblock.co/post/409675/michael-saylor-teases-another-color-after-four-straight-weeks-without-a-strategy-bitcoin-buy?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-26T20:49:10.000Z"
-    },
-    {
-      "id": "0ce11fa9fb03b668d0f0",
-      "source": "CryptoSlate",
-      "title": "Why Hashdex’s new crypto ETF keeps 100% of your initial staking yields and 40% of everything else",
-      "summary": "Provider fees come first; above the annual threshold, excess net staking income is split 40% to Hashdex and 60% to the trust. The post Why Hashdex’s new crypto ETF keeps 100% of your initial staking yields and 40% of everything else appeared first on…",
-      "url": "https://cryptoslate.com/why-hashdexs-new-crypto-etf-keeps-100-of-your-initial-staking-yields-and-40-of-everything-else/",
-      "publishedAt": "2026-07-26T19:50:38.000Z"
-    },
-    {
-      "id": "a3be12236e2a576fbb6d",
-      "source": "CryptoSlate",
-      "title": "The brutal $346M math behind Galaxy’s high-stakes race to build CoreWeave’s Texas AI mega-center",
-      "summary": "Phase II handovers are expected to begin in 2027 as the project company takes on fixed cash costs. The post The brutal $346M math behind Galaxy’s high-stakes race to build CoreWeave’s Texas AI mega-center appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/the-brutal-346m-math-behind-galaxys-high-stakes-race-to-build-coreweaves-texas-ai-mega-center/",
-      "publishedAt": "2026-07-26T18:45:36.000Z"
-    },
-    {
-      "id": "b1d7c9a25e750f4e71a9",
-      "source": "CoinDesk",
-      "title": "2 weeks left for Clarity: State of Crypto",
-      "summary": "The Senate leaves town in two weeks. Here's what needs to happen for Clarity to advance before then.",
-      "url": "https://www.coindesk.com/policy/2026/07/26/2-weeks-left-for-clarity-state-of-crypto",
-      "publishedAt": "2026-07-26T18:30:00.000Z"
-    },
-    {
-      "id": "0ab316b0ec9f543f5e7f",
-      "source": "Cointelegraph",
-      "title": "CFTC issues second warning to prediction markets on cookie-cutter self-certifications",
-      "summary": "For the second time this year, the regulator told prediction markets to stop issuing overly broad, template-style certifications of events contracts.",
-      "url": "https://cointelegraph.com/news/cftc-issues-second-warning-to-prediction-markets-on-cookie-cutter-self-certifications?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T17:45:05.000Z"
-    },
-    {
-      "id": "1d9e9ac6413f50fdff1c",
-      "source": "CryptoSlate",
-      "title": "Lawsuit claims 3.8M dormant BTC using police lost-and-found rules as Congress races to stop it with CLARITY",
-      "summary": "Section 20216 of the latest CLARITY draft states that a self-custodied digital asset cannot become abandoned, unclaimed, or forfeited. It also cannot become subject to adverse possession or finder's title solely because its owner has not moved it or…",
-      "url": "https://cryptoslate.com/clarity-moves-to-close-the-legal-opening-behind-the-200-billion-bitcoin-case/",
-      "publishedAt": "2026-07-26T17:40:35.000Z"
-    },
-    {
-      "id": "7e050cad3b55c7b0d992",
-      "source": "CryptoSlate",
-      "title": "Why two public companies quietly liquidated 511 Bitcoin in 24 hours to escape $31.7 million in debt",
-      "summary": "Voluntary sales removed KULR’s collateral risk and Smarter Web’s near-term maturity and 7.7 million potential shares. The post Why two public companies quietly liquidated 511 Bitcoin in 24 hours to escape $31.7 million in debt appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/why-two-public-companies-quietly-liquidated-511-bitcoin-in-24-hours-to-escape-31-7-million-in-debt/",
-      "publishedAt": "2026-07-26T16:30:09.000Z"
-    },
-    {
-      "id": "ba43583feb948d24a5ad",
-      "source": "Cointelegraph",
-      "title": "Russia’s Sberbank to launch crypto trading infrastructure this year",
-      "summary": "Russia’s biggest bank plans to create cryptocurrency trading infrastructure by Dec. 1 as the country is set to establish rules for market participants while allowing crypto assets to be used in foreign trade operations.",
-      "url": "https://cointelegraph.com/news/russias-sberbank-to-launch-crypto-trading-infrastructure-this-year?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T16:07:11.000Z"
-    },
-    {
-      "id": "055312c7606098c359ec",
-      "source": "The Block",
-      "title": "BitMart to wind down trading platform as global CEO says he was not consulted",
-      "summary": "BitMart's global CEO said the firm told him on July 24 that his employment was ending and that he learned of the closure when it went public.",
-      "url": "https://www.theblock.co/post/409670/bitmart-to-wind-down-trading-platform-as-global-ceo-says-he-was-not-consulted?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-26T14:55:55.000Z"
-    },
-    {
-      "id": "724ef4ba9aec931e6624",
-      "source": "Decrypt",
-      "title": "Mira Murati’s Inkling AI Model Review: Best Open-Source Model in the West",
-      "summary": "After two years of silence from Thinking Machines Lab, Murati's debut model is out and on OpenRouter. The MCP score is genuinely impressive. The price-to-performance math is more complicated.",
-      "url": "https://decrypt.co/373884/review-inkling-mira-murati-first-open-source-ai",
-      "publishedAt": "2026-07-26T14:01:03.000Z"
-    },
-    {
-      "id": "c08f8ab4f9275dde0d02",
-      "source": "Cointelegraph",
-      "title": "Bitcoin OG selling eases as dormant BTC movement hits 4-year low: Galaxy",
-      "summary": "Dormant BTC activity fell to its lowest level since Q3 2022, suggesting long-term holders have slowed distribution after heavy profit-taking.",
-      "url": "https://cointelegraph.com/markets/bitcoin-og-dormant-btc-movement-thorn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T13:06:00.000Z"
-    },
-    {
-      "id": "7eeb30398fdbe9c7af1d",
-      "source": "CoinDesk",
-      "title": "U.S. regulator warns prediction markets against cutting corners in event contracts",
-      "summary": "The Commodity Futures Trading Commission again issued an advisory that signals firms have been straying into cookie-cutter self-certification.",
-      "url": "https://www.coindesk.com/policy/2026/07/24/u-s-regulator-warns-prediction-markets-against-cutting-corners-in-event-contracts",
-      "publishedAt": "2026-07-26T13:00:00.000Z"
-    },
-    {
-      "id": "d0ddc3ad48428c1d46a4",
-      "source": "Cointelegraph",
-      "title": "South Korea’s largest bank to launch payment service on JPMorgan’s Kinexys",
-      "summary": "KB Kookmin Bank will use JPMorgan’s blockchain platform to support US dollar cross-border payments for import and export businesses across 10 countries.",
-      "url": "https://cointelegraph.com/news/south-korea-bank-payment-jpmorgans-kinexys?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T10:23:00.000Z"
-    },
-    {
-      "id": "52dcf8ea12f64149089d",
-      "source": "CoinDesk",
-      "title": "Europe's high regulatory bar could spark new crypto industry M&A wave",
-      "summary": "As MiCA beds in and the U.K. finalizes its crypto framework, stringent regulation could spur mergers, acquisitions and closer ties with banks.",
-      "url": "https://www.coindesk.com/policy/2026/07/26/europe-s-high-regulatory-bar-could-spark-new-crypto-industry-m-and-a-wave",
-      "publishedAt": "2026-07-26T10:00:00.000Z"
-    },
-    {
-      "id": "d853a94cc1cee2ccc47c",
-      "source": "Cointelegraph",
-      "title": "BitMart to wind down exchange, end trading by Aug. 26",
-      "summary": "Crypto exchange BitMart said it will wind down operations after its BMX token plunged and users reported withdrawal delays, with platform operations set to end in January.",
-      "url": "https://cointelegraph.com/news/bitmart-wind-down-exchange-end-trading?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T07:13:00.000Z"
-    },
-    {
-      "id": "026edf9bf691d63dd3a9",
-      "source": "Cointelegraph",
-      "title": "Binance ‘red teams’ its own staff every month to keep hackers out",
-      "summary": "Binance regularly tests its employees for security hygiene, as social engineering is becoming a major source of industry breaches.",
-      "url": "https://cointelegraph.com/news/binance-red-teams-own-staff-every-month-to-keep-hackers-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-26T02:01:00.000Z"
-    },
-    {
-      "id": "21b7084a91aa64ce8074",
-      "source": "The Block",
-      "title": "EU adds HTX to Russia sanctions list, barring transactions starting Aug. 23",
-      "summary": "Other crypto platforms listed alongside HTX include EXMO, Rapira, BitPapa, Aifory Pro, WhiteBird, NoOnecrypto and Exnode.",
-      "url": "https://www.theblock.co/post/409668/eu-adds-htx-to-russia-sanctions-list-barring-transactions-starting-aug-23?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-25T21:23:27.000Z"
     }
   ]
 }
