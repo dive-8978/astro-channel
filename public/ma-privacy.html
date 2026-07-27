@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="Privacy Policy for MA by AstroBridge.">
+  <title>MA Privacy Policy | AstroBridge</title>
+  <link rel="icon" type="image/png" href="assets/app_icon_ma.png">
+  <style>
+    :root { color-scheme: dark; --bg:#05070b; --panel:#0c121c; --line:#223044; --text:#f7fbff; --muted:#aab6c8; --cyan:#73dcff; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.7 Inter,system-ui,-apple-system,sans-serif; }
+    a { color:var(--cyan); }
+    header { border-bottom:1px solid var(--line); background:rgba(5,7,11,.92); }
+    .wrap { width:min(860px,calc(100% - 36px)); margin:auto; }
+    .brand { min-height:76px; display:flex; align-items:center; gap:12px; color:var(--text); text-decoration:none; font-weight:800; }
+    .brand img { width:44px; height:44px; border-radius:12px; }
+    main { padding:64px 0 90px; }
+    h1 { margin:0 0 8px; font-size:clamp(38px,7vw,64px); line-height:1.05; }
+    h2 { margin:42px 0 12px; font-size:24px; }
+    h3 { margin:26px 0 8px; font-size:18px; }
+    p,li { color:var(--muted); }
+    .updated { color:var(--cyan); font-weight:700; }
+    .notice { margin:30px 0; padding:20px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
+    nav { display:flex; flex-wrap:wrap; gap:14px; margin-top:24px; }
+    footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    .zh { margin-top:72px; padding-top:58px; border-top:1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="painpoints.html"><img src="assets/app_icon_ma.png" alt="MA"><span>MA by AstroBridge</span></a></div></header>
+  <main class="wrap">
+    <section lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective: July 26, 2026</p>
+      <nav><a href="#chinese">中文</a><a href="ma-community-guidelines.html">Community rules</a><a href="ma-data-deletion.html">Data deletion</a><a href="painpoints.html">MA website</a></nav>
+      <div class="notice">This policy applies to the MA mobile application published by AstroBridge, including the Google Play social edition. The social edition does not include a custodial wallet, asset transfer, swap, or SuperChain interface.</div>
+
+      <h2>1. Local-first identity</h2>
+      <p>MA can be used without creating a conventional server account. The app creates a pseudonymous cryptographic identity on your device. Your local identity key, nickname, optional locally saved email address, contacts, chat history, preferences, and other app state are primarily stored on your device.</p>
+
+      <h2>2. Information processed to provide MA</h2>
+      <h3>Information stored on your device</h3>
+      <ul>
+        <li>Cryptographic identity keys and pseudonymous identity address.</li>
+        <li>Profile name, avatar choice, optional email saved locally, contacts, friend remarks, groups, and chat history.</li>
+        <li>User-selected photos, voice messages, preferences, security settings, game state, and contribution/mining state.</li>
+      </ul>
+      <h3>Information transmitted off your device</h3>
+      <ul>
+        <li><strong>Messaging and social features:</strong> identity addresses, signed profile information, friend and group requests, message payloads, selected media, delivery information, and presence may be routed through AstroBridge nodes to provide messaging and offline delivery.</li>
+        <li><strong>Network operations:</strong> IP address, connection time, node selection, device/app version, diagnostic status, and routing metadata may be processed for connectivity, abuse prevention, reliability, and security.</li>
+        <li><strong>Voice calls:</strong> call-signaling metadata is routed through AstroBridge. Once connected, audio is intended to flow directly between participants using WebRTC. MA does not intentionally record call audio. Peer-to-peer connections can reveal participants' IP addresses to one another.</li>
+        <li><strong>Contribution/mining feature:</strong> a device installation identifier, pseudonymous identity address, signed session records, friend proofs, activity counts, heartbeat times, and anti-abuse metrics are sent to AstroBridge to determine eligibility and maintain contribution records.</li>
+        <li><strong>Safety reports:</strong> when you report a user or message, MA sends the reported pseudonymous identity, report reason, conversation/message identifiers, and a limited excerpt of the selected content to AstroBridge for safety review. Reports never include your private key, recovery phrase, or password.</li>
+        <li><strong>External content:</strong> when you play online Bible audio or visit a website in MA's browser, that content provider receives ordinary web request information such as your IP address and browser/device information under its own privacy policy.</li>
+      </ul>
+
+      <h2>3. Purposes</h2>
+      <p>We process information only to provide requested app functions, route communications, synchronize offline messages, connect calls, operate contribution features, maintain security, prevent abuse, diagnose failures, and comply with law. We do not sell personal data and do not use MA data for third-party behavioral advertising.</p>
+
+      <h2>4. Permissions</h2>
+      <ul>
+        <li><strong>Camera:</strong> scan QR codes and capture content you choose.</li>
+        <li><strong>Photos/media:</strong> select an image to send, post, or use as an avatar.</li>
+        <li><strong>Microphone and audio:</strong> voice messages and voice calls.</li>
+        <li><strong>Notifications:</strong> alert you to messages or calls.</li>
+        <li><strong>Biometrics:</strong> optional on-device protection; MA does not receive your fingerprint or face template.</li>
+        <li><strong>Bluetooth:</strong> support connected audio devices during calls.</li>
+      </ul>
+
+      <h2>5. Storage, retention, and deletion</h2>
+      <p>Local data remains on your device until you clear it, switch local identities, or uninstall MA. Operational and offline-delivery data handled by AstroBridge is retained only as reasonably necessary to deliver the service, secure the network, resolve abuse, and meet legal obligations. MA's locally created identity is not a conventional online account. You can remove local app data from MA settings and your operating system. You may also request deletion of server-side data reasonably associated with your pseudonymous identity by following our <a href="ma-data-deletion.html">data deletion instructions</a>.</p>
+
+      <h2>6. Security</h2>
+      <p>MA uses encrypted network transport and signed cryptographic identities. Sensitive local data is intended to remain under the user's control. No internet service or device storage method is completely secure; users should protect their device and never share private keys or recovery phrases.</p>
+
+      <h2>7. Children</h2>
+      <p>The Google Play social edition is for users aged 18 and over. It is not directed to children, and users must confirm that they are at least 18 before entering the community features.</p>
+
+      <h2>8. Changes and contact</h2>
+      <p>We may update this policy as MA changes. The effective date above will be revised when material changes are made. Questions and privacy requests may be sent to <a href="mailto:baow59671@gmail.com">baow59671@gmail.com</a>.</p>
+    </section>
+
+    <section class="zh" id="chinese" lang="zh-CN">
+      <h1>MA 隐私政策</h1>
+      <p class="updated">生效日期：2026 年 7 月 26 日</p>
+      <nav><a href="#">English</a><a href="ma-community-guidelines.html#chinese">社区规则</a><a href="ma-data-deletion.html#chinese">数据删除</a><a href="painpoints.html">MA 官网</a></nav>
+      <div class="notice">本政策适用于 AstroBridge 发布的 MA 移动应用，包括 Google Play 社交版。社交版不包含托管钱包、资产转账、兑换或超级链界面。</div>
+
+      <h2>1. 本地优先身份</h2>
+      <p>MA 无需建立传统的服务器账户即可使用。应用会在设备本地创建一个假名化密码身份。身份密钥、昵称、可选的本地邮箱、联系人、聊天记录、偏好及其他应用状态主要保存在你的设备上。</p>
+
+      <h2>2. 为提供 MA 功能而处理的信息</h2>
+      <h3>保存在设备本地的信息</h3>
+      <ul>
+        <li>密码身份密钥与假名化身份地址。</li>
+        <li>昵称、头像选择、本地保存的可选邮箱、联系人、好友备注、群聊及聊天记录。</li>
+        <li>用户选择的照片、语音消息、偏好、安全设置、游戏状态及贡献/挖矿状态。</li>
+      </ul>
+      <h3>会传出设备的信息</h3>
+      <ul>
+        <li><strong>聊天与社交：</strong>身份地址、签名资料、好友及群聊请求、消息载荷、用户选择的媒体、投递信息和在线状态，可能经 AstroBridge 节点路由，以提供聊天和离线投递。</li>
+        <li><strong>网络运行：</strong>IP 地址、连接时间、节点选择、设备/应用版本、诊断状态和路由元数据，可能用于连接、可靠性、安全及防滥用。</li>
+        <li><strong>语音通话：</strong>AstroBridge 负责转交通话信令；连接建立后，语音按设计通过 WebRTC 在参与者之间直接传输。MA 不会主动录制通话。P2P 连接可能使通话双方获知彼此的 IP 地址。</li>
+        <li><strong>贡献/挖矿：</strong>设备安装标识、假名化身份地址、签名会话记录、好友证明、活动计数、心跳时间及防滥用指标会发送至 AstroBridge，用于判断资格和记录贡献。</li>
+        <li><strong>安全举报：</strong>当你举报用户或消息时，MA 会将被举报的假名化身份、举报原因、会话/消息标识以及所选内容的有限摘要发送给 AstroBridge 进行安全审核。举报绝不会包含你的私钥、恢复词或密码。</li>
+        <li><strong>外部内容：</strong>播放在线圣经音频或使用 MA 浏览器访问网站时，内容提供者会依据其自身隐私政策收到普通网页请求信息，例如 IP 地址和浏览器/设备信息。</li>
+      </ul>
+
+      <h2>3. 处理目的</h2>
+      <p>信息仅用于提供用户请求的功能、路由通信、同步离线消息、连接通话、运行贡献功能、保障安全、防止滥用、诊断故障及遵守法律。我们不出售个人数据，也不将 MA 数据用于第三方行为广告。</p>
+
+      <h2>4. 权限用途</h2>
+      <ul>
+        <li><strong>相机：</strong>扫描二维码及拍摄你选择的内容。</li>
+        <li><strong>照片/媒体：</strong>选择要发送、发布或用作头像的图片。</li>
+        <li><strong>麦克风和音频：</strong>语音消息与语音通话。</li>
+        <li><strong>通知：</strong>提示新消息或来电。</li>
+        <li><strong>生物识别：</strong>可选的设备本地保护；MA 不会收到指纹或面容模板。</li>
+        <li><strong>蓝牙：</strong>通话时支持蓝牙音频设备。</li>
+      </ul>
+
+      <h2>5. 保存期限与删除</h2>
+      <p>本地数据会保留在设备上，直至你清除数据、切换本地身份或卸载 MA。AstroBridge 处理的运行及离线投递数据，仅在提供服务、保护网络、处理滥用和履行法律义务所合理需要的期限内保留。MA 本地创建的身份不是传统在线账户。你可以在 MA 设置及操作系统中移除本地数据；也可按照<a href="ma-data-deletion.html#chinese">数据删除说明</a>，申请删除与假名化身份可合理关联的服务器端数据。</p>
+
+      <h2>6. 安全</h2>
+      <p>MA 使用加密网络传输及签名密码身份，敏感本地数据按设计由用户自行控制。任何互联网服务或设备存储方式都无法保证绝对安全；请保护设备，切勿向他人泄露私钥或恢复词。</p>
+
+      <h2>7. 未成年人</h2>
+      <p>Google Play 社交版仅面向年满 18 周岁的用户，不面向儿童。用户进入社区功能前必须确认已年满 18 周岁。</p>
+
+      <h2>8. 更新与联系</h2>
+      <p>MA 发生变化时，本政策可能更新；重大变更会更新顶部日期。如有问题或隐私请求，请发送邮件至 <a href="mailto:baow59671@gmail.com">baow59671@gmail.com</a>。</p>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 MA by AstroBridge</div></footer>
+</body>
+</html>

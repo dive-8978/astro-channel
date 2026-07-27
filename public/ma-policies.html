@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="Official MA policies, privacy information, community rules and data deletion instructions.">
+  <title>MA Policies | AstroBridge</title>
+  <link rel="icon" type="image/png" href="assets/app_icon_ma.png">
+  <style>
+    :root { color-scheme:dark; --bg:#05070b; --panel:#0c121c; --line:#223044; --text:#f7fbff; --muted:#aab6c8; --cyan:#73dcff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 Inter,system-ui,-apple-system,sans-serif; }
+    a { color:inherit; }
+    header { border-bottom:1px solid var(--line); background:rgba(5,7,11,.92); }
+    .wrap { width:min(940px,calc(100% - 36px)); margin:auto; }
+    .brand { min-height:76px; display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:800; }
+    .brand img { width:44px; height:44px; border-radius:12px; }
+    main { padding:64px 0 90px; }
+    h1 { margin:0; font-size:clamp(38px,7vw,64px); line-height:1.05; }
+    .lead { max-width:720px; margin:16px 0 34px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .card { display:flex; flex-direction:column; min-height:230px; padding:26px; border:1px solid var(--line); border-radius:16px; background:var(--panel); text-decoration:none; transition:border-color .18s ease, transform .18s ease; }
+    .card:hover { border-color:var(--cyan); transform:translateY(-2px); }
+    .card .tag { color:var(--cyan); font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .card h2 { margin:14px 0 10px; font-size:24px; }
+    .card p { margin:0 0 24px; color:var(--muted); }
+    .card strong { margin-top:auto; color:var(--cyan); }
+    .language { margin-top:28px; color:var(--muted); }
+    footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media (max-width:760px) { .grid { grid-template-columns:1fr; } .card { min-height:0; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a class="brand" href="painpoints.html"><img src="assets/app_icon_ma.png" alt="MA"><span>MA by AstroBridge</span></a></div></header>
+  <main class="wrap">
+    <h1>Policies &amp; Community Rules</h1>
+    <p class="lead">Official privacy information, community safety rules, terms of use and data-deletion instructions for MA. Each document includes English and Simplified Chinese.</p>
+    <div class="grid">
+      <a class="card" href="ma-privacy.html">
+        <span class="tag">Privacy</span>
+        <h2>Privacy Policy</h2>
+        <p>How MA handles local data, routed communications, permissions, reports and service metadata.</p>
+        <strong>Read policy →</strong>
+      </a>
+      <a class="card" href="ma-community-guidelines.html">
+        <span class="tag">Safety</span>
+        <h2>Community Rules</h2>
+        <p>Age requirements, prohibited content, reporting, blocking and enforcement standards.</p>
+        <strong>Read rules →</strong>
+      </a>
+      <a class="card" href="ma-data-deletion.html">
+        <span class="tag">Control</span>
+        <h2>Data Deletion</h2>
+        <p>Steps for removing local MA data and requesting deletion of eligible server-side records.</p>
+        <strong>View instructions →</strong>
+      </a>
+    </div>
+    <p class="language" lang="zh-CN">本页面汇总 MA 的隐私政策、社区规则与使用条款，以及数据删除说明。每份文件均提供英文与简体中文内容。</p>
+  </main>
+  <footer><div class="wrap">© 2026 MA by AstroBridge</div></footer>
+</body>
+</html>
