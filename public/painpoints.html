@@ -159,6 +159,7 @@
     .edition-card p { margin: 10px 0 18px; min-height: 46px; font-size: 13px; }
     .edition-actions { display: flex; flex-wrap: wrap; gap: 9px; }
     .edition-actions .btn { min-height: 44px; padding: 0 15px; font-size: 13px; }
+    .edition-actions .btn.is-preparing { opacity: .72; pointer-events: none; }
     .download-note { max-width: 900px !important; margin-top: 24px !important; padding: 15px 18px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.035); font-size: 12px; }
     footer { padding: 34px 0; border-top: 1px solid var(--line); color: #8290a2; font-size: 12px; }
     .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
@@ -328,8 +329,8 @@
             <p data-lang="en">Private chat, local wallet, BSC and BNB payments, SuperChain, Garden, games, Bible and authorized hymn libraries.</p>
             <p data-lang="zh">私密聊天、本地钱包、BSC 与 BNB 付款、超级链、种植园、游戏、圣经及授权诗歌本。</p>
             <div class="edition-actions">
-              <a class="btn btn-primary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-full-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
-              <a class="btn btn-secondary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-full-1.5.1.aab"><i data-lucide="package"></i>AAB</a>
+              <a class="btn btn-primary multipart-download" href="/ma-download/ma-full-1.5.1.apk" data-download="ma-full-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
+              <a class="btn btn-secondary multipart-download" href="/ma-download/ma-full-1.5.1.aab" data-download="ma-full-1.5.1.aab"><i data-lucide="package"></i>AAB</a>
             </div>
           </article>
           <article class="edition-card">
@@ -340,7 +341,7 @@
             <p data-lang="en">The wallet-enabled website edition without the Bible and hymn libraries.</p>
             <p data-lang="zh">包含钱包和区块链功能，但不包含圣经与诗歌内容库。</p>
             <div class="edition-actions">
-              <a class="btn btn-primary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-site-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
+              <a class="btn btn-primary multipart-download" href="/ma-download/ma-site-1.5.1.apk" data-download="ma-site-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
               <a class="btn btn-secondary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-site-1.5.1.aab"><i data-lucide="package"></i>AAB</a>
             </div>
           </article>
@@ -352,8 +353,8 @@
             <p data-lang="en">Communication-first edition without wallet, transfer, SuperChain, mining, or token functions.</p>
             <p data-lang="zh">以通信为核心，不含钱包、转账、超级链、挖矿及代币功能。</p>
             <div class="edition-actions">
-              <a class="btn btn-primary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-chat-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
-              <a class="btn btn-secondary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-chat-1.5.1.aab"><i data-lucide="package"></i>AAB</a>
+              <a class="btn btn-primary multipart-download" href="/ma-download/ma-chat-1.5.1.apk" data-download="ma-chat-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
+              <a class="btn btn-secondary multipart-download" href="/ma-download/ma-chat-1.5.1.aab" data-download="ma-chat-1.5.1.aab"><i data-lucide="package"></i>AAB</a>
             </div>
           </article>
           <article class="edition-card">
@@ -364,11 +365,13 @@
             <p data-lang="en">Social, Garden, games and library testing without wallet, transfer, or SuperChain screens. Includes an experimental contribution module.</p>
             <p data-lang="zh">社交、种植园、游戏与内容库测试；不含钱包、转账及超级链，但包含实验性贡献模块。</p>
             <div class="edition-actions">
-              <a class="btn btn-primary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-social-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
-              <a class="btn btn-secondary" href="https://github.com/dive-8978/astro-channel/releases/download/v1.5.1/ma-social-1.5.1.aab"><i data-lucide="package"></i>AAB</a>
+              <a class="btn btn-primary multipart-download" href="/ma-download/ma-social-1.5.1.apk" data-download="ma-social-1.5.1.apk"><i data-lucide="smartphone"></i>APK</a>
+              <a class="btn btn-secondary multipart-download" href="/ma-download/ma-social-1.5.1.aab" data-download="ma-social-1.5.1.aab"><i data-lucide="package"></i>AAB</a>
             </div>
           </article>
         </div>
+        <p class="download-note" data-lang="en">Large packages are streamed from AstroBridge's official download nodes and assembled by your browser into the original APK or AAB file. Keep this page open until the browser download begins.</p>
+        <p class="download-note" data-lang="zh">大型安装包会从 AstroBridge 官方下载节点分段传输，并由浏览器还原为原始 APK 或 AAB 文件。浏览器开始下载前请保持本页面开启。</p>
         <p class="download-note" data-lang="en">iOS distribution will use TestFlight and the App Store after the organization publisher account is ready. App Store-signed IPA archives cannot be installed directly on arbitrary devices.</p>
         <p class="download-note" data-lang="zh">组织发布账号准备完成后，iOS 将通过 TestFlight 与 App Store 分发。使用 App Store 签名的 IPA 不能直接安装到任意设备。</p>
         <div class="micro" style="justify-content:center; margin-top:18px;">
@@ -386,9 +389,71 @@
     </div>
   </footer>
 
+  <script src="ma-download-manifest.js"></script>
   <script>
     lucide.createIcons();
     document.getElementById("lang").addEventListener("click", () => document.body.classList.toggle("zh"));
+
+    const downloadWorkerReady = "serviceWorker" in navigator
+      ? navigator.serviceWorker.register("/ma-download-sw.js", { scope: "/" })
+          .then(() => navigator.serviceWorker.ready)
+      : Promise.reject(new Error("Service workers are unavailable."));
+
+    document.querySelectorAll(".multipart-download").forEach(button => {
+      button.addEventListener("click", async event => {
+        event.preventDefault();
+        if (button.classList.contains("is-preparing")) return;
+
+        const filename = button.dataset.download;
+        const originalContent = button.innerHTML;
+        button.classList.add("is-preparing");
+        button.textContent = document.body.classList.contains("zh") ? "准备下载…" : "Preparing…";
+
+        try {
+          await downloadWorkerReady;
+          window.location.assign(`${button.getAttribute("href")}?v=151`);
+          window.setTimeout(() => {
+            button.innerHTML = originalContent;
+            button.classList.remove("is-preparing");
+            lucide.createIcons();
+          }, 2500);
+        } catch (error) {
+          try {
+            await downloadWithoutWorker(filename);
+          } catch (fallbackError) {
+            window.alert(document.body.classList.contains("zh")
+              ? "下载暂时失败，请检查网络后重试。"
+              : "The download could not start. Check your connection and try again.");
+          } finally {
+            button.innerHTML = originalContent;
+            button.classList.remove("is-preparing");
+            lucide.createIcons();
+          }
+        }
+      });
+    });
+
+    async function downloadWithoutWorker(filename) {
+      const download = self.MA_DOWNLOADS[filename];
+      if (!download) throw new Error("Unknown download.");
+
+      const chunks = [];
+      for (const partUrl of download.parts) {
+        const response = await fetch(partUrl, { cache: "force-cache" });
+        if (!response.ok) throw new Error(`Part download failed: ${response.status}`);
+        chunks.push(await response.arrayBuffer());
+      }
+
+      const objectUrl = URL.createObjectURL(new Blob(chunks, { type: download.type }));
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60000);
+    }
+
     fetch("https://api.astrochannel.one/nodes/online")
       .then(response => response.ok ? response.json() : Promise.reject())
       .then(data => {
