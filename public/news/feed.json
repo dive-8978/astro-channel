@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T19:58:43.563Z",
+  "generatedAt": "2026-07-28T03:42:01.492Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 53,
+      "itemCount": 34,
       "error": null
     },
     {
@@ -57,6 +57,134 @@
     }
   ],
   "items": [
+    {
+      "id": "6f4f3f4ee37c169277b4",
+      "source": "Cointelegraph",
+      "title": "Zimbabwe admits seven fintech projects to regulatory sandbox",
+      "summary": "Sandbox participation permits supervised testing but does not guarantee full commercial registration.",
+      "url": "https://cointelegraph.com/news/zimbabwe-seven-fintech-projects-regulatory-sandbox?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-28T03:17:10.000Z"
+    },
+    {
+      "id": "a5afbf22199880cfe3c1",
+      "source": "Cointelegraph",
+      "title": "Hong Kong prepares banks for quantum threats amid tokenization push",
+      "summary": "The HKMA aims to make Hong Kong’s banking sector fully prepared for quantum-related security risks by 2030 as the city expands tokenized finance.",
+      "url": "https://cointelegraph.com/news/hong-kong-banks-quantum-threats-tokenization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-28T02:21:04.000Z"
+    },
+    {
+      "id": "1ead64366ab61ca3d5c6",
+      "source": "The Block",
+      "title": "What Is a Digital Commodity?",
+      "summary": "A digital commodity is an onchain asset that draws its value from open-market supply and demand rather than from the work of a company or central issuer. Assets in this category are freely transferable and traded on public markets, which makes them behave…",
+      "url": "https://www.theblock.co/learn/409682/what-is-a-digital-commodity?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-28T01:55:46.000Z"
+    },
+    {
+      "id": "5f5ce304f96e8b610fed",
+      "source": "Cointelegraph",
+      "title": "Binance phishs its own staff monthly, India censors BitChat code: Asia Express",
+      "summary": "Binance has been phishing its own staff to get ahead of potential attacks. South Korean crypto volumes tank 89% — plus all of the week’s other crypto news from Asia.",
+      "url": "https://cointelegraph.com/magazine/india-bans-bitchat-binance-phishs-its-own-staff-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-28T01:23:07.000Z"
+    },
+    {
+      "id": "5b8e307258de612bc9f3",
+      "source": "CoinDesk",
+      "title": "U.S. Senate puts off crypto Clarity Act for now as it focuses limited bandwidth elsewhere",
+      "summary": "The majority leader is pursuing floor time for unrelated bills as the crypto industry waits for its policy effort to get its chance for votes.",
+      "url": "https://www.coindesk.com/policy/2026/07/27/u-s-senate-puts-off-crypto-clarity-act-for-now-as-it-focuses-limited-bandwidth-elsewhere",
+      "publishedAt": "2026-07-27T23:55:16.000Z"
+    },
+    {
+      "id": "508d2a8469b8badac153",
+      "source": "CoinDesk",
+      "title": "Kalshi, Polymarket win pause against Minnesota's prediction market ban",
+      "summary": "A federal judge ruled that Minnesota's law criminalizing prediction markets would probably violate the federal Commodity Exchange Act.",
+      "url": "https://www.coindesk.com/policy/2026/07/27/kalshi-polymarket-win-pause-against-minnesota-s-prediction-market-ban",
+      "publishedAt": "2026-07-27T23:29:38.000Z"
+    },
+    {
+      "id": "0005ddd7c4735e414ca9",
+      "source": "Decrypt",
+      "title": "Elon Musk: Humans Will Lose Control of AI Within a Decade",
+      "summary": "The SpaceX founder says artificial intelligence is advancing too quickly to stop and is urging leading AI companies to coordinate on safety before releasing their most powerful models.",
+      "url": "https://decrypt.co/374488/elon-musk-humans-lose-control-ai-decade",
+      "publishedAt": "2026-07-27T23:00:04.000Z"
+    },
+    {
+      "id": "f3c53746e99dcdc94770",
+      "source": "Cointelegraph",
+      "title": "New York AG warns CLARITY Act could weaken state crypto enforcement",
+      "summary": "New York Attorney General Letitia James said the federal crypto market structure bill could restrict state regulators and urged Congress to impose stronger consumer protections on digital asset platforms.",
+      "url": "https://cointelegraph.com/news/new-york-ag-clarity-act-state-crypto-enforcement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T22:55:44.000Z"
+    },
+    {
+      "id": "e1112d25878ce3824854",
+      "source": "Decrypt",
+      "title": "OpenAI’s GPT-6 Will Arrive by September, Markets Predict",
+      "summary": "Money is moving on a September bet for OpenAI’s next major model on both Polymarket and Myriad prediction markets.",
+      "url": "https://decrypt.co/374472/openai-gpt-6-will-arrive-september-prediction-market",
+      "publishedAt": "2026-07-27T22:31:03.000Z"
+    },
+    {
+      "id": "44d78a19536eb931b576",
+      "source": "The Block",
+      "title": "NFL urges CFTC to strengthen rules on sports prediction markets: report",
+      "summary": "The NFL responded to the CFTC’s recent draft rulemaking calling for stricter prediction markets oversight, including age restrictions.",
+      "url": "https://www.theblock.co/post/409846/nfl-urges-cftc-to-strengthen-rules-on-sports-prediction-markets-report?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-27T21:57:24.000Z"
+    },
+    {
+      "id": "00f68f235e6efb0a9a83",
+      "source": "Cointelegraph",
+      "title": "Cross River to enable P2P payments, banking services for X Money",
+      "summary": "The banking-as-a-service provider will power X Money’s peer-to-peer payments, FDIC-insured accounts and Visa debit cards as the platform expands its financial services.",
+      "url": "https://cointelegraph.com/news/x-money-cross-river-embedded-banking-p2p-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-27T21:05:05.000Z"
+    },
+    {
+      "id": "5edbc6b210e3c0d78c78",
+      "source": "Decrypt",
+      "title": "Searchable NYC Property Database Puts Wealthy Residents at Risk, Critics Warn",
+      "summary": "A searchable database built from New York City's public property assessment records has drawn backlash from critics who say it creates privacy and security risks.",
+      "url": "https://decrypt.co/374484/searchable-nyc-property-database-could-put-wealthy-residents-at-risk-crypto-execs-warn",
+      "publishedAt": "2026-07-27T21:05:05.000Z"
+    },
+    {
+      "id": "f3439ee0461f397b5d9a",
+      "source": "Decrypt",
+      "title": "Prediction Market Traders Brace for Surprise Fed Rate Hike",
+      "summary": "Prediction market traders have pushed the odds of a July Fed rate hike to 27% on both Polymarket and Myriad, rising double digits in the last 24 hours.",
+      "url": "https://decrypt.co/374453/prediction-market-traders-brace-for-surprise-fed-rate-hike",
+      "publishedAt": "2026-07-27T20:43:16.000Z"
+    },
+    {
+      "id": "3337c2a2f2782758c043",
+      "source": "Bitcoin Magazine",
+      "title": "Coinbase Chief Policy Officer Praises Crypto Clarity Act as “Extraordinarily Bipartisan”",
+      "summary": "Bitcoin Magazine Coinbase Chief Policy Officer Praises Crypto Clarity Act as “Extraordinarily Bipartisan” Coinbase Chief Policy Officer Faryar Shirzad said it's time for Democrats and Republicans to vote on the Clarity Act. This post Coinbase Chief Policy…",
+      "url": "https://bitcoinmagazine.com/news/coinbase-policy-officer-praises-clarity",
+      "publishedAt": "2026-07-27T20:43:13.000Z"
+    },
+    {
+      "id": "c7da5bdec8ee8a8ac0b4",
+      "source": "The Block",
+      "title": "NY Attorney General Letitia James warns Clarity Act would ‘dilute’ states’ ability to go after fraud as pressure mounts",
+      "summary": "NYAG Letitia James urged Congress to tighten a crypto bill, warning that it would weaken states' ability to police the industry.",
+      "url": "https://www.theblock.co/post/409831/ny-attorney-general-letitia-james-warns-clarity-act-dilute-states-ability-fraud-pressure-mounts?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-27T20:31:57.000Z"
+    },
+    {
+      "id": "9217cdba0ff251ace709",
+      "source": "Decrypt",
+      "title": "SparkKitty Malware Found in App Stores Targets Crypto Wallet Seed Phrases",
+      "summary": "A newly detailed report says SparkKitty malware scanned photos on infected iPhones and Android devices for cryptocurrency wallet recovery phrases after infiltrating Apple's App Store and Google Play.",
+      "url": "https://decrypt.co/374450/sparkkitty-malware-mobile-apps-crypto-wallet",
+      "publishedAt": "2026-07-27T20:09:57.000Z"
+    },
     {
       "id": "ff30da0f4a01346aa12b",
       "source": "CoinDesk",
@@ -140,8 +268,8 @@
     {
       "id": "9f31d6d11d8a0e348f68",
       "source": "CryptoSlate",
-      "title": "Compromised owner contract just let hackers print 5.2 million WEMIX stablecoins out of thin air, forcing a complete network freeze",
-      "summary": "WEMIX says the issuance became WEMIX and USDC.e, but final losses and user impact remain unknown. The post Compromised owner contract just let hackers print 5.2 million WEMIX stablecoins out of thin air, forcing a complete network freeze appeared first on…",
+      "title": "Compromised contract let hackers print 5.2 million WEMIX stablecoins, forcing a complete network freeze",
+      "summary": "WEMIX says the issuance became WEMIX and USDC.e, but final losses and user impact remain unknown. The post Compromised contract let hackers print 5.2 million WEMIX stablecoins, forcing a complete network freeze appeared first on CryptoSlate .",
       "url": "https://cryptoslate.com/wemix-owner-breach-minted-5-23m-tokens-outside-its-100-backed-stablecoin-controls/",
       "publishedAt": "2026-07-27T18:05:48.000Z"
     },
@@ -568,134 +696,6 @@
       "summary": "BNY Mellon’s European subsidiary joined the MiCA register as ESMA added 15 CASPs, including banks and crypto platforms, in the third post-deadline update.",
       "url": "https://cointelegraph.com/news/mica-register-expands-third-post-deadline-update?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-27T10:38:09.000Z"
-    },
-    {
-      "id": "353814b40fee0da795e8",
-      "source": "CoinDesk",
-      "title": "Crypto steadies as Iran-U.S. pause sends oil tumbling, lifts risk assets",
-      "summary": "Brent crude plunged 7% after the U.S. and Iran paused Strait of Hormuz strikes, lifting equities and DeFi tokens while bitcoin held near $65,000 ahead of a pivotal Fed decision Wednesday.",
-      "url": "https://www.coindesk.com/markets/2026/07/27/crypto-steadies-as-iran-u-s-pause-sends-oil-tumbling-lifts-risk-assets",
-      "publishedAt": "2026-07-27T10:35:04.000Z"
-    },
-    {
-      "id": "c36e841baca1ea7d6835",
-      "source": "Decrypt",
-      "title": "BitMart Becomes Latest Crypto Exchange to Shut Down",
-      "summary": "BitMart’s closure, citing the market environment and “future strategic direction,” comes days after crypto perps exchange BitMEX shut down.",
-      "url": "https://decrypt.co/374346/bitmart-becomes-latest-crypto-exchange-to-shut-down",
-      "publishedAt": "2026-07-27T09:57:20.000Z"
-    },
-    {
-      "id": "9dc7c2a397d82259ff9f",
-      "source": "CoinDesk",
-      "title": "Interest rates in U.S., U.K., Japan and Coinbase, Strategy earnings: Crypto Week Ahead",
-      "summary": "Your look at what's coming in the week starting July 27.",
-      "url": "https://www.coindesk.com/markets/2026/07/27/interest-rates-in-u-s-u-k-japan-and-coinbase-strategy-earnings-crypto-week-ahead",
-      "publishedAt": "2026-07-27T09:43:58.000Z"
-    },
-    {
-      "id": "6a099d73192f9d74c47e",
-      "source": "CryptoSlate",
-      "title": "31 newly discovered vulnerabilities expose 99% of x402 crypto payments to asset theft and free shopping",
-      "summary": "The 15 operators covered 99% of observed transactions, with two free-shopping cases validated and other high-impact tests deliberately bounded. The post 31 newly discovered vulnerabilities expose 99% of x402 crypto payments to asset theft and free shopping…",
-      "url": "https://cryptoslate.com/31-newly-discovered-vulnerabilities-expose-99-of-x402-crypto-payments-to-asset-theft-and-free-shopping/",
-      "publishedAt": "2026-07-27T09:30:32.000Z"
-    },
-    {
-      "id": "2d3b9d05a138d313fc46",
-      "source": "Cointelegraph",
-      "title": "Brazilian police bust cocaine traffickers in crypto-linked transnational probe",
-      "summary": "Brazilian police suspect the group of shipping around 6.5 metric tons of cocaine and laundering billions in Brazilian reals through crypto-enabled illicit money brokers.",
-      "url": "https://cointelegraph.com/news/brazilian-police-cracks-down-on-crypto-fueled-international-drug-traffickers-suspected-of-moving-billions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-27T09:29:49.000Z"
-    },
-    {
-      "id": "b2a1469d3a5cabb39885",
-      "source": "Decrypt",
-      "title": "Thailand's SEC Files Criminal Complaint Against Bitkub Over Undisclosed $47M Hack",
-      "summary": "The regulator says the exchange and two former directors left a $47 million theft out of its filings in 2021.",
-      "url": "https://decrypt.co/374343/thailands-sec-files-criminal-complaint-against-bitkub-over-undisclosed-47m-hack",
-      "publishedAt": "2026-07-27T09:16:14.000Z"
-    },
-    {
-      "id": "999f6d0b32d49e06325f",
-      "source": "CoinDesk",
-      "title": "Cloud data firm Storj files for Chapter 11, extending a week of crypto failures. Token slides 16%",
-      "summary": "The decentralized data storage company says operations continue and proposes that token holders take equity in the restructured business — an unusual arrangement in bankruptcy.",
-      "url": "https://www.coindesk.com/business/2026/07/27/cloud-data-firm-storj-files-for-chapter-11-extending-a-week-of-crypto-failures-token-slides-16",
-      "publishedAt": "2026-07-27T09:15:43.000Z"
-    },
-    {
-      "id": "c59ee53041508276c84f",
-      "source": "Cointelegraph",
-      "title": "Coinbase CEO touts agentic finance as Base tops 100M AI payments",
-      "summary": "Coinbase CEO Brian Armstrong says AI agents will expand crypto adoption, pointing to Base, USDC and x402 as key pieces of agentic finance.",
-      "url": "https://cointelegraph.com/news/coinbase-ceo-agentic-finance-base-100-million-aifi-transactions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-27T09:01:05.000Z"
-    },
-    {
-      "id": "339a9682568038bc894b",
-      "source": "CryptoSlate",
-      "title": "Inside the $87 million BTC sell-off driving a Bitcoin treasury pivot into AI data centers",
-      "summary": "The company still held 1,514 BTC and $45 million of debt on July 10 as it moved capital toward two separate infrastructure investments. The post Inside the $87 million BTC sell-off driving a Bitcoin treasury pivot into AI data centers appeared first on…",
-      "url": "https://cryptoslate.com/inside-the-87-million-bitcoin-sell-off-driving-a-companys-high-stakes-pivot-into-ai-data-centers/",
-      "publishedAt": "2026-07-27T08:22:36.000Z"
-    },
-    {
-      "id": "f8d115ec7a2420c1b356",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin gives up early gains as stocks reverse lower",
-      "summary": "CoinEx's Jeff Ko sees bitcoin staying range-bound near $65,000 while retreating oil, a 4.7% 10-year yield and a week of mega-cap earnings set the tone.",
-      "url": "https://www.coindesk.com/markets/2026/07/27/live-updates-ether-leads-crypto-higher-as-bitcoin-trades-around-usd65-500",
-      "publishedAt": "2026-07-27T06:43:34.000Z"
-    },
-    {
-      "id": "41f9af5659afcb5942c4",
-      "source": "The Block",
-      "title": "South Korea’s KB Kookmin Bank to launch cross-border payment service on JPMorgan’s Kinexys: report",
-      "summary": "The largest bank in South Korea plans to launch a blockchain-based cross-border corporate payments service next month, according to Yonhap.",
-      "url": "https://www.theblock.co/post/409702/kb-kookmin-bank-payment-jpmorgans-kinexys?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-27T06:38:09.000Z"
-    },
-    {
-      "id": "ddf651b702b54056d7c5",
-      "source": "CoinDesk",
-      "title": "Crypto is the canary in the coal mine for the quantum computing threat, experts say",
-      "summary": "As estimates for “Q-Day” move closer, experts warn that crypto’s slow governance, not its cryptography, may be the biggest obstacle to defending against quantum attacks.",
-      "url": "https://www.coindesk.com/markets/2026/07/27/crypto-is-the-canary-in-the-coal-mine-for-the-quantum-computing-threat-experts-say",
-      "publishedAt": "2026-07-27T06:37:54.000Z"
-    },
-    {
-      "id": "f6b182edd1269a91332c",
-      "source": "Cointelegraph",
-      "title": "Triple-A confirms treasury-wallet breach after losses reach $11.8M",
-      "summary": "The stablecoin payments company said client funds were unaffected and that the financial impact would be absorbed through its treasury reserves.",
-      "url": "https://cointelegraph.com/news/triple-a-treasury-wallet-breach-11-8-million-loss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-27T05:15:54.000Z"
-    },
-    {
-      "id": "69742f6656da2d120092",
-      "source": "The Block",
-      "title": "The Funding: Are crypto vaults funds and curators fund managers?",
-      "summary": "The SEC's Hester Peirce says some of them may be — which could mean registration. Here's what that means, and what comes next.",
-      "url": "https://www.theblock.co/post/409690/are-crypto-vaults-funds-curators-fund-managers?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-27T04:39:17.000Z"
-    },
-    {
-      "id": "ceeadb84bdf07f044409",
-      "source": "Cointelegraph",
-      "title": "BitMart withdrawals appear to slow following wind-down announcement",
-      "summary": "Users reported withdrawal delays and freeze notices as wallets attributed to BitMart fell to about $69 million and its BMX token extended an 81.5% weekly decline.",
-      "url": "https://cointelegraph.com/news/bitmart-withdrawals-slow-exchange-wind-down?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-27T04:34:44.000Z"
-    },
-    {
-      "id": "57e0adab4f47002d71e0",
-      "source": "CoinDesk",
-      "title": "Bitcoin is back above $65,000 as U.S. and Iran hold fire. Oil drops 5%",
-      "summary": "ETH outperforms BTC, hinting at potential altcoin rally, as the U.S. and Iran hold fire and oil drops.",
-      "url": "https://www.coindesk.com/markets/2026/07/27/bitcoin-is-back-above-usd65-000-as-u-s-iran-hold-fire-oil-drops-5",
-      "publishedAt": "2026-07-27T04:21:26.000Z"
     }
   ]
 }
