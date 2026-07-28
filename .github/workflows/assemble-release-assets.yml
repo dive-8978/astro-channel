@@ -1,0 +1,77 @@
+name: Assemble release assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag containing the uploaded file parts
+        required: true
+        default: v1.5.1
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assemble and publish complete files
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+
+          release_id="$(
+            gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${RELEASE_TAG}" \
+              --jq '.id'
+          )"
+
+          mkdir -p parts complete
+          gh api "repos/${GITHUB_REPOSITORY}/releases/${release_id}/assets" \
+            --paginate > assets.json
+
+          mapfile -t bases < <(
+            jq -r '.[].name | select(test("\\.part[0-9]{3}$")) |
+              sub("\\.part[0-9]{3}$"; "")' assets.json | sort -u
+          )
+
+          if [ "${#bases[@]}" -eq 0 ]; then
+            echo "No multipart release assets found."
+            exit 1
+          fi
+
+          for base in "${bases[@]}"; do
+            echo "Assembling ${base}"
+            mapfile -t asset_rows < <(
+              jq -r --arg prefix "${base}.part" '
+                .[] |
+                select(.name | startswith($prefix)) |
+                [.name, (.id | tostring)] | @tsv
+              ' assets.json | sort
+            )
+
+            : > "complete/${base}"
+            for row in "${asset_rows[@]}"; do
+              name="${row%%$'\t'*}"
+              asset_id="${row##*$'\t'}"
+              echo "Downloading ${name}"
+              gh api \
+                -H "Accept: application/octet-stream" \
+                "repos/${GITHUB_REPOSITORY}/releases/assets/${asset_id}" \
+                > "parts/${name}"
+              cat "parts/${name}" >> "complete/${base}"
+            done
+
+            gh release upload "${RELEASE_TAG}" "complete/${base}" \
+              --repo "${GITHUB_REPOSITORY}" --clobber
+
+            for row in "${asset_rows[@]}"; do
+              asset_id="${row##*$'\t'}"
+              gh api --method DELETE \
+                "repos/${GITHUB_REPOSITORY}/releases/assets/${asset_id}"
+            done
+          done
+
+          gh release view "${RELEASE_TAG}" --repo "${GITHUB_REPOSITORY}" \
+            --json assets --jq '.assets[] | [.name, .size, .state] | @tsv'
