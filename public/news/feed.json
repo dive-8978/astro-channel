@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T09:14:19.943Z",
+  "generatedAt": "2026-07-29T14:34:26.301Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 55,
       "error": null
     },
     {
@@ -52,11 +52,251 @@
     {
       "name": "Ethereum Foundation",
       "status": "ok",
-      "itemCount": 630,
+      "itemCount": 631,
       "error": null
     }
   ],
   "items": [
+    {
+      "id": "02dc1a647a7153bc80f4",
+      "source": "Bitcoin Magazine",
+      "title": "Crypto Giant DCG Warns Senate: Pass Clarity Act or Lose Ground to Singapore, UAE",
+      "summary": "Bitcoin Magazine Crypto Giant DCG Warns Senate: Pass Clarity Act or Lose Ground to Singapore, UAE The crypto conglomerate is the latest to show support for the bill in its current form. This post Crypto Giant DCG Warns Senate: Pass Clarity Act or Lose Ground…",
+      "url": "https://bitcoinmagazine.com/news/crypto-giant-dcg-supports-clarity-act",
+      "publishedAt": "2026-07-29T14:12:10.000Z"
+    },
+    {
+      "id": "e507a05e011f1d5c9d88",
+      "source": "CoinDesk",
+      "title": "Ethereum Foundation names pcaversaccio to board amid leadership changes",
+      "summary": "pcaversaccio (known as \"pc\"), is a prominent security researcher in the Ethereum ecosystem. His addition brings the foundation's board to four members.",
+      "url": "https://www.coindesk.com/tech/2026/07/29/ethereum-foundation-names-pcaversaccio-to-board-amid-leadership-changes",
+      "publishedAt": "2026-07-29T14:11:21.000Z"
+    },
+    {
+      "id": "24655535e30f42a867fb",
+      "source": "The Block",
+      "title": "Tether’s GENIUS-compliant USAT stablecoin launches on Celo, marking first expansion beyond Ethereum",
+      "summary": "USAT can be used to pay for gas on the blockchain, meaning users will not have to hold multiple tokens to make USAT transactions.",
+      "url": "https://www.theblock.co/post/410048/tethers-genius-compliant-usat-stablecoin-launches-on-celo-marking-first-expansion-beyond-ethereum?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-29T14:06:34.000Z"
+    },
+    {
+      "id": "6a21ec2e8646ec1f470e",
+      "source": "CoinDesk",
+      "title": "The inside story of how a hike in Hong Kong changed crypto trading forever",
+      "summary": "\"We were a scrappy startup,\" Delo said of BitMEX back in 2016, when it launched the first perpetual future. \"We thought, ‘Just get it out there. If it was any good, the market would show us.’\"",
+      "url": "https://www.coindesk.com/business/2026/07/29/the-inside-story-of-how-a-hike-in-hong-kong-changed-crypto-trading-forever",
+      "publishedAt": "2026-07-29T13:53:01.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T13:47:35.000Z"
+    },
+    {
+      "id": "ff20ec8446386e4ead14",
+      "source": "Cointelegraph",
+      "title": "BNY to bring transfer agency records onchain in blockchain push",
+      "summary": "BNY is launching a blockchain-based transfer agency platform as the bank expands its digital asset infrastructure and moves core financial records onchain.",
+      "url": "https://cointelegraph.com/news/bny-transfer-agency-records-blockchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T13:36:18.000Z"
+    },
+    {
+      "id": "ca2cc5768fd02b2a123b",
+      "source": "CoinDesk",
+      "title": "About $80 million ZEC crosses into Zcash's new Ironwood pool in the first day",
+      "summary": "Roughly 5% of the funds in the retired Orchard pool have gone through the turnstile. The rest sit in a pool that can no longer take deposits.",
+      "url": "https://www.coindesk.com/tech/2026/07/29/about-usd80-million-zec-crosses-into-zcash-s-new-ironwood-pool-in-the-first-day",
+      "publishedAt": "2026-07-29T13:32:37.000Z"
+    },
+    {
+      "id": "34eafc6f86f5d9ff34ea",
+      "source": "CryptoSlate",
+      "title": "New Cardano partnership promises to monetize your private data, but payouts likely start at just $1.25 a year",
+      "summary": "The Cardano Foundation announced a partnership with Reef Data eG on July 28, backed by Hamburger Volksbank, ARIC, VALIO, and Disruptive Elements. Reef plans to pool members' personal data, license it to businesses, and pay royalties back to contributors.…",
+      "url": "https://cryptoslate.com/new-cardano-partnership-promises-to-monetize-your-private-data-but-payouts-likely-start-at-just-1-25-a-year/",
+      "publishedAt": "2026-07-29T13:30:53.000Z"
+    },
+    {
+      "id": "99a28db13264633c81ac",
+      "source": "Cointelegraph",
+      "title": "The 100x obsession: Fundamentals grow in importance as crypto matures",
+      "summary": "Crypto’s fundamentals have never been stronger, yet degens keep chasing hot new narratives. Behavioral finance may explain why get rich quick stories continue to beat substance.",
+      "url": "https://cointelegraph.com/magazine/the-100x-obsession-why-great-crypto-projects-keep-losing-to-great-stories?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T13:30:00.000Z"
+    },
+    {
+      "id": "d537bd1aa538d4b3f8f9",
+      "source": "CoinDesk",
+      "title": "The systemic-risk debate over perpetual futures is aimed at the wrong target",
+      "summary": "As perpetuals enter regulated markets, critics warn they import systemic risk. But the risk comes from venue design — leverage limits, margin rules, index construction, and default handling — not the contract itself, argues Chris Tyrer, President of Bullish…",
+      "url": "https://www.coindesk.com/opinion/2026/07/29/the-systemic-risk-debate-over-perpetual-futures-is-aimed-at-the-wrong-target",
+      "publishedAt": "2026-07-29T13:00:00.000Z"
+    },
+    {
+      "id": "a0593d51132632eaaac8",
+      "source": "The Block",
+      "title": "MoonPay launches PayBox, an AI payment vault for ChatGPT and Claude",
+      "summary": "Crypto payments company MoonPay now lets users move money through ChatGPT and Claude with a new AI payment vault called PayBox.",
+      "url": "https://www.theblock.co/post/410032/moonpay-paybox-chatgpt-claude?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-29T13:00:00.000Z"
+    },
+    {
+      "id": "ec522ebb535eff4b67f3",
+      "source": "The Block",
+      "title": "Bernstein cuts Circle price target to $140, says Open USD threat will fade",
+      "summary": "Bernstein cuts Circle price target to $140 from $190, keeps Outperform, and says the Open USD threat fades as USDC supply holds near ATH.",
+      "url": "https://www.theblock.co/post/410029/bernstein-cuts-circle-price-target-to-140-says-open-usd-threat-will-fade?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-29T12:55:18.000Z"
+    },
+    {
+      "id": "336a20b049542060c008",
+      "source": "The Block",
+      "title": "Safe smart accounts process nearly 130 million transactions in record quarter",
+      "summary": "Programmable smart wallet provider reported another quarter of user growth, ending Q2 2026 with over 63 million Safe accounts created.",
+      "url": "https://www.theblock.co/post/410023/safe-smart-accounts-process-nearly-130-million-transactions-in-record-quarter?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-29T12:50:02.000Z"
+    },
+    {
+      "id": "6c8e61f297ff3f8aa603",
+      "source": "CryptoSlate",
+      "title": "Bitcoin miners pour billions into AI – but the pivot could leave them regretting it within a year",
+      "summary": "Bitcoin miners are redirecting billions of dollars and scarce power capacity toward artificial intelligence as BTC’s downturn pushes mining profitability close to historic lows. Data from CryptoSlate shows Bitcoin trading around $64,000, nearly 50% below its…",
+      "url": "https://cryptoslate.com/bitcoin-miners-pour-billions-into-ai-but-the-pivot-could-leave-them-regretting-it-within-a-year/",
+      "publishedAt": "2026-07-29T12:25:12.000Z"
+    },
+    {
+      "id": "bbcacfd9e993adc76e25",
+      "source": "CoinDesk",
+      "title": "BNY targets $8.6 trillion transfer agency market on blockchain rails",
+      "summary": "The world’s largest custodian will keep its existing system while adding a digital ownership record for tokenized funds.",
+      "url": "https://www.coindesk.com/business/2026/07/29/bny-targets-usd8-6-trillion-transfer-agency-market-on-blockchain-rails",
+      "publishedAt": "2026-07-29T12:18:58.000Z"
+    },
+    {
+      "id": "a321d49d92a0fdc01d3c",
+      "source": "Decrypt",
+      "title": "Morning Minute: Claude Mythos Breaks Post-Quantum Cryptography",
+      "summary": "Plus markets are mixed ahead of FOMC; new Wall St. giants are backing the Clarity Act; and Zcash officially launched its Ironwood upgrade",
+      "url": "https://decrypt.co/374637/morning-minute-claude-mythos-breaks-post-quantum-cryptography",
+      "publishedAt": "2026-07-29T12:15:00.000Z"
+    },
+    {
+      "id": "f1f05015b9cff1272c20",
+      "source": "Cointelegraph",
+      "title": "Emirates enables UAE residents to pay for flights through Crypto.com",
+      "summary": "The service is limited to eligible UAE residents and bookings are priced and settled in dirhams.",
+      "url": "https://cointelegraph.com/news/emirates-starts-letting-uae-residents-pay-for-flights-through-cryptocom?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T12:14:31.000Z"
+    },
+    {
+      "id": "bffbba340d33dafe589e",
+      "source": "Decrypt",
+      "title": "Crypto Scams Cost Americans an Estimated $80.7B in 2025: Report",
+      "summary": "The figure is seven times that of the $11.4 billion in reported losses, a rate drawn from a 2017 survey on how rarely fraud is reported.",
+      "url": "https://decrypt.co/374638/crypto-scams-cost-americans-an-estimated-80-7b-in-2025-report",
+      "publishedAt": "2026-07-29T12:10:26.000Z"
+    },
+    {
+      "id": "767d430d4478c570759f",
+      "source": "CryptoSlate",
+      "title": "Schwab rebrands $232M crypto ETF with NLP buzzword without changing a single investment",
+      "summary": "STCE kept the same ticker, fee, objective and index while its largest holdings included miners and Trump Media. The post Schwab rebrands $232M crypto ETF with NLP buzzword without changing a single investment appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/why-schwab-added-natural-language-processing-to-a-232m-etf-holding-trump-media-and-bitcoin-miners/",
+      "publishedAt": "2026-07-29T11:20:34.000Z"
+    },
+    {
+      "id": "073cbb8d46794eff16a5",
+      "source": "Cointelegraph",
+      "title": "Telegram founder Pavel Durov internationally wanted, Russia’s FSB says",
+      "summary": "Russia’s FSB says Telegram founder Pavel Durov faces a terrorism-related charge and an international arrest warrant, while a separate French case remains open.",
+      "url": "https://cointelegraph.com/news/telegram-founder-wanted-internationally-russia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T11:18:19.000Z"
+    },
+    {
+      "id": "39b6a1fcee60317115ed",
+      "source": "CoinDesk",
+      "title": "3 reasons Wednesday's Fed meeting is pivotal for BTC",
+      "summary": "Your day-ahead look for July 29, 2026",
+      "url": "https://www.coindesk.com/daybook-us/2026/07/29/3-reasons-wednesday-s-fed-meeting-is-pivotal-for-btc",
+      "publishedAt": "2026-07-29T11:15:00.000Z"
+    },
+    {
+      "id": "40dd97389a8db46ac7d2",
+      "source": "The Block",
+      "title": "‘Sleepy July’: K33 says bitcoin spot volume on track for weakest month since late 2023",
+      "summary": "K33 says bitcoin spot trading activity is headed for its weakest month since late 2023 as derivatives markets remain subdued.",
+      "url": "https://www.theblock.co/post/410017/sleepy-july-k33-says-bitcoin-spot-volume-on-track-for-weakest-month-since-late-2023?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-29T10:59:48.000Z"
+    },
+    {
+      "id": "b883fa3fe4af3240c958",
+      "source": "CoinDesk",
+      "title": "Bitcoin steadies above $64,000 as crypto looks to Fed interest-rate decision",
+      "summary": "BTC added 0.75% before the Federal Reserve's rate decision. Inflation at 4.1% keeps an increase firmly on the table even as oil prices ease.",
+      "url": "https://www.coindesk.com/markets/2026/07/29/bitcoin-steadies-above-usd64-000-as-crypto-looks-to-fed-interest-rate-decision",
+      "publishedAt": "2026-07-29T10:34:18.000Z"
+    },
+    {
+      "id": "fce4957d35b8dee32d81",
+      "source": "Decrypt",
+      "title": "Apple Sued After Fake iPhone Wallet App Drained $1.8M in Bitcoin",
+      "summary": "The suit claims Apple ranked a fake Sparrow Wallet app and put it in curated crypto collections alongside legitimate ones.",
+      "url": "https://decrypt.co/374628/apple-sued-after-fake-iphone-wallet-app-drained-1-8m-in-bitcoin",
+      "publishedAt": "2026-07-29T10:22:57.000Z"
+    },
+    {
+      "id": "fdac8e17c29c380f37c1",
+      "source": "CryptoSlate",
+      "title": "Trump promised to save crypto, but his personal business might kill its landmark CLARITY law",
+      "summary": "Senate negotiators on the CLARITY Act have run into a condition several Democrats are treating as essential: they want ethics language limiting how much senior officials, including the president and vice president, can profit from digital asset ventures.…",
+      "url": "https://cryptoslate.com/crypto-was-warned-that-trump-could-politicize-the-industry-clarity-is-testing-that-bet/",
+      "publishedAt": "2026-07-29T10:15:14.000Z"
+    },
+    {
+      "id": "6978ea179618facf3759",
+      "source": "CoinDesk",
+      "title": "Binance offers gold and silver options after commodity futures pull in billions in daily volume",
+      "summary": "The crypto exchange unveils commodity options following strong uptake for gold and silver perps.",
+      "url": "https://www.coindesk.com/markets/2026/07/29/binance-offers-gold-and-silver-options-after-commodity-futures-pull-in-billions-in-daily-volume",
+      "publishedAt": "2026-07-29T10:00:00.000Z"
+    },
+    {
+      "id": "f01f60f19f9a133fe7bf",
+      "source": "Cointelegraph",
+      "title": "Crypto TradFi grows fivefold to $6.6B as exchanges expand into stocks, commodities: Report",
+      "summary": "A CoinGecko study points to rising demand for tokenized equities and commodities on centralized exchanges, with perpetual futures driving most of the market’s trading activity.",
+      "url": "https://cointelegraph.com/news/crypto-exchanges-tokenized-assets-market-6-6-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T10:00:00.000Z"
+    },
+    {
+      "id": "30e81dd68e38edb1a002",
+      "source": "Decrypt",
+      "title": "Russia Charges Telegram's Pavel Durov With Aiding Terrorism",
+      "summary": "Durov has previously called Russia’s criminal case against him \"a sad spectacle of a state afraid of its own people.\"",
+      "url": "https://decrypt.co/374625/russia-charges-telegrams-pavel-durov-with-aiding-terrorism",
+      "publishedAt": "2026-07-29T09:34:35.000Z"
+    },
+    {
+      "id": "d5bf4e9bd7b95801d344",
+      "source": "CoinDesk",
+      "title": "Ionic Digital jumps 26% in Nasdaq debut, giving Celsius Network claimholders an exit route",
+      "summary": "The bitcoin miner reached a market valuation of roughly $2.8 billion based on its 44.9 million shares outstanding.",
+      "url": "https://www.coindesk.com/business/2026/07/29/ionic-digital-jumps-26-in-nasdaq-debut-giving-celsius-network-claimholders-an-exit-route",
+      "publishedAt": "2026-07-29T09:22:24.000Z"
+    },
+    {
+      "id": "40188f36486118b43f33",
+      "source": "Cointelegraph",
+      "title": "Hungary repeals crypto checks as first MiCA license is granted",
+      "summary": "Hungary removed mandatory third-party checks for crypto conversions as CoinCash received authorization to provide digital asset services under MiCA.",
+      "url": "https://cointelegraph.com/news/hungary-repeals-crypto-checks-first-mica-license-granted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T09:15:36.000Z"
+    },
     {
       "id": "a088eb0c0462247780f7",
       "source": "CoinDesk",
@@ -138,17 +378,9 @@
       "publishedAt": "2026-07-29T07:11:27.000Z"
     },
     {
-      "id": "073cbb8d46794eff16a5",
-      "source": "Cointelegraph",
-      "title": "Telegram founder Pavel Durov internationally wanted, Russia’s FSB says",
-      "summary": "Russia’s FSB says Telegram founder Pavel Durov faces a terrorism-related charge and an international arrest warrant, while a separate French case remains open.",
-      "url": "https://cointelegraph.com/news/telegram-founder-wanted-internationally-russia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T06:32:25.000Z"
-    },
-    {
       "id": "6cda85673e8a7c0b9b75",
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin clears $64,000 in Asia hours ahead of Fed decision",
+      "title": "Live updates: Bitcoin rises above $64,000 ahead of Fed rate decision",
       "summary": "Markets price a hold at Wednesday's decision, but a real minority sees a surprise hike, with Citadel Securities and UBS among those flagging the risk.",
       "url": "https://www.coindesk.com/tech/2026/07/29/live-updates-bitcoin-clears-usd64-000-in-asia-hours-ahead-of-fed-decision",
       "publishedAt": "2026-07-29T06:25:21.000Z"
@@ -178,11 +410,11 @@
       "publishedAt": "2026-07-29T05:32:27.000Z"
     },
     {
-      "id": "2321cd4cf38aea19ec85",
+      "id": "b295035543b51e68b81c",
       "source": "Cointelegraph",
       "title": "Trade.xyz to cover SK Hynix perp liquidation losses tied to price anomaly",
       "summary": "Trade.xyz said its oracle worked as designed but will reimburse eligible traders after an external SK Hynix price print caused the contract’s mark price to fall nearly 19%.",
-      "url": "https://cointelegraph.com/news/trade-xyz-sk-hynix-perp-liquidations-price-anomaly?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "url": "https://cointelegraph.com/markets/trade-xyz-sk-hynix-perp-liquidations-price-anomaly?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-29T05:29:48.000Z"
     },
     {
@@ -210,11 +442,11 @@
       "publishedAt": "2026-07-29T03:26:44.000Z"
     },
     {
-      "id": "3920f134c1f803db688e",
+      "id": "ef25c9e0b21c3a4c6a63",
       "source": "Cointelegraph",
       "title": "Tether signs tokenization deal with Nairobi Securities Exchange",
       "summary": "The agreement covers tokenized securities, blockchain-based market infrastructure and the potential use of USDT as a settlement layer.",
-      "url": "https://cointelegraph.com/news/tether-signs-tokenization-deal-with-nairobi-securities-exchange?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "url": "https://cointelegraph.com/markets/tether-signs-tokenization-deal-with-nairobi-securities-exchange?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-29T02:50:51.000Z"
     },
     {
@@ -226,12 +458,20 @@
       "publishedAt": "2026-07-29T01:05:15.000Z"
     },
     {
-      "id": "b44aeaabd7ed890d3d43",
+      "id": "3dba521d5498475810b1",
       "source": "Cointelegraph",
       "title": "European financial institutions launch RL1 cooperative blockchain network",
       "summary": "RL1 began operations as a member-owned blockchain cooperative backed by 10 European financial institutions, including ABN AMRO, DekaBank and Natixis CIB.",
-      "url": "https://cointelegraph.com/news/european-financial-institutions-launch-rl1-blockchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "url": "https://cointelegraph.com/markets/european-financial-institutions-launch-rl1-blockchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-29T00:09:29.000Z"
+    },
+    {
+      "id": "d45ab686c7a0f2645073",
+      "source": "Ethereum Foundation",
+      "title": "Ethereum Foundation Board Update",
+      "summary": "We are pleased to share that pcaversaccio (pc) has joined the Ethereum Foundation Board. pc is a long time contributor to the Ethereum ecosystem, a co-founder and lead of SEAL 911, and has been a member of the EF's Silviculture Society, which provides…",
+      "url": "https://blog.ethereum.org/en/2026/07/29/ef-board-update",
+      "publishedAt": "2026-07-29T00:00:00.000Z"
     },
     {
       "id": "87bc88d3fc13586e4d68",
@@ -266,11 +506,11 @@
       "publishedAt": "2026-07-28T22:08:04.000Z"
     },
     {
-      "id": "6054100a8e3b167310fa",
+      "id": "1c2cce869762d6006c58",
       "source": "Cointelegraph",
       "title": "Visa outlines stablecoin strategy during Q3 earnings call",
       "summary": "Visa said it is investing across the stablecoin stack, highlighting OpenUSD, tokenized deposits and AI-powered commerce during the company’s third-quarter earnings call.",
-      "url": "https://cointelegraph.com/news/visa-earnings-stablecoin-strategy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "url": "https://cointelegraph.com/markets/visa-earnings-stablecoin-strategy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-28T21:57:49.000Z"
     },
     {
@@ -306,11 +546,11 @@
       "publishedAt": "2026-07-28T20:20:12.000Z"
     },
     {
-      "id": "854a420b5ac171174f50",
+      "id": "f37d40df56f852f13016",
       "source": "Cointelegraph",
       "title": "Morgan Stanley expands crypto lineup with Ether, Solana ETPs",
       "summary": "The new exchange-traded products track Ether and Solana, offer staking rewards and follow the firm’s Bitcoin fund launched earlier this year.",
-      "url": "https://cointelegraph.com/news/morgan-stanley-expands-crypto-lineup-with-ether-solana-etps?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "url": "https://cointelegraph.com/markets/morgan-stanley-expands-crypto-lineup-with-ether-solana-etps?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-28T20:10:46.000Z"
     },
     {
@@ -410,14 +650,6 @@
       "publishedAt": "2026-07-28T18:21:02.000Z"
     },
     {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-28T18:15:25.000Z"
-    },
-    {
       "id": "445904428d7e5946697c",
       "source": "CryptoSlate",
       "title": "Apple’s App Store promoted fake Bitcoin wallet that stole $1.8M after developer spent a year warning them",
@@ -464,238 +696,6 @@
       "summary": "Ironwood represents something of a unified effort across Zcash’s developer ecosystem after Shielded Labs found a bug in Orchard.",
       "url": "https://www.theblock.co/post/409934/zcash-ironwood-upgrade-launching-new-shielded-pool-after-orchard-vulnerability?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-07-28T17:26:31.000Z"
-    },
-    {
-      "id": "158013baf2e4e7e09bf7",
-      "source": "Bitcoin Magazine",
-      "title": "Core Scientific Adds More Bitcoin To Balance Sheet in Q2 Despite Selling Strategy",
-      "summary": "Bitcoin Magazine Core Scientific Adds More Bitcoin To Balance Sheet in Q2 Despite Selling Strategy While the publicly-traded miner's holdings have shrunk overall this year, the company has quickly added more Bitcoin to its balance sheet the past quarter.…",
-      "url": "https://bitcoinmagazine.com/news/core-scientific-adds-more-bitcoin",
-      "publishedAt": "2026-07-28T17:23:46.000Z"
-    },
-    {
-      "id": "d912b7cde162a0f7cf86",
-      "source": "CoinDesk",
-      "title": "Wall Street veteran Don Wilson says regulators are getting perps all wrong",
-      "summary": "DRW CEO Don Wilson says perpetual futures aren't inherently risky crypto gambling tools, and it’s time traditional markets and regulators start embracing them.",
-      "url": "https://www.coindesk.com/markets/2026/07/28/wall-street-veteran-don-wilson-says-regulators-are-getting-crypto-s-biggest-trading-innovation-all-wrong",
-      "publishedAt": "2026-07-28T17:23:35.000Z"
-    },
-    {
-      "id": "3e8480f88b9bea437eff",
-      "source": "CryptoSlate",
-      "title": "Inside the brutal 2-minute flash crash sending a $400M South Korean market plunging on Hyperliquid",
-      "summary": "A later snapshot showed open interest down 20.29% while Trade.xyz investigated the price inputs submitted to HyperCore. The post Inside the brutal 2-minute flash crash sending a $400M South Korean market plunging on Hyperliquid appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/inside-the-brutal-2-minute-flash-crash-sending-a-400m-south-korean-market-plunging-on-hyperliquid/",
-      "publishedAt": "2026-07-28T17:05:53.000Z"
-    },
-    {
-      "id": "c865839122acc7265c34",
-      "source": "Decrypt",
-      "title": "First ChatGPT, Now Claude: Frontier AI Models Are Escaping Their Sandboxes",
-      "summary": "A week after OpenAI disclosed a frontier AI sandbox escape, researchers found Anthropic's Claude Cowork could break out of its own virtual machine.",
-      "url": "https://decrypt.co/374557/chatgpt-claude-ai-models-escaping-sandboxes-cowork",
-      "publishedAt": "2026-07-28T16:54:11.000Z"
-    },
-    {
-      "id": "bb34302968b792450c08",
-      "source": "Cointelegraph",
-      "title": "Bitcoin lows pierce $63K as Asia chip-stock crash spreads to Wall Street",
-      "summary": "Bitcoin and crypto dropped as contagion from a major Asia stock-market correction spreads to the US at the Wall Street open.",
-      "url": "https://cointelegraph.com/markets/bitcoin-lows-pierce-63k-as-asia-chip-stock-crash-spills?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-28T16:27:46.000Z"
-    },
-    {
-      "id": "6b8acbebb28c6c8aa21a",
-      "source": "Decrypt",
-      "title": "Why the Bitcoin Rally Seems More Like a Bull Trap",
-      "summary": "The Bitcoin bounce looked promising. The charts now say it wasn't.",
-      "url": "https://decrypt.co/374539/bitcoin-price-rally-bull-trap",
-      "publishedAt": "2026-07-28T16:22:18.000Z"
-    },
-    {
-      "id": "e3be5630269506a2a9da",
-      "source": "Cointelegraph",
-      "title": "Kraken opens Jersey Mike’s IPO to retail investors through tokenized shares and direct allocations",
-      "summary": "Eligible US users can request IPO allocations, while customers in more than 110 countries gain access to tokenized Jersey Mike’s shares backed 1:1 by the underlying stock.",
-      "url": "https://cointelegraph.com/news/kraken-opens-jersey-mikes-ipo-to-retail-investors-through-tokenized-shares-and-direct-allocations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-28T16:20:57.000Z"
-    },
-    {
-      "id": "5d2a63c77411be5fc991",
-      "source": "CoinDesk",
-      "title": "BlackRock, Fidelity, other Wall Street giants back the Clarity Act",
-      "summary": "BlackRock, Fidelity, Franklin Templeton, Goldman Sachs and SoFi have publicly endorsed the crypto market structure bill as the Senate's timeline tightens.",
-      "url": "https://www.coindesk.com/policy/2026/07/28/blackrock-fidelity-other-wall-street-giants-back-the-clarity-act",
-      "publishedAt": "2026-07-28T16:08:19.000Z"
-    },
-    {
-      "id": "e1de95c00b8060fed3a9",
-      "source": "The Block",
-      "title": "Robinhood Chain deposits climb but volume and users fade after memecoin-fueled launch",
-      "summary": "The number of active accounts on Roinbhood Chain averaged around 275,000 per day, down by 7% week-over-week.",
-      "url": "https://www.theblock.co/post/409813/robinhood-chain-deposits-climb-volume-users-fade-memecoin-fueled-launch?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-28T16:02:48.000Z"
-    },
-    {
-      "id": "ad54b6cfca31f117e4e0",
-      "source": "CryptoSlate",
-      "title": "Federal court shields Kalshi and Polymarket from Minnesota’s felony crackdown days before deadline",
-      "summary": "KalshiEX and Polymarket US can keep serving Minnesota users while the merits and contract boundary remain unsettled. The post Federal court shields Kalshi and Polymarket from Minnesota’s felony crackdown days before deadline appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/minnesota-judge-blocks-aug-1-prediction-market-felony-law-for-registered-exchanges-but-only-for-now/",
-      "publishedAt": "2026-07-28T15:50:45.000Z"
-    },
-    {
-      "id": "7972ca45fdfc861f5e6b",
-      "source": "Cointelegraph",
-      "title": "Core Scientific revenue doubles in Q2 as AI colocation expansion accelerates",
-      "summary": "Core Scientific reported strong second-quarter revenue growth as AI colocation became its largest business, though a non-cash accounting charge resulted in a $1.15 billion net loss.",
-      "url": "https://cointelegraph.com/markets/core-scientific-revenue-doubles-q2-ai-colocation-expansion-accelerate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-28T15:47:00.000Z"
-    },
-    {
-      "id": "68a124cbfb2034c355ca",
-      "source": "CoinDesk",
-      "title": "Ethereum startup EthSystems bets privacy is key to getting banks on public blockchains",
-      "summary": "EthSystems, which spun out of the Ethereum Foundation earlier this month, is focused on building privacy infrastructure for banks and other financial institutions.",
-      "url": "https://www.coindesk.com/tech/2026/07/28/ethereum-startup-ethsystems-bets-privacy-is-key-to-getting-banks-on-public-blockchains",
-      "publishedAt": "2026-07-28T15:46:33.000Z"
-    },
-    {
-      "id": "2182815ec071f094b232",
-      "source": "The Block",
-      "title": "Galaxy Digital buys 500 acres in McGregor for second Texas AI data center campus",
-      "summary": "The “privately funded\" Texas campus is expected to generate a minimum of $130 million for McGregor's local tax base, Galaxy said.",
-      "url": "https://www.theblock.co/post/409911/galaxy-digital-buys-500-acres-in-mcgregor-for-second-texas-ai-data-center-campus?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-28T15:31:00.000Z"
-    },
-    {
-      "id": "42cb816f745a8a49f927",
-      "source": "The Block",
-      "title": "Nansen CEO bets on AI agents to overtake human traders within 2 years",
-      "summary": "Nansen CEO Alex Svanevik says AI agents will overtake human traders in two years as the platform pivots from analytics to agentic trading.",
-      "url": "https://www.theblock.co/post/409914/nansen-ceo-bets-on-ai-agents-to-overtake-human-traders-within-two-years?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-28T15:22:12.000Z"
-    },
-    {
-      "id": "7f49264ace6f431acdce",
-      "source": "Bitcoin Magazine",
-      "title": "Bank of Russia Creates New Rules For Crypto Trading",
-      "summary": "Bitcoin Magazine Bank of Russia Creates New Rules For Crypto Trading Russia’s central bank on Monday published draft regulations for the trading of digital currencies. The Bank of Russia released the changes to its “organized trading” rules, including the…",
-      "url": "https://bitcoinmagazine.com/news/bank-of-russia-drops-crypto-trading-rules",
-      "publishedAt": "2026-07-28T15:17:55.000Z"
-    },
-    {
-      "id": "026bf2d029994baa0321",
-      "source": "The Block",
-      "title": "Barry Silbert-backed Zcash miner Fortitude brings Nebraska facility online to cut its ZEC production costs",
-      "summary": "Fortitude expects its new 12-megawatt mining facility to cut its direct cash mining cost from about $70 to roughly $40 per ZEC.",
-      "url": "https://www.theblock.co/post/409899/barry-silbert-zcash-miner-fortitude-nebraska-facility-online-cut-zec-mining-costs?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-28T15:13:41.000Z"
-    },
-    {
-      "id": "7de6b5213c6acd1a8f3d",
-      "source": "CoinDesk",
-      "title": "Russia outlines new digital depository rules ahead of fall crypto framework roll-out",
-      "summary": "The central bank's draft rules require digital asset platforms to hold up to $2.8 million in liquid capital as a sweeping regulatory framework looms.",
-      "url": "https://www.coindesk.com/policy/2026/07/28/russia-outlines-new-digital-depository-rules-ahead-of-fall-crypto-framework-roll-out",
-      "publishedAt": "2026-07-28T14:49:50.000Z"
-    },
-    {
-      "id": "fedfe6ccd98d6c81088d",
-      "source": "CoinDesk",
-      "title": "Hyperliquid is taking crypto perps deep into DeFi’s ‘money LEGO’ land",
-      "summary": "Hyperliquid is capitalizing on the volume and depth of its order book by giving firms the option to compose with the platform’s shared liquidity, rather than fragmenting it.",
-      "url": "https://www.coindesk.com/business/2026/07/28/hyperliquid-is-taking-crypto-perps-deep-into-defi-s-money-lego-land",
-      "publishedAt": "2026-07-28T14:49:01.000Z"
-    },
-    {
-      "id": "e753b76313dcaa9b49f0",
-      "source": "CryptoSlate",
-      "title": "Crypto holders face a July 29 Maine deadline as state manual conflicts on when abandoned funds trigger seizure",
-      "summary": "The five-year trigger is clear, but the first applicable report cycle and transition treatment are not. The post Crypto holders face a July 29 Maine deadline as state manual conflicts on when abandoned funds trigger seizure appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/maines-new-crypto-dormancy-law-leaves-holders-waiting-for-the-reporting-guidance-they-need/",
-      "publishedAt": "2026-07-28T14:45:02.000Z"
-    },
-    {
-      "id": "ce6392d85d75cfc20a4f",
-      "source": "CoinDesk",
-      "title": "Zcash seals $1.7 billion shielded pool as Ironwood upgrade activates",
-      "summary": "The upgrade retires Orchard, where a counterfeiting bug sat undetected for four years. Every coin inside now has to leave through a gate that caps withdrawals at verified deposits.",
-      "url": "https://www.coindesk.com/tech/2026/07/28/zcash-seals-usd1-7-billion-shielded-pool-as-ironwood-upgrade-activates",
-      "publishedAt": "2026-07-28T14:35:28.000Z"
-    },
-    {
-      "id": "84fb3da4999a938c2564",
-      "source": "The Block",
-      "title": "Morgan Stanley debuts Ethereum and Solana ETFs with market’s lowest fee, staking rewards",
-      "summary": "The firm launching its ETH- and SOL-based funds comes roughly two and half years after the first spot bitcoin ETFs started trading.",
-      "url": "https://www.theblock.co/post/409898/morgan-stanley-debuts-ethereum-solana-etfs-markets-lowest-fee-staking-rewards?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-28T14:31:47.000Z"
-    },
-    {
-      "id": "0055293d89930f7a1be7",
-      "source": "CoinDesk",
-      "title": "Morgan Stanley debuts ether, solana exchange-traded products after bitcoin fund success",
-      "summary": "The asset manager is offering low-cost ETH and SOL exchange-traded products after its bitcoin fund topped $381 million in assets.",
-      "url": "https://www.coindesk.com/markets/2026/07/28/morgan-stanley-debuts-ether-and-solana-etps-after-bitcoin-fund-success",
-      "publishedAt": "2026-07-28T14:30:57.000Z"
-    },
-    {
-      "id": "0c1a60571c72c5b7884e",
-      "source": "Bitcoin Magazine",
-      "title": "Hyperscale Ups Bitcoin Stash, Bridging Holdings to Over 1,106 Coins",
-      "summary": "Bitcoin Magazine Hyperscale Ups Bitcoin Stash, Bridging Holdings to Over 1,106 Coins The New York Stock Exchange-listed company has kept buying Bitcoin This post Hyperscale Ups Bitcoin Stash, Bridging Holdings to Over 1,106 Coins first appeared on Bitcoin…",
-      "url": "https://bitcoinmagazine.com/news/hyperscale-ups-bitcoin-stash",
-      "publishedAt": "2026-07-28T14:23:08.000Z"
-    },
-    {
-      "id": "a00fb935a00962be1daf",
-      "source": "CryptoSlate",
-      "title": "As Senate CLARITY Act odds plunge to 30%, Bitcoin’s refusal to drop signals a stealth upside trap",
-      "summary": "Bitcoin has largely shrugged off the deteriorating outlook for the CLARITY Act, raising the possibility that traders have already priced another legislative failure into the market. Data from CryptoSlate shows the largest cryptocurrency trading around…",
-      "url": "https://cryptoslate.com/as-senate-clarity-act-odds-plunge-to-30-bitcoins-refusal-to-drop-signals-a-stealth-upside-trap/",
-      "publishedAt": "2026-07-28T13:40:47.000Z"
-    },
-    {
-      "id": "bce733831f3c2350761e",
-      "source": "The Block",
-      "title": "Core Scientific ties its AI pivot to AMD in multi-gigawatt infrastructure deal",
-      "summary": "Core Scientific and AMD partner on 500 MW of U.S. AI data-center capacity from 2027, scalable to 2.5 GW, with warrants to buy CORZ stock.",
-      "url": "https://www.theblock.co/post/409887/core-scientific-ties-ai-pivot-amd-multi-gigawatt-infrastructure-deal?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-28T13:36:11.000Z"
-    },
-    {
-      "id": "1a1c8b5b36e6466b8730",
-      "source": "Cointelegraph",
-      "title": "The real reason DeFi projects that survived 2022 crash are shutting down now",
-      "summary": "DeFi projects that survived the fallout from the Terra and FTX collapses in 2022 are dying out in 2026. But analysts say it’s not a case of industry consolidation — but the opposite.",
-      "url": "https://cointelegraph.com/magazine/the-2022-bear-market-didnt-kill-these-defi-projects-what-changed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-28T13:30:00.000Z"
-    },
-    {
-      "id": "3428871b8fefb9f5f64a",
-      "source": "The Block",
-      "title": "Russia’s central bank drafts first rules for ‘organized’ crypto trading",
-      "summary": "The Bank of Russia drafted rules establishing organized trading, equity requirements, and digital depositories for digital asset markets.",
-      "url": "https://www.theblock.co/post/409877/russias-central-bank-drafts-first-rules-for-organized-crypto-trading?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-28T13:22:21.000Z"
-    },
-    {
-      "id": "fbde97f17bf88921f7f5",
-      "source": "Cointelegraph",
-      "title": "Markets eye Bank of Japan meeting on Friday as yen repeats 40-year US dollar lows",
-      "summary": "Analysis warned of a repeat of the 2024 yen carry-trade unwind that pressured crypto markets ahead of the next Bank of Japan interest-rate meeting.",
-      "url": "https://cointelegraph.com/markets/markets-eye-bank-of-japan-meeting-on-friday-as-yen-repeats-40-year-us-dollar-lows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-28T13:11:28.000Z"
-    },
-    {
-      "id": "773b1a8940ba5b53da16",
-      "source": "Cointelegraph",
-      "title": "Ethereum, Solana led crypto hack losses in H1 2026: Blockaid",
-      "summary": "Blockaid found Ethereum remained the hardest-hit blockchain in H1 2026, while Solana replaced Arbitrum as the network with the second-highest losses, driven largely by key compromises.",
-      "url": "https://cointelegraph.com/news/ethereum-solana-led-crypto-hack-losses-h1-2026-blockaid?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-28T13:00:00.000Z"
     }
   ]
 }
