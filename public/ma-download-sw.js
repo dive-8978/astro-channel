@@ -1,5 +1,9 @@
 importScripts("/ma-download-manifest.js");
 
+const RELEASE_PART_SIZE = 40 * 1024 * 1024;
+const NETWORK_CHUNK_SIZE = 2 * 1024 * 1024;
+const MAX_RETRIES = 5;
+
 self.addEventListener("install", event => {
   event.waitUntil(self.skipWaiting());
 });
@@ -26,17 +30,14 @@ async function streamDownload(filename, download) {
   const stream = new ReadableStream({
     async start(controller) {
       try {
-        for (const partUrl of download.parts) {
-          const response = await fetch(partUrl, { cache: "force-cache" });
-          if (!response.ok || !response.body) {
-            throw new Error(`Part download failed: ${response.status}`);
-          }
+        for (let partIndex = 0; partIndex < download.parts.length; partIndex += 1) {
+          const partUrl = download.parts[partIndex];
+          const bytesRemaining = download.size - (partIndex * RELEASE_PART_SIZE);
+          const partSize = Math.min(RELEASE_PART_SIZE, bytesRemaining);
 
-          const reader = response.body.getReader();
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            controller.enqueue(value);
+          for (let start = 0; start < partSize; start += NETWORK_CHUNK_SIZE) {
+            const end = Math.min(start + NETWORK_CHUNK_SIZE, partSize) - 1;
+            controller.enqueue(await fetchRange(partUrl, start, end));
           }
         }
         controller.close();
@@ -55,4 +56,34 @@ async function streamDownload(filename, download) {
       "X-Content-Type-Options": "nosniff"
     }
   });
+}
+
+async function fetchRange(url, start, end) {
+  const expectedLength = end - start + 1;
+  let lastError;
+
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: { Range: `bytes=${start}-${end}` },
+        cache: "no-store"
+      });
+      if (response.status !== 206 && response.status !== 200) {
+        throw new Error(`Unexpected response: ${response.status}`);
+      }
+
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      if (bytes.byteLength !== expectedLength) {
+        throw new Error(`Incomplete range: ${bytes.byteLength}/${expectedLength}`);
+      }
+      return bytes;
+    } catch (error) {
+      lastError = error;
+      if (attempt < MAX_RETRIES) {
+        await new Promise(resolve => setTimeout(resolve, attempt * 500));
+      }
+    }
+  }
+
+  throw lastError || new Error("Range download failed.");
 }
