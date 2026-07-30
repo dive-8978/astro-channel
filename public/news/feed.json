@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T19:48:04.946Z",
+  "generatedAt": "2026-07-30T03:34:59.415Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 39,
       "error": null
     },
     {
@@ -57,6 +57,158 @@
     }
   ],
   "items": [
+    {
+      "id": "20394dad8c8757570c78",
+      "source": "Cointelegraph",
+      "title": "Japanese game developer launches Bitcoin, altcoin fund with SBI",
+      "summary": "The Bitcoin and altcoin fund builds on Gumi’s growing crypto business centered around XRP, with the company nearly doubling its crypto holdings over the past year.",
+      "url": "https://cointelegraph.com/news/japanese-game-developer-bitcoin-altcoin-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-30T03:19:58.000Z"
+    },
+    {
+      "id": "fc1e15eeb8c48822744f",
+      "source": "The Block",
+      "title": "Binance.US to apply for CFTC license in August for prediction market platform",
+      "summary": "Binance.US CEO Stephen Gregory said at a recent conference that the company will apply for a designated contract market license in August.",
+      "url": "https://www.theblock.co/post/410110/binance-us-cftc-license?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-30T03:17:36.000Z"
+    },
+    {
+      "id": "3b25632efeb35891b11d",
+      "source": "Cointelegraph",
+      "title": "Ethereum Foundation adds SEAL 911 co-founder to board as privacy focus grows",
+      "summary": "Pascal Caversaccio joins the Ethereum Foundation’s four-member board as the organization elevates privacy and security in its protocol strategy.",
+      "url": "https://cointelegraph.com/news/ethereum-foundation-seal-911-pascal-caversaccio-board?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-30T01:34:26.000Z"
+    },
+    {
+      "id": "aa25048de5cd5c99c847",
+      "source": "Cointelegraph",
+      "title": "US arbitration giant launches specialist panel for crypto disputes",
+      "summary": "The American Arbitration Association’s Web3 Panel brings together specialists in blockchain, smart contracts, digital assets and autonomous transactions.",
+      "url": "https://cointelegraph.com/news/aaa-web3-panel-crypto-blockchain-disputes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-30T00:29:11.000Z"
+    },
+    {
+      "id": "4db01e30f3cb468e152d",
+      "source": "CoinDesk",
+      "title": "Senators ready to send stricter ethics rules on Trump's crypto ventures to White House, sources say",
+      "summary": "Insiders say that the bipartisan Senate duo revamping the bill's Trump-approved ethics section have come up with something they hope wins sufficient yes votes.",
+      "url": "https://www.coindesk.com/policy/2026/07/29/senators-said-to-strike-idea-to-toughen-trump-s-concession-on-clarity-act-s-crypto-limits",
+      "publishedAt": "2026-07-29T23:12:04.000Z"
+    },
+    {
+      "id": "d30ee6376d2662e902c6",
+      "source": "Decrypt",
+      "title": "Microsoft Quietly Adds New Windows App That Wants to Scan Your Face",
+      "summary": "A new OneDrive Photos app is appearing on some Windows 11 PCs through OneDrive and Windows updates, adding AI-powered search and an optional facial grouping feature.",
+      "url": "https://decrypt.co/374688/microsoft-quietly-adds-windows-app-wants-scan-face-onedrive",
+      "publishedAt": "2026-07-29T22:31:03.000Z"
+    },
+    {
+      "id": "5d0df614749b5da74852",
+      "source": "Decrypt",
+      "title": "Robinhood Posts Best Quarter Ever as Prediction Market and Robinhood Chain Take Off",
+      "summary": "Robinhood posted a record $1.31 billion in revenue in Q2. Prediction markets are now doing the work crypto used to for the company.",
+      "url": "https://decrypt.co/374693/robinhood-earnings-best-quarter-ever-crypto",
+      "publishedAt": "2026-07-29T22:01:24.000Z"
+    },
+    {
+      "id": "0a0335eca56c61baaf6e",
+      "source": "Cointelegraph",
+      "title": "Robinhood posts record quarter, but crypto revenue slides 38%",
+      "summary": "The online brokerage continued expanding its digital asset business with Robinhood Chain, tokenized stocks and decentralized lending even as cryptocurrency transaction revenue declined.",
+      "url": "https://cointelegraph.com/news/robinhood-record-quarter-crypto-revenue-slides?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T21:53:35.000Z"
+    },
+    {
+      "id": "b1be816dfba59da1a24a",
+      "source": "Cointelegraph",
+      "title": "Binance.US to attempt prediction markets entry as CFTC-licensed entity, says CEO",
+      "summary": "The CEO of the US crypto exchange said that the company would apply for a license with the CFTC in August allowing it to offer prediction markets.",
+      "url": "https://cointelegraph.com/news/binance-us-prediction-markets-cftc-designated-contract-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T21:52:27.000Z"
+    },
+    {
+      "id": "f5e9577cc79865e695de",
+      "source": "CryptoSlate",
+      "title": "Three key demand drivers stall at once, leaving Bitcoin’s $64,000 support to long-term holders",
+      "summary": "ETF outflows, softer perpetual buying and stagnant on-chain capital leave long-term holders carrying the immediate support test. The post Three key demand drivers stall at once, leaving Bitcoin’s $64,000 support to long-term holders appeared first on…",
+      "url": "https://cryptoslate.com/three-key-demand-drivers-stall-at-once-leaving-bitcoins-64000-support-to-long-term-holders/",
+      "publishedAt": "2026-07-29T21:25:30.000Z"
+    },
+    {
+      "id": "52a0fde3d1cf9b8de224",
+      "source": "The Block",
+      "title": "Robinhood’s prediction markets top crypto and equities revenue in Q2",
+      "summary": "The trading platform generated $156 million from event contracts, compared with $100 million from cryptocurrency trading.",
+      "url": "https://www.theblock.co/post/410102/robinhoods-prediction-markets-top-crypto-and-equities-revenue-in-q2?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-29T21:14:23.000Z"
+    },
+    {
+      "id": "baf5ae8a84d011e2ee76",
+      "source": "Bitcoin Magazine",
+      "title": "Republican Senator Cynthia Lummis Slams Democrat Lawmakers For Dragging Their Feet Over Clarity Act",
+      "summary": "Bitcoin Magazine Republican Senator Cynthia Lummis Slams Democrat Lawmakers For Dragging Their Feet Over Clarity Act The pro-crypto senator is the latest to come out and try to get the bill over the line. This post Republican Senator Cynthia Lummis Slams…",
+      "url": "https://bitcoinmagazine.com/news/senator-cynthia-lummis-slams-democrats",
+      "publishedAt": "2026-07-29T21:04:23.000Z"
+    },
+    {
+      "id": "b4557e8ef7ae4cd87fa6",
+      "source": "Decrypt",
+      "title": "Flock Cameras Face Growing Backlash as Privacy Concerns Reach Capitol Hill",
+      "summary": "Growing opposition across America to Flock cameras has reached Capitol Hill, where Rep. Thomas Massie plans legislation to block federal funding for the technology.",
+      "url": "https://decrypt.co/374603/flock-cameras-backlash-privacy-concerns-capitol-hill",
+      "publishedAt": "2026-07-29T20:46:03.000Z"
+    },
+    {
+      "id": "742d298d430fc9ad7f3c",
+      "source": "CoinDesk",
+      "title": "Robinhood slides 4% despite earnings beat as crypto revenue cools",
+      "summary": "The brokerage reported $100 million revenue from crypto trading, a 38% decline in a year, offset by stronger options, equities and prediction markets activity.",
+      "url": "https://www.coindesk.com/markets/2026/07/29/robinhood-slides-4-despite-earnings-beat-as-crypto-revenue-cools",
+      "publishedAt": "2026-07-29T20:40:43.000Z"
+    },
+    {
+      "id": "86c28ac2a676ec6f8f87",
+      "source": "Cointelegraph",
+      "title": "Crypto entering biggest consolidation phase in history, says ARK analyst",
+      "summary": "ARK Invest’s Lorenzo Valente says revenue is becoming increasingly concentrated among a handful of crypto protocols, setting the stage for more mergers, acquisitions and exchange closures.",
+      "url": "https://cointelegraph.com/news/crypto-entering-biggest-consolidation-phase-in-history-says-ark-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T20:40:38.000Z"
+    },
+    {
+      "id": "c4b75173d045d00c84fb",
+      "source": "Cointelegraph",
+      "title": "Tennessee county passes another ban on crypto operations",
+      "summary": "A group of 12 county commissioners voted unanimously to ban mining facilities and data centers in unincorporated areas as it deals with a lawsuit by a digital asset company.",
+      "url": "https://cointelegraph.com/news/tennessee-county-ban-crypto-operations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T20:11:27.000Z"
+    },
+    {
+      "id": "37692bc6a292d588c421",
+      "source": "Decrypt",
+      "title": "There's a New Way to Protect Bitcoin From Future Quantum Attacks, Researchers Say",
+      "summary": "New research outlines a cryptographic approach that could allow Bitcoin and other blockchain wallets to remain compatible with existing addresses in a post-quantum future.",
+      "url": "https://decrypt.co/374651/new-research-bitcoin-wallet-quantum-attacks-safe",
+      "publishedAt": "2026-07-29T20:01:03.000Z"
+    },
+    {
+      "id": "dcc92d51fb2a4a3fad49",
+      "source": "CryptoSlate",
+      "title": "“There’s no free money forever”: Twenty One Capital’s new CEO warns the Bitcoin treasury playbook is dying",
+      "summary": "Raphael Zagury says mining and other cash-generating businesses could deliver better risk-adjusted returns measured in Bitcoin. The post “There’s no free money forever”: Twenty One Capital’s new CEO warns the Bitcoin treasury playbook is dying appeared first…",
+      "url": "https://cryptoslate.com/theres-no-free-money-forever-twenty-one-capitals-new-ceo-warns-the-bitcoin-treasury-playbook-is-dying/",
+      "publishedAt": "2026-07-29T19:55:50.000Z"
+    },
+    {
+      "id": "e6061e534863e5593058",
+      "source": "Cointelegraph",
+      "title": "US prosecutors propose changes to CLARITY as voting window narrows: Report",
+      "summary": "A White House crypto adviser said that the proposed changes to the CLARITY Act were “not even close” to the administration’s position, signaling another fight over the bill.",
+      "url": "https://cointelegraph.com/news/clarity-act-changes-law-enforcement-voting-narrows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-29T19:43:29.000Z"
+    },
     {
       "id": "0bcf2016263779166546",
       "source": "The Block",
@@ -506,14 +658,6 @@
       "publishedAt": "2026-07-29T10:22:57.000Z"
     },
     {
-      "id": "fdac8e17c29c380f37c1",
-      "source": "CryptoSlate",
-      "title": "Trump promised to save crypto, but his personal business might kill its landmark CLARITY law",
-      "summary": "Senate negotiators on the CLARITY Act have run into a condition several Democrats are treating as essential: they want ethics language limiting how much senior officials, including the president and vice president, can profit from digital asset ventures.…",
-      "url": "https://cryptoslate.com/crypto-was-warned-that-trump-could-politicize-the-industry-clarity-is-testing-that-bet/",
-      "publishedAt": "2026-07-29T10:15:14.000Z"
-    },
-    {
       "id": "6978ea179618facf3759",
       "source": "CoinDesk",
       "title": "Binance offers gold and silver options after commodity futures pull in billions in daily volume",
@@ -552,150 +696,6 @@
       "summary": "Hungary removed mandatory third-party checks for crypto conversions as CoinCash received authorization to provide digital asset services under MiCA.",
       "url": "https://cointelegraph.com/news/hungary-repeals-crypto-checks-first-mica-license-granted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-29T09:15:36.000Z"
-    },
-    {
-      "id": "a088eb0c0462247780f7",
-      "source": "CoinDesk",
-      "title": "Russia charges Telegram founder Pavel Durov with aiding terrorism",
-      "summary": "The charges could result in life imprisonment, escalating an investigation that has already led to over 100 million rubles in fines for the platform this year.",
-      "url": "https://www.coindesk.com/policy/2026/07/29/russia-charges-telegram-founder-pavel-durov-with-aiding-terrorism",
-      "publishedAt": "2026-07-29T09:10:54.000Z"
-    },
-    {
-      "id": "afd5b6121a277e087d5a",
-      "source": "CryptoSlate",
-      "title": "XRP is running a $2.4B debt trap that could wipe out spot buyers the second the Fed speaks",
-      "summary": "XRP trades near $1.06, down 2.9% over 24 hours and 8.6% over the past week, as CoinGlass shows $2.43 billion in XRP open interest, $2.47 billion in 24-hour futures volume, and just $361 million in spot volume. Futures turnover is running roughly 6.85 times…",
-      "url": "https://cryptoslate.com/xrp-is-running-a-2-4-billion-debt-trap-that-could-wipe-out-spot-buyers-the-second-the-fed-speaks/",
-      "publishedAt": "2026-07-29T09:10:00.000Z"
-    },
-    {
-      "id": "96e0f2e6261a4b9164ae",
-      "source": "The Block",
-      "title": "Coalition of 44 state attorneys general says CFTC lacks authority over sports prediction markets",
-      "summary": "The group of AGs sent a letter to the CFTC, urging the agency to draft new rules consistent with the Commodity Exchange Act.",
-      "url": "https://www.theblock.co/post/410013/state-attorneys-general-cftc-letter-prediction-markets?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-29T08:21:19.000Z"
-    },
-    {
-      "id": "505189b09371d8d68e50",
-      "source": "Cointelegraph",
-      "title": "Trump teleprompter operator accused over Kalshi bets leaves government: AP",
-      "summary": "Gabriel Perez, who was accused of profiting from Kalshi bets tied to President Donald Trump’s speeches, is no longer employed by the federal government.",
-      "url": "https://cointelegraph.com/news/trump-teleprompter-kalshi-bets-government-ap?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T08:12:11.000Z"
-    },
-    {
-      "id": "a5f0842f52f61cb8beae",
-      "source": "CoinDesk",
-      "title": "SpaceX is a battleground Solana must win",
-      "summary": "Perps are a trojan horse to bring all of traditional finance onchain, argues Brian Smith, president of the Jito Foundation.",
-      "url": "https://www.coindesk.com/opinion/2026/07/29/spacex-is-a-battleground-solana-must-win",
-      "publishedAt": "2026-07-29T08:00:00.000Z"
-    },
-    {
-      "id": "2437b63a99ca3dab5f56",
-      "source": "The Block",
-      "title": "Russia charges Telegram founder Pavel Durov with aiding terrorism, issues arrest warrant: report",
-      "summary": "Russian security forces charged Telegram founder Pavel Durov with aiding terrorism, issuing an international warrant for his arrest.",
-      "url": "https://www.theblock.co/post/410005/russia-charges-telegram-founder-pavel-durov?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-29T07:40:59.000Z"
-    },
-    {
-      "id": "3f1e138084f8147cced2",
-      "source": "The Block",
-      "title": "Ark Invest buys $12 million in SpaceX as it trims Block, Bullish and Robinhood holdings",
-      "summary": "The firm sold $2.3 million worth of Block Inc. shares, $1.6 million worth of Bullish, and $4 million worth of Robinhood.",
-      "url": "https://www.theblock.co/post/410002/ark-invest-buys-spacex-trims-block-bullish-robinhood?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-29T07:28:37.000Z"
-    },
-    {
-      "id": "00aa939d53cf792b14d7",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs extend outflow streak as BTC fails to hold $65K",
-      "summary": "US spot Bitcoin ETFs recorded four straight sessions of outflows totaling $526 million as Bitcoin faced renewed selling pressure after failing to hold $65,000.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etf-extend-outflow-streak-btc-slips-below-65k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T07:16:47.000Z"
-    },
-    {
-      "id": "f08ea973a9a2f755fbaf",
-      "source": "Cointelegraph",
-      "title": "UK policy sprint finds cross-border payments are stablecoins’ top use case",
-      "summary": "Industry participants said stablecoins offer the biggest near-term benefits for cross-border payments, while domestic UK retail adoption is likely to remain limited.",
-      "url": "https://cointelegraph.com/news/uk-policy-cross-border-payments-stablecoins-use-case?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T07:11:27.000Z"
-    },
-    {
-      "id": "6cda85673e8a7c0b9b75",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin edges above $64,000 as Fed holds policy steady",
-      "summary": "The formerly popular names in AI infrastructure continued their sharp selloff on Wednesday.",
-      "url": "https://www.coindesk.com/tech/2026/07/29/live-updates-bitcoin-clears-usd64-000-in-asia-hours-ahead-of-fed-decision",
-      "publishedAt": "2026-07-29T06:25:21.000Z"
-    },
-    {
-      "id": "5403b082ed6e9a5927ee",
-      "source": "CoinDesk",
-      "title": "Company behind AI trade that caused $60 million crypto liquidations to cover all losses",
-      "summary": "The mark price fell 19% on a single pre-market trade in Korea. The company says its oracle worked exactly as designed.",
-      "url": "https://www.coindesk.com/markets/2026/07/29/company-behind-ai-trade-that-caused-usd60-million-crypto-liquidations-to-cover-all-losses",
-      "publishedAt": "2026-07-29T06:03:28.000Z"
-    },
-    {
-      "id": "eb243629e09b080f709d",
-      "source": "CoinDesk",
-      "title": "Citadel bets on a Fed rate hike Wednesday as bitcoin analysts call a hold. Someone will be wrong.",
-      "summary": "Citadel's macro team says Wednesday's hike isn't about the data. It's about Warsh's best shot at making a surprise actually count before the market stops being surprised.",
-      "url": "https://www.coindesk.com/markets/2026/07/29/citadel-bets-on-a-fed-rate-hike-wednesday-as-bitcoin-analysts-call-a-hold-someone-will-be-wrong",
-      "publishedAt": "2026-07-29T05:37:38.000Z"
-    },
-    {
-      "id": "30ad4a235017e5159350",
-      "source": "CoinDesk",
-      "title": "Bitcoin rises toward $64,000 as Korea's record chip crash leaves crypto untouched",
-      "summary": "SK Hynix fell 17% after profit rose 557% and still missed estimates. Bitcoin is up 1%, and the Fed decides rates today.",
-      "url": "https://www.coindesk.com/markets/2026/07/29/bitcoin-rises-toward-usd64-000-as-korea-s-record-chip-crash-leaves-crypto-untouched",
-      "publishedAt": "2026-07-29T05:32:27.000Z"
-    },
-    {
-      "id": "b295035543b51e68b81c",
-      "source": "Cointelegraph",
-      "title": "Trade.xyz to cover SK Hynix perp liquidation losses tied to price anomaly",
-      "summary": "Trade.xyz said its oracle worked as designed but will reimburse eligible traders after an external SK Hynix price print caused the contract’s mark price to fall nearly 19%.",
-      "url": "https://cointelegraph.com/markets/trade-xyz-sk-hynix-perp-liquidations-price-anomaly?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T05:29:48.000Z"
-    },
-    {
-      "id": "1e107dfb0a34beae4df6",
-      "source": "Cointelegraph",
-      "title": "Uniswap founder rejects claims v4 fees reduce LP earnings",
-      "summary": "Hayden Adams said critics misunderstood Uniswap’s newly approved v4 protocol fees, rejecting claims the change reduces liquidity providers’ earnings.",
-      "url": "https://cointelegraph.com/news/uniswap-founder-rejects-v4-fees-reduce-lp-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T05:02:07.000Z"
-    },
-    {
-      "id": "2808202c5bfe38fcb481",
-      "source": "Cointelegraph",
-      "title": "South Korea plans stablecoin rules as opposition pushes crypto tax repeal",
-      "summary": "The FSC reportedly plans a government-backed digital asset bill covering stablecoins and exchanges, while opposition lawmakers seek to scrap a 22% crypto tax due in 2027.",
-      "url": "https://cointelegraph.com/news/south-korea-consolidated-crypto-law-tax-repeal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T03:43:05.000Z"
-    },
-    {
-      "id": "6d5690f8517f5fcd4625",
-      "source": "Cointelegraph",
-      "title": "Celsius-linked Bitcoin miner Ionic Digital gains 26% in Nasdaq debut",
-      "summary": "The Bitcoin miner and AI infrastructure company closed at $62.90, giving it a market capitalization of about $2.8 billion after its direct listing.",
-      "url": "https://cointelegraph.com/markets/celsius-bitcoin-miner-ionic-digital-nasdaq-debut?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T03:26:44.000Z"
-    },
-    {
-      "id": "ef25c9e0b21c3a4c6a63",
-      "source": "Cointelegraph",
-      "title": "Tether signs tokenization deal with Nairobi Securities Exchange",
-      "summary": "The agreement covers tokenized securities, blockchain-based market infrastructure and the potential use of USDT as a settlement layer.",
-      "url": "https://cointelegraph.com/markets/tether-signs-tokenization-deal-with-nairobi-securities-exchange?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-29T02:50:51.000Z"
     }
   ]
 }
