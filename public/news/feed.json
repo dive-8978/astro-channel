@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T03:55:47.644Z",
+  "generatedAt": "2026-08-01T08:36:11.431Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 58,
+      "itemCount": 38,
       "error": null
     },
     {
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "ee0a4f4501e7cb700d28",
+      "source": "CryptoSlate",
+      "title": "Coinbase spent 5 years building a life raft away from Bitcoin and still managed to lose $359M",
+      "summary": "Coinbase told investors on Thursday that 88% of its second-quarter net revenue came from something other than Bitcoin spot trading. The same release reported a $359.5 million net loss under US accounting rules, the company's third consecutive losing quarter.…",
+      "url": "https://cryptoslate.com/coinbase-spent-5-years-building-a-life-raft-away-from-bitcoin-trading-and-still-managed-to-lose-359-million/",
+      "publishedAt": "2026-08-01T07:54:39.000Z"
+    },
+    {
+      "id": "eac4f06c015f5ea37b18",
+      "source": "Cointelegraph",
+      "title": "Bitcoin ETFs end July in the green despite late-month selling",
+      "summary": "Spot Bitcoin ETFs attracted $172.4 million in July inflows but remained $5.3 billion negative year to date after heavy withdrawals in May and June.",
+      "url": "https://cointelegraph.com/markets/bitcoin-etfs-july-green-despite-late-month-selling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-01T07:23:07.000Z"
+    },
+    {
+      "id": "29b8162d231e56d3d801",
+      "source": "CoinDesk",
+      "title": "XRP Ledger upgrade brings back features once pulled over critical bugs",
+      "summary": "The xrpld 3.3.0 release is expected next week with five proposed amendments, including two revised features that were previously withdrawn after researchers found bugs that could have allowed unauthorized transactions or fee draining.",
+      "url": "https://www.coindesk.com/tech/2026/08/01/xrp-ledger-upgrade-brings-back-features-once-pulled-over-critical-bugs",
+      "publishedAt": "2026-08-01T06:09:51.000Z"
+    },
+    {
+      "id": "40ad9ac1f599e3b1c677",
+      "source": "CoinDesk",
+      "title": "How bitcoin cold wallets lost $70 million in an attack that never touched the devices",
+      "summary": "Galaxy Research said weak seed generation let an attacker recreate likely private keys offline, sweep more than 1,000 BTC from nearly 1,200 wallets and continue searching without ever accessing the devices.",
+      "url": "https://www.coindesk.com/tech/2026/08/01/how-bitcoin-cold-wallets-lost-usd70-million-in-an-attack-that-never-touched-the-devices",
+      "publishedAt": "2026-08-01T05:55:46.000Z"
+    },
     {
       "id": "c0c32b4a636f48a4657e",
       "source": "CryptoSlate",
@@ -450,14 +482,6 @@
       "publishedAt": "2026-07-31T13:35:17.000Z"
     },
     {
-      "id": "865731355265c6dad8ad",
-      "source": "CryptoSlate",
-      "title": "After $8.2B loss forced Bitcoin sales, Michael Saylor gives Strategy to September to repair broken dividend engine",
-      "summary": "Michael Saylor’s Strategy (formerly MicroStrategy) is targeting a September recovery for its STRC preferred stock as the company seeks to revive the financing channel behind its goal of doubling Bitcoin per MSTR share within seven years. The plan follows a…",
-      "url": "https://cryptoslate.com/after-an-8-2b-loss-forced-bitcoin-sales-michael-saylor-gives-strategy-until-september-to-repair-its-broken-dividend-engine/",
-      "publishedAt": "2026-07-31T13:30:34.000Z"
-    },
-    {
       "id": "ea6fce79523e65f2e2bf",
       "source": "Cointelegraph",
       "title": "Circle receives New York trust charter for subsidiary",
@@ -672,30 +696,6 @@
       "summary": "New York State is seeking at least $36 billion in compensatory damages from Kalshi, pending a full accounting.",
       "url": "https://www.theblock.co/post/410247/new-york-sues-kalshi?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-07-31T07:34:48.000Z"
-    },
-    {
-      "id": "d958613f8d0a7e08f269",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs post $233M inflows, pushing week back into the green",
-      "summary": "BlackRock’s IBIT led $233.1 million in daily inflows as US spot Bitcoin ETFs turned positive for the week and July stayed on track to end in the green.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etfs-inflows-week-back-green?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T06:46:23.000Z"
-    },
-    {
-      "id": "5b48edfaac0abc615e0a",
-      "source": "CoinDesk",
-      "title": "Bitcoin flat near $64,000 as Kospi's record 17% surge leaves crypto untouched",
-      "summary": "Samsung and SK Hynix both jumped more than 23%. Bitcoin moved a fraction of a percent in the past 24 hours, and most majors are still lower on the week.",
-      "url": "https://www.coindesk.com/markets/2026/07/31/bitcoin-flat-near-usd64-000-as-kospi-s-record-17-surge-leaves-crypto-untouched",
-      "publishedAt": "2026-07-31T05:43:39.000Z"
-    },
-    {
-      "id": "cd9117cd253170f6bcff",
-      "source": "CoinDesk",
-      "title": "Major bitcoin wallet flaw drains $38 million worth of BTC in 25-minute sweep",
-      "summary": "A hardware wallet randomness bug turned “impossible to guess” seeds into guessable ones, and $38 million is already gone.",
-      "url": "https://www.coindesk.com/tech/2026/07/31/major-bitcoin-wallet-flaw-drains-594-btc-in-25-minute-sweep",
-      "publishedAt": "2026-07-31T05:12:55.000Z"
     }
   ]
 }
