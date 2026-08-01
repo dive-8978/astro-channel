@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T19:56:22.859Z",
+  "generatedAt": "2026-08-01T03:55:47.644Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 58,
       "error": null
     },
     {
@@ -58,6 +58,86 @@
   ],
   "items": [
     {
+      "id": "c0c32b4a636f48a4657e",
+      "source": "CryptoSlate",
+      "title": "From crypto treasury to AI data centers: Inside the aggressive 4,375 ETH selloff that just hit a massive collateral wall",
+      "summary": "The company raised its ceiling to 4,375 ETH, but only 1,714.8 ETH now sits outside the disclosed pledge. The post From crypto treasury to AI data centers: Inside the aggressive 4,375 ETH selloff that just hit a massive collateral wall appeared first on…",
+      "url": "https://cryptoslate.com/from-crypto-treasury-to-ai-data-centers-inside-the-aggressive-4375-eth-selloff-that-just-hit-a-massive-collateral-wall/",
+      "publishedAt": "2026-07-31T22:25:26.000Z"
+    },
+    {
+      "id": "87a348fb93e77bc815db",
+      "source": "CryptoSlate",
+      "title": "Why DeFi giant Aave is pulling the plug on six hyped blockchains making less than $5,000 a quarter",
+      "summary": "LlamaRisk would freeze new activity, redirect nearly all interest revenue to the treasury, and reserve stronger unwind levers for later. The post Why DeFi giant Aave is pulling the plug on six hyped blockchains making less than $5,000 a quarter appeared…",
+      "url": "https://cryptoslate.com/why-defi-giant-aave-is-pulling-the-plug-on-six-hyped-blockchains-making-less-than-5000-a-quarter/",
+      "publishedAt": "2026-07-31T21:30:17.000Z"
+    },
+    {
+      "id": "85a8ea06d837d5ca2973",
+      "source": "Bitcoin Magazine",
+      "title": "Coldcard Bitcoin Thief Likely Used Top Blockchain Services Provider: Report",
+      "summary": "Bitcoin Magazine Coldcard Bitcoin Thief Likely Used Top Blockchain Services Provider: Report Experts have since said that those holding Bitcoin on a Coldcard device should move funds now. This post Coldcard Bitcoin Thief Likely Used Top Blockchain Services…",
+      "url": "https://bitcoinmagazine.com/news/coldcard-thief-used-blockchain-service",
+      "publishedAt": "2026-07-31T21:01:14.000Z"
+    },
+    {
+      "id": "5eae842b8cf5c322dcae",
+      "source": "CoinDesk",
+      "title": "Bitcoin holds monthly gain, faces 'choppy' August as 'forced-selling' exhausted, analysts say",
+      "summary": "The largest crypto shrugged off a barrage of bad news this month, but traders remain cautious as rate hike fears and jobs data loom.",
+      "url": "https://www.coindesk.com/markets/2026/07/31/bitcoin-holds-onto-july-gain-as-forced-selling-fuel-was-already-spent-analysts-say",
+      "publishedAt": "2026-07-31T20:50:58.000Z"
+    },
+    {
+      "id": "e0583d9eb54d66dea17e",
+      "source": "CryptoSlate",
+      "title": "The free ride for VanEck’s Bitcoin ETF is officially over after falling $1.4 billion short of growth target",
+      "summary": "The 0.20% sponsor fee applies after July 31, putting HODL level with BITB but one basis point above EZBC. The post The free ride for VanEck’s Bitcoin ETF is officially over after falling $1.4 billion short of growth target appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/the-free-ride-for-vanecks-bitcoin-etf-is-officially-over-after-falling-1-4-billion-short-of-growth-target/",
+      "publishedAt": "2026-07-31T20:45:48.000Z"
+    },
+    {
+      "id": "a0afe6ae13b96839e5a4",
+      "source": "Decrypt",
+      "title": "Google Yanks Google Earth AI Image Tool a Day After Launch Over Deepfake Fears",
+      "summary": "The Nano Banana tool let users generate fake satellite scenes from a text prompt, alarming investigators who rely on Google Earth to verify breaking news and atrocities.",
+      "url": "https://decrypt.co/374805/google-yanks-google-earth-ai-image-tool-deepfake-fears",
+      "publishedAt": "2026-07-31T20:32:50.000Z"
+    },
+    {
+      "id": "3958791278e9e12505d0",
+      "source": "The Block",
+      "title": "Former Rep. George Santos agrees to pay $35,000 in CFTC settlement over Kalshi SOTU bet",
+      "summary": "Former expelled U.S. Rep. George Santos settled with CFTC over trades made on Kalshi about the State of the Union.",
+      "url": "https://www.theblock.co/post/410338/george-santos-to-pay-35000-cftc-settlement-kalshi-sotu-bet?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-31T20:25:30.000Z"
+    },
+    {
+      "id": "80ffb2fd8ebc4dfece3d",
+      "source": "The Block",
+      "title": "Bitcoin losses linked to Coldcard vulnerability grow to $70 million, Galaxy Research says",
+      "summary": "Galaxy said nearly 1,200 addresses were drained of more than 1,000 BTC worth roughly $70 million tied to a Coldcard vulnerability.",
+      "url": "https://www.theblock.co/post/410332/bitcoin-losses-linked-coldcard-vulnerability-70-million-galaxy-research?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-07-31T20:20:52.000Z"
+    },
+    {
+      "id": "e27f5b0a5352f1c69acd",
+      "source": "Cointelegraph",
+      "title": "Bank of Italy finds no consistent cost advantage for stablecoin remittances",
+      "summary": "Researchers found that fiat conversion costs and payment infrastructure, rather than blockchain fees, accounted for most of the differences in stablecoin remittance costs and settlement times.",
+      "url": "https://cointelegraph.com/news/bank-of-italy-study-no-stablecoin-remittance-cost-advantages?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-07-31T20:10:21.000Z"
+    },
+    {
+      "id": "21e0aadd4ed9734c14c6",
+      "source": "Decrypt",
+      "title": "AI Music Company Suno Loses Copyright Case in Germany",
+      "summary": "The decision requires AI companies to license copyrighted music used to train models and generate songs, marking another legal win for music rights holders in Europe.",
+      "url": "https://decrypt.co/374802/suno-ai-music-copyright-case-germany",
+      "publishedAt": "2026-07-31T20:03:22.000Z"
+    },
+    {
       "id": "b44df59ffe9450326ae9",
       "source": "CryptoSlate",
       "title": "Why a $20 billion Bitstamp slump makes Robinhood’s retail app look far weaker than it really is",
@@ -85,7 +165,7 @@
       "id": "759f296eba5d1852c04b",
       "source": "Cointelegraph",
       "title": "Pump.fun laid off workers before they received millions in PUMP tokens: Report",
-      "summary": "Pump.fun co-founder Noah Tweedale reportedly attributed the layoffs to said the company growing too quickly.",
+      "summary": "Pump.fun co-founder Noah Tweedale reportedly attributed the layoffs to the company growing too quickly.",
       "url": "https://cointelegraph.com/news/pump-fun-employees-fired-tokens-vest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-31T19:16:19.000Z"
     },
@@ -426,14 +506,6 @@
       "publishedAt": "2026-07-31T12:59:31.000Z"
     },
     {
-      "id": "c6714aed338ac81e1754",
-      "source": "CryptoSlate",
-      "title": "Robinhood’s crypto revenue plunged 38%, but a sudden explosion in options trading saved its record quarter",
-      "summary": "Robinhood's crypto-related transaction revenue in the fourth quarter of 2024 generated $358 million of the company's $672 million in transaction-based revenue, about 53% of the total. That concentration had flipped by the second quarter of 2026, when crypto…",
-      "url": "https://cryptoslate.com/robinhood-posted-record-revenue-crypto-was-the-drag/",
-      "publishedAt": "2026-07-31T12:30:19.000Z"
-    },
-    {
       "id": "bdfd74f1f5ca0b7fe635",
       "source": "CoinDesk",
       "title": "Dubai-based crypto exchange tied to $4 billion Iran sanctioned-evasion network",
@@ -482,14 +554,6 @@
       "publishedAt": "2026-07-31T11:35:33.000Z"
     },
     {
-      "id": "6668cc9f0abda9318771",
-      "source": "CryptoSlate",
-      "title": "Zcash fixed the flaw that nearly halved ZEC, and $926 million in leverage now tests the rebound",
-      "summary": "Zcash activated Ironwood on July 28, sealing the Orchard shielded pool and opening a replacement pool under the NU6.3 rules. ZEC traded near $474 at publication, below the $500 area that held for much of July, and was 12.4% lower over seven days. Two months…",
-      "url": "https://cryptoslate.com/zcash-fixed-the-flaw-that-nearly-halved-zec-and-926-million-in-leverage-now-tests-the-rebound/",
-      "publishedAt": "2026-07-31T11:25:59.000Z"
-    },
-    {
       "id": "ab03831a70d39bc16228",
       "source": "Decrypt",
       "title": "Crypto Kiosk Scams Cost Texans $57M as Lawmakers Weigh a Ban",
@@ -520,14 +584,6 @@
       "summary": "Bernstein held its $160 Robinhood price target, citing tokenization and prediction markets as Robinhood's next crypto growth drivers.",
       "url": "https://www.theblock.co/post/410259/bernstein-sees-78-upside-for-robinhood-as-tokenization-prediction-markets-expand-its-crypto-business?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-07-31T10:43:58.000Z"
-    },
-    {
-      "id": "c2b2dd217d15bbc5de6a",
-      "source": "CryptoSlate",
-      "title": "As Ethereum turns 11 years old it hosts $148B in stablecoins, but daily mainnet revenue just fell to $330k",
-      "summary": "Ethereum turned 11 on July 30, the anniversary of the day users generated and loaded the Frontier genesis block in 2015. In its first decade, the network survived the DAO crisis, executed the Merge to proof-of-stake, and became the leading public venue for…",
-      "url": "https://cryptoslate.com/as-ethereum-turns-11-years-old-it-hosts-148b-in-stablecoins-but-daily-mainnet-revenue-just-fell-to-330k/",
-      "publishedAt": "2026-07-31T10:30:44.000Z"
     },
     {
       "id": "16ae0176c4fac7115178",
@@ -640,62 +696,6 @@
       "summary": "A hardware wallet randomness bug turned “impossible to guess” seeds into guessable ones, and $38 million is already gone.",
       "url": "https://www.coindesk.com/tech/2026/07/31/major-bitcoin-wallet-flaw-drains-594-btc-in-25-minute-sweep",
       "publishedAt": "2026-07-31T05:12:55.000Z"
-    },
-    {
-      "id": "b40c6336be06c833965b",
-      "source": "Cointelegraph",
-      "title": "Crypto’s next altseason may have fewer winners: Wintermute",
-      "summary": "Institutional investors accounted for 72% of Wintermute’s spot OTC flow in the first half of 2026 as capital clustered in fewer tokens and altcoin rallies became more selective.",
-      "url": "https://cointelegraph.com/news/crypto-next-altseason-fewer-winners-wintermute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T04:46:14.000Z"
-    },
-    {
-      "id": "9720501a0a6c4d6e5e1e",
-      "source": "The Block",
-      "title": "‘Funds may be at risk’: Coinkite issues warning for Coldcard Mk3 users amid 594 BTC theft reports",
-      "summary": "Coinkite recommends that Mk3 users create a strong, unique BIP-39 passphrase on the device and move funds to the resulting wallet.",
-      "url": "https://www.theblock.co/post/410235/coinkite-coldcard-mk3-warning?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-31T02:56:53.000Z"
-    },
-    {
-      "id": "723525d15ad52ebd8b60",
-      "source": "Cointelegraph",
-      "title": "Coldcard issues Mk3 warning as experts examine $38M Bitcoin wallet drain",
-      "summary": "Coinkite urged Coldcard Mk3 users to migrate funds after identifying a potential seed-generation risk, as Bitcoin security experts separately examine an unexplained $38 million wallet drain.",
-      "url": "https://cointelegraph.com/news/coldcard-mk3-warning-594-btc-sweep?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T02:38:09.000Z"
-    },
-    {
-      "id": "1a641bd2150cb712dc34",
-      "source": "The Block",
-      "title": "Stablecoin Reserve Requirements Explained",
-      "summary": "A stablecoin is a digital asset designed to maintain a steady value by pegging its price to another asset, most commonly a fiat currency like the U.S. dollar. Stablecoin reserve requirements are the rules determining the assets an issuer must hold to back up…",
-      "url": "https://www.theblock.co/learn/410234/stablecoin-reserve-requirements-explained?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-31T02:31:26.000Z"
-    },
-    {
-      "id": "50414e8335626d1478fb",
-      "source": "The Block",
-      "title": "Stablecoins and Cross-Border Payments: How Digital Dollars Move Across Borders",
-      "summary": "Stablecoins are a type of cryptocurrency designed to hold a fixed value against a reference currency, most commonly one U.S. dollar. Transferring stablecoins across countries is unlike transferring money through a bank: A sender converts their local currency…",
-      "url": "https://www.theblock.co/learn/410227/stablecoins-and-cross-border-payments?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-31T01:53:33.000Z"
-    },
-    {
-      "id": "c9d253ae1b5d85a9bf3e",
-      "source": "Cointelegraph",
-      "title": "Bhutan’s Gelephu taps 3iQ to manage part of Bitcoin treasury",
-      "summary": "3iQ will manage an undisclosed portion of Gelephu Mindfulness City’s Bitcoin treasury as Bhutan develops a digital-asset investment hub.",
-      "url": "https://cointelegraph.com/news/bhutan-gelephu-3iq-bitcoin-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T00:31:21.000Z"
-    },
-    {
-      "id": "3177ed21b7ba4e409ad0",
-      "source": "Cointelegraph",
-      "title": "US senators sent revised ethics rules to White House for CLARITY Act: Report",
-      "summary": "The window to pass a comprehensive crypto market structure bill before the Senate breaks for a month-long recess is closing, with ethics a dividing issue for many lawmakers.",
-      "url": "https://cointelegraph.com/news/us-senators-revised-ethics-rules-white-house-clarity-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-30T21:54:38.000Z"
     }
   ]
 }
