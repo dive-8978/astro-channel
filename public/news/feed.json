@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T08:39:19.378Z",
+  "generatedAt": "2026-08-02T14:01:24.656Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 58,
       "error": null
     },
     {
@@ -58,6 +58,86 @@
   ],
   "items": [
     {
+      "id": "55053c4329dd895fee42",
+      "source": "CryptoSlate",
+      "title": "New York asks judge to force Kalshi to hand over the names, wagers, and losses of its local bettors",
+      "summary": "The July 31 petition also seeks restitution and three times alleged gains, while the federal merits remain unresolved. The post New York asks judge to force Kalshi to hand over the names, wagers, and losses of its local bettors appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/new-york-asks-judge-to-force-kalshi-to-hand-over-the-names-wagers-and-losses-of-its-local-bettors/",
+      "publishedAt": "2026-08-02T13:30:07.000Z"
+    },
+    {
+      "id": "807e6943118c1b2e5690",
+      "source": "CoinDesk",
+      "title": "The reverse bridge: Crypto meets Wall Street using perps",
+      "summary": "Crypto exchanges built perpetual futures for digital assets. Now they are using them to offer 24/7 exposure to stocks, commodities and indexes.",
+      "url": "https://www.coindesk.com/business/2026/08/02/the-reverse-bridge-crypto-meets-wall-street-using-perps",
+      "publishedAt": "2026-08-02T13:00:00.000Z"
+    },
+    {
+      "id": "77eb7f2e22f3117348c7",
+      "source": "CryptoSlate",
+      "title": "Ethereum just outpaced Bitcoin with $365 million in ETF inflows, but on-chain data shows the real bottom isn’t in yet",
+      "summary": "Ethereum outpaced Bitcoin in July as stronger investment-product demand and corporate accumulation powered its first sustained relative advance in months. Data from CryptoSlate shows that ETH gained 19% during the month, climbing as high as $1,970 before…",
+      "url": "https://cryptoslate.com/ethereum-just-outpaced-bitcoin-with-365-million-in-etf-inflows-but-on-chain-data-shows-the-real-bottom-isnt-in-yet/",
+      "publishedAt": "2026-08-02T12:35:54.000Z"
+    },
+    {
+      "id": "e2242f06c6bc21b888b2",
+      "source": "CoinDesk",
+      "title": "Unlike the FTX collapse, the $89 million Coldcard exploit has investors sending bitcoin back to exchanges",
+      "summary": "The Coldcard vulnerability has smaller bitcoin holders moving funds onto exchanges for safety, according to blockchain analytics firms. This is opposite of the trend seen following the FTX collapse in late 2022.",
+      "url": "https://www.coindesk.com/markets/2026/08/02/unlike-the-ftx-collapse-the-usd88-million-coldcard-exploit-has-investors-sending-bitcoin-back-to-exchanges",
+      "publishedAt": "2026-08-02T12:03:51.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-02T11:56:35.000Z"
+    },
+    {
+      "id": "978063eeb77a8dc06017",
+      "source": "CryptoSlate",
+      "title": "The sudden collapse of a $20 billion AI fund reveals why Bitcoin is the first thing Wall Street sells when margin calls hit",
+      "summary": "A $20 billion AI hedge fund gained 439% through June, lost roughly two-thirds of its value in July, and sold most of a $16 billion public-stock portfolio as leverage turned against it. The collapse offers a warning for Bitcoin: when Wall Street needs cash…",
+      "url": "https://cryptoslate.com/wall-streets-ai-margin-calls-are-here-is-bitcoin-the-next-source-of-cash/",
+      "publishedAt": "2026-08-02T11:40:06.000Z"
+    },
+    {
+      "id": "783b0fed5966202cf5c7",
+      "source": "Cointelegraph",
+      "title": "BNB Chain pursues legal action after ex-employee’s memecoin launch",
+      "summary": "BNB Chain said a former employee allegedly used a company tutorial wallet to create a memecoin that the company says it did not authorize or endorse.",
+      "url": "https://cointelegraph.com/news/bnb-chain-legal-action-ex-employee-memecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-02T11:20:06.000Z"
+    },
+    {
+      "id": "a859abf7979dc498ab19",
+      "source": "CryptoSlate",
+      "title": "Why a sudden 5,500 BTC drop in leveraged short positions failed to deliver the bullish confirmation Bitcoin traders wanted",
+      "summary": "The July 28 futures snapshot shows a split reset, with trader motives and broader bullish confirmation still unresolved. The post Why a sudden 5,500 BTC drop in leveraged short positions failed to deliver the bullish confirmation Bitcoin traders wanted…",
+      "url": "https://cryptoslate.com/why-a-sudden-5500-btc-drop-in-leveraged-short-positions-failed-to-deliver-the-bullish-confirmation-bitcoin-traders-wanted/",
+      "publishedAt": "2026-08-02T10:45:05.000Z"
+    },
+    {
+      "id": "44687ddd7bfc4dee92d0",
+      "source": "CryptoSlate",
+      "title": "Donald Trump releases the $1.2 million data feed that lets Wall Street front-run his market-moving policy announcements",
+      "summary": "On April 9, 2025, Donald Trump told his Truth Social followers that it was “a great time to buy,” then announced a 90-day pause on many of his new tariffs a few hours later. The S&P 500 finished the day 9.5% higher, Bitcoin gained more than 5%, and crypto…",
+      "url": "https://cryptoslate.com/donald-trumps-new-1-2-million-data-feed-lets-wall-street-front-run-his-market-moving-policy-announcements/",
+      "publishedAt": "2026-08-02T09:48:31.000Z"
+    },
+    {
+      "id": "d424c0d568df6f02fd48",
+      "source": "Cointelegraph",
+      "title": "Trump Media sells another 2,628 BTC, holdings fall to 4,261 BTC",
+      "summary": "Trump Media transferred another 2,628 Bitcoin to Crypto.com, bringing its reported sales over seven months to 7,281 BTC and leaving the company with 4,261 BTC in holdings.",
+      "url": "https://cointelegraph.com/news/trump-media-2628-btc-crypto-com-4261-btc-holdings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-02T09:29:15.000Z"
+    },
+    {
       "id": "1fd37840298b38b9aaf0",
       "source": "Cointelegraph",
       "title": "Coldcard hack sparks biggest sub-1 BTC move since FTX: CryptoQuant",
@@ -68,8 +148,8 @@
     {
       "id": "55b0ad7f062d2e723e2d",
       "source": "CryptoSlate",
-      "title": "Funding stock buybacks by selling your primary reserve asset is a dangerous game, but Lite Strategy just pulled it off without using a dime of debt",
-      "summary": "The company sold part of its treasury without debt, while its share count only narrowly outpaced an 11.89% LTC decline. The post Funding stock buybacks by selling your primary reserve asset is a dangerous game, but Lite Strategy just pulled it off without…",
+      "title": "Its a dangerous game to fund stock buybacks by selling your primary reserve asset – but one Litecoin company just pulled it off without using a dime of debt",
+      "summary": "The company sold part of its treasury without debt, while its share count only narrowly outpaced an 11.89% LTC decline. The post Its a dangerous game to fund stock buybacks by selling your primary reserve asset – but one Litecoin company just pulled it off…",
       "url": "https://cryptoslate.com/lite-strategy-retired-13-of-its-shares-but-estimated-litecoin-per-share-rose-just-1-66/",
       "publishedAt": "2026-08-02T02:05:43.000Z"
     },
@@ -116,7 +196,7 @@
     {
       "id": "0b4d3a2b253afd25c11d",
       "source": "The Block",
-      "title": "Iran-linked exchange sent $676 million to Binance in alleged sanctions-evasion operation: Reuters",
+      "title": "Iran-linked exchange sent $676 million to Binance wallets in alleged sanctions-evasion operation: Reuters",
       "summary": "Dubai-based Shelbit processed over $4 billion since May 2024 through a network tied to Iranian gambling sites, the central bank, and the IRGC, per Reuters.",
       "url": "https://www.theblock.co/post/410355/iran-linked-exchange-sent-676-million-to-binance-in-alleged-sanctions-evasion-operation-reuters?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-08-01T21:18:45.000Z"
@@ -130,28 +210,12 @@
       "publishedAt": "2026-08-01T21:14:39.000Z"
     },
     {
-      "id": "aa3b10c3b999eaae70dc",
-      "source": "CryptoSlate",
-      "title": "One public crypto firm just staked its way to breaking even, but a $50M paper loss and 66% dilution threat tell a darker story",
-      "summary": "The token rewards roughly matched its non-GAAP cash-cost proxy but remained unsold as warrants for up to 33.5 million shares became exercisable. The post One public crypto firm just staked its way to breaking even, but a $50M paper loss and 66% dilution…",
-      "url": "https://cryptoslate.com/sdevs-2-2m-sky-staking-revenue-is-dwarfed-by-a-50-6m-unrealized-token-loss/",
-      "publishedAt": "2026-08-01T21:05:41.000Z"
-    },
-    {
       "id": "bffe188b5677205db784",
       "source": "CoinDesk",
       "title": "Bitcoin cold-wallet attack spreads to 4,500 addresses as losses near $89 million",
       "summary": "Galaxy Research flagged a third wave of sweeps tied to weak Coldcard-generated keys, with the attacker now targeting smaller balances and changing how funds are collected onchain.",
       "url": "https://www.coindesk.com/tech/2026/08/02/bitcoin-cold-wallet-attack-spreads-to-4-500-addresses-as-losses-near-usd89-million",
       "publishedAt": "2026-08-01T20:10:54.000Z"
-    },
-    {
-      "id": "1ffb252354afd7a18799",
-      "source": "CryptoSlate",
-      "title": "Moonbeam just halted all user transactions, leaving late GLMR holders at mercy of an email helpdesk to recover funds",
-      "summary": "The snapshot tracks direct bridge use, not stranded supply, while self-custodied tokens and protocol positions face separate action paths. The post Moonbeam just halted all user transactions, leaving late GLMR holders at mercy of an email helpdesk to recover…",
-      "url": "https://cryptoslate.com/moonbeam-just-halted-all-user-transactions-leaving-late-glmr-holders-at-the-mercy-of-an-email-helpdesk-to-recover-stranded-funds/",
-      "publishedAt": "2026-08-01T20:10:42.000Z"
     },
     {
       "id": "7df7d98b707d97805e72",
@@ -162,36 +226,12 @@
       "publishedAt": "2026-08-01T19:09:57.000Z"
     },
     {
-      "id": "8853bae67f2535bbc499",
-      "source": "CryptoSlate",
-      "title": "A major Japanese Bitcoin mining pool just pulled the plug on its Bitcoin service just as 3 mega-miners claimed 60% of the network",
-      "summary": "The leaders were already dominant before the cutoff, and aggregate data do not identify a destination for SBI’s lost pool hashrate. The post A major Japanese Bitcoin mining pool just pulled the plug on its Bitcoin service just as 3 mega-miners claimed 60% of…",
-      "url": "https://cryptoslate.com/a-major-japanese-bitcoin-mining-pool-just-pulled-the-plug-on-its-bitcoin-service-just-as-3-mega-miners-claimed-60-of-the-network/",
-      "publishedAt": "2026-08-01T19:05:49.000Z"
-    },
-    {
-      "id": "a7d7a43a7f2665da41e2",
-      "source": "CryptoSlate",
-      "title": "Louisiana just armed crypto ATM users with a legal cheat code to demand full refunds from unlicensed operators",
-      "summary": "Act 482 takes effect Aug. 1, while clearly disclosed document requests can reset the 90-day payment clock. The post Louisiana just armed crypto ATM users with a legal cheat code to demand full refunds from unlicensed operators appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/louisiana-just-armed-crypto-atm-users-with-a-legal-cheat-code-to-demand-full-refunds-from-unlicensed-operators/",
-      "publishedAt": "2026-08-01T18:10:38.000Z"
-    },
-    {
       "id": "9793ee3c92828f97300e",
       "source": "Cointelegraph",
       "title": "Minnesota crypto ATM ban goes into effect after reported $1M losses",
       "summary": "State officials reported that Minnesota residents, and largely senior citizens, had lost about $1 million from scams tied to crypto kiosks from 2023 to 2025.",
       "url": "https://cointelegraph.com/news/minnesota-crypto-atm-ban-losses-scams?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-01T18:07:17.000Z"
-    },
-    {
-      "id": "37e028b9da38e06bf672",
-      "source": "CryptoSlate",
-      "title": "If the Fed trusts this single 2.2% metric, Bitcoin could break $65.3k and ignite a path to $68k",
-      "summary": "Bitcoin is trading near $63,000, with rate markets assigning roughly 66% odds to a September Federal Reserve hike, under a policy framework Kevin Warsh has left partly hidden. The Fed chair has defined his reaction function around “underlying inflation,”…",
-      "url": "https://cryptoslate.com/if-the-fed-trusts-this-single-2-2-metric-bitcoin-could-break-65300-and-ignite-a-path-to-68000/",
-      "publishedAt": "2026-08-01T17:15:02.000Z"
     },
     {
       "id": "e645e04317cae1d5377d",
@@ -416,14 +456,6 @@
       "summary": "The world’s largest stablecoin issuer added 14 metric tons of gold and about 1,800 bitcoin to its reserves during the second quarter.",
       "url": "https://www.coindesk.com/business/2026/07/31/tether-posts-usd1-5-billion-operating-profit-in-q2-as-reserve-buffer-falls-by-half",
       "publishedAt": "2026-07-31T18:24:55.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T18:09:51.000Z"
     },
     {
       "id": "39378793fadc9460adef",
@@ -664,38 +696,6 @@
       "summary": "The Japanese yen crosses a key psychological level after the country’s central bank reportedly conducted a major currency intervention.",
       "url": "https://cointelegraph.com/markets/boj-intervenes-to-defend-yen-near-160-holds-rates-steady?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-07-31T13:13:46.000Z"
-    },
-    {
-      "id": "d4558a38ae6c4ee1a7e5",
-      "source": "The Block",
-      "title": "TD Cowen cuts Sharplink price target to $13 on lower 2026 ether outlook",
-      "summary": "TD Cowen cut Sharplink's price target after lowering its 2026 ether forecast while maintaining its long-term Ethereum investment thesis.",
-      "url": "https://www.theblock.co/post/410273/td-cowen-cuts-sharplink-price-target-to-13-on-lower-2026-ether-outlook?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-31T13:03:29.000Z"
-    },
-    {
-      "id": "0dc642d185b8451eb1b0",
-      "source": "CoinDesk",
-      "title": "RWA perps will outpace tokenization",
-      "summary": "Tokenization was crypto's first big export to TradFi. Perps are next, says Martin Lee, markets insight lead at DWF labs.",
-      "url": "https://www.coindesk.com/opinion/2026/07/31/rwa-perps-will-outpace-tokenization",
-      "publishedAt": "2026-07-31T13:00:00.000Z"
-    },
-    {
-      "id": "19ad0902dc02779c1b0c",
-      "source": "The Block",
-      "title": "Circle secures NYDFS trust charter, adding state layer to federal USDC oversight",
-      "summary": "Circle won a limited-purpose trust charter from NYDFS for Circle Internet Trust Company after securing final OCC national trust approval.",
-      "url": "https://www.theblock.co/post/410275/circle-secures-nydfs-trust-charter-adding-state-layer-to-federal-usdc-oversight?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-31T12:59:31.000Z"
-    },
-    {
-      "id": "bdfd74f1f5ca0b7fe635",
-      "source": "CoinDesk",
-      "title": "Dubai-based crypto exchange tied to $4 billion Iran sanctioned-evasion network",
-      "summary": "Shelbit allegedly sent hundreds of millions of dollars to major crypto exchanges, including Binance, as it linked gambling sites and sanctioned Iranian entities to global crypto markets.",
-      "url": "https://www.coindesk.com/business/2026/07/31/dubai-based-crypto-exchange-tied-to-usd4-billion-iran-sanctioned-evasion-network-reuters",
-      "publishedAt": "2026-07-31T12:28:02.000Z"
     }
   ]
 }
