@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T03:57:48.355Z",
+  "generatedAt": "2026-08-02T08:39:19.378Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,14 @@
     }
   ],
   "items": [
+    {
+      "id": "1fd37840298b38b9aaf0",
+      "source": "Cointelegraph",
+      "title": "Coldcard hack sparks biggest sub-1 BTC move since FTX: CryptoQuant",
+      "summary": "Bitcoin users moved 39,600 BTC in small transactions as the Coldcard hack continued, with researchers warning that the attack remained active.",
+      "url": "https://cointelegraph.com/news/coldcard-biggest-sub-1-btc-transfer-ftx-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-02T08:04:56.000Z"
+    },
     {
       "id": "55b0ad7f062d2e723e2d",
       "source": "CryptoSlate",
@@ -688,14 +696,6 @@
       "summary": "Shelbit allegedly sent hundreds of millions of dollars to major crypto exchanges, including Binance, as it linked gambling sites and sanctioned Iranian entities to global crypto markets.",
       "url": "https://www.coindesk.com/business/2026/07/31/dubai-based-crypto-exchange-tied-to-usd4-billion-iran-sanctioned-evasion-network-reuters",
       "publishedAt": "2026-07-31T12:28:02.000Z"
-    },
-    {
-      "id": "a17bdf27858d9b4a1089",
-      "source": "Decrypt",
-      "title": "Morning Minute: Coinbase Posts Surprise Loss as Crypto Trading Dries Up",
-      "summary": "Plus, BTC is red this morning despite $233M in ETF inflows yesterday; and NY State is trying to shut down Kalshi and seeking $36B in damages",
-      "url": "https://decrypt.co/374781/morning-minute-coinbase-posts-surprise-loss-as-crypto-trading-dries-up",
-      "publishedAt": "2026-07-31T12:11:17.000Z"
     }
   ]
 }
