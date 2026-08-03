@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T03:59:50.349Z",
+  "generatedAt": "2026-08-03T10:09:02.776Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 58,
       "error": null
     },
     {
@@ -58,6 +58,182 @@
   ],
   "items": [
     {
+      "id": "1361cc74950f06a2af48",
+      "source": "The Block",
+      "title": "Bernstein says Clarity Act failure could accelerate SEC, CFTC crypto rulemaking",
+      "summary": "Bernstein expects SEC and CFTC rulemaking to accelerate under Project Crypto if the Clarity Act fails to pass this year.",
+      "url": "https://www.theblock.co/post/410395/bernstein-says-clarity-act-failure-could-accelerate-sec-cftc-crypto-rulemaking?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-03T09:49:47.000Z"
+    },
+    {
+      "id": "6e18bcafbb24d0e30c0f",
+      "source": "CryptoSlate",
+      "title": "Five days, a 30% chance, and a battle over Trump’s crypto profits: Inside the Senate’s scramble to pass CLARITY Act before Friday",
+      "summary": "The CLARITY Act enters the Senate's final scheduled week before the August recess. Monday's floor schedule opens with H.R. 6500, a government funding vehicle, and CLARITY has yet to appear on the schedule. Negotiators are still working through disputes over…",
+      "url": "https://cryptoslate.com/five-days-a-30-chance-and-a-battle-over-trumps-crypto-profits-inside-the-senates-scramble-to-pass-clarity-act-before-friday/",
+      "publishedAt": "2026-08-03T09:45:56.000Z"
+    },
+    {
+      "id": "5c41ae1715f47e851fb1",
+      "source": "CoinDesk",
+      "title": "Robinhood wins UK crypto registration before new regulatory regime kicks off",
+      "summary": "Robinhood’s U.K. arm was added to the FCA's list of registered cryptoasset companies as of July 31.",
+      "url": "https://www.coindesk.com/policy/2026/08/03/robinhood-wins-uk-crypto-registration-before-new-regulatory-regime-kicks-off",
+      "publishedAt": "2026-08-03T09:38:53.000Z"
+    },
+    {
+      "id": "c8f9f47c303409227d36",
+      "source": "The Block",
+      "title": "Ripple invests in ZILO and Licuido to deepen tokenized capital markets push",
+      "summary": "Ripple said the deals are set to bring regulated transfer agency, issuance, and collateral mobility to its infrastructure on the XRP Ledger.",
+      "url": "https://www.theblock.co/post/410397/ripple-invests-zilo-licuido?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-03T09:38:48.000Z"
+    },
+    {
+      "id": "53e07e2269f628962b9e",
+      "source": "The Block",
+      "title": "South Korea’s Bithumb officially targets 2028 IPO, outlines multi-year roadmap",
+      "summary": "Bithumb plans to request a preliminary listing review and have its application reviewed by local authorities in 2027.",
+      "url": "https://www.theblock.co/post/410391/south-korea-bithumb-ipo-2028?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-03T09:21:28.000Z"
+    },
+    {
+      "id": "2dd88ecb5df04fb69c9f",
+      "source": "Cointelegraph",
+      "title": "HashKey receives JPMorgan approval to open client money account",
+      "summary": "HashKey Exchange said it received approval to open client money accounts with JPMorgan, weeks after it launched customer fund accounts with DBS Bank.",
+      "url": "https://cointelegraph.com/news/hashkey-jpmorgan-client-money-account?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-03T09:14:38.000Z"
+    },
+    {
+      "id": "e7323be27450b4a32fac",
+      "source": "CoinDesk",
+      "title": "Coldcard wallet losses may near $114 million as possible fourth sweep emerges",
+      "summary": "The pending transactions signal replace-by-fee, so anyone who spots their address in the mempool has minutes to pay a higher fee and move funds first.",
+      "url": "https://www.coindesk.com/tech/2026/08/03/coldcard-wallet-losses-may-near-usd114-million-as-possible-fourth-sweep-emerges",
+      "publishedAt": "2026-08-03T08:51:39.000Z"
+    },
+    {
+      "id": "1a75368e1ca1608e0f4e",
+      "source": "CryptoSlate",
+      "title": "Four unpatched bugs, a 5-year quantum clock, and a miner standoff are pushing Bitcoin to a critical crossroad",
+      "summary": "Bitcoin entered BIP-110's final ordinary 2,016-block window on July 25 with miner support at 0.89%. The proposal requires 1,109 blocks, or 55%, for ordinary lock-in, and its mandatory version-bit phase can begin in August if support stays below that…",
+      "url": "https://cryptoslate.com/four-unpatched-bugs-a-5-year-quantum-clock-and-a-miner-standoff-are-pushing-bitcoin-to-a-critical-crossroad/",
+      "publishedAt": "2026-08-03T08:25:38.000Z"
+    },
+    {
+      "id": "33aba3b5bc3ea5ceacdb",
+      "source": "Cointelegraph",
+      "title": "Bitget to exit Japan, close remaining positions after Dec. 31",
+      "summary": "The crypto exchange stopped accepting new registrations from Japan residents and will begin progressively restricting existing accounts on Nov. 1.",
+      "url": "https://cointelegraph.com/news/bitget-exit-japan-account-restrictions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-03T08:21:23.000Z"
+    },
+    {
+      "id": "53a8aab2f2a00f927a6f",
+      "source": "CoinDesk",
+      "title": "U.S. Jobs, Circle, Galaxy, American Bitcoin earnings: Crypto Week Ahead",
+      "summary": "Your look at what's coming in the week starting Aug. 3",
+      "url": "https://www.coindesk.com/markets/2026/08/03/u-s-jobs-circle-galaxy-american-bitcoin-earnings-crypto-week-ahead",
+      "publishedAt": "2026-08-03T08:16:28.000Z"
+    },
+    {
+      "id": "ca15f0d60e871e80bcf3",
+      "source": "CryptoSlate",
+      "title": "Bitcoin miner gambles on a 4-day bridge loan equal to 97% of its BTC treasury value – the deadline passed without in total silence",
+      "summary": "The bridge allowed payment through Aug. 1, while the proposed Arch facility's BTC amount, LTV and liquidation terms remained undisclosed. The post Bitcoin miner gambles on a 4-day bridge loan equal to 97% of its BTC treasury value – the deadline passed…",
+      "url": "https://cryptoslate.com/bitcoin-miner-gambles-97-of-its-btc-treasury-value-on-a-4-day-bridge-loan-the-deadline-passed-in-total-silence/",
+      "publishedAt": "2026-08-03T07:45:31.000Z"
+    },
+    {
+      "id": "427cf22e9d9acda4181e",
+      "source": "Cointelegraph",
+      "title": "Crypto treasury firm ZeroStack warns of survival risk amid $82.5M loss",
+      "summary": "The Nasdaq-listed company relies largely on staking rewards to fund operations, while its 0G holdings were valued 91% below their recorded costs.",
+      "url": "https://cointelegraph.com/news/zerostack-survival-risk-82m-crypto-loss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-03T07:15:56.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-03T06:25:13.000Z"
+    },
+    {
+      "id": "6b0b29b05e82a8310c09",
+      "source": "CoinDesk",
+      "title": "Bitcoin slips under $63,000 despite Iran deal hopes as Coldcard losses rattle market",
+      "summary": "Oil and Treasury yields fell after fresh U.S.-Iran talks eased inflation fears, but bitcoin and ether failed to catch a bid as fresh Coldcard-linked sweeps pushed observed losses to nearly $89 million.",
+      "url": "https://www.coindesk.com/markets/2026/08/03/bitcoin-slips-under-usd63-000-despite-iran-deal-hopes-as-coldcard-losses-rattle-market",
+      "publishedAt": "2026-08-03T06:15:38.000Z"
+    },
+    {
+      "id": "95dd46f902261158c439",
+      "source": "Cointelegraph",
+      "title": "Bitcoin hits $62K while Coinbase premium hits 77-day negative streak",
+      "summary": "The persistent discount suggests US spot buyers have remained less aggressive than overseas traders even as US Bitcoin ETF inflows turned positive in July.",
+      "url": "https://cointelegraph.com/markets/bitcoin-hits-62k-while-coinbase-premium-hits-77-day-negative-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-03T05:58:00.000Z"
+    },
+    {
+      "id": "207c0a0d2c98fa98e547",
+      "source": "CryptoSlate",
+      "title": "Luno blocks crypto transfers for some users, leaving a late August cash-out deadline before monthly fees hit",
+      "summary": "Transfers ended June 29, leaving sale and bank withdrawal as the standard route before accounts close Sept. 1. The post Luno blocks crypto transfers for some users, leaving a late August cash-out deadline before monthly fees hit appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/luno-blocked-crypto-transfers-for-some-users-now-they-must-sell-this-month-or-watch-monthly-fees-drain-their-accounts/",
+      "publishedAt": "2026-08-03T05:55:54.000Z"
+    },
+    {
+      "id": "6cb1d2afef6f7e326368",
+      "source": "CoinDesk",
+      "title": "Trump Media’s bitcoin stash may be down to loan collateral after $165 million BTC move",
+      "summary": "Wallets tied to the Truth Social parent now hold about as much bitcoin as the company previously pledged as note collateral, making its next 10-Q the key test of whether recent Crypto.com transfers were custody moves or sales.",
+      "url": "https://www.coindesk.com/markets/2026/08/03/trump-media-s-bitcoin-stash-may-be-down-to-loan-collateral-after-usd165-million-btc-move",
+      "publishedAt": "2026-08-03T05:52:29.000Z"
+    },
+    {
+      "id": "e8b288a52b344669a92f",
+      "source": "CoinDesk",
+      "title": "Michael Saylor’s Strategy is now tracking bitcoin’s 200-week moving average",
+      "summary": "Michael Saylor’s company, Strategy, is now closely monitoring bitcoin’s 200-week moving average, a key long-term support level that the cryptocurrency has historically respected.",
+      "url": "https://www.coindesk.com/markets/2026/08/03/michael-saylor-s-strategy-is-now-tracking-bitcoin-s-200-week-moving-average",
+      "publishedAt": "2026-08-03T05:07:49.000Z"
+    },
+    {
+      "id": "7f7e44644328fac27e18",
+      "source": "CryptoSlate",
+      "title": "Ten mystery investors are using 2,380 BTC to completely hijack a Nasdaq company and gut its leadership",
+      "summary": "The signed agreement targets closing within 12 business days but leaves the required capital increase and approvals unresolved. The post Ten mystery investors are using 2,380 BTC to completely hijack a Nasdaq company and gut its leadership appeared first on…",
+      "url": "https://cryptoslate.com/ten-mystery-investors-are-using-2380-btc-to-completely-hijack-a-nasdaq-company-and-gut-its-leadership/",
+      "publishedAt": "2026-08-03T04:50:21.000Z"
+    },
+    {
+      "id": "f1847ef2a2c9eb48a1f7",
+      "source": "The Block",
+      "title": "Kalshi and Polymarket’s combined volume reaches all-time high in July, surpassing $50 billion",
+      "summary": "Notably, Polymarket US's volume rose 54% while the main Polymarket platform's volume fell 26% compared to June.",
+      "url": "https://www.theblock.co/post/410382/kalshi-polymarket-volume-july?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-03T04:34:46.000Z"
+    },
+    {
+      "id": "78127b43a5d86e844ccc",
+      "source": "Cointelegraph",
+      "title": "Coldcard’s 5-year flaw reveals hardware wallet testing gap: Kraken’s security chief",
+      "summary": "The five-year bug escaped detection because auditors verified that the intended random number generator existed, but not that it was being called.",
+      "url": "https://cointelegraph.com/news/coldcards-5-year-flaw-reveals-hardware-wallet-testing-gap-krakens-security-chief?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-03T04:09:44.000Z"
+    },
+    {
+      "id": "e971582919ab3a66dc88",
+      "source": "Cointelegraph",
+      "title": "South Korean stablecoin outflows top $367M in June: Report",
+      "summary": "Stablecoins have been flowing out of South Korean exchanges for 18 consecutive months as regulators weigh tighter oversight of cross-border crypto activity.",
+      "url": "https://cointelegraph.com/news/south-korea-stablecoin-outflows-overseas-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-03T04:05:11.000Z"
+    },
+    {
       "id": "fcc3514194d7a515cb14",
       "source": "The Block",
       "title": "Hong Kong police flag $3.3 million romance scam involving fake crypto app",
@@ -68,7 +244,7 @@
     {
       "id": "be68e093a18f2383a5b5",
       "source": "Cointelegraph",
-      "title": "Suspected 4th Coldcard attack wave sweeps 389 Bitcoin: Galaxy’s Thorn",
+      "title": "Suspected 4th Coldcard attack wave sweeps 448 Bitcoin: Galaxy’s Thorn",
       "summary": "Galaxy research head Alex Thorn warned that unconfirmed transactions may give some Coldcard users a narrow opportunity to save their funds.",
       "url": "https://cointelegraph.com/news/suspected-4th-coldcard-attack-wave-sweeps-389-bitcoin-galaxys-thorn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-03T01:57:40.000Z"
@@ -130,30 +306,6 @@
       "publishedAt": "2026-08-02T20:35:14.000Z"
     },
     {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-02T20:00:35.000Z"
-    },
-    {
-      "id": "8284e2987f2b4f41d7d6",
-      "source": "CryptoSlate",
-      "title": "Another crypto wallet pulls the plug tomorrow with no exact cutoff, leaving users racing to rescue tokens",
-      "summary": "Users have through Aug. 2 to move assets or secure their recovery phrase before sending, swaps and dApp access stop. The post Another crypto wallet pulls the plug tomorrow with no exact cutoff, leaving users racing to rescue tokens appeared first on…",
-      "url": "https://cryptoslate.com/ctrl-wallet-is-pulling-the-plug-tomorrow-with-no-exact-cutoff-time-leaving-users-racing-a-phantom-clock-to-rescue-their-crypto/",
-      "publishedAt": "2026-08-02T19:25:18.000Z"
-    },
-    {
-      "id": "38ede2f248baf0468b56",
-      "source": "CryptoSlate",
-      "title": "XRP extends the longest active ETF inflow streak in crypto as rival funds struggle for fresh cash",
-      "summary": "XRP funds led altcoin inflows in July, extending a four-month streak that increasingly separates them from most rival products. The US-listed funds attracted $27.29 million during the month, nearly twice Solana’s $14.62 million intake, according to SoSoValue…",
-      "url": "https://cryptoslate.com/xrp-extends-the-longest-active-etf-inflow-streak-in-crypto-as-rival-funds-struggle-for-fresh-cash/",
-      "publishedAt": "2026-08-02T18:35:10.000Z"
-    },
-    {
       "id": "5cf3819034cf94f6bd10",
       "source": "CoinDesk",
       "title": "Counting down the days: State of Crypto",
@@ -168,14 +320,6 @@
       "summary": "Strategy has gone five consecutive weeks without a disclosed bitcoin purchase; the firm last reported holding 843,775 BTC acquired for $63.69 billion.",
       "url": "https://www.theblock.co/post/410370/saylor-hints-at-strategy-bitcoin-buy-after-five-week-pause-as-strc-rate-stays-at-12-bitcoin-drive-engaged?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-08-02T18:10:43.000Z"
-    },
-    {
-      "id": "bde06b9c6078a0051d88",
-      "source": "CryptoSlate",
-      "title": "Coldcard’s $89M wallet bug triggers the biggest Bitcoin movement since FTX and completely distorts market signals",
-      "summary": "Coldcard’s wallet crisis has shaken Bitcoin sentiment, blurred on-chain signals and exposed a recurring weakness in AI-assisted cyber defenses. On July 30, hardware maker Coinkite warned users that wallets generated with affected Coldcard firmware could be…",
-      "url": "https://cryptoslate.com/coldcards-89m-wallet-bug-triggers-the-biggest-bitcoin-movement-since-ftx-and-completely-distorts-market-signals/",
-      "publishedAt": "2026-08-02T17:30:03.000Z"
     },
     {
       "id": "293e52c7e2a6808d2aa7",
@@ -194,28 +338,12 @@
       "publishedAt": "2026-08-02T17:00:00.000Z"
     },
     {
-      "id": "c41aeb51d106ff534aa8",
-      "source": "CryptoSlate",
-      "title": "The US just blacklisted the Iranian maritime scheme forcing commercial ships to pay Bitcoin tolls for safe passage",
-      "summary": "U.S. persons must block covered property and report within 10 business days, while foreign exposure hinges on conduct and nexus. The post The US just blacklisted the Iranian maritime scheme forcing commercial ships to pay Bitcoin tolls for safe passage…",
-      "url": "https://cryptoslate.com/the-us-just-blacklisted-an-iranian-maritime-scheme-forcing-commercial-ships-to-pay-bitcoin-tolls-for-safe-passage/",
-      "publishedAt": "2026-08-02T16:40:00.000Z"
-    },
-    {
       "id": "ba2990a36975daffdb05",
       "source": "CoinDesk",
       "title": "The future of crypto payments won't include on-ramps or bridges, Fun CEO says",
       "summary": "Alex Fine said standalone crypto payment rails are becoming obsolete as platforms shift toward unified funding flows that abstract away blockchain complexity for users.",
       "url": "https://www.coindesk.com/tech/2026/08/02/the-future-of-crypto-payments-won-t-include-on-ramps-or-bridges-fun-ceo-says",
       "publishedAt": "2026-08-02T16:00:00.000Z"
-    },
-    {
-      "id": "c9c9068f68dbd95cce0a",
-      "source": "CryptoSlate",
-      "title": "How XRPL validators quietly killed a silent exploit that could have drained victim accounts through transaction fees alone",
-      "summary": "BatchV1_1 and PermissionDelegationV1_1 remain default No while XRPL’s two-week supermajority clock sits idle. The post How XRPL validators quietly killed a silent exploit that could have drained victim accounts through transaction fees alone appeared first…",
-      "url": "https://cryptoslate.com/how-xrpl-validators-quietly-killed-a-silent-exploit-that-could-have-drained-victim-accounts-through-transaction-fees-alone/",
-      "publishedAt": "2026-08-02T15:30:10.000Z"
     },
     {
       "id": "238cfe3bc03a210bb24f",
@@ -568,134 +696,6 @@
       "summary": "Bitcoin Magazine Coinkite Releases Fixed Firmware After Coldcard Bug; AI Likely Involved In The Breach NVK stated that AI-assisted code review can now find latent bugs at a speed outpacing even the industry’s most seasoned experts, calling it a sober reality…",
       "url": "https://bitcoinmagazine.com/business/coinkite-releases-fixed-firmware-after-coldcard-bug-ai-likely-involved-in-the-hack",
       "publishedAt": "2026-07-31T17:57:02.000Z"
-    },
-    {
-      "id": "8d876afed6357e3c3c39",
-      "source": "CoinDesk",
-      "title": "The good and the bad of perps, according to crypto traders",
-      "summary": "Both retail and institutional traders worry about the funding rate.",
-      "url": "https://www.coindesk.com/business/2026/07/31/the-good-and-the-bad-of-perps-according-to-crypto-traders",
-      "publishedAt": "2026-07-31T17:53:59.000Z"
-    },
-    {
-      "id": "65937dcdc699a04f53f9",
-      "source": "The Block",
-      "title": "Analysts back Strategy’s cash buildup as Saylor shifts from ‘100% bitcoin’ approach",
-      "summary": "TD Cowen and Benchmark reiterated buy on Strategy after an $8.2 billion Q2 loss and a corporate STRC-to-par push.",
-      "url": "https://www.theblock.co/post/410297/strategy-cash-buildup-saylor-shifts-from-100-bitcoin-approach?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-31T17:40:13.000Z"
-    },
-    {
-      "id": "5789701f172a3eb07752",
-      "source": "Decrypt",
-      "title": "Tether Reports $1.5B Q2 Profit as USDT Supply Grows, Gold Holdings Rise",
-      "summary": "The latest attestation offers a snapshot of the assets backing the world's largest stablecoin, including U.S. Treasuries, repo agreements, and more than 146 metric tons of gold.",
-      "url": "https://decrypt.co/374796/tether-reports-1-5b-q2-profit-usdt-supply-grows",
-      "publishedAt": "2026-07-31T17:10:49.000Z"
-    },
-    {
-      "id": "6ceb78741b10b9ba7dba",
-      "source": "CoinDesk",
-      "title": "Coldcard's $38 million (so far) exploit shakes faith in self-custody, may push investors to ETFs",
-      "summary": "A software bug in popular hardware wallet Coldcard that led to the theft to this point of nearly 600 bitcoin worth roughly $38 million is prompting questions about security and whether managing private keys has become too risky for everyday investors.",
-      "url": "https://www.coindesk.com/business/2026/07/31/coldcard-s-usd38-million-so-far-exploit-shakes-faith-in-self-custody-may-push-investors-to-etfs",
-      "publishedAt": "2026-07-31T17:07:30.000Z"
-    },
-    {
-      "id": "b702f8833001651e96c4",
-      "source": "Cointelegraph",
-      "title": "Ex-FTX users report funds being released in $900M distribution round",
-      "summary": "Several users of the long-defunct crypto exchange reported that distribution agents had begun releasing funds to reimburse creditors for some of their 2022 losses.",
-      "url": "https://cointelegraph.com/news/ftx-users-funds-released-fifth-distribution-round?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T16:56:31.000Z"
-    },
-    {
-      "id": "474fb094142dc89aa881",
-      "source": "The Block",
-      "title": "World Cup 2026 prediction markets topped $20 billion, with Ronaldo tears among the biggest wagers",
-      "summary": "World Cup betting activity peaked around major knockout matches, with markets ranging from match outcomes to player-specific outcomes.",
-      "url": "https://www.theblock.co/post/410295/world-cup-2026-prediction-markets-topped-20-billion-ronaldo-tears-biggest-wagers?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-07-31T16:48:36.000Z"
-    },
-    {
-      "id": "cc61e2f26b0494ea5553",
-      "source": "Cointelegraph",
-      "title": "Tether earns $1.5B in Q2 as US Treasury holdings fuel profits",
-      "summary": "Tether’s reserve surplus grew to $4.11 billion in the second quarter as USDT supply rose despite a weaker stablecoin market and continued pressure across the crypto sector.",
-      "url": "https://cointelegraph.com/news/tether-q2-profit-us-treasury-holdings-usdt-supply?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T16:25:47.000Z"
-    },
-    {
-      "id": "2e94340055880a4a51b0",
-      "source": "Cointelegraph",
-      "title": "Bybit adds tokenized Nvidia, Apple, Tesla stocks as loan collateral",
-      "summary": "Eligible retail and institutional users can use tokenized shares of Nvidia, Apple, Tesla and three other US companies across Bybit’s trading and lending products.",
-      "url": "https://cointelegraph.com/news/bybit-tokenized-stocks-collateral-margin-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T16:23:21.000Z"
-    },
-    {
-      "id": "da2b12f12b169057913b",
-      "source": "Bitcoin Magazine",
-      "title": "US Closes in on Iran’s Strait of Hormuz Bitcoin Insurance Policy, Sanctions Companies",
-      "summary": "Bitcoin Magazine US Closes in on Iran’s Strait of Hormuz Bitcoin Insurance Policy, Sanctions Companies The news comes after the U.S. froze Iran's other digital assets. This post US Closes in on Iran’s Strait of Hormuz Bitcoin Insurance Policy, Sanctions…",
-      "url": "https://bitcoinmagazine.com/news/us-sanctions-iran-companies-using-bitcoin",
-      "publishedAt": "2026-07-31T16:20:58.000Z"
-    },
-    {
-      "id": "b99e6532e65a69434ca9",
-      "source": "Cointelegraph",
-      "title": "US Treasury yields rise as TIPS challenge the inflation narrative",
-      "summary": "TIPS data points to rising real yields, not inflation, a dynamic that weighs on non-yielding assets like Bitcoin.",
-      "url": "https://cointelegraph.com/markets/us-treasury-yields-rise-as-tips-challenge-the-inflation-narrative?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T16:14:19.000Z"
-    },
-    {
-      "id": "23f506db63f6d2528f29",
-      "source": "Cointelegraph",
-      "title": "Bitcoin price sinks to 2-week lows as US stocks fail to copy Asia rebound",
-      "summary": "Bitcoin saw fresh downside pressure as US stocks tracked sideways into the end of the month, diverging from the relief bounce seen in Asia.",
-      "url": "https://cointelegraph.com/markets/bitcoin-two-week-lows-us-stocks-fail-copy-asia-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-07-31T15:57:03.000Z"
-    },
-    {
-      "id": "2bb390806df868d54a65",
-      "source": "CoinDesk",
-      "title": "Quantum computing nears commercial breakthrough, IBM CEO says",
-      "summary": "Arvind Krishna said quantum computing will begin generating meaningful revenue before the decade ends as investment in the sector accelerates, in an interview on CNBC.",
-      "url": "https://www.coindesk.com/markets/2026/07/31/quantum-computing-nears-commercial-breakthrough-ibm-ceo-says",
-      "publishedAt": "2026-07-31T15:39:30.000Z"
-    },
-    {
-      "id": "1fef83109ac4f4e3e95c",
-      "source": "Decrypt",
-      "title": "Circle Lands New York Trust Charter as Stablecoin Issuer Expands Regulatory Footprint",
-      "summary": "The approval comes weeks after Circle won federal approval to establish a national trust bank, adding another license as the USDC issuer expands.",
-      "url": "https://decrypt.co/374791/circle-new-york-trust-charter-stablecoin-issuer",
-      "publishedAt": "2026-07-31T15:32:02.000Z"
-    },
-    {
-      "id": "a1ae0c0aac2f009ecda8",
-      "source": "Bitcoin Magazine",
-      "title": "COLDCARD SECURITY RISK: IMMEDIATE ACTION REQUIRED",
-      "summary": "Bitcoin Magazine COLDCARD SECURITY RISK: IMMEDIATE ACTION REQUIRED IMPORTANT: Major security vulnerability discovered in Coldcard hardware wallets. For your own safety read disclosures and take necessary actions immediately. This post COLDCARD SECURITY RISK:…",
-      "url": "https://bitcoinmagazine.com/news/coldcard-security-risk-immediate-action-required",
-      "publishedAt": "2026-07-31T15:22:26.000Z"
-    },
-    {
-      "id": "e616b04b8dac3b218f63",
-      "source": "Bitcoin Magazine",
-      "title": "Coldcard Wallet Flaw Exposes Years of Bitcoin Seeds After $70M in BTC Stolen",
-      "summary": "Bitcoin Magazine Coldcard Wallet Flaw Exposes Years of Bitcoin Seeds After $70M in BTC Stolen Over $70 million in Bitcoin has been pinched. Coldcard has since urged its users to take precautions. This post Coldcard Wallet Flaw Exposes Years of Bitcoin Seeds…",
-      "url": "https://bitcoinmagazine.com/news/coldcard-wallet-exposed-after-bitcoin-hack",
-      "publishedAt": "2026-07-31T15:22:11.000Z"
-    },
-    {
-      "id": "315f738cf9c8cceff677",
-      "source": "Decrypt",
-      "title": "US Treasury Sanctions Iranian Firms Taking Bitcoin for Hormuz Passage",
-      "summary": "OFAC sanctioned two Iranian firms including Hormuz Safe, which “accepts payment in Bitcoin and other digital assets.”",
-      "url": "https://decrypt.co/374789/us-treasury-sanctions-iranian-firms-taking-bitcoin-for-hormuz-passage",
-      "publishedAt": "2026-07-31T15:05:43.000Z"
     }
   ]
 }
