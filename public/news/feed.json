@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T03:43:06.145Z",
+  "generatedAt": "2026-08-04T09:13:35.660Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 39,
+      "itemCount": 38,
       "error": null
     },
     {
@@ -57,6 +57,150 @@
     }
   ],
   "items": [
+    {
+      "id": "b0425d54fefef0bbed42",
+      "source": "The Block",
+      "title": "Bernstein says Texas data center audit could boost value of existing bitcoin mining and AI sites",
+      "summary": "Bernstein said a state-ordered audit of Texas data centers will heighten power scarcity across the regional grid.",
+      "url": "https://www.theblock.co/post/410545/bernstein-texas-data-center-audit?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-04T08:57:13.000Z"
+    },
+    {
+      "id": "3c98065b8907edc2a5c0",
+      "source": "CryptoSlate",
+      "title": "Bitcoin must clear $65,000 before Friday, or jobs data could turn $62,000 into a trapdoor to $60,000",
+      "summary": "Bitcoin and jobs data are on a collision course this week, with the price pinned between $62,200 and $65,000 after the first economic release worked against the bulls. The ISM Manufacturing PMI printed 55.6 on Aug. 3, beating the 54.0 consensus and rising…",
+      "url": "https://cryptoslate.com/bitcoin-must-clear-65000-before-friday-or-jobs-data-could-turn-62000-into-a-trapdoor-to-60000/",
+      "publishedAt": "2026-08-04T08:50:42.000Z"
+    },
+    {
+      "id": "be26c100e0af209c55f5",
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin at $63,600 as rare US-Japan yen action tests carry-trade fears",
+      "summary": "Japan may have spent as much as $36.6 billion buying yen in the first joint US-Japan action to support the currency since 1998. Bitget Wallet’s Alvin Kan says it can slow a disorderly slide without reversing the broader trend.",
+      "url": "https://www.coindesk.com/business/2026/08/04/live-updates-bitcoin-at-usd63-600-as-rare-us-japan-yen-action-tests-carry-trade-fears",
+      "publishedAt": "2026-08-04T08:41:00.000Z"
+    },
+    {
+      "id": "61ad9dafe3d0e4822802",
+      "source": "Cointelegraph",
+      "title": "Apple briefly removes Telegram from App Store, Gram rebounds",
+      "summary": "Apple restored Telegram after the messaging platform removed content that violated its child safety policies and banned the user who posted it.",
+      "url": "https://cointelegraph.com/news/apple-telegram-app-store-gram-rebounds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-04T08:03:03.000Z"
+    },
+    {
+      "id": "c4bd18baba80c04b51b1",
+      "source": "CoinDesk",
+      "title": "Bhutan's GMC puts part of its bitcoin treasury to work after 10,000 BTC pledge",
+      "summary": "The planned Gelephu Mindfulness City says 3iQ will run part of its bitcoin treasury on a market-neutral basis, a shift from holding the coins as a long-term national asset.",
+      "url": "https://www.coindesk.com/markets/2026/08/04/bhutan-s-gmc-puts-part-of-its-bitcoin-treasury-to-work-after-10-000-btc-pledge",
+      "publishedAt": "2026-08-04T07:56:11.000Z"
+    },
+    {
+      "id": "bf4629b2015e9980aba4",
+      "source": "CoinDesk",
+      "title": "Why Jim Cramer’s quantum panic isn’t rattling bitcoin as price holds steady around $64,000",
+      "summary": "Jim Cramer says he's dumping his bitcoin over quantum computing fears, but his track record of crypto and bank calls has buoyed the crypto community.",
+      "url": "https://www.coindesk.com/markets/2026/08/04/why-jim-cramer-s-quantum-panic-isn-t-rattling-bitcoin-as-price-holds-steady-around-usd64-000",
+      "publishedAt": "2026-08-04T07:53:18.000Z"
+    },
+    {
+      "id": "8e82e460706026a664a4",
+      "source": "Cointelegraph",
+      "title": "NY judge denies CFTC motion to halt enforcement action against Kalshi",
+      "summary": "The ruling leaves New York’s case against Kalshi in place while allowing the CFTC to renew its request before Judge Victor Marrero.",
+      "url": "https://cointelegraph.com/news/ny-judge-denies-cftc-motion-enforcement-kalshi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-04T07:49:22.000Z"
+    },
+    {
+      "id": "095f21fdb303b7328003",
+      "source": "Cointelegraph",
+      "title": "Nigeria sets crypto tax collection rules for digital asset platforms",
+      "summary": "The framework specifies how existing tax obligations apply to crypto disposals and rewards, with some withheld amounts payable in the originating token.",
+      "url": "https://cointelegraph.com/news/nigeria-crypto-tax-rules-digital-asset-platforms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-04T07:25:32.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-04T06:18:03.000Z"
+    },
+    {
+      "id": "6e51517460864c34d7f9",
+      "source": "CoinDesk",
+      "title": "XRP holders can now borrow RLUSD on Ethereum through $280 million lending pool",
+      "summary": "XRP holders can now borrow RLUSD against their coins on Ethereum without selling, through a $280 million vault that had never accepted an XRP-linked asset before.",
+      "url": "https://www.coindesk.com/markets/2026/08/04/flare-s-wrapped-xrp-wins-approval-in-a-usd280-million-rlusd-lending-vault",
+      "publishedAt": "2026-08-04T06:12:20.000Z"
+    },
+    {
+      "id": "bfafbe9aacec5563ee0d",
+      "source": "Cointelegraph",
+      "title": "Crypto firms still seeking frontier AI access; only select few have it",
+      "summary": "Crypto executives say restricting powerful AI models may initially be justified, but it doesn’t make sense as open-source alternatives become more capable.",
+      "url": "https://cointelegraph.com/news/few-crypto-firms-have-access-to-frontier-ai-as-cyber-threats-escalate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-04T06:00:23.000Z"
+    },
+    {
+      "id": "ed04150e5a8315e6ed56",
+      "source": "The Block",
+      "title": "Bitcoin losses from Coldcard hack could swell to $130 million, Galaxy Research says",
+      "summary": "Galaxy said on X that it suspects the losses to be greater once the yet-unconfirmed fourth wave of attacks is included.",
+      "url": "https://www.theblock.co/post/410533/coldcard-hack-130-million-galaxy-research?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-04T05:46:06.000Z"
+    },
+    {
+      "id": "3ab0a208189527cd3f1e",
+      "source": "CoinDesk",
+      "title": "A new Solana proposal aims to ramp up daily SOL Burns from $47,000 to $650,000",
+      "summary": "SGP-0003 bundles a fee overhaul with a doubling of the disinflation rate. It needs 40 million more SOL of validator support in two weeks to reach a vote.",
+      "url": "https://www.coindesk.com/tech/2026/08/04/a-new-solana-proposal-would-take-daily-sol-burns-from-usd47-000-to-usd650-000",
+      "publishedAt": "2026-08-04T05:39:18.000Z"
+    },
+    {
+      "id": "62a6146768f4bf8a0bb0",
+      "source": "CoinDesk",
+      "title": "Bitcoin nears $64,000 as traders look past Strategy's BTC sales and Coldcard sweeps",
+      "summary": "Every major token except ether is green on the week, with BTC up 1.9% over 24 hours and Asian equities selling off on AI-trade jitters.",
+      "url": "https://www.coindesk.com/markets/2026/08/04/bitcoin-nears-usd64-000-as-traders-look-past-the-fourth-coldcard-sweep",
+      "publishedAt": "2026-08-04T05:21:13.000Z"
+    },
+    {
+      "id": "0a42414f21ccb42fa231",
+      "source": "CoinDesk",
+      "title": "A bitcoin wallet dormant since 2013 moved $31 million, and it's not the only one",
+      "summary": "A 12-year-old bitcoin wallet moved $31 million on Monday, part of a broader wave of dormant coins shifting since the Coldcard hack.",
+      "url": "https://www.coindesk.com/markets/2026/08/04/a-bitcoin-wallet-dormant-since-2013-moved-usd31-million-and-it-s-not-the-only-one",
+      "publishedAt": "2026-08-04T04:48:40.000Z"
+    },
+    {
+      "id": "169d2b0202b83fad2b51",
+      "source": "Cointelegraph",
+      "title": "Coldcard Bitcoin theft tops $100M across 3 confirmed attack waves: Galaxy",
+      "summary": "Galaxy Research said 90% of the stolen Bitcoin remains unmoved as investigators examine a suspected fourth wave that could lift losses to $130 million.",
+      "url": "https://cointelegraph.com/news/coldcard-bitcoin-theft-100-million-three-waves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-04T04:47:13.000Z"
+    },
+    {
+      "id": "380b8d69fcf9bc7ccf99",
+      "source": "The Block",
+      "title": "NEAR co-founder proposes protocol sovereign fund for long-term sustainability",
+      "summary": "The concept draws from sovereign wealth funds in places like Norway and Singapore, as well as university endowments.",
+      "url": "https://www.theblock.co/post/410528/near-protocol-sovereign-fund?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-04T04:32:28.000Z"
+    },
+    {
+      "id": "66d8733ed1e3a9da1b68",
+      "source": "Cointelegraph",
+      "title": "Bitmine adds $19.6M in ETH, repurchases 4.5M shares",
+      "summary": "Bitmine said it now holds about 4.8% of Ether’s circulating supply as it pursues its 5% acquisition target.",
+      "url": "https://cointelegraph.com/news/bitmine-buys-10399-eth-repurchases-4-5-million-shares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-04T03:52:56.000Z"
+    },
     {
       "id": "69a9104d72126593e2c4",
       "source": "The Block",
@@ -184,14 +328,6 @@
       "summary": "A key architect of the Trump administration’s digital asset agenda is leaving the Treasury Department as Congress struggles to advance landmark crypto legislation.",
       "url": "https://cointelegraph.com/news/bessent-top-crypto-adviser-tyler-williams-leaves-us-treasury-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-03T20:29:47.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-03T19:52:11.000Z"
     },
     {
       "id": "ba099ac7278d5e2d6658",
@@ -458,14 +594,6 @@
       "publishedAt": "2026-08-03T13:30:00.000Z"
     },
     {
-      "id": "2495b4f1aa148913e0fc",
-      "source": "CryptoSlate",
-      "title": "Kraken delisted tokens face liquidation, users could get $0",
-      "summary": "Withdrawals closed July 31, leaving residual balances to a five-day sale whose venue, sequence, fees and settlement currency remain undisclosed. The post Kraken delisted tokens face liquidation, users could get $0 appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/kraken-is-force-selling-seven-delisted-tokens-into-dead-markets-warning-users-that-insufficient-liquidity-could-result-in-zero-proceeds/",
-      "publishedAt": "2026-08-03T13:30:00.000Z"
-    },
-    {
       "id": "7b1491e69a5f6524f73b",
       "source": "CoinDesk",
       "title": "BlackRock expands tokenized cash with new blockchain-based money market offerings",
@@ -568,134 +696,6 @@
       "summary": "Trump-linked Bitcoin miner produced a record 932 BTC in the second quarter, lifting mining revenue 8% as its net loss narrowed from the previous quarter.",
       "url": "https://cointelegraph.com/news/trumps-american-bitcoin-output-narrower-q2-loss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-03T11:40:09.000Z"
-    },
-    {
-      "id": "2218f63256998f777e82",
-      "source": "CoinDesk",
-      "title": "Solo Bitcoin miner nets $200,000 as Coldcard hardware wallet drains rocks sentiment",
-      "summary": "Your day-ahead look for Aug. 3, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/08/03/solo-bitcoin-miner-nets-usd200-000-as-coldcard-hardware-wallet-drains-rocks-sentiment",
-      "publishedAt": "2026-08-03T11:18:31.000Z"
-    },
-    {
-      "id": "4b3afdea491257ce7fa9",
-      "source": "Decrypt",
-      "title": "South Korean Exchange Bithumb Targets 2028 IPO",
-      "summary": "The exchange plans to file for preliminary listing review in 2027, after switching to international accounting standards this year.",
-      "url": "https://decrypt.co/374823/south-korean-exchange-bithumb-targets-2028-ipo",
-      "publishedAt": "2026-08-03T11:07:59.000Z"
-    },
-    {
-      "id": "669dc9e5a3f11cc8e4c9",
-      "source": "Cointelegraph",
-      "title": "Ripple invests in Zilo and Licuido to assist tokenized capital markets push",
-      "summary": "Ripple made a strategic investment in Zilo and Licuido as it looks to enable the use of tokenized funds as collateral from the point of issuance.",
-      "url": "https://cointelegraph.com/news/ripple-invests-zilo-licuido-tokenized-capital-markets-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-03T10:58:36.000Z"
-    },
-    {
-      "id": "855b750c689bcf25be62",
-      "source": "CoinDesk",
-      "title": "Bitcoin, ether decline as Coldcard exploit enters a fifth day",
-      "summary": "Nevertheless, the drop in crypto prices seems restrained given the magnitude of losses in the wallet hack and the erosion of confidence in cold storage.",
-      "url": "https://www.coindesk.com/markets/2026/08/03/bitcoin-ether-decline-as-coldcard-exploit-enters-a-fifth-day",
-      "publishedAt": "2026-08-03T10:51:37.000Z"
-    },
-    {
-      "id": "f3db3d9268afab858531",
-      "source": "CoinDesk",
-      "title": "Bithumb now targets 2028 IPO after major internal restructuring",
-      "summary": "The South Korean crypto trading platform plans to see a preliminary listing review in 2027, but did not identify a proposed listing venue yet.",
-      "url": "https://www.coindesk.com/business/2026/08/03/bithumb-now-targets-2028-ip-after-major-internal-restructuring",
-      "publishedAt": "2026-08-03T10:41:08.000Z"
-    },
-    {
-      "id": "310fc52f74152ea2fc07",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin flirts with $64,000 as stocks start strong in August",
-      "summary": "ARP Digital’s Yusuf Fakhro said bitcoin’s weakness reflects stalled participation more than forced selling, with ETF flows turning negative, CME open interest back at 2023 levels and Strategy idle for a fifth straight week.",
-      "url": "https://www.coindesk.com/business/2026/08/03/live-updates-traders-say-bitcoin-sell-off-from-usd65-000-points-to-thin-volume-not-panic-selling",
-      "publishedAt": "2026-08-03T10:29:23.000Z"
-    },
-    {
-      "id": "452ce841591a55821532",
-      "source": "Cointelegraph",
-      "title": "Bitcoin may find bear market bottom in August: 10x Research",
-      "summary": "Bitcoin could confirm an August bear-market bottom, though rising Treasury yields could force the Fed to raise rates in September, according to 10x Research.",
-      "url": "https://cointelegraph.com/markets/bitcoin-find-bear-market-bottom-august-10x-research?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-03T10:25:32.000Z"
-    },
-    {
-      "id": "de708e62031f488f716e",
-      "source": "Decrypt",
-      "title": "Coldcard Losses Near $114M as Small Bitcoin Transfers Spike",
-      "summary": "Transfers of less than 1 BTC hit levels last seen days after the FTX collapse, while Galaxy Research flagged a likely fourth wave of thefts.",
-      "url": "https://decrypt.co/374820/coldcard-losses-near-114m-as-small-bitcoin-transfers-spike",
-      "publishedAt": "2026-08-03T10:15:37.000Z"
-    },
-    {
-      "id": "4965f254ca941890bab6",
-      "source": "CoinDesk",
-      "title": "The bitcoin futures yield collapse: Once over 20%, now less than Treasury notes",
-      "summary": "Bitcoin futures’ once-rich carry has evaporated, with quarterly basis yields trailing two‑year U.S. Treasuries since February, a sign of shrinking arbitrage and a maturing market.",
-      "url": "https://www.coindesk.com/markets/2026/08/03/the-bitcoin-futures-yield-collapse-once-over-20-now-less-than-treasury-notes",
-      "publishedAt": "2026-08-03T10:13:50.000Z"
-    },
-    {
-      "id": "1361cc74950f06a2af48",
-      "source": "The Block",
-      "title": "Bernstein says Clarity Act failure could accelerate SEC, CFTC crypto rulemaking",
-      "summary": "Bernstein expects SEC and CFTC rulemaking to accelerate under Project Crypto if the Clarity Act fails to pass this year.",
-      "url": "https://www.theblock.co/post/410395/bernstein-says-clarity-act-failure-could-accelerate-sec-cftc-crypto-rulemaking?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-03T09:49:47.000Z"
-    },
-    {
-      "id": "5c41ae1715f47e851fb1",
-      "source": "CoinDesk",
-      "title": "Robinhood wins UK crypto registration before new regulatory regime kicks off",
-      "summary": "Robinhood’s U.K. arm was added to the FCA's list of registered cryptoasset companies as of July 31.",
-      "url": "https://www.coindesk.com/policy/2026/08/03/robinhood-wins-uk-crypto-registration-before-new-regulatory-regime-kicks-off",
-      "publishedAt": "2026-08-03T09:38:53.000Z"
-    },
-    {
-      "id": "c8f9f47c303409227d36",
-      "source": "The Block",
-      "title": "Ripple invests in ZILO and Licuido to deepen tokenized capital markets push",
-      "summary": "Ripple said the deals are set to bring regulated transfer agency, issuance, and collateral mobility to its infrastructure on the XRP Ledger.",
-      "url": "https://www.theblock.co/post/410397/ripple-invests-zilo-licuido?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-03T09:38:48.000Z"
-    },
-    {
-      "id": "53e07e2269f628962b9e",
-      "source": "The Block",
-      "title": "South Korea’s Bithumb officially targets 2028 IPO, outlines multi-year roadmap",
-      "summary": "Bithumb plans to request a preliminary listing review and have its application reviewed by local authorities in 2027.",
-      "url": "https://www.theblock.co/post/410391/south-korea-bithumb-ipo-2028?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-03T09:21:28.000Z"
-    },
-    {
-      "id": "2dd88ecb5df04fb69c9f",
-      "source": "Cointelegraph",
-      "title": "HashKey receives JPMorgan approval to open client money account",
-      "summary": "HashKey Exchange said it received approval to open client money accounts with JPMorgan, weeks after it launched customer fund accounts with DBS Bank.",
-      "url": "https://cointelegraph.com/news/hashkey-jpmorgan-client-money-account?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-03T09:14:38.000Z"
-    },
-    {
-      "id": "e7323be27450b4a32fac",
-      "source": "CoinDesk",
-      "title": "Coldcard wallet losses may near $114 million as possible fourth sweep emerges",
-      "summary": "The pending transactions signal replace-by-fee, so anyone who spots their address in the mempool has minutes to pay a higher fee and move funds first.",
-      "url": "https://www.coindesk.com/tech/2026/08/03/coldcard-wallet-losses-may-near-usd114-million-as-possible-fourth-sweep-emerges",
-      "publishedAt": "2026-08-03T08:51:39.000Z"
-    },
-    {
-      "id": "33aba3b5bc3ea5ceacdb",
-      "source": "Cointelegraph",
-      "title": "Bitget to exit Japan, close remaining positions after Dec. 31",
-      "summary": "The crypto exchange stopped accepting new registrations from Japan residents and will begin progressively restricting existing accounts on Nov. 1.",
-      "url": "https://cointelegraph.com/news/bitget-exit-japan-account-restrictions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-03T08:21:23.000Z"
     }
   ]
 }
