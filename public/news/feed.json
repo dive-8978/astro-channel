@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T14:37:52.614Z",
+  "generatedAt": "2026-08-05T19:58:38.526Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 39,
+      "itemCount": 58,
       "error": null
     },
     {
@@ -57,6 +57,238 @@
     }
   ],
   "items": [
+    {
+      "id": "7e17573b64dffb67db5b",
+      "source": "Decrypt",
+      "title": "Visa Widens Stablecoin Payouts via Zerohash Rails",
+      "summary": "Eligible Visa Direct clients can now prefund accounts and send payouts in stablecoins, expanding Visa's latest push to bring blockchain-based payments into its global network.",
+      "url": "https://decrypt.co/374994/visa-stablecoin-payouts-zerohash",
+      "publishedAt": "2026-08-05T19:42:48.000Z"
+    },
+    {
+      "id": "922e03dbbf3747ae3a8a",
+      "source": "CryptoSlate",
+      "title": "A massive 100 million PROVE tokens unlock today, but razor-thin liquidity reveals a market unprepared for a 51% supply shock",
+      "summary": "CoinGecko shows 208.33 million and Tokenomics.com 233.332 million, but accessible official terms confirm only the investor-and-contributor tranche. The post A massive 100 million PROVE tokens unlock today, but razor-thin liquidity reveals a market unprepared…",
+      "url": "https://cryptoslate.com/a-massive-100-million-prove-tokens-unlock-today-but-razor-thin-exchange-liquidity-reveals-a-market-completely-unprepared-for-a-51-supply-shock/",
+      "publishedAt": "2026-08-05T19:30:35.000Z"
+    },
+    {
+      "id": "5bcbd9c07ed5020b0231",
+      "source": "Cointelegraph",
+      "title": "Senator Lummis still pushing for CLARITY vote before August recess",
+      "summary": "US lawmakers have only a few days to hold a vote on a crypto market structure bill before a recess begins that could push consideration into the 2026 election season or beyond.",
+      "url": "https://cointelegraph.com/news/senator-lummis-clarity-vote-movement-calendar?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-05T19:18:24.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-05T19:11:41.000Z"
+    },
+    {
+      "id": "96fea6b975a5407afc44",
+      "source": "Decrypt",
+      "title": "OpenAI and Anthropic's Rogue Models Hacked Real Companies. The Law Has No Answer",
+      "summary": "Two AI labs say unreleased models broke into live systems to game benchmarks. Prosecuting a line of code is harder than it looks.",
+      "url": "https://decrypt.co/374991/openai-anthropic-rogue-ai-models-hacked-law",
+      "publishedAt": "2026-08-05T19:11:23.000Z"
+    },
+    {
+      "id": "79ac81c6d0c8819432ba",
+      "source": "The Block",
+      "title": "CryptoQuant says bitcoin, ether and XRP whales are accumulating, signaling a ‘late-stage bear market’",
+      "summary": "Large crypto holders are accumulating bitcoin, ether, and XRP as prices remain under pressure, CryptoQuant said.",
+      "url": "https://www.theblock.co/post/410920/cryptoquant-bitcoin-ether-xrp-whales-accumulating-late-stage-bear-market?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T19:09:26.000Z"
+    },
+    {
+      "id": "87549f0105b0c07d2ad3",
+      "source": "Cointelegraph",
+      "title": "Marex invests in Digital Prime to expand institutional crypto lending",
+      "summary": "The undisclosed investment will support the development of Tokenet, a digital asset lending platform, as institutional demand for crypto infrastructure continues to grow.",
+      "url": "https://cointelegraph.com/news/marex-digital-prime-tokenet-institutional-crypto-lending?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-05T18:53:47.000Z"
+    },
+    {
+      "id": "5401a6408ab0c2012f48",
+      "source": "Decrypt",
+      "title": "Feds Say an NFT Founder Raised $10 Million Only to Blow It All on Gambling, Trading, and a DJ Hobby",
+      "summary": "Prosecutors say the founder of NFT marketplace Few and Far promised investors their money would build a Web3 platform before diverting it to personal expenses.",
+      "url": "https://decrypt.co/374986/nft-founder-10-million-fraud-gambling-dj-hobby",
+      "publishedAt": "2026-08-05T18:43:47.000Z"
+    },
+    {
+      "id": "309a79986b0a98917536",
+      "source": "Decrypt",
+      "title": "Bitcoin Tests Market’s Patience as Zcash Gives Holders Hope: Analysis",
+      "summary": "Will Bitcoin breakout of its death cross? Can Zcash continue to make holders forget about that mid-June crash? Here’s what the charts say.",
+      "url": "https://decrypt.co/374975/bitcoin-price-test-zcash-holds-golden-cross",
+      "publishedAt": "2026-08-05T18:33:34.000Z"
+    },
+    {
+      "id": "fc9a7f0d183a27d92ad9",
+      "source": "CryptoSlate",
+      "title": "USDC redemptions just outpaced mints by $4B, but a massive new token presale is quietly doubling Circle’s revenue outlook",
+      "summary": "Redemptions exceeded mints, yet circulation rose 19% as lower reserve yield sharpened attention on an undisclosed ARC Token contribution. The post USDC redemptions just outpaced mints by $4B, but a massive new token presale is quietly doubling Circle’s…",
+      "url": "https://cryptoslate.com/usdc-redemptions-just-outpaced-mints-by-4-billion-but-a-massive-new-token-presale-is-quietly-doubling-circles-revenue-outlook/",
+      "publishedAt": "2026-08-05T18:20:07.000Z"
+    },
+    {
+      "id": "9ae020f2ce72b0618014",
+      "source": "CoinDesk",
+      "title": "Crypto's campaign efforts see rare loss, but crypto roster in Congress likely to grow",
+      "summary": "The leading industry PAC, Fairshake, put $2 million into a Detroit Democratic primary but came up short, even as several PAC-backed candidates won elsewhere.",
+      "url": "https://www.coindesk.com/policy/2026/08/05/crypto-s-campaign-efforts-see-rare-loss-but-crypto-roster-in-congress-likely-to-grow",
+      "publishedAt": "2026-08-05T18:15:21.000Z"
+    },
+    {
+      "id": "a30d3d7597210f15854c",
+      "source": "Bitcoin Magazine",
+      "title": "Russia Passes Law to Regulate Crypto Exchanges, Keeps Payment Ban in Place",
+      "summary": "Bitcoin Magazine Russia Passes Law to Regulate Crypto Exchanges, Keeps Payment Ban in Place New crypto regulations have been signed into law. But citizens in the country won't be able to buy coffee with Bitcoin anytime soon. This post Russia Passes Law to…",
+      "url": "https://bitcoinmagazine.com/news/russia-keeps-payment-ban-in-place",
+      "publishedAt": "2026-08-05T17:39:39.000Z"
+    },
+    {
+      "id": "35f7a49a93a446e312be",
+      "source": "The Block",
+      "title": "Analysts see bitcoin bottom forming through boredom as price clings to $64K amid spot ETF inflows",
+      "summary": "Bitcoin held near $64,000 as spot ETFs drew $211.5 million Tuesday while analysts flag bottom signals forming without a demand engine.",
+      "url": "https://www.theblock.co/post/410905/analysts-see-bitcoin-bottom-forming-through-boredom-price-clings-64k-amid-spot-etf-inflows?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T17:31:31.000Z"
+    },
+    {
+      "id": "f6622014dc0adffb3d91",
+      "source": "CryptoSlate",
+      "title": "Bitcoin treasury Strive bought 20 BTC, but 110,000 new shares left holders with less Bitcoin exposure",
+      "summary": "Bitcoin holdings rose 0.10%, while effective common shares increased 0.13% and trimmed gross per-share exposure by about 0.03%. The post Bitcoin treasury Strive bought 20 BTC, but 110,000 new shares left holders with less Bitcoin exposure appeared first on…",
+      "url": "https://cryptoslate.com/bitcoin-treasury-firm-strive-bought-20-btc-but-110000-new-shares-left-holders-with-less-bitcoin-exposure/",
+      "publishedAt": "2026-08-05T17:10:41.000Z"
+    },
+    {
+      "id": "8a50e554beb77004b61e",
+      "source": "The Block",
+      "title": "TeraWulf’s HPC leasing revenue jumps 52%, widening lead over bitcoin mining",
+      "summary": "HPC leasing accounted for roughly 71% of TeraWulf's $44.8 million in Q2 revenue, up from 62% in the prior quarter.",
+      "url": "https://www.theblock.co/post/410888/terawulf-hpc-leasing-revenue-jumps-52-widening-lead-over-bitcoin-mining?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T17:09:28.000Z"
+    },
+    {
+      "id": "3f38d5662f2453f656ee",
+      "source": "Cointelegraph",
+      "title": "Crypto-backed Michigan House incumbent loses primary despite $2M PAC support",
+      "summary": "A Midwest Democratic primary that raised accusations of payback from the cryptocurrency industry ended with the unseating of two-term incumbent Shri Thanedar.",
+      "url": "https://cointelegraph.com/news/michigan-house-rep-loses-primary-support-crypto-pac?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-05T16:51:54.000Z"
+    },
+    {
+      "id": "621a744b8eadb6eb60d4",
+      "source": "Cointelegraph",
+      "title": "Western Union brings stablecoin remittances to Visa network with Stablecard",
+      "summary": "The remittance giant is rolling out Stablecard across 37 markets, targeting cross-border payments and consumers seeking US dollar-denominated savings in volatile economies.",
+      "url": "https://cointelegraph.com/news/western-union-stablecard-stablecoin-remittances-visa?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-05T16:30:56.000Z"
+    },
+    {
+      "id": "6dfc7c10a9f05e019a93",
+      "source": "The Block",
+      "title": "NFT founder accused of using millions from investor funds to finance DJ hobby, gambling",
+      "summary": "An NFT founder is facing fraud charges after prosecutors alleged he stole millions of dollars from investors to bankroll his lifestyle.",
+      "url": "https://www.theblock.co/post/410890/nft-founder-accused-using-millions-investor-funds-finance-dj-hobby-gambling?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T16:17:47.000Z"
+    },
+    {
+      "id": "35d29d3d829ba4cd969a",
+      "source": "Bitcoin Magazine",
+      "title": "‘If Clarity Dies, Democrats Killed It’: Lummis Urges Senate to Act on Crypto Bill Before Recess",
+      "summary": "Bitcoin Magazine ‘If Clarity Dies, Democrats Killed It’: Lummis Urges Senate to Act on Crypto Bill Before Recess Time is running out for the Clarity Act. Senator Lummis warns that some lawmakers still want to delay the bill. This post ‘If Clarity Dies,…",
+      "url": "https://bitcoinmagazine.com/news/cynthia-lummis-urges-clarity-act-speed",
+      "publishedAt": "2026-08-05T16:12:01.000Z"
+    },
+    {
+      "id": "ad1268ae748ef1447e3e",
+      "source": "CryptoSlate",
+      "title": "An AI data center firm just raised $25 million, but 90% of it vanishes in days to pay off one massive loan",
+      "summary": "Principal alone would absorb 89.5% of headline gross proceeds, while the warrant structure can add 11.7 million shares. The post An AI data center firm just raised $25 million, but 90% of it vanishes in days to pay off one massive loan appeared first on…",
+      "url": "https://cryptoslate.com/an-ai-data-center-firm-just-raised-25-million-but-90-of-it-vanishes-in-days-to-pay-off-one-massive-loan/",
+      "publishedAt": "2026-08-05T16:05:32.000Z"
+    },
+    {
+      "id": "42f1e39b5f88c71d5e29",
+      "source": "CoinDesk",
+      "title": "Coldcard exploit could boost demand for regulated bitcoin exposure, analysts say",
+      "summary": "Cantor sees positive read-through for crypto custody providers, while FRNT says the breach could drive some investors toward bitcoin ETFs.",
+      "url": "https://www.coindesk.com/tech/2026/08/05/coldcard-exploit-could-boost-demand-for-regulated-bitcoin-exposure-analysts-say",
+      "publishedAt": "2026-08-05T15:44:08.000Z"
+    },
+    {
+      "id": "6de4e5c327110026b529",
+      "source": "Decrypt",
+      "title": "Circle Taps Visa, Mastercard and BlackRock as Validators for September Arc Launch",
+      "summary": "Circle's USDC distribution deal with Coinbase has been renewed on existing terms, and Arc's testnet has processed half a billion transactions.",
+      "url": "https://decrypt.co/374961/circle-taps-visa-mastercard-and-blackrock-as-validators-for-september-arc-launch",
+      "publishedAt": "2026-08-05T15:38:09.000Z"
+    },
+    {
+      "id": "b373131ac683b928cfae",
+      "source": "The Block",
+      "title": "Kraken parent Payward shifts position on tokenized equities and voting rights",
+      "summary": "While previously xStocks holders had no voting rights, this deal will allow eligible investors to submit proxy voting preferences.",
+      "url": "https://www.theblock.co/post/410878/kraken-parent-payward-shifts-position-tokenized-equities-voting-rights?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T15:26:17.000Z"
+    },
+    {
+      "id": "53f80a5584652c997157",
+      "source": "Decrypt",
+      "title": "Eliza Founder Declares AI Token 'Dead,' Shuts Down Foundation After Lawsuit Settlement",
+      "summary": "Shaw Walters says Eliza's token is no more after a class-action settlement drained the project's remaining funds.",
+      "url": "https://decrypt.co/374958/eliza-ai-token-dead-shuts-down-foundation-lawsuit",
+      "publishedAt": "2026-08-05T15:24:38.000Z"
+    },
+    {
+      "id": "3ca11f42f0b013241928",
+      "source": "CryptoSlate",
+      "title": "How dumping 1,200 Bitcoin helped a cellular chipmaker completely erase its debt and double its cash",
+      "summary": "The chipmaker ended June with 314 unrestricted coins after sales helped erase convertible debt and lift cash to $21 million. The post How dumping 1,200 Bitcoin helped a cellular chipmaker completely erase its debt and double its cash appeared first on…",
+      "url": "https://cryptoslate.com/how-dumping-1200-bitcoin-helped-a-cellular-chipmaker-completely-erase-its-debt-and-double-its-cash/",
+      "publishedAt": "2026-08-05T15:10:08.000Z"
+    },
+    {
+      "id": "d7b0fda8c771b6cdcd92",
+      "source": "CoinDesk",
+      "title": "Crypto Long & Short: Putting the bitcoin sizing question to the test",
+      "summary": "In a follow-up to his essay on sizing crypto risk, Lionsoul Global's Gregory Mall backtests bitcoin in a 60/40 across bull, bear and sideways regimes, showing how a straight bitcoin position, a large-cap basket and a trend-managed sleeve part ways and why…",
+      "url": "https://www.coindesk.com/coindesk-indices/2026/08/05/crypto-long-and-short-putting-the-bitcoin-sizing-question-to-the-test",
+      "publishedAt": "2026-08-05T15:03:19.000Z"
+    },
+    {
+      "id": "8000b76881cb618e1d7e",
+      "source": "The Block",
+      "title": "Galaxy shares sink 12% after Q2 loss as AI data center business begins generating revenue",
+      "summary": "Galaxy's Helios Phase I campus is expected to generate roughly $80 million in quarterly leasing revenue beginning in Q3.",
+      "url": "https://www.theblock.co/post/410851/galaxy-shares-sink-11-after-85-million-q2-loss-despite-ai-data-center-gains?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T15:02:26.000Z"
+    },
+    {
+      "id": "53c671af2efe2f5d1530",
+      "source": "Cointelegraph",
+      "title": "Gold hits 6-week highs on China demand as Bitcoin ignores fresh S&P 500 record",
+      "summary": "Gold and US stocks stole the limelight on Wednesday as Bitcoin failed to gain significantly beyond $64,000.",
+      "url": "https://cointelegraph.com/markets/gold-hits-six-week-highs-on-china-demand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-05T15:02:16.000Z"
+    },
+    {
+      "id": "ae6d35df72b875d22b9b",
+      "source": "CoinDesk",
+      "title": "Strategy’s STRC rebounds 30% as company builds cash reserve, bitcoin price stabilizes",
+      "summary": "Bitcoin sales, what is now a $4 billion cash reserve, and a $975 million repurchase program, have supported STRC’s recovery.",
+      "url": "https://www.coindesk.com/markets/2026/08/05/strategy-s-strc-rebounds-30-as-company-builds-cash-reserve-bitcoin-price-stabilizes",
+      "publishedAt": "2026-08-05T14:44:30.000Z"
+    },
     {
       "id": "db7a28df13fd138a1ada",
       "source": "The Block",
@@ -112,14 +344,6 @@
       "summary": "Galaxy Digital reported an $85 million net loss driven by falling digital asset prices and $8.7 billion in revenue that missed Wall Street estimates.",
       "url": "https://cointelegraph.com/news/galaxy-85m-loss-q2-crypto-market-slump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-05T13:20:58.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T13:20:01.000Z"
     },
     {
       "id": "757634e41d932f54d930",
@@ -354,14 +578,6 @@
       "publishedAt": "2026-08-05T09:50:28.000Z"
     },
     {
-      "id": "94c7135e3e2a16415ffd",
-      "source": "CryptoSlate",
-      "title": "Coldcard’s $130 million crisis is pushing Bitcoin back into Wall Street’s hands",
-      "summary": "The Coldcard hardware wallet exploit has resulted in the theft of at least 1,596 BTC from about 7,300 addresses as users continue moving funds from potentially vulnerable wallets. Galaxy Research said the confirmed losses came from three major attack waves…",
-      "url": "https://cryptoslate.com/coldcards-130-million-crisis-is-pushing-bitcoin-back-into-wall-streets-hands/",
-      "publishedAt": "2026-08-05T09:45:07.000Z"
-    },
-    {
       "id": "aa692008a63349713e99",
       "source": "Cointelegraph",
       "title": "Bitcoin price-metric basket sees longest capitulation since FTX blow-up: Glassnode",
@@ -426,14 +642,6 @@
       "publishedAt": "2026-08-05T08:37:20.000Z"
     },
     {
-      "id": "38081972a96daf4a6e94",
-      "source": "CryptoSlate",
-      "title": "After suffering a brutal $265 million mass exit, seven different Bitcoin ETFs simultaneously roar back to life",
-      "summary": "Seven funds took in cash with none negative, yet IBIT still supplied 65.5% of the Aug. 3 total. The post After suffering a brutal $265 million mass exit, seven different Bitcoin ETFs simultaneously roar back to life appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/after-suffering-a-brutal-265-million-mass-exit-seven-different-bitcoin-etfs-simultaneously-roar-back-to-life/",
-      "publishedAt": "2026-08-05T08:36:33.000Z"
-    },
-    {
       "id": "46a67109439a3701eb08",
       "source": "Cointelegraph",
       "title": "MiCA list expands with 12 companies in fourth post-deadline update",
@@ -488,214 +696,6 @@
       "summary": "Fairshake backed Michigan's Bill Huizenga and Washington's Suzan DelBene, Kim Schrier, Marilyn Strickland and Amanda McKinney.",
       "url": "https://www.theblock.co/post/410744/fairshake-michigan-washington-primaries?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-08-05T06:29:14.000Z"
-    },
-    {
-      "id": "0e7c31b6c510d6907001",
-      "source": "Cointelegraph",
-      "title": "AI credit bubble could fuel Bitcoin ‘crack-up boom’ past $1M: Hayes",
-      "summary": "Hayes likened the debt-fueled AI infrastructure boom to the 2008 credit bubble, but evidence suggests financial strain is uneven across Big Tech.",
-      "url": "https://cointelegraph.com/markets/arthur-hayes-ai-credit-crisis-bitcoin-1-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T06:27:49.000Z"
-    },
-    {
-      "id": "9c274e249607ce13f4b7",
-      "source": "CoinDesk",
-      "title": "New Ethereum proposal would cut issuance to zero if staked ETH reaches $112 billion",
-      "summary": "The EIP-8361 draft proposal calls for burning a rising share of validator rewards as the staking ratio climbs.",
-      "url": "https://www.coindesk.com/tech/2026/08/05/new-ethereum-proposal-would-cut-issuance-to-zero-if-staked-eth-reaches-usd112-billion",
-      "publishedAt": "2026-08-05T05:49:57.000Z"
-    },
-    {
-      "id": "bd00ec56485fe4a51090",
-      "source": "Cointelegraph",
-      "title": "CLARITY or not, crypto isn’t going back in the bottle: Bitwise",
-      "summary": "Matt Hougan argues that regulatory guidance from the SEC and CFTC would keep the industry moving even if Congress fails to pass landmark market structure legislation this year.",
-      "url": "https://cointelegraph.com/news/clarity-or-not-crypto-isnt-going-back-in-the-bottle-bitwise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T05:47:42.000Z"
-    },
-    {
-      "id": "52ca17606b95165a52f4",
-      "source": "CoinDesk",
-      "title": "\"You stole, please return some.\" Coldcard hacker's wallet becomes a graffiti wall of pleas and hustles",
-      "summary": "A wallet holding $36 million in stolen bitcoin has become an unlikely public message board, as hack victims and opportunists pay to leave permanent notes for the thief.",
-      "url": "https://www.coindesk.com/markets/2026/08/05/you-stole-please-return-some-coldcard-hacker-s-wallet-becomes-a-graffiti-wall-of-pleas-and-hustles",
-      "publishedAt": "2026-08-05T05:12:46.000Z"
-    },
-    {
-      "id": "f7fa42cb45ead9c6042e",
-      "source": "CoinDesk",
-      "title": "Bitcoin flat at $64,000 as stocks print records and Hormuz deal nears",
-      "summary": "BTC held near $64,000 as MSCI's world index set another peak and Brent fell toward a Hormuz deal. Ether is the only major down on the week.",
-      "url": "https://www.coindesk.com/markets/2026/08/05/bitcoin-flat-at-usd64-000-as-stocks-print-records-and-hormuz-deal-nears",
-      "publishedAt": "2026-08-05T04:32:16.000Z"
-    },
-    {
-      "id": "28ab968ba36c8b57dc21",
-      "source": "Cointelegraph",
-      "title": "Bybit’s EU payments arm secures Austrian e-money license",
-      "summary": "Bybit’s Austrian payments subsidiary gained regulatory approval to develop card, merchant, open-banking and person-to-person payment services.",
-      "url": "https://cointelegraph.com/news/bybit-austria-electronic-money-license-europe-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T04:03:16.000Z"
-    },
-    {
-      "id": "f60e728b1d125320932c",
-      "source": "The Block",
-      "title": "Three Missouri men charged over alleged plot to steal bitcoin through home invasion",
-      "summary": "The three individuals have pleaded not guilty to the charge of conspiracy to interfere with commerce by robbery.",
-      "url": "https://www.theblock.co/post/410688/three-missouri-men-charged-bitcoin-home-invasion?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-05T02:47:25.000Z"
-    },
-    {
-      "id": "f1ee19ea615a080845a7",
-      "source": "The Block",
-      "title": "Crypto ‘will be fine’ even if Clarity fails to pass this week, Bitwise CIO Matt Hougan says",
-      "summary": "The US Congress is entering a month-long recess next week, giving Clarity a three-day window to advance through the Senate.",
-      "url": "https://www.theblock.co/post/410676/crypto-will-be-fine-if-clarity-fails-matt-hougan?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-05T02:31:03.000Z"
-    },
-    {
-      "id": "88dc5c4adfba63878fdf",
-      "source": "Cointelegraph",
-      "title": "Ethereum researchers want to rein in staking; critics say it could backfire",
-      "summary": "EIP-8363 is a newly published draft proposal that would cut net consensus-layer rewards as the Ethereum staking ratio heads toward 50%.",
-      "url": "https://cointelegraph.com/news/ethereum-researchers-want-to-rein-in-staking-critics-say-it-could-backfire?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T02:30:07.000Z"
-    },
-    {
-      "id": "41ad6f82d85c1f1a6f24",
-      "source": "CryptoSlate",
-      "title": "The crypto project trying to replace the US banking system just pulled its 10 trillion token filing",
-      "summary": "Its Aug. 3 move stopped this Form 10 before effectiveness, leaving the maximum authorized 10 trillion Locke tokens unissued. The post The crypto project trying to replace the US banking system just pulled its 10 trillion token filing appeared first on…",
-      "url": "https://cryptoslate.com/the-crypto-project-trying-to-replace-the-us-banking-system-just-pulled-its-10-trillion-token-filing/",
-      "publishedAt": "2026-08-05T01:45:17.000Z"
-    },
-    {
-      "id": "e48859b45a37d0db0553",
-      "source": "Ethereum Foundation",
-      "title": "Announcing a Trillion Dollar Security grant for WEBCAT",
-      "summary": "The Ethereum Foundation’s Trillion Dollar Security (1TS) initiative is proud to announce a grant allocation to Freedom of the Press Foundation (FPF) to support the continued development of WEBCAT. WEBCAT is an open source tool that lets browsers verify that…",
-      "url": "https://blog.ethereum.org/en/2026/08/05/1ts-grant",
-      "publishedAt": "2026-08-05T00:00:00.000Z"
-    },
-    {
-      "id": "0d4f7bc8b388a87029fa",
-      "source": "CryptoSlate",
-      "title": "GameStop plans $1.4 billion stock swap as Bitcoin collateral risk emerges",
-      "summary": "The exchange would cut note principal by about one-third while replacement Bitcoin option terms also remain undisclosed. The post GameStop plans $1.4 billion stock swap as Bitcoin collateral risk emerges appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/gamestop-plans-1-4-billion-stock-swap-as-bitcoin-collateral-risk-emerges/",
-      "publishedAt": "2026-08-04T23:30:19.000Z"
-    },
-    {
-      "id": "f6785b9df364ddbd2e78",
-      "source": "Decrypt",
-      "title": "This Bitcoin Bridge Shut Itself Down Because AI Was Finding Bugs Too Fast",
-      "summary": "Non-custodial Bitcoin swap provider Boltz says attackers are finding vulnerabilities faster than its team can fix them, forcing it to suspend swaps indefinitely.",
-      "url": "https://decrypt.co/374933/bitcoin-bridge-shuts-down-ai-finding-bugs-too-fast",
-      "publishedAt": "2026-08-04T22:46:03.000Z"
-    },
-    {
-      "id": "61be5f8fc7035ad04c00",
-      "source": "Decrypt",
-      "title": "AI Enthusiast Bugs His Toddler's Sleepover and Feeds It to Claude—The Internet Bugs Back",
-      "summary": "Nicholas Charriere turned an hour of nonsense into a family website with named tracks. One reply calling him creepy got more likes than his post.",
-      "url": "https://decrypt.co/374930/ai-enthusiast-bugged-toddler-sleepover-claude",
-      "publishedAt": "2026-08-04T22:16:03.000Z"
-    },
-    {
-      "id": "fe3346d2d77f33f899ef",
-      "source": "CryptoSlate",
-      "title": "Hashdex is shutting down its Bitcoin ETF, leaving investors with just days to sell before a blind, unpredictable cash out",
-      "summary": "The $14.7 million Bitcoin ETF will liquidate from Aug. 18, while Hashdex's filings split on the payout date. The post Hashdex is shutting down its Bitcoin ETF, leaving investors with just days to sell before a blind, unpredictable cash out appeared first on…",
-      "url": "https://cryptoslate.com/hashdex-is-shutting-down-its-bitcoin-etf-leaving-investors-with-just-days-to-sell-before-a-blind-unpredictable-cash-out/",
-      "publishedAt": "2026-08-04T22:15:54.000Z"
-    },
-    {
-      "id": "7d83576a6f1dc17d9be1",
-      "source": "The Block",
-      "title": "Tribal gaming regulators, senators make a renewed push to add prediction markets provision to Clarity Act",
-      "summary": "Senators and tribal gaming regulators are pushing to keep sports betting under state jurisdiction, resisting efforts by a federal regulator.",
-      "url": "https://www.theblock.co/post/410668/tribal-gaming-regulators-senators-make-renewed-push-add-prediction-markets-provision-clarity-act?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-04T22:15:26.000Z"
-    },
-    {
-      "id": "10e12a2ff8502cdaf0e5",
-      "source": "Decrypt",
-      "title": "OpenAI Dumps Apple Employees' Text Messages to Fight Trade Secret Suit",
-      "summary": "The ChatGPT maker released emails and text messages it says expose factual errors in Apple's lawsuit and undercut claims that former Apple employees brought confidential information to the company.",
-      "url": "https://decrypt.co/374928/openai-emails-text-messages-apple-trade-secrets-lawsuit",
-      "publishedAt": "2026-08-04T21:46:03.000Z"
-    },
-    {
-      "id": "28de154b48b388a02fb7",
-      "source": "The Block",
-      "title": "BlackRock’s spot Ethereum ETF to undergo 1-for-3 reverse share split in October",
-      "summary": "The split will consolidate every three ETHA shares into one, increasing the fund’s per-share net asset value.",
-      "url": "https://www.theblock.co/post/410663/blackrocks-spot-ethereum-etf-to-undergo-1-for-3-reverse-share-split-in-october?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-04T21:34:47.000Z"
-    },
-    {
-      "id": "f8e688804940fedb0b15",
-      "source": "Bitcoin Magazine",
-      "title": "Self Custody Is Dead. Long Live Self Custody",
-      "summary": "Bitcoin Magazine Self Custody Is Dead. Long Live Self Custody The Coldcard security failure has shaken Bitcoin's confidence in hardware wallets—but abandoning self-custody would mean abandoning the very reason Bitcoin exists. History suggests the lesson…",
-      "url": "https://bitcoinmagazine.com/culture/self-custody-is-dead-long-live-self-custody",
-      "publishedAt": "2026-08-04T21:25:26.000Z"
-    },
-    {
-      "id": "02890e2a760044b2e810",
-      "source": "Decrypt",
-      "title": "Ledger Says Coldcard Exploit Shows Bitcoin Wallet Security Must Adapt to AI",
-      "summary": "Ledger CTO Charles Guillemet says the Coldcard exploit underscores why certified hardware randomness matters—and why AI is reshaping wallet security.",
-      "url": "https://decrypt.co/374914/ledger-coldcard-exploit-bitcoin-wallet-security-ai",
-      "publishedAt": "2026-08-04T21:16:03.000Z"
-    },
-    {
-      "id": "54e69e3050741fdde990",
-      "source": "Bitcoin Magazine",
-      "title": "SEC Commissioner Hester ‘Crypto Mom’ Peirce Optimistic About Clarity Act",
-      "summary": "Bitcoin Magazine SEC Commissioner Hester ‘Crypto Mom’ Peirce Optimistic About Clarity Act The regulator is hopeful the long-awaited crypto market structure bill will pass. This post SEC Commissioner Hester ‘Crypto Mom’ Peirce Optimistic About Clarity Act…",
-      "url": "https://bitcoinmagazine.com/news/hester-peirce-hopeful-about-clarity-act",
-      "publishedAt": "2026-08-04T20:53:22.000Z"
-    },
-    {
-      "id": "36240c4d149b198bbeb2",
-      "source": "Bitcoin Magazine",
-      "title": "Asset Manager 3iQ to Manage Bhutan’s Bitcoin Reserves",
-      "summary": "Bitcoin Magazine Asset Manager 3iQ to Manage Bhutan’s Bitcoin Reserves Canadian digital asset manager 3iQ Corp. will work to manage some of the Bitcoin reserves of Bhutan’s Gelephu Mindfulness City project. 3iQ, Canada’s biggest and oldest digital asset fund…",
-      "url": "https://bitcoinmagazine.com/news/3iq-to-manage-bhutan-bitcoin-reserves",
-      "publishedAt": "2026-08-04T20:47:38.000Z"
-    },
-    {
-      "id": "c660816d106a026021c6",
-      "source": "Decrypt",
-      "title": "Jim Cramer Is Selling His Bitcoin Over Quantum Threat—Crypto Twitter Is Thrilled",
-      "summary": "The CNBC host announced the decision on air after interviewing IBM CEO Arvind Krishna, asking him whether quantum computers could eventually crack the cryptography protecting his coins.",
-      "url": "https://decrypt.co/374923/jim-cramer-selling-bitcoin-quantum-computing-threat",
-      "publishedAt": "2026-08-04T20:45:18.000Z"
-    },
-    {
-      "id": "be5027f996d584d1ab0c",
-      "source": "Bitcoin Magazine",
-      "title": "Corporation’s Approach to the BIP-110 Soft Fork",
-      "summary": "Bitcoin Magazine Corporation’s Approach to the BIP-110 Soft Fork This article goes into how Bitcoin-utilizing corporations could approach BIP-110. This post Corporation’s Approach to the BIP-110 Soft Fork first appeared on Bitcoin Magazine and is written by…",
-      "url": "https://bitcoinmagazine.com/bitcoin-for-corporations/corp-bip-110-soft-fork",
-      "publishedAt": "2026-08-04T20:41:18.000Z"
-    },
-    {
-      "id": "6163f80a6ec91c74eb64",
-      "source": "Decrypt",
-      "title": "Police Have Arrested 37 Americans Over AI Data Center Protests This Year",
-      "summary": "Dozens of arrests tied to opposition against AI data centers underscore how local disputes over massive computing projects are growing into a national political movement.",
-      "url": "https://decrypt.co/374921/ai-data-center-protest-arrests",
-      "publishedAt": "2026-08-04T20:30:52.000Z"
-    },
-    {
-      "id": "d41f46736a9146fada1d",
-      "source": "CoinDesk",
-      "title": "SpaceX tops Wall Street revenue forecast, posts $540 million loss on bitcoin holdings",
-      "summary": "Elon Musk's space company posted its first earnings as a public company ahead of a major insider share unlock.",
-      "url": "https://www.coindesk.com/business/2026/08/04/spacex-tops-wall-street-revenue-forecast-posts-usd540-million-decline-on-bitcoin-holding-value",
-      "publishedAt": "2026-08-04T20:26:21.000Z"
     }
   ]
 }
