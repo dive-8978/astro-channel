@@ -66,7 +66,36 @@ nav{
 .nav-right{
   display:flex;
   align-items:center;
-  gap:20px;
+  gap:12px;
+}
+.newsroom-button{
+  min-height:42px;
+  padding:0 16px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#fff;
+  font-size:.86rem;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-decoration:none;
+  background:linear-gradient(90deg,rgba(247,37,133,.92),rgba(76,201,240,.92));
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow:0 0 28px rgba(76,201,240,.28);
+  transition:.3s;
+}
+.newsroom-button::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 10px #fff;
+}
+.newsroom-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 38px rgba(247,37,133,.4);
 }
 .hamburger{
   display:flex;
@@ -108,6 +137,15 @@ nav{
 .nav-menu a:hover{
   color:#4cc9f0;
   padding-left:8px;
+}
+.nav-menu .newsroom-menu-link{
+  color:#fff;
+  font-weight:800;
+  padding:12px 14px;
+  margin:-8px -12px 4px;
+  border-radius:12px;
+  background:linear-gradient(90deg,rgba(247,37,133,.2),rgba(76,201,240,.16));
+  border:1px solid rgba(76,201,240,.34);
 }
 .nav-menu.hidden{
   display:none;
@@ -439,6 +477,9 @@ div[style*="max-width: 420px"]{max-width:none!important;width:100%!important}
 .hero h1{font-size:2.35rem}
 #bridge-top{height:190px!important}
 #progressText{display:none}
+.nav-right{gap:8px}
+.newsroom-button{min-height:38px;padding:0 10px;font-size:.74rem}
+.x-button{width:38px;height:38px}
 .nav-menu{right:0;width:min(92vw,300px)}
 .chain-block{min-width:132px;height:64px;font-size:12.5px}
 .brand-rail{gap:12px}
@@ -457,12 +498,14 @@ div[style*="max-width: 420px"]{max-width:none!important;width:100%!important}
 <nav>
 <div class="logo"><img src="/favicon.ico" style="height:1.6em; margin-right:10px; vertical-align:middle;">AstroBridge</div>
 <div class="nav-right">
+<a href="newsroom.html" class="newsroom-button" aria-label="Open Astro Newsroom">News</a>
 <div class="hamburger" id="hamburger">
 <span></span><span></span><span></span>
 </div>
 <a href="https://x.com/Astro___Channel" target="_blank" class="x-button">𝕏</a>
 </div>
 <div class="nav-menu hidden" id="navMenu">
+<a href="newsroom.html" class="newsroom-menu-link">Newsroom · Live</a>
 <a href="vision.html">Vision</a>
 <a href="technology.html">Technology</a>
 <a href="astro-dev-3d.html">Developer</a>
