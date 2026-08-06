@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:58:38.526Z",
+  "generatedAt": "2026-08-06T03:44:26.309Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 58,
+      "itemCount": 38,
       "error": null
     },
     {
@@ -57,6 +57,150 @@
     }
   ],
   "items": [
+    {
+      "id": "1f5df8cfa279a25f10bf",
+      "source": "The Block",
+      "title": "Cathie Wood’s Ark Invest scoops up $17 million in Circle, $20 million in SpaceX shares following Q2 results",
+      "summary": "SpaceX plunged as investors grew concerned about the firm's $18.4 billion in capital expenditure during Q2, despite revenue growth.",
+      "url": "https://www.theblock.co/post/410948/cathie-wood-ark-invest-circle-spacex-q2?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-06T02:22:22.000Z"
+    },
+    {
+      "id": "538741c2b482995482e3",
+      "source": "The Block",
+      "title": "Putin signs landmark crypto law allowing regulated retail trading in Russia",
+      "summary": "The law continues to ban the use of crypto to pay for goods and services within Russia, while allowing use for cross-border settlements.",
+      "url": "https://www.theblock.co/post/410951/putin-signs-russia-crypto-law?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-06T02:11:16.000Z"
+    },
+    {
+      "id": "2da35dabd46c1ae60e19",
+      "source": "Cointelegraph",
+      "title": "Block raises 2026 outlook on strong quarter, says AI touches nearly all code",
+      "summary": "Cash App and Square drove better-than-expected results, while the company said it expanded its use of AI across software engineering.",
+      "url": "https://cointelegraph.com/markets/block-raises-2026-outlook-strong-quarter-says-ai-touches-nearly-all-code?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-06T01:33:57.000Z"
+    },
+    {
+      "id": "b24ddfee9593a24473cc",
+      "source": "Cointelegraph",
+      "title": "Mysten Labs tech chief joins Anthropic to work on AI security",
+      "summary": "Mysten Labs’ co-founder Sam Blackshear said he is joining Anthropic as AI shifts the balance between attackers and defenders.",
+      "url": "https://cointelegraph.com/news/mysten-labs-tech-chief-joins-anthropic-to-work-on-ai-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-06T01:31:35.000Z"
+    },
+    {
+      "id": "0f0d0bf1c96fdf7d1f3d",
+      "source": "Cointelegraph",
+      "title": "Bitcoin Red Team reports 5K findings in sweeping security audit",
+      "summary": "“There’s a lot of chaos right now in the ecosystem. We absolutely understand that many people are being bombarded with security issues right now,” said Bitcoin developer Calle.",
+      "url": "https://cointelegraph.com/news/bitcoin-red-team-reports-5k-findings-in-sweeping-security-audit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-06T01:09:06.000Z"
+    },
+    {
+      "id": "e4cebd0ef280ca09a2f5",
+      "source": "CryptoSlate",
+      "title": "TeraWulf’s Bitcoin mining revenue fell 73% as AI related leases reached 71% of sales",
+      "summary": "The revenue crossover is real, but Anthropic rent starts only as new capacity is delivered from late 2027. The post TeraWulf’s Bitcoin mining revenue fell 73% as AI related leases reached 71% of sales appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/terawulfs-bitcoin-mining-revenue-fell-73-as-hpc-leases-reached-71-of-sales/",
+      "publishedAt": "2026-08-05T23:40:34.000Z"
+    },
+    {
+      "id": "ec7f51f292db78bdda69",
+      "source": "CryptoSlate",
+      "title": "Investors poured millions back into Grayscale’s XRP fund, but a $16.8M market hit instantly wiped out the comeback",
+      "summary": "The Grayscale XRP fund added 480,000 net shares in Q2 after a derived 3.94 million-share Q1 contraction, but net assets still fell. The post Investors poured millions back into Grayscale’s XRP fund, but a $16.8M market hit instantly wiped out the comeback…",
+      "url": "https://cryptoslate.com/investors-poured-millions-back-into-grayscales-bleeding-xrp-fund-but-a-16-8-million-market-hit-instantly-wiped-out-the-comeback/",
+      "publishedAt": "2026-08-05T22:35:45.000Z"
+    },
+    {
+      "id": "ada6b38baaa1096a64b6",
+      "source": "The Block",
+      "title": "‘At a standstill:’ Senate races to salvage Clarity Act before August recess as ethics fight, law enforcement concerns loom",
+      "summary": "With a procedural vote on crypto legislation up in the air, lawmakers are racing to resolve outstanding issues within the next few days.",
+      "url": "https://www.theblock.co/post/410940/standstill-senate-races-salvage-clarity-act-before-august-recess-ethics-fight-law-enforcement-concerns-loom?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T21:41:36.000Z"
+    },
+    {
+      "id": "ea18b4c5c41907f83c7b",
+      "source": "CryptoSlate",
+      "title": "BitMart gives US users just days to pull crypto before aggressive new compliance checks risk freezing their assets",
+      "summary": "Covered users must close positions and withdraw by 23:59 UTC, while the wider platform keeps two Aug. 26 clocks. The post BitMart gives US users just days to pull crypto before aggressive new compliance checks risk freezing their assets appeared first on…",
+      "url": "https://cryptoslate.com/bitmart-gives-us-users-just-days-to-pull-crypto-before-aggressive-new-compliance-checks-risk-freezing-their-assets/",
+      "publishedAt": "2026-08-05T21:40:56.000Z"
+    },
+    {
+      "id": "2f586614e9a06fc7d4f5",
+      "source": "CoinDesk",
+      "title": "Crypto firm RedotPay says it will defend itself ‘vigorously’ against Binance lawsuit",
+      "summary": "Binance alleged RedotPay poached customers from the crypto exchange in a lawsuit filed in Hong Kong.",
+      "url": "https://www.coindesk.com/business/2026/08/05/binance-sues-redotpay-for-usd470-million-claiming-it-diverted-users",
+      "publishedAt": "2026-08-05T21:40:33.000Z"
+    },
+    {
+      "id": "0adc03daa11ccefe6b4a",
+      "source": "Decrypt",
+      "title": "Meta Debuts AI Coding Agent Muse: Here’s How It Compares to Claude Code and Codex",
+      "summary": "Meta's new agent runs in your terminal, coordinates subagents, and survives crashes—but on the benchmarks that matter, it lags behind.",
+      "url": "https://decrypt.co/375001/muse-code-meta-ai-coding-agent-claude-codex",
+      "publishedAt": "2026-08-05T21:24:06.000Z"
+    },
+    {
+      "id": "2e70c661838f7428ea11",
+      "source": "Bitcoin Magazine",
+      "title": "White House Now Reviewing Crypto Clarity Act Ethics Text Ahead of August Deadline: Report",
+      "summary": "Bitcoin Magazine White House Now Reviewing Crypto Clarity Act Ethics Text Ahead of August Deadline: Report Senators have just days to vote on the long-awaited crypto Clarity Act. This post White House Now Reviewing Crypto Clarity Act Ethics Text Ahead of…",
+      "url": "https://bitcoinmagazine.com/news/white-house-reviewing-crypto-clarity-act",
+      "publishedAt": "2026-08-05T21:16:24.000Z"
+    },
+    {
+      "id": "41e84b4424a65f0b70ef",
+      "source": "Cointelegraph",
+      "title": "Senator Warren questions US AI chip policy after Trump crypto investment: Report",
+      "summary": "The lawmaker reportedly sent a letter to the Commerce Secretary demanding answers about the administration’s treatment of the UAE following investments in the Trump family’s crypto company.",
+      "url": "https://cointelegraph.com/news/senator-warren-us-policy-uae-ai-chips-trump-crypto-investment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-05T21:15:37.000Z"
+    },
+    {
+      "id": "c0eea5a7ce19f373eef4",
+      "source": "The Block",
+      "title": "Block’s bitcoin gross profit falls 31% after Cash App fee cuts as shares reverse initial gains",
+      "summary": "Block raised its 2026 gross profit forecast to $12.51 billion after posting record adjusted operating income.",
+      "url": "https://www.theblock.co/post/410923/blocks-bitcoin-gross-profit-falls-31-cash-app-fee-cuts-shares-reverse-initial-gains?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-05T20:47:25.000Z"
+    },
+    {
+      "id": "f524630348e6e92317b7",
+      "source": "Decrypt",
+      "title": "Cloudflare OS: Here’s What’s Inside the Open-Source AI Agent Platform",
+      "summary": "The release targets developers building autonomous apps and workflows on Cloudflare's edge—a clear bet on agent infrastructure.",
+      "url": "https://decrypt.co/374997/cloudflare-os-inside-open-source-ai-agent-platform",
+      "publishedAt": "2026-08-05T20:46:03.000Z"
+    },
+    {
+      "id": "3122407c840c55b155d1",
+      "source": "CryptoSlate",
+      "title": "All six US Solana ETFs have suffered five consecutive days of absolute zero net flows",
+      "summary": "The product-wide pause followed an $18.1 million BSOL outflow while seed and conversion capital complicate the cumulative total. The post All six US Solana ETFs have suffered five consecutive days of absolute zero net flows appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/all-six-us-solana-etfs-have-suffered-five-consecutive-days-of-absolute-zero-net-flows/",
+      "publishedAt": "2026-08-05T20:35:44.000Z"
+    },
+    {
+      "id": "4024d2a9027239ec929c",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin Red Team Finds 85 Critical Flaws Across 390 Open Source Repos After Coldcard Exploit",
+      "summary": "Bitcoin Magazine Bitcoin Red Team Finds 85 Critical Flaws Across 390 Open Source Repos After Coldcard Exploit Triggered by the Coldcard RNG vulnerability that drained over $100 million, the Bitcoin Red Team led by Calle and Rob Hamilton has already filed…",
+      "url": "https://bitcoinmagazine.com/business/bitcoin-red-team-finds-85-critical-flaws-across-390-open-source-repos-after-coldcard-exploit",
+      "publishedAt": "2026-08-05T20:33:06.000Z"
+    },
+    {
+      "id": "efcaa0c7b0a7536cbe8e",
+      "source": "Decrypt",
+      "title": "Perplexity Wins Appeal Against Amazon in AI Agent Shopping Lawsuit",
+      "summary": "A U.S. appeals court ruled Amazon is unlikely to prove Perplexity violated federal hacking law, marking the first appellate decision on whether AI agents can legally act on users' behalf online.",
+      "url": "https://decrypt.co/374996/perplexity-amazon-ai-agent-lawsuit",
+      "publishedAt": "2026-08-05T20:16:03.000Z"
+    },
     {
       "id": "7e17573b64dffb67db5b",
       "source": "Decrypt",
@@ -394,14 +538,6 @@
       "publishedAt": "2026-08-05T12:47:57.000Z"
     },
     {
-      "id": "e7c99e178dd28910516b",
-      "source": "CryptoSlate",
-      "title": "Bitcoin miners’ AI pipelines are on trial as Texas freezes 474 GW of data center requests",
-      "summary": "Texas Gov. Greg Abbott ordered the Public Utility Commission and ERCOT to audit every data center project seeking a grid connection before regulators approve any new projects. The order puts AI infrastructure tied to Bitcoin miners under scrutiny, while the…",
-      "url": "https://cryptoslate.com/bitcoin-miners-ai-pipelines-are-on-trial-as-texas-freezes-474-gw-of-data-center-requests/",
-      "publishedAt": "2026-08-05T12:45:46.000Z"
-    },
-    {
       "id": "797233daeeb74b9f2e0f",
       "source": "CoinDesk",
       "title": "Galaxy Digital shares slip 5% after second-quarter results",
@@ -416,14 +552,6 @@
       "summary": "Eliza Labs founder Shaw Walters said the ELIZAOS foundation is closing and that holders should sell, ending the token that replaced AI16Z after a lawsuit, a rebrand and a 97% crash.",
       "url": "https://www.coindesk.com/markets/2026/08/05/ai-agent-token-once-worth-usd2-4-billion-ends-with-founder-calling-it-dead",
       "publishedAt": "2026-08-05T12:28:39.000Z"
-    },
-    {
-      "id": "715338debadfe2bfd4a2",
-      "source": "CryptoSlate",
-      "title": "Senate has hours to advance CLARITY, but Bitwise says missing deadline sets up a crypto rally",
-      "summary": "The US Senate is running out of time to advance the CLARITY Act, but Bitwise says a decisive failure could eventually remove an obstacle weighing on crypto markets. Senate leaders face a narrowing window on Wednesday to file for cloture if they want to…",
-      "url": "https://cryptoslate.com/senate-has-hours-to-advance-clarity-but-bitwise-says-missing-deadline-could-set-up-crypto-rally/",
-      "publishedAt": "2026-08-05T12:25:39.000Z"
     },
     {
       "id": "511fa859e83b694e758f",
@@ -474,14 +602,6 @@
       "publishedAt": "2026-08-05T12:00:00.000Z"
     },
     {
-      "id": "e48f4fb956ad5b1151cd",
-      "source": "CryptoSlate",
-      "title": "On-chain options close in on crypto’s $21B-a-day perp market to deepen liquidity everywhere",
-      "summary": "A Bitcoin holder who wants less downside exposure today usually sells the asset or shorts a perpetual futures contract, taking on funding costs and liquidation risk. On-chain options offer a third path consisting of paying a fixed premium, keeping the…",
-      "url": "https://cryptoslate.com/on-chain-options-close-in-on-cryptos-21b-a-day-perp-market-to-deepen-liquidity-everywhere/",
-      "publishedAt": "2026-08-05T11:50:36.000Z"
-    },
-    {
       "id": "c569447b06c3c1263ab9",
       "source": "Cointelegraph",
       "title": "Circle Q2 revenue falls short of Wall Street estimates",
@@ -530,14 +650,6 @@
       "publishedAt": "2026-08-05T11:01:15.000Z"
     },
     {
-      "id": "4351bc2beede379329b3",
-      "source": "CryptoSlate",
-      "title": "If Ethereum’s proposed 54% reward cut passes, DeFi’s favorite loop threatens to become a daily loss machine",
-      "summary": "A newly proposed Ethereum staking reward cut, outlined in Ethereum Improvement Proposal 8361 (EIP-8361), would lower validators' yield from 2.6% to about 1.2%, a 54% reduction phased in over 18 months. The mechanism is a burn: validators lose a larger share…",
-      "url": "https://cryptoslate.com/if-ethereums-proposed-54-reward-cut-passes-defis-favorite-loop-threatens-to-become-a-daily-loss-machine/",
-      "publishedAt": "2026-08-05T10:55:06.000Z"
-    },
-    {
       "id": "95ec7394ea5abd75d3b6",
       "source": "Cointelegraph",
       "title": "Bitcoin ETFs log inflows as cold wallet hack reignites custody debate",
@@ -584,118 +696,6 @@
       "summary": "Glassnode confirmed that its aggregate BTC price cycle tool was in its coldest phase since the collapse of FTX in late 2022.",
       "url": "https://cointelegraph.com/markets/bitcoin-price-metric-basket-sees-longest-capitulation-since-ftx-blow-up-glassnode?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-05T09:40:00.000Z"
-    },
-    {
-      "id": "a313f68d59b311890c81",
-      "source": "Cointelegraph",
-      "title": "BlackRock brings tokenized money market funds to Europe via JPMorgan",
-      "summary": "JPMorgan’s Kinexys platform will tokenize select BlackRock money market fund shares denominated in pounds, euros and US dollars.",
-      "url": "https://cointelegraph.com/news/blackrock-jpmorgan-tokenized-money-market-funds-europe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T09:24:03.000Z"
-    },
-    {
-      "id": "3b8ea5128129d6ebfc29",
-      "source": "Cointelegraph",
-      "title": "Proof of Play to shut down after blockchain gaming thesis falls short",
-      "summary": "The a16z-backed studio will open-source Pirate Nation assets, while an independent foundation continues supporting the PIRATE token.",
-      "url": "https://cointelegraph.com/news/proof-of-play-shut-blockchain-gaming-thesis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T09:10:04.000Z"
-    },
-    {
-      "id": "62d23763b25403aa9137",
-      "source": "CoinDesk",
-      "title": "Why bitcoin’s ‘500-day rule’ faces its biggest test yet",
-      "summary": "The so-called ‘500-day rule’ says buying BTC roughly 500 days before a bitcoin halving and selling it about 500 days after would have produced profits in prior cycles.",
-      "url": "https://www.coindesk.com/markets/2026/08/05/why-bitcoin-s-500-day-rule-faces-its-biggest-test-yet",
-      "publishedAt": "2026-08-05T09:06:15.000Z"
-    },
-    {
-      "id": "fb2c8180244a0c1fc282",
-      "source": "CoinDesk",
-      "title": "Live updates: An AI credit bubble could set up bitcoin’s path to $1 million, says Arthur Hayes",
-      "summary": "Maelstrom co-founder Arthur Hayes says overleveraged AI data-center spending will eventually crack, forcing government bailouts and money printing that become the next major bitcoin catalyst.",
-      "url": "https://www.coindesk.com/markets/2026/08/05/live-updates-an-ai-credit-bubble-could-set-up-bitcoin-s-path-to-usd1-million",
-      "publishedAt": "2026-08-05T09:00:20.000Z"
-    },
-    {
-      "id": "7d4006163d9e5070f602",
-      "source": "Cointelegraph",
-      "title": "Forgd brings its crypto market-maker leaderboard to DefiLlama",
-      "summary": "Forgd’s ratings draw on data from more than 500 token projects and 35 market-making firms, but do not solely reflect trading performance.",
-      "url": "https://cointelegraph.com/news/forgd-market-maker-leaderboard-defillama?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T09:00:00.000Z"
-    },
-    {
-      "id": "ab350adc43558fee06f1",
-      "source": "Cointelegraph",
-      "title": "Boerse Stuttgart Digital, Tradias close European crypto merger",
-      "summary": "The completed tie-up combines Boerse Stuttgart Digital’s custody business with Tradias’ trading operations under a joint management team.",
-      "url": "https://cointelegraph.com/news/boerse-stuttgart-digital-tradias-european-crypto-merger?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T08:47:24.000Z"
-    },
-    {
-      "id": "6621709deb82e27fce76",
-      "source": "The Block",
-      "title": "Former LAPD officer gets life sentence for kidnapping teen in $350,000 bitcoin robbery: report",
-      "summary": "Former LAPD officer Eric Halem was sentenced to life plus 15 years for kidnapping teen and stealing $350,000 in bitcoin.",
-      "url": "https://www.theblock.co/post/410805/former-lapd-officer-gets-life-sentence-bitcoin-robbery?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-05T08:37:20.000Z"
-    },
-    {
-      "id": "46a67109439a3701eb08",
-      "source": "Cointelegraph",
-      "title": "MiCA list expands with 12 companies in fourth post-deadline update",
-      "summary": "ESMA’s latest MiCA update brings the number of authorized CASPs to 321 and adds three entities to its non-compliant register.",
-      "url": "https://cointelegraph.com/news/mica-register-casps-fourth-post-deadline-update?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T08:25:34.000Z"
-    },
-    {
-      "id": "29d57af4da8bb9afc5a0",
-      "source": "Cointelegraph",
-      "title": "Taiwan plans Travel Rule for domestic crypto transfers from October",
-      "summary": "Taiwan’s regulator plans to apply the Travel Rule to domestic VASP transfers from October before extending it to overseas platforms by the end of 2027.",
-      "url": "https://cointelegraph.com/news/taiwan-crypto-travel-rule-domestic-vasp-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T08:21:54.000Z"
-    },
-    {
-      "id": "d8abf4a4266d86fb207a",
-      "source": "CoinDesk",
-      "title": "The worst chart for bitcoin bulls right now",
-      "summary": "For 14 years, one ratio moved only in bitcoin's favor. Now it has decisively turned the other way and bulls may not like what it means.",
-      "url": "https://www.coindesk.com/markets/2026/08/05/the-worst-chart-for-bitcoin-bulls-right-now",
-      "publishedAt": "2026-08-05T07:54:22.000Z"
-    },
-    {
-      "id": "3bd5d6d047a4c46573c4",
-      "source": "The Block",
-      "title": "Eliza Labs founder declares native token ‘dead,’ winds down foundation after Burwick Law settlement",
-      "summary": "Walters said the team used its remaining treasury and available funds to settle the class action lawsuit represented by Burwick Law.",
-      "url": "https://www.theblock.co/post/410774/eliza-labs-native-token-dead?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-05T07:39:06.000Z"
-    },
-    {
-      "id": "0c633ff8b01ffa2c9910",
-      "source": "Cointelegraph",
-      "title": "Missouri trio charged over alleged Bitcoin kidnapping plot",
-      "summary": "The defendants allegedly traveled from Missouri to Connecticut to kidnap a Bitcoin holder and force him to transfer cryptocurrency before abandoning the plan.",
-      "url": "https://cointelegraph.com/news/three-missouri-men-charged-bitcoin-kidnapping?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T07:34:12.000Z"
-    },
-    {
-      "id": "8ab522de9e7dd190f0a6",
-      "source": "Cointelegraph",
-      "title": "Cloudflare introduces wallets for AI agents, plans stablecoin payments",
-      "summary": "Cloudflare introduced programmable Wallets for AI agents and said payment features using stablecoins will launch in a future update.",
-      "url": "https://cointelegraph.com/news/cloudflare-wallets-ai-agents-stablecoin-payments-plan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-05T07:20:03.000Z"
-    },
-    {
-      "id": "59c1f5c0ea0c3d503f4a",
-      "source": "The Block",
-      "title": "Crypto PAC Fairshake scores primary wins in Michigan and Washington",
-      "summary": "Fairshake backed Michigan's Bill Huizenga and Washington's Suzan DelBene, Kim Schrier, Marilyn Strickland and Amanda McKinney.",
-      "url": "https://www.theblock.co/post/410744/fairshake-michigan-washington-primaries?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-05T06:29:14.000Z"
     }
   ]
 }
