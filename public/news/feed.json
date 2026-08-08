@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T02:24:26.067Z",
+  "generatedAt": "2026-08-08T07:18:14.606Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "d4e8d6c0828b5a382cfc",
+      "source": "Cointelegraph",
+      "title": "Domestic stablecoins could boost demand for dollar-backed tokens: IMF",
+      "summary": "IMF first deputy managing director Dan Katz says users may favor digital dollars for their liquidity, network effects and cross-border acceptance.",
+      "url": "https://cointelegraph.com/news/imf-domestic-stablecoins-dollar-token-demand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-08T06:21:08.000Z"
+    },
+    {
+      "id": "6b783c8fc47d13f8335f",
+      "source": "Cointelegraph",
+      "title": "US court backs Bybit’s bid to trace funds from $1.5B North Korea hack",
+      "summary": "Expedited discovery allows the exchange to seek account identities, balances and transaction histories from platforms with US operations.",
+      "url": "https://cointelegraph.com/news/bybit-us-court-trace-funds-north-korea-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-08T04:11:53.000Z"
+    },
+    {
+      "id": "3cb98966eb8959f16bd6",
+      "source": "CoinDesk",
+      "title": "New XRP Ledger amendments target $530 million in tokenized Wall Street assets",
+      "summary": "A new XRPL amendment proposal would let institutions encrypt token balances and transfer amounts while still giving issuers, auditors and regulators selective access.",
+      "url": "https://www.coindesk.com/tech/2026/08/07/new-xrp-ledger-amendments-target-usd530-million-in-tokenized-wall-street-assets",
+      "publishedAt": "2026-08-08T03:30:00.000Z"
+    },
+    {
+      "id": "334e3b0db122133ae8af",
+      "source": "CoinDesk",
+      "title": "Bitcoin holders risk losing real BTC if they sell coins from BIP-110 fork, says developer",
+      "summary": "If a minority chain appears this weekend, buyers could replay signed fork-coin sales on bitcoin itself, making doing nothing the safest move until the chains can be separated.",
+      "url": "https://www.coindesk.com/tech/2026/08/08/bitcoin-holders-risk-losing-real-btc-if-they-sell-coins-from-bip-110-fork-says-developer",
+      "publishedAt": "2026-08-08T02:30:00.000Z"
+    },
     {
       "id": "006e9870654d3ae2730c",
       "source": "CryptoSlate",
@@ -664,38 +696,6 @@
       "summary": "Japanese authorities called for address registration, customer-specific limits and stronger authentication as part of a broader push to curb misuse of exchange accounts.",
       "url": "https://cointelegraph.com/news/japan-fsa-crypto-exchanges-withdrawal-delays-scams?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-07T05:24:38.000Z"
-    },
-    {
-      "id": "8360a23883b780e045d4",
-      "source": "Cointelegraph",
-      "title": "Proposed CLARITY ethics deal could save Trump millions in taxes: Bloomberg",
-      "summary": "The latest bipartisan ethics proposal would reportedly require Trump to divest crypto businesses while allowing him to defer capital gains taxes on those sales.",
-      "url": "https://cointelegraph.com/news/proposed-clarity-ethics-deal-could-save-trump-millions-in-taxes-bloomberg?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-07T05:04:22.000Z"
-    },
-    {
-      "id": "b5dcced3293391fa08c7",
-      "source": "CoinDesk",
-      "title": "Bitcoin wallet dormant since 2011 moves $3.2 million toward FalconX-linked address",
-      "summary": "The 50 BTC remained in the receiving address Friday, but that wallet has previously sent funds to FalconX-labeled deposits, leaving open whether the old stash is being reorganized or moved closer to a trading venue.",
-      "url": "https://www.coindesk.com/markets/2026/08/07/bitcoin-wallet-dormant-since-2011-moves-usd3-2-million-toward-falconx-linked-address",
-      "publishedAt": "2026-08-07T04:50:44.000Z"
-    },
-    {
-      "id": "a4b6f688b2ad4ef01607",
-      "source": "CoinDesk",
-      "title": "A bitcoin pattern taking shape right now could send prices soaring to $76,000",
-      "summary": "Bitcoin's chart is quietly tracing out a bullish setup technical analysts watch closely. But it isn't confirmed, and one key level will decide if it plays out.",
-      "url": "https://www.coindesk.com/markets/2026/08/07/a-case-for-a-bitcoin-surge-to-usd76-000-may-be-building-beneath-the-boring-price-action-but-there-s-a-caveat",
-      "publishedAt": "2026-08-07T04:28:17.000Z"
-    },
-    {
-      "id": "f4f6c8017f5431622d13",
-      "source": "CoinDesk",
-      "title": "XRP leads majors losses as Clarity Act vote slips to September",
-      "summary": "Bitcoin, ether showed slight losses while Ripple-linked XRP fell 5.5% on the week, the worst of the majors, as the Senate left Washington without taking up the market structure bill.",
-      "url": "https://www.coindesk.com/markets/2026/08/07/bitcoin-stuck-near-usd64-000-as-clarity-act-vote-slips-to-september",
-      "publishedAt": "2026-08-07T04:17:01.000Z"
     }
   ]
 }
