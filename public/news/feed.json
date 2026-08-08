@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T07:18:14.606Z",
+  "generatedAt": "2026-08-08T13:15:29.776Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,54 @@
     }
   ],
   "items": [
+    {
+      "id": "5ec8dc20d17d4c76d767",
+      "source": "CryptoSlate",
+      "title": "The US says it has a Bitcoin reserve, but nobody can agree on how much it owns",
+      "summary": "On March 6, 2025, President Donald Trump signed an executive order creating the Strategic Bitcoin Reserve, and most of the attention went straight to the grand idea: America had built a digital Fort Knox, the government would stop selling Bitcoin, and…",
+      "url": "https://cryptoslate.com/the-us-says-it-has-a-bitcoin-reserve-but-nobody-can-agree-on-how-much-it-owns/",
+      "publishedAt": "2026-08-08T13:05:36.000Z"
+    },
+    {
+      "id": "444208512add133e73b1",
+      "source": "CoinDesk",
+      "title": "Why trillion-dollar asset manager T. Rowe Price put memecoins in its crypto ETF",
+      "summary": "The $1.9 trillion asset manager says excluding established memecoins on principle would undermine its active approach to crypto investing.",
+      "url": "https://www.coindesk.com/markets/2026/08/06/why-trillion-dollar-asset-manager-t-rowe-price-put-memecoins-in-its-crypto-etf",
+      "publishedAt": "2026-08-08T13:00:00.000Z"
+    },
+    {
+      "id": "005cea66fdd9894eec90",
+      "source": "CryptoSlate",
+      "title": "Trump Media’s $6.4 billion crypto venture canceled amid escalating Trump ethics concerns",
+      "summary": "Trump Media & Technology Group and Crypto.com scrapped plans for a $6.42 billion digital-asset treasury venture. The move unwinds one of the largest crypto projects connected to President Donald Trump as scrutiny of his family’s digital-asset businesses…",
+      "url": "https://cryptoslate.com/trump-medias-6-4-billion-crypto-venture-canceled-amid-escalating-trump-ethics-concerns/",
+      "publishedAt": "2026-08-08T12:05:04.000Z"
+    },
+    {
+      "id": "6f5fe739e4ee51e79868",
+      "source": "CryptoSlate",
+      "title": "Bitcoin faces $70,000 breakout or $60,000 drop this weekend as Hormuz tensions rise",
+      "summary": "Bitcoin traded near $65,000 heading into the weekend, sitting at the center of two macro forces pulling in opposite directions. The Aug. 7 jobs report weakened the case for a September rate hike, and tensions around the Strait of Hormuz threaten to revive…",
+      "url": "https://cryptoslate.com/bitcoin-faces-70000-breakout-or-60000-drop-this-weekend-as-hormuz-tensions-rise/",
+      "publishedAt": "2026-08-08T10:59:31.000Z"
+    },
+    {
+      "id": "2c7b2b2795500ca1d4a5",
+      "source": "CoinDesk",
+      "title": "U.S. Senate opens first stage of crypto Clarity Act voting to give bill a chance next month",
+      "summary": "The majority leader opened the multi-stage process the Senate follows when trying to get a bill over its 60-vote hurdle, so it's still got a shot in September.",
+      "url": "https://www.coindesk.com/policy/2026/08/08/u-s-senate-opens-first-stage-of-crypto-clarity-act-voting-to-give-bill-a-chance-next-month",
+      "publishedAt": "2026-08-08T09:07:24.000Z"
+    },
+    {
+      "id": "7c9feaf4dd70d112a4bf",
+      "source": "CoinDesk",
+      "title": "Another Bitcoin infrastructure exploit hits, this time draining Lightning payment servers",
+      "summary": "BTCPay told users running LND to update immediately or take servers offline after attackers stole credentials that can control Lightning wallets and move funds.",
+      "url": "https://www.coindesk.com/tech/2026/08/08/another-bitcoin-infrastructure-exploit-hits-this-time-draining-merchant-lightning-nodes",
+      "publishedAt": "2026-08-08T07:46:04.000Z"
+    },
     {
       "id": "d4e8d6c0828b5a382cfc",
       "source": "Cointelegraph",
@@ -370,14 +418,6 @@
       "publishedAt": "2026-08-07T16:00:50.000Z"
     },
     {
-      "id": "bb5ce8fad0da0b51fa8e",
-      "source": "CryptoSlate",
-      "title": "Wintermute takes aim at Wall Street’s crypto ETF gatekeepers",
-      "summary": "The proprietary-only entity can pursue authorized-participant work, while DTC access and a fund-distributor agreement remain separate. The post Wintermute takes aim at Wall Street’s crypto ETF gatekeepers appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/wintermute-takes-aim-at-wall-streets-crypto-etf-gatekeepers/",
-      "publishedAt": "2026-08-07T15:30:54.000Z"
-    },
-    {
       "id": "3c4835d7f25d4765e856",
       "source": "The Block",
       "title": "Coldcard bitcoin exploit exposes crypto’s ‘original sin’ of private keys, Blockaid CEO says",
@@ -442,14 +482,6 @@
       "publishedAt": "2026-08-07T14:30:25.000Z"
     },
     {
-      "id": "35cdb7ada30a2ceb5627",
-      "source": "CryptoSlate",
-      "title": "If you use a Cypher or Osmosis card, your spending dies tonight and unbacked wallets could go with it",
-      "summary": "Aug. 7 is the final spending day; cardholders should finish withdrawals, rewards claims and wallet-access steps before the later date. The post If you use a Cypher or Osmosis card, your spending dies tonight and unbacked wallets could go with it appeared…",
-      "url": "https://cryptoslate.com/if-you-use-a-cypher-or-osmosis-card-your-spending-dies-tonight-and-your-unbacked-wallet-could-go-with-it/",
-      "publishedAt": "2026-08-07T14:10:11.000Z"
-    },
-    {
       "id": "842c6a467b1388ba9f50",
       "source": "CoinDesk",
       "title": "Russia cracks down on unlicensed crypto exchanges it claims are linked to Ukraine",
@@ -488,14 +520,6 @@
       "summary": "Dice entropy may become the new gold standard after the Coldcard hack",
       "url": "https://cointelegraph.com/features/bitcoiners-turn-to-dice-throws-as-self-custody-setups-are-re-evaluated?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-07T13:00:01.000Z"
-    },
-    {
-      "id": "69b61fd9cf6a3c511c30",
-      "source": "CryptoSlate",
-      "title": "MARA sold almost all its mined Bitcoin, then pledged 18,750 BTC for an AI dream with no disclosed safety net",
-      "summary": "The miner sold 2,213 BTC and later pledged 18,750 BTC, while the differently dated collateral pools cannot be reconciled. The post MARA sold almost all its mined Bitcoin, then pledged 18,750 BTC for an AI dream with no disclosed safety net appeared first on…",
-      "url": "https://cryptoslate.com/mara-bitcoin-collateral-long-ridge-financing/",
-      "publishedAt": "2026-08-07T12:50:28.000Z"
     },
     {
       "id": "09107ff8de6c118bb874",
@@ -672,30 +696,6 @@
       "summary": "The Coldcard exploit, which caused more than $100 million in losses, helped push July crypto thefts to $247 million, making it the second-worst month of 2026.",
       "url": "https://cointelegraph.com/news/coldcard-exploit-july-second-worst-month-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-07T07:59:42.000Z"
-    },
-    {
-      "id": "6d834bc3daa2f886797b",
-      "source": "CoinDesk",
-      "title": "Live updates: 'This can't last forever': Mulling bitcoin's lame price action as risk markets rally",
-      "summary": "The U.S. lost 23,000 in July, the first such loss since February. Expectations had been for a gain of 80,000 jobs.",
-      "url": "https://www.coindesk.com/markets/2026/08/07/live-updates-bitcoin-flat-at-usd64-300-before-us-jobs-report-with-oil-back-as-a-headwind",
-      "publishedAt": "2026-08-07T07:44:57.000Z"
-    },
-    {
-      "id": "0410e4630b7f3d70c380",
-      "source": "CoinDesk",
-      "title": "Bitcoin whales load up on $1.2 billion in BTC as ETFs attract $750 million",
-      "summary": "Bitcoin whales accumulate $1.2 billion in BTC while spot ETFs pull in $754 million this week.",
-      "url": "https://www.coindesk.com/markets/2026/08/07/bitcoin-whales-load-up-on-usd1-2-billion-in-btc-as-etfs-attract-usd750-million",
-      "publishedAt": "2026-08-07T05:45:21.000Z"
-    },
-    {
-      "id": "e8d0ff8481a91639bf91",
-      "source": "Cointelegraph",
-      "title": "Japan FSA asks crypto exchanges to impose withdrawal delays to fight scams",
-      "summary": "Japanese authorities called for address registration, customer-specific limits and stronger authentication as part of a broader push to curb misuse of exchange accounts.",
-      "url": "https://cointelegraph.com/news/japan-fsa-crypto-exchanges-withdrawal-delays-scams?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-07T05:24:38.000Z"
     }
   ]
 }
