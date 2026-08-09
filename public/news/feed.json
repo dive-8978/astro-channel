@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T02:31:56.595Z",
+  "generatedAt": "2026-08-09T07:26:10.764Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,22 @@
     }
   ],
   "items": [
+    {
+      "id": "aeec112a20e4249aecea",
+      "source": "Cointelegraph",
+      "title": "BTCPay restricts remote Lightning access after attackers steal funds",
+      "summary": "Foundation and Citadel21 reported drained Lightning nodes, but the total amount stolen and number of affected operators remain unknown.",
+      "url": "https://cointelegraph.com/news/btcpay-restricts-remote-lightning-access-after-attackers-steal-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-09T05:46:07.000Z"
+    },
+    {
+      "id": "9f8168bb2807a14e6159",
+      "source": "CoinDesk",
+      "title": "Controversial Bitcoin fork BIP-110 mines two blocks, then stops",
+      "summary": "The breakaway chain inherited bitcoin’s mining difficulty with only a tiny share of hashpower, leaving blocks hours apart while both chains still accept the same transactions.",
+      "url": "https://www.coindesk.com/tech/2026/08/09/controversial-bitcoin-fork-bip-110-mines-two-blocks-then-stops",
+      "publishedAt": "2026-08-09T05:08:20.000Z"
+    },
     {
       "id": "ce7541c8656e6b11d4b0",
       "source": "The Block",
@@ -680,22 +696,6 @@
       "summary": "With the U.S. crypto bill missing a crucial window before the Senate hangs its closed-for-summer sign, the alternatives are getting more attention.",
       "url": "https://www.coindesk.com/news-analysis/2026/08/06/after-a-clarity-act-funeral-the-crypto-world-would-keep-turning",
       "publishedAt": "2026-08-07T12:00:00.000Z"
-    },
-    {
-      "id": "0b39241d6c40b2961780",
-      "source": "The Block",
-      "title": "Bernstein favors CleanSpark on AI execution as MARA awaits first commercial contract",
-      "summary": "Bernstein rates CleanSpark Outperform at $24 on AI lease progress, while keeping MARA at $17 as it awaits its first commercial AI contract.",
-      "url": "https://www.theblock.co/news/business/2026-08-07-bernstein-favors-cleanspark-on-ai-execution-as-mara-awaits-first-commercial-contract-411136?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-07T11:51:21.000Z"
-    },
-    {
-      "id": "2dd9827990a3b33796b0",
-      "source": "CoinDesk",
-      "title": "Why Bitcoin's BIP-110 refuses to die despite near-zero miner support",
-      "summary": "BIP-110 has attracted only a sliver of miner support, yet its user-activated design means the proposal continues toward its activation date and (most likely) beyond.",
-      "url": "https://www.coindesk.com/tech/2026/08/06/why-bitcoin-s-bip-110-refuses-to-die-despite-near-zero-miner-support",
-      "publishedAt": "2026-08-07T11:45:49.000Z"
     }
   ]
 }
