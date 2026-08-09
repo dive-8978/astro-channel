@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T19:02:32.386Z",
+  "generatedAt": "2026-08-09T02:31:56.595Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,30 @@
     }
   ],
   "items": [
+    {
+      "id": "ce7541c8656e6b11d4b0",
+      "source": "The Block",
+      "title": "Bitcoin’s BIP-110 supporters split onto minority chain as main network pulls ahead",
+      "summary": "BIP-110 is a proposed one-year change that limits non-financial data on Bitcoin and has sparked a debate over how Bitcoin's block space should be used.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-08-08-bitcoins-bip-110-supporters-split-onto-minority-chain-as-main-network-pulls-ahead-411213?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-08T22:05:44.000Z"
+    },
+    {
+      "id": "be14e656742f850b3ed0",
+      "source": "Cointelegraph",
+      "title": "Bitcoin’s BIP-110 enters mandatory signaling with miner support below 3%",
+      "summary": "The deployment milestone tests whether enforcing nodes can sustain the change amid limited miner signaling and discussion of a hard-fork fallback.",
+      "url": "https://cointelegraph.com/news/bitcoin-bip-110-mandatory-signaling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-08T21:17:08.000Z"
+    },
+    {
+      "id": "98b6e98bdfe9a7bdf8cd",
+      "source": "CoinDesk",
+      "title": "Bitcoin hits block 961,632 as the controversial BIP-110 soft fork attempt begins",
+      "summary": "The proposal has scant support from bitcoin miners and influential commentators have also voiced their opposition.",
+      "url": "https://www.coindesk.com/tech/2026/08/07/frame-bitcoin-s-bip-110-enters-mandatory-signaling-with-less-than-3-miner-support",
+      "publishedAt": "2026-08-08T20:06:47.000Z"
+    },
     {
       "id": "0e0ff37e3f1579d7b9fc",
       "source": "CryptoSlate",
@@ -672,30 +696,6 @@
       "summary": "BIP-110 has attracted only a sliver of miner support, yet its user-activated design means the proposal continues toward its activation date and (most likely) beyond.",
       "url": "https://www.coindesk.com/tech/2026/08/06/why-bitcoin-s-bip-110-refuses-to-die-despite-near-zero-miner-support",
       "publishedAt": "2026-08-07T11:45:49.000Z"
-    },
-    {
-      "id": "cb8f2c8f058fe35c82b8",
-      "source": "CoinDesk",
-      "title": "Bitcoin’s volatility has nearly disappeared. The risk hasn’t.",
-      "summary": "Your day-ahead look for Aug. 7, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/08/07/bitcoin-s-volatility-has-nearly-disappeared-the-risk-hasn-t",
-      "publishedAt": "2026-08-07T11:42:20.000Z"
-    },
-    {
-      "id": "0015a7fd0e94d2ddb05b",
-      "source": "Cointelegraph",
-      "title": "Binance Bitcoin volume ratio hits record as futures outweigh spot eight times over",
-      "summary": "Binance saw a record divergence between daily spot and futures trading volumes, with the latter reaching nearly $58 billion.",
-      "url": "https://cointelegraph.com/markets/binance-bitcoin-volume-ratio-hits-record-as-futures-outweigh-spot-eight-times-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-07T11:05:01.000Z"
-    },
-    {
-      "id": "fdc28373927febf68eb7",
-      "source": "Decrypt",
-      "title": "MyTrade Founder Fined $10K Over Bots That Wash Traded 60 Cryptocurrencies",
-      "summary": "Liu Zhou told undercover agents the objective was to make other buyers lose money, according to the Justice Department.",
-      "url": "https://decrypt.co/375085/mytrade-founder-fined-10k-over-bots-that-wash-traded-60-cryptocurrencies",
-      "publishedAt": "2026-08-07T10:37:41.000Z"
     }
   ]
 }
