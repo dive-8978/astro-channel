@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T02:37:32.616Z",
+  "generatedAt": "2026-08-10T08:08:28.955Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 56,
+      "itemCount": 36,
       "error": null
     },
     {
@@ -58,6 +58,118 @@
   ],
   "items": [
     {
+      "id": "88dfc0ac599500e0307f",
+      "source": "CoinDesk",
+      "title": "Inside stablecoin firm BVNK’s journey to a $1.8B acquisition by Mastercard",
+      "summary": "Early BVNK investor Concentric shares a fascinating inside view on the stablecoin startup’s journey and the eventual Mastercard deal.",
+      "url": "https://www.coindesk.com/business/2026/08/10/inside-stablecoin-firm-bvnk-s-journey-to-a-usd1-8b-acquisition-by-mastercard",
+      "publishedAt": "2026-08-10T07:52:00.000Z"
+    },
+    {
+      "id": "eb3bf12411d1372d53c0",
+      "source": "Cointelegraph",
+      "title": "UK regulators to prepare tokenized gold framework: Report",
+      "summary": "The UK’s FCA is reportedly preparing a regulatory framework for tokenized gold and how these products may be used as collateral assets in wholesale markets.",
+      "url": "https://cointelegraph.com/news/uk-regulators-tokenized-gold-framework-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-10T07:25:45.000Z"
+    },
+    {
+      "id": "5c85c2a5313089f96acd",
+      "source": "CryptoSlate",
+      "title": "Swapping a $23M business for $1M cash while banking on locked WLFI tokens shows how dire crypto balance sheets have become",
+      "summary": "The buyer owes $11 million later, while 3.58 billion WLFI still need registration effectiveness to become transferable. The post Swapping a $23M business for $1M cash while banking on locked WLFI tokens shows how dire crypto balance sheets have become…",
+      "url": "https://cryptoslate.com/swapping-a-23m-business-for-1m-cash-while-banking-on-locked-wlfi-tokens-shows-how-dire-crypto-balance-sheets-have-become/",
+      "publishedAt": "2026-08-10T07:25:06.000Z"
+    },
+    {
+      "id": "95c0529baf59e72104b3",
+      "source": "CoinDesk",
+      "title": "Robinhood brings crypto trading to UK in AI-powered all-in-one app",
+      "summary": "The trading firm is also introducing “Robinhood Cortex Digests for Crypto,” a generative AI-powered widget that analyses breaking news and other data.",
+      "url": "https://www.coindesk.com/business/2026/08/07/robinhood-introduces-no-fee-crypto-trading-in-the-uk-with-ai-assistance",
+      "publishedAt": "2026-08-10T07:00:00.000Z"
+    },
+    {
+      "id": "f47575689a6f9f77f5fd",
+      "source": "The Block",
+      "title": "Robinhood brings crypto trading to main UK app through Bitstamp",
+      "summary": "The launch adds crypto alongside stocks, ISAs, options, and futures in the UK as Robinhood continues to expand its broader crypto ecosystem.",
+      "url": "https://www.theblock.co/news/business/2026-08-10-robinhood-uk-crypto-trading-bitstamp-411140?utm_source=rss&utm_medium=rss",
+      "publishedAt": "2026-08-10T07:00:00.000Z"
+    },
+    {
+      "id": "9333ecf6ed2c0bd4e802",
+      "source": "CoinDesk",
+      "title": "Live updates: BTC above $65,000 even as the Senate punts the CLARITY Act to the fall",
+      "summary": "The market rose even as the Senate left the crypto bill unpassed before its recess, with steady ETF inflows and a softer dollar doing more for prices than Washington.",
+      "url": "https://www.coindesk.com/markets/2026/08/10/live-updates-btc-above-usd65-000-even-as-the-senate-punts-the-clarity-act-to-the-fall",
+      "publishedAt": "2026-08-10T06:56:50.000Z"
+    },
+    {
+      "id": "12835a663611f7eaee9c",
+      "source": "CoinDesk",
+      "title": "This bitcoin miner rejected BIP-110 despite mining through a pool that supported it",
+      "summary": "Ocean, a bitcoin mining pool, had been backing BIP-110 by default. Simple Mining, a company that runs mining machines through Ocean, used software from the pool that lets individual miners choose for themselves and went the other way.",
+      "url": "https://www.coindesk.com/markets/2026/08/10/bitcoin-miner-rejects-bip-110-despite-mining-through-a-pool-that-supported-it",
+      "publishedAt": "2026-08-10T06:25:17.000Z"
+    },
+    {
+      "id": "89a20cd05137c43e9c23",
+      "source": "CryptoSlate",
+      "title": "Yields are spiking toward 5.2%, but history shows Bitcoin might completely ignore Wall Street’s $125 billion stress test",
+      "summary": "Three sales meet CPI and PPI, creating measurable tests of bond demand, yields and Bitcoin pressure. The post Yields are spiking toward 5.2%, but history shows Bitcoin might completely ignore Wall Street’s $125 billion stress test appeared first on…",
+      "url": "https://cryptoslate.com/yields-are-spiking-toward-5-2-but-history-shows-bitcoin-might-completely-ignore-wall-streets-125-billion-stress-test/",
+      "publishedAt": "2026-08-10T06:00:04.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-10T06:00:00.000Z"
+    },
+    {
+      "id": "1e4847e85511a6fff038",
+      "source": "Cointelegraph",
+      "title": "Bitcoin Red Team founder turns to Chinese AI: ‘It absolutely guts me’",
+      "summary": "Bitcoin Red Team has now found 1,288 critical and high-level vulnerabilities in the Bitcoin ecosystem as of Saturday.",
+      "url": "https://cointelegraph.com/news/bitcoin-red-team-founder-turns-to-chinese-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-10T05:18:27.000Z"
+    },
+    {
+      "id": "9a88779e08dfec76b499",
+      "source": "CoinDesk",
+      "title": "Bitcoin tops $65,000 with U.S. inflation data due this week",
+      "summary": "Every major except XRP is green on the week, with BTC, ether and BNB each up nearly 3% as global stocks trade near a record.",
+      "url": "https://www.coindesk.com/markets/2026/08/10/bitcoin-tops-usd65-000-with-us-inflation-data-due-this-week",
+      "publishedAt": "2026-08-10T04:39:37.000Z"
+    },
+    {
+      "id": "10392b25bd25c6cd6096",
+      "source": "Cointelegraph",
+      "title": "Australia orders Cryptolink Bitcoin ATMs offline over ‘basic reporting’ failures",
+      "summary": "Australia’s financial watchdog has suspended Cryptolink’s registration for three months, adding to a crackdown that previously saw the Bitcoin ATM operator fined $56,340.",
+      "url": "https://cointelegraph.com/news/australia-orders-cryptolink-bitcoin-atms-offline-over-basic-reporting-failures?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-10T04:32:36.000Z"
+    },
+    {
+      "id": "e2c64ab97fdd69691a7a",
+      "source": "CoinDesk",
+      "title": "XRP is getting left behind in the crypto bounce even as ETFs keep attracting investor money",
+      "summary": "The token fell 5% last week while BTC, ETH and SOL climbed.",
+      "url": "https://www.coindesk.com/markets/2026/08/10/xrp-is-getting-left-behind-in-the-crypto-bounce-even-as-etfs-keep-attracting-investor-money",
+      "publishedAt": "2026-08-10T04:26:01.000Z"
+    },
+    {
+      "id": "3f0d85f5fff931bd779c",
+      "source": "Cointelegraph",
+      "title": "Crypto’s first quantum attack will look like unexplained breach: Quantus founder",
+      "summary": "Bad actors with access to a cryptography-breaking quantum computer probably won’t try to announce it to the world by hacking Satoshi Nakamoto’s high-profile Bitcoin wallets, crypto executives say.",
+      "url": "https://cointelegraph.com/news/cryptos-first-quantum-attack-look-like-ordinary-key-theft-quantus-founder?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-10T03:34:53.000Z"
+    },
+    {
       "id": "06cdbcf3d84bc8c63c2d",
       "source": "CryptoSlate",
       "title": "Investors poured $82 million into Canary’s XRP ETF, but falling prices erased double what they put in",
@@ -68,7 +180,7 @@
     {
       "id": "7d77184d6c39d029d4fc",
       "source": "Cointelegraph",
-      "title": "BIP-110 dies with a whimper, CLARITY vote punted: Hodler’s Digest, Aug. 9",
+      "title": "BIP-110 ends with a whimper, CLARITY vote punted: Hodler’s Digest, Aug. 9",
       "summary": "BIP-110 forks itself into oblivion with a “2-block chain” and CLARITY will finally get a Senate vote in September. The odds say that vote will be a No.",
       "url": "https://cointelegraph.com/magazine/bip-110-dies-with-a-whimper-clarity-vote-punted-hodlers-digest-aug-9?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-10T00:32:21.000Z"
@@ -168,22 +280,6 @@
       "summary": "The new rule will take effect on Jan. 1, 2027, and will cover cryptocurrencies including fiat-backed stablecoins.",
       "url": "https://www.theblock.co/news/regulation/2026-08-09-brazil-to-tighten-crypto-fraud-controls-with-new-24-hour-wait-on-transfers-to-self-custody-wallets-411219?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-08-09T17:03:38.000Z"
-    },
-    {
-      "id": "84957528e9cbef2e0c33",
-      "source": "CryptoSlate",
-      "title": "White House warns CLARITY Act will die Sept 15 unless 7 Democrats vote yes",
-      "summary": "The White House is raising pressure on Senate Democrats ahead of a Sept. 15 vote on the CLARITY Act, arguing that lawmakers have already had enough time to reach a deal on crypto market structure. On Aug. 8, Patrick Witt, executive director of the…",
-      "url": "https://cryptoslate.com/white-house-warns-clarity-act-will-die-sept-15-unless-7-democrats-vote-yes/",
-      "publishedAt": "2026-08-09T17:00:18.000Z"
-    },
-    {
-      "id": "5781715caa4d973940dd",
-      "source": "CryptoSlate",
-      "title": "Michael Saylor reveals how ChatGPT helped Strategy unlock $15 billion for its Bitcoin machine",
-      "summary": "Michael Saylor says Strategy used AI to design a new class of preferred stocks that ultimately allowed the company to raise roughly $15 billion for its Bitcoin strategy. The Strategy executive chairman said he turned to AI after the company’s existing…",
-      "url": "https://cryptoslate.com/michael-saylor-reveals-how-ai-helped-strategy-unlock-15-billion-for-its-bitcoin-machine/",
-      "publishedAt": "2026-08-09T16:00:26.000Z"
     },
     {
       "id": "50df36e24fdcb6011a67",
@@ -288,14 +384,6 @@
       "summary": "The Senate is set to vote on the motion on Tuesday, Sept. 15, the day after the body returns, though at least seven non-Republicans will need to support it.",
       "url": "https://www.theblock.co/news/regulation/2026-08-08-majority-leader-thune-files-cloture-on-clarity-act-setting-up-sept-15-senate-vote-411211?utm_source=rss&utm_medium=rss",
       "publishedAt": "2026-08-08T17:27:45.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-08T17:19:56.000Z"
     },
     {
       "id": "a35db51d9f947b93dc38",
@@ -608,94 +696,6 @@
       "summary": "Bitcoin Magazine Bitcoin Shrugs off Coldcard Hack and Clarity Act Delays, Price Chops Higher as Investors Buy ETFs The Bitcoin price seems unfazed by recent negative news. This post Bitcoin Shrugs off Coldcard Hack and Clarity Act Delays, Price Chops Higher…",
       "url": "https://bitcoinmagazine.com/news/bitcoin-price-shrugs-off-coldcard-hack",
       "publishedAt": "2026-08-07T16:29:44.000Z"
-    },
-    {
-      "id": "619cf5392d5edab587ef",
-      "source": "Decrypt",
-      "title": "Bitcoin Still in Death Cross as Jobs Miss Cuts Rate-Hike Odds",
-      "summary": "A soft July payrolls print pulled September rate-hike odds down. It gives investors in risk assets hope, but Bitcoin remains in bear territory.",
-      "url": "https://decrypt.co/375118/bitcoin-price-death-cross-jobs-miss-rate-hike-odds",
-      "publishedAt": "2026-08-07T16:07:12.000Z"
-    },
-    {
-      "id": "60625255fca50b5062fb",
-      "source": "Decrypt",
-      "title": "OpenAI's First Device Is a $300-Plus Doughnut-Shaped Speaker: Report",
-      "summary": "Designed with Jony Ive's LoveFrom studio, the screenless gadget is slated for 2027 and will use cameras, lights and moving parts.",
-      "url": "https://decrypt.co/375117/openais-first-device-is-a-300-plus-doughnut-shaped-speaker-report",
-      "publishedAt": "2026-08-07T16:03:06.000Z"
-    },
-    {
-      "id": "cbb00bdbfc392c26b1e8",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin ETFs Add Nearly $800 Million in the Wake of Coldcard Exploit",
-      "summary": "Bitcoin Magazine Bitcoin ETFs Add Nearly $800 Million in the Wake of Coldcard Exploit One of the biggest Bitcoin security stories of the year unfolded last week as a firmware exploit affecting certain Coldcard hardware wallets renewed industry debate around…",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-etfs-800-million-coldcard",
-      "publishedAt": "2026-08-07T16:00:50.000Z"
-    },
-    {
-      "id": "3c4835d7f25d4765e856",
-      "source": "The Block",
-      "title": "Coldcard bitcoin exploit exposes crypto’s ‘original sin’ of private keys, Blockaid CEO says",
-      "summary": "Crypto at risk of becoming \"canary in a coal mine\" when it comes to demonstrating how AI could impact cybersecurity.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-07-coldcard-bitcoin-exploit-crypto-original-sin-private-keys-blockaid-ceo-411160?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-07T15:30:05.000Z"
-    },
-    {
-      "id": "2d8531f98fbd1e1c7829",
-      "source": "Decrypt",
-      "title": "Bitcoin Wallet Dormant Since 2011 Moves Millions in BTC",
-      "summary": "A Bitcoin address that had stayed silent for 15 years just sent its coins out for the first time.",
-      "url": "https://decrypt.co/375114/bitcoin-wallet-dormant-since-2011-moves-millions-btc",
-      "publishedAt": "2026-08-07T15:27:35.000Z"
-    },
-    {
-      "id": "ca9bedfa113c3ac5b4cf",
-      "source": "Cointelegraph",
-      "title": "Bitcoin price tags $65.3K August high as low US jobs numbers cool Fed rate bets",
-      "summary": "Bitcoin hit month-to-date highs above $65,000 as risk-assets gained on low US nonfarm payrolls data.",
-      "url": "https://cointelegraph.com/markets/bitcoin-price-tags-653k-august-high-as-low-us-jobs-numbers-cool-fed-rate-bets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-07T15:23:15.000Z"
-    },
-    {
-      "id": "fda1f19ef39b385f5bc5",
-      "source": "CoinDesk",
-      "title": "OKX's Rafique doubts Clarity Act will pass, warns optimism is already priced into bitcoin",
-      "summary": "The OKX executive says Democrats have little incentive to hand Republicans a crypto victory before the midterms.",
-      "url": "https://www.coindesk.com/policy/2026/08/04/okx-s-rafique-doubts-clarity-act-will-pass-warns-optimism-is-already-priced-into-bitcoin",
-      "publishedAt": "2026-08-07T15:22:44.000Z"
-    },
-    {
-      "id": "1ae5cfae16e468c87f80",
-      "source": "CoinDesk",
-      "title": "How a five-second trick let traders drain millions from Polymarket",
-      "summary": "After months of public warnings from onchain analysts, the prediction market is moving to time-weighted prices to make artificial price pushes too costly.",
-      "url": "https://www.coindesk.com/business/2026/08/07/how-a-five-second-trick-let-traders-drain-millions-from-polymarket",
-      "publishedAt": "2026-08-07T15:09:07.000Z"
-    },
-    {
-      "id": "bc5f050624216f6d0fe4",
-      "source": "Cointelegraph",
-      "title": "Crypto Biz: Crypto’s biggest business is starting to look a lot like banking",
-      "summary": "Crypto business is converging with banking as stablecoin reserves, tokenized funds, Treasury income and balance sheet management become key profit drivers.",
-      "url": "https://cointelegraph.com/news/crypto-biz-crypto-business-converges-traditional-banking?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-07T15:07:49.000Z"
-    },
-    {
-      "id": "a96fade2f781e3d82324",
-      "source": "Bitcoin Magazine",
-      "title": "Crucial Vote On Crypto Clarity Act Delayed Until September, Trump Says More People Are Paying in Bitcoin: Reports",
-      "summary": "Bitcoin Magazine Crucial Vote On Crypto Clarity Act Delayed Until September, Trump Says More People Are Paying in Bitcoin: Reports A vote on the long-awaited Clarity Act will be delayed until September as lawmakers go on recess today. As first reported by…",
-      "url": "https://bitcoinmagazine.com/news/clarity-act-vote-delayed-trump-bitcoin",
-      "publishedAt": "2026-08-07T15:01:20.000Z"
-    },
-    {
-      "id": "3e1a5c54e041e8b3bdba",
-      "source": "CoinDesk",
-      "title": "A part of FTX survived, and it’s the case for the CLARITY Act",
-      "summary": "When FTX collapsed, the parts of it bound by law survived. Mainstream finance is now converging with digital assets, and the law built to protect it the same way is the one the Senate did not pass this week, argues Bullish's Randi Abernethy.",
-      "url": "https://www.coindesk.com/opinion/2026/08/07/a-part-of-ftx-survived-and-it-s-the-case-for-the-clarity-act",
-      "publishedAt": "2026-08-07T14:30:25.000Z"
     }
   ]
 }
