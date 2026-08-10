@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T19:05:20.714Z",
+  "generatedAt": "2026-08-10T02:37:32.616Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 36,
+      "itemCount": 56,
       "error": null
     },
     {
@@ -57,6 +57,78 @@
     }
   ],
   "items": [
+    {
+      "id": "06cdbcf3d84bc8c63c2d",
+      "source": "CryptoSlate",
+      "title": "Investors poured $82 million into Canary’s XRP ETF, but falling prices erased double what they put in",
+      "summary": "Unrealized XRP depreciation erased nearly twice the value added by net capital-share activity as token holdings rose 31.7%. The post Investors poured $82 million into Canary’s XRP ETF, but falling prices erased double what they put in appeared first on…",
+      "url": "https://cryptoslate.com/investors-poured-82-million-into-canarys-xrp-etf-but-falling-prices-erased-double-what-they-put-in/",
+      "publishedAt": "2026-08-10T01:20:52.000Z"
+    },
+    {
+      "id": "7d77184d6c39d029d4fc",
+      "source": "Cointelegraph",
+      "title": "BIP-110 dies with a whimper, CLARITY vote punted: Hodler’s Digest, Aug. 9",
+      "summary": "BIP-110 forks itself into oblivion with a “2-block chain” and CLARITY will finally get a Senate vote in September. The odds say that vote will be a No.",
+      "url": "https://cointelegraph.com/magazine/bip-110-dies-with-a-whimper-clarity-vote-punted-hodlers-digest-aug-9?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-10T00:32:21.000Z"
+    },
+    {
+      "id": "e4526cd538623599860d",
+      "source": "Cointelegraph",
+      "title": "Ex-US defense secretary calls CLARITY Act a ‘national security bill’",
+      "summary": "Former US Defense Secretary Mark Esper says the CLARITY Act is not merely a financial services bill, its a national security one.",
+      "url": "https://cointelegraph.com/news/ex-us-defense-secretary-calls-clarity-act-a-national-security-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-10T00:31:34.000Z"
+    },
+    {
+      "id": "99c9d66b2bf3758c4699",
+      "source": "CryptoSlate",
+      "title": "In just 190 seconds, Grayscale quietly pulled the plug on three major altcoin ETFs",
+      "summary": "Cardano, Hedera and Polkadot registration withdrawals gave no reason for the retreat, while five other Grayscale altcoin filings remained preliminary. The post In just 190 seconds, Grayscale quietly pulled the plug on three major altcoin ETFs appeared first…",
+      "url": "https://cryptoslate.com/in-just-190-seconds-grayscale-quietly-pulled-the-plug-on-three-major-altcoin-etfs/",
+      "publishedAt": "2026-08-10T00:20:16.000Z"
+    },
+    {
+      "id": "952a21fd8dc17a1512ee",
+      "source": "CryptoSlate",
+      "title": "A pre-revenue AI crypto startup funneled $12 million into EV as bad crypto trades erased 97% of cash in six months",
+      "summary": "The pre-revenue company ended June with $577,328 in cash while its RoboShare pilot and discounted equity facility remained conditional. The post A pre-revenue AI crypto startup funneled $12 million into EV as bad crypto trades erased 97% of cash in six…",
+      "url": "https://cryptoslate.com/a-pre-revenue-ai-crypto-startup-funneled-12-million-into-ev-as-bad-crypto-trades-erased-97-of-cash-in-six-months/",
+      "publishedAt": "2026-08-09T23:05:47.000Z"
+    },
+    {
+      "id": "09b812fd60749a4b1349",
+      "source": "CryptoSlate",
+      "title": "With $0 in revenue and 35 idle machines in storage, an inactive Bitcoin miner printed 1.65 billion shares to stay alive",
+      "summary": "Only 800 million of those shares raised $700,000 in cash as the inactive miner searched for an operating restart. The post With $0 in revenue and 35 idle machines in storage, an inactive Bitcoin miner printed 1.65 billion shares to stay alive appeared first…",
+      "url": "https://cryptoslate.com/with-0-in-revenue-and-35-idle-machines-in-storage-an-inactive-bitcoin-miner-printed-1-65-billion-shares-to-stay-alive/",
+      "publishedAt": "2026-08-09T22:00:12.000Z"
+    },
+    {
+      "id": "a19a67414e1e6e2cacc4",
+      "source": "CryptoSlate",
+      "title": "Crypto holders face an Aug 27 deadline to save 21 tokens before Kraken liquidates them into thin order books",
+      "summary": "Withdrawals close at 14:00 UTC, then thin markets could determine what automatic liquidation returns. The post Crypto holders face an Aug 27 deadline to save 21 tokens before Kraken liquidates them into thin order books appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/crypto-holders-face-an-aug-27-deadline-to-save-21-tokens-before-kraken-liquidates-them-into-thin-order-books/",
+      "publishedAt": "2026-08-09T21:00:13.000Z"
+    },
+    {
+      "id": "f9213b553a338f85406d",
+      "source": "CryptoSlate",
+      "title": "A proposed Ethereum upgrade threatens to kill native yield and force SharpLink’s $125M treasury into high-risk DeFi",
+      "summary": "EIP-8363 would drive net consensus yield to zero at 60.25 million ETH staked, shifting the burden toward variable fees, MEV and DeFi returns. The post A proposed Ethereum upgrade threatens to kill native yield and force SharpLink’s $125M treasury into…",
+      "url": "https://cryptoslate.com/a-proposed-ethereum-upgrade-threatens-to-kill-native-yield-and-force-sharplinks-125m-treasury-into-high-risk-defi/",
+      "publishedAt": "2026-08-09T20:00:07.000Z"
+    },
+    {
+      "id": "2e10797972612c24c380",
+      "source": "Decrypt",
+      "title": "Bitcoin 'Anti-Spam' Fork Sputters to a Halt After Mining Just Two Blocks",
+      "summary": "The breakaway chain drew just 2.53% of mining support, leaving its blocks hours apart and roughly 350 days from a difficulty adjustment while the main network powered ahead.",
+      "url": "https://decrypt.co/375177/bitcoin-anti-spam-fork-splutters-halt-mining-just-two-blocks",
+      "publishedAt": "2026-08-09T19:33:09.000Z"
+    },
     {
       "id": "510a4ec82f52dff741c4",
       "source": "CryptoSlate",
@@ -114,14 +186,6 @@
       "publishedAt": "2026-08-09T16:00:26.000Z"
     },
     {
-      "id": "c7699365d752c7fa37c9",
-      "source": "CryptoSlate",
-      "title": "Wall Street put $7B into tokenized funds, but under 1% is actually being used in DeFi",
-      "summary": "DeFi recorded 99 hacks in the second quarter of 2026, more than any quarter on record in DeFiLlama's database. Real-world tokenized assets in use inside DeFi protocols have since climbed to nearly $3.97 billion, a fresh all-time high. DeFi gives tokenized…",
-      "url": "https://cryptoslate.com/wall-street-put-7b-into-tokenized-funds-but-under-1-is-actually-being-used-in-defi/",
-      "publishedAt": "2026-08-09T15:00:16.000Z"
-    },
-    {
       "id": "50df36e24fdcb6011a67",
       "source": "CoinDesk",
       "title": "Hyperliquid’s RWA perps boom is eating into the revenue that backs HYPE",
@@ -138,22 +202,6 @@
       "publishedAt": "2026-08-09T14:19:35.000Z"
     },
     {
-      "id": "8005e95edca3ca4f1fb2",
-      "source": "CryptoSlate",
-      "title": "Never sell treasury model cracks again as 1,635 BTC is offloaded shrinking Empery reserves by 76% in weeks",
-      "summary": "The company retained 1,279 BTC by Aug. 6, with 954 pledged against $35 million of debt. The post Never sell treasury model cracks again as 1,635 BTC is offloaded shrinking Empery reserves by 76% in weeks appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/never-sell-treasury-model-cracks-again-as-1635-btc-is-offloaded-shrinking-empery-reserves-by-76-in-weeks/",
-      "publishedAt": "2026-08-09T14:00:20.000Z"
-    },
-    {
-      "id": "74078f415c321e513653",
-      "source": "CryptoSlate",
-      "title": "AI financial advisers carry a hidden Bitcoin bias activated by a single specific switch",
-      "summary": "An AI financial adviser receives the same client three times, with the finances and tolerance for risk left unchanged. The first prompt asks for a diversified long-term portfolio. The second introduces bank failures and capital controls, while the third…",
-      "url": "https://cryptoslate.com/ai-financial-advisers-carry-a-hidden-bitcoin-bias-activated-by-a-single-specific-switch/",
-      "publishedAt": "2026-08-09T13:00:56.000Z"
-    },
-    {
       "id": "f7fff62542ed49f699bf",
       "source": "CoinDesk",
       "title": "Crypto is going through a massive dot-com style shakeout as over 100 projects fold in 2026",
@@ -162,36 +210,12 @@
       "publishedAt": "2026-08-09T13:00:00.000Z"
     },
     {
-      "id": "5e046491e7da5bb7cb93",
-      "source": "CryptoSlate",
-      "title": "A $1.8 billion leverage trap is building on Solana as traders pay 11-month high rates to defend $78",
-      "summary": "Aggregated funding on SOL perpetual futures has climbed to its highest level since September 2025, according to Velo data. Solana's futures open interest sits near $1.8 billion, equal to roughly 23.1 million SOL in notional exposure at current prices. Most…",
-      "url": "https://cryptoslate.com/a-1-8-billion-leverage-trap-is-building-on-solana-as-traders-pay-11-month-high-rates-to-defend-78/",
-      "publishedAt": "2026-08-09T12:00:17.000Z"
-    },
-    {
       "id": "60bb31019d2faf5e594d",
       "source": "Cointelegraph",
       "title": "BIP-110 Bitcoin branch stalls after two blocks as gap widens",
       "summary": "The enforcing fork remains stuck at Bitcoin’s full mining difficulty as mandatory signaling proceeds with little hashpower support.",
       "url": "https://cointelegraph.com/news/bitcoin-bip-110-branch-stalls-miner-support?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-09T11:00:53.000Z"
-    },
-    {
-      "id": "17175da42959a875c370",
-      "source": "CryptoSlate",
-      "title": "Bitcoin split into two chains overnight, but a silent miner boycott just halted the enforcing BIP-110 chain",
-      "summary": "None of the first 59 dominant-chain blocks signaled for the proposal, while its enforcing branch mined one successor before stalling. The post Bitcoin split into two chains overnight, but a silent miner boycott just halted the enforcing BIP-110 chain…",
-      "url": "https://cryptoslate.com/bitcoin-split-into-two-chains-overnight-but-a-silent-miner-boycott-just-halted-the-enforcing-chain/",
-      "publishedAt": "2026-08-09T11:00:45.000Z"
-    },
-    {
-      "id": "61ada6f21abab9f5edf5",
-      "source": "CryptoSlate",
-      "title": "Why crypto ‘audited’ badges are giving investors a dangerous false sense of security",
-      "summary": "At 1:30 p.m. UTC on Feb. 21, 2025, Bybit began moving funds from an Ethereum cold wallet to a warm wallet, the sort of routine transfer designed to make custody look boring. Authorized signers reviewed the destination on their screens and approved it,…",
-      "url": "https://cryptoslate.com/why-crypto-audited-badges-are-giving-investors-a-dangerous-false-sense-of-security/",
-      "publishedAt": "2026-08-09T09:59:56.000Z"
     },
     {
       "id": "3a07184b89eb512b767b",
@@ -672,30 +696,6 @@
       "summary": "When FTX collapsed, the parts of it bound by law survived. Mainstream finance is now converging with digital assets, and the law built to protect it the same way is the one the Senate did not pass this week, argues Bullish's Randi Abernethy.",
       "url": "https://www.coindesk.com/opinion/2026/08/07/a-part-of-ftx-survived-and-it-s-the-case-for-the-clarity-act",
       "publishedAt": "2026-08-07T14:30:25.000Z"
-    },
-    {
-      "id": "842c6a467b1388ba9f50",
-      "source": "CoinDesk",
-      "title": "Russia cracks down on unlicensed crypto exchanges it claims are linked to Ukraine",
-      "summary": "The FSB said at least 20 individuals were arrested in connection with a ring that scammed an undetermined number of Russian citizens.",
-      "url": "https://www.coindesk.com/policy/2026/08/07/russia-cracks-down-on-unlicensed-crypto-exchanges-it-claims-are-linked-to-ukraine",
-      "publishedAt": "2026-08-07T14:04:47.000Z"
-    },
-    {
-      "id": "ef85a9d8857edd1dc862",
-      "source": "The Block",
-      "title": "Bitcoin tops $65,000 after ‘massive surprise’ US jobs miss",
-      "summary": "Bitcoin topped $65,000 after U.S. payrolls fell 23,000 in July versus an 80,000 forecast, pushing traders to price out a September Fed rate hike.",
-      "url": "https://www.theblock.co/news/markets/2026-08-07-bitcoin-tops-65000-after-massive-surprise-us-jobs-miss-411154?utm_source=rss&utm_medium=rss",
-      "publishedAt": "2026-08-07T14:02:44.000Z"
-    },
-    {
-      "id": "1411497b2c9186ae3c8a",
-      "source": "Cointelegraph",
-      "title": "Fierce backlash to Ethereum’s EIP-8363 staking proposal",
-      "summary": "Ethereum’s proposed EIP-8363 staking overhaul aims to reduce issuance, but critics say it could hurt DeFi, decentralization and institutional adoption.",
-      "url": "https://cointelegraph.com/magazine/fierce-backlash-to-ethereums-latest-staking-proposal-eip-8363?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-07T13:30:00.000Z"
     }
   ]
 }
