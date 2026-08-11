@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T02:30:49.894Z",
+  "generatedAt": "2026-08-11T07:41:21.488Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 34,
+      "itemCount": 33,
       "error": null
     },
     {
@@ -58,6 +58,126 @@
   ],
   "items": [
     {
+      "id": "375a1fa6cef80d002499",
+      "source": "CoinDesk",
+      "title": "A $2 trillion asset class is getting a new blockchain rail",
+      "summary": "ADI Chain and Shipfinex are partnering to tokenize commercial ships, aiming to open the $680B ship-finance market to wider capital pool.",
+      "url": "https://www.coindesk.com/markets/2026/08/11/emb-7-00-utc-a-usd2-trillion-asset-class-is-getting-a-new-blockchain-rail",
+      "publishedAt": "2026-08-11T07:19:09.000Z"
+    },
+    {
+      "id": "5ed7e4c8b48aeeeace41",
+      "source": "The Block",
+      "title": "FlightAware sues Kalshi over alleged unauthorized data use for flight cancellation markets",
+      "summary": "FlightAware is also seeking a temporary restraining order to bar Kalshi from activities involving the flight-tracking site.",
+      "url": "https://www.theblock.co/news/business/2026-08-11-flightaware-sues-kalshi-411370",
+      "publishedAt": "2026-08-11T07:06:33.000Z"
+    },
+    {
+      "id": "c986818f67bb21b65b87",
+      "source": "The Block",
+      "title": "Zama brings its blockchain-privacy token to Revolut’s 70 million users",
+      "summary": "Zama listed its ZAMA token on Revolut across the EEA, opening the privacy protocol to the fintech's 70 million-plus customers.",
+      "url": "https://www.theblock.co/news/markets/2026-08-11-zama-brings-blockchain-privacy-token-to-revoluts-70-million-users-411290",
+      "publishedAt": "2026-08-11T07:05:03.000Z"
+    },
+    {
+      "id": "12fd246bb88e2e404a10",
+      "source": "The Block",
+      "title": "Broadridge’s Distributed Ledger Repo platform processes $8 trillion in July volume",
+      "summary": "Broadridge also offers services enabling onchain proxy voting and governance and managing digital asset infrastructure.",
+      "url": "https://www.theblock.co/news/business/2026-08-11-broadridge-8-trillion-july-411365",
+      "publishedAt": "2026-08-11T06:31:22.000Z"
+    },
+    {
+      "id": "35126f31479c86476a5a",
+      "source": "Cointelegraph",
+      "title": "South Korea drops Travel Rule threshold for crypto transfers",
+      "summary": "South Korea will remove its 1 million won Travel Rule threshold and apply information-sharing requirements to all transfers between registered crypto service providers.",
+      "url": "https://cointelegraph.com/news/south-korea-travel-rule-threshold-crypto-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-11T06:28:16.000Z"
+    },
+    {
+      "id": "2849f19a16e28918c13c",
+      "source": "CoinDesk",
+      "title": "BTCPay offers $190,000 bounty after bitcoin payment servers drained in exploit",
+      "summary": "The project said it will pay 10% of recovered funds, up to 3 BTC, after attackers stole LND credentials and drained merchant Lightning wallets last week.",
+      "url": "https://www.coindesk.com/markets/2026/08/11/btcpay-offers-usd190-000-bounty-after-bitcoin-payment-servers-drained-in-exploit",
+      "publishedAt": "2026-08-11T06:19:07.000Z"
+    },
+    {
+      "id": "6013aa2421c69f65a34b",
+      "source": "Cointelegraph",
+      "title": "Payments platform Decta explores stablecoin-enabled treasury settlement",
+      "summary": "Decta will use USDC through OpenPayd’s infrastructure for international treasury settlement, seeking faster transfers and more efficient liquidity management.",
+      "url": "https://cointelegraph.com/news/payments-platform-decta-explores-stablecoin-enabled-treasury-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-11T06:00:00.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-11T05:39:31.000Z"
+    },
+    {
+      "id": "602cb6ec2e24d9f7eabf",
+      "source": "CoinDesk",
+      "title": "Bitcoin’s BIP-110 fork is 300 blocks behind BTC and six years from fixing itself",
+      "summary": "The breakaway chain has produced two blocks since splitting off on Saturday. Bitcoin has produced more than 300 in the same stretch.",
+      "url": "https://www.coindesk.com/tech/2026/08/11/bitcoin-s-bip-110-fork-is-300-blocks-behind-btc-and-six-years-from-fixing-itself",
+      "publishedAt": "2026-08-11T05:26:37.000Z"
+    },
+    {
+      "id": "0447fa9858a7d4b5848e",
+      "source": "Cointelegraph",
+      "title": "Luke Dashjr removed as Bitcoin Improvement Proposal editor",
+      "summary": "Luke Dashjr lost his BIP editor privileges after developers raised concerns over his role in BIP 110 and its stalled minority fork.",
+      "url": "https://cointelegraph.com/news/luke-dashjr-removed-as-bitcoin-proposal-editor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-11T04:54:15.000Z"
+    },
+    {
+      "id": "cb964354a6659403a09f",
+      "source": "CoinDesk",
+      "title": "XRP, ether lead crypto losses as traders eye $70,000 bitcoin next",
+      "summary": "Bitcoin failed to hold $65,000 for a fourth day as an oil rally revived inflation worries before Wednesday's U.S. price data.",
+      "url": "https://www.coindesk.com/markets/2026/08/11/xrp-ether-lead-crypto-losses-as-traders-eye-usd70-000-bitcoin-next",
+      "publishedAt": "2026-08-11T04:50:23.000Z"
+    },
+    {
+      "id": "a71ae35092b8df5d0f34",
+      "source": "Cointelegraph",
+      "title": "White House vows to get CLARITY across ‘finish line’ in September",
+      "summary": "Patrick Witt says the Trump administration will keep negotiating with Democrats as the Senate prepares for a September CLARITY vote.",
+      "url": "https://cointelegraph.com/news/white-house-clarity-across-finish-line-september?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-11T04:12:58.000Z"
+    },
+    {
+      "id": "c90c9bbf2ccf26c32261",
+      "source": "CoinDesk",
+      "title": "U.S. SEC sets meeting to propose Reg Crypto to support certain digital assets offerings",
+      "summary": "The Securities and Exchange Commission will vote this week to start its first major crypto rulemaking process.",
+      "url": "https://www.coindesk.com/policy/2026/08/11/u-s-sec-sets-meeting-to-propose-reg-crypto-to-support-certain-digital-assets-offerings",
+      "publishedAt": "2026-08-11T04:07:48.000Z"
+    },
+    {
+      "id": "3b9d3a2948de4e621326",
+      "source": "CoinDesk",
+      "title": "Bitcoin's 'strongest hands' are back, on-chain data show",
+      "summary": "Elite wallets holding over 10,000 BTC has hit a six-month high of 90, building on earlier accumulation by mid-sized whales amid Coldcard fallout and Clarity Act delays.",
+      "url": "https://www.coindesk.com/markets/2026/08/11/bitcoin-s-strongest-hands-are-back-on-chain-data-show",
+      "publishedAt": "2026-08-11T03:48:40.000Z"
+    },
+    {
+      "id": "0f22d13ec35524e7a53d",
+      "source": "Cointelegraph",
+      "title": "Trump Media to revamp crypto treasury strategy after $238M Q2 loss",
+      "summary": "Trump Media says it will take a more disciplined approach to its crypto treasury while directing more resources toward its core media business.",
+      "url": "https://cointelegraph.com/news/trump-media-crypto-treasury-strategy-after-238m-loss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-11T03:21:27.000Z"
+    },
+    {
       "id": "748d7f9dd08b633d96c7",
       "source": "The Block",
       "title": "Riot Platforms stock jumps 25% after-hours on $9.1 billion AI deal reportedly with Anthropic",
@@ -69,7 +189,7 @@
       "id": "f5d0c793e627da8e85ef",
       "source": "Cointelegraph",
       "title": "Thailand’s 0% crypto tax. Bitcoin Red Team forced to use Chinese AI: Asia Express",
-      "summary": "The Bitcoin Red Team has been forced to rely on open source Chinese AI, after OpenAI restricts access. Thailand sets crypto tax to 0% in bid to become crypto hub.",
+      "summary": "The Bitcoin Red Team has been forced to rely on open source Chinese AI, after OpenAI restricted access. Thailand sets crypto tax to 0% in bid to become crypto hub.",
       "url": "https://cointelegraph.com/magazine/thailands-0-crypto-tax-bitcoin-red-team-forced-to-use-chinese-ai-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-11T02:08:36.000Z"
     },
@@ -212,8 +332,8 @@
     {
       "id": "727ea679f76564931d07",
       "source": "Cointelegraph",
-      "title": "TRON USDT supply hits $87.9B as transfers reach $2.1T in Q2: Messari",
-      "summary": "Messari reported that TRON recorded all-time highs in stablecoin supply and network activity during the second quarter, while DeFi and decentralized exchange activity declined.",
+      "title": "Tron USDT supply hits $87.9B as transfers reach $2.1T in Q2: Messari",
+      "summary": "Messari reported that Tron recorded all-time highs in stablecoin supply and network activity during the second quarter, while DeFi and decentralized exchange activity declined.",
       "url": "https://cointelegraph.com/news/tron-usdt-supply-hits-879b-as-transfers-reach-21t-in-q2-messari?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-10T19:47:01.000Z"
     },
@@ -372,7 +492,7 @@
     {
       "id": "0cdf6327c7f920936739",
       "source": "Cointelegraph",
-      "title": "BlackRock launches two Canada ETFs, with one allocating 3% to Bitcoin",
+      "title": "BlackRock launches 2 Canada ETFs, with one allocating 3% to Bitcoin",
       "summary": "BlackRock Canada’s new IBQT fund combines global equity exposure with a 3% Bitcoin allocation through the firm’s Canadian iShares Bitcoin ETF.",
       "url": "https://cointelegraph.com/news/blackrock-launches-two-canada-etfs-with-one-allocating-3-to-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-10T15:59:06.000Z"
@@ -576,126 +696,6 @@
       "summary": "Bitcoin spiked to a new August high into Sunday’s weekly close as market participants turned their attention to the next US inflation reports.",
       "url": "https://cointelegraph.com/markets/markets-drop-september-rate-hike-bet-into-cpi-five-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-10T11:13:40.000Z"
-    },
-    {
-      "id": "e4553ead2429ba3ecc90",
-      "source": "CoinDesk",
-      "title": "Bitcoin steadies above $65,000 as Iran-Oman deal talk eases Hormuz concerns, lifts risk assets",
-      "summary": "BTC rose to $65,209 and Nasdaq 100 index futures gained 0.45% on reports that Iran may strike a deal with Oman to reopen the Strait of Hormuz.",
-      "url": "https://www.coindesk.com/markets/2026/08/10/bitcoin-steadies-above-usd65-000-as-iran-oman-deal-talk-eases-hormuz-concerns-lifts-risk-assets",
-      "publishedAt": "2026-08-10T10:45:43.000Z"
-    },
-    {
-      "id": "f204dd597aee506009ea",
-      "source": "Decrypt",
-      "title": "Standard Chartered Sees $4T Tokenization Driving Chainlink to $200 by 2030",
-      "summary": "The bank has now set 2030 targets for Uniswap, Aave, Morpho and Chainlink, all resting on one 37x forecast for DeFi growth.",
-      "url": "https://decrypt.co/375189/standard-chartered-sees-4t-tokenization-driving-chainlink-to-200-by-2030",
-      "publishedAt": "2026-08-10T10:19:06.000Z"
-    },
-    {
-      "id": "d2a9fb96c6e764ca493c",
-      "source": "Cointelegraph",
-      "title": "H100 becomes Europe’s No. 2 Bitcoin treasury after 2,455 BTC deal",
-      "summary": "Sweden’s H100 more than tripled its Bitcoin holdings to 3,506 BTC after completing an acquisition involving 2,455 BTC.",
-      "url": "https://cointelegraph.com/news/sweden-h100-bitcoin-treasury-btc-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-10T10:14:30.000Z"
-    },
-    {
-      "id": "17708c775ade92babd4a",
-      "source": "CoinDesk",
-      "title": "Bitcoin volatility is in meltdown, but downside protection still commands a premium",
-      "summary": "Bitcoin’s BVIV volatility index hit the lowest level since 2025 as option demand collapsed. Still, overwriting surged and downside protection stayed pricey.",
-      "url": "https://www.coindesk.com/markets/2026/08/10/bitcoin-volatility-is-in-meltdown-but-downside-protection-still-commands-a-premium",
-      "publishedAt": "2026-08-10T10:13:58.000Z"
-    },
-    {
-      "id": "c5fff23d7b454152f384",
-      "source": "CoinDesk",
-      "title": "A rare CME shift: Hedge funds abandon structural shorts to bet on a bitcoin rally",
-      "summary": "CME leveraged funds turn net long as weak futures yields undermine the once-popular basis trade.",
-      "url": "https://www.coindesk.com/markets/2026/08/10/a-rare-cme-shift-hedge-funds-abandon-structural-shorts-to-bet-on-a-bitcoin-rally",
-      "publishedAt": "2026-08-10T09:09:32.000Z"
-    },
-    {
-      "id": "bd0b50ff1f740cd68092",
-      "source": "Decrypt",
-      "title": "Bybit Sues North Korea Over $1.5B Hack, Wins Order Freezing Assets",
-      "summary": "The exchange says it has recovered $48.4 million and frozen $30.5 million more, a fraction of what the Lazarus Group took in February 2025.",
-      "url": "https://decrypt.co/375180/bybit-sues-north-korea-over-1-5b-hack-wins-order-freezing-assets",
-      "publishedAt": "2026-08-10T09:04:00.000Z"
-    },
-    {
-      "id": "780b4dfdc004b6f97120",
-      "source": "CoinDesk",
-      "title": "U.S. CPI inflation, Securitize, Gemini among earnings reports: Crypto Week Ahead",
-      "summary": "Your look at what's coming in the week starting Aug. 10",
-      "url": "https://www.coindesk.com/markets/2026/08/10/u-s-cpi-inflation-securitize-gemini-among-earnings-reports-crypto-week-ahead",
-      "publishedAt": "2026-08-10T08:57:04.000Z"
-    },
-    {
-      "id": "13b3e5f7325f3fcde3ba",
-      "source": "The Block",
-      "title": "North Korea’s Kimsuky integrates AI into cyberattacks targeting crypto and finance",
-      "summary": "Kimsuky uses generative AI to produce phishing documents themed around digital assets, investment strategies, and fintech services.",
-      "url": "https://www.theblock.co/news/defi/2026-08-10-north-korea-kimsuky-ai-crypto-411229",
-      "publishedAt": "2026-08-10T08:35:09.000Z"
-    },
-    {
-      "id": "88dfc0ac599500e0307f",
-      "source": "CoinDesk",
-      "title": "Inside stablecoin firm BVNK’s journey to a $1.8B acquisition by Mastercard",
-      "summary": "Early BVNK investor Concentric shares a fascinating inside view on the stablecoin startup’s journey and the eventual Mastercard deal.",
-      "url": "https://www.coindesk.com/business/2026/08/10/inside-stablecoin-firm-bvnk-s-journey-to-a-usd1-8b-acquisition-by-mastercard",
-      "publishedAt": "2026-08-10T07:52:00.000Z"
-    },
-    {
-      "id": "eb3bf12411d1372d53c0",
-      "source": "Cointelegraph",
-      "title": "UK regulators to prepare tokenized gold framework: Report",
-      "summary": "The UK’s FCA is reportedly preparing a regulatory framework for tokenized gold and how these products may be used as collateral assets in wholesale markets.",
-      "url": "https://cointelegraph.com/news/uk-regulators-tokenized-gold-framework-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-10T07:25:45.000Z"
-    },
-    {
-      "id": "95c0529baf59e72104b3",
-      "source": "CoinDesk",
-      "title": "Robinhood brings crypto trading to UK in AI-powered all-in-one app",
-      "summary": "The trading firm is also introducing “Robinhood Cortex Digests for Crypto,” a generative AI-powered widget that analyses breaking news and other data.",
-      "url": "https://www.coindesk.com/business/2026/08/07/robinhood-introduces-no-fee-crypto-trading-in-the-uk-with-ai-assistance",
-      "publishedAt": "2026-08-10T07:00:00.000Z"
-    },
-    {
-      "id": "b565150cd17d11892b96",
-      "source": "The Block",
-      "title": "Robinhood brings crypto trading to main UK app through Bitstamp",
-      "summary": "The launch adds crypto alongside stocks, ISAs, options, and futures in the UK as Robinhood continues to expand its broader crypto ecosystem.",
-      "url": "https://www.theblock.co/news/business/2026-08-10-robinhood-uk-crypto-trading-bitstamp-411140",
-      "publishedAt": "2026-08-10T07:00:00.000Z"
-    },
-    {
-      "id": "9333ecf6ed2c0bd4e802",
-      "source": "CoinDesk",
-      "title": "Live updates: WTI crude oil up 5% and back to $80, as bitcoin drops below $64,000",
-      "summary": "The market rose even as the Senate left the crypto bill unpassed before its recess, with steady ETF inflows and a softer dollar doing more for prices than Washington.",
-      "url": "https://www.coindesk.com/markets/2026/08/10/live-updates-btc-above-usd65-000-even-as-the-senate-punts-the-clarity-act-to-the-fall",
-      "publishedAt": "2026-08-10T06:56:50.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-10T06:30:00.000Z"
-    },
-    {
-      "id": "12835a663611f7eaee9c",
-      "source": "CoinDesk",
-      "title": "This bitcoin miner rejected BIP-110 despite mining through a pool that supported it",
-      "summary": "Ocean, a bitcoin mining pool, had been backing BIP-110 by default. Simple Mining, a company that runs mining machines through Ocean, used software from the pool that lets individual miners choose for themselves and went the other way.",
-      "url": "https://www.coindesk.com/markets/2026/08/10/bitcoin-miner-rejects-bip-110-despite-mining-through-a-pool-that-supported-it",
-      "publishedAt": "2026-08-10T06:25:17.000Z"
     }
   ]
 }
