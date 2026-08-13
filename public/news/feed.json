@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T19:30:04.383Z",
+  "generatedAt": "2026-08-13T03:02:21.748Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 38,
       "error": null
     },
     {
@@ -57,6 +57,166 @@
     }
   ],
   "items": [
+    {
+      "id": "a1fb39967373f0cea937",
+      "source": "Cointelegraph",
+      "title": "ASX shareholder plans to sue former directors over failed blockchain project",
+      "summary": "ASX’s failed blockchain-based CHESS overhaul faces renewed governance scrutiny after the exchange admitted misleading the market.",
+      "url": "https://cointelegraph.com/news/asx-shareholder-lawsuit-failed-blockchain-chess-project?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-13T01:00:57.000Z"
+    },
+    {
+      "id": "dbe8ef5a097148b7c782",
+      "source": "Cointelegraph",
+      "title": "Arizona crypto ATM law helps 35 scam victims recover $171K",
+      "summary": "Qualifying new customers can receive full reimbursement, including fees, if they notify both the operator and law enforcement within 30 days.",
+      "url": "https://cointelegraph.com/news/arizona-crypto-atm-law-scam-refunds-171k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-12T23:42:51.000Z"
+    },
+    {
+      "id": "c9d38035ea80d1829f8c",
+      "source": "CryptoSlate",
+      "title": "BlackRock’s Bitcoin income ETF offset less than 30% of its $1.2M crypto losses with options",
+      "summary": "The fund booked $344,849 in option gains, yet its cited NAV, Bitcoin and IBIT declines start on different dates. The post BlackRock’s Bitcoin income ETF offset less than 30% of its $1.2M crypto losses with options appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/blackrocks-bitcoin-income-etf-offset-less-than-30-of-its-1-2m-crypto-losses-with-options/",
+      "publishedAt": "2026-08-12T23:40:03.000Z"
+    },
+    {
+      "id": "dc76228426eaa9f1f8e0",
+      "source": "CoinDesk",
+      "title": "Prediction markets should dial back faulty filings for incentives to boost trading: CFTC",
+      "summary": "The U.S. regulator of platforms such as Kalshi and Polymarket suggests the industry is getting into bad compliance habits that may allow for market abuse.",
+      "url": "https://www.coindesk.com/policy/2026/08/12/prediction-markets-should-dial-back-faulty-filings-for-incentives-to-boost-trading-cftc",
+      "publishedAt": "2026-08-12T23:16:53.000Z"
+    },
+    {
+      "id": "b146c09e1c1f22bb9f2a",
+      "source": "CryptoSlate",
+      "title": "Cypherpunk secures a $46M Zcash gain and turns a $4.7M operating loss into $39.4M profit",
+      "summary": "The company had $7.6 million in cash as its biotech subsidiary began seeking resources for Phase 3. The post Cypherpunk secures a $46M Zcash gain and turns a $4.7M operating loss into $39.4M profit appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/cypherpunk-secures-a-46m-zcash-gain-and-turns-a-4-7m-operating-loss-into-39-4m-profit/",
+      "publishedAt": "2026-08-12T22:30:49.000Z"
+    },
+    {
+      "id": "cfcb8e764afe4145f047",
+      "source": "CoinDesk",
+      "title": "Securitize falls 20% after earnings miss as tokenization revenue falls short",
+      "summary": "Tokenized assets hit a record and trading activity jumped, but revenue slipped in the firm’s first earnings report since going public.",
+      "url": "https://www.coindesk.com/markets/2026/08/12/securitize-falls-20-after-earnings-miss-as-tokenization-revenue-falls-short",
+      "publishedAt": "2026-08-12T22:26:24.000Z"
+    },
+    {
+      "id": "178985aae5f2d705f84a",
+      "source": "CoinDesk",
+      "title": "Morgan Stanley's infrastructure partner Zerohash rebuffed in pitch to be U.S. trust bank",
+      "summary": "Zerohash, which handles crypto plumbing for Morgan Stanley's E*Trade, said it's planning on re-filing and hoping for a swift resolution.",
+      "url": "https://www.coindesk.com/policy/2026/08/12/morgan-stanley-s-infrastructure-partner-zerohash-rebuffed-in-pitch-to-be-u-s-trust-bank",
+      "publishedAt": "2026-08-12T22:11:09.000Z"
+    },
+    {
+      "id": "470c1a3b5832b5a65d3c",
+      "source": "CryptoSlate",
+      "title": "Bitcoin miner HIVE’s $79M quarter runs into an $80M Swedish tax problem",
+      "summary": "Preliminary revenue reached about $79 million, yet HIVE cannot quantify the possible noncash accrual or its expected losses. The post Bitcoin miner HIVE’s $79M quarter runs into an $80M Swedish tax problem appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-miner-hives-79m-quarter-runs-into-an-80m-swedish-tax-problem/",
+      "publishedAt": "2026-08-12T21:40:19.000Z"
+    },
+    {
+      "id": "42d1eb315bdf74bdfd57",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin Price May Be Battered, but Structural Adoption Story Still Intact: Grayscale",
+      "summary": "Bitcoin Magazine Bitcoin Price May Be Battered, but Structural Adoption Story Still Intact: Grayscale Grayscale has said there are three reasons Bitcoin adoption is set to continue growing — regardless of price. This post Bitcoin Price May Be Battered, but…",
+      "url": "https://bitcoinmagazine.com/news/bitcoin-price-down-but-adoption-to-grow",
+      "publishedAt": "2026-08-12T21:31:30.000Z"
+    },
+    {
+      "id": "ab582663db03ab8b7361",
+      "source": "Decrypt",
+      "title": "The AI-Generated Pattern Hides You From Surveillance Cameras—Including Flock",
+      "summary": "A Kansas City security researcher ran 31 million tests to teach a model how to paint camouflage for the algorithm age.",
+      "url": "https://decrypt.co/375479/ai-generated-pattern-hides-you-surveillance-cameras-flock",
+      "publishedAt": "2026-08-12T21:31:15.000Z"
+    },
+    {
+      "id": "cfd35e48ce9956225a90",
+      "source": "Cointelegraph",
+      "title": "Hawaii crypto ATM ban to take effect on Oct. 1",
+      "summary": "Hawaii will join Minnesota, Tennessee and Indiana in becoming the fourth US state to completely ban the use of cryptocurrency ATMs and kiosks in response to scams.",
+      "url": "https://cointelegraph.com/news/hawaii-crypto-atm-ban-october-enforcement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-12T21:21:17.000Z"
+    },
+    {
+      "id": "97bd933f5577ab83518c",
+      "source": "Bitcoin Magazine",
+      "title": "Goldman Sachs to Acquire NEOS Investments in $2.25B Deal, Adding Bitcoin Income ETFs to Lineup",
+      "summary": "Bitcoin Magazine Goldman Sachs to Acquire NEOS Investments in $2.25B Deal, Adding Bitcoin Income ETFs to Lineup The deal gives the bank a ready-made foothold in Bitcoin-income ETFs space. This post Goldman Sachs to Acquire NEOS Investments in $2.25B Deal,…",
+      "url": "https://bitcoinmagazine.com/news/goldman-sachs-to-acquire-neos-investments",
+      "publishedAt": "2026-08-12T21:20:05.000Z"
+    },
+    {
+      "id": "f461f332f4473f2a3ae8",
+      "source": "The Block",
+      "title": "Hyperliquid treasury Hyperion triples quarterly profits as HYPE holdings rise in value",
+      "summary": "The company's HYPE holdings increased to $133 million during the second quarter, up from $71 million at the end of Q1.",
+      "url": "https://www.theblock.co/news/markets/2026-08-12-hyperliquid-treasury-hyperion-triples-quarterly-profits-as-hype-holdings-rise-in-value-411652",
+      "publishedAt": "2026-08-12T21:19:33.000Z"
+    },
+    {
+      "id": "d218cdc51a3855486c04",
+      "source": "The Block",
+      "title": "SEC clears Franklin Templeton funds to use onchain BENJI system for cash management",
+      "summary": "Franklin Templeton received a no-action letter from the SEC enabling its traditional registered funds to invest in its BENJI/FOBXX fund.",
+      "url": "https://www.theblock.co/news/defi/2026-08-12-sec-clears-franklin-templeton-funds-use-onchain-benji-system-cash-management-411654",
+      "publishedAt": "2026-08-12T21:04:46.000Z"
+    },
+    {
+      "id": "d58209b6a4537b1fb671",
+      "source": "CryptoSlate",
+      "title": "Russia picks Bitcoin, Ethereum and USDT for public trading as retail faces $58,000 cap",
+      "summary": "The Bank of Russia’s proposed gate caps non-qualified residents at ₽300,000 per broker while qualified investors retain broader access. The post Russia picks Bitcoin, Ethereum and USDT for public trading as retail faces $58,000 cap appeared first on…",
+      "url": "https://cryptoslate.com/russia-picks-bitcoin-ethereum-and-usdt-for-public-trading-as-retail-faces-58000-cap/",
+      "publishedAt": "2026-08-12T20:40:31.000Z"
+    },
+    {
+      "id": "70bd97b89ea4fd8a7f82",
+      "source": "Cointelegraph",
+      "title": "Goldman Sachs to acquire ETF manager NEOS in $2.25B deal",
+      "summary": "The deal would add NEOS’ $30 billion ETF business, including Bitcoin- and Ether-linked income funds, to Goldman Sachs Asset Management.",
+      "url": "https://cointelegraph.com/news/goldman-sachs-to-acquire-etf-manager-neos-225b-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-12T20:37:55.000Z"
+    },
+    {
+      "id": "ef864da350638aca172d",
+      "source": "Decrypt",
+      "title": "'Inner Thoughts' of Every Major AI Model Exposed in Massive Exploit",
+      "summary": "Researchers found every major AI provider encrypts reasoning tokens with a single global key—and exploited it to decode 315,320 hidden thinking blocks from public logs, recovering passwords and live API keys along the way.",
+      "url": "https://decrypt.co/375501/inner-thoughts-every-major-ai-model-exposed-exploit",
+      "publishedAt": "2026-08-12T20:31:04.000Z"
+    },
+    {
+      "id": "971fd8332fd050e7eee6",
+      "source": "Cointelegraph",
+      "title": "NYC council announces probe into ‘predatory marketing practices’ on prediction markets",
+      "summary": "Council Speaker Julie Menin sent letters to four companies offering prediction market services to New Yorkers as part of an investigation into their marketing practices.",
+      "url": "https://cointelegraph.com/news/new-york-council-probe-marketing-practices-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-12T20:22:46.000Z"
+    },
+    {
+      "id": "29603927eeb0a7cbf281",
+      "source": "Decrypt",
+      "title": "China’s DeepSeek Upgrades V4 Pro: Claude Fable Is Only 5% Better at 4,500% the Price",
+      "summary": "The April preview got benchmarked to death and landed 18 points behind Anthropic’s flagship. DeepSeek’s own numbers for the finished model tell a very different story.",
+      "url": "https://decrypt.co/375507/china-deepseek-upgrades-v4-pro-claude-fable",
+      "publishedAt": "2026-08-12T20:01:05.000Z"
+    },
+    {
+      "id": "80e9d1aa04984e9033a2",
+      "source": "Decrypt",
+      "title": "SpaceXAI Wants Grok Bot to Do Your Job—But It Needs Access to Your Accounts",
+      "summary": "The AI agent can navigate workplace software and coordinate with other bots, raising questions about security and control.",
+      "url": "https://decrypt.co/375490/spacexai-grok-bot-do-job-needs-access-accounts",
+      "publishedAt": "2026-08-12T19:31:04.000Z"
+    },
     {
       "id": "fee0640795dba2ac6df7",
       "source": "CryptoSlate",
@@ -442,14 +602,6 @@
       "publishedAt": "2026-08-12T12:42:58.000Z"
     },
     {
-      "id": "02418571b7536b366839",
-      "source": "CryptoSlate",
-      "title": "SEC and CFTC plans to write crypto rules without Congress – but they can’t make them permanent",
-      "summary": "CFTC Chair Michael Selig said on Aug. 4 that the agency has crypto rule proposals ready and plans to finalize them before the current administration ends, regardless of whether Congress passes the CLARITY Act. SEC Commissioner Hester Peirce has separately…",
-      "url": "https://cryptoslate.com/sec-and-cftc-plans-to-write-crypto-rules-without-congress-but-they-cant-make-them-permanent/",
-      "publishedAt": "2026-08-12T12:30:00.000Z"
-    },
-    {
       "id": "5c9969223742a3dedf9b",
       "source": "Bitcoin Magazine",
       "title": "AI Hyperscalers Are Pricing Bitcoin Miners Off the Grid— Here’s Why Its a Massive Win-Win",
@@ -490,14 +642,6 @@
       "publishedAt": "2026-08-12T11:44:10.000Z"
     },
     {
-      "id": "6285eb3cdf7f24f47017",
-      "source": "CryptoSlate",
-      "title": "Even if Bitcoin rises 30% a year this renewable mining model still loses money as hashrate keeps pace",
-      "summary": "Bitcoin trades near $63,600, below the lowest Bitcoin price researchers tested against a modeled wind-powered mining operation in a new Energy Economics study. At that price level, their model shows no payback within six years under any curtailment scenario…",
-      "url": "https://cryptoslate.com/even-if-bitcoin-rises-30-a-year-this-renewable-mining-model-still-loses-money-as-hashrate-keeps-pace/",
-      "publishedAt": "2026-08-12T11:35:03.000Z"
-    },
-    {
       "id": "634b604e987349d22a16",
       "source": "CoinDesk",
       "title": "Russia moves to restrict retail crypto trading to bitcoin, ether and USDT",
@@ -512,14 +656,6 @@
       "summary": "Your day-ahead look for Aug. 12, 2026",
       "url": "https://www.coindesk.com/daybook-us/2026/08/12/xrp-trading-could-get-spicy-after-cpi-report-as-futures-bets-hit-highest-since-october",
       "publishedAt": "2026-08-12T11:15:00.000Z"
-    },
-    {
-      "id": "c44e08bbd897489088c5",
-      "source": "CryptoSlate",
-      "title": "Harmony weighs a full blockchain rollback after unauthorized minting floods exchanges with billions in ONE",
-      "summary": "A validator patch closes the reported receipt flaws while the excess supply and any rollback remain unresolved. The post Harmony weighs a full blockchain rollback after unauthorized minting floods exchanges with billions in ONE appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/harmony-weighs-a-full-blockchain-rollback-after-unauthorized-minting-floods-exchanges-with-billions-in-one/",
-      "publishedAt": "2026-08-12T10:45:50.000Z"
     },
     {
       "id": "6a7d0e907c46480df093",
@@ -560,142 +696,6 @@
       "summary": "The BOE-led Digital Pound Lab will test trade-finance interoperability, in which exporters receive stablecoins while importers settle in a potential digital pound.",
       "url": "https://www.coindesk.com/business/2026/08/12/bank-of-england-to-test-stablecoin-digital-currency-use-in-cross-border-finance",
       "publishedAt": "2026-08-12T10:17:05.000Z"
-    },
-    {
-      "id": "ce500ac349c6b311a6ad",
-      "source": "Cointelegraph",
-      "title": "Bitcoin miners earn under 0.7% of revenue from fees in new 10-year low",
-      "summary": "Bitcoin miners showed a “concerning” trend of pivoting to AI amid a profit squeeze as transaction-fee income barely bounced from 10-year lows of 0.52% of revenue.",
-      "url": "https://cointelegraph.com/markets/bitcoin-miners-earn-under-07-of-revenue-from-fees-in-new-10-year-low?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-12T10:06:05.000Z"
-    },
-    {
-      "id": "dbf1613d25da25bedaec",
-      "source": "CryptoSlate",
-      "title": "Twenty One’s $2.8 billion Bitcoin pile is worth far more than its stock, but there’s a catch",
-      "summary": "$486.5 million of converts lock up 16,116 BTC while the new CEO pursues operating and credit businesses. The post Twenty One’s $2.8 billion Bitcoin pile is worth far more than its stock, but there’s a catch appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/twenty-ones-2-8-billion-bitcoin-pile-is-worth-far-more-than-its-stock-but-theres-a-catch/",
-      "publishedAt": "2026-08-12T09:55:30.000Z"
-    },
-    {
-      "id": "911a6b45fb1fe9303c04",
-      "source": "CoinDesk",
-      "title": "CoreWeave surges 16% on $2.58 billion revenue quarter as AI infrastructure demand eclipses crypto",
-      "summary": "Booming AI demand sends CRWV up 16% and lifts IREN and CIFR as investors favor computing infrastructure over crypto.",
-      "url": "https://www.coindesk.com/markets/2026/08/12/coreweave-surges-16-on-usd2-58-billion-revenue-quarter-as-ai-infrastructure-demand-eclipses-crypto",
-      "publishedAt": "2026-08-12T09:41:52.000Z"
-    },
-    {
-      "id": "f5e2fc62ba1ba65b983d",
-      "source": "CoinDesk",
-      "title": "Fidelity moves to add staking, quarterly payouts to near $900 million ether ETF",
-      "summary": "The fund would keep 85% of gross staking rewards, with the remaining 15% going to service providers.",
-      "url": "https://www.coindesk.com/business/2026/08/12/fidelity-moves-to-add-staking-quarterly-payouts-to-near-usd900-million-ether-etf",
-      "publishedAt": "2026-08-12T09:30:20.000Z"
-    },
-    {
-      "id": "7fdfaac8beae3e656a64",
-      "source": "Decrypt",
-      "title": "CFTC Invokes Emergency Powers to Keep Kalshi Trading Despite New York Suit",
-      "summary": "Kalshi triggered the order, notifying the agency of a market emergency after New York moved to bar its contracts nationwide.",
-      "url": "https://decrypt.co/375387/cftc-invokes-emergency-powers-to-keep-kalshi-trading-despite-new-york-suit",
-      "publishedAt": "2026-08-12T09:22:12.000Z"
-    },
-    {
-      "id": "c30f5737aeb060db3517",
-      "source": "Cointelegraph",
-      "title": "Crypto companies urge AI firms to give Bitcoin developers early access",
-      "summary": "The Bitcoin Policy Institute and other industry participants urged AI companies to offer early access to their frontier models to aid Bitcoin and open-source developers in their cybersecurity efforts.",
-      "url": "https://cointelegraph.com/news/crypto-companies-ai-firms-bitcoin-developers-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-12T09:03:01.000Z"
-    },
-    {
-      "id": "9984b32cf91d656e7df4",
-      "source": "CoinDesk",
-      "title": "One overlooked group has added $1.78 billion of selling pressure to bitcoin market",
-      "summary": "Public miners are an underappreciated source of supply hitting the market right at the margin.",
-      "url": "https://www.coindesk.com/markets/2026/08/12/one-overlooked-group-has-added-usd1-78-billion-of-selling-pressure-to-bitcoin-market",
-      "publishedAt": "2026-08-12T08:53:23.000Z"
-    },
-    {
-      "id": "4b394c87aab0e46581a7",
-      "source": "The Block",
-      "title": "Australian regulator takes down Yepbit websites as investors report blocked withdrawals",
-      "summary": "Australia's ASIC took down Yepbit websites and denied the platform's false claims that the regulator had frozen investor funds.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-12-australian-regulator-takes-down-yepbit-websites-411538",
-      "publishedAt": "2026-08-12T08:26:21.000Z"
-    },
-    {
-      "id": "6cf63b76ea300aaa1f21",
-      "source": "The Block",
-      "title": "FlightAware drops lawsuit against Kalshi one day after filing",
-      "summary": "The flight tracker previously claimed that Kalshi improperly used its data and trademark to run prediction markets on flight cancellations.",
-      "url": "https://www.theblock.co/news/business/2026-08-12-flightaware-drops-kalshi-lawsuit-411534",
-      "publishedAt": "2026-08-12T07:50:34.000Z"
-    },
-    {
-      "id": "366e3de843288ec6f1ca",
-      "source": "Cointelegraph",
-      "title": "Inside the fake crypto startup that fooled North Korean IT workers",
-      "summary": "Suspected North Korean IT workers joined a fake crypto startup — without realizing their every move was being tracked to extract valuable intel.",
-      "url": "https://cointelegraph.com/magazine/fake-crypto-startup-fooled-north-korean-it-workers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-12T07:34:58.000Z"
-    },
-    {
-      "id": "2e51f3565beb09e0d92b",
-      "source": "CoinDesk",
-      "title": "Live updates: AI stocks surge on Q2 beats, bitcoin falls below $64,000 as inflation hits estimates",
-      "summary": "Blockchain data shows the Japanese treasury firm moved the bitcoin between wallets it controls, not to an exchange, so the transfer isn't a sale despite its $1.4 billion paper loss.",
-      "url": "https://www.coindesk.com/tech/2026/08/12/live-updates-bitcoin-at-usd63-600-as-japan-s-metaplanet-moves-3-881-btc-between-wallets",
-      "publishedAt": "2026-08-12T07:04:53.000Z"
-    },
-    {
-      "id": "0e5e414e255f8fcb61fa",
-      "source": "The Block",
-      "title": "Harmony confirms exploit involving unauthorized minting of 4 billion ONE tokens",
-      "summary": "X user Juiceberg reported earlier that an attacker had minted four billion ONE tokens without authorization.",
-      "url": "https://www.theblock.co/news/defi/2026-08-12-harmony-confirms-exploit-one-token-411527",
-      "publishedAt": "2026-08-12T06:24:39.000Z"
-    },
-    {
-      "id": "7864cbf0556d45e01f6b",
-      "source": "Cointelegraph",
-      "title": "Harmony considers rollback after suspected exploit inflates ONE supply",
-      "summary": "Harmony is working with exchanges to freeze funds and is preparing a patch after claims that 2.8 billion unauthorized ONE hit trading platforms.",
-      "url": "https://cointelegraph.com/news/armony-rollback-alleged-one-token-mint?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-12T06:02:52.000Z"
-    },
-    {
-      "id": "5beead94c69032cb1cc3",
-      "source": "CoinDesk",
-      "title": "Crypto.com rolls out tokenized stock derivatives as crypto exchanges push into equities",
-      "summary": "The exchange is joining a tokenized stock market that has grown 600% in a year, though its products offer price exposure rather than share ownership.",
-      "url": "https://www.coindesk.com/business/2026/08/12/crypto-com-rolls-out-tokenized-stock-derivatives-as-crypto-exchanges-push-into-equities",
-      "publishedAt": "2026-08-12T06:00:00.000Z"
-    },
-    {
-      "id": "00146726bcac44bfba1f",
-      "source": "The Block",
-      "title": "Bitwise cuts 14% of staff as crypto layoffs mount during market downturn",
-      "summary": "Bitwise CEO Hunter Horsley told The Block that the crypto asset manager trimmed its global team to around 155 last week.",
-      "url": "https://www.theblock.co/news/business/2026-08-12-bitwise-layoffs-411522",
-      "publishedAt": "2026-08-12T05:52:59.000Z"
-    },
-    {
-      "id": "8d39d6a4dba20299a38c",
-      "source": "CoinDesk",
-      "title": "Here's what bitcoin and ether traders are doing ahead of the binary U.S. CPI print",
-      "summary": "Bitcoin and ether are stuck in a tight range ahead of the CPI. Here’s how savvy traders are positioning for the pivotal release.",
-      "url": "https://www.coindesk.com/business/2026/08/12/here-s-what-bitcoin-and-ether-traders-are-doing-ahead-of-the-binary-u-s-cpi-print",
-      "publishedAt": "2026-08-12T05:26:55.000Z"
-    },
-    {
-      "id": "f5aef147842eb39ea815",
-      "source": "CoinDesk",
-      "title": "Harmony’s ONE dives 40% after an attack appears to mint tokens equal to quarter of supply",
-      "summary": "Harmony said in Asian morning hours it is working with exchanges to freeze funds and preparing a software fix.",
-      "url": "https://www.coindesk.com/markets/2026/08/12/harmony-s-one-falls-26-after-attacker-allegedly-mints-4-billion-tokens",
-      "publishedAt": "2026-08-12T05:18:40.000Z"
     }
   ]
 }
