@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T03:01:59.773Z",
+  "generatedAt": "2026-08-14T07:54:08.091Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 40,
+      "itemCount": 39,
       "error": null
     },
     {
@@ -57,6 +57,62 @@
     }
   ],
   "items": [
+    {
+      "id": "889fd1ff3981c47ae5ba",
+      "source": "CryptoSlate",
+      "title": "With violent crypto home invasions surging, a data breach exposing over 10,000 Trezor owners puts physical safety on the line",
+      "summary": "A shipping-provider breach revealed customer identities and delivery locations, creating targeted phishing and physical-security risks. The post With violent crypto home invasions surging, a data breach exposing over 10,000 Trezor owners puts physical safety…",
+      "url": "https://cryptoslate.com/with-violent-crypto-home-invasions-surging-a-data-breach-exposing-over-10000-trezor-owners-puts-physical-safety-on-the-line/",
+      "publishedAt": "2026-08-14T07:50:01.000Z"
+    },
+    {
+      "id": "ad649c7dd15dace15107",
+      "source": "CoinDesk",
+      "title": "Cluster of headwinds weigh on bitcoin. XRP teeters near $1",
+      "summary": "Top cryptocurrencies nurse losses as regulatory picture sours. ETF flows and traditional markets offer little support.",
+      "url": "https://www.coindesk.com/markets/2026/08/14/cluster-of-headwinds-weigh-on-bitcoin-xrp-teeters-near-usd1",
+      "publishedAt": "2026-08-14T07:14:37.000Z"
+    },
+    {
+      "id": "378bf8fea24c41b57c38",
+      "source": "CoinDesk",
+      "title": "Bitcoin holders Strategy and Metaplanet face stock-index exclusion under MSCI’s new proposal",
+      "summary": "A new consultation targets \"non-operating companies\" broadly. Two familiar names still land on the deletion list.",
+      "url": "https://www.coindesk.com/markets/2026/08/14/bitcoin-holders-strategy-and-metaplanet-face-stock-index-exclusion-under-msci-s-new-proposal",
+      "publishedAt": "2026-08-14T06:20:54.000Z"
+    },
+    {
+      "id": "050efdf0d67365028d2b",
+      "source": "CoinDesk",
+      "title": "JPMorgan shuttered its banking relationship with predictions platform Polymarket: FT",
+      "summary": "According to Financial Times, JPMorgan ended its banking relationship with Polymarket in late 2025 over regulatory concerns.",
+      "url": "https://www.coindesk.com/markets/2026/08/14/jpmorgan-shuttered-its-banking-relationship-with-predictions-platform-polymarket-ft",
+      "publishedAt": "2026-08-14T05:04:52.000Z"
+    },
+    {
+      "id": "c732a13a12fb77ddd32f",
+      "source": "Cointelegraph",
+      "title": "Neutrl pauses NUSD redemptions over undisclosed reserve issue",
+      "summary": "BA Labs had previously classified a proposed NUSD integration as higher risk because of its counterparty, operational and liquidity exposure.",
+      "url": "https://cointelegraph.com/news/neutrl-pauses-nusd-redemptions-over-undisclosed-reserve-issue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-14T04:44:31.000Z"
+    },
+    {
+      "id": "e3e50c7cfe795556af4c",
+      "source": "The Block",
+      "title": "Bitwise mulls tokenizing its Solana staking ETF via Superstate partnership",
+      "summary": "Shares held in tokenized form would carry the same rights as those in book-entry form, though not freely transferable outside the system.",
+      "url": "https://www.theblock.co/news/defi/2026-08-14-bitwise-tokenize-sol-staking-etf-411790",
+      "publishedAt": "2026-08-14T04:09:44.000Z"
+    },
+    {
+      "id": "6b7a603ac4a575e50409",
+      "source": "The Block",
+      "title": "Washington court orders Kalshi to halt most prediction market offerings in state",
+      "summary": "The Washington court, however, allows Kalshi to continue offering commodities, climate, economics and finance-related markets in the state.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-13-washington-court-orders-kalshi-411785",
+      "publishedAt": "2026-08-14T03:21:28.000Z"
+    },
     {
       "id": "644a5b19e2fbdd90f8a4",
       "source": "CryptoSlate",
@@ -402,14 +458,6 @@
       "publishedAt": "2026-08-13T16:18:45.000Z"
     },
     {
-      "id": "91a1e57acf7d00a62e43",
-      "source": "CryptoSlate",
-      "title": "FG Nexus dumped all its Ethereum at a $45 million loss to buy mobile home parks—after earning just $144,000 in staking rewards",
-      "summary": "Its Aug. 12 filing confirms complete liquidation, a separate $41.167 million ETH-loss line and no crypto at quarter-end. The post FG Nexus dumped all its Ethereum at a $45 million loss to buy mobile home parks—after earning just $144,000 in staking rewards…",
-      "url": "https://cryptoslate.com/fg-nexus-dumped-all-its-ethereum-at-a-45-million-loss-to-buy-mobile-home-parks-after-earning-just-144000-in-staking-rewards/",
-      "publishedAt": "2026-08-13T16:15:39.000Z"
-    },
-    {
       "id": "71233c99a5945f02732d",
       "source": "Decrypt",
       "title": "Hawaii To Ban Cash Deposits at Crypto ATMs From October",
@@ -648,54 +696,6 @@
       "summary": "Flying Tulip founder Andre Cronje contends that DeFi protocols have evolved into a new financial paradigm of “onchain finance,” but have sacrificed some of their inherent immutability and decentralization.",
       "url": "https://cointelegraph.com/news/defi-doesnt-exist-onchain-finance-andre-cronje?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-13T10:50:24.000Z"
-    },
-    {
-      "id": "9cb08ae87645bc3943d6",
-      "source": "Decrypt",
-      "title": "CEO of Crypto Lender Delio Gets 15 Years Over $49M Fraud",
-      "summary": "A botched search of the platform's server host cost prosecutors the bulk of their case, cutting it from 2,800 alleged victims to about 1,100.",
-      "url": "https://decrypt.co/375531/ceo-of-crypto-lender-delio-gets-15-years-over-49m-fraud",
-      "publishedAt": "2026-08-13T10:16:50.000Z"
-    },
-    {
-      "id": "e87ec0429b463cfdf74d",
-      "source": "CoinDesk",
-      "title": "MUFG to test real-time blockchain settlement for Japanese government bond trades",
-      "summary": "MUFG is preparing a proof-of-concept for onchain JGB transactions using the Canton network.",
-      "url": "https://www.coindesk.com/business/2026/08/13/mufg-to-test-real-time-blockchain-settlement-for-japanese-government-bond-trades",
-      "publishedAt": "2026-08-13T10:15:32.000Z"
-    },
-    {
-      "id": "dfa9d6c36ae7e5b56145",
-      "source": "Cointelegraph",
-      "title": "Binance bStocks pass xStocks as second-largest tokenized stock issuer",
-      "summary": "Binance bStocks became the second-largest tokenized stock issuer less than two months after launch, narrowly ahead of Kraken’s xStocks.",
-      "url": "https://cointelegraph.com/news/binance-bstocks-second-largest-tokenized-stock-issuer?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-13T09:53:36.000Z"
-    },
-    {
-      "id": "98d047fa65d5a04e64bd",
-      "source": "CoinDesk",
-      "title": "Brazil’s largest bitcoin treasury firm plans ETF with 95% allocation to Strategy's STRC",
-      "summary": "DIGY11 aims for annual distributions matching Brazil’s interbank rate plus 3–5 percentage points, net of costs, though investors' actual returns are not guaranteed.",
-      "url": "https://www.coindesk.com/business/2026/08/13/brazil-s-largest-bitcoin-treasury-firm-plans-etf-with-95-allocation-to-strategy-s-strc",
-      "publishedAt": "2026-08-13T09:39:52.000Z"
-    },
-    {
-      "id": "fc296b8e1664d533b3a1",
-      "source": "Cointelegraph",
-      "title": "Bitcoin speculators keep BTC price ‘pinned’ below $68.7K: Glassnode",
-      "summary": "Bitcoin’s weakness near range highs stems from short-term holders trying to break even on underwater BTC investments, Glassnode says.",
-      "url": "https://cointelegraph.com/markets/bitcoin-speculators-in-the-red-keep-price-pinned-below-687k-new-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-13T09:37:16.000Z"
-    },
-    {
-      "id": "32a76770503d23724f4b",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin slips back even as Fed rate hike expectations dwindle",
-      "summary": "An in-depth analysis of the U.S. CPI released Wednesday suggests the underlying price pressures remain sticky.",
-      "url": "https://www.coindesk.com/tech/2026/08/13/live-markets-u-s-inflation-is-stickier-than-july-s-mild-cpi-suggests",
-      "publishedAt": "2026-08-13T09:18:19.000Z"
     }
   ]
 }
