@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T18:50:26.595Z",
+  "generatedAt": "2026-08-16T01:59:42.136Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 55,
       "error": null
     },
     {
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "64e10ae9eb7f857d36b8",
+      "source": "The Block",
+      "title": "JPMorgan cut Polymarket’s banking ties in October but still wants a role in a potential IPO: FT",
+      "summary": "Polymarket has moved its accounts to a lender the report could not identify but says it still maintains a \"close, active relationship\" with JPMorgan.",
+      "url": "https://www.theblock.co/news/business/2026-08-15-jpmorgan-cut-polymarkets-banking-ties-in-october-but-still-wants-a-role-in-a-potential-ipo-ft-411929",
+      "publishedAt": "2026-08-15T21:51:41.000Z"
+    },
+    {
+      "id": "4fd5704f812ca95d8102",
+      "source": "CryptoSlate",
+      "title": "Trump to meet Coinbase, Ripple and crypto leaders as CLARITY Act odds collapse to 10%",
+      "summary": "President Donald Trump and the heads of the SEC and CFTC are expected to meet crypto and prediction-market executives at the White House next week as the industry’s biggest legislative priority faces dwindling odds of becoming law this year. According to…",
+      "url": "https://cryptoslate.com/trump-to-meet-coinbase-ripple-and-crypto-leaders-as-clarity-act-odds-collapse-to-10/",
+      "publishedAt": "2026-08-15T20:40:13.000Z"
+    },
+    {
+      "id": "ea27ae08af9cca5236f1",
+      "source": "CryptoSlate",
+      "title": "Crypto crash liquidations face massive data gap as public records contradict $18B Solana claim",
+      "summary": "The paper trail instead reveals Binance pricing failures, on-chain ADL and a disclosure gap regulators have yet to close. The post Crypto crash liquidations face massive data gap as public records contradict $18B Solana claim appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/crypto-crash-liquidations-face-massive-data-gap-as-public-records-contradict-18b-solana-claim/",
+      "publishedAt": "2026-08-15T19:30:14.000Z"
+    },
+    {
+      "id": "5e0e7a613f343c1499a5",
+      "source": "Cointelegraph",
+      "title": "Bybit adds Unitree, Moonshot AI to pre-IPO perpetuals lineup",
+      "summary": "The additions come as Bybit’s TradFi perpetuals lineup grows to more than 200 products spanning equities, ETFs, commodities, indices and private companies.",
+      "url": "https://cointelegraph.com/news/bybit-launches-unitree-pre-ipo-perpetual-as-crypto-platforms-push-into-private-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-15T19:27:29.000Z"
+    },
     {
       "id": "c6c7bd0e2378a98a6821",
       "source": "The Block",
@@ -264,22 +296,6 @@
       "summary": "Lookonchain tied three loss-making Bored Ape sales to the trade, but the public record does not trace the proceeds into margin. The post Machi Big Brother sells 3 Bored Apes to cut his Ethereum long in 52%, but liquidation moved to just $22 away appeared…",
       "url": "https://cryptoslate.com/machi-big-brother-ethereum-long-was-cut-52-but-liquidation-moved-to-just-22-away/",
       "publishedAt": "2026-08-15T04:00:13.000Z"
-    },
-    {
-      "id": "4308c1e18d2918a6d04e",
-      "source": "CryptoSlate",
-      "title": "CyberWallet users have until Aug. 15 before crypto withdrawals become a smart contract recovery job",
-      "summary": "Tokens stay on-chain, but Cyber says post-cutoff recovery requires direct contracts and will receive no support. The post CyberWallet users have until Aug. 15 before crypto withdrawals become a smart contract recovery job appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/cyberwallet-users-have-until-aug-15-before-crypto-withdrawals-become-a-smart-contract-recovery-job/",
-      "publishedAt": "2026-08-15T02:30:39.000Z"
-    },
-    {
-      "id": "99bca73dedf9ab483bfe",
-      "source": "CryptoSlate",
-      "title": "A Bitcoin treasury with $67 million in BTC has just $5,397 in cash and needs money immediately",
-      "summary": "A $7.38 million working-capital deficit leaves the treasury holder dependent on new funding despite its 1,145.4 BTC reserve. The post A Bitcoin treasury with $67 million in BTC has just $5,397 in cash and needs money immediately appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/a-bitcoin-treasury-with-67-million-in-btc-has-just-5397-in-cash-and-needs-money-immediately/",
-      "publishedAt": "2026-08-15T01:00:31.000Z"
     },
     {
       "id": "1859f13daa435138fed3",
@@ -680,22 +696,6 @@
       "summary": "Spot bitcoin ETFs saw back-to-back outflows for the first time since late July as the largest cryptocurrency wiped out last week's gains and altcoins struggled to find direction.",
       "url": "https://www.coindesk.com/markets/2026/08/14/bitcoin-slips-as-u-s-inflation-fails-to-spark-gains-etfs-see-august-s-first-two-day-drawdown",
       "publishedAt": "2026-08-14T11:06:12.000Z"
-    },
-    {
-      "id": "9c06b0d17b2c10068b20",
-      "source": "The Block",
-      "title": "Strategy, Metaplanet could face MSCI index removal under new proposal",
-      "summary": "An MSCI proposal could see Strategy and Metaplanet removed from its global indexes under a new non-operating company screen.",
-      "url": "https://www.theblock.co/news/business/2026-08-14-strategy-metaplanet-msci-index-proposal-411809",
-      "publishedAt": "2026-08-14T10:57:33.000Z"
-    },
-    {
-      "id": "7f4b5dbee64ee4ff822d",
-      "source": "Cointelegraph",
-      "title": "Bitcoin eyes new August lows as Binance longs face ‘cleanout’",
-      "summary": "Bitcoin futures open interest on Binance fell alongside BTC price as analysis published on CryptoQuant flagged mounting pressure on leveraged longs.",
-      "url": "https://cointelegraph.com/markets/bitcoin-liquidation-cleanout-open-interest-falls-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-14T10:43:57.000Z"
     }
   ]
 }
