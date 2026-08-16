@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T07:03:26.919Z",
+  "generatedAt": "2026-08-16T13:03:58.849Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 55,
+      "itemCount": 34,
       "error": null
     },
     {
@@ -57,6 +57,70 @@
     }
   ],
   "items": [
+    {
+      "id": "bd0622556c729f48c84d",
+      "source": "CryptoSlate",
+      "title": "Record user activity and a collapse in whale selling should send XRP soaring, so why is it still pinned at $1?",
+      "summary": "XRP is back near $1 even as network activity rebounds, whale deposits to Binance collapse, and derivatives exposure builds near recent lows. The token fell to about $0.98 this week before recovering toward $1, according to CryptoSlate data, extending a…",
+      "url": "https://cryptoslate.com/record-user-activity-and-a-collapse-in-whale-selling-should-send-xrp-soaring-so-why-is-it-still-pinned-at-1/",
+      "publishedAt": "2026-08-16T13:00:01.000Z"
+    },
+    {
+      "id": "1fb26d022456caf5c6ff",
+      "source": "CoinDesk",
+      "title": "The stablecoin yield clash that won't go away has banks, crypto battling over tradition",
+      "summary": "The bankers want people kept in lower-yield deposits for the good of the financial system as it's existed for generations, and their argument is gaining ground.",
+      "url": "https://www.coindesk.com/news-analysis/2026/08/14/the-stablecoin-yield-clash-that-won-t-go-away-has-banks-crypto-battling-over-tradition",
+      "publishedAt": "2026-08-16T13:00:00.000Z"
+    },
+    {
+      "id": "26ccae4f669ea3efb2ce",
+      "source": "Cointelegraph",
+      "title": "DefiLlama delayed mobile launch over phishing apps on Apple Store, founder says",
+      "summary": "DefiLlama’s founder said Apple removed one fake app within days after the company documented it draining funds from a small crypto wallet.",
+      "url": "https://cointelegraph.com/news/defillama-delayed-app-launch-fake-phishing-apps-apple?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-16T12:48:09.000Z"
+    },
+    {
+      "id": "f6d46f1db56d2384b4b6",
+      "source": "CryptoSlate",
+      "title": "Texas refuses to sell as its $10 million Bitcoin bet sinks to $6.6 million",
+      "summary": "The state reserve is separately tied to IBIT, while the filing names neither the owning portfolio nor a reliable dollar value. The post Texas refuses to sell as its $10 million Bitcoin bet sinks to $6.6 million appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/texas-refuses-to-sell-as-its-10-million-bitcoin-bet-sinks-to-6-6-million/",
+      "publishedAt": "2026-08-16T12:00:34.000Z"
+    },
+    {
+      "id": "4c8d941189972bd2592a",
+      "source": "CoinDesk",
+      "title": "The 'long bitcoin, short the bankers' era is officially over as TradFi giants embrace digital assets",
+      "summary": "Financial firms are partnering with specialists to build infrastructure, blurring lines between traditional and decentralized finance into a unified sector.",
+      "url": "https://www.coindesk.com/business/2026/08/13/the-long-bitcoin-short-the-bankers-era-is-officially-over-as-tradfi-giants-embrace-digital-assets",
+      "publishedAt": "2026-08-16T12:00:00.000Z"
+    },
+    {
+      "id": "b39aa9454dd1027f17af",
+      "source": "Cointelegraph",
+      "title": "Ethereum devs to narrow 66 proposals tied to Hegotá upgrade",
+      "summary": "The Hegotá upgrade aims to introduce more native privacy for Ethereum applications.",
+      "url": "https://cointelegraph.com/news/ethereum-devs-66-proposals-hegota-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-16T11:12:51.000Z"
+    },
+    {
+      "id": "566c0c856089663c8aa9",
+      "source": "CryptoSlate",
+      "title": "Wall Street finally turned staking into a dividend, now Ethereum and Solana want to shrink it",
+      "summary": "Grayscale's July 17 SEC filings said its Ethereum and Solana staking ETFs would convert staking rewards to cash and distribute them to shareholders at least quarterly, with the changes expected around Aug. 7. Solana and Ethereum are each weighing protocol…",
+      "url": "https://cryptoslate.com/wall-street-finally-turned-staking-into-a-dividend-now-ethereum-and-solana-want-to-shrink-it/",
+      "publishedAt": "2026-08-16T10:40:50.000Z"
+    },
+    {
+      "id": "179c349379814b66f4a3",
+      "source": "CryptoSlate",
+      "title": "Trump-linked World Liberty Financial wins OCC bank approval as $112 million DeFi position sits near liquidation",
+      "summary": "The Office of the Comptroller of the Currency (OCC) gave World Liberty Financial, a DeFi venture associated with President Donald Trump, preliminary conditional approval to charter a national trust bank built around its roughly $4 billion USD1 stablecoin.…",
+      "url": "https://cryptoslate.com/trump-linked-world-liberty-financial-wins-occ-bank-approval-as-112-million-defi-position-sits-near-liquidation/",
+      "publishedAt": "2026-08-16T09:20:53.000Z"
+    },
     {
       "id": "64e10ae9eb7f857d36b8",
       "source": "The Block",
@@ -258,44 +322,12 @@
       "publishedAt": "2026-08-15T10:44:52.000Z"
     },
     {
-      "id": "a9394840c051b43b3be1",
-      "source": "CryptoSlate",
-      "title": "Solana treasury earns $2.5M in staking rewards but had to sell equity to raise $12M in cash for operations",
-      "summary": "Restaked rewards did not supply operating cash, while asset sales, a divestiture and equity financing supported the quarter. The post Solana treasury earns $2.5M in staking rewards but had to sell equity to raise $12M in cash for operations appeared first on…",
-      "url": "https://cryptoslate.com/solana-treasury-earns-2-5m-in-staking-rewards-but-had-to-sell-equity-to-raise-12m-in-cash-for-operations/",
-      "publishedAt": "2026-08-15T09:39:17.000Z"
-    },
-    {
-      "id": "d45761a0252282c8a47e",
-      "source": "CryptoSlate",
-      "title": "Why a weekend break below $62,500 could unleash a Bitcoin selling wave toward $58,500",
-      "summary": "Bitcoin trades near $62,900 heading into the weekend, having touched an intraday low of $62,538 on Aug. 14. That low effectively tested the $62,500 to $62,560 zone that has held as the floor of a five-week trading range between roughly $62,000 and $66,000.…",
-      "url": "https://cryptoslate.com/bitcoin-has-nowhere-to-hide-this-weekend-if-62500-breaks/",
-      "publishedAt": "2026-08-15T09:30:33.000Z"
-    },
-    {
       "id": "147caead9db51bcb30eb",
       "source": "Cointelegraph",
       "title": "Galaxy lowers CLARITY Act odds to 10%",
       "summary": "Galaxy cited unresolved ethics, stablecoin yield and developer protection issues, along with a narrow Senate window when lawmakers return in September.",
       "url": "https://cointelegraph.com/news/galaxy-lowers-clarity-act-odds-10?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-15T08:40:59.000Z"
-    },
-    {
-      "id": "7c314f4d281860d2db1c",
-      "source": "CryptoSlate",
-      "title": "Bitcoin erased $118 million from Abu Dhabi’s ETF holdings, but its sovereign funds kept every share",
-      "summary": "Two Abu Dhabi sovereign investors kept their BlackRock Bitcoin ETF holdings unchanged through the second quarter, retaining $764 million of exposure even as the cryptocurrency remained mired in one of its steepest annual declines. Mubadala Investment Company…",
-      "url": "https://cryptoslate.com/bitcoin-erased-118-million-from-abu-dhabis-etf-holdings-but-its-sovereign-funds-kept-every-share/",
-      "publishedAt": "2026-08-15T06:00:24.000Z"
-    },
-    {
-      "id": "255fa8d5e2e8565bf7ef",
-      "source": "CryptoSlate",
-      "title": "Machi Big Brother sells 3 Bored Apes to cut his Ethereum long in 52%, but liquidation moved to just $22 away",
-      "summary": "Lookonchain tied three loss-making Bored Ape sales to the trade, but the public record does not trace the proceeds into margin. The post Machi Big Brother sells 3 Bored Apes to cut his Ethereum long in 52%, but liquidation moved to just $22 away appeared…",
-      "url": "https://cryptoslate.com/machi-big-brother-ethereum-long-was-cut-52-but-liquidation-moved-to-just-22-away/",
-      "publishedAt": "2026-08-15T04:00:13.000Z"
     },
     {
       "id": "1859f13daa435138fed3",
@@ -664,38 +696,6 @@
       "summary": "It seems Tether passed, putting an end to the longest-running open criticism of the leading stablecoin company.",
       "url": "https://decrypt.co/375625/morning-minute-tether-finally-gets-an-audit",
       "publishedAt": "2026-08-14T11:45:39.000Z"
-    },
-    {
-      "id": "3d5458a709b286036516",
-      "source": "CoinDesk",
-      "title": "Fear is fading across markets, be it bitcoin, stocks, gold or bonds",
-      "summary": "Your day-ahead look for Aug. 14, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/08/14/volatility-exits-crypto-tradfi-markets-even-as-u-s-iran-risks-linger-sovereign-debt-rises",
-      "publishedAt": "2026-08-14T11:33:50.000Z"
-    },
-    {
-      "id": "3e8e92def6b969fcd568",
-      "source": "Cointelegraph",
-      "title": "Shinhan Asset Management partners with Plume on tokenized fund pilot",
-      "summary": "Shinhan Asset Management and Plume will test a tokenized fund using a Korean won-denominated ultra-short-term bond fund as its underlying asset.",
-      "url": "https://cointelegraph.com/news/shinhan-partners-plume-tokenized-fund-experiment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-14T11:23:28.000Z"
-    },
-    {
-      "id": "ead309014c265d1cd41b",
-      "source": "CoinDesk",
-      "title": "Trump family's World Liberty Financial delay plans to sell Maldives resort token",
-      "summary": "The token’s sale has been pushed back due to the Iran war disrupting travel in the region.",
-      "url": "https://www.coindesk.com/business/2026/08/14/trump-family-s-world-liberty-financial-delay-plans-to-sell-maldives-resort-token",
-      "publishedAt": "2026-08-14T11:07:49.000Z"
-    },
-    {
-      "id": "66aae999305ab39f68c8",
-      "source": "CoinDesk",
-      "title": "Bitcoin slips as U.S. inflation fails to spark gains, ETFs see August's first two-day drawdown",
-      "summary": "Spot bitcoin ETFs saw back-to-back outflows for the first time since late July as the largest cryptocurrency wiped out last week's gains and altcoins struggled to find direction.",
-      "url": "https://www.coindesk.com/markets/2026/08/14/bitcoin-slips-as-u-s-inflation-fails-to-spark-gains-etfs-see-august-s-first-two-day-drawdown",
-      "publishedAt": "2026-08-14T11:06:12.000Z"
     }
   ]
 }
