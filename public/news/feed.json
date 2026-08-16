@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T13:03:58.849Z",
+  "generatedAt": "2026-08-16T18:49:41.185Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,102 @@
     }
   ],
   "items": [
+    {
+      "id": "370d023a229d23b1e094",
+      "source": "CoinDesk",
+      "title": "The SEC meeting that wasn't: State of Crypto",
+      "summary": "There were hopes that regulators could move if the Clarity Act didn't advance, but those, too, may be paused.",
+      "url": "https://www.coindesk.com/policy/2026/08/16/the-sec-meeting-that-wasn-t-state-of-crypto",
+      "publishedAt": "2026-08-16T18:30:00.000Z"
+    },
+    {
+      "id": "0d7fb082bbde7051e8b8",
+      "source": "CryptoSlate",
+      "title": "This Nasdaq-listed Bitcoin treasury diluted shareholders 18-fold to survive a $212 million crypto loss without selling its stash",
+      "summary": "The 7,500-BTC holder’s filing separates a noncash crypto loss from equity sales that supported its operating runway. The post This Nasdaq-listed Bitcoin treasury diluted shareholders 18-fold to survive a $212 million crypto loss without selling its stash…",
+      "url": "https://cryptoslate.com/gd-cultures-share-count-jumped-18-fold-as-bitcoin-loss-hit-212-million/",
+      "publishedAt": "2026-08-16T17:55:52.000Z"
+    },
+    {
+      "id": "883da2b1e0aadeeb034e",
+      "source": "The Block",
+      "title": "Wallet provider SafePal says data breach exposed personal info of nearly 40,000 customers",
+      "summary": "SafePal said it found the root cause of the breach recently, though customers had posted online about being targeted by phishing attempts as early as July.",
+      "url": "https://www.theblock.co/news/business/2026-08-16-wallet-provider-safepal-says-data-breach-exposed-personal-info-of-nearly-40000-customers-411934",
+      "publishedAt": "2026-08-16T17:18:38.000Z"
+    },
+    {
+      "id": "7d4665327937f5fe96b1",
+      "source": "CryptoSlate",
+      "title": "Cboe pushes for 3x Bitcoin and Ethereum ETFs after 2x crypto funds suffer losses of up to 96%",
+      "summary": "The proposal remains pending, while ETHU's sponsor-reported -96.15% average annualized NAV figure through June 30 shows the stakes. The post Cboe pushes for 3x Bitcoin and Ethereum ETFs after 2x crypto funds suffer losses of up to 96% appeared first on…",
+      "url": "https://cryptoslate.com/cboe-pushes-for-3x-bitcoin-etf-after-2x-crypto-funds-suffer-losses-of-up-to-96/",
+      "publishedAt": "2026-08-16T16:50:42.000Z"
+    },
+    {
+      "id": "a5658563fd6babfa23d6",
+      "source": "Decrypt",
+      "title": "Gemini 3.7 Flash Review: Google's Cheap Model Isn’t Dumb Anymore",
+      "summary": "Three weeks after a Flash release that couldn't produce a working file, Google's budget tier zero-shots a playable game. It still can't reason, and a free 27B model still writes better.",
+      "url": "https://decrypt.co/375730/gemini-3-7-flash-review-google-cheap-model",
+      "publishedAt": "2026-08-16T16:00:05.000Z"
+    },
+    {
+      "id": "32b373a4de46fa6c4a59",
+      "source": "CoinDesk",
+      "title": "Crypto investors are looking past market-cap rankings and back to fundamentals",
+      "summary": "Investors are starting to judge crypto tokens on usage, economics and value capture rather than market-cap rank, industry executives said.",
+      "url": "https://www.coindesk.com/business/2026/08/16/crypto-investors-are-looking-past-market-cap-rankings-and-back-to-fundamentals",
+      "publishedAt": "2026-08-16T16:00:00.000Z"
+    },
+    {
+      "id": "799d2584605b7345af71",
+      "source": "CryptoSlate",
+      "title": "Over 1.3 million staked tokens remain stranded onchain after a major validator missed its deadline to exit Aztec",
+      "summary": "Its provider feed showed 16 delegations after Aug. 15, while the cost of missing its Aug. 5 request remains unknown. The post Over 1.3 million staked tokens remain stranded onchain after a major validator missed its deadline to exit Aztec appeared first on…",
+      "url": "https://cryptoslate.com/over-1-3-million-staked-tokens-remain-stranded-onchain-after-a-major-validator-missed-its-deadline-to-exit-aztec/",
+      "publishedAt": "2026-08-16T15:30:52.000Z"
+    },
+    {
+      "id": "84e9683d8cceebce3642",
+      "source": "The Block",
+      "title": "Hackers exploited macOS Screen Sharing flaw to install Monero miners, Dutch cyber agency says",
+      "summary": "U.S. officials rated the severity of the vulnerability a critical 9.8/10 on the CVSS scale, and experts are warning users to update their devices.",
+      "url": "https://www.theblock.co/news/defi/2026-08-16-hackers-exploited-macos-screen-sharing-flaw-to-install-monero-miners-dutch-cyber-agency-says-411932",
+      "publishedAt": "2026-08-16T15:07:00.000Z"
+    },
+    {
+      "id": "8680ea7f69f84a4ca212",
+      "source": "CoinDesk",
+      "title": "Crypto wallet SafePal reveals a data breach exposing nearly 40,000 customers' order info",
+      "summary": "While the data breach exposed the personal order details of thousands of customers, all private keys, seed phrases, and crypto assets remain completely safe.",
+      "url": "https://www.coindesk.com/tech/2026/08/16/crypto-wallet-safepal-reveals-a-data-breach-exposing-nearly-40-000-customers-order-info",
+      "publishedAt": "2026-08-16T14:02:32.000Z"
+    },
+    {
+      "id": "76de3a3938b92ea3d6db",
+      "source": "Decrypt",
+      "title": "People Are Turning to AI for Mental Health, California Wants It Banned",
+      "summary": "A California bill is awaiting an Assembly vote to \"place guardrails\" around AI chatbots and prevent them from acting as therapists.",
+      "url": "https://decrypt.co/375725/california-bill-ban-ai-chatbots-therapy-mental-health",
+      "publishedAt": "2026-08-16T14:01:03.000Z"
+    },
+    {
+      "id": "220a9ac02ec8bc05ebbd",
+      "source": "CryptoSlate",
+      "title": "A $48 billion Bitcoin leverage trap is about to trigger a massive forced exit the moment price boundaries break",
+      "summary": "Small positive offshore funding exposes longs on a drop, while CME leveraged funds’ net short creates an upside squeeze channel. The post A $48 billion Bitcoin leverage trap is about to trigger a massive forced exit the moment price boundaries break appeared…",
+      "url": "https://cryptoslate.com/a-48-billion-bitcoin-leverage-trap-is-about-to-trigger-a-massive-forced-exit-the-moment-price-boundaries-break/",
+      "publishedAt": "2026-08-16T14:00:32.000Z"
+    },
+    {
+      "id": "f472538aede3b31c71fb",
+      "source": "CoinDesk",
+      "title": "MiCA's cleanup is creating a new scam wave across the European Union",
+      "summary": "Fraudsters impersonating regulators and licensed crypto exchanges to steal funds from users forced to migrate their accounts after the EU's MiCA deadline are on the rise.",
+      "url": "https://www.coindesk.com/business/2026/08/14/mica-s-cleanup-is-creating-a-new-scam-wave-across-the-european-union",
+      "publishedAt": "2026-08-16T14:00:00.000Z"
+    },
     {
       "id": "bd0622556c729f48c84d",
       "source": "CryptoSlate",
@@ -162,14 +258,6 @@
       "publishedAt": "2026-08-15T18:37:59.000Z"
     },
     {
-      "id": "5a1bf15420d0a03ec406",
-      "source": "CryptoSlate",
-      "title": "A staked Ethereum ETF processed $48M in redemptions while keeping 86% of ETH locked, 21Shares filing shows",
-      "summary": "Its new filing flags unbonding as a potential constraint but reports no failed or delayed redemption. The post A staked Ethereum ETF processed $48M in redemptions while keeping 86% of ETH locked, 21Shares filing shows appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/teth-redemptions-48-million-86-percent-eth-staked/",
-      "publishedAt": "2026-08-15T17:30:14.000Z"
-    },
-    {
       "id": "1a7b315fe91c9dc87044",
       "source": "Cointelegraph",
       "title": "Tokenized stock holders more than double as monthly volume surges",
@@ -218,14 +306,6 @@
       "publishedAt": "2026-08-15T15:20:19.000Z"
     },
     {
-      "id": "501361620f9048685bbd",
-      "source": "CryptoSlate",
-      "title": "How a public crypto firm’s 4.3% AI gain hides millions in balance sheet losses",
-      "summary": "The filing reports separate company-wide crypto losses but no returns attributable to EMJX-managed capital. The post How a public crypto firm’s 4.3% AI gain hides millions in balance sheet losses appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/how-a-public-crypto-firms-4-3-ai-gain-hides-millions-in-balance-sheet-losses/",
-      "publishedAt": "2026-08-15T15:20:09.000Z"
-    },
-    {
       "id": "a14a22ac58a064bdadc6",
       "source": "CoinDesk",
       "title": "Paul Tudor Jones’ investment firm increases stake in BlackRock's bitcoin ETF after year of selling",
@@ -266,14 +346,6 @@
       "publishedAt": "2026-08-15T13:30:00.000Z"
     },
     {
-      "id": "dd6ab6ca0a38a0f58ff0",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s $16.3 billion Wall Street stress test splits into four positional patterns",
-      "summary": "June 30 snapshots separate unchanged sovereign units, JPMorgan share additions, UBS options and a newly reported Morgan Stanley wrapper. The post Bitcoin’s $16.3 billion Wall Street stress test splits into four positional patterns appeared first on…",
-      "url": "https://cryptoslate.com/bitcoin-etf-holdings-four-position-patterns/",
-      "publishedAt": "2026-08-15T13:20:07.000Z"
-    },
-    {
       "id": "8d6b17cff4405f169138",
       "source": "Decrypt",
       "title": "Trump-Linked World Liberty Gets Conditional Bank Charter for USD1 Stablecoin",
@@ -304,14 +376,6 @@
       "summary": "Centrally controlled, permission-only networks have a role to play in finance, but need a transparent, open base to reap the benefits blockchain technology offers.",
       "url": "https://www.coindesk.com/business/2026/08/15/wall-street-s-private-blockchain-obsession-is-a-race-to-the-bottom-ethereum-advocate-raman-warns",
       "publishedAt": "2026-08-15T12:00:00.000Z"
-    },
-    {
-      "id": "3c15b768e411233dcc43",
-      "source": "CryptoSlate",
-      "title": "Institutional investor Paul Tudor Jones adds 109,446 BlackRock Bitcoin ETF shares while cutting calls by 85%",
-      "summary": "The June 30 snapshot shows a far less call-heavy mix, with reported put equivalents nearly unchanged. The post Institutional investor Paul Tudor Jones adds 109,446 BlackRock Bitcoin ETF shares while cutting calls by 85% appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/institutional-investor-paul-tudor-jones-adds-109446-blackrock-bitcoin-etf-shares-while-cutting-call-equivalents-85/",
-      "publishedAt": "2026-08-15T11:45:34.000Z"
     },
     {
       "id": "bf7e2501d2ad4ebcd052",
@@ -632,70 +696,6 @@
       "summary": "Bank Leumi customers will be able to trade bitcoin, ether and solana through the bank’s investment app from early 2027.",
       "url": "https://www.coindesk.com/markets/2026/08/14/israel-s-largest-bank-partners-with-galaxy-for-crypto-trading",
       "publishedAt": "2026-08-14T13:51:37.000Z"
-    },
-    {
-      "id": "75cfc4404f0e01efde93",
-      "source": "Cointelegraph",
-      "title": "Binance to restrict transactions involving HTX, 10 other crypto platforms",
-      "summary": "Binance said it will stop processing transactions for involving 11 crypto platforms, including HTX, which was recently listed in the EU’s sanctions package targeting Russia.",
-      "url": "https://cointelegraph.com/news/binance-restrict-htx-10-crypto-platforms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-14T13:36:34.000Z"
-    },
-    {
-      "id": "598218cc2b80f26adb11",
-      "source": "Cointelegraph",
-      "title": "Solana’s fee overhaul increases burn and makes resource hogs pay",
-      "summary": "Solana’s proposed fee overhaul would make resource-heavy transactions more expensive while cutting costs for simpler activity, and it increases the amount of SOL burned.",
-      "url": "https://cointelegraph.com/magazine/solana-wants-its-biggest-resource-hogs-to-pay-more?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-14T13:30:00.000Z"
-    },
-    {
-      "id": "84f9a7cec560777c231e",
-      "source": "The Block",
-      "title": "Hyperscale Data sells 685 bitcoin for $43 million to fund Michigan data center",
-      "summary": "Hyperscale Data sold 685 bitcoin for approximately $43 million as it reduced debt and funded its Michigan AI data center.",
-      "url": "https://www.theblock.co/news/business/2026-08-14-hyperscale-data-sells-685-bitcoin-for-43-million-to-fund-michigan-data-center-411827",
-      "publishedAt": "2026-08-14T12:59:18.000Z"
-    },
-    {
-      "id": "6965d02b5243805e602f",
-      "source": "Decrypt",
-      "title": "Ireland’s New AML Strategy Brings ‘Enhanced Checks’ on Private Crypto Wallets",
-      "summary": "The country's first strategy of its kind also brings stricter due diligence for firms dealing with overseas crypto companies.",
-      "url": "https://decrypt.co/375628/irelands-new-aml-strategy-brings-enhanced-checks-on-private-crypto-wallets",
-      "publishedAt": "2026-08-14T12:38:39.000Z"
-    },
-    {
-      "id": "255683c58dbdfed99e75",
-      "source": "The Block",
-      "title": "Norway sovereign wealth fund sees indirect bitcoin exposure hit all-time high, with Strategy accounting for 86%: K33",
-      "summary": "Norges Bank Investment Management also disclosed a new $88 million stake in Ethereum treasury firm Bitmine.",
-      "url": "https://www.theblock.co/news/markets/2026-08-14-norway-sovereign-wealth-fund-indirect-bitcoin-exposure-all-time-high-strategy-k33-411815",
-      "publishedAt": "2026-08-14T12:25:38.000Z"
-    },
-    {
-      "id": "e549fb619abc5c49630c",
-      "source": "The Block",
-      "title": "Kraken parent Payward posts $508 million in Q2 adjusted revenue as growth broadens beyond crypto trading",
-      "summary": "Kraken parent Payward posted $508M in Q2 adjusted revenue, up 17%, as funded accounts grew 42% to 6.6M and volume fell 13% to $310B.",
-      "url": "https://www.theblock.co/news/business/2026-08-14-kraken-parent-payward-508-million-q2-adjusted-revenue-411818",
-      "publishedAt": "2026-08-14T12:21:02.000Z"
-    },
-    {
-      "id": "3a765d5eb7b34a6cd5ac",
-      "source": "Cointelegraph",
-      "title": "Gemini posts $108M Q2 net loss despite 37% revenue growth",
-      "summary": "Credit card and staking revenue drove Gemini’s services growth in Q2 as exchange revenue fell 38% and trading volume dropped by two-thirds.",
-      "url": "https://cointelegraph.com/news/gemini-45m-q2-revenue-financial-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-14T12:02:08.000Z"
-    },
-    {
-      "id": "b4ce37d3db7be8fbb7df",
-      "source": "Decrypt",
-      "title": "Morning Minute: Tether Finally Gets An Audit",
-      "summary": "It seems Tether passed, putting an end to the longest-running open criticism of the leading stablecoin company.",
-      "url": "https://decrypt.co/375625/morning-minute-tether-finally-gets-an-audit",
-      "publishedAt": "2026-08-14T11:45:39.000Z"
     }
   ]
 }
