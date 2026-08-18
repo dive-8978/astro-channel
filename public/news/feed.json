@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T07:08:14.796Z",
+  "generatedAt": "2026-08-18T13:12:03.116Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 34,
       "error": null
     },
     {
@@ -52,11 +52,259 @@
     {
       "name": "Ethereum Foundation",
       "status": "ok",
-      "itemCount": 633,
+      "itemCount": 634,
       "error": null
     }
   ],
   "items": [
+    {
+      "id": "39f5734ce653041fa26f",
+      "source": "CryptoSlate",
+      "title": "Peter Todd reopens Bitcoin’s 21M cap debate because transaction fees make up just 0.5% of miner revenue",
+      "summary": "A viral clip sharpened the clash between fee-funded security and the credibility of a fixed supply. The post Peter Todd reopens Bitcoin’s 21M cap debate because transaction fees make up just 0.5% of miner revenue appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/peter-todd-reopens-bitcoins-21m-cap-debate-because-transaction-fees-make-up-just-0-5-of-miner-revenue/",
+      "publishedAt": "2026-08-18T13:10:46.000Z"
+    },
+    {
+      "id": "45a7c1823f51caabf0d5",
+      "source": "CoinDesk",
+      "title": "Cash App's crypto support expands beyond bitcoin and USDC via MoonPay",
+      "summary": "Eligible Cash App users will be able to use their balances to purchase digital assets offered by MoonPay, which include ether, solana and stablecoin USDT.",
+      "url": "https://www.coindesk.com/business/2026/08/18/cash-app-s-crypto-support-expands-beyond-bitcoin-and-usdc-via-moonpay",
+      "publishedAt": "2026-08-18T13:00:00.000Z"
+    },
+    {
+      "id": "f6c59c1369c294c5c85f",
+      "source": "Cointelegraph",
+      "title": "MoonPay adds Cash App Pay for crypto purchases by US customers",
+      "summary": "Eligible US users can fund MoonPay crypto purchases with Cash App balances as the payments firm expands beyond its core onramp business.",
+      "url": "https://cointelegraph.com/news/moonpay-cash-app-pay-crypto-purchases-us-customers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T13:00:00.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T12:53:39.000Z"
+    },
+    {
+      "id": "75c33b08c095bf361937",
+      "source": "Bitcoin Magazine",
+      "title": "The Pack Is the Painting: Evil Biscuit and the Schizocollage Movement Come to Hong Kong",
+      "summary": "Bitcoin Magazine The Pack Is the Painting: Evil Biscuit and the Schizocollage Movement Come to Hong Kong In 1956, at an exhibition hall in Tokyo, a Japanese artist named Saburō Murakami ran through a row of paper screens, leaving a torn, human-shaped hole in…",
+      "url": "https://bitcoinmagazine.com/culture/the-pack-is-the-painting-evil-biscuit-and-the-schizocollage-movement-come-to-hong-kong",
+      "publishedAt": "2026-08-18T12:45:19.000Z"
+    },
+    {
+      "id": "e2e4e328b300502ac8ec",
+      "source": "Decrypt",
+      "title": "Morning Minute: PUMP Prints First Golden Cross as Revenue Hits Seven-Month High",
+      "summary": "Plus, Ethereum researchers are prioritizing privacy; Robinhood is rolling out agentic trading; and Ansem debuts his own launchpad.",
+      "url": "https://decrypt.co/375856/morning-minute-pump-prints-first-golden-cross-as-revenue-hits-seven-month-high",
+      "publishedAt": "2026-08-18T12:37:02.000Z"
+    },
+    {
+      "id": "663753240bd67455e312",
+      "source": "CoinDesk",
+      "title": "Visa looking for new stablecoin settlement partner after BVNK sale to Mastercard",
+      "summary": "Visa’s request for product (RFP) talks about the need to support a range of stablecoins.",
+      "url": "https://www.coindesk.com/business/2026/08/18/visa-is-looking-for-a-new-stablecoin-settlement-partner-now-that-bvnk-is-owned-by-mastercard",
+      "publishedAt": "2026-08-18T12:20:48.000Z"
+    },
+    {
+      "id": "aeabc692b2031a380e66",
+      "source": "CoinDesk",
+      "title": "Ethereum’s next upgrade breaks the '21,000 gas' rule wallets rely on",
+      "summary": "Sending ETH to a brand-new address will cost more than sending to an existing one, and software built around a flat fee will get the sum wrong.",
+      "url": "https://www.coindesk.com/tech/2026/08/18/ethereum-s-next-upgrade-breaks-the-21-000-gas-rule-wallets-rely-on",
+      "publishedAt": "2026-08-18T12:17:05.000Z"
+    },
+    {
+      "id": "b7e37811d2f53b568429",
+      "source": "The Block",
+      "title": "Citi expects to launch bitcoin custody later this year under its new Custody+ platform",
+      "summary": "The platform also includes real-time asset servicing, instant settlements, liquidity tools, and AI-powered market intelligence.",
+      "url": "https://www.theblock.co/news/business/2026-08-18-citi-bitcoin-custody-412090",
+      "publishedAt": "2026-08-18T12:15:31.000Z"
+    },
+    {
+      "id": "3eae3090848940526456",
+      "source": "CryptoSlate",
+      "title": "Half of Aave’s debt sits in just 9% of positions built around one Ethereum correlation trade",
+      "summary": "Galaxy's Aug. 7 snapshot of Aave V3 Core found 19,073 loans on the protocol after applying standard filters. Fewer than 9% of those positions are using Aave's E-mode setting, account for roughly half of all outstanding debt on the platform, and show an…",
+      "url": "https://cryptoslate.com/half-of-aaves-debt-sits-in-just-9-of-positions-built-around-one-ethereum-correlation-trade/",
+      "publishedAt": "2026-08-18T12:05:39.000Z"
+    },
+    {
+      "id": "bc1b51b8d48b1ebd8a47",
+      "source": "The Block",
+      "title": "Cypherpunk Technologies launches Zcash mining fleet with $33 million Winklevoss deal",
+      "summary": "Cypherpunk Mining is online as of today with roughly 4.2 GSol/s of Equihash hashrate deployed across the US.",
+      "url": "https://www.theblock.co/news/business/2026-08-18-cypherpunk-technologies-launches-zcash-mining-fleet-412071",
+      "publishedAt": "2026-08-18T12:00:00.000Z"
+    },
+    {
+      "id": "6ade0bf92c0e5877ad56",
+      "source": "Decrypt",
+      "title": "Chainalysis Sues US Government Over $94.6M ICE Contract Handed to Rival TRM Labs",
+      "summary": "The bid protest, filed in the U.S. Court of Federal Claims, challenges ICE's sole-source award for blockchain forensic tools, pitting the two biggest names in crypto tracing against each other.",
+      "url": "https://decrypt.co/375843/chainalysis-sues-us-government-ice-contract-trm-labs",
+      "publishedAt": "2026-08-18T11:31:04.000Z"
+    },
+    {
+      "id": "6fa38a3054394578a2ba",
+      "source": "CoinDesk",
+      "title": "The 'crack' in the energy market is wider than ever. Bitcoin might feel it.",
+      "summary": "Your day-ahead look for Aug. 18 2026",
+      "url": "https://www.coindesk.com/daybook-us/2026/08/18/the-crack-in-the-energy-market-is-wider-than-ever-bitcoin-might-feel-it",
+      "publishedAt": "2026-08-18T11:21:51.000Z"
+    },
+    {
+      "id": "ac6180555e17f05b0f1c",
+      "source": "CoinDesk",
+      "title": "South Korea joins more than 30 jurisdictions restricting Polymarket access",
+      "summary": "Regulators rejected Polymarket's defense regarding its P2P nature, arguing the platform manages market rules and facilitates crypto-based gambling activity.",
+      "url": "https://www.coindesk.com/business/2026/08/18/south-korea-joins-more-than-30-jurisdictions-restricting-polymarket-access",
+      "publishedAt": "2026-08-18T11:05:56.000Z"
+    },
+    {
+      "id": "6cb5def6e07077dba30d",
+      "source": "CryptoSlate",
+      "title": "Bitcoin faces its highest Treasury hurdle since 2007 with $22.5B less crypto credit to unwind",
+      "summary": "The US 30-year Treasury yield crossed 5.3% on Aug. 17 for the first time since June 2007, the same day Galaxy published a report showing crypto-collateralized lending down more than $22 billion from its peak. Bitcoin hit an intraday high of $64,610.01 that…",
+      "url": "https://cryptoslate.com/bitcoin-faces-its-highest-treasury-hurdle-since-2007-with-22-5b-less-crypto-credit-to-unwind/",
+      "publishedAt": "2026-08-18T11:00:15.000Z"
+    },
+    {
+      "id": "712297bf5259deb90003",
+      "source": "Cointelegraph",
+      "title": "Kraken launches US-listed stock trading for EEA customers",
+      "summary": "Eligible EEA users can trade conventional US shares alongside more than 700 tokenized xStocks through Kraken’s European entity.",
+      "url": "https://cointelegraph.com/news/kraken-us-stock-trading-eea-customers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T10:53:21.000Z"
+    },
+    {
+      "id": "a1bca59df858beaf5f82",
+      "source": "The Block",
+      "title": "‘The Crypto Program’ promoter deported from Fiji over alleged $165 million Ponzi scheme",
+      "summary": "Fiji deported Edward Zimbardi to the U.S. to face charges over an alleged $165 million crypto Ponzi scheme involving thousands of investors.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-18-the-crypto-program-promoter-deported-from-fiji-over-alleged-165-million-ponzi-scheme-412083",
+      "publishedAt": "2026-08-18T10:49:53.000Z"
+    },
+    {
+      "id": "4418ad420ad347d5125c",
+      "source": "CoinDesk",
+      "title": "Bitcoin pauses at $64,000 as rising yields, oil drag equities lower",
+      "summary": "BTC has dropped 0.6% since midnight UTC as Nasdaq 100 futures slip 1.1%, with the FOMC's July meeting minutes and a White House crypto summit both due Wednesday.",
+      "url": "https://www.coindesk.com/markets/2026/08/18/bitcoin-pauses-at-usd64-000-as-rising-yields-oil-drag-equities-lower",
+      "publishedAt": "2026-08-18T10:38:56.000Z"
+    },
+    {
+      "id": "a59c66ed65227dbb33f0",
+      "source": "The Block",
+      "title": "Curve founder says FATF pressure could make DeFi safer and more decentralized",
+      "summary": "Curve founder Michael Egorov said FATF pressure could push DeFi protocols toward greater decentralization and stronger security.",
+      "url": "https://www.theblock.co/news/defi/2026-08-18-curve-founder-fatf-pressure-could-make-defi-safer-412059",
+      "publishedAt": "2026-08-18T10:34:53.000Z"
+    },
+    {
+      "id": "8fb464d60f5be27d5e2a",
+      "source": "CoinDesk",
+      "title": "Bitcoin scores a rare win over S&P 500 with 2.6% rise versus 0.5% fall",
+      "summary": "BTC outperformed Wall Street on Monday, breaking its recent pattern of lagging behind U.S. stocks.",
+      "url": "https://www.coindesk.com/markets/2026/08/18/bitcoin-scored-a-rare-win-over-s-and-p-500-on-monday",
+      "publishedAt": "2026-08-18T10:01:23.000Z"
+    },
+    {
+      "id": "000617805ac11f418e8d",
+      "source": "CryptoSlate",
+      "title": "Polymarket’s 20% CLARITY Act odds sit on a market one $100K trade could radically reprice",
+      "summary": "An anonymous trader on Polymarket holds a No position on the CLARITY Act worth about $414,895, roughly 2.6 times larger than the $160,200 in liquidity currently available on the market where it sits. CryptoSlate's live market data puts CLARITY Act odds near…",
+      "url": "https://cryptoslate.com/polymarkets-20-clarity-act-odds-sit-on-a-market-one-100k-trade-could-radically-reprice/",
+      "publishedAt": "2026-08-18T09:40:19.000Z"
+    },
+    {
+      "id": "3853728edff4ee6b7297",
+      "source": "The Block",
+      "title": "Blockchain Association backs SEC’s proposal to scrap outdated NMS rules, citing tokenization benefits",
+      "summary": "The rules, established in 2005, have \"failed to achieve their stated purposes,\" the Blockchain Association said.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-18-blockchain-association-backs-secs-proposal-to-scrap-outdated-nms-rules-citing-tokenization-benefits-412069",
+      "publishedAt": "2026-08-18T09:35:26.000Z"
+    },
+    {
+      "id": "8eb32e61e96c67cc90eb",
+      "source": "Cointelegraph",
+      "title": "Bitcoin price spike to $64.5K was ‘low-volume liquidity trap’: Analysis",
+      "summary": "Bitcoin derivatives markets created a short squeeze that took BTC price action 3% higher on Monday.",
+      "url": "https://cointelegraph.com/markets/bitcoin-price-spike-to-645k-was-low-volume-liquidity-trap-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T09:31:15.000Z"
+    },
+    {
+      "id": "0128ed3585d56f269fc0",
+      "source": "Decrypt",
+      "title": "Bitpanda Hit With Europe's First Published MiCA Penalty in Austria",
+      "summary": "Austria's Financial Market Authority fined the Vienna-based exchange 70,000 euros for procedural and disclosure breaches, an early marker of how EU regulators intend to enforce the bloc's new crypto rulebook.",
+      "url": "https://decrypt.co/375841/bitpanda-europe-first-mica-penalty",
+      "publishedAt": "2026-08-18T09:31:04.000Z"
+    },
+    {
+      "id": "e5b53233784ad21a27ba",
+      "source": "Cointelegraph",
+      "title": "China adds 8 banks to digital yuan network as operator count hits 30",
+      "summary": "The newly authorized lenders will begin offering e-CNY services after completing operational and technical preparations.",
+      "url": "https://cointelegraph.com/news/china-adds-8-banks-to-digital-yuan-network-as-operator-count-hits-30?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T08:48:51.000Z"
+    },
+    {
+      "id": "e4ec3b6e0e8ac146d6b0",
+      "source": "Cointelegraph",
+      "title": "South Korea moves to block Polymarket over gambling concerns",
+      "summary": "The Korea Media and Communications Commission said Polymarket’s structure and operations amount to illegal gambling despite its noncustodial design and smart contracts.",
+      "url": "https://cointelegraph.com/news/south-korea-block-polymarket-gambling-concerns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T08:39:57.000Z"
+    },
+    {
+      "id": "1ffb9930fe0f45a37db2",
+      "source": "CryptoSlate",
+      "title": "Bitcoin turned $10,000 into $870,000 in a decade where 87% of active stock funds failed to beat passive rivals",
+      "summary": "Bitcoin returned 87 times over a decade, while only 13% of actively managed US large-cap equity funds beat comparable passive funds' benchmarks through June 30, according to Morningstar data reported by The Wall Street Journal. That rate rose to 27% over the…",
+      "url": "https://cryptoslate.com/bitcoin-turned-10000-into-870000-in-a-decade-where-87-of-active-stock-funds-failed-to-beat-passive-rivals/",
+      "publishedAt": "2026-08-18T08:20:52.000Z"
+    },
+    {
+      "id": "336025b7cdb8c652558b",
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin holds $64,000 as surging yields and rising oil drain risk appetite",
+      "summary": "The U.S. 30-year Treasury yield hit its highest since 2007 and Brent crude topped $91 as the Iran conflict escalates, pressuring stocks. Bitcoin is holding its range, for now.",
+      "url": "https://www.coindesk.com/tech/2026/08/18/live-updates-bitcoin-holds-usd64-000-as-surging-yields-and-oil-drain-risk-appetite",
+      "publishedAt": "2026-08-18T08:16:11.000Z"
+    },
+    {
+      "id": "8de2e08dd13c6ba05a21",
+      "source": "Cointelegraph",
+      "title": "BitBox patches ‘severe’ wallet flaws that could put funds at risk",
+      "summary": "BitBox recommended all users update to firmware version 9.26.5 and said it had received no reports of exploitation or fund losses.",
+      "url": "https://cointelegraph.com/news/bitbox-patches-severe-wallet-firmware-flaws?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T08:07:04.000Z"
+    },
+    {
+      "id": "5ae394651f276c538cc2",
+      "source": "The Block",
+      "title": "Kraken brings US stock trading to European Economic Area customers",
+      "summary": "Kraken has launched US stock trading for eligible customers across all European Economic Area member countries.",
+      "url": "https://www.theblock.co/news/business/2026-08-18-kraken-us-stock-trading-europe-economic-area-412027",
+      "publishedAt": "2026-08-18T08:00:02.000Z"
+    },
+    {
+      "id": "7d14acc9039eb15ff24e",
+      "source": "The Block",
+      "title": "Cathie Wood’s Ark Invest scoops up $15 million in Block Inc shares as stock dips 3%",
+      "summary": "The firm also bought $1 million worth of Securitize shares, which fell over 20% last week following disappointing Q2 results.",
+      "url": "https://www.theblock.co/news/markets/2026-08-18-cathie-wood-ark-invest-15-million-block-inc-412060",
+      "publishedAt": "2026-08-18T07:37:40.000Z"
+    },
     {
       "id": "6df8ce8bf8a8c28ef4c9",
       "source": "CryptoSlate",
@@ -74,14 +322,6 @@
       "publishedAt": "2026-08-18T06:17:53.000Z"
     },
     {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T06:09:35.000Z"
-    },
-    {
       "id": "9752cf20620000eb20fa",
       "source": "CoinDesk",
       "title": "The bitcoin price level where leveraged bulls could get whacked",
@@ -92,7 +332,7 @@
     {
       "id": "c58477ee91f396b88b8a",
       "source": "CoinDesk",
-      "title": "XRP sinks below $1 for first time since 2024 as Korean bank adopts Ripple Payments",
+      "title": "XRP sinks below $1 for first time since 2024 even as Korean bank adopts Ripple Payments",
       "summary": "Jeonbuk Bank will use Ripple’s 24/7 cross-border payment service for business remittances, but it is unknown whether the flows will use XRP or Ripple’s RLUSD stablecoin.",
       "url": "https://www.coindesk.com/markets/2026/08/18/xrp-slips-below-usd1-even-as-korean-regional-bank-adopts-ripple-payments",
       "publishedAt": "2026-08-18T05:34:32.000Z"
@@ -152,6 +392,14 @@
       "summary": "Binance’s bStocks are the second largest tokenized stock issuer just two months after launch, and BitMart’s internal feud erupts into the spotlight ahead of its closure",
       "url": "https://cointelegraph.com/magazine/fabricated-rumors-about-bitmart-founder-binance-bstocks-dominate-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-18T01:28:37.000Z"
+    },
+    {
+      "id": "d6ffa40bebf5d3b2bc2e",
+      "source": "Ethereum Foundation",
+      "title": "Allocation Update - Q2 2026",
+      "summary": "Q2 2026 carried forward our focus on advancing Ethereum’s resilience and capabilities, supporting key work in zero-knowledge proofs, client diversity, formal verification, and open-source tooling. See the list below of the projects and ecosystem efforts…",
+      "url": "https://blog.ethereum.org/en/2026/08/18/allocation-q2-26",
+      "publishedAt": "2026-08-18T00:00:00.000Z"
     },
     {
       "id": "1bdfb141271a625db6c5",
@@ -330,14 +578,6 @@
       "publishedAt": "2026-08-17T18:04:52.000Z"
     },
     {
-      "id": "e08f1c579125e9c21bed",
-      "source": "CryptoSlate",
-      "title": "Bitcoin purchases halted after data breach puts 250,000 crypto users at risk",
-      "summary": "The company has more than 250,000 customers, but it has not disclosed how many were affected. The post Bitcoin purchases halted after data breach puts 250,000 crypto users at risk appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoin-purchases-halted-after-data-breach-puts-250000-crypto-users-at-risk/",
-      "publishedAt": "2026-08-17T17:50:43.000Z"
-    },
-    {
       "id": "e98bc26aaa6b47bcd926",
       "source": "The Block",
       "title": "Bitcoin production slips again in July for CleanSpark, BitFuFu and Canaan",
@@ -376,14 +616,6 @@
       "summary": "Bitcoin Magazine US Treasury Asks For Public Input on Landmark Genius Act Crypto Legislation The U.S. Department of the Treasury is moving fast with crypto regulation, with the government body asking for public comment on the landmark GENIUS Act. In a Monday…",
       "url": "https://bitcoinmagazine.com/news/us-treasury-asks-for-input-on-genius-act",
       "publishedAt": "2026-08-17T16:36:51.000Z"
-    },
-    {
-      "id": "37e8e1e6fd36fa2794af",
-      "source": "CryptoSlate",
-      "title": "Bitcoin Core feature freeze nears as rebase issues hit unencrypted-connection proposal",
-      "summary": "The queue mixes feature proposals, bugs and release administration, so the count alone does not identify what could delay October. The post Bitcoin Core feature freeze nears as rebase issues hit unencrypted-connection proposal appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/merge-conflicts-and-unencrypted-traffic-risks-loom-as-bitcoin-core-prepares-to-lock-down-new-node-features-on-thursday/",
-      "publishedAt": "2026-08-17T16:30:39.000Z"
     },
     {
       "id": "a89d2ce005cccab295b1",
@@ -434,14 +666,6 @@
       "publishedAt": "2026-08-17T15:47:59.000Z"
     },
     {
-      "id": "0604f78e3e061053bb69",
-      "source": "CryptoSlate",
-      "title": "Ethereum’s next major upgrade just slipped to late 2026, forcing a two-week scramble to save its 2027 roadmap",
-      "summary": "EIP-8375 proposes burning one third of selected external gross value while off-bid payments stay invisible. The post Ethereum’s next major upgrade just slipped to late 2026, forcing a two-week scramble to save its 2027 roadmap appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/ethereums-next-major-upgrade-just-slipped-to-late-2026-forcing-a-two-week-scramble-to-save-its-2027-roadmap/",
-      "publishedAt": "2026-08-17T15:35:20.000Z"
-    },
-    {
       "id": "2916dc9832c5e8e857a8",
       "source": "CoinDesk",
       "title": "Compound bets $52 million, new leadership team in switch to institutional focus",
@@ -472,230 +696,6 @@
       "summary": "Bitcoin Magazine Strategy Goes Another Week Without Buying — Or Selling — Bitcoin, Builds Up Cash Reserve Strategy last week sold MSTR shares for approximately $333.7 million and did not buy or sell any Bitcoin. This post Strategy Goes Another Week Without…",
       "url": "https://bitcoinmagazine.com/news/strategy-goes-another-week-without-buying",
       "publishedAt": "2026-08-17T14:23:17.000Z"
-    },
-    {
-      "id": "dfba90b3d5ed69000b39",
-      "source": "CryptoSlate",
-      "title": "Why accepting crypto payments over €1,000 on Bitstamp can reportedly freeze your assets starting tomorrow",
-      "summary": "The customer-posted notice reportedly leaves exchange transfers unaffected, while rejected funds require support to return them to the originator address. The post Why accepting crypto payments over €1,000 on Bitstamp can reportedly freeze your assets…",
-      "url": "https://cryptoslate.com/why-accepting-crypto-payments-over-e1000-on-bitstamp-can-freeze-your-assets-starting-tomorrow/",
-      "publishedAt": "2026-08-17T14:15:11.000Z"
-    },
-    {
-      "id": "97d7ed93427f0e7a7de5",
-      "source": "CoinDesk",
-      "title": "The Coldcard hack proves reputation is not a security model",
-      "summary": "A community built on verification spent five years outsourcing its judgment to one man, writes Foundation CEO Zach Herbert.",
-      "url": "https://www.coindesk.com/opinion/2026/08/17/the-coldcard-hack-proves-reputation-is-not-a-security-model",
-      "publishedAt": "2026-08-17T14:09:46.000Z"
-    },
-    {
-      "id": "5bf665f501e2fd954be2",
-      "source": "CoinDesk",
-      "title": "Tom Lee's Bitmine now owns 4.8% of Ethereum supply after latest ETH purchase",
-      "summary": "The crypto treasury company bought another 9,926 ETH last week, extending a buying streak that began in June 2025.",
-      "url": "https://www.coindesk.com/markets/2026/08/17/tom-lee-s-bitmine-now-owns-4-8-of-ethereum-supply-after-latest-eth-purchase",
-      "publishedAt": "2026-08-17T14:04:21.000Z"
-    },
-    {
-      "id": "3d25e7b82016bca30a36",
-      "source": "CoinDesk",
-      "title": "How a bug in Coldcard’s code went unnoticed for years, leading to $100 million in hacked funds",
-      "summary": "Crypto’s favorite maxim, “don’t trust, verify” wasn’t followed in the case of Coldcard’s code.",
-      "url": "https://www.coindesk.com/tech/2026/08/17/how-a-bug-in-coldcard-s-code-went-unnoticed-for-years-leading-to-usd100-million-in-hacked-funds",
-      "publishedAt": "2026-08-17T13:57:11.000Z"
-    },
-    {
-      "id": "e70c10c85c94ac5542a9",
-      "source": "The Block",
-      "title": "Bitmine adds 9,926 ETH, taking total holdings to roughly $11 billion",
-      "summary": "Bitmine added 9,926 ETH last week, taking holdings to 5.82 million tokens while buybacks reached 20.8 million shares since July.",
-      "url": "https://www.theblock.co/news/business/2026-08-17-bitmine-adds-9926-eth-taking-total-holdings-to-roughly-11-billion-411968",
-      "publishedAt": "2026-08-17T13:53:11.000Z"
-    },
-    {
-      "id": "2595ef4741f6904f98fa",
-      "source": "Decrypt",
-      "title": "Hackers Are Abusing a macOS Screen Sharing Flaw to Secretly Mine Monero",
-      "summary": "The Dutch cyber agency says attackers exploited an authentication flaw in macOS Screen Sharing to gain root access and plant Monero miners, with public proof-of-concept code now circulating.",
-      "url": "https://decrypt.co/375749/hackers-macos-screen-sharing-secretly-mine-monero",
-      "publishedAt": "2026-08-17T13:31:04.000Z"
-    },
-    {
-      "id": "c7782a775aeefb223d4a",
-      "source": "CryptoSlate",
-      "title": "Nasdaq healthcare company promised Bitcoin would safeguard its future – then sold every coin to stay afloat",
-      "summary": "The healthcare-data company reported a $3.41 million working-capital deficit as equity became its clearest disclosed funding path. The post Nasdaq healthcare company promised Bitcoin would safeguard its future – then sold every coin to stay afloat appeared…",
-      "url": "https://cryptoslate.com/nasdaq-healthcare-company-promised-bitcoin-would-safeguard-its-future-then-sold-every-coin-to-stay-afloat/",
-      "publishedAt": "2026-08-17T13:10:35.000Z"
-    },
-    {
-      "id": "ac7920c2f1debc40a5d6",
-      "source": "Decrypt",
-      "title": "Morning Minute: Trump To Meet Crypto, Prediction Market CEOs This Week",
-      "summary": "The meeting comes while progress on the Clarity Act has been delayed and the SEC's latest rulemaking postponed.",
-      "url": "https://decrypt.co/375760/morning-minute-trump-to-meet-crypto-prediction-market-ceos-this-week",
-      "publishedAt": "2026-08-17T13:03:17.000Z"
-    },
-    {
-      "id": "04afb11aaa90b2bb675c",
-      "source": "The Block",
-      "title": "Austria’s FMA fines crypto broker Bitpanda $81,000 in first published MiCA penalty",
-      "summary": "Austria's FMA fined Bitpanda €70,000 in its first published MiCA penalty, citing white paper and marketing disclosure failures.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-17-austria-mica-penalty-bitpanda-411960",
-      "publishedAt": "2026-08-17T13:03:16.000Z"
-    },
-    {
-      "id": "1f0c303281f0966758a6",
-      "source": "Decrypt",
-      "title": "Strategy Leaves Bitcoin Untouched, Raises $334M Selling MSTR Stock",
-      "summary": "The Bitcoin treasury firm halted BTC sales after three weeks, with equity issuance covering dividends, a STRC buyback and the dollar reserve.",
-      "url": "https://decrypt.co/375762/strategy-leaves-bitcoin-untouched-raises-334m-selling-mstr-stock",
-      "publishedAt": "2026-08-17T12:56:55.000Z"
-    },
-    {
-      "id": "13e87243bd891813e6cc",
-      "source": "Cointelegraph",
-      "title": "Strategy raises $334M through stock sales but buys no Bitcoin",
-      "summary": "Proceeds funded STRC dividends and repurchases, while $149.1 million was added to Strategy’s US dollar reserve, which reached $4.8 billion.",
-      "url": "https://cointelegraph.com/news/strategy-stock-sales-buys-no-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-17T12:51:03.000Z"
-    },
-    {
-      "id": "8bb2928c362c2ecbed73",
-      "source": "Cointelegraph",
-      "title": "Harmony plans rollback, wiping 109,000 transactions after ONE exploit",
-      "summary": "Harmony said selectively restoring transactions could create inconsistent chain state, as Ravencoin faces a separate rollback dispute after an exploit.",
-      "url": "https://cointelegraph.com/news/harmony-plans-rollback-transactions-one-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-17T12:31:36.000Z"
-    },
-    {
-      "id": "50c673bc4c1ae244f539",
-      "source": "Decrypt",
-      "title": "Pirated Copies of 'The Odyssey' Are Hiding Crypto-Stealing Malware",
-      "summary": "Bitdefender says fake downloads of the newly released blockbuster are already spreading Lumma Stealer, malware that scrapes crypto wallets, passwords and browser sessions from infected machines.",
-      "url": "https://decrypt.co/375747/pirated-copies-odyssey-hiding-crypto-stealing-malware",
-      "publishedAt": "2026-08-17T12:31:04.000Z"
-    },
-    {
-      "id": "9dc17ee695da230a4beb",
-      "source": "CoinDesk",
-      "title": "No change in bitcoin holdings as Strategy boosted dollar reserve, bought back more STRC last week",
-      "summary": "Led by Executive Chairman Michael Saylor, the company raised $333.7 million via the sale of common stock.",
-      "url": "https://www.coindesk.com/markets/2026/08/17/no-change-in-bitcoin-holdings-as-strategy-lifted-dollar-reserve-and-bought-back-more-strc-last-week",
-      "publishedAt": "2026-08-17T12:19:45.000Z"
-    },
-    {
-      "id": "0bc6338f101e98631cdc",
-      "source": "The Block",
-      "title": "Strategy sells $334 million in MSTR shares, makes no bitcoin purchases or sales as USD reserve hits $4.8 billion",
-      "summary": "Strategy's total holdings account for around 4% of the 21 million bitcoin supply cap — worth roughly $53.4 billion.",
-      "url": "https://www.theblock.co/news/business/2026-08-17-michael-saylor-strategy-btc-411942",
-      "publishedAt": "2026-08-17T12:15:52.000Z"
-    },
-    {
-      "id": "fa884e7780c178e14df1",
-      "source": "CoinDesk",
-      "title": "Ethereum’s next big upgrade has 66 proposals, including a major privacy fix",
-      "summary": "Developers are narrowing the list for the Hegotá upgrade, including a package to change how wallets approve and pay for transactions, giving developers of privacy apps more of the tools they need inside Ethereum itself.",
-      "url": "https://www.coindesk.com/tech/2026/08/17/ethereum-s-next-big-upgrade-has-66-proposals-including-a-major-privacy-fix",
-      "publishedAt": "2026-08-17T12:02:10.000Z"
-    },
-    {
-      "id": "3554418234ed9bb5235e",
-      "source": "CoinDesk",
-      "title": "Israel’s largest crypto broker Bits of Gold hit by data breach affecting 200,000 customers",
-      "summary": "Funds and digital assets were not touched, but names, bank account details, and national ID numbers may have been exposed in what the company says was a wider global attack.",
-      "url": "https://www.coindesk.com/tech/2026/08/17/israel-s-largest-crypto-broker-bits-of-gold-hit-by-data-breach-affecting-200-000-customers",
-      "publishedAt": "2026-08-17T11:59:23.000Z"
-    },
-    {
-      "id": "491635d72137950d1eb6",
-      "source": "CoinDesk",
-      "title": "Bitcoin options remain expensive despite summer calm. Here's why it matters",
-      "summary": "Bitcoin’s implied volatility is near a seasonal floor, but options continue to price substantially more movement than the market is delivering.",
-      "url": "https://www.coindesk.com/markets/2026/08/17/bitcoin-options-remain-expensive-despite-summer-calm-here-s-why-it-matters",
-      "publishedAt": "2026-08-17T11:43:02.000Z"
-    },
-    {
-      "id": "b199f10fb75ac9986b3f",
-      "source": "Cointelegraph",
-      "title": "BTC price loses 200-week trend line as 2022 repeats: Five things to know in Bitcoin this week",
-      "summary": "Bitcoin confirmed a weekly candle close below its 200-week moving average, copying the 2022 bear-market as traders warn of further BTC price downside next.",
-      "url": "https://cointelegraph.com/markets/btc-price-loses-200-week-trend-line-as-2022-repeats?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-17T11:38:52.000Z"
-    },
-    {
-      "id": "6c5fc6c2b11ccf7e4c5c",
-      "source": "Cointelegraph",
-      "title": "Binance gave Russian authorities client data used in terrorism financing case: Report",
-      "summary": "Reuters reported that Binance supplied transaction records and identity documents later used in a terrorism-financing case against Yuri Belenkiy.",
-      "url": "https://cointelegraph.com/news/binance-russia-client-data-used-ukraine-case-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-17T11:38:43.000Z"
-    },
-    {
-      "id": "76f892c224ffde5b6c9a",
-      "source": "CoinDesk",
-      "title": "Bitcoin's biggest holders, Strategy and Metaplanet, are betting on math, not price",
-      "summary": "Your day-ahead look for Aug. 17, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/08/17/bitcoin-s-biggest-holders-strategy-and-metaplanet-are-betting-on-math-not-price",
-      "publishedAt": "2026-08-17T11:28:41.000Z"
-    },
-    {
-      "id": "ff1f4e20240907dd21de",
-      "source": "CoinDesk",
-      "title": "Bitpanda fined 70,000 euros in Austria’s first published MiCA enforcement case",
-      "summary": "The fine stems from Bitpanda failing to submit a mandatory white paper 20 days before publication and omitting required disclosures in marketing materials.",
-      "url": "https://www.coindesk.com/business/2026/08/17/bitpanda-fined-eur70-000-in-austria-s-first-published-mica-enforcement-case",
-      "publishedAt": "2026-08-17T10:52:31.000Z"
-    },
-    {
-      "id": "518c0c9007b8cc2bdc34",
-      "source": "Decrypt",
-      "title": "Paul Tudor Jones' Firm Buys Back Into BlackRock Bitcoin ETF After a Year of Selling",
-      "summary": "The macro fund raised its iShares Bitcoin Trust stake 18.9% to 688,529 shares worth $22.9 million in Q2, while sharply cutting its call options—a shift from leveraged bets toward direct spot exposure.",
-      "url": "https://decrypt.co/375745/paul-tudor-jones-buys-blackrock-bitcoin-etf",
-      "publishedAt": "2026-08-17T10:31:04.000Z"
-    },
-    {
-      "id": "f4eabca28f2b71993ab4",
-      "source": "The Block",
-      "title": "Bitcoin miner HIVE inks five-year $350 million AI cloud contract, adds $70 million in annualized revenue",
-      "summary": "HIVE's BUZZ HPC signed a five-year, $350M GPU cloud deal, adding $70M in ARR, its second large NVIDIA cluster deal in two months.",
-      "url": "https://www.theblock.co/news/business/2026-08-17-bitcoin-miner-hive-inks-five-year-350-million-ai-cloud-contract-411940",
-      "publishedAt": "2026-08-17T10:30:30.000Z"
-    },
-    {
-      "id": "02b03893567e7a2f0de7",
-      "source": "Decrypt",
-      "title": "Dutch Prosecutors Sell $2.5M of Crypto From Bankrupt Platform Knaken",
-      "summary": "The trustee says Knaken bought the coins in its own name, leaving customers with a euro claim against a company that has collapsed.",
-      "url": "https://decrypt.co/375757/dutch-prosecutors-sell-2-5m-of-crypto-from-bankrupt-platform-knaken",
-      "publishedAt": "2026-08-17T10:13:41.000Z"
-    },
-    {
-      "id": "d8c0718553fde2c7b96b",
-      "source": "CoinDesk",
-      "title": "Bitcoin tracks equity bounce, but $390 million ETF outflow week keeps bulls on back foot",
-      "summary": "The price of bitcoin tracked a bounce in equities, but a $390 million ETF outflow streak and 10% odds on landmark crypto legislation leave markets searching for direction.",
-      "url": "https://www.coindesk.com/markets/2026/08/17/bitcoin-tracks-equity-bounce-but-usd390-million-etf-outflow-week-keeps-bulls-on-back-foot",
-      "publishedAt": "2026-08-17T09:59:55.000Z"
-    },
-    {
-      "id": "687e2ed930006626a8b2",
-      "source": "Cointelegraph",
-      "title": "Bitpanda fined in Austria’s first published MiCA penalty",
-      "summary": "The FMA said Bitpanda breached MiCA rules on crypto white papers and marketing communications, with the decision now final.",
-      "url": "https://cointelegraph.com/news/bitpanda-fined-austrian-published-mica-penalty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-17T09:31:47.000Z"
-    },
-    {
-      "id": "0f1a424f56ec53c92883",
-      "source": "Decrypt",
-      "title": "SafePal Bitcoin Wallet Data Breach Stokes Fears of Physical Attacks",
-      "summary": "A flaw in an order-tracking plug-in of bitcoin wallet provider SafePal exposed names, addresses and phone numbers of nearly 40,000 customers.",
-      "url": "https://decrypt.co/375743/safepal-bitcoin-wallet-data-breach",
-      "publishedAt": "2026-08-17T09:31:04.000Z"
     }
   ]
 }
