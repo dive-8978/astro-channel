@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T19:00:26.712Z",
+  "generatedAt": "2026-08-19T01:55:42.008Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 54,
+      "itemCount": 35,
       "error": null
     },
     {
@@ -57,6 +57,222 @@
     }
   ],
   "items": [
+    {
+      "id": "b489983ea21e8c2d76bd",
+      "source": "CoinDesk",
+      "title": "‘It has to pass’: Andrew Cuomo warns U.S. is falling behind on crypto rules",
+      "summary": "Former New York Gov. Andrew Cuomo says the CLARITY Act is key to linking crypto and traditional markets.",
+      "url": "https://www.coindesk.com/policy/2026/08/18/it-has-to-pass-andrew-cuomo-warns-u-s-is-falling-behind-on-crypto-rules",
+      "publishedAt": "2026-08-19T01:35:36.000Z"
+    },
+    {
+      "id": "afbd8dae37f9b74b1285",
+      "source": "CryptoSlate",
+      "title": "AsiaStrategy’s Astra deal lets insider-linked buyers take ownership before $8 million comes due",
+      "summary": "Legal ownership can pass at closing, while the public agreements disclose no collateral, guarantee or escrow. The post AsiaStrategy’s Astra deal lets insider-linked buyers take ownership before $8 million comes due appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/asiastrategys-astra-deal-lets-insider-linked-buyers-take-ownership-before-8-million-comes-due/",
+      "publishedAt": "2026-08-19T01:00:37.000Z"
+    },
+    {
+      "id": "82574da7551191b0b380",
+      "source": "CryptoSlate",
+      "title": "HIVE’s $84.7 million Swedish tax provision eclipsed revenue even as Bitcoin output hit a record",
+      "summary": "The non-cash liability equals about 41% of cash, while HIVE’s filings leave the payment timetable unresolved. The post HIVE’s $84.7 million Swedish tax provision eclipsed revenue even as Bitcoin output hit a record appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/hives-84-7-million-swedish-tax-provision-eclipsed-revenue-even-as-bitcoin-output-hit-a-record/",
+      "publishedAt": "2026-08-18T23:40:04.000Z"
+    },
+    {
+      "id": "e743b472668cdbe6a389",
+      "source": "CoinDesk",
+      "title": "Robinhood CEO urges U.S. to clear path for tokenized stocks as overseas markets advance",
+      "summary": "Vlad Tenev says tokenized stocks could bring real-time settlement and 24/7 trading, but U.S. rules remain a hurdle.",
+      "url": "https://www.coindesk.com/markets/2026/08/18/robinhood-ceo-urges-u-s-to-clear-path-for-tokenized-stocks-as-overseas-markets-advance",
+      "publishedAt": "2026-08-18T23:11:12.000Z"
+    },
+    {
+      "id": "1752ac3f86bbc46ec53e",
+      "source": "Decrypt",
+      "title": "Pennsylvania Cracks Down on AI Data Centers as Backlash Grows",
+      "summary": "Gov. Josh Shapiro ordered new restrictions on large data centers aimed at shielding residents from higher electricity costs and giving communities more control over proposed projects.",
+      "url": "https://decrypt.co/375923/pennsylvania-ai-data-centers-backlash",
+      "publishedAt": "2026-08-18T22:56:04.000Z"
+    },
+    {
+      "id": "a11ca2cf56d93ee6c0e3",
+      "source": "Decrypt",
+      "title": "Mozilla Tests an AI 'Smart Window' in Firefox—But Only If You Opt In",
+      "summary": "The optional window puts an assistant of your choice next to your tabs, with a switch to disable it.",
+      "url": "https://decrypt.co/375903/mozilla-ai-smart-firefox-opt-in",
+      "publishedAt": "2026-08-18T22:31:04.000Z"
+    },
+    {
+      "id": "bb3caa0107e4c69a398d",
+      "source": "CryptoSlate",
+      "title": "This public company now controls 18% of Zcash mining power after $33 million Winklevoss-linked deal",
+      "summary": "Only 5.38 million shares are initially issuable, leaving most of the deal's equity impact behind an approval gate. The post This public company now controls 18% of Zcash mining power after $33 million Winklevoss-linked deal appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/this-public-company-now-controls-18-of-zcash-mining-power-after-33-million-winklevoss-linked-deal/",
+      "publishedAt": "2026-08-18T22:30:53.000Z"
+    },
+    {
+      "id": "1bc0343a80ae3b3fe594",
+      "source": "Decrypt",
+      "title": "Rare Books Traced to Amazon AI Training Facility to Be Scanned and Destroyed",
+      "summary": "A tracking device planted in a book order ended at a Las Vegas facility where Amazon strips bindings to scan pages for training data.",
+      "url": "https://decrypt.co/375912/rare-books-amazon-ai-scanned-destroyed",
+      "publishedAt": "2026-08-18T21:49:46.000Z"
+    },
+    {
+      "id": "cad87e71ab8899faaacc",
+      "source": "CoinDesk",
+      "title": "U.S. accounting-standards group proposes way to see stablecoins as 'cash equivalent'",
+      "summary": "The Financial Accounting Standards Board, a nonprofit that governs accounting practices, proposed that certain stablecoins should fit the bill as cash-like.",
+      "url": "https://www.coindesk.com/policy/2026/08/18/u-s-accounting-standards-group-proposes-way-to-see-stablecoins-as-cash-equivalent",
+      "publishedAt": "2026-08-18T21:25:42.000Z"
+    },
+    {
+      "id": "e351d74b0bb7e48a3b69",
+      "source": "Cointelegraph",
+      "title": "SEC proposes new crypto rules in absence of CLARITY Act",
+      "summary": "The proposed rules from the US securities regulator would provide companies with a safe harbor from tokens being treated as “investment contracts” and certain exemptions for token issuance.",
+      "url": "https://cointelegraph.com/news/us-sec-crypto-rules-clarity-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T21:24:15.000Z"
+    },
+    {
+      "id": "57f0c8dc65a5830fc365",
+      "source": "The Block",
+      "title": "Solana Policy Institute CEO says Clarity Act in ‘August recess purgatory,’ gives it 10% odds before midterms",
+      "summary": "Miller Whitehouse-Levine urged regulators to move quickly, saying the industry \"can’t afford to keep waiting for Congress.\"",
+      "url": "https://www.theblock.co/news/regulation/2026-08-18-solana-policy-institute-ceo-larity-act-august-recess-purgatory-gives-10-odds-midterms-412171",
+      "publishedAt": "2026-08-18T21:22:47.000Z"
+    },
+    {
+      "id": "2f373b4becaa86d05d7d",
+      "source": "CryptoSlate",
+      "title": "Shifting $576M of forced sales off public order books saved Hyperliquid from a systemic crash",
+      "summary": "A new preprint says off-book routing damped liquidation feedback inside Hyperliquid, while wider market effects remain untested. The post Shifting $576M of forced sales off public order books saved Hyperliquid from a systemic crash appeared first on…",
+      "url": "https://cryptoslate.com/shifting-576-million-of-forced-sales-off-public-order-books-saved-hyperliquid-from-a-systemic-crash-during-peak-panic/",
+      "publishedAt": "2026-08-18T21:20:05.000Z"
+    },
+    {
+      "id": "f9aaab71b43b23d99c78",
+      "source": "Decrypt",
+      "title": "Arguing With People on X May Get You More Posts You Hate as Algo Feeds on Ragebait",
+      "summary": "X’s algorithm may turn argumentative replies into a feedback loop that serves users more content that clashes with their values, with the effect stronger among Democrats, researchers found.",
+      "url": "https://decrypt.co/375899/arguing-twitter-x-more-posts-hate-algorithm-ragebait",
+      "publishedAt": "2026-08-18T21:20:04.000Z"
+    },
+    {
+      "id": "b41c446a2512b2984a4d",
+      "source": "Bitcoin Magazine",
+      "title": "BitBox Warns Bitcoiners After Discovering ‘Severe’ Vulnerability In Firmware",
+      "summary": "Bitcoin Magazine BitBox Warns Bitcoiners After Discovering ‘Severe’ Vulnerability In Firmware Bitcoin wallet manufacturer BitBox has told users it was able to fix “severe vulnerabilities” with its hardware wallet’s firmware, and reassured users that no funds…",
+      "url": "https://bitcoinmagazine.com/news/bitbox-warns-users-about-vulnerability",
+      "publishedAt": "2026-08-18T21:06:52.000Z"
+    },
+    {
+      "id": "cc244ab8292e520a64ab",
+      "source": "Cointelegraph",
+      "title": "FalconX, Interstice Connect Canton to Ethereum, Solana and Robinhood Chain",
+      "summary": "The non-custodial cross-chain swap engine connects Canton’s institutional tokenized-asset markets with liquidity and trading activity across major public blockchains.",
+      "url": "https://cointelegraph.com/news/interstice-falconx-cross-chain-swap-engine-canton-solana-ethereum-robinhood-chain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T20:45:48.000Z"
+    },
+    {
+      "id": "e8a9ee097c35e88609b1",
+      "source": "The Block",
+      "title": "White House crypto adviser Patrick Witt says he is ‘optimistic and bullish’ on Clarity Act as stablecoin fight resurfaces",
+      "summary": "The White House’s top crypto adviser said he is feeling \"optimistic and bullish\" ahead of the first planned vote on sweeping crypto legislation.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-18-white-house-crypto-adviser-patrick-witt-optimistic-bullish-clarity-act-stablecoin-fight-412160",
+      "publishedAt": "2026-08-18T20:25:35.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T20:21:26.000Z"
+    },
+    {
+      "id": "f526797fae106dc12a0d",
+      "source": "CryptoSlate",
+      "title": "Solana’s Alpenglow bug hunt charges researchers 0.5 SOL to report flaws",
+      "summary": "Anza’s 50,000 SOL ceiling depends on severity, while moving eligibility and duplicate rules put the filing risk on researchers. The post Solana’s Alpenglow bug hunt charges researchers 0.5 SOL to report flaws appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/solanas-alpenglow-bug-hunt-charges-researchers-0-5-sol-to-report-flaws/",
+      "publishedAt": "2026-08-18T20:10:16.000Z"
+    },
+    {
+      "id": "cc49f277a905426fd130",
+      "source": "Decrypt",
+      "title": "SEC Proposes Crypto Fundraising Exemptions in Abrupt About-Face",
+      "summary": "The proposed rules would let crypto projects raise capital through token sales without full securities registration and create a path for tokens to separate from investment contracts.",
+      "url": "https://decrypt.co/375902/sec-regulation-crypto-fundraising-exemptions",
+      "publishedAt": "2026-08-18T20:00:25.000Z"
+    },
+    {
+      "id": "c4885d9aef9f41bad519",
+      "source": "Cointelegraph",
+      "title": "Ripple- and Coinbase-funded PAC spends $2M in Florida race with little mention of crypto",
+      "summary": "A Florida representative not running for reelection who voted against the GENIUS and CLARITY Acts has endorsed a Democratic candidate, possibly leading to PAC-funded negative ads.",
+      "url": "https://cointelegraph.com/news/crypto-pac-ads-florida-congress-spending?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T19:54:16.000Z"
+    },
+    {
+      "id": "3828e4c0eb97d8c38ce2",
+      "source": "The Block",
+      "title": "Ripple CLO says Sept. 15 will be a ‘bellwether’ for Clarity Act market structure bill",
+      "summary": "Stuart Alderoty calls Sept. 15 a key test for the Clarity Act and warns the U.S. could \"miss an incredible opportunity.\"",
+      "url": "https://www.theblock.co/news/regulation/2026-08-18-ripple-clo-september-15-bellwether-clarity-act-market-structure-bill-412142",
+      "publishedAt": "2026-08-18T19:49:12.000Z"
+    },
+    {
+      "id": "b7ac203c2b7825dd48fb",
+      "source": "Bitcoin Magazine",
+      "title": "SEC Proposes Crypto Rulebook as Clarity Act Stalls",
+      "summary": "Bitcoin Magazine SEC Proposes Crypto Rulebook as Clarity Act Stalls Regulators are pushing ahead with legislation despite the Clarity Act stalling. This post SEC Proposes Crypto Rulebook as Clarity Act Stalls first appeared on Bitcoin Magazine and is written…",
+      "url": "https://bitcoinmagazine.com/news/sec-proposes-crypto-rules",
+      "publishedAt": "2026-08-18T19:46:11.000Z"
+    },
+    {
+      "id": "d3f14231691c0e61fced",
+      "source": "Cointelegraph",
+      "title": "Cypherpunk launches Zcash mining fleet controlling 18% of network hashrate",
+      "summary": "The $33.3 million Winklevoss Capital deal expands Cypherpunk’s ZEC strategy as it targets 5% ownership of the cryptocurrency’s circulating supply.",
+      "url": "https://cointelegraph.com/news/cypherpunk-zcash-mining-winklevoss-capital-zec?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-18T19:31:16.000Z"
+    },
+    {
+      "id": "03e4fd9db1315c4f3d7c",
+      "source": "The Block",
+      "title": "SEC proposes new crypto offering rules as Congress stalls on digital asset legislation",
+      "summary": "On Tuesday, the SEC proposed a new rule that seeks to offer a pathway for investments involving digital assets.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-18-sec-proposes-new-crypto-offering-rules-congress-stalls-digital-asset-legislation-412145",
+      "publishedAt": "2026-08-18T19:23:53.000Z"
+    },
+    {
+      "id": "b61f52d6db07910f17b9",
+      "source": "Decrypt",
+      "title": "Markets Confident OpenAI Releases Its Next AI Model in Weeks",
+      "summary": "Traders are betting OpenAI's next frontier model lands within weeks—even after the company pumped the brakes.",
+      "url": "https://decrypt.co/375892/openai-next-ai-model-gpt6-astra-prediction",
+      "publishedAt": "2026-08-18T19:15:26.000Z"
+    },
+    {
+      "id": "a5e2865789a1d961763f",
+      "source": "CoinDesk",
+      "title": "U.S. SEC proposes first major crypto rule in surprise announcement",
+      "summary": "The Securities and Exchange Commission issued the \"Regulation Crypto\" proposal after having cancelled a meeting days before meant to vote on it.",
+      "url": "https://www.coindesk.com/policy/2026/08/18/r",
+      "publishedAt": "2026-08-18T19:09:33.000Z"
+    },
+    {
+      "id": "e586d256f0429bea6d8d",
+      "source": "CryptoSlate",
+      "title": "Bitcoin ETF flows jumped by $137 million, but it only recouped a third of recent losses",
+      "summary": "Farside’s reported $137.3 million inflow recovered just 35.6% of the prior five-session net outflow, leaving breadth unproven. The post Bitcoin ETF flows jumped by $137 million, but it only recouped a third of recent losses appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-etf-flows-jumped-by-137-million-but-it-only-recouped-a-third-of-recent-losses/",
+      "publishedAt": "2026-08-18T19:05:54.000Z"
+    },
     {
       "id": "e185fff7239c8b2139c0",
       "source": "CoinDesk",
@@ -141,7 +357,7 @@
       "id": "ae62174f2c5d0479ae0a",
       "source": "Cointelegraph",
       "title": "Federal prosecutors blast ex-Celsius CEO’s motion to vacate as ‘without merit’",
-      "summary": "Despite already serving a 12-year sentence in federal prison, Alex Mashinsky continues to explore legal avenues to vacate his conviction related to activities at Celsius.",
+      "summary": "Currently serving a 12-year sentence in federal prison, Alex Mashinsky continues to explore legal avenues to vacate his conviction related to activities at Celsius.",
       "url": "https://cointelegraph.com/news/us-prosecutors-celsius-ceo-alex-mashinsky-motion-vacate-deny?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-18T16:49:58.000Z"
     },
@@ -338,14 +554,6 @@
       "publishedAt": "2026-08-18T13:22:40.000Z"
     },
     {
-      "id": "39f5734ce653041fa26f",
-      "source": "CryptoSlate",
-      "title": "Peter Todd reopens Bitcoin’s 21M cap debate because transaction fees make up just 0.5% of miner revenue",
-      "summary": "A viral clip sharpened the clash between fee-funded security and the credibility of a fixed supply. The post Peter Todd reopens Bitcoin’s 21M cap debate because transaction fees make up just 0.5% of miner revenue appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/peter-todd-reopens-bitcoins-21m-cap-debate-because-transaction-fees-make-up-just-0-5-of-miner-revenue/",
-      "publishedAt": "2026-08-18T13:10:46.000Z"
-    },
-    {
       "id": "45a7c1823f51caabf0d5",
       "source": "CoinDesk",
       "title": "Cash App's crypto support expands beyond bitcoin and USDC via MoonPay",
@@ -360,14 +568,6 @@
       "summary": "Eligible US users can fund MoonPay crypto purchases with Cash App balances as the payments firm expands beyond its core onramp business.",
       "url": "https://cointelegraph.com/news/moonpay-cash-app-pay-crypto-purchases-us-customers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-18T13:00:00.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T12:53:39.000Z"
     },
     {
       "id": "75c33b08c095bf361937",
@@ -410,14 +610,6 @@
       "publishedAt": "2026-08-18T12:15:31.000Z"
     },
     {
-      "id": "3eae3090848940526456",
-      "source": "CryptoSlate",
-      "title": "Half of Aave’s debt sits in just 9% of positions built around one Ethereum correlation trade",
-      "summary": "Galaxy's Aug. 7 snapshot of Aave V3 Core found 19,073 loans on the protocol after applying standard filters. Fewer than 9% of those positions are using Aave's E-mode setting, account for roughly half of all outstanding debt on the platform, and show an…",
-      "url": "https://cryptoslate.com/half-of-aaves-debt-sits-in-just-9-of-positions-built-around-one-ethereum-correlation-trade/",
-      "publishedAt": "2026-08-18T12:05:39.000Z"
-    },
-    {
       "id": "bc1b51b8d48b1ebd8a47",
       "source": "The Block",
       "title": "Cypherpunk Technologies launches Zcash mining fleet with $33 million Winklevoss deal",
@@ -448,14 +640,6 @@
       "summary": "Regulators rejected Polymarket's defense regarding its P2P nature, arguing the platform manages market rules and facilitates crypto-based gambling activity.",
       "url": "https://www.coindesk.com/business/2026/08/18/south-korea-joins-more-than-30-jurisdictions-restricting-polymarket-access",
       "publishedAt": "2026-08-18T11:05:56.000Z"
-    },
-    {
-      "id": "6cb5def6e07077dba30d",
-      "source": "CryptoSlate",
-      "title": "Bitcoin faces its highest Treasury hurdle since 2007 with $22.5B less crypto credit to unwind",
-      "summary": "The US 30-year Treasury yield crossed 5.3% on Aug. 17 for the first time since June 2007, the same day Galaxy published a report showing crypto-collateralized lending down more than $22 billion from its peak. Bitcoin hit an intraday high of $64,610.01 that…",
-      "url": "https://cryptoslate.com/bitcoin-faces-its-highest-treasury-hurdle-since-2007-with-22-5b-less-crypto-credit-to-unwind/",
-      "publishedAt": "2026-08-18T11:00:15.000Z"
     },
     {
       "id": "712297bf5259deb90003",
@@ -498,14 +682,6 @@
       "publishedAt": "2026-08-18T10:01:23.000Z"
     },
     {
-      "id": "000617805ac11f418e8d",
-      "source": "CryptoSlate",
-      "title": "Polymarket’s 20% CLARITY Act odds sit on a market one $100K trade could radically reprice",
-      "summary": "An anonymous trader on Polymarket holds a No position on the CLARITY Act worth about $414,895, roughly 2.6 times larger than the $160,200 in liquidity currently available on the market where it sits. CryptoSlate's live market data puts CLARITY Act odds near…",
-      "url": "https://cryptoslate.com/polymarkets-20-clarity-act-odds-sit-on-a-market-one-100k-trade-could-radically-reprice/",
-      "publishedAt": "2026-08-18T09:40:19.000Z"
-    },
-    {
       "id": "3853728edff4ee6b7297",
       "source": "The Block",
       "title": "Blockchain Association backs SEC’s proposal to scrap outdated NMS rules, citing tokenization benefits",
@@ -520,182 +696,6 @@
       "summary": "Bitcoin derivatives markets created a short squeeze that took BTC price action 3% higher on Monday.",
       "url": "https://cointelegraph.com/markets/bitcoin-price-spike-to-645k-was-low-volume-liquidity-trap-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-18T09:31:15.000Z"
-    },
-    {
-      "id": "0128ed3585d56f269fc0",
-      "source": "Decrypt",
-      "title": "Bitpanda Hit With Europe's First Published MiCA Penalty in Austria",
-      "summary": "Austria's Financial Market Authority fined the Vienna-based exchange 70,000 euros for procedural and disclosure breaches, an early marker of how EU regulators intend to enforce the bloc's new crypto rulebook.",
-      "url": "https://decrypt.co/375841/bitpanda-europe-first-mica-penalty",
-      "publishedAt": "2026-08-18T09:31:04.000Z"
-    },
-    {
-      "id": "e5b53233784ad21a27ba",
-      "source": "Cointelegraph",
-      "title": "China adds 8 banks to digital yuan network as operator count hits 30",
-      "summary": "The newly authorized lenders will begin offering e-CNY services after completing operational and technical preparations.",
-      "url": "https://cointelegraph.com/news/china-adds-8-banks-to-digital-yuan-network-as-operator-count-hits-30?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T08:48:51.000Z"
-    },
-    {
-      "id": "e4ec3b6e0e8ac146d6b0",
-      "source": "Cointelegraph",
-      "title": "South Korea moves to block Polymarket over gambling concerns",
-      "summary": "The Korea Media and Communications Commission said Polymarket’s structure and operations amount to illegal gambling despite its noncustodial design and smart contracts.",
-      "url": "https://cointelegraph.com/news/south-korea-block-polymarket-gambling-concerns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T08:39:57.000Z"
-    },
-    {
-      "id": "1ffb9930fe0f45a37db2",
-      "source": "CryptoSlate",
-      "title": "Bitcoin turned $10,000 into $870,000 in a decade where 87% of active stock funds failed to beat passive rivals",
-      "summary": "Bitcoin returned 87 times over a decade, while only 13% of actively managed US large-cap equity funds beat comparable passive funds' benchmarks through June 30, according to Morningstar data reported by The Wall Street Journal. That rate rose to 27% over the…",
-      "url": "https://cryptoslate.com/bitcoin-turned-10000-into-870000-in-a-decade-where-87-of-active-stock-funds-failed-to-beat-passive-rivals/",
-      "publishedAt": "2026-08-18T08:20:52.000Z"
-    },
-    {
-      "id": "336025b7cdb8c652558b",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin tepidly on the rise as stocks slip",
-      "summary": "The U.S. 30-year Treasury yield hit its highest since 2007 and Brent crude topped $91 as the Iran conflict escalates, pressuring stocks. Bitcoin is holding its range, for now.",
-      "url": "https://www.coindesk.com/tech/2026/08/18/live-updates-bitcoin-holds-usd64-000-as-surging-yields-and-oil-drain-risk-appetite",
-      "publishedAt": "2026-08-18T08:16:11.000Z"
-    },
-    {
-      "id": "8de2e08dd13c6ba05a21",
-      "source": "Cointelegraph",
-      "title": "BitBox patches ‘severe’ wallet flaws that could put funds at risk",
-      "summary": "BitBox recommended all users update to firmware version 9.26.5 and said it had received no reports of exploitation or fund losses.",
-      "url": "https://cointelegraph.com/news/bitbox-patches-severe-wallet-firmware-flaws?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T08:07:04.000Z"
-    },
-    {
-      "id": "5ae394651f276c538cc2",
-      "source": "The Block",
-      "title": "Kraken brings US stock trading to European Economic Area customers",
-      "summary": "Kraken has launched US stock trading for eligible customers across all European Economic Area member countries.",
-      "url": "https://www.theblock.co/news/business/2026-08-18-kraken-us-stock-trading-europe-economic-area-412027",
-      "publishedAt": "2026-08-18T08:00:02.000Z"
-    },
-    {
-      "id": "7d14acc9039eb15ff24e",
-      "source": "The Block",
-      "title": "Cathie Wood’s Ark Invest scoops up $15 million in Block Inc shares as stock dips 3%",
-      "summary": "The firm also bought $1 million worth of Securitize shares, which fell over 20% last week following disappointing Q2 results.",
-      "url": "https://www.theblock.co/news/markets/2026-08-18-cathie-wood-ark-invest-15-million-block-inc-412060",
-      "publishedAt": "2026-08-18T07:37:40.000Z"
-    },
-    {
-      "id": "6df8ce8bf8a8c28ef4c9",
-      "source": "CryptoSlate",
-      "title": "KuCoin’s new perp rule can turn one funding-rate extreme into 36 hours of hourly settlements",
-      "summary": "USDT and USDC contracts move from the next period, while returning to four-hour settlement requires 36 stable hours. The post KuCoin’s new perp rule can turn one funding-rate extreme into 36 hours of hourly settlements appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/kucoins-new-perp-rule-can-turn-one-funding-rate-extreme-into-36-hours-of-hourly-settlements/",
-      "publishedAt": "2026-08-18T07:00:41.000Z"
-    },
-    {
-      "id": "bb1ea9645e20067a8927",
-      "source": "The Block",
-      "title": "Ripple partners with South Korea’s Jeonbuk Bank for cross-border payments",
-      "summary": "The Jeonbuk Bank collaboration marked Ripple's third Korean partnership this year, following those with Kyobo Life Insurance and Kbank.",
-      "url": "https://www.theblock.co/news/business/2026-08-18-ripple-south-korea-jeonbuk-bank-412049",
-      "publishedAt": "2026-08-18T06:17:53.000Z"
-    },
-    {
-      "id": "9752cf20620000eb20fa",
-      "source": "CoinDesk",
-      "title": "The bitcoin price level where leveraged bulls could get whacked",
-      "summary": "Bulls are stacking longs, liquidity is thinning and one key level could trigger large liquidations.",
-      "url": "https://www.coindesk.com/markets/2026/08/18/the-bitcoin-price-level-where-leveraged-bulls-could-get-whacked",
-      "publishedAt": "2026-08-18T05:55:43.000Z"
-    },
-    {
-      "id": "c58477ee91f396b88b8a",
-      "source": "CoinDesk",
-      "title": "XRP sinks below $1 for first time since 2024 even as Korean bank adopts Ripple Payments",
-      "summary": "Jeonbuk Bank will use Ripple’s 24/7 cross-border payment service for business remittances, but it is unknown whether the flows will use XRP or Ripple’s RLUSD stablecoin.",
-      "url": "https://www.coindesk.com/markets/2026/08/18/xrp-slips-below-usd1-even-as-korean-regional-bank-adopts-ripple-payments",
-      "publishedAt": "2026-08-18T05:34:32.000Z"
-    },
-    {
-      "id": "f46726ce01d6f4912fbf",
-      "source": "The Block",
-      "title": "Upbit and Bithumb report 50% declines in H1 revenue, reflecting market contraction",
-      "summary": "Investor capital in South Korea largely shifted toward domestic equities, with the benchmark KOSPI more than doubling in H1 2026.",
-      "url": "https://www.theblock.co/news/markets/2026-08-18-upbit-bithumb-h1-decline-412034",
-      "publishedAt": "2026-08-18T05:30:25.000Z"
-    },
-    {
-      "id": "55f34149bfb633652a7d",
-      "source": "CoinDesk",
-      "title": "Monad, an Ethereum rival, offered early investors up to $60 million to cash out. Almost all said no",
-      "summary": "The program came three months before investor unlocks begin, with MON trading below its public-sale price and most of the token supply still outside circulation.",
-      "url": "https://www.coindesk.com/markets/2026/08/18/monad-an-ethereum-rival-offered-early-investors-up-to-usd60-million-to-cash-out-almost-all-said-no",
-      "publishedAt": "2026-08-18T05:18:18.000Z"
-    },
-    {
-      "id": "f568e098930131164b53",
-      "source": "Cointelegraph",
-      "title": "Ethereum Foundation warns some tools may break with Glamsterdam upgrade",
-      "summary": "Developers have been urged to test on Plataberget before Glamsterdam’s new gas model reaches Ethereum’s other testnets and mainnet.",
-      "url": "https://cointelegraph.com/news/ethereum-foundation-warns-some-tools-may-break-with-glamsterdam-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T05:12:18.000Z"
-    },
-    {
-      "id": "e63f168aae12f2599ce1",
-      "source": "CoinDesk",
-      "title": "Bitcoin climbs above $64,000 while most majors slip",
-      "summary": "Miners have cut their computing power by a fifth over three quarters to make room for AI, and Venice's token jumped 10% after the company said it crossed $100 million in annualised revenue.",
-      "url": "https://www.coindesk.com/markets/2026/08/18/bitcoin-climbs-above-usd64-000-while-most-majors-slip",
-      "publishedAt": "2026-08-18T04:32:38.000Z"
-    },
-    {
-      "id": "f04c909395a031fa8ff9",
-      "source": "Cointelegraph",
-      "title": "South Korea’s Jeonbuk Bank taps Ripple for cross-border payments",
-      "summary": "Ripple is bringing its cross-border payments platform to Jeonbuk Bank, but key details including its launch status and settlement asset remain undisclosed.",
-      "url": "https://cointelegraph.com/news/jeonbuk-bank-ripple-cross-border-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T04:11:02.000Z"
-    },
-    {
-      "id": "e052192eef29d953d657",
-      "source": "Cointelegraph",
-      "title": "Alleged $165M crypto Ponzi mastermind faces US charges after Fiji deportation",
-      "summary": "Prosecutors allege Edward Zimbardi collected crypto from thousands of investors, lost over $34 million on currency trades and spent at least $10 million personally.",
-      "url": "https://cointelegraph.com/news/edward-zimbardi-165m-crypto-ponzi-fiji-deportation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T03:21:26.000Z"
-    },
-    {
-      "id": "418a4ebbdd3167c471bb",
-      "source": "Cointelegraph",
-      "title": "‘Fabricated rumors’ about BitMart founder, Binance bStocks dominate: Asia Express",
-      "summary": "Binance’s bStocks are the second largest tokenized stock issuer just two months after launch, and BitMart’s internal feud erupts into the spotlight ahead of its closure",
-      "url": "https://cointelegraph.com/magazine/fabricated-rumors-about-bitmart-founder-binance-bstocks-dominate-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T01:28:37.000Z"
-    },
-    {
-      "id": "d6ffa40bebf5d3b2bc2e",
-      "source": "Ethereum Foundation",
-      "title": "Allocation Update - Q2 2026",
-      "summary": "Q2 2026 carried forward our focus on advancing Ethereum’s resilience and capabilities, supporting key work in zero-knowledge proofs, client diversity, formal verification, and open-source tooling. See the list below of the projects and ecosystem efforts…",
-      "url": "https://blog.ethereum.org/en/2026/08/18/allocation-q2-26",
-      "publishedAt": "2026-08-18T00:00:00.000Z"
-    },
-    {
-      "id": "cb4371daf559bdf6e934",
-      "source": "Decrypt",
-      "title": "Kraken Parent Payward Joins Glasswing, Gets Access to Claude Mythos to Hunt Security Flaws",
-      "summary": "Payward is joining Project Glasswing, Anthropic’s program for giving vetted organizations access to its powerful cybersecurity AI.",
-      "url": "https://decrypt.co/375836/kraken-payward-anthropic-project-glasswing-claude-mythos",
-      "publishedAt": "2026-08-17T22:35:46.000Z"
-    },
-    {
-      "id": "b8d4f40f808f018e287e",
-      "source": "The Block",
-      "title": "Robinhood Chain TVL surges 45% in August as tokenized RWAs lose ground",
-      "summary": "Stablecoin market cap on the chain has reached $640 million, the bulk of which has come from USDe.",
-      "url": "https://www.theblock.co/news/ecosystems/2026-08-17-robinhood-chain-tvl-surges-45-august-tokenized-rwas-lose-ground-411998",
-      "publishedAt": "2026-08-17T22:26:02.000Z"
     }
   ]
 }
