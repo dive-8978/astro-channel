@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T01:55:42.008Z",
+  "generatedAt": "2026-08-19T07:09:09.131Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,86 @@
     }
   ],
   "items": [
+    {
+      "id": "e7c8309fc8bcec481ccb",
+      "source": "CryptoSlate",
+      "title": "Ethereum’s 12-GPU proving problem just got a 4-GPU answer",
+      "summary": "Its claimed 9.62-second p99 fits Ethereum's latency target, while workload, proof and whole-system power details remain undisclosed. The post Ethereum’s 12-GPU proving problem just got a 4-GPU answer appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/ethereums-12-gpu-proving-problem-just-got-a-4-gpu-answer/",
+      "publishedAt": "2026-08-19T07:00:12.000Z"
+    },
+    {
+      "id": "6b3baf5ecd751d98ef09",
+      "source": "CoinDesk",
+      "title": "Maya Protocol exploit drains bitcoin and other assets as pool value drops $11 million",
+      "summary": "A chain of six flaws caused the cross-chain trading network to credit a pool with nearly 50 million tokens that were never properly funded, letting an attacker drain real assets.",
+      "url": "https://www.coindesk.com/markets/2026/08/19/maya-protocol-exploit-drains-bitcoin-and-other-assets-as-pool-value-drops-usd11-million",
+      "publishedAt": "2026-08-19T06:36:11.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-19T05:53:49.000Z"
+    },
+    {
+      "id": "acac146fb3f1b8c02661",
+      "source": "CoinDesk",
+      "title": "Robot maker Unitree’s IPO surges 600%, outpacing crypto traders’ premarket bets",
+      "summary": "A Hyperliquid perp priced Unitree far above its IPO valuation before Shanghai trading began, but the robot maker’s first public trade still opened roughly 75% above crypto traders’ implied price.",
+      "url": "https://www.coindesk.com/markets/2026/08/19/robot-maker-unitree-s-ipo-surges-600-outpacing-crypto-traders-premarket-bets",
+      "publishedAt": "2026-08-19T05:45:27.000Z"
+    },
+    {
+      "id": "3b5c7761d50889142080",
+      "source": "Cointelegraph",
+      "title": "MAYAChain halts network after estimated $1.7M exploit",
+      "summary": "A preliminary analysis says six chained bugs let a 23-message transaction drain 48.87 million CACAO, sending the token down nearly 89%.",
+      "url": "https://cointelegraph.com/news/maya-protocol-1-7m-exploit-network-halt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-19T05:13:54.000Z"
+    },
+    {
+      "id": "064ea7c0813e9d0849dc",
+      "source": "CoinDesk",
+      "title": "Solana leads bitcoin and ether higher while Korean chip stocks slide 7%",
+      "summary": "Bitcoin held near $64,000 and every major except BNB gained, while Korean semiconductor stocks fell more than 7% and Fed minutes are due at 2 p.m. ET.",
+      "url": "https://www.coindesk.com/markets/2026/08/19/solana-leads-bitcoin-and-ether-higher-while-korean-chip-stocks-slide-7",
+      "publishedAt": "2026-08-19T04:25:42.000Z"
+    },
+    {
+      "id": "834a1e5e5a2e3b2687d8",
+      "source": "CryptoSlate",
+      "title": "Canaan counted paused Ethiopia mining as nearly 35% of its July operating hashrate total",
+      "summary": "The company placed 4.96 EH/s in its operating column while a footnote said Ethiopia mining was paused. The post Canaan counted paused Ethiopia mining as nearly 35% of its July operating hashrate total appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/canaan-counted-paused-ethiopia-mining-as-nearly-35-of-its-july-operating-hashrate-total/",
+      "publishedAt": "2026-08-19T04:00:38.000Z"
+    },
+    {
+      "id": "6f5cdd7187eef7da8de5",
+      "source": "Cointelegraph",
+      "title": "US accounting board FASB proposes conditions for stablecoins as cash equivalents",
+      "summary": "The FASB said secondary-market liquidity alone would not be enough, with holders needing direct issuer redemption rights and one-to-one liquid reserves.",
+      "url": "https://cointelegraph.com/news/us-accounting-board-fasb-proposes-conditions-for-stablecoins-as-cash-equivalents?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-19T03:58:13.000Z"
+    },
+    {
+      "id": "0c9f94489c95f2bddc04",
+      "source": "The Block",
+      "title": "Kalshi files to launch perpetual futures tied to US stock index, copper",
+      "summary": "Kalshi has filed with the Commodity Futures Trading Commission to offer perps tied to the MerQube US Large Cap Index and copper.",
+      "url": "https://www.theblock.co/news/business/2026-08-18-kalshi-files-perps-equity-index-copper-412176",
+      "publishedAt": "2026-08-19T03:22:58.000Z"
+    },
+    {
+      "id": "b7760d89e3fe13a67cad",
+      "source": "CryptoSlate",
+      "title": "Yakovenko wants Solana to mint SOL to buy a company, but who would own it?",
+      "summary": "Stake-weighted approval could authorize a direction, but no target, legal buyer, ownership structure or operating authority has been named. The post Yakovenko wants Solana to mint SOL to buy a company, but who would own it? appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/yakovenko-wants-solana-to-mint-sol-to-buy-a-company-but-who-would-own-it/",
+      "publishedAt": "2026-08-19T02:30:50.000Z"
+    },
     {
       "id": "b489983ea21e8c2d76bd",
       "source": "CoinDesk",
@@ -184,14 +264,6 @@
       "summary": "The White House’s top crypto adviser said he is feeling \"optimistic and bullish\" ahead of the first planned vote on sweeping crypto legislation.",
       "url": "https://www.theblock.co/news/regulation/2026-08-18-white-house-crypto-adviser-patrick-witt-optimistic-bullish-clarity-act-stablecoin-fight-412160",
       "publishedAt": "2026-08-18T20:25:35.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T20:21:26.000Z"
     },
     {
       "id": "f526797fae106dc12a0d",
@@ -370,14 +442,6 @@
       "publishedAt": "2026-08-18T16:49:08.000Z"
     },
     {
-      "id": "027ac400fc58c529236e",
-      "source": "CryptoSlate",
-      "title": "Circle still tells users to buy Noble USDC on Coinbase after cutoff date passes",
-      "summary": "Coinbase warned later Noble deposits may not be recoverable, while its notice left the cutoff’s clock time unspecified. The post Circle still tells users to buy Noble USDC on Coinbase after cutoff date passes appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/circle-still-tells-users-to-buy-noble-usdc-on-coinbase-after-cutoff-date-passes/",
-      "publishedAt": "2026-08-18T16:30:58.000Z"
-    },
-    {
       "id": "daf36ff79e2466ef554f",
       "source": "Cointelegraph",
       "title": "Metaplanet expands Bitcoin treasury strategy to US with 2,100-BTC Nasdaq play",
@@ -424,14 +488,6 @@
       "summary": "The banking giant plans to let institutional clients hold Bitcoin and traditional assets through the same custody framework.",
       "url": "https://decrypt.co/375880/citi-bitcoin-custody-wall-street-crypto",
       "publishedAt": "2026-08-18T15:56:05.000Z"
-    },
-    {
-      "id": "85b4bac1f96fd5c54776",
-      "source": "CryptoSlate",
-      "title": "Blockchains may finally break their hidden reliance on a ticking randomness clock to keep networks secure",
-      "summary": "Distributed samplers replace fresh public randomness while a common random string, DDH, LWE, and proof-of-work assumptions remain. The post Blockchains may finally break their hidden reliance on a ticking randomness clock to keep networks secure appeared…",
-      "url": "https://cryptoslate.com/permissionless-consensus-paper-removes-recurring-randomness-beacon/",
-      "publishedAt": "2026-08-18T15:35:02.000Z"
     },
     {
       "id": "8fd86e83d95dd631799a",
@@ -504,14 +560,6 @@
       "summary": "The deal involves Metaplanet contributing 2,100 bitcoin and $2.5 million in cash, valuing the initial investment at $134.6 million.",
       "url": "https://www.coindesk.com/business/2026/08/18/japan-s-metaplanet-launching-u-s-bitcoin-treasury-company-through-usd135-million-nanocap-deal",
       "publishedAt": "2026-08-18T14:35:08.000Z"
-    },
-    {
-      "id": "9cb9a52e7bff6c8e946b",
-      "source": "CryptoSlate",
-      "title": "Strategy raised $334 million from MSTR shareholders last week — Bitcoin got none of it",
-      "summary": "Common-equity proceeds funded preferred dividends, buybacks and reserves while Strategy made no Bitcoin transactions. The post Strategy raised $334 million from MSTR shareholders last week — Bitcoin got none of it appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/strategy-raised-334-million-from-mstr-shareholders-last-week-bitcoin-got-none-of-it/",
-      "publishedAt": "2026-08-18T14:30:25.000Z"
     },
     {
       "id": "0c9ee52a9eb332276b0a",
@@ -648,54 +696,6 @@
       "summary": "Eligible EEA users can trade conventional US shares alongside more than 700 tokenized xStocks through Kraken’s European entity.",
       "url": "https://cointelegraph.com/news/kraken-us-stock-trading-eea-customers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-18T10:53:21.000Z"
-    },
-    {
-      "id": "a1bca59df858beaf5f82",
-      "source": "The Block",
-      "title": "‘The Crypto Program’ promoter deported from Fiji over alleged $165 million Ponzi scheme",
-      "summary": "Fiji deported Edward Zimbardi to the U.S. to face charges over an alleged $165 million crypto Ponzi scheme involving thousands of investors.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-18-the-crypto-program-promoter-deported-from-fiji-over-alleged-165-million-ponzi-scheme-412083",
-      "publishedAt": "2026-08-18T10:49:53.000Z"
-    },
-    {
-      "id": "4418ad420ad347d5125c",
-      "source": "CoinDesk",
-      "title": "Bitcoin pauses at $64,000 as rising yields, oil drag equities lower",
-      "summary": "BTC has dropped 0.6% since midnight UTC as Nasdaq 100 futures slip 1.1%, with the FOMC's July meeting minutes and a White House crypto summit both due Wednesday.",
-      "url": "https://www.coindesk.com/markets/2026/08/18/bitcoin-pauses-at-usd64-000-as-rising-yields-oil-drag-equities-lower",
-      "publishedAt": "2026-08-18T10:38:56.000Z"
-    },
-    {
-      "id": "a59c66ed65227dbb33f0",
-      "source": "The Block",
-      "title": "Curve founder says FATF pressure could make DeFi safer and more decentralized",
-      "summary": "Curve founder Michael Egorov said FATF pressure could push DeFi protocols toward greater decentralization and stronger security.",
-      "url": "https://www.theblock.co/news/defi/2026-08-18-curve-founder-fatf-pressure-could-make-defi-safer-412059",
-      "publishedAt": "2026-08-18T10:34:53.000Z"
-    },
-    {
-      "id": "8fb464d60f5be27d5e2a",
-      "source": "CoinDesk",
-      "title": "Bitcoin scores a rare win over S&P 500 with 2.6% rise versus 0.5% fall",
-      "summary": "BTC outperformed Wall Street on Monday, breaking its recent pattern of lagging behind U.S. stocks.",
-      "url": "https://www.coindesk.com/markets/2026/08/18/bitcoin-scored-a-rare-win-over-s-and-p-500-on-monday",
-      "publishedAt": "2026-08-18T10:01:23.000Z"
-    },
-    {
-      "id": "3853728edff4ee6b7297",
-      "source": "The Block",
-      "title": "Blockchain Association backs SEC’s proposal to scrap outdated NMS rules, citing tokenization benefits",
-      "summary": "The rules, established in 2005, have \"failed to achieve their stated purposes,\" the Blockchain Association said.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-18-blockchain-association-backs-secs-proposal-to-scrap-outdated-nms-rules-citing-tokenization-benefits-412069",
-      "publishedAt": "2026-08-18T09:35:26.000Z"
-    },
-    {
-      "id": "8eb32e61e96c67cc90eb",
-      "source": "Cointelegraph",
-      "title": "Bitcoin price spike to $64.5K was ‘low-volume liquidity trap’: Analysis",
-      "summary": "Bitcoin derivatives markets created a short squeeze that took BTC price action 3% higher on Monday.",
-      "url": "https://cointelegraph.com/markets/bitcoin-price-spike-to-645k-was-low-volume-liquidity-trap-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-18T09:31:15.000Z"
     }
   ]
 }
