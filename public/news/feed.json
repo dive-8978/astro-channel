@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T01:54:44.302Z",
+  "generatedAt": "2026-08-20T07:10:24.467Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 55,
+      "itemCount": 34,
       "error": null
     },
     {
@@ -57,6 +57,94 @@
     }
   ],
   "items": [
+    {
+      "id": "c5c014e24a328507b5e3",
+      "source": "CryptoSlate",
+      "title": "Bitcoin flashes 8 capitulation signals, but traders just spent $552 million protecting against another crash",
+      "summary": "Bitcoin is showing some of the strongest capitulation signals of the current downturn, suggesting the selloff may be entering a later stage even as the market offers little evidence of an imminent rebound. Eight of the 12 indicators tracked by VanEck are…",
+      "url": "https://cryptoslate.com/bitcoin-flashes-8-capitulation-signals-but-traders-just-spent-552-million-protecting-against-another-crash/",
+      "publishedAt": "2026-08-20T07:00:01.000Z"
+    },
+    {
+      "id": "e7eb105f9e1142a86fed",
+      "source": "The Block",
+      "title": "Spot bitcoin ETFs report $517 million in net inflows, largest in 3.5 months",
+      "summary": "Analysts attributed the inflows to the surprise crypto market rally driven by US Treasury Department's buyback expansion announcement.",
+      "url": "https://www.theblock.co/news/markets/2026-08-20-us-bitcoin-etf-517-million-inflows-412291",
+      "publishedAt": "2026-08-20T06:57:13.000Z"
+    },
+    {
+      "id": "72054c7c6618a304354d",
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin ETFs draw $517 million, ether pulls $189 million in biggest inflows in months",
+      "summary": "Spot bitcoin ETFs pulled in $517 million and ether funds $189 million on Aug. 19, the strongest daily hauls in months, as a broad rally torched $2.7 billion in bearish bets.",
+      "url": "https://www.coindesk.com/tech/2026/08/20/live-updates-bitcoin-etfs-draw-usd517-million-ether-pulls-usd189-million-in-biggest-inflows-in-months",
+      "publishedAt": "2026-08-20T06:21:17.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-20T06:03:50.000Z"
+    },
+    {
+      "id": "fe4665b6e18e88b52911",
+      "source": "Cointelegraph",
+      "title": "HYPE jumps 20% as Trump signals legal US path for Hyperliquid",
+      "summary": "HYPE reached $72 after Trump said the CFTC was pursuing compliant US access for Hyperliquid, though no formal regulatory plan has been released.",
+      "url": "https://cointelegraph.com/markets/hype-price-jumps-trump-hyperliquid-us-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-20T05:52:30.000Z"
+    },
+    {
+      "id": "b15749fe4d624ed736d4",
+      "source": "CoinDesk",
+      "title": "Trader who made $49 million shorting crypto lost $24 million on ether in 12 seconds",
+      "summary": "The Hyperliquid wallet known as pension-usdt.eth was forced out of a 50,000 ETH short as ether surged, with five liquidation orders helping push the price higher during the unwind.",
+      "url": "https://www.coindesk.com/markets/2026/08/20/trader-who-made-usd49-million-shorting-crypto-lost-usd24-million-on-ether-in-12-seconds",
+      "publishedAt": "2026-08-20T05:40:54.000Z"
+    },
+    {
+      "id": "5fe24867cf124723d17d",
+      "source": "CoinDesk",
+      "title": "Bearish crypto bets lose record $2.7 billion as bitcoin surges toward $70,000",
+      "summary": "Traders betting against crypto lost $2.74 billion in a day, more than the short side of the October 2025 crash that remains the biggest liquidation event in the market's history.",
+      "url": "https://www.coindesk.com/markets/2026/08/20/bearish-crypto-bets-lose-record-usd2-7-billion-as-bitcoin-surges-toward-usd70-000",
+      "publishedAt": "2026-08-20T04:29:56.000Z"
+    },
+    {
+      "id": "91e620eab8b132d0c1dc",
+      "source": "Cointelegraph",
+      "title": "Rushed CLARITY Act vote could set legislation back, Gallego warns",
+      "summary": "Gallego said the White House has not provided point-by-point feedback on a bipartisan ethics proposal as a September vote approaches.",
+      "url": "https://cointelegraph.com/news/ruben-gallego-rushed-clarity-act-senate-vote?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-20T04:27:17.000Z"
+    },
+    {
+      "id": "a6829a15c015bb02f4c6",
+      "source": "CoinDesk",
+      "title": "Ether jumps 18% to $2,250 as bitcoin tops $69,000 in broad crypto rally",
+      "summary": "Every major except tron posted double-digit weekly gains, with nearly $1.4 billion of short positions wiped out after the Treasury doubled its bond buybacks.",
+      "url": "https://www.coindesk.com/markets/2026/08/20/ether-jumps-18-to-usd2-250-as-bitcoin-tops-usd69-000-in-broad-crypto-rally",
+      "publishedAt": "2026-08-20T04:10:40.000Z"
+    },
+    {
+      "id": "0231c97b17cffee4941e",
+      "source": "The Block",
+      "title": "AI agents could make today’s billion-dollar crypto hacks look like ‘pennies,’ industry leaders warn",
+      "summary": "Crypto leaders see trust, hallucinations and unclear legal liability as the biggest hurdles to agentic adoption.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-08-19-ai-agents-todays-billion-dollar-crypto-hacks-look-like-pennies-industry-leaders-412278",
+      "publishedAt": "2026-08-20T03:07:29.000Z"
+    },
+    {
+      "id": "b7d71cc3488e3f753bf1",
+      "source": "CryptoSlate",
+      "title": "Bitcoin treasury Hyperscale sells 686 BTC to clear loans but says cash won’t cover next 12 months",
+      "summary": "The August repayment ended the immediate collateral risk while the company’s going-concern warning and Michigan financing need persisted. The post Bitcoin treasury Hyperscale sells 686 BTC to clear loans but says cash won’t cover next 12 months appeared…",
+      "url": "https://cryptoslate.com/bitcoin-treasury-hyperscale-sells-686-btc-to-clear-loans-but-says-cash-wont-cover-next-12-months/",
+      "publishedAt": "2026-08-20T02:00:01.000Z"
+    },
     {
       "id": "562745f7176b84a920e0",
       "source": "CryptoSlate",
@@ -168,14 +256,6 @@
       "summary": "Strategy, Coinbase, Circle, and BitMine are riding Bitcoin's short squeeze toward $70K—and two of them may be squeezing equity bears of their own.",
       "url": "https://decrypt.co/375990/crypto-stocks-rip-strategy-coinbase-bitcoin",
       "publishedAt": "2026-08-19T19:51:11.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-19T19:50:07.000Z"
     },
     {
       "id": "adfe3c5c21cb538c752b",
@@ -410,22 +490,6 @@
       "publishedAt": "2026-08-19T15:44:09.000Z"
     },
     {
-      "id": "ad5b729277dddb050d26",
-      "source": "CryptoSlate",
-      "title": "Bitcoin price hits $69,500 because US just doubled Treasury buybacks to crush long-term yields",
-      "summary": "Bitcoin and Ethereum surged above $69,500 and $2,000 on Wednesday after the US Treasury doubled planned buybacks of long-dated government debt. On Aug. 19, the Treasury Department said it will raise the maximum size of its liquidity-support operations for…",
-      "url": "https://cryptoslate.com/bitcoin-price-hits-69500-as-over-400m-of-shorts-liquidated-because-us-doubles-treasury-debt-buybacks-to-crush-long-term-yields/",
-      "publishedAt": "2026-08-19T15:37:42.000Z"
-    },
-    {
-      "id": "6d5dc6603b325616de63",
-      "source": "CryptoSlate",
-      "title": "Wall Street piled $1.2 billion into MSTR in Q2 before Strategy turned its Bitcoin flywheel toward rescuing STRC",
-      "summary": "Wall Street institutions increased their exposure to Strategy's MSTR in the second quarter, just before Michael Saylor’s Bitcoin accumulation machine began redirecting capital toward STRC. On Aug. 18, Strategy said 12 of its 15 largest institutional…",
-      "url": "https://cryptoslate.com/wall-street-piled-1-2-billion-into-mstr-in-q2-before-strategy-turned-its-bitcoin-flywheel-toward-rescuing-strc/",
-      "publishedAt": "2026-08-19T15:30:23.000Z"
-    },
-    {
       "id": "7e984089803174e1d000",
       "source": "CoinDesk",
       "title": "Bitcoin nears key technical breakout that could propel prices to $76,000",
@@ -632,70 +696,6 @@
       "summary": "John Darsie, CEO of SALT and partner at SkyBridge, said bitcoin's changing holder base is part of a broader maturation process.",
       "url": "https://www.theblock.co/news/markets/2026-08-19-scaramucci-points-to-100000-bitcoin-as-magic-number-for-og-sellers-eyes-ai-blockchain-convergence-412190",
       "publishedAt": "2026-08-19T10:47:39.000Z"
-    },
-    {
-      "id": "7c07523335bc3ecc7346",
-      "source": "CoinDesk",
-      "title": "Bitcoin stuck in a six-week range as global bond yields hit highest levels for decades",
-      "summary": "BTC volatility has dropped to multi-year lows as surging Treasury yields rattle equities and traders await the Fed's July meeting minutes for clues on the interest-rate path.",
-      "url": "https://www.coindesk.com/markets/2026/08/19/bitcoin-stuck-in-a-six-week-range-as-global-bond-yields-hit-highest-levels-for-decades",
-      "publishedAt": "2026-08-19T10:29:57.000Z"
-    },
-    {
-      "id": "291bf80ed3ff1a35e94b",
-      "source": "Cointelegraph",
-      "title": "Nexo launches regulated crypto-backed credit in Australia",
-      "summary": "Nexo introduced regulated, cryptocurrency-backed credit lines that allow users to access liquidity in Australian dollars or stablecoins by borrowing against their digital assets.",
-      "url": "https://cointelegraph.com/news/nexo-launches-crypto-backed-credit-australia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-19T10:25:00.000Z"
-    },
-    {
-      "id": "f8176d32e06848f1328a",
-      "source": "The Block",
-      "title": "Rain CEO says stablecoin payments reach more than 100,000 merchants without them knowing it",
-      "summary": "Rain CEO Farooq Malik said more than 100,000 merchants accept stablecoins unknowingly, with transactions settling through Visa in three days.",
-      "url": "https://www.theblock.co/news/business/2026-08-19-rain-ceo-says-stablecoin-payments-reach-more-than-100000-merchants-without-them-knowing-it-412184",
-      "publishedAt": "2026-08-19T10:09:40.000Z"
-    },
-    {
-      "id": "eb9ca5238c6f022adb31",
-      "source": "CoinDesk",
-      "title": "TikTok code includes peer-to-peer payments over messaging: Bloomberg",
-      "summary": "The feature, which follows earlier moves into financial transactions, is not yet being tested anywhere, a spokesperson said.",
-      "url": "https://www.coindesk.com/business/2026/08/19/tiktok-code-includes-peer-to-peer-payments-over-messaging-bloomberg",
-      "publishedAt": "2026-08-19T10:04:30.000Z"
-    },
-    {
-      "id": "fcc2df6dda9effbb82bd",
-      "source": "CoinDesk",
-      "title": "Ripple raises $275 million in senior notes for prime brokerage push",
-      "summary": "Ripple Prime's inaugural senior notes carried an investment grade rating and drew institutional investors across key financial markets.",
-      "url": "https://www.coindesk.com/business/2026/08/19/ripple-raises-usd275-million-in-debut-debt-offering-for-its-prime-brokerage-arm",
-      "publishedAt": "2026-08-19T09:55:50.000Z"
-    },
-    {
-      "id": "c3e0203394462f63a4c1",
-      "source": "Decrypt",
-      "title": "Winklevoss-Backed Cypherpunk Launches 'World's Largest' Zcash Mining Fleet",
-      "summary": "The Nasdaq-listed privacy firm launched Cypherpunk Mining through a $33.33 million equity deal with Winklevoss Capital, adding roughly 18% of the Zcash network's hashrate to accelerate its treasury ambitions.",
-      "url": "https://decrypt.co/375926/winklevoss-cypherpunk-zcash-mining-fleet",
-      "publishedAt": "2026-08-19T09:31:03.000Z"
-    },
-    {
-      "id": "a6502aaf13b4f10bd9b5",
-      "source": "CoinDesk",
-      "title": "OpenAI trails Anthropic as losses deepen and Altman pauses frontier AI training",
-      "summary": "Widening losses and intensifying competition coincide with a pause in frontier reinforcement-learning training as openai strengthens its safety controls.",
-      "url": "https://www.coindesk.com/markets/2026/08/19/openai-trails-anthropic-as-losses-deepen-and-altman-pauses-frontier-ai-training",
-      "publishedAt": "2026-08-19T09:10:22.000Z"
-    },
-    {
-      "id": "a1ff2bf1f077753e1642",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin and gold jump but rejected at key level as Treasury move pushes yields lower",
-      "summary": "Led by Scott Bessent, the U.S. Treasury announced at least a doubling in the size of its long-dated bond buybacks.",
-      "url": "https://www.coindesk.com/markets/2026/08/19/live-updates-bitcoin-holds-firm-above-usd64-000-as-south-korea-s-kospi-sinks-5-8",
-      "publishedAt": "2026-08-19T09:05:45.000Z"
     }
   ]
 }
