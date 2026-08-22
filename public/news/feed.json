@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T01:53:41.371Z",
+  "generatedAt": "2026-08-22T07:03:01.661Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -45,9 +45,9 @@
     },
     {
       "name": "The Block",
-      "status": "unavailable",
-      "itemCount": 0,
-      "error": "This operation was aborted"
+      "status": "ok",
+      "itemCount": 19,
+      "error": null
     },
     {
       "name": "Ethereum Foundation",
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "679aeb623e7bd0c8f3bd",
+      "source": "CryptoSlate",
+      "title": "Adam Back’s Bitcoin treasury deal died, but its $15M obligation did not",
+      "summary": "The public Bitcoin treasury structure is gone, while two 2026 payments carry a narrow seven-day release condition. The post Adam Back’s Bitcoin treasury deal died, but its $15M obligation did not appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/adam-backs-bitcoin-treasury-deal-died-but-its-15m-obligation-did-not/",
+      "publishedAt": "2026-08-22T07:00:55.000Z"
+    },
+    {
+      "id": "821752fc9bc0428d53ab",
+      "source": "CoinDesk",
+      "title": "Zcash jumps 48% to over $800 as Grayscale spot ETF push adds to ‘next bitcoin’ buzz",
+      "summary": "ZEC traded above its January 2018 peak as futures volume hit billions of dollars and a Grayscale filing showed fresh progress toward converting its Zcash Trust into a spot ETF.",
+      "url": "https://www.coindesk.com/markets/2026/08/22/zcash-tops-usd800-for-first-time-since-2016",
+      "publishedAt": "2026-08-22T05:37:43.000Z"
+    },
+    {
+      "id": "31eb4a75787445ee375c",
+      "source": "CoinDesk",
+      "title": "How a Treasury buyback tweak helped bitcoin surge 25% to nearly $80,000 in days",
+      "summary": "Treasury buybacks are not QE, analysts said, but the move helped pull long-term yields off 19-year highs and triggered a record short squeeze in a market already leaning too bearish.",
+      "url": "https://www.coindesk.com/markets/2026/08/22/how-a-treasury-buyback-tweak-helped-bitcoin-surge-nearly-25-in-days",
+      "publishedAt": "2026-08-22T05:05:13.000Z"
+    },
+    {
+      "id": "1a7e0757d5fcef213917",
+      "source": "CryptoSlate",
+      "title": "Illuvium says six months of cuts bought it another year as MMO becomes its main remaining bet",
+      "summary": "Warwick says six months of cost reductions restored runway, but the studio has not published its current burn. The post Illuvium says six months of cuts bought it another year as MMO becomes its main remaining bet appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/illuvium-says-six-months-of-cuts-bought-it-another-year-as-mmo-becomes-its-main-remaining-bet/",
+      "publishedAt": "2026-08-22T04:00:09.000Z"
+    },
     {
       "id": "f7b37a4d9b63f41dab4e",
       "source": "CryptoSlate",
@@ -96,6 +128,14 @@
       "summary": "Bitcoin Magazine Smart Money Helping Support Bitcoin Rebound, Says Pantera Capital Pantera Capital's portfolio manager has said it's hard not to be bullish with bitcoin's recent price surges. This post Smart Money Helping Support Bitcoin Rebound, Says…",
       "url": "https://bitcoinmagazine.com/news/pantera-capital-says-bitcoin-to-go-higher",
       "publishedAt": "2026-08-21T21:52:26.000Z"
+    },
+    {
+      "id": "cefa382bf535f9d84f7b",
+      "source": "The Block",
+      "title": "Grayscale moves closer to launching first Zcash ETF in US with fresh amended SEC filing",
+      "summary": "Grayscale is inching closer to launching its Zcash ETF, filing another amendment with the Securities and Exchange Commission on Friday.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-21-grayscale-moves-closer-launching-first-zcash-etf-in-us-sec-amended-filing-412517",
+      "publishedAt": "2026-08-21T21:34:53.000Z"
     },
     {
       "id": "0a0b88a407b35b590d62",
@@ -218,12 +258,28 @@
       "publishedAt": "2026-08-21T17:28:55.000Z"
     },
     {
+      "id": "a2745021c3ed89cf94fc",
+      "source": "The Block",
+      "title": "BounceBit to sunset blockchain, migrate to BNB Chain after $3 million exploit",
+      "summary": "The attacker transferred approximately 286.5 million BB from nine wallets before block production was eventually halted.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-08-21-bouncebit-sunset-blockchain-migrate-bnb-chain-after-3-million-exploit-412485",
+      "publishedAt": "2026-08-21T17:28:34.000Z"
+    },
+    {
       "id": "ad470dbb40acb97d43e6",
       "source": "CryptoSlate",
       "title": "The latest $1.61 billion crypto ETF surge risks grinding to a halt against a 30-year US Treasury yield spike",
       "summary": "Four days of fund inflows now face a $183 billion Treasury auction window that can test the rally’s staying power. The post The latest $1.61 billion crypto ETF surge risks grinding to a halt against a 30-year US Treasury yield spike appeared first on…",
       "url": "https://cryptoslate.com/the-latest-1-61-billion-crypto-etf-surge-risks-grinding-to-a-halt-against-a-30-year-us-treasury-yield-spike/",
       "publishedAt": "2026-08-21T17:25:58.000Z"
+    },
+    {
+      "id": "52dfcf8250830c2ce0a7",
+      "source": "The Block",
+      "title": "XRP leads broad altcoin rally as bitcoin’s biggest weekly gain in two years lifts crypto",
+      "summary": "Amid this week's crypto rally, HYPE is up nearly 40%, while other altcoins such as XRP, ZEC and LINK have risen over 30%.",
+      "url": "https://www.theblock.co/news/markets/2026-08-21-xrp-leads-altcoin-rally-bitcoin-biggest-weekly-gain-in-two-years-lifts-crypto-412483",
+      "publishedAt": "2026-08-21T17:24:02.000Z"
     },
     {
       "id": "bdb0050ab622f8eb53e8",
@@ -298,20 +354,20 @@
       "publishedAt": "2026-08-21T15:39:02.000Z"
     },
     {
+      "id": "20d831a17b6ce685c983",
+      "source": "The Block",
+      "title": "Strategy shares hit two-month high as STRC rebounds toward $100 alongside bitcoin",
+      "summary": "Amid a two-month puase on BTC buys, Strategy shares (MSTR) rallied alongside bitcoin as STRC continued its recovery toward its $100 target.",
+      "url": "https://www.theblock.co/news/markets/2026-08-21-strategy-shares-hit-two-month-high-strc-rebounds-toward-100-alongside-bitcoin-412467",
+      "publishedAt": "2026-08-21T15:38:02.000Z"
+    },
+    {
       "id": "6ce3fe46f817c844ea0d",
       "source": "Bitcoin Magazine",
       "title": "Bitcoin Price Roars Towards $80,000 Following Positive Regulatory News, US Buyback Pledge",
       "summary": "Bitcoin Magazine Bitcoin Price Roars Towards $80,000 Following Positive Regulatory News, US Buyback Pledge Bitcoin has continued its rocket upwards, and blew past $79,000 on Friday. This post Bitcoin Price Roars Towards $80,000 Following Positive Regulatory…",
       "url": "https://bitcoinmagazine.com/news/bitcoin-surges-towards-80000",
       "publishedAt": "2026-08-21T15:24:23.000Z"
-    },
-    {
-      "id": "16eae2d1eb0d46fdf1ee",
-      "source": "CryptoSlate",
-      "title": "This Nasdaq-listed crypto firm is swapping fresh Ethereum buys for an AI pivot",
-      "summary": "Nearly all H1 sales came from related-party inventory as a still-unproven ASIC launch absorbs capital. The post This Nasdaq-listed crypto firm is swapping fresh Ethereum buys for an AI pivot appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/this-nasdaq-listed-crypto-firm-is-swapping-fresh-ethereum-buys-for-an-ai-pivot/",
-      "publishedAt": "2026-08-21T15:00:32.000Z"
     },
     {
       "id": "63a5c681530ba4849dc9",
@@ -328,14 +384,6 @@
       "summary": "Meanwhile crypto majors and alts continue to soar, with BTC nearing $80k and alts like Pump and ZEC putting up big candles.",
       "url": "https://decrypt.co/376174/morning-minute-cftc-crypto-clarity-act",
       "publishedAt": "2026-08-21T14:27:31.000Z"
-    },
-    {
-      "id": "5593187970e41b977730",
-      "source": "CryptoSlate",
-      "title": "Bitcoin miners are getting a new AI hedge, but it may protect them from the wrong risk",
-      "summary": "GPU-rental benchmarks may price one layer of AI capacity while HIVE and Riot retain project and financing exposure. The post Bitcoin miners are getting a new AI hedge, but it may protect them from the wrong risk appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoin-miners-are-getting-a-new-ai-hedge-but-it-may-protect-them-from-the-wrong-risk/",
-      "publishedAt": "2026-08-21T13:50:11.000Z"
     },
     {
       "id": "ad027410eeadb1df7ca8",
@@ -370,12 +418,28 @@
       "publishedAt": "2026-08-21T12:10:55.000Z"
     },
     {
+      "id": "2376b0e84973904cc42a",
+      "source": "The Block",
+      "title": "AI adoption in crypto crime rose 40% over the past year, TRM Labs says",
+      "summary": "Crypto hackers are quickly picking up on AI developments to discover overlooked vulnerabilities and infiltrate IT firms, the report said.",
+      "url": "https://www.theblock.co/news/web3/2026-08-21-ai-adoption-in-crypto-crime-trm-412297",
+      "publishedAt": "2026-08-21T12:00:00.000Z"
+    },
+    {
       "id": "30b66fac4f6653b25a3a",
       "source": "Cointelegraph",
       "title": "Standard Chartered wavers on $100K Bitcoin year-end call, says it may be ‘too low’",
       "summary": "Standard Chartered’s Geoff Kendrick said Bitcoin could move toward its $126,000 all-time high after Oct. 6 as spot Bitcoin ETF inflows recover.",
       "url": "https://cointelegraph.com/news/standard-chartered-100k-bitcoin-2026-prediction-low?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-21T11:58:10.000Z"
+    },
+    {
+      "id": "2a76fd2aa595d7d6ce81",
+      "source": "The Block",
+      "title": "Crypto is still in ‘winter’ price-wise but it’s an ‘institutional summer,’ STS Digital CEO says",
+      "summary": "STS Digital CEO Maxime Seiler says token prices have lagged institutional adoption as bitcoin futures basis converges toward risk-free rates.",
+      "url": "https://www.theblock.co/news/markets/2026-08-21-crypto-is-still-in-winter-price-wise-but-an-institutional-summer-sts-digital-ceo-says-412454",
+      "publishedAt": "2026-08-21T11:58:06.000Z"
     },
     {
       "id": "d5acf3a44496b564490f",
@@ -410,6 +474,14 @@
       "publishedAt": "2026-08-21T11:26:27.000Z"
     },
     {
+      "id": "706c17778061788ce6c6",
+      "source": "The Block",
+      "title": "Bitcoin surge toward $80K points to liquidity-driven momentum shift as ETF flows rebound: Bernstein",
+      "summary": "U.S. spot bitcoin ETF flows have also rebounded, while Strategy's bitcoin holdings are now back above their average purchase price.",
+      "url": "https://www.theblock.co/news/markets/2026-08-21-bitcoin-surge-80k-liquidity-driven-momentum-shift-etf-flows-rebound-bernstein-412443",
+      "publishedAt": "2026-08-21T10:57:54.000Z"
+    },
+    {
       "id": "2cff3b63bb745276b9a6",
       "source": "CoinDesk",
       "title": "Nomura-backed Laser Digital wins Japan's first crypto approval in four years",
@@ -442,12 +514,28 @@
       "publishedAt": "2026-08-21T09:31:05.000Z"
     },
     {
+      "id": "ab6068785452a52df42a",
+      "source": "The Block",
+      "title": "Upbit trading volume spikes 273% as South Korean investors re-enter crypto",
+      "summary": "One analyst said South Korean capital is slowly moving back to crypto, as investors are 'return-chasing' rather than 'asset-loyal.'",
+      "url": "https://www.theblock.co/news/markets/2026-08-21-upbit-trading-volume-spikes-412435",
+      "publishedAt": "2026-08-21T09:17:58.000Z"
+    },
+    {
       "id": "39c8f2ee01c0efa671e4",
       "source": "CoinDesk",
       "title": "Treasury's latest measure isn't QE or YCC. Still, bitcoin is skyrocketing. Here's why.",
       "summary": "The rally in hard assets isn’t necessarily about what the Treasury is doing, but what its move signals to the market.",
       "url": "https://www.coindesk.com/markets/2026/08/21/treasury-s-latest-measure-isn-t-qe-or-ycc-still-bitcoin-is-skyrocketing-here-s-why",
       "publishedAt": "2026-08-21T09:17:15.000Z"
+    },
+    {
+      "id": "8c90d4f763cc4e6e7dcb",
+      "source": "The Block",
+      "title": "Avalanche’s Nahas: Token prices are down, but ‘I’ve never seen more opportunities’ in crypto",
+      "summary": "Ava Labs CBO John Nahas says crypto prices are down, but real-world adoption is creating more opportunities across the sector.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-08-21-avalanches-nahas-token-prices-are-down-but-ive-never-seen-more-opportunities-in-crypto-412431",
+      "publishedAt": "2026-08-21T09:00:26.000Z"
     },
     {
       "id": "c872b786d6d1f31a596c",
@@ -474,12 +562,28 @@
       "publishedAt": "2026-08-21T07:50:01.000Z"
     },
     {
+      "id": "22581189faf7123cdeff",
+      "source": "The Block",
+      "title": "Anchorage CEO says AI agents need bank accounts for ‘The Jetsons’-like future",
+      "summary": "The firm has built an agentic banking platform with a 'know-your-agent' setup to facilitate AI-driven transactions.",
+      "url": "https://www.theblock.co/news/business/2026-08-21-anchorage-ceo-ai-the-jetsons-412427",
+      "publishedAt": "2026-08-21T07:11:13.000Z"
+    },
+    {
       "id": "755c4578f6247fb3cc91",
       "source": "CoinDesk",
       "title": "Live updates: Bitcoin slips back to $77,000 after challenging $80,000 overnight",
       "summary": "Spot bitcoin ETFs pulled in $606 million on Aug. 20 and ether funds $221 million, both bigger than the prior day, confirming the institutional bid behind bitcoin's run.",
       "url": "https://www.coindesk.com/tech/2026/08/21/live-updates-bitcoin-ether-etfs-pull-in-usd800-million-as-inflows-surge-for-a-second-day",
       "publishedAt": "2026-08-21T06:43:24.000Z"
+    },
+    {
+      "id": "d65894cd510328d12340",
+      "source": "The Block",
+      "title": "South Korea’s Shinhan partners with Solana Foundation, Etherfuse, Orca for tokenized fund issuance",
+      "summary": "The agreement covers a proof-of-concept for the issuance and distribution of a Korean won-denominated tokenized fund.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-21-south-korea-shinhan-partners-solana-412420",
+      "publishedAt": "2026-08-21T06:32:48.000Z"
     },
     {
       "id": "6dea4e532caa0cf78849",
@@ -522,12 +626,28 @@
       "publishedAt": "2026-08-21T04:56:30.000Z"
     },
     {
+      "id": "4a1b44fdb0a9d8fa3771",
+      "source": "The Block",
+      "title": "MANTRA freezes all transactions and network following incident",
+      "summary": "MANTRA Chain halted the network and all transactions after discovering an incident related to its Cosmos EVM module.",
+      "url": "https://www.theblock.co/news/defi/2026-08-21-mantra-freezes-network-412416",
+      "publishedAt": "2026-08-21T04:47:29.000Z"
+    },
+    {
       "id": "44536b4af25ca3084103",
       "source": "Cointelegraph",
       "title": "Capital.com plans UAE spot crypto services after affiliate wins licence",
       "summary": "UAE clients will be able to buy and hold crypto through Capital.com’s app, expanding beyond price exposure through contracts for difference.",
       "url": "https://cointelegraph.com/news/capital-com-uae-spot-crypto-license?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-21T03:33:11.000Z"
+    },
+    {
+      "id": "f642906942c91b71c556",
+      "source": "The Block",
+      "title": "Bitcoin breaks through $75,500 while analyst calls current rally ‘premature’",
+      "summary": "Shawn Young, chief analyst at MEXC Research, said that the crypto market is giving Treasury's intervention 'more credit than it deserves.'",
+      "url": "https://www.theblock.co/news/markets/2026-08-20-bitcoin-breaks-through-75500-412404",
+      "publishedAt": "2026-08-21T02:22:44.000Z"
     },
     {
       "id": "07da882a6f89ef3e690f",
@@ -544,6 +664,14 @@
       "summary": "An options trader opened a large straddle on XRP, betting on wild price swings by Aug. 28.",
       "url": "https://www.coindesk.com/markets/2026/08/21/a-usd2-million-bet-on-xrp-volatility-crosses-the-tape-as-prices-surge",
       "publishedAt": "2026-08-21T01:51:56.000Z"
+    },
+    {
+      "id": "364bc160cbc9fb46047e",
+      "source": "The Block",
+      "title": "CME CEO Terrence Duffy trades barbs with CFTC’s Selig and Kalshi’s COO over prediction market oversight",
+      "summary": "A CFTC ommittee meeting exposed a sharp divide between the worlds of traditional finance and prediction market platforms.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-20-cme-ceo-terrence-duffy-trades-barbs-with-cftcs-selig-and-kalshis-coo-over-prediction-market-oversight-412397",
+      "publishedAt": "2026-08-20T23:39:38.000Z"
     },
     {
       "id": "47eddf9727d2e3185534",
@@ -568,134 +696,6 @@
       "summary": "The BTC price reclaimed its 200-day moving average for the first time in nine months as its rally gained momentum after the US Treasury expanded its bond buybacks.",
       "url": "https://cointelegraph.com/markets/bitcoin-breaks-200-day-moving-average?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-20T21:03:21.000Z"
-    },
-    {
-      "id": "d0a0c89e22c1a1f0f0d1",
-      "source": "Cointelegraph",
-      "title": "CFTC chair says agency will move forward on crypto regulation if CLARITY fails",
-      "summary": "Michael Selig said at a meeting of the Innovation Advisory Committee that he had directed CFTC staff to explore developer protections and other crypto-related policies.",
-      "url": "https://cointelegraph.com/news/cftc-chair-crypto-regulation-without-clarity-act-congress?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-20T20:56:23.000Z"
-    },
-    {
-      "id": "b169e638b9b077d2586c",
-      "source": "Bitcoin Magazine",
-      "title": "Open Source vs. Source-Available: What the Coldcard Failure Teaches About Bitcoin Software Incentives",
-      "summary": "Bitcoin Magazine Open Source vs. Source-Available: What the Coldcard Failure Teaches About Bitcoin Software Incentives FOSS rests on four essential freedoms defined by the Free Software Foundation and the Open Source Initiative’s ten criteria. Licenses that…",
-      "url": "https://bitcoinmagazine.com/culture/open-source-vs-source-available-what-the-coldcard-failure-teaches-about-bitcoin-software-incentives",
-      "publishedAt": "2026-08-20T20:49:28.000Z"
-    },
-    {
-      "id": "dd04a334173a0e67678e",
-      "source": "Decrypt",
-      "title": "What's Next for Bitcoin After Historic Rally? Experts Weigh In",
-      "summary": "Bitcoin's surge above $72,000 wiped out billions in bearish bets, but analysts say fresh buying will be needed to keep the rally going.",
-      "url": "https://decrypt.co/376155/what-next-for-bitcoin-price-experts-weigh-in",
-      "publishedAt": "2026-08-20T20:40:56.000Z"
-    },
-    {
-      "id": "836ed448e2c0e6133e64",
-      "source": "Bitcoin Magazine",
-      "title": "Iranian Hacking Crew Charged in Sprawling Theft Case — Including $6M Bitcoin Ransom",
-      "summary": "Bitcoin Magazine Iranian Hacking Crew Charged in Sprawling Theft Case — Including $6M Bitcoin Ransom A $10 million reward is being offered by the feds for information on the defendants. This post Iranian Hacking Crew Charged in Sprawling Theft Case —…",
-      "url": "https://bitcoinmagazine.com/news/iran-hackers-hit-with-criminal-charges",
-      "publishedAt": "2026-08-20T20:27:54.000Z"
-    },
-    {
-      "id": "658b16e6a061ba933dd4",
-      "source": "Cointelegraph",
-      "title": "Binance opens crypto trading to AI agents with user-set controls",
-      "summary": "Binance’s Agent OS lets AI agents access market data, execute trades and make payments while giving users control over permissions and account access.",
-      "url": "https://cointelegraph.com/news/binance-opens-crypto-trading-to-ai-agents-with-user-set-controls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-20T20:26:28.000Z"
-    },
-    {
-      "id": "98e7c3be24b0e31f9b17",
-      "source": "Decrypt",
-      "title": "Bitcoin Is Pumping But Prediction Market Traders Aren't Convinced",
-      "summary": "Bitcoin's sharpest rally in five months flipped prediction-market odds from bearish to a coin flip—but the longer-term bets still price in a crash.",
-      "url": "https://decrypt.co/376103/bitcoin-price-pumping-prediction-next-move",
-      "publishedAt": "2026-08-20T19:16:05.000Z"
-    },
-    {
-      "id": "71ce937d713bdd44c624",
-      "source": "CoinDesk",
-      "title": "U.S. CFTC chief puts staff on notice to create crypto regulations if Clarity Act fails",
-      "summary": "Commodity Futures Trading Commission Chairman Mike Selig told the inaugural gathering of the Innovation Advisory Committee that his agency won't sit idle.",
-      "url": "https://www.coindesk.com/policy/2026/08/20/u-s-cftc-chief-puts-staff-on-notice-to-create-crypto-regulations-if-clarity-act-fails",
-      "publishedAt": "2026-08-20T18:54:18.000Z"
-    },
-    {
-      "id": "7802fd9c3aaab1e77490",
-      "source": "Decrypt",
-      "title": "CFTC Chair Readies Crypto Rules If Congress Fails to Pass Clarity Act",
-      "summary": "The CFTC chair said staff is already exploring a crypto market structure framework and could move quickly to propose rules if Congress fails to act.",
-      "url": "https://decrypt.co/376151/cftc-chair-crypto-rules-if-congress-fails-clarity-act",
-      "publishedAt": "2026-08-20T18:44:08.000Z"
-    },
-    {
-      "id": "027166f0024852d7939c",
-      "source": "Decrypt",
-      "title": "Alibaba's Revenue Jumps 9% as AI Cloud Growth Hits 45%—But a Profit Plunge Sends Shares Lower",
-      "summary": "Cloud and AI product revenue accelerated in the June quarter, but a 75% drop in net income extended Alibaba's run of profit misses to a fifth straight quarter.",
-      "url": "https://decrypt.co/376143/alibaba-revenue-jumps-ai-cloud-growth",
-      "publishedAt": "2026-08-20T18:32:25.000Z"
-    },
-    {
-      "id": "6453accabfae2fd5f292",
-      "source": "Decrypt",
-      "title": "XRP Notches Best Week Since 2024 Election Pump on Bitcoin Short Squeeze",
-      "summary": "The token's steepest daily and weekly gains in months rode Bitcoin's record liquidation wave—though ETF flows and futures data hint the move is running on borrowed momentum.",
-      "url": "https://decrypt.co/376120/xrp-price-best-week-since-2024-election-pump",
-      "publishedAt": "2026-08-20T17:46:08.000Z"
-    },
-    {
-      "id": "12a445db6d57a7dc5974",
-      "source": "Cointelegraph",
-      "title": "US debt tops $40T stoking debate on what it means for Bitcoin",
-      "summary": "Analysts say the $40 trillion debt milestone could bolster Bitcoin’s long-term case, even as Treasury yields, dollar strength and liquidity remain key near-term drivers.",
-      "url": "https://cointelegraph.com/markets/bitcoin-surges-after-us-debt-crosses-40t?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-20T17:43:58.000Z"
-    },
-    {
-      "id": "8c57258b396542868fcb",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin ETFs Add Over $1B as Investor Sentiment Turns Bullish",
-      "summary": "Bitcoin Magazine Bitcoin ETFs Add Over $1B as Investor Sentiment Turns Bullish Investors have been buying shares in the American funds this week. This post Bitcoin ETFs Add Over $1B as Investor Sentiment Turns Bullish first appeared on Bitcoin Magazine and…",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-etfs-receive-over-1-billion",
-      "publishedAt": "2026-08-20T17:19:30.000Z"
-    },
-    {
-      "id": "2120c8ec84625458675d",
-      "source": "Decrypt",
-      "title": "Iranian Hackers Tied to $6 Million Bitcoin Extortion Charged in Massive Cyber Campaign",
-      "summary": "Seventeen alleged members of Iran-based Mabna Institute were charged over hacks targeting hundreds of universities, companies, and government agencies.",
-      "url": "https://decrypt.co/376117/iranian-hackers-bitcoin-extortion-charged",
-      "publishedAt": "2026-08-20T17:12:43.000Z"
-    },
-    {
-      "id": "3428ce1343b6380d8c00",
-      "source": "Decrypt",
-      "title": "Nearly 2,000 Hacked WordPress Sites Turned Into Criminal Infrastructure",
-      "summary": "The StopAndProtect operation used compromised WordPress websites to spread malware, steal crypto wallet files, and deploy ransomware.",
-      "url": "https://decrypt.co/376109/hacked-wordpress-sites-criminal-infrastructure",
-      "publishedAt": "2026-08-20T16:33:38.000Z"
-    },
-    {
-      "id": "57a4bedc42fd268cdb00",
-      "source": "CoinDesk",
-      "title": "Treasury buybacks could set up bitcoin’s next move toward $180,000, says strategist",
-      "summary": "Longtime bond market investor Mark Connors sees routine government bond buybacks improving liquidity and bringing bitcoin’s next rally closer.",
-      "url": "https://www.coindesk.com/markets/2026/08/20/treasury-buybacks-could-set-up-bitcoin-s-next-move-toward-usd180-000",
-      "publishedAt": "2026-08-20T16:17:32.000Z"
-    },
-    {
-      "id": "4f4c847ee46829761acd",
-      "source": "Cointelegraph",
-      "title": "Bitcoin miners pour billions into AI as capex outpaces revenue 15-to-1",
-      "summary": "Nine public miners generated $341 million from AI and HPC operations in the first half of 2026 after spending more than $5 billion on capital assets.",
-      "url": "https://cointelegraph.com/news/bitcoin-miners-ai-hpc-capex-revenue-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-20T16:12:00.000Z"
     }
   ]
 }
