@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T02:02:19.630Z",
+  "generatedAt": "2026-08-23T07:05:27.160Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 36,
+      "itemCount": 56,
       "error": null
     },
     {
@@ -57,6 +57,22 @@
     }
   ],
   "items": [
+    {
+      "id": "bf9f88640a29e8b763de",
+      "source": "CryptoSlate",
+      "title": "Local’s access to global crypto platforms could end under Nigeria’s proposed capital floor",
+      "summary": "Exchanges and custodians would need ₦2 billion in capital, while foreign-currency stablecoins face 120% backing. The post Local’s access to global crypto platforms could end under Nigeria’s proposed capital floor appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/seamless-access-to-global-crypto-platforms-could-evaporate-for-locals-under-nigerias-proposed-%e2%82%a62-billion-capital-floor/",
+      "publishedAt": "2026-08-23T07:00:07.000Z"
+    },
+    {
+      "id": "4059a4db514616bbced9",
+      "source": "CryptoSlate",
+      "title": "Coldcard now requires 65 key presses after seed exploit, while exposed funds still must move",
+      "summary": "Firmware 5.6.1 and 1.5.1Q harden new wallet creation but cannot repair a seed made on an affected release. The post Coldcard now requires 65 key presses after seed exploit, while exposed funds still must move appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/coldcard-now-requires-65-key-presses-after-seed-exploit-while-exposed-funds-still-must-move/",
+      "publishedAt": "2026-08-23T05:00:07.000Z"
+    },
     {
       "id": "13e268be2591883ae953",
       "source": "CryptoSlate",
@@ -186,14 +202,6 @@
       "publishedAt": "2026-08-22T14:00:00.000Z"
     },
     {
-      "id": "eb21f041ffebb8ca39b6",
-      "source": "CryptoSlate",
-      "title": "SEC proposes a path for crypto projects to raise $75 million and later end the token’s securities contract",
-      "summary": "US regulators have already found a home for true Bitcoin perpetuals inside the CFTC’s exchange framework. The SEC is now turning to another part of the same market: how a team can pay to build a network before its token has much use. A derivatives exchange…",
-      "url": "https://cryptoslate.com/sec-proposes-a-path-for-crypto-projects-to-raise-75-million-and-later-end-the-tokens-securities-contract/",
-      "publishedAt": "2026-08-22T13:45:53.000Z"
-    },
-    {
       "id": "e83d9eba67fc1494529f",
       "source": "Decrypt",
       "title": "A Third of the Post-ChatGPT Web Is AI-Written, Pew Finds",
@@ -216,14 +224,6 @@
       "summary": "Brussels is reviewing whether crypto lending should fall under MiCA, but DeFi lending vaults are making it harder to determine who, exactly, should be regulated.",
       "url": "https://cointelegraph.com/magazine/mica-is-coming-for-defi-vaults-but-regulation-will-be-difficult?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-22T13:30:00.000Z"
-    },
-    {
-      "id": "e2289c1cbac16cb66c2c",
-      "source": "CryptoSlate",
-      "title": "Just 1% of wallets control $133M in midterm odds on Polymarket, creating a dangerous illusion of mass public consensus",
-      "summary": "The Nov. 3 midterm election is less than 11 weeks away, and its betting market had already surpassed the full 2024 congressional cycle in the latest comparable data. Traders had placed at least $133 million across markets tied to House and Senate races by…",
-      "url": "https://cryptoslate.com/just-1-of-wallets-control-133m-in-midterm-odds-on-polymarket-creating-a-dangerous-illusion-of-mass-public-consensus/",
-      "publishedAt": "2026-08-22T12:15:16.000Z"
     },
     {
       "id": "f1d91916c5cd8d447a54",
