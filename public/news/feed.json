@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T13:05:22.166Z",
+  "generatedAt": "2026-08-23T18:51:02.258Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 36,
+      "itemCount": 56,
       "error": null
     },
     {
@@ -57,6 +57,110 @@
     }
   ],
   "items": [
+    {
+      "id": "81c34d56a90f5345d37c",
+      "source": "CoinDesk",
+      "title": "Regulation Crypto is here: State of Crypto",
+      "summary": "The SEC published its Reg Crypto proposal last week, giving the public 60 days to comment.",
+      "url": "https://www.coindesk.com/policy/2026/08/23/regulation-crypto-is-here-state-of-crypto",
+      "publishedAt": "2026-08-23T18:30:00.000Z"
+    },
+    {
+      "id": "ebf1e447f2efdeea236e",
+      "source": "CryptoSlate",
+      "title": "Bitcoin miner IPO demands 99.8% of funds from public buyers while handing them just 10% equity",
+      "summary": "The preliminary S-1 compares $30,000,005 from new investors with $45,000 from existing holders and leaves buyers immediately diluted. The post Bitcoin miner IPO demands 99.8% of funds from public buyers while handing them just 10% equity appeared first on…",
+      "url": "https://cryptoslate.com/bitcoin-miner-ipo-demands-99-8-of-funds-from-public-buyers-while-handing-them-just-10-equity/",
+      "publishedAt": "2026-08-23T18:05:40.000Z"
+    },
+    {
+      "id": "0f11093a23a13f6c67b7",
+      "source": "The Block",
+      "title": "Tether’s $120 million Uruguay bitcoin mining project collapsed over a power contract dispute: Reuters",
+      "summary": "UTE cut power to Tether's mining sites in July 2025 after Tether representatives did not attend the signing of a revised contract, per the report.",
+      "url": "https://www.theblock.co/news/business/2026-08-23-tethers-120-million-uruguay-bitcoin-mining-project-collapsed-over-a-power-contract-dispute-reuters-412536",
+      "publishedAt": "2026-08-23T17:02:20.000Z"
+    },
+    {
+      "id": "1bf7d23f0eec075cd7e8",
+      "source": "CryptoSlate",
+      "title": "Pakistan gives crypto platforms a September 5 deadline to comply or leave",
+      "summary": "Covered nonfilers must cease affected services, but the rules do not prescribe a universal customer exit sequence. The post Pakistan gives crypto platforms a September 5 deadline to comply or leave appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/pakistan-gives-crypto-platforms-a-september-5-deadline-to-comply-or-leave/",
+      "publishedAt": "2026-08-23T17:00:05.000Z"
+    },
+    {
+      "id": "2c394757f8f183b166a1",
+      "source": "Decrypt",
+      "title": "63% of Religious Books on Amazon Are Likely AI-Written, Study Finds",
+      "summary": "Witchcraft books had the highest rate of likely AI-generated content at 78%, according to an Originality.ai analysis of more than 2,000 titles.",
+      "url": "https://decrypt.co/376295/religious-books-amazon-ai-written-study",
+      "publishedAt": "2026-08-23T16:31:04.000Z"
+    },
+    {
+      "id": "f688f8d0c09e4b8e1e6d",
+      "source": "CoinDesk",
+      "title": "XRP on track for biggest weekly gain in 21 months as Treasury buyback spurs 'curve control' hopes",
+      "summary": "XRP’s price has surged by 50% this week, the best performance since November 2024. Here's what's driving the rally.",
+      "url": "https://www.coindesk.com/markets/2026/08/23/xrp-on-track-for-biggest-weekly-gain-in-21-months-as-treasury-buyback-spurs-curve-control-hopes",
+      "publishedAt": "2026-08-23T15:52:21.000Z"
+    },
+    {
+      "id": "60bdcf0e9622e8728d7b",
+      "source": "CryptoSlate",
+      "title": "How a $20M crypto payout left a micro-cap firm with under $83K in usable cash reserves",
+      "summary": "The August 21 filing said 205,512.5 tokens remained unmonetized, with their receipt-date fair value still unresolved. The post How a $20M crypto payout left a micro-cap firm with under $83K in usable cash reserves appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/how-a-20m-crypto-payout-left-a-micro-cap-firm-with-under-83k-in-usable-cash-reserves/",
+      "publishedAt": "2026-08-23T15:45:11.000Z"
+    },
+    {
+      "id": "4e7e3f341f6b46ee60e0",
+      "source": "Cointelegraph",
+      "title": "Fed study finds crypto investors driven by beliefs, easily swayed by returns",
+      "summary": "A Federal Reserve Bank of Cleveland study finds crypto investors hold sharply different views on returns and risk, while information about Bitcoin’s past gains can increase both desired allocations and actual crypto purchases.",
+      "url": "https://cointelegraph.com/news/fed-study-finds-crypto-investors-driven-by-beliefs-easily-swayed-by-returns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-23T15:30:53.000Z"
+    },
+    {
+      "id": "850cabdb014cf425b909",
+      "source": "CoinDesk",
+      "title": "Crypto card spending tops $1 billion as stablecoins move into everyday purchases",
+      "summary": "Tracked card volume more than tripled in a year, with USDC and USDT funding over 70% of spending as users increasingly paid for groceries, rides and subscriptions.",
+      "url": "https://www.coindesk.com/business/2026/08/23/crypto-card-spending-tops-usd1-billion-as-stablecoins-move-into-everyday-purchases",
+      "publishedAt": "2026-08-23T15:00:00.000Z"
+    },
+    {
+      "id": "f78108b2a4f502ff4482",
+      "source": "Decrypt",
+      "title": "Robot Brains Could Have Their ‘ChatGPT Moment’ by 2027, ACE Robotics Chairman Says",
+      "summary": "The breakthrough could come from AI models that help robots understand and interact with the physical world, though widespread adoption may still be years away.",
+      "url": "https://decrypt.co/376265/robot-brains-chatgpt-moment-ace-robotics",
+      "publishedAt": "2026-08-23T14:31:04.000Z"
+    },
+    {
+      "id": "aa61d12ac025bce6b672",
+      "source": "CryptoSlate",
+      "title": "The US approved high-leverage Bitcoin trading while crypto founders remain legally blocked from raising funds",
+      "summary": "On May 29, the CFTC approved a Bitcoin perpetual contract for a regulated US exchange. Almost three months later, on Aug. 18, the SEC proposed a legal route through which crypto projects could someday raise money from the public under rules written for token…",
+      "url": "https://cryptoslate.com/the-us-approved-high-leverage-bitcoin-trading-while-crypto-founders-remain-legally-blocked-from-raising-funds/",
+      "publishedAt": "2026-08-23T14:30:39.000Z"
+    },
+    {
+      "id": "8642f72dccb76272dcad",
+      "source": "CryptoSlate",
+      "title": "Layer 1 network dilutes supply by 75% overnight to fund survival after main developer quits",
+      "summary": "The executed mint reduced the proposal’s pre-existing supply base to about 25.1% of its estimated post-mint total. The post Layer 1 network dilutes supply by 75% overnight to fund survival after main developer quits appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/layer-1-network-dilutes-supply-by-75-overnight-to-fund-survival-after-main-developer-quits/",
+      "publishedAt": "2026-08-23T13:20:52.000Z"
+    },
+    {
+      "id": "8d0f28552b96d6950faf",
+      "source": "CoinDesk",
+      "title": "Crypto’s next billion users might be AI agents, and they’re paying with stablecoins",
+      "summary": "According to Coinbase’s head of AI product, we’re currently in the “Napster/LimeWire era” of agentic payments.",
+      "url": "https://www.coindesk.com/business/2026/08/23/crypto-s-next-billion-users-might-be-ai-agents-and-they-re-paying-with-stablecoins",
+      "publishedAt": "2026-08-23T13:00:00.000Z"
+    },
     {
       "id": "679fe4531718c90b5f29",
       "source": "CryptoSlate",
@@ -98,52 +202,12 @@
       "publishedAt": "2026-08-23T07:00:07.000Z"
     },
     {
-      "id": "4059a4db514616bbced9",
-      "source": "CryptoSlate",
-      "title": "Coldcard now requires 65 key presses after seed exploit, while exposed funds still must move",
-      "summary": "Firmware 5.6.1 and 1.5.1Q harden new wallet creation but cannot repair a seed made on an affected release. The post Coldcard now requires 65 key presses after seed exploit, while exposed funds still must move appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/coldcard-now-requires-65-key-presses-after-seed-exploit-while-exposed-funds-still-must-move/",
-      "publishedAt": "2026-08-23T05:00:07.000Z"
-    },
-    {
-      "id": "13e268be2591883ae953",
-      "source": "CryptoSlate",
-      "title": "Grayscale’s Zcash ETF filing proposes a 2.5% fee and a potential 34% DCG stake",
-      "summary": "Under a June 30 snapshot, a nonbinding 200,000-ZEC contribution would give DCG International about 34% of the enlarged fund. The post Grayscale’s Zcash ETF filing proposes a 2.5% fee and a potential 34% DCG stake appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/grayscales-zcash-etf-filing-proposes-a-2-5-fee-and-a-potential-34-dcg-stake/",
-      "publishedAt": "2026-08-22T22:55:07.000Z"
-    },
-    {
-      "id": "207c519dfd3ecbb4ccf4",
-      "source": "CryptoSlate",
-      "title": "Everyday crypto users face monthly tax bills on total asset value if covered brokers fail to collect under new Illinois rules",
-      "summary": "Blockchain Association and CCI seek injunctions, but the filing itself did not suspend the 0.2% levy. The post Everyday crypto users face monthly tax bills on total asset value if covered brokers fail to collect under new Illinois rules appeared first on…",
-      "url": "https://cryptoslate.com/everyday-crypto-users-face-monthly-tax-bills-on-total-asset-value-if-covered-brokers-fail-to-collect-under-new-illinois-rules/",
-      "publishedAt": "2026-08-22T21:55:10.000Z"
-    },
-    {
-      "id": "9140727d062e3464b387",
-      "source": "CryptoSlate",
-      "title": "Reaching instant 27ms validation on Bitcoin will take 17 GPU years of compute power",
-      "summary": "Hazync’s developer reports millisecond verification for blocks 1 through 1,789, while the full-chain proving campaign remains unfinished. The post Reaching instant 27ms validation on Bitcoin will take 17 GPU years of compute power appeared first on…",
-      "url": "https://cryptoslate.com/reaching-instant-27ms-validation-on-bitcoin-will-take-17-gpu-years-of-compute-power/",
-      "publishedAt": "2026-08-22T20:45:15.000Z"
-    },
-    {
       "id": "0252da2621b22ab0329b",
       "source": "The Block",
       "title": "Bitcoin and ether ETFs draw $2.6 billion in strongest inflow week since October, tripling volume",
       "summary": "Combined ETF weekly trading volume more than tripled to $29 billion as bitcoin and ether prices rallied, though both categories are negative on the year.",
       "url": "https://www.theblock.co/news/markets/2026-08-22-bitcoin-and-ether-etfs-draw-2-6-billion-in-strongest-inflow-week-since-october-tripling-volume-412531",
       "publishedAt": "2026-08-22T19:31:35.000Z"
-    },
-    {
-      "id": "012b5a433cdc547f6475",
-      "source": "CryptoSlate",
-      "title": "A $1 billion meme coin purchase puts a huge 167% share dilution down to a single vote for ZeroStack",
-      "summary": "The approval-gated warrants equal 167.4% of the Aug. 19 share base, while a wider resale shelf covers seven holder groups. The post A $1 billion meme coin purchase puts a huge 167% share dilution down to a single vote for ZeroStack appeared first on…",
-      "url": "https://cryptoslate.com/a-1-billion-meme-coin-acquisition-puts-a-massive-167-share-dilution-down-to-a-single-vote-for-zerostack/",
-      "publishedAt": "2026-08-22T19:15:53.000Z"
     },
     {
       "id": "dc5c5077cea9ca952c42",
@@ -632,70 +696,6 @@
       "summary": "Ava Labs CBO John Nahas says crypto prices are down, but real-world adoption is creating more opportunities across the sector.",
       "url": "https://www.theblock.co/news/ecosystems/2026-08-21-avalanches-nahas-token-prices-are-down-but-ive-never-seen-more-opportunities-in-crypto-412431",
       "publishedAt": "2026-08-21T09:00:26.000Z"
-    },
-    {
-      "id": "c872b786d6d1f31a596c",
-      "source": "Cointelegraph",
-      "title": "Strategy Bitcoin treasury hits breakeven point as BTC price passes $77K",
-      "summary": "Bitcoin gains 20% in two days as Strategy sees its BTC treasury climb out of the red.",
-      "url": "https://cointelegraph.com/markets/strategy-bitcoin-treasury-hits-breakeven-point-as-btc-price-passes-77k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-21T08:48:52.000Z"
-    },
-    {
-      "id": "e7ac601ccef697803b75",
-      "source": "CoinDesk",
-      "title": "Strategy sits on $1.4 billion profit on bitcoin holdings as price surges",
-      "summary": "Strategy’s common stock rose 10% in Friday pre-market trading to $120, the highest level in two months.",
-      "url": "https://www.coindesk.com/markets/2026/08/21/strategy-sits-on-usd1-4-billion-profit-on-bitcoin-holdings-as-price-surges",
-      "publishedAt": "2026-08-21T08:24:52.000Z"
-    },
-    {
-      "id": "0745001185f2464211fd",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs draw $608M as Ether ETFs see largest inflow since October",
-      "summary": "Bitcoin ETF inflows pushed August’s total to a 2026 high of $2.07 billion as Bitcoin traded above $75,000 and Ether climbed to $2,357.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etfs-ether-etfs-largest-inflow-october?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-21T07:50:01.000Z"
-    },
-    {
-      "id": "22581189faf7123cdeff",
-      "source": "The Block",
-      "title": "Anchorage CEO says AI agents need bank accounts for ‘The Jetsons’-like future",
-      "summary": "The firm has built an agentic banking platform with a 'know-your-agent' setup to facilitate AI-driven transactions.",
-      "url": "https://www.theblock.co/news/business/2026-08-21-anchorage-ceo-ai-the-jetsons-412427",
-      "publishedAt": "2026-08-21T07:11:13.000Z"
-    },
-    {
-      "id": "755c4578f6247fb3cc91",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin slips back to $77,000 after challenging $80,000 overnight",
-      "summary": "Spot bitcoin ETFs pulled in $606 million on Aug. 20 and ether funds $221 million, both bigger than the prior day, confirming the institutional bid behind bitcoin's run.",
-      "url": "https://www.coindesk.com/tech/2026/08/21/live-updates-bitcoin-ether-etfs-pull-in-usd800-million-as-inflows-surge-for-a-second-day",
-      "publishedAt": "2026-08-21T06:43:24.000Z"
-    },
-    {
-      "id": "d65894cd510328d12340",
-      "source": "The Block",
-      "title": "South Korea’s Shinhan partners with Solana Foundation, Etherfuse, Orca for tokenized fund issuance",
-      "summary": "The agreement covers a proof-of-concept for the issuance and distribution of a Korean won-denominated tokenized fund.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-21-south-korea-shinhan-partners-solana-412420",
-      "publishedAt": "2026-08-21T06:32:48.000Z"
-    },
-    {
-      "id": "6dea4e532caa0cf78849",
-      "source": "CoinDesk",
-      "title": "MANTRA token plunges 18% to record low as blockchain halts after exploit",
-      "summary": "The token touched $0.004126 minutes before the network stopped producing blocks, while MANTRA later said an attacker exploited a vulnerability in software used by the chain.",
-      "url": "https://www.coindesk.com/tech/2026/08/21/mantra-token-plunges-18-to-record-low-as-blockchain-halts-after-exploit",
-      "publishedAt": "2026-08-21T05:52:27.000Z"
-    },
-    {
-      "id": "827439fcf3f33ab508b0",
-      "source": "Cointelegraph",
-      "title": "South Korean lawmakers seek expanded FIU powers over unregistered crypto firms",
-      "summary": "The proposal would let the FIU investigate suspected violations and refer unregistered crypto operators directly to law enforcement.",
-      "url": "https://cointelegraph.com/news/south-korea-fiu-unregistered-crypto-firms-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-21T05:47:16.000Z"
     }
   ]
 }
