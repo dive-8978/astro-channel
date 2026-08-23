@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T07:05:27.160Z",
+  "generatedAt": "2026-08-23T13:05:22.166Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 56,
+      "itemCount": 36,
       "error": null
     },
     {
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "679fe4531718c90b5f29",
+      "source": "CryptoSlate",
+      "title": "Crypto treasury firm seeks 20B share ceiling and reverse splits after launching $300M stock offering",
+      "summary": "The proposals would set a 20 billion-share ceiling and grant three years of broad reverse-split authority. The post Crypto treasury firm seeks 20B share ceiling and reverse splits after launching $300M stock offering appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/crypto-treasury-firm-seeks-20b-share-ceiling-and-reverse-splits-after-launching-300m-stock-offering/",
+      "publishedAt": "2026-08-23T12:15:46.000Z"
+    },
+    {
+      "id": "b147a6054e91dbc4db9b",
+      "source": "CryptoSlate",
+      "title": "As foreign investors dump $29 billion in Treasury bills, Washington pivots to stablecoin issuers to back US debt",
+      "summary": "Foreign investors sent a net $133.5 billion into US financial markets in June. During the same month, they sold $29 billion of Treasury bills. Those numbers describe two different tides in the same month. Most of the incoming money went into US stocks, while…",
+      "url": "https://cryptoslate.com/as-foreign-investors-dump-29-billion-in-treasury-bills-washington-pivots-to-stablecoin-issuers-to-back-us-debt/",
+      "publishedAt": "2026-08-23T11:10:14.000Z"
+    },
+    {
+      "id": "88642206d914ebf7e372",
+      "source": "CryptoSlate",
+      "title": "Ripple relies on locked XRP reserves to back a $275 million institutional credit line",
+      "summary": "KBRA’s BBB rating gives Ripple Prime investment-grade access, but expected parent support and mostly escrowed XRP remain central to the credit case. The post Ripple relies on locked XRP reserves to back a $275 million institutional credit line appeared first…",
+      "url": "https://cryptoslate.com/ripple-relies-on-locked-xrp-reserves-to-back-a-275-million-institutional-credit-line/",
+      "publishedAt": "2026-08-23T10:05:44.000Z"
+    },
+    {
+      "id": "581e9255ffb0c3b0a984",
+      "source": "CryptoSlate",
+      "title": "America is creating a new class of crypto banks – but they aren’t really banks",
+      "summary": "Circle now has a federal bank charter. However, the charter provides no ordinary checking accounts, FDIC-insured savings accounts, or mortgages. Circle National Trust is part of a new federal cohort built around custody, fiduciary administration, stablecoin…",
+      "url": "https://cryptoslate.com/america-is-creating-a-new-class-of-crypto-banks-but-they-arent-really-banks/",
+      "publishedAt": "2026-08-23T09:00:49.000Z"
+    },
     {
       "id": "bf9f88640a29e8b763de",
       "source": "CryptoSlate",
@@ -114,14 +146,6 @@
       "publishedAt": "2026-08-22T19:15:53.000Z"
     },
     {
-      "id": "b59aac075e1082561513",
-      "source": "CryptoSlate",
-      "title": "Inside transfer wipes out $1M executive debt as crypto firm offloads payments business without independent valuation",
-      "summary": "The Aug. 21 filing lists $1 million of liability relief and a 160,000-share warrant as consideration, while pro forma financials remain outstanding. The post Inside transfer wipes out $1M executive debt as crypto firm offloads payments business without…",
-      "url": "https://cryptoslate.com/inside-transfer-wipes-out-1m-executive-debt-as-crypto-firm-offloads-payments-business-without-independent-valuation/",
-      "publishedAt": "2026-08-22T18:25:40.000Z"
-    },
-    {
       "id": "dc5c5077cea9ca952c42",
       "source": "The Block",
       "title": "Zcash hits eight-year high near $850 with futures volume near $10 billion amid Grayscale ETF push",
@@ -138,28 +162,12 @@
       "publishedAt": "2026-08-22T17:31:03.000Z"
     },
     {
-      "id": "bce552007c3c784c786a",
-      "source": "CryptoSlate",
-      "title": "CLARITY gets a September Senate floor date as CFTC signals a limited regulatory fallback",
-      "summary": "The scheduled cloture vote will test the bill's 60-vote coalition, while existing CFTC powers stop short of Congress's full framework. The post CLARITY gets a September Senate floor date as CFTC signals a limited regulatory fallback appeared first on…",
-      "url": "https://cryptoslate.com/clarity-gets-a-september-senate-floor-date-as-cftc-signals-a-limited-regulatory-fallback/",
-      "publishedAt": "2026-08-22T17:10:29.000Z"
-    },
-    {
       "id": "ce8a0805e598d3b539b2",
       "source": "The Block",
       "title": "Solana cuts mainnet slot time to 350 milliseconds in first step toward 200ms goal",
       "summary": "The change should lead to faster transaction confirmations but is not designed to increase the overall throughput of the network.",
       "url": "https://www.theblock.co/news/ecosystems/2026-08-22-solana-cuts-mainnet-slot-time-to-350-milliseconds-in-first-step-toward-200ms-goal-412521",
       "publishedAt": "2026-08-22T15:54:13.000Z"
-    },
-    {
-      "id": "d8b21d55353337c335dc",
-      "source": "CryptoSlate",
-      "title": "Solana’s first governance vote nears with a live 60% quorum display error",
-      "summary": "An unmerged frontend fix must replace live-stake math with the constitution’s one-third snapshot test before epoch 1021. The post Solana’s first governance vote nears with a live 60% quorum display error appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/solanas-first-governance-vote-nears-with-a-live-60-quorum-display-error/",
-      "publishedAt": "2026-08-22T15:45:50.000Z"
     },
     {
       "id": "ffc36718216eca5f5030",
@@ -176,14 +184,6 @@
       "summary": "The exchange has hired White & Case as restructuring counsel, with a detailed roadmap expected by Sept. 9.",
       "url": "https://www.coindesk.com/business/2026/08/22/crypto-exchange-bitmart-weighs-partial-restart-and-creditor-payouts-weeks-after-announcing-shutdown",
       "publishedAt": "2026-08-22T15:16:41.000Z"
-    },
-    {
-      "id": "11f8d872f7aabb3d1a03",
-      "source": "CryptoSlate",
-      "title": "How a former crypto user’s archived Binance data ended up in a foreign terrorism prosecution",
-      "summary": "When Russian investigators detained IT specialist Yuri Belenkiy in September 2025, Binance had been formally out of Russia for almost two years. Its customer records, however, were still available. Law enforcement documents reviewed by Reuters show that…",
-      "url": "https://cryptoslate.com/binance-left-russia-years-ago-but-moscow-still-got-customer-records-used-in-a-terrorism-case/",
-      "publishedAt": "2026-08-22T15:05:23.000Z"
     },
     {
       "id": "cbda93d49c9dfb344969",
