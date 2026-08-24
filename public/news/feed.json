@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T18:51:02.258Z",
+  "generatedAt": "2026-08-24T02:00:18.348Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 56,
+      "itemCount": 36,
       "error": null
     },
     {
@@ -57,6 +57,54 @@
     }
   ],
   "items": [
+    {
+      "id": "21671cd2eb07617c7331",
+      "source": "Cointelegraph",
+      "title": "We are so back! Bitcoin’s 23% rally on US debt policy: Hodler’s Digest",
+      "summary": "The US may face a debt crisis within three years according to Ray Dalio, and debt-related issues helped fuel a rally in Bitcoin that could mark the beginning of a new cycle.",
+      "url": "https://cointelegraph.com/magazine/we-are-back-bitcoins-23-rally-on-us-debt-policy-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-23T23:56:00.000Z"
+    },
+    {
+      "id": "7eb782fa28673a3e577c",
+      "source": "CryptoSlate",
+      "title": "The next phase of tokenization is utility",
+      "summary": "The following is a guest post and opinion from Vincent Maliepaard, VP of Marketing at Sentora. Tokenized funds have stopped being a novelty. Tokenized US Treasury funds alone now hold roughly $16 billion in distributed value and the list of issuers includes…",
+      "url": "https://cryptoslate.com/the-next-phase-of-tokenization-is-utility/",
+      "publishedAt": "2026-08-23T22:30:23.000Z"
+    },
+    {
+      "id": "6c2b385f956a87316ecf",
+      "source": "CryptoSlate",
+      "title": "Wall Street just poured nearly $90 million into altcoins as XRP, SOL and HYPE rip higher",
+      "summary": "US-listed crypto exchange-traded funds outside Bitcoin and Ethereum drew nearly $90 million last week. Investors followed a sharp market rally into XRP, Solana, Chainlink and Hyperliquid. XRP products led the group with $39.78 million of net inflows in the…",
+      "url": "https://cryptoslate.com/wall-street-just-poured-nearly-90-million-into-altcoins-as-xrp-sol-and-hype-rip-higher/",
+      "publishedAt": "2026-08-23T21:10:58.000Z"
+    },
+    {
+      "id": "be5c5fa0fc1492f6a553",
+      "source": "The Block",
+      "title": "DeFi lending protocol Term Finance loses an estimated $8.5 million to governance exploit",
+      "summary": "Term vault proposals face a seven-day delay and can be vetoed by liquidity providers, yet those controls apparently did not stop the exploit.",
+      "url": "https://www.theblock.co/news/defi/2026-08-23-defi-lending-protocol-term-finance-loses-an-estimated-8-5-million-to-governance-exploit-412543",
+      "publishedAt": "2026-08-23T20:50:45.000Z"
+    },
+    {
+      "id": "e4550c472f7cd2419356",
+      "source": "CryptoSlate",
+      "title": "Bitcoin and Ethereum ETFs just had their biggest week of 2026 as crypto exploded higher",
+      "summary": "US spot Bitcoin and Ethereum ETFs recorded their strongest inflow week of 2026 as a sharp crypto rally pulled investors back into funds that had struggled to attract sustained demand for much of the year. Bitcoin ETFs drew $1.918 billion in the five trading…",
+      "url": "https://cryptoslate.com/bitcoin-and-ethereum-etfs-just-had-their-biggest-week-of-2026-as-crypto-exploded-higher/",
+      "publishedAt": "2026-08-23T20:05:10.000Z"
+    },
+    {
+      "id": "cf261a5bd2553ea8b49a",
+      "source": "CryptoSlate",
+      "title": "Bitcoin Core considers dropping encrypted routing support as poor node health exposes users to eclipse attacks",
+      "summary": "The 32.x warning and 33.x removal sequence remains a proposal as maintainers test whether sparse fallback routes add resilience. The post Bitcoin Core considers dropping encrypted routing support as poor node health exposes users to eclipse attacks appeared…",
+      "url": "https://cryptoslate.com/bitcoin-core-considers-dropping-encrypted-routing-support-as-poor-node-health-exposes-users-to-eclipse-attacks/",
+      "publishedAt": "2026-08-23T19:10:29.000Z"
+    },
     {
       "id": "81c34d56a90f5345d37c",
       "source": "CoinDesk",
@@ -168,38 +216,6 @@
       "summary": "The proposals would set a 20 billion-share ceiling and grant three years of broad reverse-split authority. The post Crypto treasury firm seeks 20B share ceiling and reverse splits after launching $300M stock offering appeared first on CryptoSlate .",
       "url": "https://cryptoslate.com/crypto-treasury-firm-seeks-20b-share-ceiling-and-reverse-splits-after-launching-300m-stock-offering/",
       "publishedAt": "2026-08-23T12:15:46.000Z"
-    },
-    {
-      "id": "b147a6054e91dbc4db9b",
-      "source": "CryptoSlate",
-      "title": "As foreign investors dump $29 billion in Treasury bills, Washington pivots to stablecoin issuers to back US debt",
-      "summary": "Foreign investors sent a net $133.5 billion into US financial markets in June. During the same month, they sold $29 billion of Treasury bills. Those numbers describe two different tides in the same month. Most of the incoming money went into US stocks, while…",
-      "url": "https://cryptoslate.com/as-foreign-investors-dump-29-billion-in-treasury-bills-washington-pivots-to-stablecoin-issuers-to-back-us-debt/",
-      "publishedAt": "2026-08-23T11:10:14.000Z"
-    },
-    {
-      "id": "88642206d914ebf7e372",
-      "source": "CryptoSlate",
-      "title": "Ripple relies on locked XRP reserves to back a $275 million institutional credit line",
-      "summary": "KBRA’s BBB rating gives Ripple Prime investment-grade access, but expected parent support and mostly escrowed XRP remain central to the credit case. The post Ripple relies on locked XRP reserves to back a $275 million institutional credit line appeared first…",
-      "url": "https://cryptoslate.com/ripple-relies-on-locked-xrp-reserves-to-back-a-275-million-institutional-credit-line/",
-      "publishedAt": "2026-08-23T10:05:44.000Z"
-    },
-    {
-      "id": "581e9255ffb0c3b0a984",
-      "source": "CryptoSlate",
-      "title": "America is creating a new class of crypto banks – but they aren’t really banks",
-      "summary": "Circle now has a federal bank charter. However, the charter provides no ordinary checking accounts, FDIC-insured savings accounts, or mortgages. Circle National Trust is part of a new federal cohort built around custody, fiduciary administration, stablecoin…",
-      "url": "https://cryptoslate.com/america-is-creating-a-new-class-of-crypto-banks-but-they-arent-really-banks/",
-      "publishedAt": "2026-08-23T09:00:49.000Z"
-    },
-    {
-      "id": "bf9f88640a29e8b763de",
-      "source": "CryptoSlate",
-      "title": "Local’s access to global crypto platforms could end under Nigeria’s proposed capital floor",
-      "summary": "Exchanges and custodians would need ₦2 billion in capital, while foreign-currency stablecoins face 120% backing. The post Local’s access to global crypto platforms could end under Nigeria’s proposed capital floor appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/seamless-access-to-global-crypto-platforms-could-evaporate-for-locals-under-nigerias-proposed-%e2%82%a62-billion-capital-floor/",
-      "publishedAt": "2026-08-23T07:00:07.000Z"
     },
     {
       "id": "0252da2621b22ab0329b",
@@ -680,22 +696,6 @@
       "summary": "One analyst said South Korean capital is slowly moving back to crypto, as investors are 'return-chasing' rather than 'asset-loyal.'",
       "url": "https://www.theblock.co/news/markets/2026-08-21-upbit-trading-volume-spikes-412435",
       "publishedAt": "2026-08-21T09:17:58.000Z"
-    },
-    {
-      "id": "39c8f2ee01c0efa671e4",
-      "source": "CoinDesk",
-      "title": "Treasury's latest measure isn't QE or YCC. Still, bitcoin is skyrocketing. Here's why.",
-      "summary": "The rally in hard assets isn’t necessarily about what the Treasury is doing, but what its move signals to the market.",
-      "url": "https://www.coindesk.com/markets/2026/08/21/treasury-s-latest-measure-isn-t-qe-or-ycc-still-bitcoin-is-skyrocketing-here-s-why",
-      "publishedAt": "2026-08-21T09:17:15.000Z"
-    },
-    {
-      "id": "8c90d4f763cc4e6e7dcb",
-      "source": "The Block",
-      "title": "Avalanche’s Nahas: Token prices are down, but ‘I’ve never seen more opportunities’ in crypto",
-      "summary": "Ava Labs CBO John Nahas says crypto prices are down, but real-world adoption is creating more opportunities across the sector.",
-      "url": "https://www.theblock.co/news/ecosystems/2026-08-21-avalanches-nahas-token-prices-are-down-but-ive-never-seen-more-opportunities-in-crypto-412431",
-      "publishedAt": "2026-08-21T09:00:26.000Z"
     }
   ]
 }
