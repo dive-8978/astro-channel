@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T02:01:35.730Z",
+  "generatedAt": "2026-08-26T07:12:10.879Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 58,
       "error": null
     },
     {
@@ -57,6 +57,110 @@
     }
   ],
   "items": [
+    {
+      "id": "c576098fab36f385685f",
+      "source": "CryptoSlate",
+      "title": "US bank lobby wants stablecoin holders to open an account before cashing out",
+      "summary": "The Blockchain Association wants one-off and intermediary-routed cash-outs excluded, leaving regulators to decide when self-custody holders become issuer customers. The post US bank lobby wants stablecoin holders to open an account before cashing out…",
+      "url": "https://cryptoslate.com/us-bank-lobby-wants-stablecoin-holders-to-open-an-account-before-cashing-out/",
+      "publishedAt": "2026-08-26T07:00:43.000Z"
+    },
+    {
+      "id": "e4fdbb57703abbde0be8",
+      "source": "The Block",
+      "title": "Japan to work on blockchain-based stock settlement system, details expected early 2027: Nikkei",
+      "summary": "If the plan is approved, the agencies could launch the system within a few years, and fully operational in the early 2030s.",
+      "url": "https://www.theblock.co/news/regulation/2026-08-26-japan-blockchain-stock-settlement-system-412755",
+      "publishedAt": "2026-08-26T06:40:31.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-26T06:04:55.000Z"
+    },
+    {
+      "id": "4bd876c25b7603d43e83",
+      "source": "CoinDesk",
+      "title": "BlackRock cuts bitcoin ETF swap minimum to $1 million: Report",
+      "summary": "ETF issuers are lowering the barrier for bitcoin whales to trade self-custody for ETF shares.",
+      "url": "https://www.coindesk.com/markets/2026/08/26/E",
+      "publishedAt": "2026-08-26T05:52:53.000Z"
+    },
+    {
+      "id": "db29572886de959a67d0",
+      "source": "CryptoSlate",
+      "title": "Moonwell has a $1.8M liquidity hole and its latest plan allocates $0 to fix it",
+      "summary": "Live data showed 100.43% utilization and negative liquidity while non-liquidated suppliers lacked a clear published recovery path. The post Moonwell has a $1.8M liquidity hole and its latest plan allocates $0 to fix it appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/moonwell-has-a-1-8m-liquidity-hole-and-its-latest-plan-allocates-0-to-fix-it/",
+      "publishedAt": "2026-08-26T05:30:47.000Z"
+    },
+    {
+      "id": "9ffe0aeba30bbab7b704",
+      "source": "CoinDesk",
+      "title": "XRP’s 44% rally brings leverage back, raising risk of sharper pullback",
+      "summary": "CryptoQuant data show XRP’s estimated leverage ratio on Binance at its highest since January, with long accounts outnumbering shorts as futures volume runs more than five times spot trading.",
+      "url": "https://www.coindesk.com/markets/2026/08/26/xrp-s-44-rally-brings-leverage-back-raising-risk-of-sharper-pullback",
+      "publishedAt": "2026-08-26T05:16:32.000Z"
+    },
+    {
+      "id": "f312cc2d76eb7584957a",
+      "source": "The Block",
+      "title": "Kalshi raised $1.12 billion via private equity offering since April, latest SEC filing shows",
+      "summary": "It was reported earlier this month that Kalshi is looking to raise $750 million in fresh capital at a $40 billion valuation.",
+      "url": "https://www.theblock.co/news/web3/2026-08-26-kalshi-latest-form-d-412749",
+      "publishedAt": "2026-08-26T04:51:58.000Z"
+    },
+    {
+      "id": "40c22e67a0e65fc04fe7",
+      "source": "CoinDesk",
+      "title": "Crypto greed gauge hits highest since just before October’s $19 billion wipeout",
+      "summary": "The Fear & Greed Index reached 74 on Tuesday after sitting at 27 less than two weeks ago, showing how quickly traders have gone from caution to chasing risk.",
+      "url": "https://www.coindesk.com/markets/2026/08/26/crypto-greed-gauge-hits-highest-since-just-before-october-s-usd19-billion-wipeout",
+      "publishedAt": "2026-08-26T04:51:49.000Z"
+    },
+    {
+      "id": "8a2da6cd0b0c8e069872",
+      "source": "Cointelegraph",
+      "title": "US banking groups plan nationwide blockchain network for 2027",
+      "summary": "BankChain joins a growing field of bank-led networks building shared infrastructure for tokenized deposits and onchain payments.",
+      "url": "https://cointelegraph.com/news/us-banking-groups-nationwide-blockchain-network-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-26T04:17:39.000Z"
+    },
+    {
+      "id": "3836cb11fee79a91ffe0",
+      "source": "CoinDesk",
+      "title": "Bitcoin holds $79,000, ether, solana slip as traders bank a week of gains",
+      "summary": "Every major token fell over 24 hours except HYPE, though bitcoin holds a 23% weekly gain and XRP almost 45%.",
+      "url": "https://www.coindesk.com/markets/2026/08/26/bitcoin-holds-usd79-000-ether-solana-slip-4-as-traders-bank-a-week-of-gains",
+      "publishedAt": "2026-08-26T04:13:10.000Z"
+    },
+    {
+      "id": "fc92ff2c2de89a62a1e4",
+      "source": "CryptoSlate",
+      "title": "40 malicious Firefox add-ons targeted crypto wallets, and 9 began as sports-score tools",
+      "summary": "Socket confirmed 40 malicious IDs, and exposed wallet secrets still require migration after the add-ons are removed. The post 40 malicious Firefox add-ons targeted crypto wallets, and 9 began as sports-score tools appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/firefox-crypto-wallet-malware-hid-behind-nine-sports-add-ons-turning-routine-updates-into-a-key-rotation-trap/",
+      "publishedAt": "2026-08-26T04:00:18.000Z"
+    },
+    {
+      "id": "2e89aa32f8550f219bca",
+      "source": "The Block",
+      "title": "RockawayX acquires Relayer Capital to expand crypto offerings in US",
+      "summary": "Relayer will become the RockawayX Liquid Opportunities Fund, identifying 'undervalued liquid tokens and crypto-related equities.'",
+      "url": "https://www.theblock.co/news/business/2026-08-25-rockawayx-relayer-capital-412743",
+      "publishedAt": "2026-08-26T03:35:32.000Z"
+    },
+    {
+      "id": "62f12c82fff90ff7b15a",
+      "source": "CryptoSlate",
+      "title": "Soluna’s 1 billion-share proposal exposes the funding challenge behind its AI and Bitcoin expansion",
+      "summary": "The Oct. 16 votes would add 625 million authorized shares and permit sales above Nasdaq's 20% cap without issuing stock by themselves. The post Soluna’s 1 billion-share proposal exposes the funding challenge behind its AI and Bitcoin expansion appeared first…",
+      "url": "https://cryptoslate.com/solunas-1-billion-share-proposal-exposes-the-funding-challenge-behind-its-ai-and-bitcoin-expansion/",
+      "publishedAt": "2026-08-26T02:40:11.000Z"
+    },
     {
       "id": "baaf09d9a2ecf98e1cf6",
       "source": "CryptoSlate",
@@ -234,22 +338,6 @@
       "publishedAt": "2026-08-25T18:39:26.000Z"
     },
     {
-      "id": "2e7fa4aab57e5cecbf31",
-      "source": "CryptoSlate",
-      "title": "Nasdaq-listed crypto treasury avoids cash drain by pushing millions in defaulted SPAC debt onto future equity",
-      "summary": "The deal limits the cash payment to roughly $344,000 while creating about 7.62 million potential Class A shares. The post Nasdaq-listed crypto treasury avoids cash drain by pushing millions in defaulted SPAC debt onto future equity appeared first on…",
-      "url": "https://cryptoslate.com/nasdaq-listed-crypto-treasury-avoids-cash-drain-by-pushing-millions-in-defaulted-spac-debt-onto-future-equity/",
-      "publishedAt": "2026-08-25T18:35:47.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-25T18:34:20.000Z"
-    },
-    {
       "id": "0f247f2c19cdbc75f4b6",
       "source": "Cointelegraph",
       "title": "Bitcoin enters ‘initial phase’ of new bull market, but $83K remains key: CryptoQuant",
@@ -264,14 +352,6 @@
       "summary": "Tokenized real-world assets on Solana are nearing $4 billion as network activity accelerates alongside a broader recovery in crypto markets.",
       "url": "https://cointelegraph.com/news/solana-record-transactions-rwa-sol-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-25T18:08:58.000Z"
-    },
-    {
-      "id": "afed66468dc27c1fa1f1",
-      "source": "CryptoSlate",
-      "title": "How Ethereum’s new 2,048 ETH staking rule could lock up user rewards longer than expected",
-      "summary": "EIP-8148 would allow thresholds from 32 ETH to 2,048 ETH, while standard withdrawal and exit mechanics remain intact. The post How Ethereum’s new 2,048 ETH staking rule could lock up user rewards longer than expected appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/how-ethereums-new-2048-eth-staking-rule-could-lock-up-user-rewards-longer-than-expected/",
-      "publishedAt": "2026-08-25T17:30:21.000Z"
     },
     {
       "id": "4ea4b8aa416bc9528561",
@@ -322,14 +402,6 @@
       "publishedAt": "2026-08-25T16:28:59.000Z"
     },
     {
-      "id": "d28ea12fe5c337ee89c7",
-      "source": "CryptoSlate",
-      "title": "Take-Two branded SEC filings push GTA VI Solana currency linked to memecoin trading",
-      "summary": "One PDF describes Sharkbux and another considers an SPL architecture, while a named wallet proves no official connection. The post Take-Two branded SEC filings push GTA VI Solana currency linked to memecoin trading appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/take-two-branded-sec-filings-push-gta-vi-solana-currency-linked-to-memecoin-trading/",
-      "publishedAt": "2026-08-25T16:25:23.000Z"
-    },
-    {
       "id": "b4adaf34811672a5bee6",
       "source": "CoinDesk",
       "title": "LayerZero unveils trading infrastructure for crypto and tokenized markets, ZRO surges",
@@ -360,14 +432,6 @@
       "summary": "DGAI nearly doubled in its first day of trading as DGrid expands its distributed AI inference network and rolls out hardware for its personal AI agent.",
       "url": "https://cointelegraph.com/news/dgrid-ai-token-jumps-96-after-launch-as-decentralized-ai-network-goes-live?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-25T15:53:05.000Z"
-    },
-    {
-      "id": "f579b8fe0d5f8a9bbd21",
-      "source": "CryptoSlate",
-      "title": "Bitcoin ETFs inflow streak reaches $2.2 billion in 6 days as assets near $100 billion",
-      "summary": "US spot Bitcoin exchange-traded funds (ETFs) extended their inflow streak to six trading days on Monday, adding another $337.6 million and pushing the run to roughly $2.26 billion. The latest intake has put the funds on course for their strongest month of…",
-      "url": "https://cryptoslate.com/bitcoin-etfs-inflow-streak-reaches-2-2-billion-in-6-days-as-assets-near-100-billion/",
-      "publishedAt": "2026-08-25T15:30:06.000Z"
     },
     {
       "id": "25f3c1f0746ebb0dcd8d",
@@ -632,70 +696,6 @@
       "summary": "A federal jury convicted Brent Kovar of wire fraud, mail fraud and money laundering after he took $24 million from at least 400 investors.",
       "url": "https://cointelegraph.com/news/business-owner-280-years-24m-crypto-ponzi-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-25T07:58:10.000Z"
-    },
-    {
-      "id": "d1e03db40c05e21f7810",
-      "source": "CoinDesk",
-      "title": "Franklin Templeton and Hashkey roll out U.S. tokenized money fund in Asia",
-      "summary": "Tokenized U.S. treasury and money market funds are one of the fastest-growing segments in the digital asset markets, growing fifteenfold in two years.",
-      "url": "https://www.coindesk.com/business/2026/08/25/franklin-templeton-and-hashkey-roll-out-u-s-tokenized-money-fund-in-asia",
-      "publishedAt": "2026-08-25T07:55:18.000Z"
-    },
-    {
-      "id": "2152f083512f36e218e6",
-      "source": "The Block",
-      "title": "Las Vegas businessman faces 280 years in prison after $24 million crypto fraud conviction",
-      "summary": "A federal jury convicted Las Vegas businessman Brent Kovar in a $24 million cryptocurrency scheme involving at least 400 investors.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-25-las-vegas-businessman-24-million-crypto-fraud-412690",
-      "publishedAt": "2026-08-25T07:53:23.000Z"
-    },
-    {
-      "id": "6094df162bd213aee7ed",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin settles in under $80,000, with interest rates headed lower on Tuesday",
-      "summary": "Spot bitcoin funds took in $337.56 million on Aug. 24, extending an unbroken run of inflows that has now put real money behind a rally that started with a short squeeze.",
-      "url": "https://www.coindesk.com/business/2026/08/25/live-updates-bitcoin-etfs-draw-a-seventh-straight-day-of-inflows-as-the-rally-holds-above-usd80-000",
-      "publishedAt": "2026-08-25T07:40:11.000Z"
-    },
-    {
-      "id": "8a55bc5494da29c54e97",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs add $338M as six-day inflow streak hits $2.26B",
-      "summary": "Bitcoin ETFs have drawn $2.26 billion over six trading days, while year-to-date net outflows have narrowed to about $2.57 billion.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etf-six-day-inflow-streak-2-26-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-25T07:38:29.000Z"
-    },
-    {
-      "id": "e44d5ec3b2187b0b9ffd",
-      "source": "CoinDesk",
-      "title": "Treasury’s bond buyback plan fights the market and heightens the danger, billionaire Druckenmiller says",
-      "summary": "The billionaire investor argues the intervention removes a vital check on government borrowing and fiscal accountability while markets remain the better judge of prices.",
-      "url": "https://www.coindesk.com/markets/2026/08/25/governments-defending-prices-against-fundamentals-always-lose-billionaire-investor-druckenmiller-says",
-      "publishedAt": "2026-08-25T07:32:32.000Z"
-    },
-    {
-      "id": "d73236e55ee5842cb60b",
-      "source": "CoinDesk",
-      "title": "Monad proposes wallet upgrade that could survive lost keys and quantum attacks",
-      "summary": "The Ethereum-compatible blockchain wants users to be able to replace the keys controlling an account without changing its address, opening the door to passkeys, recovery tools and post-quantum security.",
-      "url": "https://www.coindesk.com/tech/2026/08/25/monad-proposes-wallet-upgrade-that-could-survive-lost-keys-and-quantum-attacks",
-      "publishedAt": "2026-08-25T07:01:49.000Z"
-    },
-    {
-      "id": "dbdaf03c4a06a15b986d",
-      "source": "The Block",
-      "title": "Bitcoin holds above $80,000 backed by ETF flows; bull market case ‘early but optimistic,’ analyst says",
-      "summary": "Analysts say it's still too early to tell if this will translate into a bull market, given sticky inflation and geopolitical uncertainty.",
-      "url": "https://www.theblock.co/news/markets/2026-08-25-bitcoin-holds-above-80000-412674",
-      "publishedAt": "2026-08-25T06:46:31.000Z"
-    },
-    {
-      "id": "184948c2b6375fce8ed0",
-      "source": "The Block",
-      "title": "Franklin Templeton partners with HashKey to offer tokenized money market fund in Asia",
-      "summary": "HashKey said it has launched the Franklin OnChain US Government Liquidity Fund on the platform's Earn channel.",
-      "url": "https://www.theblock.co/news/business/2026-08-25-franklin-templeton-hashkey-tokenized-fund-412675",
-      "publishedAt": "2026-08-25T06:39:12.000Z"
     }
   ]
 }
