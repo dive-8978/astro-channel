@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T16:46:38.167Z",
+  "generatedAt": "2026-08-29T20:58:42.538Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 57,
       "error": null
     },
     {
@@ -57,6 +57,62 @@
     }
   ],
   "items": [
+    {
+      "id": "e209324ed41a4ec6d453",
+      "source": "Cointelegraph",
+      "title": "Polygon discloses security flaws fixed in recent hard forks",
+      "summary": "The vulnerabilities posed denial-of-service and validator resource risks but were patched before Polygon publicly disclosed them.",
+      "url": "https://cointelegraph.com/news/polygon-discloses-security-flaws-fixed-in-recent-hard-forks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-29T20:28:51.000Z"
+    },
+    {
+      "id": "6e98fa7fa2721fbf7b6d",
+      "source": "The Block",
+      "title": "Cosmos Labs says it wrongly cleared the bug behind a $5.7 million six-chain hack",
+      "summary": "MANTRA Chain, which lost $3.6 million, claimed the patch was only released 20 hours before the attack began and did not identify the flaw it fixed.",
+      "url": "https://www.theblock.co/news/defi/2026-08-29-cosmos-labs-says-it-wrongly-cleared-the-bug-behind-a-5-7-million-six-chain-hack-413061",
+      "publishedAt": "2026-08-29T20:15:32.000Z"
+    },
+    {
+      "id": "04276163f73f5d5a3d5c",
+      "source": "CryptoSlate",
+      "title": "UK crypto investors declared £1.38B in gains, but half came from just 240 people",
+      "summary": "Its first crypto gains table covers 17,600 taxpayers, while CARF data will begin reaching the agency in 2027. The post UK crypto investors declared £1.38B in gains, but half came from just 240 people appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/uk-crypto-investors-declared-1-38b-in-gains-but-half-came-from-just-240-people/",
+      "publishedAt": "2026-08-29T20:00:30.000Z"
+    },
+    {
+      "id": "c65de6e79b3b540088ab",
+      "source": "Cointelegraph",
+      "title": "Stellar tokenized RWA market more than quadruples to nearly $4B",
+      "summary": "Stellar’s real-world asset market has expanded rapidly this year as institutional adoption and tokenization activity grow across the network.",
+      "url": "https://cointelegraph.com/markets/stellar-tokenized-rwa-market-nears-4b-after-fourfold-2026-growth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-29T19:12:42.000Z"
+    },
+    {
+      "id": "89a993e063af155ff616",
+      "source": "CryptoSlate",
+      "title": "Bitcoin Knots is trying to fork Bitcoin again after its last chain died in two blocks",
+      "summary": "Luke Dashjr's conditional rehearsal still lacks settled activation settings, disclosed day-one hash, named service policies and universal replay protection. The post Bitcoin Knots is trying to fork Bitcoin again after its last chain died in two blocks…",
+      "url": "https://cryptoslate.com/bitcoin-knots-is-trying-to-fork-bitcoin-again-after-its-last-chain-died-in-two-blocks/",
+      "publishedAt": "2026-08-29T18:50:53.000Z"
+    },
+    {
+      "id": "a21bccef87f85d30907c",
+      "source": "CryptoSlate",
+      "title": "Bitcoin ETF inflows snap after $3 billion streak as ETH, XRP and Solana keep buying",
+      "summary": "The $201.9 million reversal left Bitcoin's week positive and supplied only one session of evidence for a cross-asset shift. The post Bitcoin ETF inflows snap after $3 billion streak as ETH, XRP and Solana keep buying appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-etf-inflows-snap-after-3-billion-streak-as-eth-xrp-and-solana-keep-buying/",
+      "publishedAt": "2026-08-29T17:40:52.000Z"
+    },
+    {
+      "id": "8678e08868365e8ddd94",
+      "source": "Decrypt",
+      "title": "Bernie Sanders Vows Legislation to 'Stop Flock and AI Mass Surveillance'",
+      "summary": "The Vermont senator warned that the surveillance company's 120,000-plus AI cameras are pushing the US toward a \"surveillance state,\" adding a prominent voice to a growing bipartisan backlash.",
+      "url": "https://decrypt.co/376878/bernie-sanders-ban-flock-ai-surveillance",
+      "publishedAt": "2026-08-29T17:31:03.000Z"
+    },
     {
       "id": "2a8f9c00c6313bb22ae2",
       "source": "CryptoSlate",
@@ -218,14 +274,6 @@
       "publishedAt": "2026-08-29T04:30:00.000Z"
     },
     {
-      "id": "3bd461d3d4388f564900",
-      "source": "CryptoSlate",
-      "title": "Kraken and Galaxy flipped late as Solana approved a major supply cut",
-      "summary": "Abstentions created the smaller public margin, while on-chain finalization remained pending at the latest check. The post Kraken and Galaxy flipped late as Solana approved a major supply cut appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/solana-sgp-0002-passes-with-176-million-sol-as-governance-debate-shifts-to-technical-execution/",
-      "publishedAt": "2026-08-29T03:30:06.000Z"
-    },
-    {
       "id": "2e8a892a06e654ea992c",
       "source": "CoinDesk",
       "title": "Ripple is preparing XRP Ledger for quantum computers before ‘Q-Day’ arrives",
@@ -234,28 +282,12 @@
       "publishedAt": "2026-08-29T02:30:00.000Z"
     },
     {
-      "id": "f1a97826919982a780d8",
-      "source": "CryptoSlate",
-      "title": "Capital B’s €21 million Bitcoin raise comes with heavy warrant dilution risk",
-      "summary": "The planned 270 BTC nearly offsets the placement, while full warrant exercise would cut the displayed ratio about 24%. The post Capital B’s €21 million Bitcoin raise comes with heavy warrant dilution risk appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/capital-bs-e21-million-bitcoin-raise-comes-with-heavy-warrant-dilution-risk/",
-      "publishedAt": "2026-08-28T23:20:40.000Z"
-    },
-    {
       "id": "715729bcf53253084f58",
       "source": "Bitcoin Magazine",
       "title": "Bitcoin Cools Off After $3 Billion ETF-Driven Surge",
       "summary": "Bitcoin Magazine Bitcoin Cools Off After $3 Billion ETF-Driven Surge Bitcoin's run slowed down Friday after the Federal Reserve chief said inflation was too hot. Its run was charged by speculators throwing billions at the popular investment vehicles. This…",
       "url": "https://bitcoinmagazine.com/news/bitcoin-cools-following-etf-investment",
       "publishedAt": "2026-08-28T22:06:02.000Z"
-    },
-    {
-      "id": "3bfc061ed49dc3462d1b",
-      "source": "CryptoSlate",
-      "title": "Ethena is targeting the $120 trillion Wall Street stock market to hunt yields 5x higher than Bitcoin",
-      "summary": "Ethena is expanding USDe into equity perpetual-basis trades, targeting funding yields more than five times higher than Bitcoin’s as the synthetic dollar looks to recover from its 2026 contraction. On Aug. 28, Ethena revealed plans to extend the basis…",
-      "url": "https://cryptoslate.com/ethena-is-targeting-the-120-trillion-wall-street-stocks-market-to-hunt-yields-5x-higher-than-bitcoin/",
-      "publishedAt": "2026-08-28T21:30:27.000Z"
     },
     {
       "id": "d47e2387c11ec7b4ecb1",
@@ -664,38 +696,6 @@
       "summary": "Bitcoin Magazine Pakistan Built Its Crypto Regulatory Regime Using Just 8% of Its Budget, Minister Bilal Bin Saqib Reveals at Bitcoin Asia Pakistan has launched its virtual asset regulatory regime in less than six months while using just 8% of the budget…",
       "url": "https://bitcoinmagazine.com/markets/pakistan-built-its-crypto-regulatory-regime-using-just-8-of-its-budget-minister-bilal-bin-saqib-reveals-at-bitcoin-asia",
       "publishedAt": "2026-08-28T09:22:08.000Z"
-    },
-    {
-      "id": "6c2a18c08b719c61fb55",
-      "source": "Cointelegraph",
-      "title": "BitGo buys NYDIG trading arm to deepen institutional crypto push",
-      "summary": "BitGo completed its acquisition of NYDIG’s institutional trading business, adding about 30 employees and expanding its derivatives and financing capabilities.",
-      "url": "https://cointelegraph.com/news/bitgo-nydig-trading-arm-acquisition?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T09:21:44.000Z"
-    },
-    {
-      "id": "defa6d826f78f21c377a",
-      "source": "CoinDesk",
-      "title": "Kraken users briefly locked out after a flood of sanctioned crypto transactions",
-      "summary": "The activity, appearing to spread sanctioned funds to trigger account restrictions, occurred between Aug. 17 and Aug. 24.",
-      "url": "https://www.coindesk.com/business/2026/08/28/kraken-users-briefly-locked-out-after-a-flood-of-sanctioned-crypto-transactions",
-      "publishedAt": "2026-08-28T09:10:40.000Z"
-    },
-    {
-      "id": "c4b617ec50aa249d351e",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin slides below $78,000 as markets digest Warsh's hawkish remarks",
-      "summary": "\"We have work to do,\" on prices, said Warsh in his highly anticipated keynote address at the Kansas City Fed's annual symposium.",
-      "url": "https://www.coindesk.com/business/2026/08/28/live-updates-bitcoin-options-worth-usd6-4-billion-just-expired-as-prices-hover-near-usd80-000",
-      "publishedAt": "2026-08-28T09:09:07.000Z"
-    },
-    {
-      "id": "3d4ea6e775a83673a68e",
-      "source": "CoinDesk",
-      "title": "IREN shares fall 8% as costly AI transition weighs on earnings",
-      "summary": "Weakening profitability overshadowed a major milestone in IREN’s transformation into an AI cloud provider.",
-      "url": "https://www.coindesk.com/markets/2026/08/28/iren-shares-fall-8-as-costly-ai-transition-weighs-on-earnings",
-      "publishedAt": "2026-08-28T09:07:00.000Z"
     }
   ]
 }
