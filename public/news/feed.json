@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T20:58:42.538Z",
+  "generatedAt": "2026-08-30T05:31:04.795Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 57,
+      "itemCount": 37,
       "error": null
     },
     {
@@ -57,6 +57,46 @@
     }
   ],
   "items": [
+    {
+      "id": "d6a6152c3b8959f0b374",
+      "source": "CoinDesk",
+      "title": "A $1.1 million crypto card hack crashed a neobank's token 49%",
+      "summary": "The exploit caused the neobank's AVICI token to drop 49% from a 24-hour high, hitting a record low before paring some of the losses.",
+      "url": "https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49",
+      "publishedAt": "2026-08-29T23:49:17.000Z"
+    },
+    {
+      "id": "4985f8be8274e6d5532a",
+      "source": "CryptoSlate",
+      "title": "Deribit moved 90% of client assets to Coinbase, then killed its daily proof-of-reserves check",
+      "summary": "The Sept. 1 change removes a client Merkle check, leaving VARA reports and audited materials that are less public. The post Deribit moved 90% of client assets to Coinbase, then killed its daily proof-of-reserves check appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/deribit-moved-90-of-client-assets-to-coinbase-then-killed-its-daily-proof-of-reserves-check/",
+      "publishedAt": "2026-08-29T23:20:14.000Z"
+    },
+    {
+      "id": "187bbd9c903a1624935f",
+      "source": "CryptoSlate",
+      "title": "Bitcoin miner IREN still gets 82% of revenue from BTC after clearing room for Microsoft AI cloud",
+      "summary": "The company’s $4 billion contracted AI run-rate target was four times the $1 billion operating level measured Aug. 26, with recognition still gated by delivery and customer acceptance. The post Bitcoin miner IREN still gets 82% of revenue from BTC after…",
+      "url": "https://cryptoslate.com/iren-ai-cloud-revenue-639m-impairment-bitcoin-82-revenue/",
+      "publishedAt": "2026-08-29T22:10:38.000Z"
+    },
+    {
+      "id": "6fec5ae9328373532881",
+      "source": "The Block",
+      "title": "Layer 1 blockchain Fogo halts mainnet after attacker receives 400 million FOGO tokens, 10% of circulating supply",
+      "summary": "The affected tokens make up about 4% of FOGO's genesis supply and were worth about $3 million at the time of the incident.",
+      "url": "https://www.theblock.co/news/defi/2026-08-29-layer-1-blockchain-fogo-halts-mainnet-after-attacker-receives-400-million-fogo-tokens-10-of-circulating-supply-413064",
+      "publishedAt": "2026-08-29T21:16:51.000Z"
+    },
+    {
+      "id": "7fb9f1302f60aa433a80",
+      "source": "CryptoSlate",
+      "title": "Coinbase’s $104M US500 trading spike hits an early reality check",
+      "summary": "Armstrong’s launch-week chart captured $104 million in turnover, while one later snapshot left persistence to open interest and repeat sessions. The post Coinbase’s $104M US500 trading spike hits an early reality check appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/coinbase-us500-futures-volume-demand-test/",
+      "publishedAt": "2026-08-29T21:02:22.000Z"
+    },
     {
       "id": "e209324ed41a4ec6d453",
       "source": "Cointelegraph",
@@ -156,7 +196,7 @@
     {
       "id": "9878559d84c71d66238c",
       "source": "CoinDesk",
-      "title": "Swift’s $1.5 quadrillion network faces a blockchain test",
+      "title": "Inside the high-stakes battle between digital dollars and Swift's massive money engine",
       "summary": "Crypto executives say new blockchain payment infrastructure could make Swift obsolete. Bankers say its 11,500-institution network gives it the power to absorb the technology instead.",
       "url": "https://www.coindesk.com/business/2026/08/29/swift-s-usd1-5-quadrillion-network-faces-a-blockchain-test",
       "publishedAt": "2026-08-29T15:00:00.000Z"
@@ -210,14 +250,6 @@
       "publishedAt": "2026-08-29T13:00:00.000Z"
     },
     {
-      "id": "ed54ca155629959dbc78",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s failed $81,000 breakout just put $75,000 back on the table",
-      "summary": "Bitcoin trades near $78,000 heading into the weekend, sitting almost between $77,000 support and $80,000 resistance after a sharp rejection from above $81,000 hit on Aug. 28. A confirmed break below $77,000 opens the mid-$75,000s, while a reclaim of $80,000…",
-      "url": "https://cryptoslate.com/bitcoins-failed-81000-breakout-just-put-75000-back-on-the-table/",
-      "publishedAt": "2026-08-29T12:40:28.000Z"
-    },
-    {
       "id": "7b1cea512b7cd2703cd1",
       "source": "Cointelegraph",
       "title": "Here’s what happened in crypto today",
@@ -234,28 +266,12 @@
       "publishedAt": "2026-08-29T10:53:41.000Z"
     },
     {
-      "id": "8c536113b53df5dc736a",
-      "source": "CryptoSlate",
-      "title": "Polygon Labs issues urgent client upgrade notice following Austin and Kyoto hardforks",
-      "summary": "The completed upgrades closed separate block-stall, peer-crash and validator-work risks, leaving nodes on older binaries outside canonical consensus. The post Polygon Labs issues urgent client upgrade notice following Austin and Kyoto hardforks appeared…",
-      "url": "https://cryptoslate.com/polygon-labs-issues-urgent-client-upgrade-notice-following-austin-and-kyoto-hardforks/",
-      "publishedAt": "2026-08-29T09:10:11.000Z"
-    },
-    {
       "id": "756ea1cb56706c02dc86",
       "source": "Cointelegraph",
       "title": "Stablecoins not credible for payments at scale, BIS chief says",
       "summary": "BIS chief Pablo Hernández de Cos said stablecoins lack credibility for payments at scale, while a new FSI study highlights sharp differences in issuer rules.",
       "url": "https://cointelegraph.com/news/stablecoins-not-credible-payments-scale-bis-chief?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-29T08:01:04.000Z"
-    },
-    {
-      "id": "deb0e6094f33ba1f5e3a",
-      "source": "CryptoSlate",
-      "title": "Crypto ETFs appeared to hit $10B in hours, but filing data exposes where that money really came from",
-      "summary": "US spot Ethereum ETFs appeared to begin trading with $10.36 billion already inside them, an opening balance large enough to resemble an institutional buying wave before the first full session ended. However, almost all of that amount came from ETH that…",
-      "url": "https://cryptoslate.com/crypto-etfs-appeared-to-hit-10b-in-hours-but-filing-data-exposes-where-that-money-really-came-from/",
-      "publishedAt": "2026-08-29T07:10:07.000Z"
     },
     {
       "id": "dce9a326e3f03854ceaa",
@@ -268,7 +284,7 @@
     {
       "id": "b3d8adba3271ff6f7f0c",
       "source": "CoinDesk",
-      "title": "Bitcoin wallets untouched for 10 years moved $40 million. Most avoided exchanges",
+      "title": "Bitcoin wallets untouched for 10 years moved $40 million worth of coins",
       "summary": "Six decade-old wallets moved $40 million this month, but Galaxy's data shows dormant coin activity at its lowest since 2022 and 2026 on pace for under half of last year's total.",
       "url": "https://www.coindesk.com/markets/2026/08/28/bitcoin-wallets-untouched-for-10-years-moved-usd40-million-most-avoided-exchanges",
       "publishedAt": "2026-08-29T04:30:00.000Z"
@@ -680,22 +696,6 @@
       "summary": "HMRC data shows 240 people reported more than £1 million ($1.36 million) each in crypto gains as UK tax scrutiny intensifies.",
       "url": "https://www.theblock.co/news/regulation/2026-08-28-uk-tax-crypto-capital-gains-412993",
       "publishedAt": "2026-08-28T09:37:26.000Z"
-    },
-    {
-      "id": "15afed44a276eea9bc8c",
-      "source": "Cointelegraph",
-      "title": "ENA token rises 10% as Ethena puts revenue-funded token buybacks to vote",
-      "summary": "The Ethena Foundation proposed buying the token supply held by major early investors and revealed a fee switch to turn 95% of net protocol revenue into ENA buybacks.",
-      "url": "https://cointelegraph.com/markets/ena-rises-10-ethena-token-buyback-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T09:27:30.000Z"
-    },
-    {
-      "id": "e73a4d33ebe822eb6626",
-      "source": "Bitcoin Magazine",
-      "title": "Pakistan Built Its Crypto Regulatory Regime Using Just 8% of Its Budget, Minister Bilal Bin Saqib Reveals at Bitcoin Asia",
-      "summary": "Bitcoin Magazine Pakistan Built Its Crypto Regulatory Regime Using Just 8% of Its Budget, Minister Bilal Bin Saqib Reveals at Bitcoin Asia Pakistan has launched its virtual asset regulatory regime in less than six months while using just 8% of the budget…",
-      "url": "https://bitcoinmagazine.com/markets/pakistan-built-its-crypto-regulatory-regime-using-just-8-of-its-budget-minister-bilal-bin-saqib-reveals-at-bitcoin-asia",
-      "publishedAt": "2026-08-28T09:22:08.000Z"
     }
   ]
 }
