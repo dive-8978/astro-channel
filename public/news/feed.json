@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T16:45:55.332Z",
+  "generatedAt": "2026-08-30T21:13:09.307Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 57,
       "error": null
     },
     {
@@ -57,6 +57,70 @@
     }
   ],
   "items": [
+    {
+      "id": "4907998d0aa513f672e5",
+      "source": "The Block",
+      "title": "Kalshi becomes exclusive prediction market partner of US Open: report",
+      "summary": "As part of the agreement, rival prediction market platforms are reportedly barred from advertising at the tournament and on its ESPN broadcasts.",
+      "url": "https://www.theblock.co/news/deals/2026-08-30-kalshi-becomes-exclusive-prediction-market-partner-of-us-open-report-413074",
+      "publishedAt": "2026-08-30T20:28:52.000Z"
+    },
+    {
+      "id": "8e58320eaba5cf6af29f",
+      "source": "CryptoSlate",
+      "title": "CEO Jeremy Allaire says Circle built “the platform for the internet financial system”, but cirBTC has only 40 BTC",
+      "summary": "Circle's wrapped Bitcoin was overcollateralized at its Aug. 27 snapshot, yet WBTC and cbBTC remain thousands of times larger as Arc becomes the next distribution test. The post CEO Jeremy Allaire says Circle built “the platform for the internet financial…",
+      "url": "https://cryptoslate.com/ceo-jeremy-allaire-says-circle-built-the-internet-financial-system-but-cirbtc-has-only-40-btc/",
+      "publishedAt": "2026-08-30T20:00:26.000Z"
+    },
+    {
+      "id": "386636c47ec4471816ce",
+      "source": "Decrypt",
+      "title": "Strategy’s Bitcoin Is $2.8 Billion in Profit—Is Saylor Teeing Up a Buy?",
+      "summary": "A Bitcoin rally to around $79,000 lifted the company's 840,447 BTC roughly $2.8 billion above its cost basis, as Saylor's \"We're Back\" post fueled speculation that Strategy may resume buying.",
+      "url": "https://decrypt.co/376884/strategy-bitcoin-2-8-billion-profit-saylor-btc-buy",
+      "publishedAt": "2026-08-30T19:39:55.000Z"
+    },
+    {
+      "id": "c22b639f66ffbe73e069",
+      "source": "The Block",
+      "title": "Crypto.com-linked Cronos network halts after Tectonic exploit estimated at $75 million",
+      "summary": "Li says the attacker manipulated the price of Tectonic's illiquid TONIC token before borrowing against the inflated collateral, a Mango Markets-style hack.",
+      "url": "https://www.theblock.co/news/defi/2026-08-30-crypto-com-linked-cronos-network-halts-after-tectonic-exploit-estimated-at-75-million-413069",
+      "publishedAt": "2026-08-30T18:40:08.000Z"
+    },
+    {
+      "id": "632c6f80da490713d6e1",
+      "source": "CryptoSlate",
+      "title": "US treasury relies on stablecoins to fund short-term debt, but they can’t fix its $28B long-bond problem",
+      "summary": "GENIUS reserves stop at 93 days while Treasury expands liquidity buybacks across 10- to 30-year debt. The post US treasury relies on stablecoins to fund short-term debt, but they can’t fix its $28B long-bond problem appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/us-treasury-relies-on-stablecoins-to-fund-short-term-debt-but-they-cant-fix-its-28b-long-bond-problem/",
+      "publishedAt": "2026-08-30T18:25:24.000Z"
+    },
+    {
+      "id": "c2b685995efd9cf39212",
+      "source": "Cointelegraph",
+      "title": "Saylor signals Strategy is ‘Back’ to Bitcoin buying",
+      "summary": "Michael Saylor’s “We’re Back” post hints Strategy may resume Bitcoin buying after a two-month pause to strengthen its balance sheet.",
+      "url": "https://cointelegraph.com/news/saylor-signals-strategy-is-back-to-bitcoin-buying?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-30T17:59:00.000Z"
+    },
+    {
+      "id": "30eb8e969fb512bd6263",
+      "source": "The Block",
+      "title": "Chainalysis accuses ICE of unfairly steering $95 million blockchain contract to TRM Labs",
+      "summary": "The lawsuit asks a federal court to block the $95 million TRM contract and require ICE to conduct a full and open competition.",
+      "url": "https://www.theblock.co/news/business/2026-08-30-chainalysis-accuses-ice-of-unfairly-steering-95-million-blockchain-contract-to-trm-labs-413066",
+      "publishedAt": "2026-08-30T17:51:54.000Z"
+    },
+    {
+      "id": "e87f82692fcef6d36210",
+      "source": "CryptoSlate",
+      "title": "Wall Street’s favorite Bitcoin broker just walked away from institutional trading to chase gigawatts of power",
+      "summary": "BitGo is paying roughly $42.5 million upfront for institutional trading capabilities as NYDIG prioritizes a claimed 3+ GW power-and-compute footprint, leaving profitability unproven on both sides. The post Wall Street’s favorite Bitcoin broker just walked…",
+      "url": "https://cryptoslate.com/bitgos-nydig-deal-sets-up-bitcoin-infrastructures-next-margin-test/",
+      "publishedAt": "2026-08-30T17:10:47.000Z"
+    },
     {
       "id": "dfe785d0e6eeb7315210",
       "source": "CoinDesk",
@@ -162,14 +226,6 @@
       "publishedAt": "2026-08-30T09:30:10.000Z"
     },
     {
-      "id": "f1aa505d9122cb04cdf0",
-      "source": "CryptoSlate",
-      "title": "The next shadow-banking problem comes from insurance companies, where nobody was looking for a bank run",
-      "summary": "Delaware Life Insurance Company's 2025 balance sheet took on a startling new shape when the insurer corrected its annual filing: roughly $17 billion of investments were classified as related-party holdings, about 39% of invested assets, versus roughly $1.4…",
-      "url": "https://cryptoslate.com/the-next-shadow-banking-problem-may-come-from-insurance-companies-where-nobody-was-looking-for-a-bank-run/",
-      "publishedAt": "2026-08-30T08:33:19.000Z"
-    },
-    {
       "id": "0aa257a4a2c6141194d0",
       "source": "Cointelegraph",
       "title": "Real Trump Coins denies launching GOLD token, blames ‘bad actors’",
@@ -178,28 +234,12 @@
       "publishedAt": "2026-08-30T08:04:56.000Z"
     },
     {
-      "id": "6364ee5df4c9b43eb044",
-      "source": "CryptoSlate",
-      "title": "Borrowers can now use $250k in Bitcoin for a house down payment without margin calls, but one trap remains",
-      "summary": "Price moves will not trigger margin calls, but 60 days of delinquency can put the pledged Bitcoin at risk of sale. The post Borrowers can now use $250k in Bitcoin for a house down payment without margin calls, but one trap remains appeared first on…",
-      "url": "https://cryptoslate.com/borrowers-can-now-use-250k-in-bitcoin-for-a-house-down-payment-without-margin-calls-but-one-trap-remains/",
-      "publishedAt": "2026-08-30T06:05:48.000Z"
-    },
-    {
       "id": "d6a6152c3b8959f0b374",
       "source": "CoinDesk",
       "title": "A $1.1 million crypto card hack crashed a neobank's token 49%",
       "summary": "The exploit caused the neobank's AVICI token to drop 49% from a 24-hour high, hitting a record low before paring some of the losses.",
       "url": "https://www.coindesk.com/web3/2026/08/29/a-usd1-1-million-crypto-card-hack-crashed-a-neobank-s-token-49",
       "publishedAt": "2026-08-29T23:49:17.000Z"
-    },
-    {
-      "id": "4985f8be8274e6d5532a",
-      "source": "CryptoSlate",
-      "title": "Deribit moved 90% of client assets to Coinbase, then killed its daily proof-of-reserves check",
-      "summary": "The Sept. 1 change removes a client Merkle check, leaving VARA reports and audited materials that are less public. The post Deribit moved 90% of client assets to Coinbase, then killed its daily proof-of-reserves check appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/deribit-moved-90-of-client-assets-to-coinbase-then-killed-its-daily-proof-of-reserves-check/",
-      "publishedAt": "2026-08-29T23:20:14.000Z"
     },
     {
       "id": "6fec5ae9328373532881",
@@ -656,46 +696,6 @@
       "summary": "The French Bitcoin treasury firm’s private placement drew support from Adam Back and TOBAM, with warrant exercises potentially unlocking another $158 million.",
       "url": "https://cointelegraph.com/news/capital-b-raises-245m-for-its-bitcoin-treasury-amid-market-uncertainty-with-blockstreams-adam-back-chipping-in?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-28T11:36:43.000Z"
-    },
-    {
-      "id": "0275c407c01096362d2e",
-      "source": "Decrypt",
-      "title": "UK Police Seize $1.4M in Bitcoin Traced to Shuttered Darknet Markets",
-      "summary": "The 20.21 BTC was linked to marketplaces running between 2016 and 2019, and the man who held it died before it was forfeited.",
-      "url": "https://decrypt.co/376797/uk-police-seize-1-4m-in-bitcoin-traced-to-shuttered-darknet-markets",
-      "publishedAt": "2026-08-28T11:34:20.000Z"
-    },
-    {
-      "id": "b161ee72ea60b68ec006",
-      "source": "The Block",
-      "title": "Investors at least $4.7 billion underwater across Trump crypto ventures, Public Citizen says",
-      "summary": "Investors are $4.7 billion underwater across Trump crypto ventures while Trump earned $1.4 billion, Public Citizen reported.",
-      "url": "https://www.theblock.co/news/business/2026-08-28-investors-at-least-4-7-billion-underwater-across-trump-crypto-ventures-public-citizen-says-413003",
-      "publishedAt": "2026-08-28T11:26:02.000Z"
-    },
-    {
-      "id": "8cd2ca271012a51a435f",
-      "source": "Cointelegraph",
-      "title": "Bitcoin bear market ‘over’ as price metric copies 2023 recovery: CryptoQuant CEO",
-      "summary": "Bitcoin profitability data produced a bear-market reversal signal that was also present at the start of 2023.",
-      "url": "https://cointelegraph.com/markets/bitcoin-bear-market-over-as-price-metric-copies-2023-recovery-cryptoquant-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T11:22:59.000Z"
-    },
-    {
-      "id": "e0aa57e72160a6b672a5",
-      "source": "CoinDesk",
-      "title": "Circle's USDC takes over Chelsea's jersey in Premier League first sponsorship deal",
-      "summary": "Financials were not disclosed, though reports from earlier this year suggested Chelsea was targeting 65 million pounds a year ($88.3 million) for the sponsorship berth.",
-      "url": "https://www.coindesk.com/business/2026/08/28/circle-s-usdc-takes-over-chelsea-s-jersey-in-premier-league-first",
-      "publishedAt": "2026-08-28T11:09:27.000Z"
-    },
-    {
-      "id": "f738bdcb462e8b550532",
-      "source": "CoinDesk",
-      "title": "Bullish backs USD.AI with $100 million in financing to drive GPU-backed loans",
-      "summary": "Cryptocurrency platform Bullish is extending a $100 million debt facility to USD.AI to finance GPU-backed loans for artificial intelligence infrastructure.",
-      "url": "https://www.coindesk.com/business/2026/08/28/bullish-backs-usd-ai-with-usd100-million-gpu-stablecoin-financing",
-      "publishedAt": "2026-08-28T11:03:18.000Z"
     }
   ]
 }
