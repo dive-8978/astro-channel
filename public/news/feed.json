@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T21:13:09.307Z",
+  "generatedAt": "2026-08-31T05:45:02.226Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 57,
+      "itemCount": 38,
       "error": null
     },
     {
@@ -57,6 +57,70 @@
     }
   ],
   "items": [
+    {
+      "id": "2215be867e2e62626b20",
+      "source": "CoinDesk",
+      "title": "Zcash private transactions could go from three-second waits to under 200 milliseconds",
+      "summary": "Zakura says a new cryptography stack makes mobile proof generation more than 14 times faster, removing one of the biggest delays users face when sending private ZEC.",
+      "url": "https://www.coindesk.com/tech/2026/08/31/zcash-private-transactions-could-go-from-three-second-waits-to-under-200-milliseconds",
+      "publishedAt": "2026-08-31T05:23:57.000Z"
+    },
+    {
+      "id": "ebefdb11ebc56e9163ff",
+      "source": "CoinDesk",
+      "title": "Cronos halts blockchain after $75 million lending exploit hits lending app Tectonic",
+      "summary": "An attacker allegedly pushed Tectonic’s thinly traded TONIC token up 100-fold, used it as collateral to borrow real assets and left most funds stranded when Cronos validators paused the network.",
+      "url": "https://www.coindesk.com/tech/2026/08/31/cronos-halts-blockchain-after-usd75-million-lending-exploit-hits-lending-app-tectonic",
+      "publishedAt": "2026-08-31T04:57:13.000Z"
+    },
+    {
+      "id": "ad385fc855bfaf05f0f8",
+      "source": "CoinDesk",
+      "title": "Bitcoin barely blinks as U.S. hits Iran, sending oil higher and stocks lower",
+      "summary": "BTC remains August's best-performing asset after the latest escalation in geopolitical tensions.",
+      "url": "https://www.coindesk.com/markets/2026/08/31/bitcoin-barely-blinks-as-u-s-hits-iran-sending-oil-higher-and-stocks-lower",
+      "publishedAt": "2026-08-31T04:29:10.000Z"
+    },
+    {
+      "id": "d30f118ce8eccd88c04e",
+      "source": "Cointelegraph",
+      "title": "Cronos halts network after Tectonic exploit involving estimated $75M",
+      "summary": "Crypto.com CEO Kris Marszalek said the company’s app and exchange were unaffected by the Tectonic breach and continued operating normally.",
+      "url": "https://cointelegraph.com/news/cronos-network-halt-tectonic-exploit-75-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T03:25:48.000Z"
+    },
+    {
+      "id": "438cf6e88db98cfe1ea8",
+      "source": "Cointelegraph",
+      "title": "Bitcoin’s new quantum defenses, 18.9M SOL cancelled: Hodler’s Digest",
+      "summary": "Bitcoin moves toward a post quantum future, Solana validators agree to curb rampant inflation and the bull case from Bernstein is for Bitcoin to peak at $500K this cycle.",
+      "url": "https://cointelegraph.com/magazine/bitcoins-new-quantum-defenses-189m-sol-cancelled-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-30T23:36:16.000Z"
+    },
+    {
+      "id": "f764c5816af379934ed3",
+      "source": "Decrypt",
+      "title": "Ex-White House Teleprompter Operator Fined for Prediction Market Insider Trading",
+      "summary": "Gabriel Perez used his access to Trump's speeches before delivery to bet on \"presidential mention market\" contracts, profiting more than $107,500 before the CFTC caught up with him.",
+      "url": "https://decrypt.co/376909/white-house-teleprompter-fined-prediction-market-trading",
+      "publishedAt": "2026-08-30T23:31:03.000Z"
+    },
+    {
+      "id": "65e583df3dacc3981a79",
+      "source": "Decrypt",
+      "title": "Polygon Quietly Patched Security Flaws in Two Hard Forks Before Disclosing Them",
+      "summary": "The Austin and Kyoto hard forks, deployed quietly on the Bor and Heimdall clients before public disclosure, closed denial-of-service and consensus-hardening flaws that Polygon says were never exploited.",
+      "url": "https://decrypt.co/376911/polygon-quietly-patched-security-flaws",
+      "publishedAt": "2026-08-30T22:31:04.000Z"
+    },
+    {
+      "id": "76e716a12595ead4d96b",
+      "source": "Decrypt",
+      "title": "Bitcoin ETFs Snap Nine-Day Inflow Streak as Ethereum Funds Extend Their Run",
+      "summary": "Spot Bitcoin ETFs shed $201.9 million on Aug. 28, ending a nine-day inflow run, even as Ethereum funds extended a 10-day streak with fresh cash.",
+      "url": "https://decrypt.co/376897/bitcoin-etfs-snap-streak-ethereum-funds-extend",
+      "publishedAt": "2026-08-30T21:31:04.000Z"
+    },
     {
       "id": "4907998d0aa513f672e5",
       "source": "The Block",
@@ -124,7 +188,7 @@
     {
       "id": "dfe785d0e6eeb7315210",
       "source": "CoinDesk",
-      "title": "Michael Saylor hints at first bitcoin purchase in two months as bitcoin nears $79,000",
+      "title": "Michael Saylor hints at first bitcoin purchase in two months",
       "summary": "Bitcoin rebounds from Friday’s low as Strategy’s valuation expands and bitcoin dominance climbs above 60%.",
       "url": "https://www.coindesk.com/markets/2026/08/30/bitcoin-nears-usd79-000-as-michael-saylor-hints-at-first-bitcoin-purchase-in-two-months",
       "publishedAt": "2026-08-30T15:39:55.000Z"
@@ -632,70 +696,6 @@
       "summary": "Polish Olympic Committee president Radosław Piesiewicz faces charges as prosecutors investigate his ties to collapsed cryptocurrency exchange Zondacrypto.",
       "url": "https://cointelegraph.com/news/polish-olympic-chief-charged-zondacrypto-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-28T13:16:37.000Z"
-    },
-    {
-      "id": "c56de9001f2386cdcfa3",
-      "source": "CoinDesk",
-      "title": "The Clarity Act slipped to September. Banks are building anyway",
-      "summary": "But every month without settled rules quietly rewards the walled garden, writes Matter Labs’ Vassilis Tziokas.",
-      "url": "https://www.coindesk.com/opinion/2026/08/28/the-clarity-act-slipped-to-september-banks-are-building-anyway",
-      "publishedAt": "2026-08-28T13:00:00.000Z"
-    },
-    {
-      "id": "d09c63edee8c1ec0870c",
-      "source": "The Block",
-      "title": "IREN’s $25 billion-$30 billion AI buildout may have ‘spooked’ investors, Bernstein says",
-      "summary": "IREN has $4 billion in contracted cloud ARR for 2026 capacity and has secured over $20M in annual revenue per IT megawatt on recent deals.",
-      "url": "https://www.theblock.co/news/business/2026-08-28-irens-25-billion-30-billion-ai-buildout-may-have-spooked-investors-bernstein-says-413016",
-      "publishedAt": "2026-08-28T12:57:52.000Z"
-    },
-    {
-      "id": "3c39253eb1f46e4ce56e",
-      "source": "CoinDesk",
-      "title": "Ethena looks beyond crypto to squeeze yield from booming equity perpetuals",
-      "summary": "The issuer of the $4 billion USDe token said it expects real-world asset perpetuals to eclipse crypto derivatives in its backing within 12 to 24 months.",
-      "url": "https://www.coindesk.com/business/2026/08/28/ethena-looks-beyond-crypto-to-squeeze-yield-from-booming-equity-perpetuals",
-      "publishedAt": "2026-08-28T12:30:57.000Z"
-    },
-    {
-      "id": "53cec3cdbc232797015c",
-      "source": "CoinDesk",
-      "title": "SBI buys 20% stake in Indonesia's Ajaib for $270 million to expand yen stablecoin in Southeast Asia",
-      "summary": "The Japanese financial giant is acquiring a 20% stake in the Indonesian online brokerage to build a cross-border, blockchain-based settlement network.",
-      "url": "https://www.coindesk.com/business/2026/08/28/sbi-stakes-usd270-million-in-ajaib-to-expand-yen-stablecoin-in-southeast-asia",
-      "publishedAt": "2026-08-28T12:18:31.000Z"
-    },
-    {
-      "id": "b45785eb1503d60b4a14",
-      "source": "Decrypt",
-      "title": "Morning Minute: Solana Jumps with Network Inflation Set to Drop",
-      "summary": "Two majors proposals are set to pass, its leading DATs are back, and Schwab is offering SOL to its clients—quite the setup for Solana.",
-      "url": "https://decrypt.co/376800/morning-minute-solana-jumps-with-network-inflation-set-to-drop",
-      "publishedAt": "2026-08-28T12:13:35.000Z"
-    },
-    {
-      "id": "6e7853f0950f7ce0d6ed",
-      "source": "Cointelegraph",
-      "title": "California Senate passes bill to ban memecoin issuance by public officials",
-      "summary": "The bill seeks to prohibit the listing of memecoins issued by federal public officials to California residents, citing conflicts of interest and “pay-to-play arrangements.”",
-      "url": "https://cointelegraph.com/news/california-bill-ban-memecoin-issuance-public-officials?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T12:09:48.000Z"
-    },
-    {
-      "id": "909e25b722592a701157",
-      "source": "CoinDesk",
-      "title": "Bitcoin is outperforming stocks and correlating with gold just when it matters most",
-      "summary": "Your day-ahead look for Aug. 28, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/08/28/bitcoin-is-outperforming-stocks-and-correlating-with-gold-just-when-it-matters-most",
-      "publishedAt": "2026-08-28T11:43:19.000Z"
-    },
-    {
-      "id": "74966d4fe5d978851383",
-      "source": "Cointelegraph",
-      "title": "Capital B raises $24.5M for its Bitcoin treasury amid market uncertainty with BlockStream’s Adam Back chipping in",
-      "summary": "The French Bitcoin treasury firm’s private placement drew support from Adam Back and TOBAM, with warrant exercises potentially unlocking another $158 million.",
-      "url": "https://cointelegraph.com/news/capital-b-raises-245m-for-its-bitcoin-treasury-amid-market-uncertainty-with-blockstreams-adam-back-chipping-in?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T11:36:43.000Z"
     }
   ]
 }
