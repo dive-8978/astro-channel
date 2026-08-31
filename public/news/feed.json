@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T05:45:02.226Z",
+  "generatedAt": "2026-08-31T14:03:12.094Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 39,
       "error": null
     },
     {
@@ -57,6 +57,254 @@
     }
   ],
   "items": [
+    {
+      "id": "b8e1d43760eef367660c",
+      "source": "CryptoSlate",
+      "title": "DeFi protocols just lost $83 million to an attack financial regulators already warned about",
+      "summary": "Malicious actors exposed two decentralized finance (DeFi) lenders to over $84 million in losses over four days, using variations of a price-manipulation strategy previously targeted by US regulators. The larger incident hit Tectonic on the Cronos blockchain,…",
+      "url": "https://cryptoslate.com/defi-protocols-just-lost-83-million-to-an-attack-financial-regulators-already-warned-about/",
+      "publishedAt": "2026-08-31T13:45:33.000Z"
+    },
+    {
+      "id": "2022e99b9a6c448cab54",
+      "source": "Cointelegraph",
+      "title": "Mystery surrounds why an OG burned $1M in Bitcoin",
+      "summary": "The million dollar question is what prompted a Bitcoin OG to send 20 BTC to a custodian, retrieve it back, and then deliberately burn it?",
+      "url": "https://cointelegraph.com/magazine/mystery-surrounds-why-an-og-burned-1m-in-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T13:30:00.000Z"
+    },
+    {
+      "id": "fff030e8159df7b2e0d0",
+      "source": "CoinDesk",
+      "title": "Ireland bars crypto from new tax-advantaged investment accounts",
+      "summary": "Eligible assets for the new accounts include listed stocks, bonds, and ETFs, with providers handling tax reporting to simplify investor compliance.",
+      "url": "https://www.coindesk.com/business/2026/08/31/ireland-bars-crypto-from-new-tax-advantaged-investment-accounts",
+      "publishedAt": "2026-08-31T13:29:56.000Z"
+    },
+    {
+      "id": "94f41615a40d4c62d977",
+      "source": "Cointelegraph",
+      "title": "Japanese regulator requests tax filing exemption for trust-type stablecoins in 2027 reform",
+      "summary": "Japan’s FSA requested to exempt trust-type stablecoins from mandatory tax filings starting in fiscal year 2027, arguing that it would improve their use as transaction tools.",
+      "url": "https://cointelegraph.com/news/japanese-regulator-tax-exemption-trust-type-stablecoins-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T13:20:05.000Z"
+    },
+    {
+      "id": "a79af6a690c95f1c6d3a",
+      "source": "Cointelegraph",
+      "title": "Mutiny? Metaplanet moves 4,800 BTC worth $377M to Coinbase",
+      "summary": "The Japanese Bitcoin treasury company has transferred 10,270 BTC to Coinbase Prime this week, an amount equal to more than 29% of its reported holdings.",
+      "url": "https://cointelegraph.com/news/mutiny-metaplanet-moves-4800-btc-worth-377m-to-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T13:15:12.000Z"
+    },
+    {
+      "id": "dfdc5a5ea4a3fe0fea5d",
+      "source": "The Block",
+      "title": "‘We’re back’: Strategy buys another 4,603 bitcoin for $369.7 million as holdings hit 845,050 BTC",
+      "summary": "Strategy bought 4,603 BTC for $369.7 million, raising total holdings to 845,050 BTC worth over $66 billion.",
+      "url": "https://www.theblock.co/news/business/2026-08-31-were-back-strategy-buys-another-4603-btc-369-7-million-holdings-hit-845050-btc-413087",
+      "publishedAt": "2026-08-31T13:11:07.000Z"
+    },
+    {
+      "id": "27ae8f6666ff094acef4",
+      "source": "CoinDesk",
+      "title": "Bitmine makes largest ether purchase since June as Tom Lee points to crypto's strong Q3",
+      "summary": "Company Chairman Lee said crypto’s recent outperformance could draw more institutional investors.",
+      "url": "https://www.coindesk.com/business/2026/08/31/bitmine-makes-largest-ether-purchase-since-june-as-tom-lee-points-to-crypto-s-strong-q3",
+      "publishedAt": "2026-08-31T12:53:17.000Z"
+    },
+    {
+      "id": "dc90a097fe62d24a1c34",
+      "source": "Cointelegraph",
+      "title": "Strategy buys $370M Bitcoin in first corporate purchase since June",
+      "summary": "Strategy added to its BTC treasury for the first time in two months, while continuing to bolster its cash reserves and buy back its perpetual STRC preferred stock.",
+      "url": "https://cointelegraph.com/news/strategy-buys-370m-bitcoin-first-acquisition-june?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T12:45:12.000Z"
+    },
+    {
+      "id": "272f3e531f88e3ec0e09",
+      "source": "CryptoSlate",
+      "title": "Bitcoin treasury company registers 93% of shares for resale and puts third of its crypto into options",
+      "summary": "The shares are already issued and may never be sold, while loan, treasury and cash risks remain. The post Bitcoin treasury company registers 93% of shares for resale and puts third of its crypto into options appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-treasury-company-registers-93-of-shares-for-resale-and-puts-third-of-its-crypto-into-options/",
+      "publishedAt": "2026-08-31T12:45:04.000Z"
+    },
+    {
+      "id": "b7328a35c49ef146d7de",
+      "source": "Decrypt",
+      "title": "Morning Minute: Robinhood Chain Flips Ethereum and Base in Fees",
+      "summary": "Vlad Tenev’s new blockchain is soaring in all metrics as memes paired with tokenized stocks start to take off.",
+      "url": "https://decrypt.co/376923/morning-minute-robinhood-chain-flips-ethereum-and-base-in-fees",
+      "publishedAt": "2026-08-31T12:37:44.000Z"
+    },
+    {
+      "id": "36c81c8de52252fe110f",
+      "source": "Decrypt",
+      "title": "Strategy Buys $370M of Bitcoin in First Purchase Since June",
+      "summary": "The 4,603 BTC cost an average of $80,318, some 29% above what the company took for the coins it sold this summer.",
+      "url": "https://decrypt.co/376924/strategy-buys-370m-of-bitcoin-in-first-purchase-since-june",
+      "publishedAt": "2026-08-31T12:27:01.000Z"
+    },
+    {
+      "id": "f65ffbf7d0be5328095a",
+      "source": "CoinDesk",
+      "title": "Strategy returns to bitcoin buys, adding $370 million of BTC last week",
+      "summary": "It's the first week of bitcoin purchases for the Michael Saylor-led company in about two months.",
+      "url": "https://www.coindesk.com/markets/2026/08/31/strategy-returns-to-bitcoin-buys-adding-usd370-million-worth-last-week",
+      "publishedAt": "2026-08-31T12:11:04.000Z"
+    },
+    {
+      "id": "998b338be5d50807db3c",
+      "source": "CoinDesk",
+      "title": "Robinhood Chain beats Ethereum in daily revenue as memecoin trading takes over",
+      "summary": "The two-month-old network processed a record 5.52 million transactions on Aug. 30 as users launched 22,600 tokens and memecoin trading tools drove most of the $2.66 million in revenue.",
+      "url": "https://www.coindesk.com/markets/2026/08/31/robinhood-chain-beats-ethereum-in-daily-revenue-as-memecoin-trading-takes-over",
+      "publishedAt": "2026-08-31T11:53:56.000Z"
+    },
+    {
+      "id": "58c9b7b52d6a02b4b221",
+      "source": "CryptoSlate",
+      "title": "Michael Saylor’s $13,400 Bitcoin floor exposes the exact order of losses inside Strategy’s debt stack",
+      "summary": "The filed ratio moves with cash and claims, while MSTR dilution and legal priority shape real losses. The post Michael Saylor’s $13,400 Bitcoin floor exposes the exact order of losses inside Strategy’s debt stack appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/michael-saylors-13400-bitcoin-floor-map-exposes-the-exact-order-of-losses-inside-strategys-debt-stack/",
+      "publishedAt": "2026-08-31T11:30:03.000Z"
+    },
+    {
+      "id": "16cb087e078d8575cbcd",
+      "source": "CoinDesk",
+      "title": "Sberbank plans to add ether and USDT as collateral for crypto-backed loans: Report",
+      "summary": "The Bank of Russia recently included ETH and USDT in a draft list of cryptocurrencies approved for public trading on Russian exchanges.",
+      "url": "https://www.coindesk.com/business/2026/08/31/sberbank-plans-to-add-ether-and-usdt-as-collateral-for-crypto-backed-loans",
+      "publishedAt": "2026-08-31T11:26:26.000Z"
+    },
+    {
+      "id": "d9d4dbefcb84d1627dbd",
+      "source": "CoinDesk",
+      "title": "Here's 1 metric on U.S. debt that makes bitcoin's bull case look stronger than ever",
+      "summary": "Your day-ahead look for Aug. 31, 2026",
+      "url": "https://www.coindesk.com/daybook-us/2026/08/31/here-s-1-metric-on-u-s-debt-that-makes-bitcoin-s-bull-case-look-stronger-than-ever",
+      "publishedAt": "2026-08-31T11:25:34.000Z"
+    },
+    {
+      "id": "6300ffc33c067d9403d6",
+      "source": "Cointelegraph",
+      "title": "Hyperliquid, Pump.fun account for nearly 90% of record $638M crypto buybacks: FT",
+      "summary": "Crypto projects spent a record $638 million on token buybacks so far in 2026, as more protocols are turning their revenue into buybacks to return more value to token holders.",
+      "url": "https://cointelegraph.com/news/hyperliquid-pumpfun-90-record-638m-crypto-buybacks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T11:21:57.000Z"
+    },
+    {
+      "id": "e24cf8c4953529bcc096",
+      "source": "Decrypt",
+      "title": "Ireland Bars Crypto From State Savings Scheme Targeting $203B in Deposits",
+      "summary": "Shares, bonds, funds, ETFs and insurance products will qualify for the tax-advantaged accounts, which open next year.",
+      "url": "https://decrypt.co/376916/ireland-bars-crypto-from-state-savings-scheme-targeting-203b-in-deposits",
+      "publishedAt": "2026-08-31T11:10:44.000Z"
+    },
+    {
+      "id": "aede4451e4d7372644e7",
+      "source": "Cointelegraph",
+      "title": "Markets pivot to September Fed rate hike: Five things to know in Bitcoin this week",
+      "summary": "Bitcoin approached the August monthly close below key resistance with markets once again pricing in a Federal Reserve interest-rate hike in September.",
+      "url": "https://cointelegraph.com/markets/markets-pivot-to-september-fed-rate-hike-five-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T10:51:49.000Z"
+    },
+    {
+      "id": "0269aaf915eebe0ac2dd",
+      "source": "CoinDesk",
+      "title": "U.S. strikes on Iran fail to stir bitcoin, on track for best month since November 2024",
+      "summary": "Bitcoin held steady despite a broader risk-off move after the first U.S. strikes against Iran for weeks sent oil higher and stocks lower. The cryptocurrency has gained 24% this month.",
+      "url": "https://www.coindesk.com/markets/2026/08/31/u-s-strikes-on-iran-fail-to-stir-bitcoin-on-track-for-best-month-since-november-2024",
+      "publishedAt": "2026-08-31T10:44:52.000Z"
+    },
+    {
+      "id": "863467808c66a6c97e99",
+      "source": "CryptoSlate",
+      "title": "XRPL consensus freezes after removing just 12% of central nodes – but a simple tweak triples XRP defense",
+      "summary": "At 60% participation, two random links raised simulated quorum-failure thresholds from 11% to 38% and 12% to 33%. The post XRPL consensus freezes after removing just 12% of central nodes – but a simple tweak triples XRP defense appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/xrpl-consensus-freezes-after-removing-just-12-of-central-nodes-but-a-simple-tweak-triples-xrps-defense/",
+      "publishedAt": "2026-08-31T10:19:49.000Z"
+    },
+    {
+      "id": "80173642aef5e3c6cbf5",
+      "source": "Decrypt",
+      "title": "Crypto.com's Cronos Halts Entire Blockchain After $75M Tectonic Exploit",
+      "summary": "Some $6 million reached Ethereum before validators froze the chain, stranding the rest on a network that still is not producing blocks.",
+      "url": "https://decrypt.co/376913/crypto-coms-cronos-halts-entire-blockchain-after-75m-tectonic-exploit",
+      "publishedAt": "2026-08-31T09:41:27.000Z"
+    },
+    {
+      "id": "865ace9433d0859e8e74",
+      "source": "Cointelegraph",
+      "title": "More Markets lending reserve drained for $9.3M: Blockaid",
+      "summary": "Blockaid said an attacker used an Ankr liquid staking token and E-mode to overborrow from More Markets and drain about $9.3 million in WFLOW from a lending reserve.",
+      "url": "https://cointelegraph.com/news/more-markets-lending-reserve-drained-93m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T08:57:10.000Z"
+    },
+    {
+      "id": "abf053d5f8bbfc155148",
+      "source": "CryptoSlate",
+      "title": "A 36-day staking bottleneck is costing Ethereum depositors over $350,000 in lost rewards daily",
+      "summary": "The 35.75-day backlog represents an annualized opportunity-cost estimate as deposits share a 256 ETH-per-epoch activation gate. The post A 36-day staking bottleneck is costing Ethereum depositors over $350,000 in lost rewards daily appeared first on…",
+      "url": "https://cryptoslate.com/a-36-day-staking-bottleneck-is-costing-ethereum-depositors-over-350000-in-lost-rewards-daily/",
+      "publishedAt": "2026-08-31T08:25:54.000Z"
+    },
+    {
+      "id": "0e555f7939d3ab0b0bce",
+      "source": "CoinDesk",
+      "title": "U.S. jobs report, Russia’s digital ruble rollout: Crypto Week Ahead",
+      "summary": "Your look at what's coming in the week starting Aug. 31.",
+      "url": "https://www.coindesk.com/markets/2026/08/31/u-s-jobs-report-russia-s-digital-ruble-rollout-crypto-week-ahead",
+      "publishedAt": "2026-08-31T08:22:28.000Z"
+    },
+    {
+      "id": "068e28ee393db7bbfeca",
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin trades near $78,000; Strategy buys BTC for first time since late June",
+      "summary": "The price of crude oil is surging higher after overnight military strikes in Iran, with Trump once again proclaiming victory.",
+      "url": "https://www.coindesk.com/tech/2026/08/31/live-updates-bitcoin-holds-usd78-000-as-yen-breaks-160-and-rate-hike-bets-lift-the-dollar",
+      "publishedAt": "2026-08-31T08:18:03.000Z"
+    },
+    {
+      "id": "772dd4bf2708a91cbe31",
+      "source": "The Block",
+      "title": "Russia’s largest bank forecasts $46 billion in first-year crypto exchange trading under new rules: report",
+      "summary": "Sberbank's forecast comes as the country's new crypto regulations are set to take effect on Sept. 1, 2026.",
+      "url": "https://www.theblock.co/news/business/2026-08-31-russias-largest-bank-forecasts-46-billion-in-first-year-crypto-exchange-trading-under-new-rules-report-413082",
+      "publishedAt": "2026-08-31T08:15:48.000Z"
+    },
+    {
+      "id": "ab15dd8990ee66a5782e",
+      "source": "CoinDesk",
+      "title": "Luke Dashjr exits mining pool Ocean after split over Bitcoin mining’s future",
+      "summary": "The split was mutual, with both parties citing differing views on the future of Bitcoin mining and recent protocol developments.",
+      "url": "https://www.coindesk.com/business/2026/08/31/luke-dashjr-exits-mining-pool-ocean-after-split-over-bitcoin-mining-s-future",
+      "publishedAt": "2026-08-31T08:04:54.000Z"
+    },
+    {
+      "id": "294efe9deb753168e7be",
+      "source": "CoinDesk",
+      "title": "September Fed rate hike fears look overblown as the probability stands at just 58%, not 90%",
+      "summary": "Odds of a rate hike in September remain below 60% despite Warsh's hawkish speech on Friday. Observers downplay fears of tightening.",
+      "url": "https://www.coindesk.com/markets/2026/08/31/september-fed-rate-hike-fears-appear-overblown-as-the-probability-is-just-58-not-90",
+      "publishedAt": "2026-08-31T06:42:45.000Z"
+    },
+    {
+      "id": "e47f9ac0bb2571d92f8c",
+      "source": "CryptoSlate",
+      "title": "XRP’s next rally could put this 115 million-token short under pressure",
+      "summary": "The Aug. 25 CFTC snapshot shows 115.7 million XRP-equivalent net short against rising dealer and asset-manager net longs. The post XRP’s next rally could put this 115 million-token short under pressure appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/xrps-next-rally-could-put-this-115-million-token-short-under-pressure/",
+      "publishedAt": "2026-08-31T06:30:46.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-08-31T06:01:00.000Z"
+    },
     {
       "id": "2215be867e2e62626b20",
       "source": "CoinDesk",
@@ -210,44 +458,12 @@
       "publishedAt": "2026-08-30T15:00:00.000Z"
     },
     {
-      "id": "5ed2b2c152d196a1843f",
-      "source": "CryptoSlate",
-      "title": "Veteran Bitcoin developer Luke Dashjr exits OCEAN pool – Will hash power follow him to new pool?",
-      "summary": "OCEAN still represented 2.45% of trailing-day blocks after buying out its co-founder, while CONVOY disclosed no operational footprint. The post Veteran Bitcoin developer Luke Dashjr exits OCEAN pool – Will hash power follow him to new pool? appeared first on…",
-      "url": "https://cryptoslate.com/veteran-bitcoin-developer-luke-dashjr-exits-ocean-pool-will-hash-power-follow-him-to-new-pool/",
-      "publishedAt": "2026-08-30T14:00:58.000Z"
-    },
-    {
-      "id": "07ec5bfa0f16252afe6e",
-      "source": "CryptoSlate",
-      "title": "Treasury proposed GENIUS change forces US exchanges to audit foreign stablecoin or face delisting",
-      "summary": "Platforms could rely on foreign issuers only after reasonable diligence, while comments on the proposed standard remain open through Oct. 19. The post Treasury proposed GENIUS change forces US exchanges to audit foreign stablecoin or face delisting appeared…",
-      "url": "https://cryptoslate.com/treasury-proposed-genius-change-forces-us-exchanges-to-audit-foreign-stablecoin-or-face-delisting/",
-      "publishedAt": "2026-08-30T13:35:14.000Z"
-    },
-    {
       "id": "9a52306a7a235151c8dc",
       "source": "Decrypt",
       "title": "After Their AI Models Hacked Real Companies, AI Labs Call for Stronger Cyber Defenses",
       "summary": "More than 100 AI, security, finance, and technology organizations want governments and industry to prepare for attacks powered by increasingly capable models.",
       "url": "https://decrypt.co/376863/ai-models-hacked-companies-ai-labs-cyber-defenses",
       "publishedAt": "2026-08-30T13:31:04.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-30T12:49:37.000Z"
-    },
-    {
-      "id": "f9e009648c994d5ab8f6",
-      "source": "CryptoSlate",
-      "title": "White House aide turned secret speech text into $107k on prediction markets before CFTC stepped in",
-      "summary": "A settled CFTC order adds a $65,000 penalty and three-year ban while crediting KalshiEX’s assistance. The post White House aide turned secret speech text into $107k on prediction markets before CFTC stepped in appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/white-house-aide-turned-secret-speech-text-into-107k-on-prediction-markets-before-cftc-stepped-in/",
-      "publishedAt": "2026-08-30T12:30:29.000Z"
     },
     {
       "id": "b71525d558f7306496a0",
@@ -258,36 +474,12 @@
       "publishedAt": "2026-08-30T12:00:00.000Z"
     },
     {
-      "id": "f3f96f55eb3599c746a5",
-      "source": "CryptoSlate",
-      "title": "Crypto stock tokens barely move over weekend, revealing markets become illiquid when Wall Street goes offline",
-      "summary": "Four Aerodrome pools showed $6.07 million in displayed liquidity while official Aave V3 records listed none of the B20 assets. The post Crypto stock tokens barely move over weekend, revealing markets become illiquid when Wall Street goes offline appeared…",
-      "url": "https://cryptoslate.com/coinbase-stock-tokens-stayed-within-0-6-of-friday-prices-through-the-weekend-as-aave-collateral-remained-pending/",
-      "publishedAt": "2026-08-30T11:40:11.000Z"
-    },
-    {
-      "id": "7ab17401b0387bab8611",
-      "source": "CryptoSlate",
-      "title": "How $739B in new US debt could absorb crypto’s liquidity before buybacks even reach Bitcoin",
-      "summary": "The US Treasury expects to borrow $739 billion from July through September while paying investors to hand back some of its older bonds. The pairing looks self-defeating because both transactions involve the same issuer. However, they are on separate ledgers…",
-      "url": "https://cryptoslate.com/how-739b-in-new-us-debt-could-absorb-cryptos-liquidity-before-buybacks-even-reach-bitcoin/",
-      "publishedAt": "2026-08-30T10:50:36.000Z"
-    },
-    {
       "id": "cfe74ccab6212fff46bc",
       "source": "Cointelegraph",
       "title": "Russia’s Sber eyes USDT loans, questions digital ruble demand",
       "summary": "Russia’s largest bank, Sber, plans to accept USDT and Ether alongside Bitcoin as loan collateral as the country introduces regulated crypto trading under a new law.",
       "url": "https://cointelegraph.com/news/russia-sber-bank-bitcoin-ether-usdt-crypto-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-30T09:55:00.000Z"
-    },
-    {
-      "id": "0c5ad87ffa47797138e8",
-      "source": "CryptoSlate",
-      "title": "Popular Bitcoin wallets risk losing support for new hardware devices as critical security bridge stops accepting new devices",
-      "summary": "BHWI has published parity tests, but downstream wallets still face packaging, platform and integration work. The post Popular Bitcoin wallets risk losing support for new hardware devices as critical security bridge stops accepting new devices appeared first…",
-      "url": "https://cryptoslate.com/popular-bitcoin-wallets-risk-losing-support-for-new-hardware-devices-as-critical-security-bridge-stops-accepting-new-devices/",
-      "publishedAt": "2026-08-30T09:30:10.000Z"
     },
     {
       "id": "0aa257a4a2c6141194d0",
@@ -504,198 +696,6 @@
       "summary": "The approved proposal doubles Solana’s annual disinflation rate from 15% to 30%, reducing future SOL issuance while leaving its long-term inflation target unchanged.",
       "url": "https://cointelegraph.com/news/solana-validators-approve-proposal-to-accelerate-sol-disinflation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-08-28T19:53:12.000Z"
-    },
-    {
-      "id": "7402a2444fc888fc47ba",
-      "source": "The Block",
-      "title": "Ninth Circuit deals blow to Kalshi in Nevada sports betting fight, challenging CFTC’s exclusive jurisdiction claim",
-      "summary": "An appeals court sided with a lower court's ruling that Kalshi failed to show that the federal government preempts Nevada’s authority.",
-      "url": "https://www.theblock.co/news/regulation/2026-08-28-ninth-circuit-deals-blow-to-kalshi-in-nevada-sports-betting-fight-challenging-cftcs-exclusive-jurisdiction-claim-413046",
-      "publishedAt": "2026-08-28T19:50:48.000Z"
-    },
-    {
-      "id": "e2e96dec446531b447ad",
-      "source": "Decrypt",
-      "title": "XRP Treasury Company Gets One Step Closer to Listing on Nasdaq",
-      "summary": "Evernorth has gained SEC clearance, teeing up a shareholder vote on its Nasdaq listing—while the firm's XRP stash sits well below what it paid for it.",
-      "url": "https://decrypt.co/376840/xrp-treasury-evernorths-clears-sec-nasdaq",
-      "publishedAt": "2026-08-28T19:46:03.000Z"
-    },
-    {
-      "id": "76b1eeab5595dbdb7526",
-      "source": "Decrypt",
-      "title": "US Cities Eye AI Data Center Limits as Study Flags Water Risks",
-      "summary": "Austin is the latest city to consider restrictions as communities challenge the water and electricity demands of AI infrastructure.",
-      "url": "https://decrypt.co/376838/us-cities-ai-data-center-limits",
-      "publishedAt": "2026-08-28T19:14:37.000Z"
-    },
-    {
-      "id": "b59101406192b20fcb05",
-      "source": "Bitcoin Magazine",
-      "title": "Capital B Raises €21M From Adam Back and TOBAM To Buy More BTC",
-      "summary": "Bitcoin Magazine Capital B Raises €21M From Adam Back and TOBAM To Buy More BTC The French bitcoin treasury currently holds 3,145 bitcoins worth over $245 million at today's prices. This post Capital B Raises €21M From Adam Back and TOBAM To Buy More BTC…",
-      "url": "https://bitcoinmagazine.com/news/capital-b-raises-money-for-bitcoin",
-      "publishedAt": "2026-08-28T18:10:42.000Z"
-    },
-    {
-      "id": "99c31ea9bac62a893cc7",
-      "source": "Cointelegraph",
-      "title": "Chelsea FC gets a stablecoin sponsor after UK FCA warning to clubs",
-      "summary": "According to Circle, the USDC stablecoin name will appear on the front of club jerseys for Chelsea’s upcoming football season.",
-      "url": "https://cointelegraph.com/news/chelsea-football-circle-sponsor-fca-warning-questionable-deals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T17:46:12.000Z"
-    },
-    {
-      "id": "07e292cae1abe3a4123e",
-      "source": "Decrypt",
-      "title": "Solana Will Now Print Less SOL as Disinflation Vote Passes in Dramatic Fashion",
-      "summary": "The \"Double Disinflation\" proposal squeaked through by a razor-thin margin after Kraken nearly sank it, while a separate fee-burning measure failed.",
-      "url": "https://decrypt.co/376825/solana-sol-disinflation-vote-passes",
-      "publishedAt": "2026-08-28T17:44:09.000Z"
-    },
-    {
-      "id": "885e36fd7396e51f85d8",
-      "source": "Decrypt",
-      "title": "Fed Chair Warsh Calls AI a 'Hinge Point in History'—4 Key Things He Said",
-      "summary": "Fed Chair Warsh devoted a full section of his speech today at Jackson Hole to AI's weight on the economy. Here are the biggest takeaways.",
-      "url": "https://decrypt.co/376821/fed-chair-warsh-ai-hinge-point-4-key-things",
-      "publishedAt": "2026-08-28T17:18:52.000Z"
-    },
-    {
-      "id": "115ddd5a9f8e89d60bd4",
-      "source": "Decrypt",
-      "title": "Charles Schwab Expands Crypto Trading Beyond Bitcoin and Ethereum",
-      "summary": "The brokerage will expand Schwab Crypto trading to Solana, Avalanche, and Chainlink, but has not given a launch date for the three tokens.",
-      "url": "https://decrypt.co/376819/charles-schwab-crypto-trading-bitcoin-ethereum-solana",
-      "publishedAt": "2026-08-28T16:39:02.000Z"
-    },
-    {
-      "id": "abdd60b6181db60f9b5f",
-      "source": "Cointelegraph",
-      "title": "Bullish provides USD.AI $100M stablecoin facility for GPU-backed lending",
-      "summary": "The institutional crypto exchange is providing $100 million in stablecoin liquidity to support loans backed by AI computing infrastructure.",
-      "url": "https://cointelegraph.com/news/bullish-provides-usdai-100m-stablecoin-facility-gpu-backed-loans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T16:17:09.000Z"
-    },
-    {
-      "id": "41a520fbcf9a64e902b3",
-      "source": "CoinDesk",
-      "title": "Solana vote to double disinflation passes by a hair in dramatic finish",
-      "summary": "Solana's first network-wide vote went down to the wire, with Kraken and Galaxy-linked validators switching sides before the disinflation proposal narrowly passed.",
-      "url": "https://www.coindesk.com/tech/2026/08/28/solana-vote-to-double-disinflation-passes-by-a-hair-in-dramatic-finish",
-      "publishedAt": "2026-08-28T16:12:45.000Z"
-    },
-    {
-      "id": "6bc095a761d3bd85f503",
-      "source": "Decrypt",
-      "title": "What Is Strategy (MSTR)? The Bitcoin Treasury Company",
-      "summary": "Strategy’s co-founder Michael Saylor pioneered the Bitcoin treasury playbook. Here’s what you need to know.",
-      "url": "https://decrypt.co/resources/what-is-strategy-microstrategy-mstr-the-bitcoin-treasury-company",
-      "publishedAt": "2026-08-28T16:08:02.000Z"
-    },
-    {
-      "id": "e6302a82caf2872e86d7",
-      "source": "Decrypt",
-      "title": "Bitcoin Miner IREN Shares Fall as AI Conversion Costs Mount",
-      "summary": "AI cloud revenue topped Bitcoin mining for the first time as IREN accelerated its data center conversion.",
-      "url": "https://decrypt.co/376816/bitcoin-miner-iren-shares-drop-ai-costs",
-      "publishedAt": "2026-08-28T16:04:37.000Z"
-    },
-    {
-      "id": "66c4b921051d20469a98",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin Drops Before Shrugging Off Fed Chair’s Inflation Comments",
-      "summary": "Bitcoin Magazine Bitcoin Drops Before Shrugging Off Fed Chair’s Inflation Comments Bitcoin dropped, then popped after Federal Reserve Chair Kevin Warsh gave his first major speech as head of the U.S. central bank and said he had “more work to do” to fight…",
-      "url": "https://bitcoinmagazine.com/markets/bitcoin-shrugs-off-fed-chair-comments",
-      "publishedAt": "2026-08-28T15:49:18.000Z"
-    },
-    {
-      "id": "2cba3dd107e721668fdc",
-      "source": "The Block",
-      "title": "Bitwise fund is first Solana ETF to hit $1 billion AUM",
-      "summary": "The Bitwise Solana Staking ETF (ticker BSOL) crossed $1 billion AUM on Friday, less than a year after its launch.",
-      "url": "https://www.theblock.co/news/markets/2026-08-28-bitwise-fund-is-first-solana-etf-to-hit-1-billion-aum-413035",
-      "publishedAt": "2026-08-28T15:48:52.000Z"
-    },
-    {
-      "id": "9ed13c7327ee111b18b9",
-      "source": "Cointelegraph",
-      "title": "Bitcoin dips to $78.4K as Fed’s Warsh downplays softer inflation prints",
-      "summary": "Bitcoin failed to make a decisive break above $80,000 as traders digested Fed Chair Kevin Warsh’s Jackson Hole keynote speech, which remained wary of US inflation trends.",
-      "url": "https://cointelegraph.com/markets/bitcoin-dips-fed-warsh-dismisses-recent-low-inflation-prints?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T15:31:25.000Z"
-    },
-    {
-      "id": "a2997114d7644ed1cf5c",
-      "source": "Decrypt",
-      "title": "Bitcoin Traders Watch Fed Chair Warsh for Clues—And Get Nothing",
-      "summary": "Fed Chair Warsh's first Jackson Hole keynote doubled down on giving markets zero rate hints as inflation runs hot and Bitcoin traders wait on September's call.",
-      "url": "https://decrypt.co/376813/bitcoin-traders-watch-fed-chair-warsh-for-clues-and-get-nothing",
-      "publishedAt": "2026-08-28T15:14:11.000Z"
-    },
-    {
-      "id": "a94dfd6c3ffa2fa5a69f",
-      "source": "Cointelegraph",
-      "title": "Crypto Biz: Bitcoin pumps, Wall Street does the paperwork",
-      "summary": "Bitcoin’s $80,000 rebound lifts crypto stocks as Circle, Strategy and Solana show how capital markets, stablecoins and onchain growth are driving crypto’s recovery.",
-      "url": "https://cointelegraph.com/news/crypto-biz-bitcoin-rally-crypto-stocks-circle-strategy-solana?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T14:53:40.000Z"
-    },
-    {
-      "id": "951cc164ac8e5e6f4fd4",
-      "source": "The Block",
-      "title": "Bybit launches 24/7 options on stock perpetuals, starting with SpaceX and Nvidia",
-      "summary": "Beginning Sept. 17, Bybit users will be able to trade 24/7 options on SPCX and NVDA, with fractional lots and USDT settlement.",
-      "url": "https://www.theblock.co/news/markets/2026-08-28-bybit-launches-24-7-options-on-stock-perpetuals-starting-with-spacex-and-nvidia-413032",
-      "publishedAt": "2026-08-28T14:44:23.000Z"
-    },
-    {
-      "id": "9378d8b5c8415694ad71",
-      "source": "CoinDesk",
-      "title": "BitGo to buy NYDIG trading arm for $42.5M in cash and stock plus $15M earnout",
-      "summary": "The deal to buy NYDIG IF Holdings comprises $7 million in cash and around $35.5 million in stock, as well as the $15 earnout.",
-      "url": "https://www.coindesk.com/business/2026/08/28/bitgo-to-buy-nydig-trading-arm-for-usd42-5m-in-cash-and-stock-plus-usd15m-earnout",
-      "publishedAt": "2026-08-28T14:37:14.000Z"
-    },
-    {
-      "id": "51ed74d5db8af6e9f1ec",
-      "source": "Decrypt",
-      "title": "Ethereum ETFs Take $226M in a Day, Almost Matching Bitcoin's Haul",
-      "summary": "Nine straight sessions have brought in $1.4 billion, with Thursday marking the funds' strongest day in 10 months.",
-      "url": "https://decrypt.co/376810/ethereum-etfs-take-226m-in-a-day-almost-matching-bitcoins-haul",
-      "publishedAt": "2026-08-28T14:17:21.000Z"
-    },
-    {
-      "id": "1009fbe6aa1f45f65638",
-      "source": "CoinDesk",
-      "title": "Fed Chair Kevin Warsh at Jackson Hole: 'We have work to do' on inflation",
-      "summary": "Warsh's highly anticipated remarks at the Kansas City Fed's annual symposium Friday morning leaned hawkish, prompting traders to quickly raise bets on a September rate hike.",
-      "url": "https://www.coindesk.com/markets/2026/08/28/warsh-at-jackson-hole-we-have-work-to-do-on-inflaiton",
-      "publishedAt": "2026-08-28T14:05:12.000Z"
-    },
-    {
-      "id": "f6398eff6441d5897763",
-      "source": "The Block",
-      "title": "SBI Holdings invests $270 million in Ajaib, taking 20% stake amid Asia digital asset push",
-      "summary": "Ajaib offers crypto and stablecoins alongside traditional investments, including OTC settlement services for institutional clients.",
-      "url": "https://www.theblock.co/news/deals/2026-08-28-sbi-holdings-invests-270-million-in-ajaib-taking-20-stake-amid-asia-digital-asset-push-413023",
-      "publishedAt": "2026-08-28T13:32:26.000Z"
-    },
-    {
-      "id": "010842ca41b4a56bb329",
-      "source": "Cointelegraph",
-      "title": "Who is legally liable when an AI agent goes rogue?",
-      "summary": "If your personal AI agent goes rogue and causes harm or financial damage in the real world, can you be held liable?",
-      "url": "https://cointelegraph.com/magazine/who-is-legally-liable-when-an-ai-agent-goes-rogue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T13:30:00.000Z"
-    },
-    {
-      "id": "f4de08d20dcf1e8e01ec",
-      "source": "Cointelegraph",
-      "title": "Polish Olympic chief charged in Zondacrypto probe, justice minister says",
-      "summary": "Polish Olympic Committee president Radosław Piesiewicz faces charges as prosecutors investigate his ties to collapsed cryptocurrency exchange Zondacrypto.",
-      "url": "https://cointelegraph.com/news/polish-olympic-chief-charged-zondacrypto-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-08-28T13:16:37.000Z"
     }
   ]
 }
