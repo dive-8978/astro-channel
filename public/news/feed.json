@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T11:27:20.353Z",
+  "generatedAt": "2026-09-02T16:40:10.483Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 57,
+      "itemCount": 37,
       "error": null
     },
     {
@@ -46,7 +46,7 @@
     {
       "name": "The Block",
       "status": "ok",
-      "itemCount": 19,
+      "itemCount": 20,
       "error": null
     },
     {
@@ -57,6 +57,246 @@
     }
   ],
   "items": [
+    {
+      "id": "d2fd3203c494ebd68989",
+      "source": "The Block",
+      "title": "World open-sources ProveKit, a zero-knowledge identity proving toolkit",
+      "summary": "World has open-sourced ProveKit, a zero-knowledge identity proving toolkit already used in World ID since April.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-09-02-world-provekit-zero-knowledge-identity-proving-toolkit-413364",
+      "publishedAt": "2026-09-02T16:00:03.000Z"
+    },
+    {
+      "id": "edd210cf90eec817b6c6",
+      "source": "The Block",
+      "title": "Arbitrum DAO reports $6.2 million in first-half income as Robinhood Chain adds new revenue stream",
+      "summary": "Licensing fees accounted for 35% of the DAO's income in July, the first month Robinhood Chain was live on mainnet.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-09-02-arbitrum-dao-reports-6-2-million-first-half-income-robinhood-chain-adds-new-revenue-stream-413345",
+      "publishedAt": "2026-09-02T16:00:00.000Z"
+    },
+    {
+      "id": "777607f8aaf51258f67e",
+      "source": "Decrypt",
+      "title": "Tether Sued Over Alleged Unlawful Freeze of $42.4 Million in USDT",
+      "summary": "Two Thai businessmen claim Tether blocked access to their stablecoins months before federal authorities secured a seizure warrant.",
+      "url": "https://decrypt.co/377171/tether-sued-freeze-42-4-million-usdt",
+      "publishedAt": "2026-09-02T15:42:13.000Z"
+    },
+    {
+      "id": "da718f404715462bd3e6",
+      "source": "CryptoSlate",
+      "title": "What the $344M crypto political spending spree wants from Congress next",
+      "summary": "Corporate political donations hit a record $646 million over the 18 months through June, according to Public Citizen's analysis of FEC filings. Crypto political spending led every other corporate sector at $206 million, while crypto, AI, and online betting…",
+      "url": "https://cryptoslate.com/what-the-344m-crypto-political-spending-spree-wants-from-congress-next/",
+      "publishedAt": "2026-09-02T15:40:32.000Z"
+    },
+    {
+      "id": "d82d69b5fa533dde0067",
+      "source": "Cointelegraph",
+      "title": "G20 members tout ‘clear pathways’ for digital asset innovation",
+      "summary": "Officials in the G20, under the US’ presidency, recognized that digital assets could support “broad-based economic growth” and called for improvements in cross-border transactions.",
+      "url": "https://cointelegraph.com/news/g20-members-clear-pathways-digital-asset-innovation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T15:34:06.000Z"
+    },
+    {
+      "id": "3214b0e1d39a8494fc59",
+      "source": "The Block",
+      "title": "Hyperscale Data shares hit all-time low as company flips Michigan site from bitcoin mining into AI",
+      "summary": "The Michigan AI agreement could generate more than $1.2 billion, with expansion options potentially lifting that above $3 billion.",
+      "url": "https://www.theblock.co/news/markets/2026-09-02-hyperscale-data-shares-all-time-low-company-flips-michigan-site-bitcoin-mining-into-ai-413357",
+      "publishedAt": "2026-09-02T15:29:15.000Z"
+    },
+    {
+      "id": "d4d4912d975347f82675",
+      "source": "Bitcoin Magazine",
+      "title": "Strategy CEO Defends Bitcoin Sale as the ‘Right Trade’",
+      "summary": "Bitcoin Magazine Strategy CEO Defends Bitcoin Sale as the ‘Right Trade’ Strategy CEO has reassured investors that the company has only sold a \"miniscule\" amount of its bitcoin. This post Strategy CEO Defends Bitcoin Sale as the ‘Right Trade’ first appeared…",
+      "url": "https://bitcoinmagazine.com/news/strategy-ceo-phong-le-defends-bitcoin-sale",
+      "publishedAt": "2026-09-02T15:20:59.000Z"
+    },
+    {
+      "id": "7848a2f42f1efb57f049",
+      "source": "Decrypt",
+      "title": "Norway Moves to Regulate 'Pervert Glasses,' Weighs Facial Recognition Ban",
+      "summary": "The country's consumer watchdog went further, urging retailers to stop selling the devices until the law is clear.",
+      "url": "https://decrypt.co/377169/norway-moves-to-regulate-pervert-glasses-weighs-facial-recognition-ban",
+      "publishedAt": "2026-09-02T15:18:44.000Z"
+    },
+    {
+      "id": "0ffb02d6c079df6623cc",
+      "source": "CoinDesk",
+      "title": "Crypto Long & Short: Crypto VCs are mistaking consensus for discipline",
+      "summary": "In this week's Crypto Long & Short, Varun Datta of Truth Ventures writes that crypto venture capital's retreat to later-stage deals is a consensus trade dressed as discipline. With proven companies taking 57% of last quarter's capital, he argues the…",
+      "url": "https://www.coindesk.com/coindesk-indices/2026/09/02/crypto-long-and-short-crypto-vcs-are-mistaking-consensus-for-discipline",
+      "publishedAt": "2026-09-02T15:15:02.000Z"
+    },
+    {
+      "id": "9d7b744a777fe09ab86b",
+      "source": "CryptoSlate",
+      "title": "North Korea’s $30M crypto cashout just handed legacy finance its best weapon to kill DeFi’s US debut",
+      "summary": "CME and ICE told Washington in May that Hyperliquid's pseudonymous, always-on markets could let sanctioned state actors circumvent enforcement. On Aug. 31, an Arkham analysis reviewed by CoinDesk found that wallets linked to North Korea's Lazarus Group had…",
+      "url": "https://cryptoslate.com/north-koreas-30m-crypto-cashout-just-handed-legacy-finance-its-best-weapon-to-kill-defis-us-debut/",
+      "publishedAt": "2026-09-02T14:35:11.000Z"
+    },
+    {
+      "id": "336a52807e0dc7eb91e8",
+      "source": "Decrypt",
+      "title": "AI Billionaires Fund Ad Blitz as Data Center Opposition Hits 61%",
+      "summary": "Marc Andreessen, Ben Horowitz and OpenAI's Greg Brockman have backed the super PAC behind the campaign, which faces surging opposition.",
+      "url": "https://decrypt.co/377162/ai-billionaires-fund-ad-blitz-as-data-center-opposition-hits-61",
+      "publishedAt": "2026-09-02T14:16:44.000Z"
+    },
+    {
+      "id": "94793def1513ef5bea4c",
+      "source": "CryptoSlate",
+      "title": "TRON H1 2026 Strategy Report: Dual-Engine Growth via DeFi and AI Delivers Record Traction",
+      "summary": "Abstract: In H1 2026, TRON bucked broader market headwinds through a twin-track strategy: solidifying its core DeFi engine while aggressively expanding into AI. As recurring deflationary mechanics anchored value across DeFi protocols, a rapid wave of AI…",
+      "url": "https://cryptoslate.com/tron-h1-2026-strategy-report-dual-engine-growth-via-defi-and-ai-delivers-record-traction/",
+      "publishedAt": "2026-09-02T14:15:18.000Z"
+    },
+    {
+      "id": "450f0404166f37f79695",
+      "source": "CryptoSlate",
+      "title": "Strategy keeps STRC at 12% as Saylor has seven days to salvage the $10 billion Bitcoin yield product as costs spiral",
+      "summary": "Michael Saylor has roughly one week to orchestrate STRC’s return to its $100 par value by his informal Sept. 8 target, but the financial machinery required to close the final gap is running hot. Despite deploying $635.2 million on aggressive buybacks,…",
+      "url": "https://cryptoslate.com/strategy-keeps-strc-at-12-as-saylor-has-seven-days-to-salvage-the-1-billion-bitcoin-yield-product-as-costs-spiral/",
+      "publishedAt": "2026-09-02T13:45:03.000Z"
+    },
+    {
+      "id": "f2e9fec0e491ca6dfe97",
+      "source": "Cointelegraph",
+      "title": "Sui DeFi protocol Full Sail to wind down after Switchboard incident",
+      "summary": "Full Sail is shutting down after an attacker removed about $91,000 from three vaults during a security incident linked to oracle provider Switchboard.",
+      "url": "https://cointelegraph.com/news/full-sail-sui-wind-down-switchboard-incident?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T13:40:03.000Z"
+    },
+    {
+      "id": "a48ffa52f278aea0089d",
+      "source": "Cointelegraph",
+      "title": "BTC will hit $1M by 2030... but Arthur Hayes is buying ETH instead",
+      "summary": "Arthur Hayes says Bitcoin is going to grind higher from here, but Ethereum is his number one pick due to its potential to increase “3x to 5x pretty quickly.”",
+      "url": "https://cointelegraph.com/magazine/btc-will-hit-1m-by-2030-but-arthur-hayes-is-buying-eth-instead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T13:30:00.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T13:30:00.000Z"
+    },
+    {
+      "id": "96524c97285d8e6dd36d",
+      "source": "CoinDesk",
+      "title": "CrowdStrike and federal authorities dismantle Russian malware that secretly stole crypto for 8 years",
+      "summary": "Russia-based Sality watched for copied bitcoin and Ethereum addresses and quietly replaced them with the attacker’s. CrowdStrike and law enforcement have now isolated more than 15,000 infected machines.",
+      "url": "https://www.coindesk.com/tech/2026/09/02/crowdstrike-and-federal-authorities-dismantle-russian-malware-that-secretly-stole-crypto-for-8-years",
+      "publishedAt": "2026-09-02T13:14:47.000Z"
+    },
+    {
+      "id": "3749e2f24b73b5a03a36",
+      "source": "Cointelegraph",
+      "title": "Hashkey joins DTCC working group as first Asian crypto service provider",
+      "summary": "Hashkey joined the DTCC’s working group on tokenization innovation as the first Asian crypto service provider to join with over 100 financial institutions, including Goldman Sachs and JPMorgan.",
+      "url": "https://cointelegraph.com/news/hashkey-dtcc-first-asian-crypto-service-provider?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T13:11:25.000Z"
+    },
+    {
+      "id": "ba8d983dfcb7f3cc80a1",
+      "source": "The Block",
+      "title": "Wyoming expands Chainlink partnership with onchain reserve verification for FRNT",
+      "summary": "Last month, Wyoming’s Stable Token Commission fully migrated FRNT from LayerZero to Chainlink CCIP after a security review.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-09-02-wyoming-expands-chainlink-partnership-onchain-reserve-verification-frnt-413294",
+      "publishedAt": "2026-09-02T13:05:03.000Z"
+    },
+    {
+      "id": "da4dc57a040457d4358f",
+      "source": "CryptoSlate",
+      "title": "Bitcoin hits $77,000 wall as the Fed gets trapped between weak jobs and $90 oil",
+      "summary": "JOLTS turnover weakened, but ISM prices at 71.1 and a 66% closing hike probability kept the rates threat alive. The post Bitcoin hits $77,000 wall as the Fed gets trapped between weak jobs and $90 oil appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-hits-77000-wall-as-the-fed-gets-trapped-between-weak-jobs-and-90-oil/",
+      "publishedAt": "2026-09-02T13:00:42.000Z"
+    },
+    {
+      "id": "08ae817c5321270afc6d",
+      "source": "CoinDesk",
+      "title": "The token supercycle: everything of value is becoming programmable",
+      "summary": "Tokenization is not just about increasing access to tokens, whatever they may represent, but a fundamental shift in how value is created, owned, financed and moved, argues Solana Foundation’s Lily Liu.",
+      "url": "https://www.coindesk.com/opinion/2026/09/02/the-token-supercycle-everything-of-value-is-becoming-programmable",
+      "publishedAt": "2026-09-02T13:00:00.000Z"
+    },
+    {
+      "id": "f8b01509d01bbda707e9",
+      "source": "The Block",
+      "title": "Adam Back invests another $8.8 million in Capital B as bitcoin treasury firm targets 3,521 BTC",
+      "summary": "Capital B raised $8.8 million from Adam Back in a private placement as the French bitcoin treasury firm targets 3,521 BTC.",
+      "url": "https://www.theblock.co/news/business/2026-09-02-adam-back-invests-another-8-8-million-in-capital-b-as-bitcoin-treasury-firm-targets-3521-btc-413339",
+      "publishedAt": "2026-09-02T12:31:27.000Z"
+    },
+    {
+      "id": "857452a2704573fc8eea",
+      "source": "CoinDesk",
+      "title": "The bearish 'Bart Simpson' pattern is back as bitcoin and XRP prices pull back",
+      "summary": "Analysts discuss the cartoon-themed price action as prices for major cryptocurrencies wilt.",
+      "url": "https://www.coindesk.com/markets/2026/09/02/bitcoin-flashes-the-bart-simpsom-pattern-analyst-debate-whether-it-will-actually-form",
+      "publishedAt": "2026-09-02T12:13:26.000Z"
+    },
+    {
+      "id": "e90a168a6153d73db5d3",
+      "source": "Cointelegraph",
+      "title": "Thai businessmen sue Tether for freezing $42M in $61M pig butchering case",
+      "summary": "The plaintiffs didn’t dispute their involvement in the pig butchering scam, but claimed that Tether did not have the authority to freeze the $42 million at the time.",
+      "url": "https://cointelegraph.com/news/thai-sue-tether-freezing-61m-pig-butchering-case?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T12:00:00.000Z"
+    },
+    {
+      "id": "94d77859825bfc25bb37",
+      "source": "Cointelegraph",
+      "title": "Japan’s Remixpoint dumps altcoins, leaves 1,506 BTC as sole crypto bet",
+      "summary": "Remixpoint sold $5.5 million in ETH, SOL, XRP and DOGE, booking a $736,000 net gain as it narrowed its crypto strategy to focus on Bitcoin.",
+      "url": "https://cointelegraph.com/news/remixpoint-dumps-altcoins-1506-btc-sole-crypto-bet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T12:00:00.000Z"
+    },
+    {
+      "id": "06d74727a22ab91b008f",
+      "source": "Decrypt",
+      "title": "Morning Minute: Bitcoin Enters ‘Rektember’ After Best August Since 2017",
+      "summary": "So far, Rektember is living up to its name as Bitcoin slips. Will this September follow the historical averages, or break the trend?",
+      "url": "https://decrypt.co/377159/morning-minute-bitcoin-enters-rektember-after-best-august-since-2017",
+      "publishedAt": "2026-09-02T11:55:48.000Z"
+    },
+    {
+      "id": "240a269f8c0bee04266a",
+      "source": "CryptoSlate",
+      "title": "A layer-1 blockchain froze for 4 hours to stop a $4.9 million hack, then claimed it was just an upgrade",
+      "summary": "An emergency patch disabled binary-options settlement after an exploit, while about 1,980 ETH remained at an address linked by researchers to the incident. The post A layer-1 blockchain froze for 4 hours to stop a $4.9 million hack, then claimed it was just…",
+      "url": "https://cryptoslate.com/a-layer-1-blockchain-froze-for-4-hours-to-stop-a-4-9-million-hack-then-claimed-it-was-just-an-upgrade/",
+      "publishedAt": "2026-09-02T11:50:26.000Z"
+    },
+    {
+      "id": "761cc00f2af7288ca9e5",
+      "source": "CoinDesk",
+      "title": "Capital B aims to add 376 BTC to bitcoin treasury following $8.8 million Adam Back investment",
+      "summary": "The Euronext Growth Paris-listed firm issued 13,181,030 shares with four warrants each at 58 euro cents per share, according to a filing on Wednesday.",
+      "url": "https://www.coindesk.com/business/2026/08/29/capital-b-aims-to-add-376-btc-to-bitcoin-treasury-following-usd8-8-million-adam-back-investment",
+      "publishedAt": "2026-09-02T11:45:16.000Z"
+    },
+    {
+      "id": "35ec396721b54d85d123",
+      "source": "The Block",
+      "title": "Japan-listed Remixpoint sells all ETH, SOL, XRP and DOGE holdings in shift to bitcoin-only crypto strategy",
+      "summary": "Bitcoin is now Remixpoint's only cryptocurrency holding, with approximately 1,506 BTC, worth around $115 million.",
+      "url": "https://www.theblock.co/news/business/2026-09-02-japan-listed-remixpoint-sells-all-eth-sol-xrp-and-doge-holdings-in-shift-to-bitcoin-only-crypto-strategy-413333",
+      "publishedAt": "2026-09-02T11:32:55.000Z"
+    },
+    {
+      "id": "ee3915302109ec25a043",
+      "source": "Decrypt",
+      "title": "Sality Botnet Dismantled After Eight Years of Stealing Bitcoin and Ethereum",
+      "summary": "CrowdStrike and the DOJ isolated more than 15,000 infected machines in a malware takedown spanning four countries.",
+      "url": "https://decrypt.co/377156/sality-botnet-dismantled-after-eight-years-of-stealing-bitcoin-and-ethereum",
+      "publishedAt": "2026-09-02T11:30:45.000Z"
+    },
     {
       "id": "ffb0f66727482a1a8068",
       "source": "CryptoSlate",
@@ -164,8 +404,8 @@
     {
       "id": "3f298770d9f0b387c0b2",
       "source": "CoinDesk",
-      "title": "Live updates: Global bond yields surge, pressuring debasement-trade assets further",
-      "summary": "Bitcoin slipped below $77,500 and every major is red on the day. The smaller crypto ETFs kept taking money while the bitcoin funds gave some back.",
+      "title": "Live updates: Bitcoin trades near $77,000, with central bank policy rate decisions taking center stage",
+      "summary": "The ADP reported private-sector job growth of just 38,000, missing forecasts and marking the weakest level since January.",
       "url": "https://www.coindesk.com/business/2026/09/02/live-updates-blackrock-s-ibit-drives-usd236-million-bitcoin-etf-outflow",
       "publishedAt": "2026-09-02T08:31:00.000Z"
     },
@@ -194,36 +434,12 @@
       "publishedAt": "2026-09-02T07:20:03.000Z"
     },
     {
-      "id": "738cf0f80e277ebc0110",
-      "source": "CryptoSlate",
-      "title": "Coinbase is moving $227 million onto the venue already holding over 96% of its derivatives",
-      "summary": "The Sept. 1 snapshot shows the Sept. 9 cutover moves a far smaller International Exchange book onto the dominant offshore venue. The post Coinbase is moving $227 million onto the venue already holding over 96% of its derivatives appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/deribit-already-holds-96-6-of-coinbases-derivatives-open-interest-ahead-of-sept-9-migration/",
-      "publishedAt": "2026-09-02T07:10:29.000Z"
-    },
-    {
       "id": "ad61099bbe0f816ecac0",
       "source": "CoinDesk",
       "title": "A China indicator that supports risk-taking in stocks and bitcoin is flashing red",
-      "summary": "China's \"credit impulse\" is flashing red for risk assets.So far, bitcoin has mostly shrugged it off.",
+      "summary": "China's \"credit impulse\" is flashing red for risk assets. So far, bitcoin has mostly shrugged it off.",
       "url": "https://www.coindesk.com/markets/2026/09/02/a-china-indicator-that-greases-risk-taking-in-stocks-and-bitcoin-is-flashing-red",
       "publishedAt": "2026-09-02T06:53:22.000Z"
-    },
-    {
-      "id": "ac3a80b2c0ff469ec965",
-      "source": "CryptoSlate",
-      "title": "Layer-1 chain to pause new transactions for 24 minutes to unlock a 10x speed boost",
-      "summary": "Supernova is scheduled for Sept. 10 at round 32157661, while the public node feed had yet to show upgrade adoption as the window opened. The post Layer-1 chain to pause new transactions for 24 minutes to unlock a 10x speed boost appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/a-major-layer-1-chain-will-pause-new-transactions-for-24-minutes-to-unlock-a-10x-speed-boost/",
-      "publishedAt": "2026-09-02T06:00:52.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-02T05:54:06.000Z"
     },
     {
       "id": "7daf59f09a3fc6a9f941",
@@ -248,14 +464,6 @@
       "summary": "Every large-cap token fell over the past 24 hours, and the high-beta majors gave up roughly triple what bitcoin did.",
       "url": "https://www.coindesk.com/markets/2026/09/02/solana-ether-xrp-lead-majors-slide-as-iran-strikes-drive-a-broad-risk-selloff",
       "publishedAt": "2026-09-02T05:01:25.000Z"
-    },
-    {
-      "id": "0632e5e22747e71c3483",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s recovery signals are flashing, but AI is stealing the hashrate rebound",
-      "summary": "Difficulty is lifting short-term capacity, but operating AI and HPC loads give converted power sites another reason to stay away. The post Bitcoin’s recovery signals are flashing, but AI is stealing the hashrate rebound appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoins-316-day-hashrate-drought-shows-why-ai-could-make-this-mining-downturn-harder-to-reverse/",
-      "publishedAt": "2026-09-02T04:50:47.000Z"
     },
     {
       "id": "4530583e7d49c5e49b86",
@@ -290,36 +498,12 @@
       "publishedAt": "2026-09-02T04:15:34.000Z"
     },
     {
-      "id": "cb459c3c342e6f95f0a9",
-      "source": "CryptoSlate",
-      "title": "Robinhood’s tokenized-asset chain is growing fast, but not necessarily where investors think",
-      "summary": "Apps captured the headline revenue while Robinhood’s disclosed fee split offers no bridge to its corporate accounts. The post Robinhood’s tokenized-asset chain is growing fast, but not necessarily where investors think appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/robinhood-chains-2-7-million-app-day-says-little-about-robinhoods-actual-take/",
-      "publishedAt": "2026-09-02T03:40:45.000Z"
-    },
-    {
       "id": "f835a1145f42b711050a",
       "source": "The Block",
       "title": "Hyperliquid Strategies expands equity facility to $2.5 billion from $1 billion",
       "summary": "As of June 30, Hyperliquid Strategies has sold around $647 million worth of shares, according to its recent filings.",
       "url": "https://www.theblock.co/news/business/2026-09-01-hyperliquid-strategies-expands-equity-facility-413304",
       "publishedAt": "2026-09-02T03:35:30.000Z"
-    },
-    {
-      "id": "b3eeb46067da69a17920",
-      "source": "CryptoSlate",
-      "title": "Leaked compliance records shatter anonymity of 291 crypto users by matching names directly to wallet activity",
-      "summary": "Copied support records exposed varying combinations of identity, location and compliance data, while private keys and customer funds remained safe. The post Leaked compliance records shatter anonymity of 291 crypto users by matching names directly to wallet…",
-      "url": "https://cryptoslate.com/leaked-compliance-records-shatter-anonymity-of-291-crypto-users-by-matching-names-directly-to-wallet-activity/",
-      "publishedAt": "2026-09-02T02:30:59.000Z"
-    },
-    {
-      "id": "6d9da7384efcdc31ced6",
-      "source": "CryptoSlate",
-      "title": "Circle processed $32 trillion in USDC transfers, yet 95% of its revenue relies entirely on interest rates",
-      "summary": "Coin Metrics found market plumbing drove much of the volume while reserve income supplied 95.2% of Q2 revenue. The post Circle processed $32 trillion in USDC transfers, yet 95% of its revenue relies entirely on interest rates appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/circle-processed-32-trillion-in-usdc-transfers-yet-95-of-its-revenue-relies-entirely-on-interest-rates/",
-      "publishedAt": "2026-09-02T00:35:08.000Z"
     },
     {
       "id": "e2dd80f9d7b0e5bc5eef",
@@ -512,190 +696,6 @@
       "summary": "The self-custodial app brings USDe into everyday payments, savings and cross-border transfers, with annualized rewards of up to 6%.",
       "url": "https://cointelegraph.com/news/ethena-launches-usde-powered-money-app-across-48-countries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-01T16:06:58.000Z"
-    },
-    {
-      "id": "73a17d035ebe8b791bc7",
-      "source": "The Block",
-      "title": "Cango shares plunge 20% after bitcoin miner reports $81.6 million Q2 loss",
-      "summary": "Cango scaled back its mining fleet in the second quarter as revenue fell and the company focused on efficiency.",
-      "url": "https://www.theblock.co/news/markets/2026-09-01-cango-shares-plunge-20-after-bitcoin-miner-reports-81-6-million-q2-loss-413259",
-      "publishedAt": "2026-09-01T15:48:19.000Z"
-    },
-    {
-      "id": "1398e6e217ca66726f8a",
-      "source": "CoinDesk",
-      "title": "Citi, Goldman, other global banks and asset managers team up on stablecoin venture",
-      "summary": "The group will focus first on a U.S. dollar stablecoin for payments and digital asset settlement, with a euro token a priority for expansion.",
-      "url": "https://www.coindesk.com/business/2026/09/01/citi-goldman-other-global-banks-and-asset-managers-team-up-on-stablecoin-venture",
-      "publishedAt": "2026-09-01T15:36:27.000Z"
-    },
-    {
-      "id": "81dd1d8e57dfba350017",
-      "source": "Cointelegraph",
-      "title": "Bitcoin stays flat as global bond bear market rages on, pushing JGB to high",
-      "summary": "Global bond yields hit multi-decade highs today as Japan’s 10-year JGB yield reached a 30-year peak, keeping Bitcoin steady near $78,000.",
-      "url": "https://cointelegraph.com/markets/bitcoin-remains-flat-as-global-bond-bear-market-rages-on?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T15:34:00.000Z"
-    },
-    {
-      "id": "4487a9435a184803aeb0",
-      "source": "CoinDesk",
-      "title": "Robinhood's new crypto network is printing cash, and it's sending Arbitrum's token soaring",
-      "summary": "Revenue on Robinhood Chain hit a 24-hour record of $1.9 million, driving a 30% rally in ARB as traders chased downstream gains.",
-      "url": "https://www.coindesk.com/markets/2026/09/01/robinhood-s-new-crypto-network-is-printing-cash-and-it-s-sending-arbitrum-s-token-soaring",
-      "publishedAt": "2026-09-01T15:28:29.000Z"
-    },
-    {
-      "id": "419da2542b2ef179b7d3",
-      "source": "Bitcoin Magazine",
-      "title": "South Korea’s Bitcoin ‘Kimchi Premium’ Returns",
-      "summary": "Bitcoin Magazine South Korea’s Bitcoin ‘Kimchi Premium’ Returns The closely watched bitcoin retail market in the Asian nation is making moves again. This post South Korea’s Bitcoin ‘Kimchi Premium’ Returns first appeared on Bitcoin Magazine and is written by…",
-      "url": "https://bitcoinmagazine.com/news/korea-bitcoin-premium-kimchi-returns",
-      "publishedAt": "2026-09-01T15:23:33.000Z"
-    },
-    {
-      "id": "f776c7ecefc7f59e1ba3",
-      "source": "CoinDesk",
-      "title": "Musk’s X hit by wave of unsolicited password reset emails",
-      "summary": "Multiple crypto industry figures and CoinDesk staff received unexpected password reset emails on Tuesday, though there is no evidence yet that X itself has been breached.",
-      "url": "https://www.coindesk.com/tech/2026/09/01/musk-s-x-hit-by-wave-of-unsolicited-password-reset-emails",
-      "publishedAt": "2026-09-01T14:59:12.000Z"
-    },
-    {
-      "id": "65b3a4425d364a8cda4f",
-      "source": "Decrypt",
-      "title": "Gal Gadot Defends AI Use in Bitcoin Film: 'Work With It or Be Out of the Game'",
-      "summary": "The actor’s lawyers spent six months negotiating the contract for “Bitcoin: Killing Satoshi” in order to “protect” her performance.",
-      "url": "https://decrypt.co/377032/gal-gadot-defends-ai-use-in-bitcoin-film-work-with-it-or-be-out-of-the-game",
-      "publishedAt": "2026-09-01T14:39:55.000Z"
-    },
-    {
-      "id": "a4f1c08057b4c7a6897c",
-      "source": "The Block",
-      "title": "Bitcoin and gold move in lockstep as debasement trade gains more steam",
-      "summary": "Bitcoin's 90-day Pearson correlation coefficient with gold hits all-time high while the Fear and Greed Index sits at 68.",
-      "url": "https://www.theblock.co/news/markets/2026-09-01-bitcoin-gold-move-lockstep-debasement-trade-gains-steam-413137",
-      "publishedAt": "2026-09-01T14:26:02.000Z"
-    },
-    {
-      "id": "30c66122aa1ea6701c4e",
-      "source": "Cointelegraph",
-      "title": "Fake Claude desktop app spreads crypto-stealing malware",
-      "summary": "RevStealer targets more than 50 crypto wallets alongside browser passwords, cookies, messaging data and selected documents.",
-      "url": "https://cointelegraph.com/news/fake-claude-desktop-app-spreads-crypto-stealing-malware?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T14:00:00.000Z"
-    },
-    {
-      "id": "d8f1eafdc08be9b606b9",
-      "source": "CoinDesk",
-      "title": "Firelight raises $8 million, expands beyond XRP as it aims to make DeFi less scary for fintechs",
-      "summary": "The protocol aims to give fintechs and investors a faster way to recover losses from DeFi hacks, while letting XRP, bitcoin and XLM holders earn yield by backing that protection.",
-      "url": "https://www.coindesk.com/business/2026/08/31/firelight-raises-usd8-million-expands-beyond-xrp-as-it-aims-to-make-defi-less-scary-for-fintechs",
-      "publishedAt": "2026-09-01T13:56:44.000Z"
-    },
-    {
-      "id": "c2e86109275face666e6",
-      "source": "CoinDesk",
-      "title": "Bitcoin enters ‘Rektember’ as rate-hike risk combines with seasonality to threaten rally",
-      "summary": "September has historically been a poor month for risk assets in general, and bitcoin, in particular.",
-      "url": "https://www.coindesk.com/markets/2026/09/01/bitcoin-enters-rektember-as-rate-hike-risks-threaten-its-august-rally",
-      "publishedAt": "2026-09-01T13:55:26.000Z"
-    },
-    {
-      "id": "cadf832373c878442ade",
-      "source": "Cointelegraph",
-      "title": "Does the Bitcoin rally mean we haven’t wasted our lives in crypto?",
-      "summary": "Crypto is showing signs of life again, but its biggest wins look different from what early believers imagined. After a decade of building, has it all been worth it?",
-      "url": "https://cointelegraph.com/magazine/does-bitcoins-rally-mean-we-havent-wasted-our-lives-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T13:30:00.000Z"
-    },
-    {
-      "id": "ad3aacd6a46cb22564ab",
-      "source": "The Block",
-      "title": "Silhouette debuts RFQ trading for xStocks on Hyperliquid",
-      "summary": "Silhouette launched RFQ trading for xStocks on Hyperliquid, allowing market makers to compete for tokenized equity trades settled onchain.",
-      "url": "https://www.theblock.co/news/business/2026-09-01-silhouette-debuts-rfq-trading-for-xstocks-on-hyperliquid-413226",
-      "publishedAt": "2026-09-01T13:30:00.000Z"
-    },
-    {
-      "id": "6062d2df5f431eafebc7",
-      "source": "CoinDesk",
-      "title": "Ethena pushes stablecoins into everyday banking with high-yield savings, cards and payments",
-      "summary": "Ethena Pay offers a 6% dollar savings rate and 5% card cashback, using Avalanche for settlement.",
-      "url": "https://www.coindesk.com/business/2026/09/01/ethena-pushes-stablecoins-into-everyday-banking-with-high-yield-savings-cards-and-payments",
-      "publishedAt": "2026-09-01T13:15:35.000Z"
-    },
-    {
-      "id": "a9761f692d01aa3026cf",
-      "source": "Cointelegraph",
-      "title": "Asia sees digital asset custody infrastructure deals from Ripple, Coincheck",
-      "summary": "Ripple was among the latest blockchain companies to sign a strategic partnership to build more custody and tokenized asset management solutions for Asian institutional participants.",
-      "url": "https://cointelegraph.com/news/asia-digital-asset-custody-deals-ripple-coincheck?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T13:13:05.000Z"
-    },
-    {
-      "id": "698f300a01aa731aa926",
-      "source": "Bitcoin Magazine",
-      "title": "BlackRock Re-Underwrites Bitcoin, and the Portfolio Math Still Holds",
-      "summary": "Bitcoin Magazine BlackRock Re-Underwrites Bitcoin, and the Portfolio Math Still Holds BlackRock re-underwrites the Bitcoin thesis, finding that even modest allocations historically improved risk-adjusted returns in traditional portfolios. This post BlackRock…",
-      "url": "https://bitcoinmagazine.com/bitcoin-for-corporations/blackrock-re-underwrites-bitcoin-and-the-portfolio-math-still-holds",
-      "publishedAt": "2026-09-01T13:01:29.000Z"
-    },
-    {
-      "id": "69a3d4d6e138046dc311",
-      "source": "Cointelegraph",
-      "title": "Kast launches stablecoin-powered business platform after $80M raise",
-      "summary": "Kast aims to onboard between 1,000 and 5,000 active businesses to its new platform by the end of 2026.",
-      "url": "https://cointelegraph.com/news/kast-launches-stablecoin-business-platform-80m-raise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T13:00:00.000Z"
-    },
-    {
-      "id": "8e6e77294bf55e79bb3f",
-      "source": "CoinDesk",
-      "title": "UK’s crime agency freezes Premier League $13.5 million account in crypto crime probe",
-      "summary": "Authorities targeted funds from a $140 million sponsorship deal with crypto firm Sorare, though law enforcement confirmed no wrongdoing by the Premier League.",
-      "url": "https://www.coindesk.com/business/2026/09/01/uk-s-crime-agency-freezes-premier-league-usd13-5-million-account-in-crypto-crime-probe",
-      "publishedAt": "2026-09-01T12:37:10.000Z"
-    },
-    {
-      "id": "ddaa643d008428983326",
-      "source": "Decrypt",
-      "title": "Morning Minute: Saylor’s Back Buying Bitcoin",
-      "summary": "Strategy somehow threaded the needle of buying Bitcoin and STRC while also raising cash. Now how will the market respond?",
-      "url": "https://decrypt.co/377014/morning-minute-saylors-back-buying-bitcoin",
-      "publishedAt": "2026-09-01T12:21:23.000Z"
-    },
-    {
-      "id": "df34d596ae8c66cad663",
-      "source": "Decrypt",
-      "title": "South Korea Arrests Four Over Crypto Payments to Syrian Terror Group",
-      "summary": "Police say the ringleader also took crypto from the group and sent back 11 used cars and two excavators, a first for Korean investigators.",
-      "url": "https://decrypt.co/377015/south-korea-arrests-four-over-crypto-payments-to-syrian-terror-group",
-      "publishedAt": "2026-09-01T12:16:24.000Z"
-    },
-    {
-      "id": "764b612707d585ea901a",
-      "source": "CoinDesk",
-      "title": "Hut 8's Texas power site sits inside Anthropic’s $35 billion AI deal",
-      "summary": "The company's Texas campus has two long-term leases worth $19.6 billion, more than 260 times its latest quarterly revenue, as AI companies race to secure power and data-center capacity.",
-      "url": "https://www.coindesk.com/tech/2026/09/01/hut-8-s-texas-power-site-sits-inside-anthropic-s-usd35-billion-ai-deal",
-      "publishedAt": "2026-09-01T12:11:44.000Z"
-    },
-    {
-      "id": "57103f877dbafec8f503",
-      "source": "Cointelegraph",
-      "title": "Lazarus Group-linked addresses move $30M through Hyperliquid",
-      "summary": "Crypto wallets linked to the OFAC-sanctioned Lazarus Group moved $30 million in digital assets through Hyperliquid, weeks after regulators said they were working on a path to introduce the exchange into US markets.",
-      "url": "https://cointelegraph.com/news/lazarus-group-move-30m-hyperliquid?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T12:01:08.000Z"
-    },
-    {
-      "id": "78c55056bc13b29f5a81",
-      "source": "The Block",
-      "title": "Ethena launches Ethena Pay app on Avalanche, offering up to 6% yield and 10% cashback",
-      "summary": "Ethena Labs has launched the beta of Ethena Pay, a new self-custodial money app built on Avalanche, across 48 countries.",
-      "url": "https://www.theblock.co/news/web3/2026-09-01-ethena-pay-app-avalanche-yield-cashback-413225",
-      "publishedAt": "2026-09-01T12:00:02.000Z"
     }
   ]
 }
