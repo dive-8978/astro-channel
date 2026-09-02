@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T21:07:17.438Z",
+  "generatedAt": "2026-09-02T04:43:22.783Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,118 @@
     }
   ],
   "items": [
+    {
+      "id": "ce2145f7b0628494d529",
+      "source": "CoinDesk",
+      "title": "Bitcoin withstands $90 oil and rising yields as gold slides. A firm dollar is the catch",
+      "summary": "BTC trades choppy as $90 oil and rising bond yields weigh on stocks and gold.",
+      "url": "https://www.coindesk.com/markets/2026/09/02/bitcoin-withstands-usd90-oil-and-rising-yields-as-gold-slides-a-firm-dollar-is-the-catch",
+      "publishedAt": "2026-09-02T04:40:36.000Z"
+    },
+    {
+      "id": "aca6c18c1cf4e1d520bb",
+      "source": "The Block",
+      "title": "Kalshi and Polymarket’s combined volume falls 15% in August, first monthly decline in a year",
+      "summary": "Kalshi recorded $37.17 billion in volume in August, while Polymarket and its US platform saw a combined $8.16 billion.",
+      "url": "https://www.theblock.co/news/business/2026-09-02-kalshi-polymarkets-volume-falls-august-413309",
+      "publishedAt": "2026-09-02T04:28:38.000Z"
+    },
+    {
+      "id": "5f691eabbb244551da76",
+      "source": "Cointelegraph",
+      "title": "Core DAO plans emergency hard fork after validators drew excess rewards",
+      "summary": "Core says the incident is contained and its planned forward upgrade will not roll back the network or reverse previously confirmed transactions.",
+      "url": "https://cointelegraph.com/news/core-dao-emergency-hard-fork-excess-validator-rewards?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-02T04:15:34.000Z"
+    },
+    {
+      "id": "cb459c3c342e6f95f0a9",
+      "source": "CryptoSlate",
+      "title": "$2.7 million poured into Robinhood Chain apps in one day, but it barely touches corporate revenue",
+      "summary": "Apps captured the headline revenue while Robinhood’s disclosed fee split offers no bridge to its corporate accounts. The post $2.7 million poured into Robinhood Chain apps in one day, but it barely touches corporate revenue appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/robinhood-chains-2-7-million-app-day-says-little-about-robinhoods-actual-take/",
+      "publishedAt": "2026-09-02T03:40:45.000Z"
+    },
+    {
+      "id": "f835a1145f42b711050a",
+      "source": "The Block",
+      "title": "Hyperliquid Strategies expands equity facility to $2.5 billion from $1 billion",
+      "summary": "As of June 30, Hyperliquid Strategies has sold around $647 million worth of shares, according to its recent filings.",
+      "url": "https://www.theblock.co/news/business/2026-09-01-hyperliquid-strategies-expands-equity-facility-413304",
+      "publishedAt": "2026-09-02T03:35:30.000Z"
+    },
+    {
+      "id": "b3eeb46067da69a17920",
+      "source": "CryptoSlate",
+      "title": "Leaked compliance records shatter anonymity of 291 crypto users by matching names directly to wallet activity",
+      "summary": "Copied support records exposed varying combinations of identity, location and compliance data, while private keys and customer funds remained safe. The post Leaked compliance records shatter anonymity of 291 crypto users by matching names directly to wallet…",
+      "url": "https://cryptoslate.com/leaked-compliance-records-shatter-anonymity-of-291-crypto-users-by-matching-names-directly-to-wallet-activity/",
+      "publishedAt": "2026-09-02T02:30:59.000Z"
+    },
+    {
+      "id": "6d9da7384efcdc31ced6",
+      "source": "CryptoSlate",
+      "title": "Circle processed $32 trillion in USDC transfers, yet 95% of its revenue relies entirely on interest rates",
+      "summary": "Coin Metrics found market plumbing drove much of the volume while reserve income supplied 95.2% of Q2 revenue. The post Circle processed $32 trillion in USDC transfers, yet 95% of its revenue relies entirely on interest rates appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/circle-processed-32-trillion-in-usdc-transfers-yet-95-of-its-revenue-relies-entirely-on-interest-rates/",
+      "publishedAt": "2026-09-02T00:35:08.000Z"
+    },
+    {
+      "id": "e2dd80f9d7b0e5bc5eef",
+      "source": "CoinDesk",
+      "title": "SEC proposes transfer agent rule, sets event to figure out round-the-clock U.S. trading",
+      "summary": "The U.S. Securities and Exchange Commission issued an agenda for its 24-trading roundtable and proposed a new transfer-agent rule with blockchain implications.",
+      "url": "https://www.coindesk.com/policy/2026/09/01/sec-proposes-transfer-agent-rule-sets-event-to-figure-out-round-the-clock-u-s-trading",
+      "publishedAt": "2026-09-01T23:55:46.000Z"
+    },
+    {
+      "id": "2d210ca2ca81f8869b07",
+      "source": "CryptoSlate",
+      "title": "Stopping a blockchain doesn’t always recover stolen funds – What actually happened when 3 networks pulled the plug",
+      "summary": "Cronos restored pre-exploit state, Ontology paused before a confirmed loss, and ICON halted after assets reached exchanges, exposing three different emergency powers and recovery risks. The post Stopping a blockchain doesn’t always recover stolen funds –…",
+      "url": "https://cryptoslate.com/stopping-a-blockchain-doesnt-always-recover-stolen-funds-what-actually-happened-when-3-networks-pulled-the-plug/",
+      "publishedAt": "2026-09-01T22:35:57.000Z"
+    },
+    {
+      "id": "4676d05cdb3f924839c8",
+      "source": "Decrypt",
+      "title": "OpenClaw 2.0 Is Here: What Changed, Why It Took Two Months, and How It Stacks Up Against Hermes",
+      "summary": "The open-source agent framework that started the \"autonomous AI\" hype cycle just shipped its biggest update ever, almost by accident, and it's coming for the enterprise now.",
+      "url": "https://decrypt.co/377135/openclaw-2-0-is-here-whats-new",
+      "publishedAt": "2026-09-01T22:16:04.000Z"
+    },
+    {
+      "id": "6cd727dc32aa6372c350",
+      "source": "CryptoSlate",
+      "title": "A validator reward failure on Core DAO triggers exchange transfer blocks and leaves token issuance in question",
+      "summary": "Coinbase paused CORE sends and receives while LBank suspended deposits, but Core has not quantified the excess rewards. The post A validator reward failure on Core DAO triggers exchange transfer blocks and leaves token issuance in question appeared first on…",
+      "url": "https://cryptoslate.com/a-validator-reward-failure-on-core-dao-triggers-exchange-transfer-blocks-and-leaves-token-issuance-in-question/",
+      "publishedAt": "2026-09-01T21:35:27.000Z"
+    },
+    {
+      "id": "530a9a4ccb93ea9c4c63",
+      "source": "Decrypt",
+      "title": "Nvidia Invests $3.5 Billion in MediaTek to Expand Beyond GPUs",
+      "summary": "The deal, part of MediaTek's record $3.9 billion bond offering, ties Nvidia's chip ecosystem to a Taiwanese rival building its own AI accelerator business.",
+      "url": "https://decrypt.co/377128/nvidia-invests-3-5-billion-mediatek",
+      "publishedAt": "2026-09-01T21:31:04.000Z"
+    },
+    {
+      "id": "476b321b8429f344b409",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin Slides as US-Iran Tensions Escalate",
+      "summary": "Bitcoin Magazine Bitcoin Slides as US-Iran Tensions Escalate Things are heating up between Iran and the U.S. — again — and it's hurting bitcoin's price. This post Bitcoin Slides as US-Iran Tensions Escalate first appeared on Bitcoin Magazine and is written…",
+      "url": "https://bitcoinmagazine.com/markets/bitcoin-slides-as-iran-us-war-escalates",
+      "publishedAt": "2026-09-01T21:27:02.000Z"
+    },
+    {
+      "id": "45ebc942edfe0492a98d",
+      "source": "Cointelegraph",
+      "title": "Crypto-backed PAC scales back ad spending in Massachusetts primary",
+      "summary": "The $189,000 in media spending to support Representative Jake Auchincloss marked Fairshake’s latest attempt to influence the 2026 elections with funds from the crypto industry.",
+      "url": "https://cointelegraph.com/news/crypto-pac-protect-progress-spending-massachusetts-primary?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-01T21:25:27.000Z"
+    },
     {
       "id": "58c44f248928748ba10c",
       "source": "Decrypt",
@@ -258,14 +370,6 @@
       "publishedAt": "2026-09-01T16:06:58.000Z"
     },
     {
-      "id": "b797395a6372314f17fb",
-      "source": "CryptoSlate",
-      "title": "Strategy turns MSCI’s own SEC words against its $24 billion MSTR threat",
-      "summary": "Strategy has challenged MSCI's proposed “non-operating company” screen by tying it to a regulatory argument MSCI made four years ago in a letter shared on Aug. 31. The Bitcoin treasury company says the new methodology requires MSCI to judge whether Bitcoin…",
-      "url": "https://cryptoslate.com/strategy-turns-mscis-own-sec-words-against-its-24-billion-mstr-threat/",
-      "publishedAt": "2026-09-01T15:50:55.000Z"
-    },
-    {
       "id": "73a17d035ebe8b791bc7",
       "source": "The Block",
       "title": "Cango shares plunge 20% after bitcoin miner reports $81.6 million Q2 loss",
@@ -306,14 +410,6 @@
       "publishedAt": "2026-09-01T15:23:33.000Z"
     },
     {
-      "id": "3dd7d49924b24fa1af64",
-      "source": "CryptoSlate",
-      "title": "2 Trillion Tokens in 7 Days: B.AI Sparks Developer Frenzy With Accessible Compute",
-      "summary": "On August 24, next-gen AI infrastructure platform B.AI hit a major milestone: cumulative token throughput across its sitewide free-access campaign officially crossed the 2 trillion threshold. The record-breaking run follows a series of aggressive,…",
-      "url": "https://cryptoslate.com/2-trillion-tokens-in-7-days-b-ai-sparks-developer-frenzy-with-accessible-compute/",
-      "publishedAt": "2026-09-01T15:10:03.000Z"
-    },
-    {
       "id": "f776c7ecefc7f59e1ba3",
       "source": "CoinDesk",
       "title": "Musk’s X hit by wave of unsolicited password reset emails",
@@ -328,14 +424,6 @@
       "summary": "The actor’s lawyers spent six months negotiating the contract for “Bitcoin: Killing Satoshi” in order to “protect” her performance.",
       "url": "https://decrypt.co/377032/gal-gadot-defends-ai-use-in-bitcoin-film-work-with-it-or-be-out-of-the-game",
       "publishedAt": "2026-09-01T14:39:55.000Z"
-    },
-    {
-      "id": "687f9ea6f47800f12afe",
-      "source": "CryptoSlate",
-      "title": "Cross-chain oracle compromise triggers liquidations and frozen vaults across multiple DeFi networks",
-      "summary": "Full Sail confirmed vault losses, Virtue reported 47 liquidations and Volo paused withdrawals while Sui and IOTA remained online. The post Cross-chain oracle compromise triggers liquidations and frozen vaults across multiple DeFi networks appeared first on…",
-      "url": "https://cryptoslate.com/cross-chain-oracle-compromise-triggers-liquidations-and-frozen-vaults-across-multiple-defi-networks/",
-      "publishedAt": "2026-09-01T14:30:15.000Z"
     },
     {
       "id": "a4f1c08057b4c7a6897c",
@@ -368,14 +456,6 @@
       "summary": "September has historically been a poor month for risk assets in general, and bitcoin, in particular.",
       "url": "https://www.coindesk.com/markets/2026/09/01/bitcoin-enters-rektember-as-rate-hike-risks-threaten-its-august-rally",
       "publishedAt": "2026-09-01T13:55:26.000Z"
-    },
-    {
-      "id": "3e8b37c9fbb1928db5d7",
-      "source": "CryptoSlate",
-      "title": "UK is hunting the $86 billion Russia-linked crypto pipeline as it moves to double sanctions fines",
-      "summary": "Banks and payment providers must investigate network indicators now, but the 100% OFSI ceiling still needs legislation. The post UK is hunting the $86 billion Russia-linked crypto pipeline as it moves to double sanctions fines appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/uk-is-hunting-the-86-billion-russia-linked-crypto-pipeline-as-it-moves-to-double-sanctions-fines/",
-      "publishedAt": "2026-09-01T13:40:22.000Z"
     },
     {
       "id": "cadf832373c878442ade",
@@ -440,14 +520,6 @@
       "summary": "Strategy somehow threaded the needle of buying Bitcoin and STRC while also raising cash. Now how will the market respond?",
       "url": "https://decrypt.co/377014/morning-minute-saylors-back-buying-bitcoin",
       "publishedAt": "2026-09-01T12:21:23.000Z"
-    },
-    {
-      "id": "5f71a38965eab74ab4e1",
-      "source": "CryptoSlate",
-      "title": "Russia just switched on a crypto market that doesn’t fully exist yet",
-      "summary": "Most provisions took effect Sept. 1, but draft rules and a July 2027 transition limit what can operate now. The post Russia just switched on a crypto market that doesn’t fully exist yet appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/russia-just-switched-on-a-crypto-market-that-doesnt-fully-exist-yet/",
-      "publishedAt": "2026-09-01T12:20:11.000Z"
     },
     {
       "id": "df34d596ae8c66cad663",
@@ -624,78 +696,6 @@
       "summary": "Last month, Ark had purchased a bulk of Block shares after its second-quarter results that raised its full-year profit forecast to $12.5 billion",
       "url": "https://www.theblock.co/news/markets/2026-09-01-ark-invest-buys-37-million-block-413195",
       "publishedAt": "2026-09-01T04:57:33.000Z"
-    },
-    {
-      "id": "0712bbe7e2546d9f33fe",
-      "source": "Cointelegraph",
-      "title": "BlackRock drives $217M Bitcoin ETF rebound as altcoin funds continue streaks",
-      "summary": "Ether ETFs extended their inflow streak to 11 trading sessions, while XRP and Solana funds each logged a 10th consecutive positive session.",
-      "url": "https://cointelegraph.com/markets/blackrock-bitcoin-etf-inflow-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T04:48:47.000Z"
-    },
-    {
-      "id": "c2dba7fd2e068ce38f90",
-      "source": "CoinDesk",
-      "title": "Bitcoin steady above $78,000, HYPE leads as majors slip on hawkish Fed bets",
-      "summary": "Ether, solana, tron and dogecoin all shed ground over 24 hours while HYPE added about 4%, leaving bitcoin flat on the week after August's 24% run.",
-      "url": "https://www.coindesk.com/markets/2026/09/01/bitcoin-steady-above-usd78-000-hype-leads-as-majors-slip-on-hawkish-fed-bets",
-      "publishedAt": "2026-09-01T04:30:28.000Z"
-    },
-    {
-      "id": "378536a017ab483ed211",
-      "source": "CoinDesk",
-      "title": "Trump Jr's firm leads $1 billion Polymarket raise at $21 billion value: Report",
-      "summary": "1789 Capital is putting in about $300 million, adding to a roughly $200 million stake, as the prediction market's valuation rises from $15 billion.",
-      "url": "https://www.coindesk.com/business/2026/09/01/trump-jr-s-firm-leads-usd1-billion-polymarket-raise-at-usd21-billion-value-report",
-      "publishedAt": "2026-09-01T04:19:54.000Z"
-    },
-    {
-      "id": "37c570aa14a546681fe3",
-      "source": "CoinDesk",
-      "title": "CME’s share of XRP futures jumps as token rallies 40% in a week",
-      "summary": "Outstanding XRP futures positions outside CME fell by more than 500 million tokens in two weeks, while exposure on the regulated U.S. exchange climbed about 36% as XRP rallied toward $1.40.",
-      "url": "https://www.coindesk.com/markets/2026/09/01/xrp-futures-are-shifting-toward-cme-as-institutional-participation-grows",
-      "publishedAt": "2026-09-01T03:49:39.000Z"
-    },
-    {
-      "id": "3e60084480a869e787ba",
-      "source": "Cointelegraph",
-      "title": "Thailand SEC proposes retail access to regulated overseas crypto derivatives",
-      "summary": "Thailand’s SEC seeks comments on rules requiring retail-accessible overseas crypto derivatives to trade on qualifying, centrally cleared exchanges.",
-      "url": "https://cointelegraph.com/news/thailand-sec-retail-overseas-crypto-derivatives?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-01T03:49:00.000Z"
-    },
-    {
-      "id": "2aaad3d9804cf98238bc",
-      "source": "The Block",
-      "title": "DeFi Development Corp proposes $20 million preferred stock offering to buy more SOL",
-      "summary": "The Nasdaq-listed company intends to use the proceeds to acquire more Solana and crypto-related investments.",
-      "url": "https://www.theblock.co/news/business/2026-08-31-solana-defi-development-preferred-stock-offering-413190",
-      "publishedAt": "2026-09-01T03:46:02.000Z"
-    },
-    {
-      "id": "6ce5615acaac4bd121f6",
-      "source": "The Block",
-      "title": "Robinhood Chain hits record $989 million in daily DEX volume as TVL grows",
-      "summary": "Robinhood Chain DEX volume hit a record in the month of August as utility tokens gain ground on memecoins.",
-      "url": "https://www.theblock.co/news/markets/2026-08-31-robinhood-chain-activity-surges-in-august-as-dex-volume-near-1-billion-413136",
-      "publishedAt": "2026-08-31T22:21:03.000Z"
-    },
-    {
-      "id": "4b16fe2d65c4c52954b1",
-      "source": "Decrypt",
-      "title": "As Public Fury Mounts, Texas Pulls the Plug on Flock Surveillance Funding",
-      "summary": "Gov. Greg Abbott ordered state agencies to stop paying for the AI-powered license-plate readers as privacy concerns and officer-misuse scandals mount across Texas.",
-      "url": "https://decrypt.co/376999/texas-bans-flock-surveillance-funding",
-      "publishedAt": "2026-08-31T21:46:04.000Z"
-    },
-    {
-      "id": "dcbb539015b41426b598",
-      "source": "Decrypt",
-      "title": "Strive Adds $143 Million in Bitcoin as Treasury Firms Pile Back In",
-      "summary": "The Nasdaq-listed asset manager paid an average of $79,431 per coin, lifting its total stash to 23,156 BTC amid a wave of renewed treasury buying.",
-      "url": "https://decrypt.co/376992/strive-adds-143-million-bitcoin",
-      "publishedAt": "2026-08-31T21:01:05.000Z"
     }
   ]
 }
