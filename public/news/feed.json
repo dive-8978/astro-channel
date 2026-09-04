@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T11:33:45.841Z",
+  "generatedAt": "2026-09-04T16:27:30.955Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 39,
+      "itemCount": 37,
       "error": null
     },
     {
@@ -58,12 +58,212 @@
   ],
   "items": [
     {
+      "id": "e0d16e0e890c024adfa3",
+      "source": "Decrypt",
+      "title": "Zcash Hits Highest Price in Nearly a Decade, Crushing Short Bets",
+      "summary": "The privacy coin's squeeze rode a Fed-driven crypto rally that reversed hours later, when a stronger-than-expected jobs report sent Bitcoin back under $80,000.",
+      "url": "https://decrypt.co/377445/zcash-price-high-decade-shorts-rekt",
+      "publishedAt": "2026-09-04T16:24:46.000Z"
+    },
+    {
+      "id": "3dd6124efe275a595810",
+      "source": "CryptoSlate",
+      "title": "Bitcoin falls below $80,000 as hot US payrolls revive Fed hike risk",
+      "summary": "The 162,000 jobs gain lifted yields and the dollar, but the first selloff did not hold uniformly. The post Bitcoin falls below $80,000 as hot US payrolls revive Fed hike risk appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-falls-below-80000-as-hot-us-payrolls-revive-fed-hike-risk/",
+      "publishedAt": "2026-09-04T16:10:13.000Z"
+    },
+    {
+      "id": "974829f8084128a9d1de",
+      "source": "Bitcoin Magazine",
+      "title": "National Sheriffs’ Association Drops Opposition to Clarity Act",
+      "summary": "Bitcoin Magazine National Sheriffs’ Association Drops Opposition to Clarity Act The law enforcement organization previously opposed the bill. This post National Sheriffs’ Association Drops Opposition to Clarity Act first appeared on Bitcoin Magazine and is…",
+      "url": "https://bitcoinmagazine.com/news/national-sheriffs-association-clarity-act",
+      "publishedAt": "2026-09-04T16:05:36.000Z"
+    },
+    {
+      "id": "7f68a2166c72e93250a8",
+      "source": "The Block",
+      "title": "Ripple expands college sports push with XRP partnership at Florida",
+      "summary": "The XRP logo will be featured on the field at Ben Hill Griffin Stadium, as well as across Florida Athletics’ digital properties and events.",
+      "url": "https://www.theblock.co/news/business/2026-09-04-ripple-college-sports-push-xrp-partnership-florida-gators-413576",
+      "publishedAt": "2026-09-04T15:37:17.000Z"
+    },
+    {
+      "id": "cb48cfc00b425eaa411d",
+      "source": "Decrypt",
+      "title": "OpenAI Agents Hack German Website to Share Rule-Breaking Tactics: Report",
+      "summary": "The activity began in May and remained undisclosed until Friday, a day after OpenAI launched Astra and U.S. lawmakers proposed restrictions on advanced AI.",
+      "url": "https://decrypt.co/377412/openai-agents-hack-german-website",
+      "publishedAt": "2026-09-04T15:36:04.000Z"
+    },
+    {
+      "id": "5703fb4322339f9d177f",
+      "source": "CryptoSlate",
+      "title": "Why GENIUS could leave digital dollars vulnerable to sudden blockchain network ‘bank runs’",
+      "summary": "A Federal Reserve staff paper shows how congestion and weak network effects can push holders toward redemptions or chain migration even with safe backing. The post Why GENIUS could leave digital dollars vulnerable to sudden blockchain network ‘bank runs’…",
+      "url": "https://cryptoslate.com/why-genius-could-leave-digital-dollars-vulnerable-to-sudden-blockchain-network-bank-runs/",
+      "publishedAt": "2026-09-04T15:30:13.000Z"
+    },
+    {
+      "id": "22241902cdc33b311543",
+      "source": "Decrypt",
+      "title": "Bitcoin Slides as Blowout Jobs Report Revives Fed Hike Odds",
+      "summary": "The Dow dropped 226 points and Bitcoin erased some of its gains after August payrolls tripled estimates, pushing September rate-hike odds to 58%.",
+      "url": "https://decrypt.co/377414/bitcoin-slides-blowout-jobs-report-fed-hike-odds",
+      "publishedAt": "2026-09-04T15:13:28.000Z"
+    },
+    {
+      "id": "a527a6b0166b69b385fc",
+      "source": "Decrypt",
+      "title": "BitMEX Co-Founder Ben Delo Gives Farage's Reform UK Another £4 Million",
+      "summary": "Two April payments supplied three-quarters of the party's donations for the quarter, where the next largest single gift was £180,000.",
+      "url": "https://decrypt.co/377411/bitmex-co-founder-ben-delo-gives-farages-reform-uk-another-4-million",
+      "publishedAt": "2026-09-04T15:10:00.000Z"
+    },
+    {
+      "id": "585e740b2e8a68e325ef",
+      "source": "CryptoSlate",
+      "title": "Cracking 1.33 Trillion Daily Tokens: B.AI Powers the “AI Grid” with Full-Stack Infrastructure to Fuel the Agentic Era",
+      "summary": "B.AI, a next-generation AI infrastructure platform, recently set off a developer frenzy by offering free access to top-tier models. Within days, daily token throughput across the platform crossed 1.33 trillion—a historic milestone. The record-breaking figure…",
+      "url": "https://cryptoslate.com/cracking-1-33-trillion-daily-tokens-b-ai-powers-the-ai-grid-with-full-stack-infrastructure-to-fuel-the-agentic-era/",
+      "publishedAt": "2026-09-04T14:58:34.000Z"
+    },
+    {
+      "id": "43489c7f5b7c9d4fe750",
+      "source": "CoinDesk",
+      "title": "AMC CEO tells Robinhood to stop issuing stock token as industry executives weigh in",
+      "summary": "Adam Aron said synthetic AMC shares could divert demand from the actual stock and strip investors of shareholder rights, drawing support from some tokenization executives.",
+      "url": "https://www.coindesk.com/business/2026/09/04/amc-ceo-tells-robinhood-to-stop-issuing-stock-token-as-industry-executives-weigh-in",
+      "publishedAt": "2026-09-04T14:56:00.000Z"
+    },
+    {
+      "id": "9dbb45529aff6b0c8069",
+      "source": "CryptoSlate",
+      "title": "Wall Street just poured nearly $900 million into Bitcoin and Ethereum ETFs",
+      "summary": "Bitcoin funds recorded their third-biggest inflow day of 2026, while Ether products reversed the prior session's outflow. The post Wall Street just poured nearly $900 million into Bitcoin and Ethereum ETFs appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/wall-street-just-poured-nearly-900-million-into-bitcoin-and-ethereum-etfs/",
+      "publishedAt": "2026-09-04T14:55:26.000Z"
+    },
+    {
+      "id": "5860ef62271d2c3f6a34",
+      "source": "CryptoSlate",
+      "title": "Zero-knowledge apps go dark after chain upgrade breaks their underlying verification keys",
+      "summary": "Transactions stop at 10:00 UTC, while deployed applications must replace verification keys before proof-authorized activity can resume. The post Zero-knowledge apps go dark after chain upgrade breaks their underlying verification keys appeared first on…",
+      "url": "https://cryptoslate.com/zero-knowledge-apps-go-dark-after-chain-upgrade-breaks-their-underlying-verification-keys/",
+      "publishedAt": "2026-09-04T14:25:14.000Z"
+    },
+    {
+      "id": "7c99c53d79b41542584a",
+      "source": "CoinDesk",
+      "title": "From warning to listing: UK’s largest retail investment platform opens access to crypto ETNs",
+      "summary": "The U.K.'s largest retail investment platform, Hargreaves Lansdown, has reversed course following the FCA's decision to lift its retail ban on crypto ETPs in October.",
+      "url": "https://www.coindesk.com/business/2026/09/04/from-warning-to-listing-uk-s-largest-wealth-platform-opens-access-to-crypto-etns",
+      "publishedAt": "2026-09-04T14:23:11.000Z"
+    },
+    {
+      "id": "1bc91b3343b7dd35dd92",
+      "source": "CoinDesk",
+      "title": "U.S. Sheriff’s association shifts opposition stance to Clarity Act to 'neutral'",
+      "summary": "The law enforcement association said it has pivoted its position regarding the Clarity Act to neutral, months after it warned against a law it said would shield crypto crime.",
+      "url": "https://www.coindesk.com/policy/2026/09/04/u-s-sheriff-s-association-shifts-opposition-stance-to-clarity-act-to-neutral",
+      "publishedAt": "2026-09-04T14:12:34.000Z"
+    },
+    {
+      "id": "f4e5d85fd589d18dd8cc",
+      "source": "Cointelegraph",
+      "title": "Revolut, OpenReserve get preliminary US bank approval with crypto plans",
+      "summary": "Revolut and OpenReserve received preliminary OCC approval to form US national banks, with both planning cryptocurrency and stablecoin-related services.",
+      "url": "https://cointelegraph.com/news/revolut-openreserve-occ-approval-national-bank-crypto-plan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-04T13:34:30.000Z"
+    },
+    {
+      "id": "60d9c3e4aaa3bedd711d",
+      "source": "CryptoSlate",
+      "title": "A public company sold Bitcoin and somehow gave each shareholder more BTC exposure",
+      "summary": "Its share count fell about 2.04% against a 0.93% decline in holdings, lifting BTC per share 1.13% across comparable endpoints. The post A public company sold Bitcoin and somehow gave each shareholder more BTC exposure appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/a-public-company-sold-bitcoin-and-somehow-gave-each-shareholder-more-btc-exposure/",
+      "publishedAt": "2026-09-04T13:30:11.000Z"
+    },
+    {
+      "id": "4a5e0563ff8a0adf81ec",
+      "source": "Cointelegraph",
+      "title": "Token buybacks are booming. But are they good for crypto projects?",
+      "summary": "Crypto projects are spending hundreds of millions buying their own tokens. But are buybacks creating lasting value — or just making tokens look more valuable than they really are?",
+      "url": "https://cointelegraph.com/magazine/token-buybacks-are-booming-but-are-they-good-for-crypto-projects?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-04T13:30:00.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-04T13:30:00.000Z"
+    },
+    {
+      "id": "eb37ae128a4cb3caebba",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s rally over $81,000 is finding real buyers, but options traders still aren’t pricing a clean breakout",
+      "summary": "Bitcoin accelerated above $81,000 on Thursday as easing rate fears and fresh institutional demand lifted the broader crypto market. On Sept. 3, Federal Reserve Gov. Christopher Waller said he could support keeping interest rates unchanged this month if…",
+      "url": "https://cryptoslate.com/bitcoins-rally-over-81000-is-finding-real-buyers-but-options-traders-still-arent-pricing-a-clean-breakout/",
+      "publishedAt": "2026-09-04T12:45:27.000Z"
+    },
+    {
+      "id": "d4650a98467c4a852cc8",
+      "source": "CoinDesk",
+      "title": "U.S. added stronger than expected 162,000 jobs in August as labor market bounced back",
+      "summary": "This morning's report will be key as the Fed considers whether to raise interest rates at its September policy meeting.",
+      "url": "https://www.coindesk.com/markets/2026/09/04/u-s-added-stronger-than-expected-162-000-jobs-in-august-as-labor-market-bounced-back",
+      "publishedAt": "2026-09-04T12:31:47.000Z"
+    },
+    {
+      "id": "5265faed848c490bec8a",
+      "source": "Decrypt",
+      "title": "Morning Minute: Crypto Stages Major Rally on Rate Hopes",
+      "summary": "Bitcoin soared past $81k, HYPE and ZEC hit smashing new ATHs and the onchain rally leveled up. Is this the first stage of the next leg up?",
+      "url": "https://decrypt.co/377393/morning-minute-crypto-stages-major-rally-on-rate-hopes",
+      "publishedAt": "2026-09-04T12:31:31.000Z"
+    },
+    {
+      "id": "09bdf4ccaa1150f04ecd",
+      "source": "Decrypt",
+      "title": "IMF Now Says Donations Funded El Salvador's Bitcoin Growth",
+      "summary": "A year ago the fund claimed the total had not moved, and that the reserve was only shuffling coins between government wallets.",
+      "url": "https://decrypt.co/377392/imf-now-says-donations-funded-el-salvadors-bitcoin-growth",
+      "publishedAt": "2026-09-04T12:26:01.000Z"
+    },
+    {
+      "id": "3dd60ff14e68b1a91b64",
+      "source": "CryptoSlate",
+      "title": "Australia gives crypto firms until Sept. 30 to get licensed or risk enforcement",
+      "summary": "Qualifying businesses must enter the right licensing, notification or wind-down route to keep ASIC’s temporary no-action protection. The post Australia gives crypto firms until Sept. 30 to get licensed or risk enforcement appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/australia-gives-crypto-firms-until-sept-30-to-get-licensed-or-risk-enforcement/",
+      "publishedAt": "2026-09-04T12:10:29.000Z"
+    },
+    {
+      "id": "d5fb38db5ac4063ffcba",
+      "source": "The Block",
+      "title": "Trezor says ShipMonk breach affected another 67,000 customers",
+      "summary": "The newly identified records date from 2019 to 2021 and include names, emails, phone numbers, shipping addresses, and order numbers.",
+      "url": "https://www.theblock.co/news/business/2026-09-04-trezor-says-shipmonk-breach-affected-another-67000-customers-413540",
+      "publishedAt": "2026-09-04T12:03:16.000Z"
+    },
+    {
       "id": "ad7e955811c63c733ede",
       "source": "Decrypt",
       "title": "67,000 More Trezor Customers Exposed as Data Breach Widens",
       "summary": "Some records exposed in the breach date to 2019, years beyond the 90-day retention Trezor said its partners had agreed to.",
       "url": "https://decrypt.co/377389/67000-more-trezor-customers-exposed-as-data-breach-widens",
       "publishedAt": "2026-09-04T11:32:49.000Z"
+    },
+    {
+      "id": "db621a483578e58ae556",
+      "source": "Cointelegraph",
+      "title": "Kalshi US visits soar 1,500% as regulatory pressure mounts",
+      "summary": "Kalshi’s US web traffic climbed more than 1,500% in less than a year, while trading volume grew even faster and legal scrutiny of its sports contracts intensified.",
+      "url": "https://cointelegraph.com/news/kalshi-traffic-soars-regulatory-pressure-mounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-04T11:32:28.000Z"
     },
     {
       "id": "166a42989300de50b89e",
@@ -202,14 +402,6 @@
       "publishedAt": "2026-09-04T08:47:05.000Z"
     },
     {
-      "id": "d8bc31ee5612d8a3d6d4",
-      "source": "CryptoSlate",
-      "title": "CLARITY Act may be heading for lame duck after House Republicans slash the calendar",
-      "summary": "The Senate’s procedural step lands Sept. 15, just two days before the House’s newly scheduled departure. The post CLARITY Act may be heading for lame duck after House Republicans slash the calendar appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/clarity-act-may-be-heading-for-lame-duck-after-house-republicans-slash-the-calendar/",
-      "publishedAt": "2026-09-04T08:30:15.000Z"
-    },
-    {
       "id": "5dd738f5dce39153b8ee",
       "source": "The Block",
       "title": "AMC stock jumps 21% overnight as CEO slams Robinhood over ‘outrageous’ tokenized shares",
@@ -228,26 +420,10 @@
     {
       "id": "74961a62301ad131181b",
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin ETFs take $731 million, their biggest day since January",
-      "summary": "Every fund in the complex rose almost 6% on Thursday and net assets crossed $103 billion for the first time. BlackRock's IBIT accounted for well over half the money.",
+      "title": "Live updates: Bitcoin tumbles after blowout August jobs print",
+      "summary": "Net assets in spot bitcoin ETFs crossed $103 billion for the first time, with BlackRock's IBIT accounting for well over half the money.",
       "url": "https://www.coindesk.com/business/2026/09/04/live-updates-bitcoin-etfs-take-usd731-million-their-biggest-day-since-january",
       "publishedAt": "2026-09-04T07:34:07.000Z"
-    },
-    {
-      "id": "31249a3a3324833a6769",
-      "source": "CryptoSlate",
-      "title": "After selling every coin it owned, a public company is using Strategy’s STRC playbook to restart its $827M Bitcoin treasury plan",
-      "summary": "The existing order no longer restrains the company, while its proposed first raise covers just 1.51% of an $827 million Bitcoin target before allocation. The post After selling every coin it owned, a public company is using Strategy’s STRC playbook to…",
-      "url": "https://cryptoslate.com/after-selling-every-coin-it-owned-a-public-company-is-using-strategys-strc-playbook-to-restart-its-827m-bitcoin-treasury-plan/",
-      "publishedAt": "2026-09-04T06:30:03.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-04T06:22:29.000Z"
     },
     {
       "id": "a20eb5f16c0fdf4c508f",
@@ -264,14 +440,6 @@
       "summary": "The company is subsidizing access to its Daybreak security platform after saying Astra can independently find previously unknown software flaws and turn them into working attacks.",
       "url": "https://www.coindesk.com/tech/2026/09/04/openai-puts-usd1-billion-behind-cyber-defense-after-unveiling-ai-that-can-find-zero-days",
       "publishedAt": "2026-09-04T05:49:43.000Z"
-    },
-    {
-      "id": "06f6a6b57692f42ff2e9",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s volatility ratio against gold collapses to 6-year low as traditional safe haven turbulence surges",
-      "summary": "Bitcoin and gold are trading more like each other than at any point since 2020, even as their latest divergence tests that relationship. Their 90-day correlation has climbed to about 0.55, the highest in nearly six years, while Bitcoin’s volatility stands at…",
-      "url": "https://cryptoslate.com/bitcoin-and-gold-are-converging-in-a-way-markets-havent-seen-since-2020/",
-      "publishedAt": "2026-09-04T05:10:53.000Z"
     },
     {
       "id": "6fc0b41935d59820418f",
@@ -314,36 +482,12 @@
       "publishedAt": "2026-09-04T03:03:25.000Z"
     },
     {
-      "id": "b54ab7f60cdd1a8f86a8",
-      "source": "CryptoSlate",
-      "title": "Monad’s mainnet upgrade makes storing data together 98% cheaper",
-      "summary": "A block-pinned mainnet call reproduced the 8,100-to-100 step-down and showed the cold charge returning at slot 128. The post Monad’s mainnet upgrade makes storing data together 98% cheaper appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/monads-mainnet-upgrade-makes-storing-data-together-98-cheaper/",
-      "publishedAt": "2026-09-04T02:30:28.000Z"
-    },
-    {
-      "id": "55e8ee9b1c21d9ff9ea2",
-      "source": "CryptoSlate",
-      "title": "Scan reveals 96,000 fake-address outputs clogging Bitcoin’s unspent database",
-      "summary": "Bitquery’s scan shows why cheap OP_RETURN repetition and fake-address text impose radically different costs on Bitcoin nodes. The post Scan reveals 96,000 fake-address outputs clogging Bitcoin’s unspent database appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/scan-reveals-96000-fake-address-outputs-clogging-bitcoins-unspent-database/",
-      "publishedAt": "2026-09-04T00:20:15.000Z"
-    },
-    {
       "id": "e9977a7a45d88240bba7",
       "source": "Cointelegraph",
       "title": "Tether sued over frozen ‘pig butcher’ coins, 6,600 students get crypto loans: Asia Express",
       "summary": "Thai businessmen sue Tether over $42M frozen USDT tied to pig butchering scam, Aussie crypto firms face big fines unless they meet licensing deadline.",
       "url": "https://cointelegraph.com/magazine/tether-sued-over-frozen-pig-butcher-coins-6600-students-get-crypto-loans-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-03T23:40:09.000Z"
-    },
-    {
-      "id": "3226726b9c96992f42b6",
-      "source": "CryptoSlate",
-      "title": "Parked Coldcard loot begins moving as attacker routes $1.6M in stolen Bitcoin to Ethereum",
-      "summary": "Bitquery traced 20.45 BTC through 34 Sept. 2–3 swaps, and the main destination later held roughly 5 ETH less. The post Parked Coldcard loot begins moving as attacker routes $1.6M in stolen Bitcoin to Ethereum appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/parked-coldcard-loot-begins-moving-as-attacker-routes-1-6m-in-stolen-bitcoin-to-ethereum/",
-      "publishedAt": "2026-09-03T22:50:13.000Z"
     },
     {
       "id": "46e02188c7feb6f9761d",
@@ -376,14 +520,6 @@
       "summary": "The projected revenue requires two contract extensions, while an option for more computing capacity could bring the total above $3 billion.",
       "url": "https://decrypt.co/377363/bitcoin-mine-ai-deal-1-2-billion",
       "publishedAt": "2026-09-03T21:31:05.000Z"
-    },
-    {
-      "id": "2119d6aba0842be8966d",
-      "source": "CryptoSlate",
-      "title": "This Japanese company made money on Ethereum, Solana, and XRP, but sold them anyway to keep its $121 million Bitcoin holdings",
-      "summary": "The ¥878.8 million exit left its crypto portfolio Bitcoin-only, yet management may deploy the cash beyond crypto. The post This Japanese company made money on Ethereum, Solana, and XRP, but sold them anyway to keep its $121 million Bitcoin holdings appeared…",
-      "url": "https://cryptoslate.com/this-japanese-company-made-money-on-ethereum-solana-and-xrp-but-sold-them-anyway-to-keep-its-121-million-bitcoin-holdings/",
-      "publishedAt": "2026-09-03T21:25:27.000Z"
     },
     {
       "id": "0c805872f399a81ceb4b",
@@ -432,14 +568,6 @@
       "summary": "Crypto and related stocks like Strategy rallied as bitcoin topped $80,000 and Fed rate expectations remained split.",
       "url": "https://www.theblock.co/news/markets/2026-09-03-crypto-market-cap-surges-2-82-trillion-zcash-leads-rally-alongside-stocks-413478",
       "publishedAt": "2026-09-03T20:09:25.000Z"
-    },
-    {
-      "id": "c39a5c6c2cf1acee5aad",
-      "source": "CryptoSlate",
-      "title": "BIS shows why real institutional adoption on XRP Ledger won’t trigger the XRP supply squeeze holders expect",
-      "summary": "One transaction can authenticate thousands of datasets, leaving fee burn tiny even as institutional-style usage scales. The post BIS shows why real institutional adoption on XRP Ledger won’t trigger the XRP supply squeeze holders expect appeared first on…",
-      "url": "https://cryptoslate.com/bis-prototype-shows-why-real-institutional-adoption-on-xrp-ledger-wont-trigger-the-xrp-supply-squeeze-holders-expect/",
-      "publishedAt": "2026-09-03T20:00:11.000Z"
     },
     {
       "id": "2bb72b0142201f93ed28",
@@ -568,134 +696,6 @@
       "summary": "The deal will bring SoFiUSD to Kraken, connect Payward to SoFi’s 24/7 dollar settlement network and give SoFi access to digital asset liquidity through Kraken Prime.",
       "url": "https://cointelegraph.com/news/kraken-parent-payward-partners-with-sofi-stablecoin-247-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-03T16:04:11.000Z"
-    },
-    {
-      "id": "19009cc69c47680ca240",
-      "source": "The Block",
-      "title": "Stablecoin payments infrastructure startup Diameter Pay raises $10 million",
-      "summary": "Diameter Pay has raised $10 million in a Series A funding round co-led by CMT Digital and Lightspeed Faction.",
-      "url": "https://www.theblock.co/news/deals/2026-09-03-diameter-pay-funding-stablecoin-payments-infrastructure-413454",
-      "publishedAt": "2026-09-03T16:00:03.000Z"
-    },
-    {
-      "id": "643ab491c87eb3f0fe9b",
-      "source": "CoinDesk",
-      "title": "Standard Chartered brings spot crypto trading to Dubai FX platform",
-      "summary": "The bank is now offering institutional crypto spot trading in the region, bringing BTC and ETH onto the same eFX rails that institutions use to trade dollars and euros.",
-      "url": "https://www.coindesk.com/business/2026/09/03/standard-chartered-first-top-global-bank-to-offer-bitcoin-and-ether-trading-in-uae",
-      "publishedAt": "2026-09-03T15:58:02.000Z"
-    },
-    {
-      "id": "4f6ad6ffec93989ac3c2",
-      "source": "Decrypt",
-      "title": "SoFi Links Banking Network and Stablecoin to Kraken in New Deal",
-      "summary": "Kraken will list SoFiUSD and gain access to SoFi’s round-the-clock dollar settlement network, while Kraken Prime will execute trades for SoFi’s crypto customers.",
-      "url": "https://decrypt.co/377283/sofi-banking-network-stablecoin-kraken",
-      "publishedAt": "2026-09-03T15:40:08.000Z"
-    },
-    {
-      "id": "f83181775877b1f04d72",
-      "source": "Bitcoin Magazine",
-      "title": "Standard Chartered Debuts Bitcoin Trading In the United Arab Emirates",
-      "summary": "Bitcoin Magazine Standard Chartered Debuts Bitcoin Trading In the United Arab Emirates The bank has in recent years debuted spot bitcoin trading elsewhere. This post Standard Chartered Debuts Bitcoin Trading In the United Arab Emirates first appeared on…",
-      "url": "https://bitcoinmagazine.com/news/standard-chartered-debuts-bitcoin-trading",
-      "publishedAt": "2026-09-03T15:14:25.000Z"
-    },
-    {
-      "id": "f073176bb728fc567d41",
-      "source": "CoinDesk",
-      "title": "Crypto for Advisors: Why crypto earnings reports can be misleading",
-      "summary": "Open the original publisher to read this report.",
-      "url": "https://www.coindesk.com/coindesk-indices/2026/09/03/crypto-for-advisors-why-crypto-earnings-reports-can-be-misleading",
-      "publishedAt": "2026-09-03T15:00:00.000Z"
-    },
-    {
-      "id": "72d3158e309772328409",
-      "source": "CoinDesk",
-      "title": "A memecoin making app becomes crypto’s top fee generators as Robinhood Chain activity explodes",
-      "summary": "Users paid nearly $6 million in a day to create and trade tokens through Pons, more than they paid to use Pump or Hyperliquid, and even more than they paid to use Robinhood Chain itself.",
-      "url": "https://www.coindesk.com/tech/2026/09/03/a-memecoin-making-app-becomes-crypto-s-top-fee-generators-as-robinhood-chain-activity-explodes",
-      "publishedAt": "2026-09-03T14:51:39.000Z"
-    },
-    {
-      "id": "4acdd197d2586c10650c",
-      "source": "CoinDesk",
-      "title": "Bitget in talks with Wall Street giants including BlackRock to fuel Asian distribution",
-      "summary": "Gracy Chen highlighted the world's largest asset manager as one example of such a firm seeking to expand distribution of their tokenized ETFs in the region.",
-      "url": "https://www.coindesk.com/business/2026/09/03/bitget-in-talks-with-wall-street-giants-including-blackrock-for-asian-distribution",
-      "publishedAt": "2026-09-03T14:41:25.000Z"
-    },
-    {
-      "id": "1bc3db6d71c92423989a",
-      "source": "Cointelegraph",
-      "title": "Recovery specialists crack $1B crypto wallet... but find just $10",
-      "summary": "Crypto recovery specialists reveal how lost wallets, passwords and seed phrases can sometimes be recovered — but that’s of no help if the money was never there in the first place.",
-      "url": "https://cointelegraph.com/magazine/recovery-specialists-crack-1b-crypto-wallet-but-find-just-10?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-03T13:30:00.000Z"
-    },
-    {
-      "id": "00dae4e75c02a36a587c",
-      "source": "Cointelegraph",
-      "title": "VARA, Securitize sign MoU for tokenization innovation in Dubai",
-      "summary": "VARA and Securitize signed an MoU to foster more tokenization innovation in Dubai and explore how tokenized financial innovation should be regulated in the region.",
-      "url": "https://cointelegraph.com/news/vara-securitize-mou-tokenization-dubai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-03T13:00:00.000Z"
-    },
-    {
-      "id": "6324a624764b1ddb3bff",
-      "source": "The Block",
-      "title": "SoFi, Payward agree to link banking network with Kraken infrastructure",
-      "summary": "SoFi Technologies partnered with Payward to connect its banking settlement network with Kraken's digital-asset infrastructure.",
-      "url": "https://www.theblock.co/news/business/2026-09-03-sofi-payward-agree-to-link-banking-network-with-kraken-infrastructure-413432",
-      "publishedAt": "2026-09-03T12:52:54.000Z"
-    },
-    {
-      "id": "35394388a8169a8015d6",
-      "source": "Cointelegraph",
-      "title": "Nvidia buys Hugging Face for $12.9B in push into AI software",
-      "summary": "Nvidia agreed to buy Hugging Face for $12.93 billion, gaining a platform used by more than 18 million developers to share and deploy AI models.",
-      "url": "https://cointelegraph.com/news/nvidia-buys-hugging-face-12-9-billion-ai-software?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-03T12:41:11.000Z"
-    },
-    {
-      "id": "46803e9c84f404db4f67",
-      "source": "CoinDesk",
-      "title": "SoFi, Kraken tie up as crypto and banking push into each other's turf",
-      "summary": "Kraken is joining SoFi's settlement network and list SoFiUSD as the companies link traditional banking with crypto markets.",
-      "url": "https://www.coindesk.com/business/2026/09/03/sofi-kraken-tie-up-as-crypto-and-banking-push-into-each-other-s-turf",
-      "publishedAt": "2026-09-03T12:00:00.000Z"
-    },
-    {
-      "id": "25128ae855078730b272",
-      "source": "Decrypt",
-      "title": "Morning Minute: Strategy CEO Says Selling The Bottom Was Correct Move",
-      "summary": "Strategy sold millions in Bitcoin in the low $60k range and just rebought at $80k. Now they’re sharing the rationale behind the moves.",
-      "url": "https://decrypt.co/377264/morning-minute-strategy-ceo-says-selling-the-bottom-was-correct-move",
-      "publishedAt": "2026-09-03T11:43:14.000Z"
-    },
-    {
-      "id": "58456f492cedb454740d",
-      "source": "Decrypt",
-      "title": "Mamdani Imposes One-Year Moratorium on Generative AI in NYC Schools",
-      "summary": "Nearly 600,000 students lose access to generative AI tools, while five named vendors keep metered pilots running in high schools.",
-      "url": "https://decrypt.co/377253/mamdani-imposes-one-year-moratorium-on-generative-ai-in-nyc-schools",
-      "publishedAt": "2026-09-03T11:36:41.000Z"
-    },
-    {
-      "id": "6aeb0c46098bb4e912f6",
-      "source": "CoinDesk",
-      "title": "FX has stopped reading bond yields the old way. Bitcoin should too.",
-      "summary": "Your day-ahead look for Sept. 3, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/09/03/fx-has-stopped-reading-bond-yields-the-old-way-bitcoin-should-too",
-      "publishedAt": "2026-09-03T11:26:00.000Z"
-    },
-    {
-      "id": "440959d65195d99d1a66",
-      "source": "CoinDesk",
-      "title": "The yen is surging and it’s helping bitcoin, for now",
-      "summary": "Yen's rise has led to a broad-based USD weakness, driving the Dollar Index lower. BTC and gold are loving it, for now.",
-      "url": "https://www.coindesk.com/markets/2026/09/03/the-yen-is-surging-and-it-s-helping-bitcoin-for-now",
-      "publishedAt": "2026-09-03T11:19:56.000Z"
     }
   ]
 }
