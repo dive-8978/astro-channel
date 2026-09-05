@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T10:42:48.237Z",
+  "generatedAt": "2026-09-05T15:19:14.604Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 57,
+      "itemCount": 37,
       "error": null
     },
     {
@@ -57,6 +57,70 @@
     }
   ],
   "items": [
+    {
+      "id": "5c00134719cb1bf4a19e",
+      "source": "Decrypt",
+      "title": "Update Your Browser: Google Patches Chrome Flaw Hackers Were Already Using",
+      "summary": "The update fixes a high-severity flaw in Chrome’s V8 engine, but Google has not revealed who is using it or whom they targeted.",
+      "url": "https://decrypt.co/377501/google-chrome-zero-day-exploited",
+      "publishedAt": "2026-09-05T15:01:04.000Z"
+    },
+    {
+      "id": "1668645aab734b6d7d22",
+      "source": "The Block",
+      "title": "LeBron James teases Polymarket partnership in new social media video",
+      "summary": "The announcement comes after James' free agency decision generated $273 million in prediction market volume across platforms.",
+      "url": "https://www.theblock.co/news/deals/2026-09-05-lebron-james-teases-polymarket-partnership-in-new-social-media-video-413608",
+      "publishedAt": "2026-09-05T14:01:40.000Z"
+    },
+    {
+      "id": "8504b0a56af8c3d73b5a",
+      "source": "CryptoSlate",
+      "title": "Zcash breaks $1,000 as its spot ETF crosses $400 million in assets",
+      "summary": "Zcash broke above $1,000 on Sept. 4, pushing the asset value of Grayscale’s recently listed ZCSH ETF past $400 million less than two weeks after its debut. ZEC registered an intraday high of $1,050.70, up roughly 20% over 24 hours and nearly 100% over the…",
+      "url": "https://cryptoslate.com/zcash-breaks-1000-as-its-spot-etf-crosses-400-million-in-assets/",
+      "publishedAt": "2026-09-05T14:00:05.000Z"
+    },
+    {
+      "id": "dd647b71b5b4f55d3684",
+      "source": "Decrypt",
+      "title": "AI Just Solved a 350-Year-Old Math Problem By Writing the Longest Proof Ever",
+      "summary": "Anthropic says Claude spent 11 days turning Fermat's Last Theorem into 13 million lines of code a computer can check itself, no human trust required",
+      "url": "https://decrypt.co/377491/ai-solved-350-year-old-math-problem",
+      "publishedAt": "2026-09-05T13:01:03.000Z"
+    },
+    {
+      "id": "1aa6bedbe1d36c632388",
+      "source": "CryptoSlate",
+      "title": "How the “buy, borrow, die” tax trade is quietly loading DeFi pools with hidden credit risk",
+      "summary": "Imagine someone who bought ETH for $1,000, watched it climb to $4,000, and now wants to cash out $1,000. Selling one-quarter of the ETH would provide the cash, but it would also realize a $750 gain under US tax treatment of digital assets held for…",
+      "url": "https://cryptoslate.com/how-the-buy-borrow-die-tax-trade-is-quietly-loading-defi-pools-with-hidden-credit-risk/",
+      "publishedAt": "2026-09-05T12:00:05.000Z"
+    },
+    {
+      "id": "8764a7debdd12a3bc396",
+      "source": "CoinDesk",
+      "title": "British investor thought he lost $2,000 in bitcoin in 2012. He just recovered $4.5 million",
+      "summary": "CEL Solicitors says it has identified a wallet holding more than 5,500 BTC linked to former Intersango users.",
+      "url": "https://www.coindesk.com/business/2026/09/02/british-investor-thought-he-lost-usd2-000-in-bitcoin-in-2012-he-just-recovered-usd4-5-million",
+      "publishedAt": "2026-09-05T12:00:00.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-05T11:16:19.000Z"
+    },
+    {
+      "id": "bbd650171aa859f3f0b8",
+      "source": "Cointelegraph",
+      "title": "Poland upholds crypto bill veto as Zondacrypto scandal widens",
+      "summary": "Polish lawmakers failed to overturn a presidential veto of crypto legislation as the Zondacrypto investigation expands and its Estonian operator enters bankruptcy.",
+      "url": "https://cointelegraph.com/news/poland-upholds-crypto-bill-veto-zondacrypto-scandal-widens?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-05T10:44:29.000Z"
+    },
     {
       "id": "c4e2b4b89396b9bb1354",
       "source": "CryptoSlate",
@@ -226,14 +290,6 @@
       "publishedAt": "2026-09-04T19:16:03.000Z"
     },
     {
-      "id": "7fe94790d391723c22e4",
-      "source": "CryptoSlate",
-      "title": "Bitcoin faces a two-week Fed trap as inflation rewrite threatens to upend rate cuts",
-      "summary": "Policymakers will have CPI but not official August PCE when they decide, leaving a second market test on Sept. 30. The post Bitcoin faces a two-week Fed trap as inflation rewrite threatens to upend rate cuts appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoin-faces-a-two-week-fed-trap-as-inflation-rewrite-threatens-to-upend-rate-cuts/",
-      "publishedAt": "2026-09-04T18:50:33.000Z"
-    },
-    {
       "id": "a5989754035a26e7eaae",
       "source": "Decrypt",
       "title": "'Send Your Lawyers': Robinhood Isn't Backing Down From AMC Over Stock Tokens",
@@ -248,22 +304,6 @@
       "summary": "President Trump says his administration is working to bring Hyperliquid into the U.S., raising a deceptively simple question: How?",
       "url": "https://www.theblock.co/news/regulation/2026-09-04-trump-wants-hyperliquid-enter-us-how-it-could-happen-413594",
       "publishedAt": "2026-09-04T18:35:21.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-04T18:31:34.000Z"
-    },
-    {
-      "id": "b2907ef3c1d5201d1062",
-      "source": "CryptoSlate",
-      "title": "Kalshi faces $500,000 daily fines as Michigan forces sports event contracts offline",
-      "summary": "The preliminary injunction lasts until final order, adds a futures broker notice duty and lands amid an appellate split. The post Kalshi faces $500,000 daily fines as Michigan forces sports event contracts offline appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/kalshi-faces-500000-daily-fines-as-michigan-forces-sports-event-contracts-offline/",
-      "publishedAt": "2026-09-04T17:55:20.000Z"
     },
     {
       "id": "b453b20e4130d0e6c878",
@@ -656,46 +696,6 @@
       "summary": "Thai businessmen sue Tether over $42M frozen USDT tied to pig butchering scam, Aussie crypto firms face big fines unless they meet licensing deadline.",
       "url": "https://cointelegraph.com/magazine/tether-sued-over-frozen-pig-butcher-coins-6600-students-get-crypto-loans-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-03T23:40:09.000Z"
-    },
-    {
-      "id": "46e02188c7feb6f9761d",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin Bear Market May Not Yet Be Over, Says Fidelity",
-      "summary": "Bitcoin Magazine Bitcoin Bear Market May Not Yet Be Over, Says Fidelity Fidelity argues that bitcoin may have seen its bottom in July. But there's still evidence it could drop again to a new low later this year. This post Bitcoin Bear Market May Not Yet Be…",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-bear-market-not-over-says-fidelity",
-      "publishedAt": "2026-09-03T22:19:41.000Z"
-    },
-    {
-      "id": "6fbc453780fe328bcb49",
-      "source": "Decrypt",
-      "title": "Utah Becomes First State to Target VPNs in Age-Verification Crackdown",
-      "summary": "Privacy advocates say the law raises First Amendment questions the courts have yet to address.",
-      "url": "https://decrypt.co/377370/utah-websites-check-vpn-age-verification",
-      "publishedAt": "2026-09-03T22:16:04.000Z"
-    },
-    {
-      "id": "8af03f449733cc891bdb",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin-Gold Correlation Hits Six-Year High as Debasement Fears Mount",
-      "summary": "Bitcoin Magazine Bitcoin-Gold Correlation Hits Six-Year High as Debasement Fears Mount Bitcoin is trading with gold — something it does when investors lose confidence in the dollar. This post Bitcoin-Gold Correlation Hits Six-Year High as Debasement Fears…",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-gold-correlation-soars",
-      "publishedAt": "2026-09-03T21:31:34.000Z"
-    },
-    {
-      "id": "d736cd6ec6f7ee4e0df3",
-      "source": "Decrypt",
-      "title": "Bitcoin Miner Ditches Site for AI Deal That Could Top $1.2 Billion",
-      "summary": "The projected revenue requires two contract extensions, while an option for more computing capacity could bring the total above $3 billion.",
-      "url": "https://decrypt.co/377363/bitcoin-mine-ai-deal-1-2-billion",
-      "publishedAt": "2026-09-03T21:31:05.000Z"
-    },
-    {
-      "id": "0c805872f399a81ceb4b",
-      "source": "Cointelegraph",
-      "title": "CFTC files to dismiss CME lawsuit over crypto perpetual futures",
-      "summary": "The CFTC’s lawyers called the lawsuit “much ado about nothing,“ claiming that the CME Group lacked standing to file and argued against its claims over crypto perpetual futures.",
-      "url": "https://cointelegraph.com/news/cftc-dismiss-cme-lawsuit-crypto-perpetual-futures?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-03T21:09:13.000Z"
     }
   ]
 }
