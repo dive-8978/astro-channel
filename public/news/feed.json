@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T15:32:01.646Z",
+  "generatedAt": "2026-09-06T20:29:26.024Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,78 @@
     }
   ],
   "items": [
+    {
+      "id": "324f370b9133fc200a50",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s faces a weird new macro reality as the Fed turns off the tap and Treasury opens the floodgates",
+      "summary": "Bitcoin's current rally started when the Treasury Department announced on Aug. 19 that, beginning Sept. 9, it would at least double the maximum size of certain buyback operations for government bonds with 10 to 30 years left to maturity, raising the cap from…",
+      "url": "https://cryptoslate.com/bitcoin-uncertain-the-fed-and-treasury-are-pulling-the-bond-market-in-opposite-directions/",
+      "publishedAt": "2026-09-06T19:00:20.000Z"
+    },
+    {
+      "id": "1d0d136bd12ef184ee2b",
+      "source": "CoinDesk",
+      "title": "Prediction markets inch closer to the Supreme Court: State of Crypto",
+      "summary": "New Jersey petitioned for a writ of certiorari in Kalshi's case against it last week, finally throwing the ball to the high court.",
+      "url": "https://www.coindesk.com/news-analysis/2026/09/06/prediction-markets-inch-closer-to-the-supreme-court-state-of-crypto",
+      "publishedAt": "2026-09-06T18:30:00.000Z"
+    },
+    {
+      "id": "f3fd09424c5d03ffe3d7",
+      "source": "CryptoSlate",
+      "title": "How Bitmine could surpass its 5% Ethereum goal without buying more ETH",
+      "summary": "A two-year model needs about 74% reward retention with flat ETH supply, rising to 96.5% at 0.5% annual supply growth. The post How Bitmine could surpass its 5% Ethereum goal without buying more ETH appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/how-bitmine-could-surpass-its-5-ethereum-goal-without-buying-more-eth/",
+      "publishedAt": "2026-09-06T18:10:04.000Z"
+    },
+    {
+      "id": "4a39fc32a1391ad3e760",
+      "source": "The Block",
+      "title": "Coinbase-backed Router Protocol to shut down, burn 303 million ROUTE tokens",
+      "summary": "The shutdown comes after attempts to commercialize, license or find a buyer for its technology failed to produce a sustainable business.",
+      "url": "https://www.theblock.co/news/defi/2026-09-06-coinbase-backed-router-protocol-to-shut-down-burn-303-million-route-tokens-413618",
+      "publishedAt": "2026-09-06T18:03:26.000Z"
+    },
+    {
+      "id": "c6e255b070106cddc018",
+      "source": "Decrypt",
+      "title": "OpenAI's GPT-6 Astra Is Shockingly Good at Almost Everything",
+      "summary": "Early testers spent OpenAI's launch weekend pushing Astra through 3D cities, playable games, Bach chorales and research papers.",
+      "url": "https://decrypt.co/377514/openai-gpt-6-astra-review-shockingly-good",
+      "publishedAt": "2026-09-06T17:01:04.000Z"
+    },
+    {
+      "id": "49b11030eedcc5fc9980",
+      "source": "CryptoSlate",
+      "title": "Bitcoin ETF inflows fall 76% entering Labor Day break as only BlackRock and Fidelity attract fresh money",
+      "summary": "Seven funds posted positive flows Thursday, but only IBIT and FBTC did on Sept. 4, ahead of Monday's US exchange closure. The post Bitcoin ETF inflows fall 76% entering Labor Day break as only BlackRock and Fidelity attract fresh money appeared first on…",
+      "url": "https://cryptoslate.com/bitcoin-etf-inflows-fall-76-entering-labor-day-break-as-only-blackrock-and-fidelity-attract-fresh-money/",
+      "publishedAt": "2026-09-06T17:00:52.000Z"
+    },
+    {
+      "id": "4022c0b664d0d90519ed",
+      "source": "Decrypt",
+      "title": "XRP Gets Another Boost Through Ripple Deal With Florida Athletics",
+      "summary": "The multi-year deal will place the XRP logo on the field at Ben Hill Griffin Stadium starting this season, extending Ripple's push into college athletics.",
+      "url": "https://decrypt.co/377512/xrp-boost-ripple-florida-athletics",
+      "publishedAt": "2026-09-06T16:01:03.000Z"
+    },
+    {
+      "id": "70731ce95abc0dbfb365",
+      "source": "CoinDesk",
+      "title": "Ukrainian police took down a crypto scam that stole up to $1 million a month",
+      "summary": "Investigators have identified 62 victims and say more than 46 Ukrainians took part in the alleged operation.",
+      "url": "https://www.coindesk.com/business/2026/09/06/ukrainian-police-took-down-a-crypto-scam-that-stole-up-to-usd1-million-a-month",
+      "publishedAt": "2026-09-06T16:00:00.000Z"
+    },
+    {
+      "id": "778bf0ac174af8e80dce",
+      "source": "CryptoSlate",
+      "title": "Aave crypto lending proposal would let emergency tools freeze markets – but not unfreeze them",
+      "summary": "The proposal would grant bounded emergency roles now, but the current Risk Steward release cannot invoke their one-way safety calls. The post Aave crypto lending proposal would let emergency tools freeze markets – but not unfreeze them appeared first on…",
+      "url": "https://cryptoslate.com/aave-lending-proposal-would-grant-emergency-powers-without-requiring-public-reports-on-their-use/",
+      "publishedAt": "2026-09-06T15:33:08.000Z"
+    },
     {
       "id": "a96b76f4a6789ab4ea26",
       "source": "Decrypt",
@@ -178,22 +250,6 @@
       "publishedAt": "2026-09-05T17:01:04.000Z"
     },
     {
-      "id": "429d448325b556352412",
-      "source": "CryptoSlate",
-      "title": "DAOs are forcing crypto protocols to choose between code and emergency brakes",
-      "summary": "Compound is a crypto lending protocol governed by holders who delegate their COMP tokens, a setup known as a decentralized autonomous organization, or DAO. It works like an online republic, with token holders debating proposals, voting, and letting software…",
-      "url": "https://cryptoslate.com/daos-are-forcing-crypto-protocols-to-choose-between-code-and-emergency-brakes/",
-      "publishedAt": "2026-09-05T17:00:09.000Z"
-    },
-    {
-      "id": "62f1365b5a6039aa7d24",
-      "source": "CryptoSlate",
-      "title": "Fed stablecoin research exposes how the same dollar could count twice in M1 or M2",
-      "summary": "Their staff note makes classification possible in theory, while reserve overlap and offshore circulation block a clean liquidity measure. The post Fed stablecoin research exposes how the same dollar could count twice in M1 or M2 appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/fed-economists-stablecoin-research-exposes-how-the-same-dollar-could-count-twice-in-m1-or-m2/",
-      "publishedAt": "2026-09-05T16:45:23.000Z"
-    },
-    {
       "id": "462d19a881b8c4b6331f",
       "source": "CoinDesk",
       "title": "Dollar-backed stablecoins can push local currencies lower, Bank of Korea study finds",
@@ -210,14 +266,6 @@
       "publishedAt": "2026-09-05T16:06:41.000Z"
     },
     {
-      "id": "4f133409cf68565d322e",
-      "source": "CryptoSlate",
-      "title": "Solana’s plan to cut account deposits by 90% could weaken a reason to hold SOL",
-      "summary": "Only the first cut is live; the full plan would require tenfold persistent account state to preserve the old minimum SOL reserves. The post Solana’s plan to cut account deposits by 90% could weaken a reason to hold SOL appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/solanas-plan-to-cut-account-deposits-by-90-could-weaken-a-reason-to-hold-sol/",
-      "publishedAt": "2026-09-05T15:30:17.000Z"
-    },
-    {
       "id": "5c00134719cb1bf4a19e",
       "source": "Decrypt",
       "title": "Update Your Browser: Google Patches Chrome Flaw Hackers Were Already Using",
@@ -232,14 +280,6 @@
       "summary": "The announcement comes after James' free agency decision generated $273 million in prediction market volume across platforms.",
       "url": "https://www.theblock.co/news/deals/2026-09-05-lebron-james-teases-polymarket-partnership-in-new-social-media-video-413608",
       "publishedAt": "2026-09-05T14:01:40.000Z"
-    },
-    {
-      "id": "8504b0a56af8c3d73b5a",
-      "source": "CryptoSlate",
-      "title": "Zcash breaks $1,000 as its spot ETF crosses $400 million in assets",
-      "summary": "Zcash broke above $1,000 on Sept. 4, pushing the asset value of Grayscale’s recently listed ZCSH ETF past $400 million less than two weeks after its debut. ZEC registered an intraday high of $1,050.70, up roughly 20% over 24 hours and nearly 100% over the…",
-      "url": "https://cryptoslate.com/zcash-breaks-1000-as-its-spot-etf-crosses-400-million-in-assets/",
-      "publishedAt": "2026-09-05T14:00:05.000Z"
     },
     {
       "id": "dd647b71b5b4f55d3684",
@@ -656,46 +696,6 @@
       "summary": "The IMF confirmed that all bitcoin added to official holdings since June 2025 was sourced from private donations, with no public funds used for accumulation.",
       "url": "https://www.coindesk.com/business/2026/09/04/imf-confirms-el-salvador-s-bitcoin-growth-was-funded-by-private-donations-not-public-money",
       "publishedAt": "2026-09-04T09:47:15.000Z"
-    },
-    {
-      "id": "fd59003b2bae9bfc7de1",
-      "source": "The Block",
-      "title": "South Korea to start tokenizing ‘all types’ of securities in three stages from 2027",
-      "summary": "South Korea ultimately aims to allow participants to settle tokenized securities onchain with stablecoins, as part of a three-stage plan.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-04-south-korea-to-start-tokenizing-all-types-of-securities-in-three-stages-from-2027-413523",
-      "publishedAt": "2026-09-04T09:46:06.000Z"
-    },
-    {
-      "id": "db3de453f8caea7c100e",
-      "source": "CoinDesk",
-      "title": "South Korea targets February 2027 rollout for full tokenized securities market",
-      "summary": "Financial regulators unveiled a phased roadmap moving traditional capital markets onto distributed ledgers, concluding with onchain stablecoin settlement.",
-      "url": "https://www.coindesk.com/business/2026/09/04/south-korea-targets-february-2027-rollout-for-full-tokenized-securities-market",
-      "publishedAt": "2026-09-04T09:41:31.000Z"
-    },
-    {
-      "id": "6f953ae33e9090157b00",
-      "source": "Decrypt",
-      "title": "AMC CEO Calls Robinhood Stock Tokens 'Contemptible' and 'Vile'",
-      "summary": "Adam Aron says AMC Entertainment has no connection to the tokens and is putting outside securities counsel on the case.",
-      "url": "https://decrypt.co/377378/amc-ceo-calls-robinhood-stock-tokens-contemptible-and-vile",
-      "publishedAt": "2026-09-04T09:24:56.000Z"
-    },
-    {
-      "id": "860cfca6357b9b556515",
-      "source": "The Block",
-      "title": "US bitcoin ETFs report the largest inflow day since January, worth $731 million",
-      "summary": "Analysts attributed Fed Governor Christopher Waller’s dovish comments to the significant inflow of capital into bitcoin products.",
-      "url": "https://www.theblock.co/news/markets/2026-09-04-us-bitcoin-etfs-largest-inflow-day-since-january-413515",
-      "publishedAt": "2026-09-04T08:47:05.000Z"
-    },
-    {
-      "id": "5dd738f5dce39153b8ee",
-      "source": "The Block",
-      "title": "AMC stock jumps 21% overnight as CEO slams Robinhood over ‘outrageous’ tokenized shares",
-      "summary": "OpenAI had previously made a similar criticism of Robinhood’s tokenized equities, saying it did not approve the transfer of its shares.",
-      "url": "https://www.theblock.co/news/business/2026-09-04-amc-ceo-slams-robinhood-413513",
-      "publishedAt": "2026-09-04T07:59:34.000Z"
     }
   ]
 }
