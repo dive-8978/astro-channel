@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T04:48:05.708Z",
+  "generatedAt": "2026-09-06T11:04:47.418Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -58,6 +58,38 @@
   ],
   "items": [
     {
+      "id": "ea416b6c4c1aa9515cac",
+      "source": "CryptoSlate",
+      "title": "Inside the 15-minute trading pulse that moves $14 billion in Bitcoin perpetual futures",
+      "summary": "At 14:59:59 UTC, Bitcoin perpetual futures look like any other electronic market, with prices flickering and orders flowing from traders around the world. But when the clock turns to 15:00:00, the market instantly becomes busier: more trades go through, more…",
+      "url": "https://cryptoslate.com/the-invisible-opening-bell-inside-cryptos-endless-trading-day/",
+      "publishedAt": "2026-09-06T11:00:27.000Z"
+    },
+    {
+      "id": "9cdb88273561c18823a6",
+      "source": "CryptoSlate",
+      "title": "Strategy and Robinhood now lead a $4.5 billion large-cap ETF that was not built for crypto",
+      "summary": "Their 6.01% combined weight shows how crypto-linked volatility can reach a generalist stock portfolio. The post Strategy and Robinhood now lead a $4.5 billion large-cap ETF that was not built for crypto appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/strategy-and-robinhood-now-lead-a-4-5-billion-large-cap-etf-that-was-not-built-for-crypto/",
+      "publishedAt": "2026-09-06T10:00:43.000Z"
+    },
+    {
+      "id": "d03d5221747e1a2ab57e",
+      "source": "Cointelegraph",
+      "title": "Tether-backed Orionx to shut down after audit flags $7M custody gap",
+      "summary": "Tether-backed Orionx is permanently closing after an audit found more than $7 million in customer assets had moved to wallets outside its custody.",
+      "url": "https://cointelegraph.com/news/orionx-shut-down-7-million-move-outside-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-06T09:07:08.000Z"
+    },
+    {
+      "id": "1bfc3b1b77056812b68d",
+      "source": "CryptoSlate",
+      "title": "From power laws to AI networks, why complex Bitcoin price models memorize market noise",
+      "summary": "Bitcoin price forecasting has accumulated an unusually colorful collection of methods. You have basic scarcity models that convert the halving schedule into a price, and run-of-the-mill on-chain models that turn address or transaction activity into value.…",
+      "url": "https://cryptoslate.com/the-smartest-bitcoin-price-models-keep-losing-to-the-dumbest-forecast/",
+      "publishedAt": "2026-09-06T07:00:57.000Z"
+    },
+    {
       "id": "c9b6d42b8404688b7c55",
       "source": "The Block",
       "title": "UBS, Jane Street among firms with combined $75 million in Hyperliquid ETF holdings: Bloomberg",
@@ -76,7 +108,7 @@
     {
       "id": "9d5ad724663857d40675",
       "source": "CoinDesk",
-      "title": "Why crypto experts say buying and holding bitcoin easily beats trying to time the market",
+      "title": "Timing the bitcoin market is exciting but nearly impossible. Here's why",
       "summary": "A historical analysis of bitcoin price performance from 2010 through 2026 demonstrates that the vast majority of the asset's annual returns occur during a tiny fraction of the calendar year.",
       "url": "https://www.coindesk.com/markets/2026/09/05/why-crypto-experts-say-buying-and-holding-bitcoin-easily-beats-trying-to-time-the-market",
       "publishedAt": "2026-09-05T18:05:11.000Z"
@@ -210,14 +242,6 @@
       "publishedAt": "2026-09-05T08:03:06.000Z"
     },
     {
-      "id": "d6d4da065ca9b60ab932",
-      "source": "CryptoSlate",
-      "title": "Wall Street is turning AI’s massive electricity appetite into a $61 billion bond market",
-      "summary": "Every interaction with AI uses electricity in a data center. Servers calculate the answer, cooling equipment carries away the heat, and network connections send the result back to the user. Multiply that process across millions of requests and the electric…",
-      "url": "https://cryptoslate.com/wall-street-is-turning-ais-massive-electricity-appetite-into-a-61-billion-bond-market/",
-      "publishedAt": "2026-09-05T07:00:44.000Z"
-    },
-    {
       "id": "0883073a3546e3c27509",
       "source": "CoinDesk",
       "title": "XRP Ledger has fewer active accounts than last year, but bigger trades and more value",
@@ -232,22 +256,6 @@
       "summary": "Blockchain investment in Southeast Asia in 2026 has been led by crypto financial services, though funding remains heavily concentrated in Singapore and a handful of companies.",
       "url": "https://www.coindesk.com/business/2026/09/05/southeast-asia-s-crypto-funding-rebounds-to-usd680-million-as-investors-focus-on-mature-firms",
       "publishedAt": "2026-09-05T05:00:00.000Z"
-    },
-    {
-      "id": "781101f45660bb36ee66",
-      "source": "CryptoSlate",
-      "title": "Bitcoin dips below $80,000 as a hot August jobs report shifts Fed policy expectations",
-      "summary": "August payrolls weakened the case for patience, leaving Sept. 11 CPI as Bitcoin’s next decisive volatility test. The post Bitcoin dips below $80,000 as a hot August jobs report shifts Fed policy expectations appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoins-80000-rally-just-lost-the-feds-labor-market-escape-hatch/",
-      "publishedAt": "2026-09-05T04:00:32.000Z"
-    },
-    {
-      "id": "4636c1642a9a97b1ec9c",
-      "source": "CryptoSlate",
-      "title": "A major outage and corporate backlash hit Robinhood Chain at the peak of its growth",
-      "summary": "Robinhood Chain’s rapid growth ran into two problems at once on Sept. 4 as the network briefly stopped producing blocks while AMC challenged its fast-growing Stock Token business. On Sept. 4, the Ethereum layer-2 network halted block production for at least…",
-      "url": "https://cryptoslate.com/a-major-outage-and-corporate-backlash-hit-robinhood-chain-at-the-peak-of-its-growth/",
-      "publishedAt": "2026-09-05T00:20:00.000Z"
     },
     {
       "id": "2f63fccf86f0ae82f9c6",
@@ -688,14 +696,6 @@
       "summary": "The company is subsidizing access to its Daybreak security platform after saying Astra can independently find previously unknown software flaws and turn them into working attacks.",
       "url": "https://www.coindesk.com/tech/2026/09/04/openai-puts-usd1-billion-behind-cyber-defense-after-unveiling-ai-that-can-find-zero-days",
       "publishedAt": "2026-09-04T05:49:43.000Z"
-    },
-    {
-      "id": "6fc0b41935d59820418f",
-      "source": "CoinDesk",
-      "title": "One full bitcoin now buys a little more than 18 ounces of gold, the most since January",
-      "summary": "Bitcoin is pulling ahead of gold even as both hard assets rally together, driven by fears that governments will inflate away their debt rather than by bond yields.",
-      "url": "https://www.coindesk.com/markets/2026/09/04/one-full-bitcoin-now-buys-a-little-more-than-18-ounces-of-gold-the-most-since-january",
-      "publishedAt": "2026-09-04T05:10:34.000Z"
     }
   ]
 }
