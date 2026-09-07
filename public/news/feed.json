@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T20:29:26.024Z",
+  "generatedAt": "2026-09-07T04:51:45.040Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,78 @@
     }
   ],
   "items": [
+    {
+      "id": "4d25b33f161fdfd8a21b",
+      "source": "CoinDesk",
+      "title": "Oil up, bitcoin down as U.S. strikes Iranian crude carriers",
+      "summary": "Bitcoin trades lower by nearly 1% as escalating U.S.-Iran hostilities push oil higher.",
+      "url": "https://www.coindesk.com/markets/2026/09/07/oil-up-bitcoin-down-as-u-s-strikes-iranian-crude-carriers",
+      "publishedAt": "2026-09-07T04:44:16.000Z"
+    },
+    {
+      "id": "76ae14d4529628662dbe",
+      "source": "CoinDesk",
+      "title": "Bitcoin network used by exchanges hit by $320 million exploit. Hackers claim they're the 'good guys'",
+      "summary": "Liquid Network, a settlement layer used by exchanges, halted all transactions after losing $320 million worth of bitcoin in a security exploit.",
+      "url": "https://www.coindesk.com/markets/2026/09/07/bitcoin-network-used-by-exchanges-hit-by-usd320-million-exploit-hackers-claim-they-re-the-good-guys",
+      "publishedAt": "2026-09-07T03:43:12.000Z"
+    },
+    {
+      "id": "664a92ad3e9786b2b934",
+      "source": "The Block",
+      "title": "Harmony to fully sunset Layer 1, proposes token migration to Ethereum for AI video initiative",
+      "summary": "Harmony said it would help validators transition to its proposed new initiative, a 'remix economy' with AI video creators.",
+      "url": "https://www.theblock.co/news/web3/2026-09-06-harmony-sunset-network-413635",
+      "publishedAt": "2026-09-07T02:28:47.000Z"
+    },
+    {
+      "id": "f1a44676a277db606c54",
+      "source": "The Block",
+      "title": "Spot bitcoin ETFs pull in $987 million last week as institutional demand recovers",
+      "summary": "Spot bitcoin ETFs drew in $3.52 billion in net inflows in August, their largest monthly positive flows since September 2025.",
+      "url": "https://www.theblock.co/news/markets/2026-09-06-bitcoin-etfs-987-million-weekly-inflow-413639",
+      "publishedAt": "2026-09-07T02:15:55.000Z"
+    },
+    {
+      "id": "3a6e3066f5b03c237039",
+      "source": "Cointelegraph",
+      "title": "‘White hats’ take 4000 BTC from Liquid, ETFs see best inflows of 2026: Hodler’s Digest",
+      "summary": "Purported white hat hackers have taken 4000 Bitcoin from the Liquid sidechain in a major security breach. The Bitcoin ETFs see the best three weeks of inflows in 2026.",
+      "url": "https://cointelegraph.com/magazine/white-hats-take-4000-btc-from-liquid-btc-etfs-best-week-of-2026-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-07T00:05:02.000Z"
+    },
+    {
+      "id": "b56e79534430cd6f5b0c",
+      "source": "Bitcoin Magazine",
+      "title": "Alleged White-Hat Hackers Withdraw 4,000 bitcoin from Blockstream’s Liquid Network Federation Reserves",
+      "summary": "Bitcoin Magazine Alleged White-Hat Hackers Withdraw 4,000 bitcoin from Blockstream’s Liquid Network Federation Reserves Liquid Network said purported white-hat hackers withdrew about 4,000 bitcoin from the federation wallet that backs L-BTC. Bridge nodes are…",
+      "url": "https://bitcoinmagazine.com/news/alleged-white-hat-hackers-withdraw-4000-bitcoin-from-blockstreams-liquid-network-federation-reserves",
+      "publishedAt": "2026-09-06T22:16:53.000Z"
+    },
+    {
+      "id": "5192131ed6a229114c58",
+      "source": "The Block",
+      "title": "Liquid Network pauses after purported ‘white-hat’ hackers withdraw $320 million in bitcoin",
+      "summary": "The Bitcoin sidechain has been paused, with exchanges suspending LBTC deposits and withdrawals as Blockstream works to contact those responsible.",
+      "url": "https://www.theblock.co/news/defi/2026-09-06-liquid-network-pauses-after-purported-white-hat-hackers-withdraw-320-million-in-bitcoin-413626",
+      "publishedAt": "2026-09-06T21:14:36.000Z"
+    },
+    {
+      "id": "f9ca4a570f0e09abad89",
+      "source": "CryptoSlate",
+      "title": "Three DeFi projects face possible exclusion from future Arbitrum DAO programs",
+      "summary": "Good Entry, Limitless and APX Finance could face separate off-chain ban votes, but the combined figure is not one repayable balance. The post Three DeFi projects face possible exclusion from future Arbitrum DAO programs appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/three-defi-projects-face-possible-exclusion-from-future-arbitrum-dao-programs/",
+      "publishedAt": "2026-09-06T21:05:28.000Z"
+    },
+    {
+      "id": "6ca392afdda97613e205",
+      "source": "The Block",
+      "title": "STONK surges 250% to $140 million market cap as stock-paired Solana launchpad StonkFun pulls volume to Raydium and Jupiter",
+      "summary": "The platform integrated with Raydium's LaunchLab on Saturday as RAY also saw gains of more than 40%.",
+      "url": "https://www.theblock.co/news/defi/2026-09-06-stonk-surges-250-to-140-million-market-cap-as-stock-paired-solana-launchpad-stonkfun-pulls-volume-to-raydium-and-jupiter-413621",
+      "publishedAt": "2026-09-06T20:51:40.000Z"
+    },
     {
       "id": "324f370b9133fc200a50",
       "source": "CryptoSlate",
@@ -224,14 +296,6 @@
       "summary": "Brazil's Wealth High Governance Asset Management held about $24 million worth of 21Shares' HYPE fund as of the end of June, the top HYPE ETF holder.",
       "url": "https://www.theblock.co/news/defi/2026-09-05-ubs-jane-street-among-firms-with-combined-75-million-in-hyperliquid-etf-holdings-bloomberg-413616",
       "publishedAt": "2026-09-05T20:02:08.000Z"
-    },
-    {
-      "id": "0fe9286169f254c928b9",
-      "source": "CryptoSlate",
-      "title": "Users exposed by Trezor breach grows sixfold after supposedly deleted shipping logs are found",
-      "summary": "The larger disclosure implies roughly 80,689 affected customers, though no combined total or row-level overlap check is public. The post Users exposed by Trezor breach grows sixfold after supposedly deleted shipping logs are found appeared first on…",
-      "url": "https://cryptoslate.com/users-exposed-by-trezor-breach-grows-sixfold-after-supposedly-deleted-shipping-logs-are-found/",
-      "publishedAt": "2026-09-05T19:00:02.000Z"
     },
     {
       "id": "9d5ad724663857d40675",
@@ -632,70 +696,6 @@
       "summary": "In contrast, Jane Street and Charles Schwab raised concerns over rushed ETF launches and confidential filings limiting market scrutiny.",
       "url": "https://www.theblock.co/news/regulation/2026-09-04-crypto-firms-urge-sec-to-speed-etf-reviews-and-allow-confidential-draft-filings-413532",
       "publishedAt": "2026-09-04T11:21:09.000Z"
-    },
-    {
-      "id": "4faab7fa1da29394ebc1",
-      "source": "Cointelegraph",
-      "title": "Trezor says data breach affects another 67K US customers",
-      "summary": "Trezor said an additional 67,000 US users were affected by its shipping provider’s data breach, opening the path to potential phishing attacks and social engineering scams.",
-      "url": "https://cointelegraph.com/news/trezor-data-breach-affects-67k-us-customers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-04T11:19:19.000Z"
-    },
-    {
-      "id": "310a9a836256b929c8de",
-      "source": "Cointelegraph",
-      "title": "South Korean regulators introduce tokenized securities roadmap",
-      "summary": "South Korea’s financial regulator introduced a three-phase roadmap for the issuance of tokenized assets, as the country prepares to adopt its first tokenized securities framework in February 2027.",
-      "url": "https://cointelegraph.com/news/south-korean-regulators-tokenized-securities-roadmap?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-04T10:42:10.000Z"
-    },
-    {
-      "id": "8c8b2466879801da3cc8",
-      "source": "CoinDesk",
-      "title": "Zcash jumps 20% to landmark $1,000 level as short sellers lose $34 million",
-      "summary": "ZEC briefly traded above $1,020 as a sharp rally forced traders betting against the token out of leveraged positions.",
-      "url": "https://www.coindesk.com/markets/2026/09/04/zcash-jumps-20-to-landmark-usd1-000-level-as-short-sellers-lose-usd34-million",
-      "publishedAt": "2026-09-04T10:40:14.000Z"
-    },
-    {
-      "id": "3b865317fb4b721c2515",
-      "source": "Decrypt",
-      "title": "FinCEN Ties $12.7B to Crypto Scams Run From Asian Compounds",
-      "summary": "Monthly reported sums rose 18% on average, and the compounds now appear to be spreading beyond Southeast Asia.",
-      "url": "https://decrypt.co/377386/fincen-ties-12-7b-to-crypto-scams-run-from-asian-compounds",
-      "publishedAt": "2026-09-04T10:22:57.000Z"
-    },
-    {
-      "id": "3f59c65ae9e97114db76",
-      "source": "The Block",
-      "title": "Andreessen Horowitz-backed OpenReserve secures preliminary OCC approval for national bank charter",
-      "summary": "OpenReserve Holdings received preliminary OCC approval for a national bank focused on onchain settlement, following a $25 million seed round.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-04-andreessen-horowitz-backed-openreserve-secures-preliminary-occ-approval-for-national-bank-charter-413528",
-      "publishedAt": "2026-09-04T10:18:40.000Z"
-    },
-    {
-      "id": "0c412b67871aeb88b48a",
-      "source": "CoinDesk",
-      "title": "Bitcoin clears $81,000 as privacy coins lead a broad crypto rally",
-      "summary": "BTC pushed through the level that capped it in late August, while zcash gained 16% and dash 19%.",
-      "url": "https://www.coindesk.com/markets/2026/09/04/bitcoin-clears-usd81-000-as-privacy-coins-lead-a-broad-crypto-rally",
-      "publishedAt": "2026-09-04T09:57:01.000Z"
-    },
-    {
-      "id": "908700a8052d17dd227e",
-      "source": "Cointelegraph",
-      "title": "AMC chief criticizes Robinhood’s tokenized stock plan",
-      "summary": "AMC’s CEO criticized Robinhood’s tokenized stock offerings for being unregulated in the US and said he will request an investigation from an external securities counsel.",
-      "url": "https://cointelegraph.com/news/amc-ceo-criticizes-robinhoods-tokenized-stock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-04T09:56:52.000Z"
-    },
-    {
-      "id": "f33e33932663141e62dd",
-      "source": "CoinDesk",
-      "title": "IMF confirms El Salvador’s bitcoin growth was funded by private donations, not public money",
-      "summary": "The IMF confirmed that all bitcoin added to official holdings since June 2025 was sourced from private donations, with no public funds used for accumulation.",
-      "url": "https://www.coindesk.com/business/2026/09/04/imf-confirms-el-salvador-s-bitcoin-growth-was-funded-by-private-donations-not-public-money",
-      "publishedAt": "2026-09-04T09:47:15.000Z"
     }
   ]
 }
