@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:44:19.545Z",
+  "generatedAt": "2026-09-09T20:59:48.153Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 38,
       "error": null
     },
     {
@@ -46,7 +46,7 @@
     {
       "name": "The Block",
       "status": "ok",
-      "itemCount": 19,
+      "itemCount": 18,
       "error": null
     },
     {
@@ -58,12 +58,164 @@
   ],
   "items": [
     {
+      "id": "9847a0e3e5351e4d4794",
+      "source": "CryptoSlate",
+      "title": "Solana’s 300ms speed boost to outrun trading bots might come with a hidden cost",
+      "summary": "Fee-charging pools have the clearest modeled benefit, while proprietary market makers and validators face different trade-offs. The post Solana’s 300ms speed boost to outrun trading bots might come with a hidden cost appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/solanas-300ms-speed-boost-to-outrun-trading-bots-might-come-with-a-hidden-cost/",
+      "publishedAt": "2026-09-09T20:50:59.000Z"
+    },
+    {
+      "id": "850ad43bca4df49ef558",
+      "source": "Bitcoin Magazine",
+      "title": "Jack Dorsey’s Block Becomes Latest Bitcoin-Focused Company To Apply for Banking Charter",
+      "summary": "Bitcoin Magazine Jack Dorsey’s Block Becomes Latest Bitcoin-Focused Company To Apply for Banking Charter Block wants the banking license so it can open Builders Bank, which would provide custody and related fiduciary services for bitcoin. This post Jack…",
+      "url": "https://bitcoinmagazine.com/news/block-applies-for-banking-charter",
+      "publishedAt": "2026-09-09T20:35:41.000Z"
+    },
+    {
+      "id": "1b746c7e84a684d24bf5",
+      "source": "Decrypt",
+      "title": "AI Is Solving Math's Best Problems Faster Than They Can Be Replaced, Terence Tao Warns",
+      "summary": "The Fields medalist points to a real race between OpenAI and Anthropic as proof: AI can now flatten a hard problem the moment someone starts working on it.",
+      "url": "https://decrypt.co/377818/ai-math-best-problems-terence-tao",
+      "publishedAt": "2026-09-09T20:31:29.000Z"
+    },
+    {
+      "id": "a5f661bd6629c64d2bf9",
+      "source": "Cointelegraph",
+      "title": "DoubleZero adds Kalshi election market data ahead of US midterms",
+      "summary": "The expansion gives institutional and automated traders real-time access to Kalshi’s political markets as election betting activity continues to grow.",
+      "url": "https://cointelegraph.com/news/doublezero-adds-kalshi-election-market-data-ahead-of-us-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-09T20:08:09.000Z"
+    },
+    {
+      "id": "7b2cc5817103c43afec8",
+      "source": "CryptoSlate",
+      "title": "It looks like a stock and trades like a stock, but it isn’t actually a stock – what is it?",
+      "summary": "Tokenized stocks promise cheaper trading and wider access, while some products make speculation easier without passing shareholder rights to the buyer. Two people can open their investment apps, see the same company name beside a similar price, and still own…",
+      "url": "https://cryptoslate.com/looks-like-a-stock-trades-like-a-stock-but-it-isnt-actually-a-stock/",
+      "publishedAt": "2026-09-09T19:35:42.000Z"
+    },
+    {
+      "id": "78e349f6b2e6f25be3f7",
+      "source": "Decrypt",
+      "title": "Crypto, Banks Take Clarity Act Lobbying Fight to Senators' Home States",
+      "summary": "Crypto advocates and community bankers are targeting lawmakers in their home states as the Senate prepares for a September 15 procedural vote.",
+      "url": "https://decrypt.co/377810/crypto-banks-clarity-act-lobbying-senators",
+      "publishedAt": "2026-09-09T18:56:58.000Z"
+    },
+    {
+      "id": "845f5f9d9bc79e3bb312",
+      "source": "Cointelegraph",
+      "title": "Consensys to split into MetaMask and institutional blockchain company",
+      "summary": "The restructuring will separate MetaMask’s consumer business from Consensys’ Ethereum protocols and institutional blockchain infrastructure operations.",
+      "url": "https://cointelegraph.com/news/consensys-to-split-into-metamask-and-institutional-blockchain-company?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-09T18:47:32.000Z"
+    },
+    {
+      "id": "bcdefb762746976429f3",
+      "source": "Bitcoin Magazine",
+      "title": "Steak ‘n Shake Says Sales Grew Double Digits Since Bitcoin Adoption",
+      "summary": "Bitcoin Magazine Steak ‘n Shake Says Sales Grew Double Digits Since Bitcoin Adoption The burger franchise started accepting bitcoin over Lightning last year and claims business is booming. This post Steak ‘n Shake Says Sales Grew Double Digits Since Bitcoin…",
+      "url": "https://bitcoinmagazine.com/news/steak-n-shake-says-sales-grew",
+      "publishedAt": "2026-09-09T18:37:31.000Z"
+    },
+    {
+      "id": "fadd7f65321cf82a2677",
+      "source": "CryptoSlate",
+      "title": "How 4,100 stolen Bitcoin bankrolled a life of private jets and supercars",
+      "summary": "Prosecutors say the group stole and laundered more than $245 million in crypto, spending proceeds on club parties, private jets and exotic cars. The post How 4,100 stolen Bitcoin bankrolled a life of private jets and supercars appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/how-4100-stolen-bitcoin-bankrolled-a-life-of-private-jets-and-supercars/",
+      "publishedAt": "2026-09-09T18:30:07.000Z"
+    },
+    {
+      "id": "d107b0b9366d7bc0c9b8",
+      "source": "Bitcoin Magazine",
+      "title": "Iran Continues Using Bitcoin To Keep Economy Stable: Report",
+      "summary": "Bitcoin Magazine Iran Continues Using Bitcoin To Keep Economy Stable: Report Rumors of Iran using bitcoin to skirt transactions have been abound for some time now. Business and regime insiders have reportedly said it's a tried and tested method. This post…",
+      "url": "https://bitcoinmagazine.com/news/iran-still-using-bitcoin-to-help-economy",
+      "publishedAt": "2026-09-09T18:23:22.000Z"
+    },
+    {
+      "id": "b44d9bf2218b1510a92b",
+      "source": "The Block",
+      "title": "DoubleZero adds Kalshi’s election markets ahead of November midterms",
+      "summary": "Kalshi's elections and politics markets went live on the market data delivery platform DoubleZero Edge on Wednesday.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-09-doublezero-adds-kalshis-election-markets-ahead-november-midterms-414075",
+      "publishedAt": "2026-09-09T18:17:58.000Z"
+    },
+    {
+      "id": "054a07216f4ffa204b0c",
+      "source": "The Block",
+      "title": "Solana treasury firm SkyAI faces board challenge from would-be acquirer Forward Industries, shareholder group",
+      "summary": "SkyAI’s proposed equity plan would authorize 5.145 million shares for stock-based compensation, representing roughly 7.2% additional dilution.",
+      "url": "https://www.theblock.co/news/business/2026-09-09-solana-treasury-firm-skyai-board-challenge-would-be-acquirer-forward-industries-shareholder-group-414061",
+      "publishedAt": "2026-09-09T17:56:26.000Z"
+    },
+    {
+      "id": "bedffc9887838d8dea7b",
+      "source": "Decrypt",
+      "title": "Apple Unveils Redesigned Siri AI and A20 Pro Chip as CEO John Ternus Makes Debut",
+      "summary": "The company's first fall keynote under new leadership paired a Gemini-powered Siri overhaul with Apple's first 2-nanometer chip, plus a $1,999 foldable iPhone that won't ship until October.",
+      "url": "https://decrypt.co/377807/apple-redesigned-siri-ai-a20-pro-chip",
+      "publishedAt": "2026-09-09T17:50:14.000Z"
+    },
+    {
+      "id": "771be6fe973ae87f11d3",
+      "source": "The Block",
+      "title": "Bitcoin miners are missing the crypto rally as exchanges, stablecoins surge",
+      "summary": "Among tracked companies, only one bitcoin mining company has outperformed the cryptocurrency: Canaan (ticker CAN).",
+      "url": "https://www.theblock.co/news/markets/2026-09-09-bitcoin-miners-are-missing-the-crypto-rally-as-exchanges-stablecoins-surge-413848",
+      "publishedAt": "2026-09-09T17:36:02.000Z"
+    },
+    {
+      "id": "0a4fe243ce44ee58e99f",
+      "source": "Cointelegraph",
+      "title": "TRM Labs doubles valuation to $2B in Series C expansion",
+      "summary": "The blockchain intelligence firm said its annual recurring revenue has quadrupled over the past three years as it expands its AI-powered investigations business.",
+      "url": "https://cointelegraph.com/news/trm-labs-doubles-valuation-to-2b-in-series-c-expansion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-09T17:30:06.000Z"
+    },
+    {
+      "id": "45473a61c3b6070ed596",
+      "source": "CryptoSlate",
+      "title": "How Tether’s $45 million crackdown drove Southeast Asian scam compounds into an ‘unfreezable’ decentralized stablecoin",
+      "summary": "Bitrace puts targeted Xinbi-linked holdings above $45 million as the sanctioned marketplace announces a USDD-only plan. The post How Tether’s $45 million crackdown drove Southeast Asian scam compounds into an ‘unfreezable’ decentralized stablecoin appeared…",
+      "url": "https://cryptoslate.com/how-tethers-45-million-crackdown-drove-southeast-asian-scam-compounds-into-an-unfreezable-decentralized-stablecoin/",
+      "publishedAt": "2026-09-09T17:20:12.000Z"
+    },
+    {
+      "id": "2499ccca3f5ebc1b6d36",
+      "source": "Decrypt",
+      "title": "Secret Service Freezes $52.8 Million in Crypto Tied to Telegram Bazaar Behind Global Scams",
+      "summary": "Blockchain sleuths at Elliptic traced the money, Treasury sanctioned the marketplace, and Xinbi—which ran $24 billion through a Telegram scam bazaar—called the freeze unfair.",
+      "url": "https://decrypt.co/377804/secret-service-freezes-crypto-telegram-bazaar-xinbi",
+      "publishedAt": "2026-09-09T17:16:08.000Z"
+    },
+    {
+      "id": "cede9d9e7941730dba58",
+      "source": "Decrypt",
+      "title": "While Bitcoin Devs Debate Next Moves, IonQ Unveils Superion 256 Quantum Computer",
+      "summary": "The company has built its first chips and begun testing prototypes as it seeks to manufacture quantum computers in larger quantities.",
+      "url": "https://decrypt.co/377737/bitcoin-debate-ionq-quantum-computer",
+      "publishedAt": "2026-09-09T16:46:05.000Z"
+    },
+    {
       "id": "9553e4fa6eb7a7f53a9e",
       "source": "Decrypt",
       "title": "What Is LAPTOP? Hunter Biden's Meme Coin Targeting TRUMP Holders",
       "summary": "The LAPTOP token launched on Base in September 2026, peaked two minutes later, and shed almost all of its value the same day.",
       "url": "https://decrypt.co/resources/what-is-laptop-hunter-bidens-meme-coin-targeting-trump-holders",
       "publishedAt": "2026-09-09T16:40:50.000Z"
+    },
+    {
+      "id": "a9910562398701d5c9e6",
+      "source": "Cointelegraph",
+      "title": "U.S. Bank tests proprietary stablecoin in cross-border Stellar transaction",
+      "summary": "The pilot moved USBDC between the bank’s North American and European entities on the public Stellar blockchain.",
+      "url": "https://cointelegraph.com/news/us-bank-launches-usbdc-stablecoin-with-live-cross-border-payment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-09T16:37:08.000Z"
     },
     {
       "id": "7b549a72588825d63678",
@@ -92,7 +244,7 @@
     {
       "id": "bead4f982ba436a14e28",
       "source": "CoinDesk",
-      "title": "Robinhood’s CEO Vlad Tenev fires back at AMC CEO in escalating fight over stock tokens",
+      "title": "Robinhood CEO Vlad Tenev fires back at AMC's Aron in escalating fight over stock tokens",
       "summary": "Tenev told CNBC's \"Squawk Box\" on Wednesday that public companies shouldn't have veto power over third-party securities that reference their shares.",
       "url": "https://www.coindesk.com/markets/2026/09/09/robinhood-s-ceo-vlad-tenev-defends-stock-tokens-in-escalating-fight-with-amc-ceo",
       "publishedAt": "2026-09-09T16:11:07.000Z"
@@ -458,14 +610,6 @@
       "publishedAt": "2026-09-09T10:47:23.000Z"
     },
     {
-      "id": "f27e80675b4884d08b0d",
-      "source": "CryptoSlate",
-      "title": "Does becoming a federal bank protect crypto from Washington—or give Washington more control?",
-      "summary": "Alan Lane’s new Silvergate account raises a question for crypto trust banks: how much protection survives a change in supervisors? The post Does becoming a federal bank protect crypto from Washington—or give Washington more control? appeared first on…",
-      "url": "https://cryptoslate.com/does-becoming-a-federal-bank-protect-crypto-from-washington-or-give-washington-more-control/",
-      "publishedAt": "2026-09-09T10:30:03.000Z"
-    },
-    {
       "id": "8f8ef93ac32835c8ea93",
       "source": "Cointelegraph",
       "title": "Bitcoin SOPR metric sees longest profit run of 2026 as new analysis challenges bear market",
@@ -498,28 +642,12 @@
       "publishedAt": "2026-09-09T09:54:42.000Z"
     },
     {
-      "id": "a9037028d36d2cd76c17",
-      "source": "CryptoSlate",
-      "title": "Bitcoin just hit a decade-low S&P 500 correlation, but the daily data tells a different story",
-      "summary": "Bitwise’s negative trend measure coexists with positive return correlation in a FRED proxy, while portfolio results change across lookbacks. The post Bitcoin just hit a decade-low S&P 500 correlation, but the daily data tells a different story appeared first…",
-      "url": "https://cryptoslate.com/bitcoin-just-hit-a-decade-low-sp-500-correlation-but-the-daily-data-tells-a-different-story/",
-      "publishedAt": "2026-09-09T09:30:37.000Z"
-    },
-    {
       "id": "c1c44f4b9a44770936ae",
       "source": "Decrypt",
       "title": "Mexico Seizes 300 Crypto Mining Rigs Wired Into a Hydroelectric Dam",
       "summary": "Forensic accountants are tracing who paid for the mining hardware, and money laundering has not been ruled out.",
       "url": "https://decrypt.co/377748/mexico-seizes-300-crypto-mining-rigs-wired-into-a-hydroelectric-dam",
       "publishedAt": "2026-09-09T09:28:29.000Z"
-    },
-    {
-      "id": "a3556467dcc3d69149b0",
-      "source": "CryptoSlate",
-      "title": "Bitcoin Core Lightning Docker bug leaves node operators exposed despite showing updated version",
-      "summary": "Four tags served images that reported v26.06.7 without its fixes, prompting digest checks before planned source disclosure. The post Bitcoin Core Lightning Docker bug leaves node operators exposed despite showing updated version appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoin-core-lightning-docker-bug-leaves-node-operators-exposed-despite-showing-updated-version/",
-      "publishedAt": "2026-09-09T08:30:48.000Z"
     },
     {
       "id": "c9408ac833665db4de56",
@@ -556,18 +684,10 @@
     {
       "id": "0beb0899ea8c3095e07f",
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin gives up gains as yields head higher following Treasury buyback announcement",
+      "title": "Live updates: Bitcoin slips as yields head higher following Treasury buyback announcement",
       "summary": "The Japanese yen extended its rally against the greenback, briefly strengthening past 153 per dollar.",
       "url": "https://www.coindesk.com/business/2026/09/09/live-updates-xrp-funds-stand-out-among-u-s-etfs-as-bitcoin-ether-solana-funds-see-outflows",
       "publishedAt": "2026-09-09T07:20:51.000Z"
-    },
-    {
-      "id": "e59108de997b78e74210",
-      "source": "CryptoSlate",
-      "title": "Strive adds $12 million to its dividend tab after issuing nearly one million new preferred shares to buy Bitcoin",
-      "summary": "At the current 13% rate, SATA payouts imply about $130 million annually, while higher cash keeps static coverage near 19 months. The post Strive adds $12 million to its dividend tab after issuing nearly one million new preferred shares to buy Bitcoin…",
-      "url": "https://cryptoslate.com/strive-adds-12-million-to-its-dividend-tab-after-issuing-nearly-one-million-new-preferred-shares-to-buy-bitcoin/",
-      "publishedAt": "2026-09-09T07:10:06.000Z"
     },
     {
       "id": "ea943e5aaa32fef2f817",
@@ -576,126 +696,6 @@
       "summary": "The people building AI earnestly believe that it could kill us all by the end of the decade, Coxon said on X, explaining his resignation.",
       "url": "https://www.coindesk.com/markets/2026/09/09/anthropic-researcher-quits-with-a-warning-on-ai-that-echoes-the-terminator-script",
       "publishedAt": "2026-09-09T06:20:38.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-09T05:51:21.000Z"
-    },
-    {
-      "id": "364e44424752bcfc6c58",
-      "source": "Cointelegraph",
-      "title": "Gemini receives Singapore payment license for crypto services",
-      "summary": "Gemini’s local entity is authorized to provide digital payment token and cross-border money transfer services without standard transaction-volume limits.",
-      "url": "https://cointelegraph.com/news/gemini-singapore-mpi-license-crypto-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-09T05:27:12.000Z"
-    },
-    {
-      "id": "bb300215986aeea63103",
-      "source": "CoinDesk",
-      "title": "Hunter Biden defends LAPTOP ahead of Wednesday launch, calls TRUMP a ‘grift’",
-      "summary": "Biden says the token is about “resilience, redemption and recovery” and will give coins to nearly one million wallets that lost money on TRUMP.",
-      "url": "https://www.coindesk.com/markets/2026/09/09/hunter-biden-defends-laptop-ahead-of-wednesday-launch-calls-trump-a-grift",
-      "publishedAt": "2026-09-09T05:22:57.000Z"
-    },
-    {
-      "id": "b9ba060f3a4edd4b6ba8",
-      "source": "CoinDesk",
-      "title": "Moonshot’s Kimi rattled markets. U.S. agencies now say it was trained on American models",
-      "summary": "Moonshot, whose Kimi model rattled markets earlier this year, is among six Chinese AI firms accused of systematically extracting capabilities from U.S. models.",
-      "url": "https://www.coindesk.com/tech/2026/09/09/moonshot-s-kimi-rattled-markets-u-s-agencies-now-say-it-was-trained-on-american-models",
-      "publishedAt": "2026-09-09T04:40:54.000Z"
-    },
-    {
-      "id": "938b9fc9dd5410388bcc",
-      "source": "CoinDesk",
-      "title": "Bitcoin recovers toward $79,000 as Zcash records a $500 million ETF haul",
-      "summary": "Bitcoin fell to nearly $77,600 on Tuesday before clawing most of it back, leaving it little changed on the day while zcash gained roughly 43% on the week and Grayscale's new fund crossed half a billion dollars.",
-      "url": "https://www.coindesk.com/markets/2026/09/09/bitcoin-recovers-toward-usd79-000-as-zcash-records-a-usd500-million-etf-haul",
-      "publishedAt": "2026-09-09T04:35:55.000Z"
-    },
-    {
-      "id": "1689c81a7131653a6df5",
-      "source": "Cointelegraph",
-      "title": "Cybercrime ringleader Malone Lam pleads guilty in $245M crypto theft conspiracy",
-      "summary": "US prosecutors said Lam organized an international network that targeted cryptocurrency holders through social engineering and home break-ins.",
-      "url": "https://cointelegraph.com/news/malone-lam-pleads-guilty-245m-crypto-theft-conspiracy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-09T04:09:51.000Z"
-    },
-    {
-      "id": "cdcd2f56264cba8d6a97",
-      "source": "The Block",
-      "title": "First staked ETF tied to Tron hits the US markets on Wednesday",
-      "summary": "The first staked ETF tied to Tron is set to hit the market Wednesday, giving investors a new way to gain exposure to TRX.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-09-first-staked-etf-tied-to-tron-hits-the-us-markets-wednesday-413935",
-      "publishedAt": "2026-09-09T04:01:03.000Z"
-    },
-    {
-      "id": "dbf1ad6d349112630fb2",
-      "source": "The Block",
-      "title": "Hunter Biden details LAPTOP memecoin’s airdrop and burn-or-charity rules ahead of launch",
-      "summary": "About 30% of the supply is tied to 30 public real-world events that either burn or donate the tokens depending on the results.",
-      "url": "https://www.theblock.co/news/defi/2026-09-08-hunter-biden-details-laptop-airdrop-413952",
-      "publishedAt": "2026-09-09T02:34:58.000Z"
-    },
-    {
-      "id": "3d81fdd08d1190cf7b4c",
-      "source": "The Block",
-      "title": "StoneX sees 45% upside for Robinhood, points to accelerating Layer 2 chain and prediction markets",
-      "summary": "The report says the launch of Robinhood Chain and the company's prediction markets business provide new growth drivers.",
-      "url": "https://www.theblock.co/news/business/2026-09-08-stonex-sees-upside-robinhood-413955",
-      "publishedAt": "2026-09-09T02:18:25.000Z"
-    },
-    {
-      "id": "4fa27abbaeee7aaba248",
-      "source": "Ethereum Foundation",
-      "title": "Join Us: EF Protocol Reddit AMA - September 16th, 2026",
-      "summary": "Every year since January 2019, teams from the Ethereum Foundation have spent an afternoon or two on r/ethereum answering questions from the community. The format hasn’t really changed: one thread, technical debates, detailed explanations, and community…",
-      "url": "https://blog.ethereum.org/en/2026/09/09/reddit-ama",
-      "publishedAt": "2026-09-09T00:00:00.000Z"
-    },
-    {
-      "id": "f2cdc45ac1d92d80db4f",
-      "source": "The Block",
-      "title": "Pons propels Robinhood Chain fees to record $6 million in daily fees as DEX volume doubles",
-      "summary": "PONS reached an all-time high valuation of over $970 million on Friday, with the token up over 200% in the last week alone.",
-      "url": "https://www.theblock.co/news/ecosystems/2026-09-08-pons-propels-robinhood-chain-fees-record-6-million-daily-fees-dex-volume-doubles-413852",
-      "publishedAt": "2026-09-08T22:26:02.000Z"
-    },
-    {
-      "id": "f1df5a1fa2c5b8804d8b",
-      "source": "The Block",
-      "title": "Jack Dorsey’s Block joins rush for federal bank charters from OCC",
-      "summary": "Jack Dorsey-founded company Block, Inc., is taking its turn in seeking to become a federally regulated national bank.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-08-jack-dorsey-block-joins-rush-federal-bank-charters-from-occ-413947",
-      "publishedAt": "2026-09-08T21:58:33.000Z"
-    },
-    {
-      "id": "0260a75e39be219257d1",
-      "source": "Decrypt",
-      "title": "OpenAI Says It Solved a $1M Math Problem. A Rival Mathematician Says He Did It First",
-      "summary": "NYU's Tristan Buckmaster accuses OpenAI's Sébastien Bubeck of racing to claim credit for a Navier-Stokes proof after learning about his unpublished work with Anthropic's Levent Alpöge.",
-      "url": "https://decrypt.co/resources/openai-solved-1m-math-problem-rival-mathematician",
-      "publishedAt": "2026-09-08T21:38:34.000Z"
-    },
-    {
-      "id": "746a4f67af08cfbda4a0",
-      "source": "Cointelegraph",
-      "title": "New York town weighs crypto mining and AI data center ban",
-      "summary": "One of the first towns in the US to ban Bitcoin mining for 18 months is considering another temporary moratorium extending to data centers and other crypto mining operations.",
-      "url": "https://cointelegraph.com/news/new-york-plattsburgh-crypto-mining-ai-ban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-08T21:33:49.000Z"
-    },
-    {
-      "id": "36f3eeaf3a595eabf220",
-      "source": "Cointelegraph",
-      "title": "Franklin Templeton digital asset veteran takes helm at StablecoinX",
-      "summary": "Former Franklin Templeton digital asset executive Christopher Jensen will lead StablecoinX, the largest corporate holder of Ethena’s ENA token.",
-      "url": "https://cointelegraph.com/news/stablecoinx-franklin-templeton-veteran-to-oversee-roughly-480m-ena-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-08T20:59:20.000Z"
     }
   ]
 }
