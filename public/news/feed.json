@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T20:56:40.562Z",
+  "generatedAt": "2026-09-11T04:48:40.023Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 55,
       "error": null
     },
     {
@@ -57,6 +57,134 @@
     }
   ],
   "items": [
+    {
+      "id": "ba1c70985fc7b9bf2410",
+      "source": "CoinDesk",
+      "title": "Bitcoin below $77,000, Zcash leads losses as traders bet on a Fed rate hike",
+      "summary": "Ninety-five of the CoinDesk 100 fell over the past 24 hours, and bitcoin has shed more than 5% on the week.",
+      "url": "https://www.coindesk.com/markets/2026/09/11/bitcoin-below-usd77-000-zcash-leads-losses-as-traders-bet-on-a-fed-rate-hike",
+      "publishedAt": "2026-09-11T04:46:15.000Z"
+    },
+    {
+      "id": "38c512c6d3464e213425",
+      "source": "CoinDesk",
+      "title": "Ripple puts AI agents inside its $1 billion corporate treasury bet",
+      "summary": "The software can monitor cash, risk and forecasts and suggest financial moves, but humans still have to approve every action.",
+      "url": "https://www.coindesk.com/markets/2026/09/11/ripple-puts-ai-agents-inside-its-usd1-billion-corporate-treasury-bet",
+      "publishedAt": "2026-09-11T04:25:21.000Z"
+    },
+    {
+      "id": "c3b69499d331ea3ac355",
+      "source": "Cointelegraph",
+      "title": "Brevo login flaw enabled phishing email targeting 347K Trezor subscribers",
+      "summary": "Trezor told Cointelegraph that the phishing email was sent to 347,000 subscribers and said it is treating every address as “known to the attacker and possibly reusable for phishing.”",
+      "url": "https://cointelegraph.com/news/brevo-login-flaw-trezor-bitbox-cointracking-phishing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-11T04:21:14.000Z"
+    },
+    {
+      "id": "7c63ae4ba64d1e70e546",
+      "source": "The Block",
+      "title": "Sam Bankman-Fried asks Supreme Court to overturn fraud conviction and $11 billion forfeiture",
+      "summary": "Bankman-Fried says he was unfairly barred from providing evidence that FTX had more than enough assets to cover losses from the collapse.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-11-sam-bankman-fried-supreme-court-petition-414226",
+      "publishedAt": "2026-09-11T04:20:15.000Z"
+    },
+    {
+      "id": "70569ee51f05790162bb",
+      "source": "CryptoSlate",
+      "title": "Bitcoin mining supplies 90% of HIVE’s $1 million daily revenue despite ongoing AI expansion",
+      "summary": "Preliminary figures for Aug. 21 through Sept. 10 put GPU-cloud revenue at about $100,000 a day as Swedish reuse remains under evaluation. The post Bitcoin mining supplies 90% of HIVE’s $1 million daily revenue despite ongoing AI expansion appeared first on…",
+      "url": "https://cryptoslate.com/bitcoin-mining-supplies-90-of-hives-1-million-daily-revenue-despite-ongoing-ai-expansion/",
+      "publishedAt": "2026-09-11T03:50:27.000Z"
+    },
+    {
+      "id": "ae42d584d503d46fe4d4",
+      "source": "CryptoSlate",
+      "title": "Bitcoin tests critical $76,000 support cluster during macro energy shock",
+      "summary": "Bitcoin fell below $77,000 on Sept. 10 as oil rose above $100, and a global bond selloff pushed traders toward another Fed hike. BTC reached an intraday low of $76,676.07, Nasdaq 100 futures fell 0.7%, and the 10-year Treasury yield climbed to 4.93% while…",
+      "url": "https://cryptoslate.com/bitcoin-tests-critical-76000-support-cluster-during-macro-energy-shock/",
+      "publishedAt": "2026-09-11T02:40:34.000Z"
+    },
+    {
+      "id": "8a8c1b773e8d4080c958",
+      "source": "CryptoSlate",
+      "title": "Strategy erased nearly $8 billion of net debt in 11 months and put S&P’s junk rating on the clock",
+      "summary": "Strategy, the largest Bitcoin treasury firm, is making a case for an escape from its B- junk credit rating after building billions of dollars in liquidity and reducing debt. On Sept. 10, Strategy’s head of investor relations, Chaitanya Jain, said the Michael…",
+      "url": "https://cryptoslate.com/strategy-erased-nearly-8-billion-of-net-debt-in-11-months-and-put-sps-junk-rating-on-the-clock/",
+      "publishedAt": "2026-09-11T01:20:25.000Z"
+    },
+    {
+      "id": "9073bd5bc4e954f52dfb",
+      "source": "CryptoSlate",
+      "title": "This XRP project is shutting down after wallet flaw exposed 4,000 accounts and drained $450,000",
+      "summary": "Forensics traced 10,281 payments from 4,011 sender wallets, but the attacker’s exact route remains unproven and users need entirely new seeds. The post This XRP project is shutting down after wallet flaw exposed 4,000 accounts and drained $450,000 appeared…",
+      "url": "https://cryptoslate.com/this-xrp-project-is-shutting-down-after-wallet-flaw-exposed-4000-accounts-and-drained-450000/",
+      "publishedAt": "2026-09-11T00:00:10.000Z"
+    },
+    {
+      "id": "0ed4bab5a462de2a82fd",
+      "source": "Cointelegraph",
+      "title": "Metaplanet equity backlash, SE Asia crypto funding doubles: Asia Express",
+      "summary": "Shareholders of Bitcoin treasury company Metaplanet are seething over equity allocations for insiders, while new figures cement Singapore’s role as the top Asian crypto hub.",
+      "url": "https://cointelegraph.com/magazine/metaplanet-equity-backlash-se-asia-crypto-funding-doubles-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-10T23:21:26.000Z"
+    },
+    {
+      "id": "5c037ad280568cd3d375",
+      "source": "CryptoSlate",
+      "title": "OpenAI’s math breakthrough exposes the next weak link in crypto security",
+      "summary": "Its Navier–Stokes claim suggests a possible role for AI in contract verification, where flawed specifications can leave vulnerabilities undetected. The post OpenAI’s math breakthrough exposes the next weak link in crypto security appeared first on…",
+      "url": "https://cryptoslate.com/openais-math-breakthrough-exposes-the-next-weak-link-in-crypto-security/",
+      "publishedAt": "2026-09-10T22:30:50.000Z"
+    },
+    {
+      "id": "32630cb84c2819a2a3bd",
+      "source": "Bitcoin Magazine",
+      "title": "Ringleader of $245M Crypto Theft Pleads Guilty",
+      "summary": "Bitcoin Magazine Ringleader of $245M Crypto Theft Pleads Guilty The 22-year-old criminal ringleader led one of the biggest bitcoin heists in U.S. history. This post Ringleader of $245M Crypto Theft Pleads Guilty first appeared on Bitcoin Magazine and is…",
+      "url": "https://bitcoinmagazine.com/news/ringleader-in-bitcoin-theft-guilty",
+      "publishedAt": "2026-09-10T22:24:40.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-10T21:30:00.000Z"
+    },
+    {
+      "id": "dfc723faa19748f2143d",
+      "source": "Bitcoin Magazine",
+      "title": "Trezor Reveals Another Data Breach After Scammers Target Marketing Platform",
+      "summary": "Bitcoin Magazine Trezor Reveals Another Data Breach After Scammers Target Marketing Platform Users of the bitcoin hardware wallet were targeted with phishing attacks. This post Trezor Reveals Another Data Breach After Scammers Target Marketing Platform first…",
+      "url": "https://bitcoinmagazine.com/news/trezor-reveals-another-data-breach",
+      "publishedAt": "2026-09-10T21:28:55.000Z"
+    },
+    {
+      "id": "1c9e86383709ea1808a3",
+      "source": "Decrypt",
+      "title": "Senate Republicans Release Revised Clarity Act Ahead of September 15 Vote",
+      "summary": "The draft adds registration requirements for controlled trading protocols and leaves its ethics provisions largely unchanged.",
+      "url": "https://decrypt.co/377928/senate-republicans-revised-clarity-act-draft",
+      "publishedAt": "2026-09-10T21:18:48.000Z"
+    },
+    {
+      "id": "0695ab785f6b94a4eaf2",
+      "source": "Decrypt",
+      "title": "DeepSeek's New Model Nearly Matches GPT-6 Astra on Design—at 1.4% of the Cost",
+      "summary": "OpenDesign put 13 AI models through the same design tasks. DeepSeek V4.1 Flash landed a point and a half behind GPT-6 Astra and roughly 70 times cheaper.",
+      "url": "https://decrypt.co/377917/deepseek-openai-gpt-6-astra-design-benchmark",
+      "publishedAt": "2026-09-10T21:16:03.000Z"
+    },
+    {
+      "id": "95c8ea9390c62ed09106",
+      "source": "CryptoSlate",
+      "title": "MetaMask and Consensys split exposes the gap between Ethereum adoption and ETH demand",
+      "summary": "The wallet and infrastructure businesses now operate independently, while Monad products and private networks complicate the link to ETH demand. The post MetaMask and Consensys split exposes the gap between Ethereum adoption and ETH demand appeared first on…",
+      "url": "https://cryptoslate.com/metamask-and-consensys-split-exposes-the-gap-between-ethereum-adoption-and-eth-demand/",
+      "publishedAt": "2026-09-10T21:00:04.000Z"
+    },
     {
       "id": "7a99f450a9c82342f3dd",
       "source": "Decrypt",
@@ -260,7 +388,7 @@
     {
       "id": "892fcd306b162020e0d6",
       "source": "CoinDesk",
-      "title": "Monument Bank delays retail tokenized deposits, cites regulatory issues in the UK",
+      "title": "Monument Bank delays retail tokenized deposits while onboarding custody partner",
       "summary": "The London-based challenger bank tapped a Canadian custodian to meet the Financial Conduct Authority’s regulatory requirements. It now expects to roll out retail tokenized deposits by November.",
       "url": "https://www.coindesk.com/business/2026/09/10/monument-bank-delays-retail-tokenized-deposits-cites-regulatory-issues-in-the-uk",
       "publishedAt": "2026-09-10T15:53:24.000Z"
@@ -280,14 +408,6 @@
       "summary": "The company now says attacks during security tests exposed model behavior failures, after initially emphasizing errors in its testing infrastructure.",
       "url": "https://decrypt.co/377889/anthropic-discloses-fourth-claude-hacking-incident-as-debate-around-regulation-grows",
       "publishedAt": "2026-09-10T15:33:11.000Z"
-    },
-    {
-      "id": "b9b7ef7ed5592dc05613",
-      "source": "CryptoSlate",
-      "title": "XRP Ledger crossed 5 billion transactions, but 92% of August activity came from just 767 bots",
-      "summary": "Bitquery’s audit says a 767-account machine subset generated 92%, separating ledger throughput from durable XRP demand. The post XRP Ledger crossed 5 billion transactions, but 92% of August activity came from just 767 bots appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/xrp-ledger-crossed-5-billion-transactions-but-92-of-august-activity-came-from-just-767-bots/",
-      "publishedAt": "2026-09-10T15:20:17.000Z"
     },
     {
       "id": "74e83d68e1897d953614",
@@ -346,14 +466,6 @@
       "publishedAt": "2026-09-10T14:30:00.000Z"
     },
     {
-      "id": "17a32b8827b662b524c6",
-      "source": "CryptoSlate",
-      "title": "US hit on $24 billion crypto black market sends rival money launderers running for exits",
-      "summary": "DOJ seized Telegram channels and two wallets while OFAC sanctioned Xinbi and the developers behind SafeW and XinbiPay. The post US hit on $24 billion crypto black market sends rival money launderers running for exits appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/us-hit-on-24-billion-crypto-black-market-sends-rival-money-launderers-running-for-exits/",
-      "publishedAt": "2026-09-10T14:00:51.000Z"
-    },
-    {
       "id": "8f359d7a385a20aa2a91",
       "source": "CoinDesk",
       "title": "Nasdaq, Boerse Stuttgart, others ask EU to remove or increase cap in tokenization trial",
@@ -376,14 +488,6 @@
       "summary": "The partnership will provide stablecoin acceptance, settlement and real-time funding capabilities to over 1,000 community banks and credit unions.",
       "url": "https://cointelegraph.com/news/coinbase-moov-stablecoin-infrastructure-banks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-10T13:35:23.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-10T13:20:26.000Z"
     },
     {
       "id": "d5ed3da63d620f513164",
@@ -442,14 +546,6 @@
       "publishedAt": "2026-09-10T12:53:22.000Z"
     },
     {
-      "id": "32a0f2249263dad88907",
-      "source": "CryptoSlate",
-      "title": "SEC gives Bitcoin-heavy trusts a new 15% window to venture beyond existing listing rules",
-      "summary": "Qualifying trusts can use a faster generic route while derivatives measured at gross notional can quickly exhaust the flexible sleeve. The post SEC gives Bitcoin-heavy trusts a new 15% window to venture beyond existing listing rules appeared first on…",
-      "url": "https://cryptoslate.com/sec-gives-bitcoin-heavy-trusts-new-15-percent-window-to-venture-beyond-existing-listing-rules/",
-      "publishedAt": "2026-09-10T12:50:37.000Z"
-    },
-    {
       "id": "ab79f33e24746a97f05d",
       "source": "Decrypt",
       "title": "Morning Minute: Hunter Biden’s LAPTOP Crashes",
@@ -472,14 +568,6 @@
       "summary": "Pablo Hernandez cited historical railway and dot-com bubbles to caution that spending driven by hype over actual profits risks broad economic corrections.",
       "url": "https://www.coindesk.com/business/2026/09/10/ai-s-rapid-rise-poses-global-financial-stability-risks-says-head-of-the-bis",
       "publishedAt": "2026-09-10T12:00:36.000Z"
-    },
-    {
-      "id": "00191f21fbd36c9a21d1",
-      "source": "CryptoSlate",
-      "title": "Memecoin degens are providing the spark for Wall Street to turn stock tokens into real capital",
-      "summary": "Speculative trading may seed inventory for lending and vaults, but the full adoption flywheel remains unproven. The post Memecoin degens are providing the spark for Wall Street to turn stock tokens into real capital appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/memecoin-degens-are-providing-the-spark-for-wall-street-to-turn-stock-tokens-into-real-capital/",
-      "publishedAt": "2026-09-10T11:50:27.000Z"
     },
     {
       "id": "d16cf788e33fd1d9a242",
@@ -530,14 +618,6 @@
       "publishedAt": "2026-09-10T11:15:00.000Z"
     },
     {
-      "id": "60db7e828a0ea622f989",
-      "source": "CryptoSlate",
-      "title": "Bitcoin holds near $78K as markets confront the macro shocks they may have underpriced this week",
-      "summary": "The baseline is already hostile. A CPI, central-bank or oil deviation could decide whether Bitcoin breaks its current range. The post Bitcoin holds near $78K as markets confront the macro shocks they may have underpriced this week appeared first on…",
-      "url": "https://cryptoslate.com/bitcoin-holds-near-78k-as-markets-confront-the-macro-shocks-they-may-have-underpriced-this-week/",
-      "publishedAt": "2026-09-10T10:50:04.000Z"
-    },
-    {
       "id": "82eca8361a18baa52e7f",
       "source": "The Block",
       "title": "Coinbase CEO Brian Armstrong says bitcoin has bottomed for current cycle, expects uptrend over next two years",
@@ -586,14 +666,6 @@
       "publishedAt": "2026-09-10T09:59:32.000Z"
     },
     {
-      "id": "81a8e7e9b8a89f7cfcfe",
-      "source": "CryptoSlate",
-      "title": "Paolo Ardoino says 650 million people decentralized US debt, but Tether still controls the T-bills",
-      "summary": "USDT spreads dollar claims and Treasury funding demand while Tether keeps reserve ownership, portfolio control and gains above face value. The post Paolo Ardoino says 650 million people decentralized US debt, but Tether still controls the T-bills appeared…",
-      "url": "https://cryptoslate.com/paolo-ardoino-says-650-million-people-decentralized-us-debt-but-tether-still-controls-the-t-bills/",
-      "publishedAt": "2026-09-10T09:45:27.000Z"
-    },
-    {
       "id": "838d66ec5b2cea546842",
       "source": "CoinDesk",
       "title": "Indian agri warehouse giant is putting $2 billion in grain-backed loans onchain",
@@ -624,78 +696,6 @@
       "summary": "The complaint says Uniswap’s counsel sent three letters before Unicoin’s Sept. 28 launch and seeks declarations on its marks and domains.",
       "url": "https://cointelegraph.com/news/unicoin-sues-uniswap-court-cancel-uni-trademark?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-10T08:55:11.000Z"
-    },
-    {
-      "id": "d677bec4c9bcd1f4d2de",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin slumps as oil and bond yields surge to new highs",
-      "summary": "The ECB hiked rates earlier Thursday, and U.S. core PPI was softer than expected, but still running hot.",
-      "url": "https://www.coindesk.com/business/2026/09/10/live-updates-bitcoin-etfs-post-a-second-straight-outflow-while-every-other-fund-turns-green",
-      "publishedAt": "2026-09-10T07:45:46.000Z"
-    },
-    {
-      "id": "077feef3f8f85d80fb74",
-      "source": "CoinDesk",
-      "title": "SGX's bitcoin and ether perpetual futures are now open to U.S. institutions",
-      "summary": "The Singapore Exchange says U.S. institutions can now trade its bitcoin and ether perpetual futures, a milestone that bridges U.S. trading desks with Asian liquidity.",
-      "url": "https://www.coindesk.com/markets/2026/09/10/sgx-s-bitcoin-and-ether-perpetual-futures-are-now-open-to-u-s-institutions",
-      "publishedAt": "2026-09-10T07:01:44.000Z"
-    },
-    {
-      "id": "7d1ade4e4ee26c539bf2",
-      "source": "CoinDesk",
-      "title": "Hunter Biden’s LAPTOP blames bots after 98% crash as traders rack up six-figure losses",
-      "summary": "The team said thin liquidity and automated traders distorted the launch, while Nansen data showed some early buyers sitting on six-figure losses after the memecoin’s debut.",
-      "url": "https://www.coindesk.com/markets/2026/09/10/hunter-biden-s-laptop-blames-bots-after-98-crash-as-traders-rack-up-six-figure-losses",
-      "publishedAt": "2026-09-10T06:13:45.000Z"
-    },
-    {
-      "id": "e473d58a22b33c956134",
-      "source": "Cointelegraph",
-      "title": "Trezor, BitBox warn users about fake hardware wallet security alerts",
-      "summary": "BitBox said multiple Bitcoin companies appeared to have been targeted through a shared newsletter provider, while Trezor confirmed a breach at its email service.",
-      "url": "https://cointelegraph.com/news/trezor-bitbox-hardware-wallet-phishing-emails?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-10T05:34:21.000Z"
-    },
-    {
-      "id": "fab518fdb98ac375297a",
-      "source": "CoinDesk",
-      "title": "Dogecoin sinks 5% to lead majors' losses, with bitcoin holding $78,000 level",
-      "summary": "Dogecoin led the losses, BNB fell about 4% and XRP 3%, with oil pushing Treasury yields to their highest since late 2023.",
-      "url": "https://www.coindesk.com/markets/2026/09/10/dogecoin-sinks-5-to-lead-majors-losses-with-bitcoin-holding-usd78-000-level",
-      "publishedAt": "2026-09-10T05:30:15.000Z"
-    },
-    {
-      "id": "3739860f17f15855affc",
-      "source": "The Block",
-      "title": "Hunter Biden’s LAPTOP team cites sniper bots, thin liquidity for 99% crash on launch day",
-      "summary": "The LAPTOP project said it will add pool incentives and expects early prediction-market burns to cut supply.",
-      "url": "https://www.theblock.co/news/defi/2026-09-10-hunter-bidens-laptop-sniper-bots-414095",
-      "publishedAt": "2026-09-10T05:28:17.000Z"
-    },
-    {
-      "id": "daaecfaa19ffef6f3eac",
-      "source": "CoinDesk",
-      "title": "Crypto wins regardless of Clarity Act vote, Coinbase's Armstrong says",
-      "summary": "Coinbase CEO tells CNBC the crypto industry gets regulatory clarity whether or not the Senate passes the bill on Sept. 15.",
-      "url": "https://www.coindesk.com/markets/2026/09/10/crypto-wins-regardless-of-clarity-act-vote-coinbase-s-armstrong-says",
-      "publishedAt": "2026-09-10T05:05:41.000Z"
-    },
-    {
-      "id": "db32dacbeafb2b0da4fa",
-      "source": "Cointelegraph",
-      "title": "US sanctions Xinbi scam marketplace, restrains $52M in crypto",
-      "summary": "The Justice Department seized Xinbi’s Telegram channels and two wallets as investigators pursued 47 additional wallets across its alleged laundering network.",
-      "url": "https://cointelegraph.com/news/us-sanctions-xinbi-restrains-52m-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-10T04:05:03.000Z"
-    },
-    {
-      "id": "f327139aa01b76fa6891",
-      "source": "The Block",
-      "title": "Trezor says third-party security breach led to phishing emails from legitimate domain",
-      "summary": "This follows last month's security breach at shipping provider ShipMonk, which exposed the personal information of Trezor customers.",
-      "url": "https://www.theblock.co/news/defi/2026-09-09-trezor-phishing-emails-414086",
-      "publishedAt": "2026-09-10T02:26:58.000Z"
     }
   ]
 }
