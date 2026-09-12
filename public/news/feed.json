@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T04:42:24.194Z",
+  "generatedAt": "2026-09-12T10:55:30.177Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 55,
       "error": null
     },
     {
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "2339db7c482957c66e8b",
+      "source": "CryptoSlate",
+      "title": "Wall Street is building tokenized deposits to lock in customer balances",
+      "summary": "Imagine your company has enough money to pay a supplier, but the money is in its Singapore account and the bill must be paid from New York. If the transfer between those accounts has to wait until Monday, having enough cash overall doesn't solve the…",
+      "url": "https://cryptoslate.com/wall-street-is-building-tokenized-deposits-to-lock-in-customer-balances/",
+      "publishedAt": "2026-09-12T10:30:03.000Z"
+    },
+    {
+      "id": "c07ea977a9f4e1a9f6d3",
+      "source": "CoinDesk",
+      "title": "Bitcoin activity, passports exposed after Revolut falls for fake government request",
+      "summary": "Passports, selfies and home addresses were also handed over after the digital bank treated a fraudulent request as legitimate, but no customer funds were lost.",
+      "url": "https://www.coindesk.com/tech/2026/09/12/bitcoin-activity-passports-exposed-after-revolut-falls-for-fake-government-request",
+      "publishedAt": "2026-09-12T10:11:01.000Z"
+    },
+    {
+      "id": "c0769c8e0293f99f9d74",
+      "source": "CryptoSlate",
+      "title": "Bitwise is closing the lowest-fee Dogecoin ETF after rivals captured nearly all the capital",
+      "summary": "BWOW held about $687,730 while the three spot products tracked by SoSoValue held $11.83 million as of Sept. 10. The post Bitwise is closing the lowest-fee Dogecoin ETF after rivals captured nearly all the capital appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitwise-is-closing-the-lowest-fee-dogecoin-etf-after-rivals-captured-nearly-all-the-capital/",
+      "publishedAt": "2026-09-12T09:00:19.000Z"
+    },
+    {
+      "id": "0b4a911fb4b933031b42",
+      "source": "CryptoSlate",
+      "title": "Blockstream bets 600 Bitcoin by rejecting Liquid hacker’s $50 million bounty demand",
+      "summary": "Blockstream is refusing to pay the Liquid attacker nearly 600 Bitcoin (roughly $50 million), escalating a dispute over how the crypto industry should reward partial restitution. The standoff follows an unusual recovery from the Sept. 6 exploit, when a…",
+      "url": "https://cryptoslate.com/blockstream-bets-600-bitcoin-by-rejecting-liquid-hackers-50-million-bounty-demand/",
+      "publishedAt": "2026-09-12T07:20:37.000Z"
+    },
     {
       "id": "9385269d3de71441c8b9",
       "source": "CryptoSlate",
@@ -178,14 +210,6 @@
       "publishedAt": "2026-09-11T19:46:24.000Z"
     },
     {
-      "id": "0fe0a5fb603519b824fa",
-      "source": "CryptoSlate",
-      "title": "Why Circle is spending $400M to fix the last mile holding stablecoins back from real-world payouts",
-      "summary": "The purchase could tighten Circle’s control of regulated payout infrastructure while partner banks retain their own risks and duties. The post Why Circle is spending $400M to fix the last mile holding stablecoins back from real-world payouts appeared first…",
-      "url": "https://cryptoslate.com/why-circle-is-spending-400m-to-fix-the-last-mile-holding-stablecoins-back-from-real-world-payouts/",
-      "publishedAt": "2026-09-11T19:05:03.000Z"
-    },
-    {
       "id": "894bec149980c2635cf7",
       "source": "Bitcoin Magazine",
       "title": "Italy’s Second Biggest Bank UniCredit Is Weighting up Crypto Custody: Report",
@@ -208,14 +232,6 @@
       "summary": "The company is seeking clarity on antitrust rules as researchers call for restraint and experts warn that competition encourages companies to overlook risks.",
       "url": "https://decrypt.co/377990/openai-congress-ai-slowdown-legal",
       "publishedAt": "2026-09-11T18:16:04.000Z"
-    },
-    {
-      "id": "50482fc125104d3022e8",
-      "source": "CryptoSlate",
-      "title": "Crypto exchange recovery rules split NES holders into winners and losers after $286M exploit fallout",
-      "summary": "Binance Alpha uses two eligibility snapshots for swaps and refunds, while Kraken now supports only Ethereum-based NES. The post Crypto exchange recovery rules split NES holders into winners and losers after $286M exploit fallout appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/crypto-exchange-recovery-rules-split-nes-holders-into-winners-and-losers-after-286m-exploit-fallout/",
-      "publishedAt": "2026-09-11T18:15:55.000Z"
     },
     {
       "id": "be3f9e76cc09294c3e23",
@@ -248,14 +264,6 @@
       "summary": "The fallen leader of the former top exchange FTX is looking for answers from the U.S. Supreme Court.",
       "url": "https://www.coindesk.com/news-analysis/2026/09/11/the-legal-drama-of-imprisoned-sam-bankman-fried-is-waiting-on-its-last-act",
       "publishedAt": "2026-09-11T17:12:45.000Z"
-    },
-    {
-      "id": "0ae0c9dbdba961a35446",
-      "source": "CryptoSlate",
-      "title": "Nasdaq deepens Kraken ties with proposed $100 million Payward investment",
-      "summary": "The expanded Payward relationship adds surveillance across five market categories while NETs remain a Q2 2027 target. The post Nasdaq deepens Kraken ties with proposed $100 million Payward investment appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/nasdaq-deepens-kraken-ties-with-proposed-100-million-payward-investment/",
-      "publishedAt": "2026-09-11T17:00:43.000Z"
     },
     {
       "id": "19ffb884673519316c57",
@@ -688,14 +696,6 @@
       "summary": "Ahead of a pivotal initial vote next week, Senate Republicans released a revised version of landmark cryptocurrency legislation.",
       "url": "https://www.theblock.co/news/regulation/2026-09-10-senate-republicans-unveil-revised-crypto-bill-ahead-of-key-clarity-act-vote-next-week-414180",
       "publishedAt": "2026-09-10T19:42:06.000Z"
-    },
-    {
-      "id": "e81a81be68f410fed3c1",
-      "source": "CoinDesk",
-      "title": "Why a new SEC plan could ease a legal headache for tokenized securities",
-      "summary": "The SEC's new proposal to overhaul transfer-agent rules could eliminate duplicate offchain shareholder records, reducing reconciliation costs and legal uncertainty for tokenized securities.",
-      "url": "https://www.coindesk.com/business/2026/09/10/why-a-new-sec-plan-could-end-the-legal-headaches-of-holding-tokenized-securities",
-      "publishedAt": "2026-09-10T19:01:30.000Z"
     }
   ]
 }
