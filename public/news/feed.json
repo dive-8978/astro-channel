@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T10:55:30.177Z",
+  "generatedAt": "2026-09-12T15:36:38.658Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 55,
+      "itemCount": 35,
       "error": null
     },
     {
@@ -57,6 +57,62 @@
     }
   ],
   "items": [
+    {
+      "id": "95692fbc8ae848e162d7",
+      "source": "CryptoSlate",
+      "title": "Revolut tricked into handing hackers the passports and Bitcoin histories of wealthy customers",
+      "summary": "Revolut disclosed customers’ passports, verification selfies and Bitcoin transaction histories after treating a fraudulent government request as legitimate. Affected customers were told Friday that the disclosed information could include passport or driver’s…",
+      "url": "https://cryptoslate.com/revolut-tricked-into-handing-hackers-the-passports-and-bitcoin-histories-of-wealthy-customers/",
+      "publishedAt": "2026-09-12T15:30:34.000Z"
+    },
+    {
+      "id": "601ee62df1ff9ebe67c3",
+      "source": "Cointelegraph",
+      "title": "Nvidia considers $10B investment in potential record Anthropic IPO: Reuters",
+      "summary": "Anthropic is said to be seeking to raise as much as $100 billion in the offering, which could value the AI company at about $2 trillion.",
+      "url": "https://cointelegraph.com/news/nvidia-considers-10b-investment-in-anthropic-record-ipo-reuters?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-12T15:12:40.000Z"
+    },
+    {
+      "id": "b31e35f4b24ef69654e4",
+      "source": "Decrypt",
+      "title": "GTA Mod Adds Flock Cameras—And Lets Players Destroy Them",
+      "summary": "The surveillance mod on GTA V brings the privacy fight to Los Santos, where players can demolish the cameras tracking them.",
+      "url": "https://decrypt.co/377997/gta-mod-flock-cameras-players-destroy",
+      "publishedAt": "2026-09-12T15:01:03.000Z"
+    },
+    {
+      "id": "07c5ee50761500d9a719",
+      "source": "CryptoSlate",
+      "title": "XRP Ledger just quietly activated critical foundation for its upcoming new lending protocol",
+      "summary": "fixCleanup3_3_0 corrects AMM, vault, lending, Checks and pseudo-account code paths without launching XRPL’s pending feature amendments. The post XRP Ledger just quietly activated critical foundation for its upcoming new lending protocol appeared first on…",
+      "url": "https://cryptoslate.com/xrp-ledger-just-quietly-activated-critical-foundation-for-its-upcoming-new-lending-protocol/",
+      "publishedAt": "2026-09-12T14:40:43.000Z"
+    },
+    {
+      "id": "dce8ff3cf8b4946d94d9",
+      "source": "CoinDesk",
+      "title": "Staked ether should be seen as the benchmark of the decentralized economy",
+      "summary": "The yield-generating asset has a special place in the digital asset investor’s portfolio, argues GlobalStake’s Ryan Haczynski.",
+      "url": "https://www.coindesk.com/opinion/2026/09/12/staked-ether-should-be-seen-as-the-benchmark-of-the-decentralized-economy",
+      "publishedAt": "2026-09-12T14:00:00.000Z"
+    },
+    {
+      "id": "1a783cc616cfc33beaa7",
+      "source": "CryptoSlate",
+      "title": "The dilution trap where Bitcoin holdings rise while shareholder value stalls",
+      "summary": "Buying shares in a Bitcoin treasury company gives ownership in a business that holds Bitcoin, and management decides how to pay for the coins and when to buy or sell them. The company also has bills to pay and may owe money to lenders, so the shares' value…",
+      "url": "https://cryptoslate.com/the-dilution-trap-where-bitcoin-holdings-rise-while-shareholder-value-stalls/",
+      "publishedAt": "2026-09-12T13:40:26.000Z"
+    },
+    {
+      "id": "86ef9abba267e5940d76",
+      "source": "Decrypt",
+      "title": "ChatGPT Images 2.5 vs Nano Banana 2: Which One is Better?",
+      "summary": "OpenAI's new image model promises sharper detail and more precise editing. We ran it against Google's Nano Banana 2 across six categories to see how it compares.",
+      "url": "https://decrypt.co/377998/chatgpt-images-2-5-vs-nano-banana-2-review",
+      "publishedAt": "2026-09-12T13:01:03.000Z"
+    },
     {
       "id": "2339db7c482957c66e8b",
       "source": "CryptoSlate",
@@ -130,14 +186,6 @@
       "publishedAt": "2026-09-11T23:30:04.000Z"
     },
     {
-      "id": "a541af1960ff6b8ddfbf",
-      "source": "CryptoSlate",
-      "title": "Banks get cross-exchange crypto hedge relief under Canada’s new 2027 capital rule",
-      "summary": "OSFI’s final rule fixes a cross-exchange capital mismatch only for tightly matched, qualifying Group 2a positions. The post Banks get cross-exchange crypto hedge relief under Canada’s new 2027 capital rule appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/banks-get-cross-exchange-crypto-hedge-relief-under-canadas-new-2027-capital-rule/",
-      "publishedAt": "2026-09-11T22:30:05.000Z"
-    },
-    {
       "id": "647499d5aaf4a0a8e7db",
       "source": "Decrypt",
       "title": "Cyberattacks on Law Firms Nearly Double as Stolen Documents Hit the Dark Web",
@@ -170,14 +218,6 @@
       "publishedAt": "2026-09-11T21:22:59.000Z"
     },
     {
-      "id": "4eb40bbabbaf7a7c0da4",
-      "source": "CryptoSlate",
-      "title": "Coinbase CEO sees Bitcoin at $400,000, but first it has to clear $81,000",
-      "summary": "The Coinbase CEO’s personal outlook anticipates gains ahead of the next halving, with Bitcoin still well below its previous peak. The post Coinbase CEO sees Bitcoin at $400,000, but first it has to clear $81,000 appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/coinbase-ceo-sees-bitcoin-at-400000-but-first-it-has-to-clear-81000/",
-      "publishedAt": "2026-09-11T21:20:06.000Z"
-    },
-    {
       "id": "29ce4a8219a51d297d40",
       "source": "Bitcoin Magazine",
       "title": "Blockstream Tells Hackers To Return Remaining Bitcoin Stolen in Liquid Theft",
@@ -192,14 +232,6 @@
       "summary": "A rapidly changing interest rates market has changed the near-term outlook on the Bitcoin chart. Here’s why.",
       "url": "https://decrypt.co/378081/bitcoin-golden-cross-flickers-off",
       "publishedAt": "2026-09-11T20:53:39.000Z"
-    },
-    {
-      "id": "fc2a36e0d046055f9631",
-      "source": "CryptoSlate",
-      "title": "Philadelphia Fed finds Bitcoin traders follow whale signals faster than Ethereum users",
-      "summary": "A Philadelphia Fed event study found broad same-direction activity among non-whale BTC wallets, while ETH's clearest response was concentrated among larger sellers. The post Philadelphia Fed finds Bitcoin traders follow whale signals faster than Ethereum…",
-      "url": "https://cryptoslate.com/philadelphia-fed-finds-bitcoin-traders-follow-whale-signals-faster-than-ethereum-users/",
-      "publishedAt": "2026-09-11T20:10:09.000Z"
     },
     {
       "id": "3f997be753f4add77c86",
@@ -664,38 +696,6 @@
       "summary": "BWOW generated about $3 million in trading volume when it launched in November 2025, but has failed to come anywhere close ever since.",
       "url": "https://www.theblock.co/news/markets/2026-09-10-bitwise-shuts-down-dogecoin-etf-less-than-a-year-after-launch-414184",
       "publishedAt": "2026-09-10T20:28:46.000Z"
-    },
-    {
-      "id": "c5fcf7d347a2f6cde008",
-      "source": "Bitcoin Magazine",
-      "title": "Updated Crypto Clarity Act Starts Circulating Days Before Key Vote",
-      "summary": "Bitcoin Magazine Updated Crypto Clarity Act Starts Circulating Days Before Key Vote A new draft of the long-awaited bill has been circulated by Senate Republicans. This post Updated Crypto Clarity Act Starts Circulating Days Before Key Vote first appeared on…",
-      "url": "https://bitcoinmagazine.com/news/updated-clarity-act-starts-circulating",
-      "publishedAt": "2026-09-10T20:23:59.000Z"
-    },
-    {
-      "id": "81d106284f025fb159d1",
-      "source": "CoinDesk",
-      "title": "New Clarity Act text tweaks DeFi, credit union provisions, but road ahead for bill remains murky",
-      "summary": "The Clarity Act needs 60 votes when the Senate returns from its recess next week. Republicans circulated a fresh draft on Thursday ahead of the vote.",
-      "url": "https://www.coindesk.com/policy/2026/09/10/new-clarity-act-text-tweaks-defi-credit-union-provisions-but-road-ahead-for-bill-remains-murky",
-      "publishedAt": "2026-09-10T20:21:57.000Z"
-    },
-    {
-      "id": "eb7fc99cc83b382dcdaa",
-      "source": "Cointelegraph",
-      "title": "ESMA warns growing crypto ties could amplify risks to traditional finance",
-      "summary": "The EU securities regulator flagged tokenized equities, DeFi exploits and prediction markets as areas where growing crypto ties could pose risks to the broader financial system.",
-      "url": "https://cointelegraph.com/news/esma-warns-growing-crypto-ties-could-amplify-risks-to-traditional-finance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-10T20:10:29.000Z"
-    },
-    {
-      "id": "9f66b54cf0d287e2dbb2",
-      "source": "The Block",
-      "title": "Senate Republicans unveil revised crypto bill ahead of key Clarity Act vote next week",
-      "summary": "Ahead of a pivotal initial vote next week, Senate Republicans released a revised version of landmark cryptocurrency legislation.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-10-senate-republicans-unveil-revised-crypto-bill-ahead-of-key-clarity-act-vote-next-week-414180",
-      "publishedAt": "2026-09-10T19:42:06.000Z"
     }
   ]
 }
