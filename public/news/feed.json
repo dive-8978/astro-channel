@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T12:00:13.871Z",
+  "generatedAt": "2026-09-13T16:25:46.199Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 55,
+      "itemCount": 35,
       "error": null
     },
     {
@@ -57,6 +57,78 @@
     }
   ],
   "items": [
+    {
+      "id": "6cc695b50b3677d1a836",
+      "source": "CryptoSlate",
+      "title": "Critical Bitcoin Lightning bugs exposed nodes to fund theft and restart failure",
+      "summary": "LDK v0.2.6 addresses small splice-related fund losses and a payment-handling flaw that could prevent saved channel state from loading. The post Critical Bitcoin Lightning bugs exposed nodes to fund theft and restart failure appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/critical-bitcoin-lightning-bugs-exposed-nodes-to-fund-theft-and-restart-failure/",
+      "publishedAt": "2026-09-13T15:55:14.000Z"
+    },
+    {
+      "id": "41eb8ee5457fc968f179",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s slide below $77,000 sets up a Monday tech test as AI leaders sound warning",
+      "summary": "Sunday’s 0.8% decline extends earlier weakness, while AI slowdown calls and the coming Fed meeting pose separate risks. The post Bitcoin’s slide below $77,000 sets up a Monday tech test as AI leaders sound warning appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoins-slide-below-77000-sets-up-a-monday-tech-test-as-ai-leaders-sound-warning/",
+      "publishedAt": "2026-09-13T15:20:10.000Z"
+    },
+    {
+      "id": "3e533011278607625a7f",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s oil risk stretches into 2027 as IEA cuts supply outlook again",
+      "summary": "Weaker oil demand offers a counterweight, but the lower supply forecast complicates the case for financing relief. The post Bitcoin’s oil risk stretches into 2027 as IEA cuts supply outlook again appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoins-oil-risk-stretches-into-2027-as-iea-cuts-supply-outlook-again/",
+      "publishedAt": "2026-09-13T14:50:15.000Z"
+    },
+    {
+      "id": "935245f6dfe29de47952",
+      "source": "CryptoSlate",
+      "title": "Why 90% of your DeFi trades are quietly being routed back to Wall Street market makers",
+      "summary": "Open Jupiter, tell it you want to swap SOL for USDC, check the price, and press the button. From the user's point of view, there is not much more to it. So it's only natural to assume that Jupiter is where the trade happens. In reality, Jupiter is closer to…",
+      "url": "https://cryptoslate.com/why-90-of-your-defi-trades-are-quietly-being-routed-back-to-wall-street-market-makers/",
+      "publishedAt": "2026-09-13T13:45:40.000Z"
+    },
+    {
+      "id": "bb1228fe3322c6491638",
+      "source": "Decrypt",
+      "title": "AI Agents Spending Money Online? New Research Says Not Really",
+      "summary": "TRM examined roughly $52.7 million across 198.9 million settlements using the x402 protocol. Most of it isn’t coming from AI agents, it says.",
+      "url": "https://decrypt.co/378103/ai-agents-spending-money-research",
+      "publishedAt": "2026-09-13T13:01:03.000Z"
+    },
+    {
+      "id": "b7e9716909fdfe561a43",
+      "source": "CoinDesk",
+      "title": "Fed rate hike is about Wall Street, not inflation, says economist",
+      "summary": "Goldman Sachs late Friday became the last of the major banks to retract its forecast of no rate hike next week.",
+      "url": "https://www.coindesk.com/markets/2026/09/13/fed-rate-hike-is-about-wall-street-not-inflation-says-economist",
+      "publishedAt": "2026-09-13T13:00:00.000Z"
+    },
+    {
+      "id": "39c66871bfbd7a8ea4ff",
+      "source": "CoinDesk",
+      "title": "Circle's $400M Tazapay deal buys emerging market links that take ‘years to build’",
+      "summary": "Stablecoins' “next battleground is in emerging markets,” one expert said, as Circle looks to expand USDC's reach where rival Tether has long been strong.",
+      "url": "https://www.coindesk.com/business/2026/09/13/circle-s-usd400m-tazapay-deal-buys-emerging-market-links-that-take-years-to-build",
+      "publishedAt": "2026-09-13T13:00:00.000Z"
+    },
+    {
+      "id": "e9fdbbb1b61bcc0843e5",
+      "source": "CryptoSlate",
+      "title": "UK company sells entire Bitcoin reserve to return 669 BTC to shareholders – here is who actually gets paid",
+      "summary": "The company expects settlement by Sept. 28 after selling its entire 669.4867 BTC treasury. The post UK company sells entire Bitcoin reserve to return 669 BTC to shareholders – here is who actually gets paid appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/uk-company-sells-entire-bitcoin-reserve-to-return-669-btc-to-shareholders-here-is-who-actually-gets-paid/",
+      "publishedAt": "2026-09-13T12:50:18.000Z"
+    },
+    {
+      "id": "6f91b6baa8227153afb6",
+      "source": "CoinDesk",
+      "title": "Crypto's Clarity Act is a Schrödinger's cat in life-death limbo as U.S. Senate returns",
+      "summary": "The crypto industry eagerly awaits a September 15 vote, though it might not happen. Or maybe it will. Or it might get delayed or reappear in some other form.",
+      "url": "https://www.coindesk.com/news-analysis/2026/09/11/crypto-s-clarity-act-is-a-schroedinger-s-cat-in-life-death-limbo-as-u-s-senate-returns",
+      "publishedAt": "2026-09-13T12:00:00.000Z"
+    },
     {
       "id": "aae35502d4f141b14612",
       "source": "CryptoSlate",
@@ -162,14 +234,6 @@
       "publishedAt": "2026-09-12T18:20:06.000Z"
     },
     {
-      "id": "7aca36296cdcfc13f14c",
-      "source": "CryptoSlate",
-      "title": "Stablecoins make sending money easy until someone needs to spend it",
-      "summary": "When you send money to someone abroad, the confirmation on your phone is only your half of the transaction: the other half belongs to the person who has to use it. Their rent may be due in local currency. Their nearest cash collection point may be across…",
-      "url": "https://cryptoslate.com/stablecoins-make-sending-money-easy-until-someone-needs-to-spend-it/",
-      "publishedAt": "2026-09-12T17:30:53.000Z"
-    },
-    {
       "id": "3a431414f2e633ec92b7",
       "source": "Decrypt",
       "title": "Revolut Leaks Passports, Bitcoin Transaction Histories to Fake Government Request",
@@ -178,28 +242,12 @@
       "publishedAt": "2026-09-12T17:01:04.000Z"
     },
     {
-      "id": "b81370529a6794035f8a",
-      "source": "CryptoSlate",
-      "title": "The challenge for AI agents is deciding who pays for automated errors",
-      "summary": "Imagine asking an AI assistant to book a decent hotel for a weekend away. You give it a budget and say you’d like somewhere near the center, then it finds a room, pays, and sends you the confirmation. The hotel is within budget and in a solid location, but…",
-      "url": "https://cryptoslate.com/your-ai-shopping-agent-has-a-wallet-but-needs-a-refund-policy/",
-      "publishedAt": "2026-09-12T16:50:51.000Z"
-    },
-    {
       "id": "22a09c5044dcc1dfe2bc",
       "source": "The Block",
       "title": "Crypto billionaires Ben Delo and Christopher Harborne each donate £36 million to Farage’s Reform UK",
       "summary": "Meanwhile, the House of Lords is considering a bill which would halt crypto donations and cap overseas giving at £100,000 a year.",
       "url": "https://www.theblock.co/news/regulation/2026-09-12-crypto-billionaires-ben-delo-and-christopher-harborne-each-donate-36-million-to-farages-reform-uk-414509",
       "publishedAt": "2026-09-12T16:18:05.000Z"
-    },
-    {
-      "id": "2c675f2d14b419a3c191",
-      "source": "CryptoSlate",
-      "title": "XRP’s 30% monthly rebound meets a $4.6 million liquidity trial inside XRPL’s $1.1 billion stablecoin boom",
-      "summary": "Monthly DEX volume more than doubled, yet XRP routing and market-maker holding time remain unmeasured. The post XRP’s 30% monthly rebound meets a $4.6 million liquidity trial inside XRPL’s $1.1 billion stablecoin boom appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/xrps-30-monthly-rebound-meets-a-4-6-million-liquidity-trial-inside-xrpls-1-1-billion-stablecoin-boom/",
-      "publishedAt": "2026-09-12T16:15:05.000Z"
     },
     {
       "id": "7b1cea512b7cd2703cd1",
@@ -258,14 +306,6 @@
       "publishedAt": "2026-09-12T15:50:14.000Z"
     },
     {
-      "id": "95692fbc8ae848e162d7",
-      "source": "CryptoSlate",
-      "title": "Revolut tricked into handing hackers the passports and Bitcoin histories of wealthy customers",
-      "summary": "Revolut disclosed customers’ passports, verification selfies and Bitcoin transaction histories after treating a fraudulent government request as legitimate. Affected customers were told Friday that the disclosed information could include passport or driver’s…",
-      "url": "https://cryptoslate.com/revolut-tricked-into-handing-hackers-the-passports-and-bitcoin-histories-of-wealthy-customers/",
-      "publishedAt": "2026-09-12T15:30:34.000Z"
-    },
-    {
       "id": "601ee62df1ff9ebe67c3",
       "source": "Cointelegraph",
       "title": "Nvidia considers $10B investment in potential record Anthropic IPO: Reuters",
@@ -280,14 +320,6 @@
       "summary": "The surveillance mod on GTA V brings the privacy fight to Los Santos, where players can demolish the cameras tracking them.",
       "url": "https://decrypt.co/377997/gta-mod-flock-cameras-players-destroy",
       "publishedAt": "2026-09-12T15:01:03.000Z"
-    },
-    {
-      "id": "07c5ee50761500d9a719",
-      "source": "CryptoSlate",
-      "title": "XRP Ledger just quietly activated critical foundation for its upcoming new lending protocol",
-      "summary": "fixCleanup3_3_0 corrects AMM, vault, lending, Checks and pseudo-account code paths without launching XRPL’s pending feature amendments. The post XRP Ledger just quietly activated critical foundation for its upcoming new lending protocol appeared first on…",
-      "url": "https://cryptoslate.com/xrp-ledger-just-quietly-activated-critical-foundation-for-its-upcoming-new-lending-protocol/",
-      "publishedAt": "2026-09-12T14:40:43.000Z"
     },
     {
       "id": "dce8ff3cf8b4946d94d9",
@@ -664,38 +696,6 @@
       "summary": "A councilor said 90% of crypto kiosk transactions in the city are tied to fraud, calling the machines a conduit for crime.",
       "url": "https://decrypt.co/377939/albuquerque-bans-bitcoin-atms-giving-operators-45-days-to-remove-them",
       "publishedAt": "2026-09-11T10:10:41.000Z"
-    },
-    {
-      "id": "d5b1747e295a9f6ecea0",
-      "source": "The Block",
-      "title": "ESMA says major prediction platforms lack EU authorization, questions Polymarket and Kalshi’s partial geo-blocks",
-      "summary": "ESMA says major prediction platforms lack EU authorization, while questioning Polymarket and Kalshi's geographic restrictions.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-11-esma-says-major-prediction-platforms-lack-eu-authorization-questions-polymarket-and-kalshis-partial-geo-blocks-414239",
-      "publishedAt": "2026-09-11T10:10:37.000Z"
-    },
-    {
-      "id": "4d3c464583ef902d9986",
-      "source": "Cointelegraph",
-      "title": "Anthropic says Claude used for cyberattacks and surveillance",
-      "summary": "A Russian-speaking operator targeted more than 20 organizations, while a Mali consultant used Claude to build a mass-surveillance platform.",
-      "url": "https://cointelegraph.com/news/claude-ai-cyberattacks-surveillance-weapons-anthropic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-11T09:47:31.000Z"
-    },
-    {
-      "id": "a0bf432c503c0e051716",
-      "source": "Decrypt",
-      "title": "Sam Bankman-Fried Asks Supreme Court to Overturn FTX Fraud Conviction",
-      "summary": "SBF’s lawyers say he was barred from arguing customers lost nothing, and call the $11 billion forfeiture an \"crushing fine.\"",
-      "url": "https://decrypt.co/377931/sam-bankman-fried-asks-supreme-court-to-overturn-ftx-fraud-conviction",
-      "publishedAt": "2026-09-11T09:04:11.000Z"
-    },
-    {
-      "id": "8ca4185c50cd4ec87758",
-      "source": "Cointelegraph",
-      "title": "Blockstream rejects ransom as Liquid hackers hold nearly 600 BTC",
-      "summary": "Blockstream said it would work with law enforcement, exchanges and forensic specialists to recover the Bitcoin if the hackers do not return it.",
-      "url": "https://cointelegraph.com/news/blockstream-rejects-ransom-liquid-hackers-return-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-11T08:43:19.000Z"
     }
   ]
 }
