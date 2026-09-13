@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T16:25:46.199Z",
+  "generatedAt": "2026-09-13T20:55:12.516Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,78 @@
     }
   ],
   "items": [
+    {
+      "id": "1c253cfa64a2f20abe6f",
+      "source": "CryptoSlate",
+      "title": "Audited DeFi protocols lost $885M to attacks that occurred completely outside their audit scopes",
+      "summary": "The ack3-affiliated preprint found a 72.1% outside-scope share after excluding two H1 2026 outliers, while August incidents add operational context. The post Audited DeFi protocols lost $885M to attacks that occurred completely outside their audit scopes…",
+      "url": "https://cryptoslate.com/audited-defi-protocols-lost-885m-to-attacks-that-occurred-completely-outside-their-audit-scopes/",
+      "publishedAt": "2026-09-13T20:15:08.000Z"
+    },
+    {
+      "id": "f2896ef295e9c4c9831e",
+      "source": "CryptoSlate",
+      "title": "Coinbase gives community banks a stablecoin bridge while supplying infrastructure underneath",
+      "summary": "Banks retain the customer interface, while undisclosed pricing, data, compliance and settlement terms will determine who captures the value. The post Coinbase gives community banks a stablecoin bridge while supplying infrastructure underneath appeared first…",
+      "url": "https://cryptoslate.com/coinbase-gives-community-banks-a-stablecoin-bridge-while-supplying-infrastructure-underneath/",
+      "publishedAt": "2026-09-13T19:10:30.000Z"
+    },
+    {
+      "id": "750aca06c0fff916e742",
+      "source": "CoinDesk",
+      "title": "Is Clarity dead? A vibes-based analysis: State of Crypto",
+      "summary": "I dunno, flip a coin.",
+      "url": "https://www.coindesk.com/policy/2026/09/13/is-clarity-dead-a-vibes-based-analysis-state-of-crypto",
+      "publishedAt": "2026-09-13T18:45:08.000Z"
+    },
+    {
+      "id": "6248815ece56c9bb0196",
+      "source": "CryptoSlate",
+      "title": "Malicious bots are actively probing exposed Bitcoin payment servers to steal master administrative keys",
+      "summary": "The risk is limited to manually exposed APIs, and version 2.4.4 closes the standard public path. The post Malicious bots are actively probing exposed Bitcoin payment servers to steal master administrative keys appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/malicious-bots-are-actively-probing-exposed-bitcoin-payment-servers-to-steal-master-administrative-keys/",
+      "publishedAt": "2026-09-13T18:30:17.000Z"
+    },
+    {
+      "id": "d9ca8cc6ca52abb781db",
+      "source": "The Block",
+      "title": "Mexican authorities raid hidden crypto mine, suspecting power theft and money laundering",
+      "summary": "Reuters reported that the site was the fourth crypto farm discovered in the area since early 2025, near a local hydroelectric dam.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-09-13-mexican-authorities-raid-hidden-crypto-mine-suspecting-power-theft-and-money-laundering-414564",
+      "publishedAt": "2026-09-13T18:29:23.000Z"
+    },
+    {
+      "id": "6835bfb455597753c43d",
+      "source": "CryptoSlate",
+      "title": "Cosmos is back online after outage, but Ledger users still can’t see or send their ATOM",
+      "summary": "Balances, history and transactions remain unavailable in the app, but Ledger lists Cosmostation and Keplr for urgent access. The post Cosmos is back online after outage, but Ledger users still can’t see or send their ATOM appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/cosmos-is-back-online-after-outage-but-ledger-users-still-cant-see-or-send-their-atom/",
+      "publishedAt": "2026-09-13T17:55:22.000Z"
+    },
+    {
+      "id": "0205f37a48a2a03f6757",
+      "source": "CoinDesk",
+      "title": "Quantum-proof blockchain: why math, not machines, holds the key",
+      "summary": "lockchains don’t need quantum computers to be quantum-safe, argues Optimum co-founder and MIT professor Muriel Médard. Classic math already gives us the tools.",
+      "url": "https://www.coindesk.com/opinion/2026/09/13/quantum-proof-blockchain-why-math-not-machines-holds-the-key",
+      "publishedAt": "2026-09-13T17:00:00.000Z"
+    },
+    {
+      "id": "aa5eadf8e945c3bc3591",
+      "source": "CryptoSlate",
+      "title": "Why AI faces an immediately difficult choice: Nationalize or decentralize – AI’s 2026 slowdown dilemma",
+      "summary": "His three-stage proposal points toward binding cross-lab limits, a narrow public brake and independently distributed scrutiny. The post Why AI faces an immediately difficult choice: Nationalize or decentralize – AI’s 2026 slowdown dilemma appeared first on…",
+      "url": "https://cryptoslate.com/does-ai-face-an-immediately-difficult-choice-nationalize-or-decentralize-ais-2026-slowdown-dilemma/",
+      "publishedAt": "2026-09-13T16:55:14.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-13T16:47:53.000Z"
+    },
     {
       "id": "6cc695b50b3677d1a836",
       "source": "CryptoSlate",
@@ -130,14 +202,6 @@
       "publishedAt": "2026-09-13T12:00:00.000Z"
     },
     {
-      "id": "aae35502d4f141b14612",
-      "source": "CryptoSlate",
-      "title": "Crypto wallet creators now have just 24 hours to alert regulators when flaws are exploited",
-      "summary": "Qualifying commercial wallet hardware and software now face a rapid three-stage reporting process for serious security events. The post Crypto wallet creators now have just 24 hours to alert regulators when flaws are exploited appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/crypto-wallet-creators-now-have-just-24-hours-to-alert-regulators-when-flaws-are-exploited/",
-      "publishedAt": "2026-09-13T11:45:33.000Z"
-    },
-    {
       "id": "a678aeda13c5477a8099",
       "source": "Cointelegraph",
       "title": "Anthropic chief urges slowdown in AI development to safer pace",
@@ -162,14 +226,6 @@
       "publishedAt": "2026-09-12T21:39:49.000Z"
     },
     {
-      "id": "924572c8706d1c9256ba",
-      "source": "CryptoSlate",
-      "title": "Thailand’s stablecoin proposal would block transfers to other people’s wallets",
-      "summary": "Licensed crypto firms could accept deposits and withdrawals only through accounts verified as the customer’s own. The post Thailand’s stablecoin proposal would block transfers to other people’s wallets appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/thailands-stablecoin-proposal-would-block-transfers-to-other-peoples-wallets/",
-      "publishedAt": "2026-09-12T21:25:29.000Z"
-    },
-    {
       "id": "c44de573eff63c44d358",
       "source": "CoinDesk",
       "title": "OpenAI IPO won't happen this year, says Sam Altman",
@@ -184,22 +240,6 @@
       "summary": "The company is closing its Copenhagen IT site while maintaining Bratislava and opening a new hub in Vietnam to reduce costs.",
       "url": "https://www.coindesk.com/business/2026/09/12/bitcoin-suisse-plans-to-cut-up-to-half-its-swiss-jobs-as-it-shifts-work-abroad",
       "publishedAt": "2026-09-12T21:09:06.000Z"
-    },
-    {
-      "id": "f4979cbe21de3b419b57",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s $80,000 ceiling looks fragile after stocks shrugged off near-5% Treasury yields",
-      "summary": "With Bitcoin near $77,743 and weekend options volatility elevated, Wednesday’s Fed decision will test whether the gap persists. The post Bitcoin’s $80,000 ceiling looks fragile after stocks shrugged off near-5% Treasury yields appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoins-80000-ceiling-looks-different-after-stocks-shrugged-off-near-5-treasury-yields/",
-      "publishedAt": "2026-09-12T20:20:10.000Z"
-    },
-    {
-      "id": "21ca96c3b18c6de97fa9",
-      "source": "CryptoSlate",
-      "title": "The biggest vulnerability in your Bitcoin wallet might be the shipping label",
-      "summary": "Hardware wallets might be able to protect your keys, but the paperwork from buying them could expose your identity. To buy a hardware wallet, you give a company your name and address so it can send you a device designed to put you in control of your money.…",
-      "url": "https://cryptoslate.com/your-bitcoin-wallet-has-a-shipping-problem/",
-      "publishedAt": "2026-09-12T19:30:23.000Z"
     },
     {
       "id": "6faf20987bae23598691",
@@ -226,14 +266,6 @@
       "publishedAt": "2026-09-12T18:43:33.000Z"
     },
     {
-      "id": "05e97526ea942729e70c",
-      "source": "CryptoSlate",
-      "title": "Why Bitcoin initially held its gain as rate traders put September hike odds at 85%",
-      "summary": "Gasoline drove much of August's headline jump, but faster monthly core inflation kept Waller's warning alive. The post Why Bitcoin initially held its gain as rate traders put September hike odds at 85% appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/why-bitcoin-initially-held-its-gain-as-rate-traders-put-september-hike-odds-at-85/",
-      "publishedAt": "2026-09-12T18:20:06.000Z"
-    },
-    {
       "id": "3a431414f2e633ec92b7",
       "source": "Decrypt",
       "title": "Revolut Leaks Passports, Bitcoin Transaction Histories to Fake Government Request",
@@ -248,14 +280,6 @@
       "summary": "Meanwhile, the House of Lords is considering a bill which would halt crypto donations and cap overseas giving at £100,000 a year.",
       "url": "https://www.theblock.co/news/regulation/2026-09-12-crypto-billionaires-ben-delo-and-christopher-harborne-each-donate-36-million-to-farages-reform-uk-414509",
       "publishedAt": "2026-09-12T16:18:05.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-12T16:09:41.000Z"
     },
     {
       "id": "71d8b63c4c09a8b704e6",
@@ -672,30 +696,6 @@
       "summary": "The bank expects Sky to pass five times as much value to token holders by 2028 as USDS adoption and borrowing capacity continue to expand.",
       "url": "https://cointelegraph.com/news/sky-value-token-holders-standard-chartered?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-11T10:44:28.000Z"
-    },
-    {
-      "id": "422fbe94fe58c376fd7d",
-      "source": "Cointelegraph",
-      "title": "India launches tokenized bond pilot with $107M issued",
-      "summary": "SEBI said later phases of Demat 2.0 will introduce secondary trading and open the tokenized bonds to retail investors.",
-      "url": "https://cointelegraph.com/news/india-launches-tokenized-bond-pilot-with-107m-issued?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-11T10:33:24.000Z"
-    },
-    {
-      "id": "1a77608fceda81d23762",
-      "source": "CoinDesk",
-      "title": "Bitcoin pulls back as another golden cross fails to deliver",
-      "summary": "Bitcoin’s golden cross may support the longer-term outlook, but history suggests much of the upside often occurs before the signal appears.",
-      "url": "https://www.coindesk.com/markets/2026/09/11/bitcoin-pulls-back-as-another-golden-cross-fails-to-deliver",
-      "publishedAt": "2026-09-11T10:13:44.000Z"
-    },
-    {
-      "id": "77a9a8020ce1d394c893",
-      "source": "Decrypt",
-      "title": "Albuquerque Bans Bitcoin ATMs, Giving Operators 45 Days to Remove Them",
-      "summary": "A councilor said 90% of crypto kiosk transactions in the city are tied to fraud, calling the machines a conduit for crime.",
-      "url": "https://decrypt.co/377939/albuquerque-bans-bitcoin-atms-giving-operators-45-days-to-remove-them",
-      "publishedAt": "2026-09-11T10:10:41.000Z"
     }
   ]
 }
