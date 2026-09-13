@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T20:38:31.703Z",
+  "generatedAt": "2026-09-13T04:56:09.322Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 55,
       "error": null
     },
     {
@@ -58,6 +58,38 @@
   ],
   "items": [
     {
+      "id": "f5a2b4b8147db1c982bd",
+      "source": "The Block",
+      "title": "CryptoQuant says bitcoin must clear resistance at $81,700 to confirm new bull market",
+      "summary": "Bitcoin's outlook remains bullish, but it needs to clear a significant range of resistance levels stretching to $88,700, CryptoQuant said.",
+      "url": "https://www.theblock.co/news/markets/2026-09-12-cryptoquant-bitcoin-resistance-support-levels-414519",
+      "publishedAt": "2026-09-12T21:39:49.000Z"
+    },
+    {
+      "id": "924572c8706d1c9256ba",
+      "source": "CryptoSlate",
+      "title": "Thailand’s stablecoin proposal would block transfers to other people’s wallets",
+      "summary": "Licensed crypto firms could accept deposits and withdrawals only through accounts verified as the customer’s own. The post Thailand’s stablecoin proposal would block transfers to other people’s wallets appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/thailands-stablecoin-proposal-would-block-transfers-to-other-peoples-wallets/",
+      "publishedAt": "2026-09-12T21:25:29.000Z"
+    },
+    {
+      "id": "c44de573eff63c44d358",
+      "source": "CoinDesk",
+      "title": "OpenAI IPO won't happen this year, says Sam Altman",
+      "summary": "\"Given everything happening with safety, right now would be an ill-advised moment to go public,\" OpenAI CEO Sam Altman told Fortune.",
+      "url": "https://www.coindesk.com/markets/2026/09/12/openai-ipo-won-t-happen-this-year-says-sam-altman",
+      "publishedAt": "2026-09-12T21:09:31.000Z"
+    },
+    {
+      "id": "5928f61065a693c291b5",
+      "source": "CoinDesk",
+      "title": "Bitcoin Suisse plans to cut up to half its Swiss jobs as it shifts work abroad",
+      "summary": "The company is closing its Copenhagen IT site while maintaining Bratislava and opening a new hub in Vietnam to reduce costs.",
+      "url": "https://www.coindesk.com/business/2026/09/12/bitcoin-suisse-plans-to-cut-up-to-half-its-swiss-jobs-as-it-shifts-work-abroad",
+      "publishedAt": "2026-09-12T21:09:06.000Z"
+    },
+    {
       "id": "f4979cbe21de3b419b57",
       "source": "CryptoSlate",
       "title": "Bitcoin’s $80,000 ceiling looks fragile after stocks shrugged off near-5% Treasury yields",
@@ -92,7 +124,7 @@
     {
       "id": "60044fdbe0dc7e4400ef",
       "source": "CoinDesk",
-      "title": "Anthropic CEO calls for AI race to slow down. Musk and OpenAI's Altman agrees",
+      "title": "Anthropic CEO calls for AI race to slow down citing safety. Musk and OpenAI's Altman agrees",
       "summary": "Anthropic’s Dario Amodei, OpenAI’s Sam Altman and Elon Musk have agreed on an unusual position: frontier AI development may need to slow as systems become capable of helping build their own successors.",
       "url": "https://www.coindesk.com/tech/2026/09/12/anthropic-ceo-calls-for-ai-race-to-slow-down-musk-and-openai-s-altman-agrees",
       "publishedAt": "2026-09-12T18:43:33.000Z"
@@ -256,14 +288,6 @@
       "summary": "OpenAI's new image model promises sharper detail and more precise editing. We ran it against Google's Nano Banana 2 across six categories to see how it compares.",
       "url": "https://decrypt.co/377998/chatgpt-images-2-5-vs-nano-banana-2-review",
       "publishedAt": "2026-09-12T13:01:03.000Z"
-    },
-    {
-      "id": "2339db7c482957c66e8b",
-      "source": "CryptoSlate",
-      "title": "Wall Street is building tokenized deposits to lock in customer balances",
-      "summary": "Imagine your company has enough money to pay a supplier, but the money is in its Singapore account and the bill must be paid from New York. If the transfer between those accounts has to wait until Monday, having enough cash overall doesn't solve the…",
-      "url": "https://cryptoslate.com/wall-street-is-building-tokenized-deposits-to-lock-in-customer-balances/",
-      "publishedAt": "2026-09-12T10:30:03.000Z"
     },
     {
       "id": "c07ea977a9f4e1a9f6d3",
@@ -672,30 +696,6 @@
       "summary": "Bankman-Fried’s lawyers challenged the exclusion of evidence about customer losses and argued that his $11 billion forfeiture was excessive.",
       "url": "https://cointelegraph.com/news/sbf-appeals-supreme-court-conviction-forfeiture?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-11T07:43:19.000Z"
-    },
-    {
-      "id": "33d630ef19764f3189fb",
-      "source": "CoinDesk",
-      "title": "Kalshi wants 24/7 Tesla and Nvidia perps as Wall Street fights over who regulates them",
-      "summary": "The prediction-market operator plans to seek U.S. approval for about 60 stock and ETF perps, taking one of crypto's biggest trading products into equities.",
-      "url": "https://www.coindesk.com/markets/2026/09/11/kalshi-wants-24-7-tesla-and-nvidia-perps-as-wall-street-fights-over-who-regulates-them",
-      "publishedAt": "2026-09-11T06:17:31.000Z"
-    },
-    {
-      "id": "48e0c244c445cc3f21c0",
-      "source": "Cointelegraph",
-      "title": "Revised CLARITY Act targets ‘non-decentralized’ DeFi operators",
-      "summary": "The bill’s ethics section remained largely unchanged despite being one of the main points of contention ahead of a pivotal Senate vote.",
-      "url": "https://cointelegraph.com/news/revised-clarity-act-targets-non-decentralized-defi-operators?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-11T06:08:26.000Z"
-    },
-    {
-      "id": "14ddd007b1df3d372cda",
-      "source": "CoinDesk",
-      "title": "India starts tokenizing $620 billion corporate bond market with digital rupee settlement",
-      "summary": "SEBI’s Demat 2.0 pilot turns corporate bonds into digital tokens and settles payment through the RBI’s wholesale digital rupee, with secondary trading and retail access expected in later phases.",
-      "url": "https://www.coindesk.com/markets/2026/09/11/india-starts-tokenizing-usd620-billion-corporate-bond-market-with-digital-rupee-settlement",
-      "publishedAt": "2026-09-11T05:13:15.000Z"
     }
   ]
 }
