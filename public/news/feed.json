@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T21:53:24.429Z",
+  "generatedAt": "2026-09-15T05:01:02.453Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 58,
       "error": null
     },
     {
@@ -57,6 +57,134 @@
     }
   ],
   "items": [
+    {
+      "id": "bf756b96f022e555b060",
+      "source": "The Block",
+      "title": "Ethereum, Base developers abandon effort to align account abstraction proposals",
+      "summary": "The talks to align two proposals, EIP-8130 and EIP-8141, fell short of a shared standard after the two sides diverged on priorities.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-09-15-ethereum-base-account-abstraction-proposals-414775",
+      "publishedAt": "2026-09-15T04:35:26.000Z"
+    },
+    {
+      "id": "9f54c211021736251056",
+      "source": "CoinDesk",
+      "title": "Solana transactions just got more than 3 times bigger, giving an edge over Ethereum",
+      "summary": "Transaction V1 raises Solana’s limit to 4,096 bytes from 1,232, giving developers more room for multi-step trades, company-wallet approvals and privacy proofs.",
+      "url": "https://www.coindesk.com/tech/2026/09/15/solana-transactions-just-got-more-than-3-times-bigger-giving-an-edge-over-ethereum",
+      "publishedAt": "2026-09-15T04:34:10.000Z"
+    },
+    {
+      "id": "f9cbba14e3609874e90f",
+      "source": "Cointelegraph",
+      "title": "CoinEx to cease operation after 9 years, citing ‘significant’ crypto contraction",
+      "summary": "CoinEx said falling trading volumes and liquidity, along with rising regulatory and compliance costs, had exceeded “reasonable boundaries,” with withdrawals remaining open until Dec. 22.",
+      "url": "https://cointelegraph.com/news/coinex-cease-operation-citing-significant-crypto-contraction?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T04:19:16.000Z"
+    },
+    {
+      "id": "b7774b5602487d53aa36",
+      "source": "CoinDesk",
+      "title": "Democrats send counteroffer to Republicans over Clarity Act provisions",
+      "summary": "Democratic Senators were said to be meeting late Monday to discuss the latest proposed draft text.",
+      "url": "https://www.coindesk.com/policy/2026/09/15/democrats-send-counteroffer-to-republicans-over-clarity-act-provisions",
+      "publishedAt": "2026-09-15T04:09:01.000Z"
+    },
+    {
+      "id": "6550e55a9c664e8a71ec",
+      "source": "The Block",
+      "title": "US DOJ seeks $61 million in crypto proceeds from illicit Iranian oil sales laundered on Binance",
+      "summary": "Prosecutors alleged that two Chinese companies used Binance to launder those funds to Iran and its proxies.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-15-doj-61-million-crypto-proceeds-iranian-oil-sales-414768",
+      "publishedAt": "2026-09-15T04:01:48.000Z"
+    },
+    {
+      "id": "38c339fac244166e6653",
+      "source": "Cointelegraph",
+      "title": "Balancer eyes wind-down after restructuring fails to revive revenue",
+      "summary": "Balancer cut costs and shipped new products after restructuring, but Marcus Hardt says v3 failed to replace legacy revenue as November’s $128 million exploit continued to weigh on adoption.",
+      "url": "https://cointelegraph.com/news/balancer-eyes-wind-down-after-restructuring-fails-revive-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T03:33:23.000Z"
+    },
+    {
+      "id": "9baf582c273938cc2073",
+      "source": "CoinDesk",
+      "title": "U.S. House panel shares crypto tax bill ahead of hearing later this week",
+      "summary": "The House Ways and Means Committee published a crypto tax bill addressing de minimis transactions, staking and other issues for which the industry's clamored for policies.",
+      "url": "https://www.coindesk.com/policy/2026/09/14/u-s-house-panel-shares-crypto-tax-bill-ahead-of-hearing-later-this-week",
+      "publishedAt": "2026-09-15T03:27:38.000Z"
+    },
+    {
+      "id": "e8d8c93d93a91891f419",
+      "source": "CoinDesk",
+      "title": "Bitcoin slips to $77,800 as Senate Clarity Act vote nears and oil prices climb",
+      "summary": "Bitcoin pulls back from $79,000 as the Senate prepares to vote on the Clarity Act and oil prices rise.",
+      "url": "https://www.coindesk.com/markets/2026/09/15/bitcoin-slips-to-usd77-800-as-senate-clarity-act-vote-nears-and-oil-prices-climb",
+      "publishedAt": "2026-09-15T03:23:28.000Z"
+    },
+    {
+      "id": "0ae59acae1d2c9cddb81",
+      "source": "CryptoSlate",
+      "title": "Coinbase-backed Base just exposed the uncomfortable truth about Ethereum’s L2s",
+      "summary": "Ethereum and Coinbase-backed layer-2 network Base have abandoned an effort to agree on how the next generation of crypto wallets should work. On Sept. 14, Ethlabs researcher Derek Chiang said collaboration between developers working on Ethereum’s EIP-8141…",
+      "url": "https://cryptoslate.com/coinbase-backed-base-just-exposed-the-uncomfortable-truth-about-ethereums-l2s/",
+      "publishedAt": "2026-09-15T03:20:48.000Z"
+    },
+    {
+      "id": "4e98bd2acf70e6ebdba6",
+      "source": "CryptoSlate",
+      "title": "Ethereum builders face a choice between locking up too much cash or relying on trusted brokers",
+      "summary": "Lido’s ePBS debate exposes costs that could favor trusted payments, while relay auctions may still help builders compete. The post Ethereum builders face a choice between locking up too much cash or relying on trusted brokers appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/ethereum-builders-face-a-choice-between-locking-up-too-much-cash-or-relying-on-trusted-brokers/",
+      "publishedAt": "2026-09-15T01:30:19.000Z"
+    },
+    {
+      "id": "f9fb52a66402b378db6f",
+      "source": "Cointelegraph",
+      "title": "Democrats push back on GOP’s ‘final’ CLARITY offer with counterproposal: Politico",
+      "summary": "Some Democrats remain dissatisfied with the bill’s crypto ethics provisions and will be sending a counterproposal just hours before a key procedural vote.",
+      "url": "https://cointelegraph.com/news/democrats-push-back-on-gops-final-clarity-offer-with-counterproposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T00:46:15.000Z"
+    },
+    {
+      "id": "9e118e96bf2be38cd38e",
+      "source": "CryptoSlate",
+      "title": "A new XRPL upgrade could concentrate XRP ownership inside banks instead of retail wallets",
+      "summary": "Pending sponsorship rules could shift reserves and fees to businesses, whose ability to release capital would depend on user funding and exit rules. The post A new XRPL upgrade could concentrate XRP ownership inside banks instead of retail wallets appeared…",
+      "url": "https://cryptoslate.com/a-new-xrpl-upgrade-could-concentrate-xrp-ownership-inside-banks-instead-of-retail-wallets/",
+      "publishedAt": "2026-09-15T00:00:22.000Z"
+    },
+    {
+      "id": "113b672fe026cfdaca61",
+      "source": "CoinDesk",
+      "title": "Even if Clarity fails, Wall Street’s crypto push is unlikely to stop",
+      "summary": "The Clarity Act could give banks, brokers and asset managers a clearer rulebook, but financial firms have already moved far enough into digital assets that failure may slow adoption rather than stop it.",
+      "url": "https://www.coindesk.com/policy/2026/09/14/even-if-clarity-fails-wall-street-s-crypto-push-is-unlikely-to-stop",
+      "publishedAt": "2026-09-14T23:43:28.000Z"
+    },
+    {
+      "id": "f359fb916fd32acf4b95",
+      "source": "CoinDesk",
+      "title": "SEC's Atkins backs Clarity Act but says agency will keep pushing crypto rules without it",
+      "summary": "The SEC chair said crypto issuance, transfer agent modernization and custody will form the backbone of the agency’s regulatory push.",
+      "url": "https://www.coindesk.com/policy/2026/09/14/sec-s-atkins-backs-clarity-act-but-says-agency-will-keep-pushing-crypto-rules-without-it",
+      "publishedAt": "2026-09-14T23:30:40.000Z"
+    },
+    {
+      "id": "8d90b3dfa11c3411cd55",
+      "source": "CryptoSlate",
+      "title": "Circle’s Arc launch ties Wall Street firms to the network without making them its safety net",
+      "summary": "Ahead of the planned Sept. 16 launch, institutional validators offer ledger accountability without a blanket guarantee for applications or losses. The post Circle’s Arc launch ties Wall Street firms to the network without making them its safety net appeared…",
+      "url": "https://cryptoslate.com/circles-arc-launch-ties-wall-street-firms-to-the-network-without-making-them-its-safety-net/",
+      "publishedAt": "2026-09-14T22:50:42.000Z"
+    },
+    {
+      "id": "58b2983234e8e510a1e0",
+      "source": "CoinDesk",
+      "title": "U.S. Senator Lummis says Democrats won't quit asking for more on crypto Clarity Act",
+      "summary": "One of the top crypto market structure negotiators in Washington says she's run out of gas on new revisions for the bill she's worked on for more than five years.",
+      "url": "https://www.coindesk.com/policy/2026/09/14/u-s-senator-lummis-says-democrats-won-t-quit-asking-for-more-on-crypto-clarity-act",
+      "publishedAt": "2026-09-14T22:34:18.000Z"
+    },
     {
       "id": "ce78822902f4de83e0f9",
       "source": "Decrypt",
@@ -298,14 +426,6 @@
       "publishedAt": "2026-09-14T17:25:06.000Z"
     },
     {
-      "id": "ae3aa7971c526980346b",
-      "source": "CryptoSlate",
-      "title": "Bitcoin exchanges can reduce quantum exposure before a network upgrade",
-      "summary": "Coinbase's September workshop shows signature choices and operational migration must advance together across exchanges, wallets and key-management systems. The post Bitcoin exchanges can reduce quantum exposure before a network upgrade appeared first on…",
-      "url": "https://cryptoslate.com/bitcoins-quantum-plan-faces-a-1-6-million-btc-custody-test/",
-      "publishedAt": "2026-09-14T16:50:59.000Z"
-    },
-    {
       "id": "94613a9e78f64eda1582",
       "source": "Bitcoin Magazine",
       "title": "Strive Snaps Up More Bitcoin, Brings Holdings to 25,000 BTC",
@@ -344,14 +464,6 @@
       "summary": "Bitmine now has more than 5 million ETH staked, turning most of its Ether holdings into a recurring income stream as it continues to accumulate.",
       "url": "https://cointelegraph.com/news/bitmine-5-million-eth-staked-334-million-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-14T15:55:59.000Z"
-    },
-    {
-      "id": "859115d135c3bfd56027",
-      "source": "CryptoSlate",
-      "title": "Here’s what’s new in the final CLARITY Act before Tuesday’s Senate vote",
-      "summary": "Senate Republicans rewrote key parts of the CLARITY Act as they made a final push for Democratic votes Tuesday. “This text is truly bipartisan and includes more than 120 of Democrats’ demands,” Sen. Cynthia Lummis said Monday as she, Senate Banking Committee…",
-      "url": "https://cryptoslate.com/heres-whats-new-in-the-final-clarity-act-before-tuesdays-senate-vote/",
-      "publishedAt": "2026-09-14T15:45:59.000Z"
     },
     {
       "id": "09742490953e80a31b73",
@@ -400,14 +512,6 @@
       "summary": "Kalshi and Polymarket bettors sharply raised the chances of U.S. crypto market structure legislation advancing, with Tuesday's Senate vote the next test.",
       "url": "https://www.coindesk.com/policy/2026/09/14/clarity-act-odds-surge-on-prediction-markets-but-crypto-bill-still-faces-long-road",
       "publishedAt": "2026-09-14T15:10:29.000Z"
-    },
-    {
-      "id": "e877182d24e5c6943767",
-      "source": "CryptoSlate",
-      "title": "BlackRock’s staking Ethereum ETF pays yield but investors still prefer its $9 billion ETHA fund",
-      "summary": "September 11 data show demand for both ETHA and ETHB, with a wide trading gap but similar median spreads. The post BlackRock’s staking Ethereum ETF pays yield but investors still prefer its $9 billion ETHA fund appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/blackrocks-staking-ethereum-etf-pays-yield-but-investors-still-prefer-its-9-billion-etha-fund/",
-      "publishedAt": "2026-09-14T14:50:53.000Z"
     },
     {
       "id": "bb507db590b3937463bb",
@@ -472,14 +576,6 @@
       "summary": "MetaMask’s latest safeguards flag suspicious transfers and stop transactions that don’t match their previews.",
       "url": "https://decrypt.co/378117/metamask-adds-wallet-protections",
       "publishedAt": "2026-09-14T14:01:04.000Z"
-    },
-    {
-      "id": "248b9244dc7a3560d03a",
-      "source": "CryptoSlate",
-      "title": "Another Bitcoin liquidity test arrives with Tuesday’s US tax deadline",
-      "summary": "September 15 payments could absorb bank reserves before the Fed decision, while Treasury spending and Fed tools can cushion pressure. The post Another Bitcoin liquidity test arrives with Tuesday’s US tax deadline appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/another-bitcoin-liquidity-test-arrives-with-tuesdays-us-tax-deadline/",
-      "publishedAt": "2026-09-14T13:45:51.000Z"
     },
     {
       "id": "cc92451fd564ee4ee3a0",
@@ -600,102 +696,6 @@
       "summary": "Bitcoin rose 1.9% since midnight UTC while Nasdaq 100 index futures fell 1.65% on calls to slow AI development and crude gained almost 4% on a Saudi pipeline closure.",
       "url": "https://www.coindesk.com/markets/2026/09/14/bitcoin-climbs-to-usd78-000-as-crypto-sits-out-the-ai-selloff",
       "publishedAt": "2026-09-14T10:09:41.000Z"
-    },
-    {
-      "id": "e6da7a9fa56163003986",
-      "source": "Cointelegraph",
-      "title": "CLARITY Act vote meets Fed rate hike: Five things to know in Bitcoin this week",
-      "summary": "Bitcoin traders brace for volatility as the CLARITY Act awaits a Senate vote to move forward and the Fed is due to announce its latest rate decision.",
-      "url": "https://cointelegraph.com/markets/clarity-act-vote-meets-fed-rate-hike-five-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T10:02:00.000Z"
-    },
-    {
-      "id": "c1c1fcfa1fb7d85cc7f3",
-      "source": "Cointelegraph",
-      "title": "Symbiosis says recovered 15 BTC from bridge hack, offers 20% bounty",
-      "summary": "Symbiosis is offering a 20% bounty for information leading to asset recovery after the hacker refused to return the stolen funds for the same white-hat bounty.",
-      "url": "https://cointelegraph.com/news/symbiosis-recovered-15-btc-bridge-hack-20-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T09:55:35.000Z"
-    },
-    {
-      "id": "db91d37e45098d778a5a",
-      "source": "CoinDesk",
-      "title": "TikTok developer ByteDance arranges $29.6 billion loan as it builds AI ambitions",
-      "summary": "ByteDance was reportedly considering spending $70 billion on AI data centers and infrastructure. The news comes as U.S. AI giants call for slowing the AI race.",
-      "url": "https://www.coindesk.com/business/2026/09/14/tiktok-developer-bytedance-arranges-usd29-6-billion-loan-as-it-builds-ai-ambitions",
-      "publishedAt": "2026-09-14T09:43:45.000Z"
-    },
-    {
-      "id": "7bdf62ab4ed77fddec2b",
-      "source": "The Block",
-      "title": "Bernstein sees more Clarity Act progress than markets expected, says ‘any positive surprise is definitely not priced in’",
-      "summary": "The analysts argued crypto markets currently have a bearish bias ahead of Tuesday's cloture vote and Wednesday's Federal Reserve decision.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-14-bernstein-sees-more-clarity-act-progress-than-markets-expected-says-any-positive-surprise-is-definitely-not-priced-in-414593",
-      "publishedAt": "2026-09-14T09:36:08.000Z"
-    },
-    {
-      "id": "c922a3b64a06c676d3e0",
-      "source": "CoinDesk",
-      "title": "Fed, BOE, BOJ interest-rate decisions: Crypto Week Ahead",
-      "summary": "Your look at what's coming in the week starting Sept. 14.",
-      "url": "https://www.coindesk.com/markets/2026/09/14/fed-boe-boj-interest-rate-decisions-crypto-week-ahead",
-      "publishedAt": "2026-09-14T09:29:57.000Z"
-    },
-    {
-      "id": "fe75bbacd94b63052bac",
-      "source": "The Block",
-      "title": "TD Cowen sees 90% upside for bitcoin treasury firm Smarter Web following proposed ‘MORE’ preferred IPO",
-      "summary": "TD Cowen raised its Smarter Web price target after its proposed MORE preferred IPO, citing broader funding options and capital efficiency.",
-      "url": "https://www.theblock.co/news/markets/2026-09-14-td-cowen-sees-90-upside-for-bitcoin-treasury-firm-smarter-web-following-proposed-more-preferred-ipo-414590",
-      "publishedAt": "2026-09-14T09:29:39.000Z"
-    },
-    {
-      "id": "4ba5807e55098095160e",
-      "source": "Decrypt",
-      "title": "Bitcoin Suisse to Cut Up to Half Its Swiss Jobs in Overseas Shift",
-      "summary": "The Crypto Valley pioneer is moving up to 60 Zug jobs to Bratislava or Vietnam as it pivots from a Swiss crypto specialist into a global wealth manager.",
-      "url": "https://decrypt.co/378119/bitcoin-suisse-cut-half-swiss-jobs",
-      "publishedAt": "2026-09-14T09:01:03.000Z"
-    },
-    {
-      "id": "5803a622916df15bbfb1",
-      "source": "Cointelegraph",
-      "title": "UK FCA seeks views on fund rule exemptions for tokenized gold",
-      "summary": "The FCA said uncertainty over whether some tokenized gold products fall under UK fund rules could affect adoption and investor access.",
-      "url": "https://cointelegraph.com/news/uk-fca-weighs-fund-rules-exemption-for-tokenized-gold-ft?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T08:57:00.000Z"
-    },
-    {
-      "id": "3e3b649a215f67b31c52",
-      "source": "The Block",
-      "title": "South Korean investors push for fourth crypto tax delay as regulators stand firm",
-      "summary": "A petition to postpone the planned digital asset gains tax in South Korea reached its threshold of 50,000 signatures.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-14-south-korean-investors-crypto-tax-delay-414581",
-      "publishedAt": "2026-09-14T08:31:06.000Z"
-    },
-    {
-      "id": "27c949d7f623223d3eda",
-      "source": "CoinDesk",
-      "title": "Bitcoin bucks tech selloff as AI safety concerns weigh on stocks",
-      "summary": "Bitcoin rose above $77,000 as calls to slow AI development hit technology shares, while rising oil prices added to market pressure.",
-      "url": "https://www.coindesk.com/markets/2026/09/14/bitcoin-bucks-tech-selloff-as-ai-safety-concerns-weigh-on-stocks",
-      "publishedAt": "2026-09-14T08:07:16.000Z"
-    },
-    {
-      "id": "de00e62ec29f646d086b",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs shed $463M in weekly reversal as Ether ETFs gain $197M",
-      "summary": "ARKB, GBTC and IBIT led Bitcoin ETF withdrawals, while BlackRock’s ETHA pushed Ether ETFs into weekly inflows.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etfs-shed-463m-ether-etfs-gain-197m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T07:07:54.000Z"
-    },
-    {
-      "id": "e814bbe000a66de71a89",
-      "source": "Cointelegraph",
-      "title": "King Charles to host AI chiefs amid industry call to slow development",
-      "summary": "The gathering comes days after Dario Amodei and Sam Altman called for greater restraint at the AI frontier, warning that rapidly improving systems could pose increasingly difficult-to-control risks.",
-      "url": "https://cointelegraph.com/news/king-charles-host-ai-chiefs-amid-industry-call-slow-development?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T05:16:59.000Z"
     }
   ]
 }
