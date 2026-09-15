@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T05:01:02.453Z",
+  "generatedAt": "2026-09-15T11:52:04.033Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 58,
+      "itemCount": 37,
       "error": null
     },
     {
@@ -58,6 +58,254 @@
   ],
   "items": [
     {
+      "id": "1b319e149cc965a49185",
+      "source": "The Block",
+      "title": "Standard Chartered sees Arbitrum at $10 by end-2030, up 70-fold",
+      "summary": "Standard Chartered sees Arbitrum at $10 by 2030, projecting a roughly 70-fold increase as tokenization grows and TradFi firms move onchain.",
+      "url": "https://www.theblock.co/news/markets/2026-09-15-standard-chartered-sees-arbitrum-at-10-by-end-2030-up-70-fold-414821",
+      "publishedAt": "2026-09-15T11:50:30.000Z"
+    },
+    {
+      "id": "118eaa87f6ea8ea52256",
+      "source": "CryptoSlate",
+      "title": "Bitcoin needs to reach $82,900 to outrun a looming miner margin squeeze",
+      "summary": "A projected 4.70% difficulty increase could cut hashprice 4.49% and push older machines below power-only breakeven. The post Bitcoin needs to reach $82,900 to outrun a looming miner margin squeeze appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-needs-to-reach-82900-to-outrun-a-looming-miner-margin-squeeze/",
+      "publishedAt": "2026-09-15T11:20:30.000Z"
+    },
+    {
+      "id": "7cebff2b71b5eefd325a",
+      "source": "CoinDesk",
+      "title": "Ether, solana, XRP likely to gain if Clarity Act progresses",
+      "summary": "Your day-ahead look for Sept. 15, 2026",
+      "url": "https://www.coindesk.com/daybook-us/2026/09/15/ether-solana-xrp-likely-to-gain-if-clarity-act-progresses",
+      "publishedAt": "2026-09-15T11:15:44.000Z"
+    },
+    {
+      "id": "fdd3fd2a36c76ae675b3",
+      "source": "Decrypt",
+      "title": "Solana Treasury Firm DeFi Dev Corp Rolls Out $300M CHAD to Buy More SOL",
+      "summary": "DeFi Development Corp added another 55,491 SOL and opened a CHAD at-the-market program for its preferred stock, extending a fast-moving three-week run of capital markets activity.",
+      "url": "https://decrypt.co/378183/solana-defi-development-corp-chad",
+      "publishedAt": "2026-09-15T11:01:04.000Z"
+    },
+    {
+      "id": "7c2f16e588f9f5bdf34b",
+      "source": "CoinDesk",
+      "title": "Why banks should stop worrying and learn to love the Clarity Act",
+      "summary": "They could be the biggest winners from regulatory clarity, argues Alex Tapscott, CEO of CMCC Global Capital Markets.",
+      "url": "https://www.coindesk.com/opinion/2026/09/15/why-banks-should-stop-worrying-and-learn-to-love-the-clarity-act",
+      "publishedAt": "2026-09-15T11:00:00.000Z"
+    },
+    {
+      "id": "06537c9f1cf7bcb88bf5",
+      "source": "CoinDesk",
+      "title": "Velocity extends Series A to $48M at $200M valuation with backing from Visa, Circle, and Ripple",
+      "summary": "The investment brings Velocity's Series A round to $48 million and values the London-based payments infrastructure firm at $200 million, CEO Eric Queathem said.",
+      "url": "https://www.coindesk.com/business/2026/09/10/velocity-extends-series-a-to-usd48m-at-usd200m-valuation-with-backing-from-visa-circle-and-ripple",
+      "publishedAt": "2026-09-15T11:00:00.000Z"
+    },
+    {
+      "id": "4820e5ceebe85903e8ad",
+      "source": "CoinDesk",
+      "title": "Bitcoin gives back Monday's gain as Clarity Act odds fade on Polymarket",
+      "summary": "Bitcoin fell 1.7% since midnight UTC to $76,862, unwinding a late Monday rally as Polymarket odds on the Clarity Act becoming law this year halved overnight.",
+      "url": "https://www.coindesk.com/markets/2026/09/15/bitcoin-gives-back-monday-s-gain-as-clarity-act-odds-fade-on-polymarket",
+      "publishedAt": "2026-09-15T10:41:35.000Z"
+    },
+    {
+      "id": "dcc997c61cd16f0f3072",
+      "source": "CoinDesk",
+      "title": "How a simple coding mistake let a hacker drain $7.8 million from a crypto wallet",
+      "summary": "Security firms traced the $7.8 million loss to a helper contract the wallet owner had authorized, not to Safe itself.",
+      "url": "https://www.coindesk.com/business/2026/09/15/how-a-simple-coding-mistake-let-a-hacker-drain-usd7-8-million-from-a-crypto-wallet",
+      "publishedAt": "2026-09-15T10:27:55.000Z"
+    },
+    {
+      "id": "7e6baa76d12d39ecdc5b",
+      "source": "CryptoSlate",
+      "title": "Altcoins gained 21% and still lost ground to Bitcoin. What would finally turn the tables?",
+      "summary": "Glassnode reported that altcoin market capitalization climbed 21% over the past month, while altcoins' share of the combined Bitcoin-and-altcoin market fell 0.9 percentage points over 90 days, based on data as of Sept. 7. Capital has moved up the entire…",
+      "url": "https://cryptoslate.com/altcoins-gained-21-and-still-lost-ground-to-bitcoin-what-would-finally-turn-the-tables/",
+      "publishedAt": "2026-09-15T10:25:57.000Z"
+    },
+    {
+      "id": "8cf7022c8d948e091309",
+      "source": "CoinDesk",
+      "title": "Nigel Farage-backed Stack BTC eyes $16 million gold dealer deal to fund bitcoin buy",
+      "summary": "The proposed acquisition would use cash flow from precious metals sales to build bitcoin holdings.",
+      "url": "https://www.coindesk.com/business/2026/09/15/nigel-farage-backed-stack-btc-eyes-usd16-million-gold-dealer-deal-to-fund-bitcoin-buy",
+      "publishedAt": "2026-09-15T10:06:40.000Z"
+    },
+    {
+      "id": "61f70359cc6cbd6b772a",
+      "source": "Cointelegraph",
+      "title": "US House crypto tax package omits mining, staking reward deferral",
+      "summary": "The 114-page bill would change the tax treatment of crypto fees, stablecoins and lending while leaving existing reward-tax timing unchanged.",
+      "url": "https://cointelegraph.com/news/us-house-crypto-tax-bill-mining-staking-reward-deferral?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T10:04:21.000Z"
+    },
+    {
+      "id": "71aa5db18528ea9ba0a3",
+      "source": "Cointelegraph",
+      "title": "Ethereum, Base wallet standards talks fail, Ethlabs researcher says",
+      "summary": "Ethereum and Base are pursuing different account abstraction designs after talks failed, according to Ethlabs researcher Derek Chiang.",
+      "url": "https://cointelegraph.com/news/ethereum-base-wallet-standards-collaboration-breaks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T09:40:27.000Z"
+    },
+    {
+      "id": "1ee1eaaaf067b20cd5af",
+      "source": "CryptoSlate",
+      "title": "The US Bitcoin reserve faces a crucial bipartisan test Wednesday",
+      "summary": "The American Reserve Modernization Act (ARMA) would put the federal government's Bitcoin reserve into law for the first time. But ahead of its first House committee vote on Sept. 16, the bill has attracted just one Democratic cosponsor, and he does not sit…",
+      "url": "https://cryptoslate.com/us-bitcoin-reserve-faces-crucial-bipartisan-test-wednesday/",
+      "publishedAt": "2026-09-15T09:40:26.000Z"
+    },
+    {
+      "id": "fdaec451d32e67050474",
+      "source": "The Block",
+      "title": "Tonkeeper rebrands as Keeper with support for 7 networks, including Bitcoin and Ethereum",
+      "summary": "Tonkeeper has rebranded as Keeper, with the wallet now supporting seven blockchain networks, including Bitcoin and Ethereum.",
+      "url": "https://www.theblock.co/news/business/2026-09-15-tonkeeper-rebrands-as-keeper-with-support-for-7-networks-including-bitcoin-and-ethereum-414807",
+      "publishedAt": "2026-09-15T09:35:02.000Z"
+    },
+    {
+      "id": "5ae3afd8b5f2448c5771",
+      "source": "The Block",
+      "title": "Ark Invest sells $14 million in Circle, trims Coinbase as crypto stocks rally",
+      "summary": "The Cathie Wood-led investment firm routinely adds and trims its crypto stock holdings throughout the year.",
+      "url": "https://www.theblock.co/news/business/2026-09-15-ark-invest-sells-circle-coinbase-414811",
+      "publishedAt": "2026-09-15T09:32:31.000Z"
+    },
+    {
+      "id": "48fc06c95f57f51aa90b",
+      "source": "CoinDesk",
+      "title": "Hong Kong crypto exchange CoinEx to cease operations after 9 years in business",
+      "summary": "Founder and CEO Haipo Yang cited mounting security and compliance risks and said he rejected a sale in favor of a “clean ending.”",
+      "url": "https://www.coindesk.com/business/2026/09/15/hong-kong-crypto-exchange-coinex-to-cease-operations-after-9-years-in-business",
+      "publishedAt": "2026-09-15T09:30:58.000Z"
+    },
+    {
+      "id": "641d0b02d41fb5ec7b21",
+      "source": "Cointelegraph",
+      "title": "Bitcoin short-term holders hit 30-day profit streak as bull-market odds improve: CryptoQuant",
+      "summary": "Bitcoin short-term holders approached a full month in partial profit as analysis saw improving odds of an enduring bullish BTC price reversal.",
+      "url": "https://cointelegraph.com/markets/bitcoin-short-term-holders-hit-30-day-profit-streak-as-bull-market-odds-improve-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T09:30:31.000Z"
+    },
+    {
+      "id": "5be3cd43f45de8aa91e5",
+      "source": "Decrypt",
+      "title": "Strive's Bitcoin Stash Hits an Even 25,000 BTC After $36.6 Million Buy",
+      "summary": "The asset manager funded the entire purchase through preferred stock, pushing SATA's notional value past $1 billion for the first time.",
+      "url": "https://decrypt.co/378190/strive-bitcoin-25000-btc-after-buy",
+      "publishedAt": "2026-09-15T09:01:05.000Z"
+    },
+    {
+      "id": "b1788aa4c4c63cdc50de",
+      "source": "Cointelegraph",
+      "title": "US seeks $61M in USDT allegedly tied to sanctioned Iranian oil sales",
+      "summary": "Tether froze $61.19 million across 10 Tron addresses in 2025 that prosecutors allege were connected to black-market Iranian oil proceeds.",
+      "url": "https://cointelegraph.com/news/doj-61m-usdt-forfeiture-iranian-oil?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T08:46:35.000Z"
+    },
+    {
+      "id": "c8820e88c84b7cd39885",
+      "source": "CryptoSlate",
+      "title": "Bitcoin self-custody creates a massive cost-basis blind spot on your 2026 crypto tax forms",
+      "summary": "Under 2026 US rules, transferred coins remain outside mandatory basis reporting even when the investor's purchase cost is unchanged. The post Bitcoin self-custody creates a massive cost-basis blind spot on your 2026 crypto tax forms appeared first on…",
+      "url": "https://cryptoslate.com/bitcoin-self-custody-creates-a-massive-cost-basis-blind-spot-on-your-2026-crypto-tax-forms/",
+      "publishedAt": "2026-09-15T08:40:57.000Z"
+    },
+    {
+      "id": "a9d2c7a0624524cabf51",
+      "source": "Cointelegraph",
+      "title": "Solana more than triples transaction size limit with mainnet upgrade",
+      "summary": "Solana raised its transaction size limit to 4,096 bytes, giving developers more room for zero-knowledge proofs and transactions with multiple signatures.",
+      "url": "https://cointelegraph.com/news/solana-transaction-size-limit-4096-bytes-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T08:18:53.000Z"
+    },
+    {
+      "id": "303073aa702d6dfe5bf6",
+      "source": "CryptoSlate",
+      "title": "Proposed stablecoin rules might guarantee your dollar while making you wait a week to spend it",
+      "summary": "Proposed OCC redemption extensions leave buyers and conversion providers to finance an earlier exit when they pay before recovering dollars. The post Proposed stablecoin rules might guarantee your dollar while making you wait a week to spend it appeared…",
+      "url": "https://cryptoslate.com/proposed-stablecoin-rules-might-guarantee-your-dollar-while-making-you-wait-a-week-to-spend-it/",
+      "publishedAt": "2026-09-15T07:30:58.000Z"
+    },
+    {
+      "id": "8da5b5fde52e0a2804a0",
+      "source": "The Block",
+      "title": "Zama expands confidential Morpho lineup after first vault hits $40 million, launches private swaps on Ethereum",
+      "summary": "Users get confidential access to 12 existing Morpho vaults on Ethereum, while another four have been created as confidential-only products.",
+      "url": "https://www.theblock.co/news/defi/2026-09-15-zama-expands-confidential-morpho-lineup-after-first-vault-hits-40-million-launches-private-swaps-on-ethereum-414613",
+      "publishedAt": "2026-09-15T07:05:03.000Z"
+    },
+    {
+      "id": "66bda65fff162399820e",
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin slides to $77,000 as Senate votes on Clarity Act",
+      "summary": "Senators take a procedural vote on the crypto market structure bill later Tuesday. Bitcoin has given back 3% since touching $79,530 overnight, with XRP and zcash the only majors gaining ground.",
+      "url": "https://www.coindesk.com/business/2026/09/15/live-updates-bitcoin-slides-from-nearly-usd80-000-as-senate-votes-on-clarity-act",
+      "publishedAt": "2026-09-15T06:37:24.000Z"
+    },
+    {
+      "id": "24e8f306fb50d56d9f74",
+      "source": "The Block",
+      "title": "Crypto exchange CoinEx to shut down after 9 years, citing market slump",
+      "summary": "The exchange blamed a long market slump, shrinking volume and liquidity, and rising regulatory and compliance costs.",
+      "url": "https://www.theblock.co/news/business/2026-09-15-coinex-shut-down-414788",
+      "publishedAt": "2026-09-15T06:22:17.000Z"
+    },
+    {
+      "id": "f5e0b6a6cf886300245e",
+      "source": "CoinDesk",
+      "title": "XRP Ledger is one vote away from starting its next big payments upgrade",
+      "summary": "Batch V1.1 would let users bundle up to eight linked transactions into one operation, with 27 of 35 trusted validators now backing the change.",
+      "url": "https://www.coindesk.com/tech/2026/09/15/xrp-ledger-is-one-vote-away-from-starting-its-next-big-payments-upgrade",
+      "publishedAt": "2026-09-15T05:58:41.000Z"
+    },
+    {
+      "id": "97cb77413e35a3f708f4",
+      "source": "CryptoSlate",
+      "title": "Strategy prioritizes $950 million STRC buyback over expanding its Bitcoin treasury",
+      "summary": "From July 20 to Sept. 13, STRC repurchases absorbed about $2.57 for every $1 Strategy spent buying Bitcoin. The post Strategy prioritizes $950 million STRC buyback over expanding its Bitcoin treasury appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/strategy-prioritizes-950-million-strc-buyback-over-expanding-its-bitcoin-treasury/",
+      "publishedAt": "2026-09-15T05:40:30.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T05:39:15.000Z"
+    },
+    {
+      "id": "f82c42e826016672ed5c",
+      "source": "Cointelegraph",
+      "title": "CLARITY Act odds fall to 16% as key Democrats resist GOP’s ‘final’ offer",
+      "summary": "Banking groups also said the GOP’s final text leaves stablecoin reward loopholes, while tribal gaming interests warn that its prediction market provisions threaten tribal sovereignty.",
+      "url": "https://cointelegraph.com/news/clarity-act-odds-fall-democrats-gop-final-offer?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-15T05:32:12.000Z"
+    },
+    {
+      "id": "60aa552aedfccb9ba80d",
+      "source": "The Block",
+      "title": "Balancer proposes winding down protocol and distributing treasury to BAL holders",
+      "summary": "The proposal comes six months after corporate entity Balancer Labs shut down operations, citing a 2025 exploit that drained $128 million.",
+      "url": "https://www.theblock.co/news/defi/2026-09-15-balancer-proposes-winding-down-414782",
+      "publishedAt": "2026-09-15T05:29:13.000Z"
+    },
+    {
+      "id": "fe201c56380a1fbdfea5",
+      "source": "CoinDesk",
+      "title": "U.S. DOJ seeks $61 million in what it calls Iran's crypto-laundered black market oil sales",
+      "summary": "Prosecutors have filed a civil forfeiture complaint against what they call Iran's illegal crypto proceeds that are used to fund its military.",
+      "url": "https://www.coindesk.com/markets/2026/09/15/u-s-doj-seeks-usd61-million-in-what-it-calls-crypto-laundered-iranian-oil-proceeds",
+      "publishedAt": "2026-09-15T05:12:06.000Z"
+    },
+    {
       "id": "bf756b96f022e555b060",
       "source": "The Block",
       "title": "Ethereum, Base developers abandon effort to align account abstraction proposals",
@@ -68,7 +316,7 @@
     {
       "id": "9f54c211021736251056",
       "source": "CoinDesk",
-      "title": "Solana transactions just got more than 3 times bigger, giving an edge over Ethereum",
+      "title": "Solana transactions just got more than 3 times bigger, narrowing the gap with Ethereum",
       "summary": "Transaction V1 raises Solana’s limit to 4,096 bytes from 1,232, giving developers more room for multi-step trades, company-wallet approvals and privacy proofs.",
       "url": "https://www.coindesk.com/tech/2026/09/15/solana-transactions-just-got-more-than-3-times-bigger-giving-an-edge-over-ethereum",
       "publishedAt": "2026-09-15T04:34:10.000Z"
@@ -194,14 +442,6 @@
       "publishedAt": "2026-09-14T21:46:04.000Z"
     },
     {
-      "id": "367098cd591772da6895",
-      "source": "CryptoSlate",
-      "title": "XRP holders could earn new yield, but getting out may take up to 60 days",
-      "summary": "Firelight's planned coverage rollout would lengthen withdrawals while eligible claims could reduce exiting collateral after emissions stop. The post XRP holders could earn new yield, but getting out may take up to 60 days appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/xrp-holders-could-earn-new-yield-but-getting-out-may-take-up-to-60-days/",
-      "publishedAt": "2026-09-14T21:45:51.000Z"
-    },
-    {
       "id": "f2689b67b788650567b7",
       "source": "The Block",
       "title": "Where the Clarity Act stands ahead of Tuesday’s Senate vote",
@@ -242,22 +482,6 @@
       "publishedAt": "2026-09-14T20:54:10.000Z"
     },
     {
-      "id": "889dc0c59ec4948ca625",
-      "source": "CryptoSlate",
-      "title": "Aave V4 proposal would put DAO funds first in line to absorb lending losses",
-      "summary": "TokenLogic proposes Core WETH, USDC and USDT protection, with DAO offsets absorbing first losses before volunteer underwriters. The post Aave V4 proposal would put DAO funds first in line to absorb lending losses appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/aave-v4-proposal-would-put-dao-funds-first-in-line-to-absorb-lending-losses/",
-      "publishedAt": "2026-09-14T20:50:30.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T20:41:38.000Z"
-    },
-    {
       "id": "977c41bbfa18d79d4215",
       "source": "Bitcoin Magazine",
       "title": "Mallers: Bitcoin and AI Could Give Humans Back Their Time",
@@ -280,14 +504,6 @@
       "summary": "Aboard Air Force One, the president threw his support behind the AI-powered license plate readers that have drawn a Senate investigation and a pledged bill from Bernie Sanders.",
       "url": "https://decrypt.co/378171/trump-likes-flocks-ai-surveillance-cameras",
       "publishedAt": "2026-09-14T20:07:41.000Z"
-    },
-    {
-      "id": "1f48336dc923b6251b1e",
-      "source": "CryptoSlate",
-      "title": "TRON’s quantum plan could leave some wallets able to pay but unable to replace their keys",
-      "summary": "If validators disable a signing scheme, the draft design’s recovery path depends on which owner permissions survive. The post TRON’s quantum plan could leave some wallets able to pay but unable to replace their keys appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/trons-quantum-plan-could-leave-some-wallets-able-to-pay-but-unable-to-replace-their-keys/",
-      "publishedAt": "2026-09-14T19:45:57.000Z"
     },
     {
       "id": "cce460731c66f7a7e165",
@@ -322,14 +538,6 @@
       "publishedAt": "2026-09-14T18:56:28.000Z"
     },
     {
-      "id": "03adc94adc003a1fe569",
-      "source": "CryptoSlate",
-      "title": "India’s tokenized bond pilot starts with institutions, with retail access planned next",
-      "summary": "Three institutional issuances tested atomic settlement without changing bondholder rights, while secondary trading and retail access remain for Stage II. The post India’s tokenized bond pilot starts with institutions, with retail access planned next appeared…",
-      "url": "https://cryptoslate.com/indias-tokenized-bond-pilot-starts-with-institutions-with-retail-access-planned-next/",
-      "publishedAt": "2026-09-14T18:50:28.000Z"
-    },
-    {
       "id": "eca12bd5a0b788110d4b",
       "source": "CoinDesk",
       "title": "White House crypto adviser says Trump gave up 'historic' ethics powers in compromise",
@@ -354,14 +562,6 @@
       "publishedAt": "2026-09-14T18:26:04.000Z"
     },
     {
-      "id": "eb2f15f0a98e510e7740",
-      "source": "CryptoSlate",
-      "title": "CLARITY Act’s ‘final’ deal is already breaking down before tomorrow’s Senate vote",
-      "summary": "Opposition to the CLARITY Act widened on Sept. 14 as banks, Democrats, state attorneys general and developer advocates rejected key compromises. The backlash came hours after Senate Republicans released what they described as their final version of the…",
-      "url": "https://cryptoslate.com/clarity-acts-final-deal-is-already-breaking-down-before-tomorrows-senate-vote/",
-      "publishedAt": "2026-09-14T18:20:42.000Z"
-    },
-    {
       "id": "3b8b8cf7ca4797b5b2ce",
       "source": "The Block",
       "title": "Bitcoin production rebounds in August for BitFuFu, edges higher at CleanSpark as Canaan slips",
@@ -384,14 +584,6 @@
       "summary": "Strive’s latest Bitcoin purchase was funded entirely through its SATA preferred stock as the company continues its rapid climb among corporate BTC holders.",
       "url": "https://cointelegraph.com/news/strive-adds-469-bitcoin-to-reach-25000-btc-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-14T17:50:12.000Z"
-    },
-    {
-      "id": "e596df55f59a9ba370d0",
-      "source": "CryptoSlate",
-      "title": "$55 million Aave stablecoin pool sees just $4.4 million available for withdrawals",
-      "summary": "Monad USDT0 displayed a 6.10% APR with roughly $4.4 million unborrowed, showing why yield and withdrawal capacity need separate scrutiny. The post $55 million Aave stablecoin pool sees just $4.4 million available for withdrawals appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/55-million-aave-stablecoin-pool-sees-just-4-4-million-available-for-withdrawals/",
-      "publishedAt": "2026-09-14T17:45:51.000Z"
     },
     {
       "id": "5d1e9069f3b1a6f38a9b",
@@ -504,198 +696,6 @@
       "summary": "The latest acquisition marks a slowdown from the prior week, when Strive purchased 1,375 BTC for approximately $109 million.",
       "url": "https://www.theblock.co/news/markets/2026-09-14-strive-reaches-25000-btc-milestone-36-6-million-purchase-414631",
       "publishedAt": "2026-09-14T15:15:51.000Z"
-    },
-    {
-      "id": "5ae3a6987525addbd9a8",
-      "source": "CoinDesk",
-      "title": "Clarity Act odds surge on prediction markets, but crypto bill still faces long road",
-      "summary": "Kalshi and Polymarket bettors sharply raised the chances of U.S. crypto market structure legislation advancing, with Tuesday's Senate vote the next test.",
-      "url": "https://www.coindesk.com/policy/2026/09/14/clarity-act-odds-surge-on-prediction-markets-but-crypto-bill-still-faces-long-road",
-      "publishedAt": "2026-09-14T15:10:29.000Z"
-    },
-    {
-      "id": "bb507db590b3937463bb",
-      "source": "The Block",
-      "title": "NY Attorney General James leads bipartisan push against the Clarity Act ahead of initial Senate vote",
-      "summary": "New York Attorney General Letitia James led a group of 17 bipartisan attorneys general urging lawmakers to vote against crypto legislation.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-14-ny-attorney-general-james-bipartisan-push-against-clarity-act-initial-senate-vote-414635",
-      "publishedAt": "2026-09-14T14:43:34.000Z"
-    },
-    {
-      "id": "ddbc2327625d3dc85ca0",
-      "source": "The Block",
-      "title": "DeFi Development Corp expands Solana treasury to 2.39 million SOL, sets up $300 million CHAD ATM",
-      "summary": "The Solana treasury company established a $300 million at-the-market offering for its CHAD perpetual preferred stock.",
-      "url": "https://www.theblock.co/news/markets/2026-09-14-defi-development-corp-expands-solana-treasury-2-39-million-sol-sets-300-million-chad-atm-414633",
-      "publishedAt": "2026-09-14T14:40:16.000Z"
-    },
-    {
-      "id": "2437e5bf62bf02435c06",
-      "source": "CoinDesk",
-      "title": "Consensus heads to Hong Kong for third year with expanded focus on AI",
-      "summary": "Consensus Hong Kong will focus on institutional adoption of digital assets and the growing role of artificial intelligence in the future of money.",
-      "url": "https://www.coindesk.com/business/2026/09/14/consensus-heads-to-hong-kong-for-third-straight-year-with-expanded-focus-on-ai",
-      "publishedAt": "2026-09-14T14:37:56.000Z"
-    },
-    {
-      "id": "f6674f6dad997cfdb7ab",
-      "source": "Decrypt",
-      "title": "Morning Minute: Clarity Act Odds Soar as Trump Agrees to Ethics Provisions",
-      "summary": "What had been written off is now very back alive ahead of a key vote on Tuesday, followed by a pivotal FOMC on Wednesday. Big week ahead...",
-      "url": "https://decrypt.co/378122/morning-minute-clarity-act-odds-soar-trump-ethics",
-      "publishedAt": "2026-09-14T14:37:21.000Z"
-    },
-    {
-      "id": "6bd9194a152d96dacf8d",
-      "source": "CoinDesk",
-      "title": "Don’t let perfect be the enemy of Clarity",
-      "summary": "On September 15, the Senate has the chance to show that it can address issues in a reasonable timeframe, rather than waiting for the next market failure to act, writes the Blockchain Association's Summer Mersinger.",
-      "url": "https://www.coindesk.com/opinion/2026/09/14/don-t-let-perfect-be-the-enemy-of-clarity",
-      "publishedAt": "2026-09-14T14:34:56.000Z"
-    },
-    {
-      "id": "ad23e560e839fc1f1b6f",
-      "source": "CoinDesk",
-      "title": "Here is the revised Clarity Act ethics provision Donald Trump has agreed to",
-      "summary": "The new Clarity Act draft would force divestiture and give state attorneys general the ability to sue to enforce the ethics provision.",
-      "url": "https://www.coindesk.com/policy/2026/09/14/here-is-the-revised-clarity-act-ethics-provision-donald-trump-has-agreed-to",
-      "publishedAt": "2026-09-14T14:27:48.000Z"
-    },
-    {
-      "id": "8f90c2e66ace8d061df6",
-      "source": "CoinDesk",
-      "title": "Kaiko extends Series B funding round to $110 million with S&P Global, BNP Paribas",
-      "summary": "Financial rating giant S&P Global joined top traditional banks and exchange operators to fund Kaiko's expansion into continuous market data services",
-      "url": "https://www.coindesk.com/business/2026/09/14/kaiko-extends-series-b-funding-round-to-usd110-million-with-s-and-p-global-bnp-paribas",
-      "publishedAt": "2026-09-14T14:06:28.000Z"
-    },
-    {
-      "id": "28b549dfd19f05a7f0f5",
-      "source": "Decrypt",
-      "title": "MetaMask Adds New Wallet Protections Against Crypto Scams",
-      "summary": "MetaMask’s latest safeguards flag suspicious transfers and stop transactions that don’t match their previews.",
-      "url": "https://decrypt.co/378117/metamask-adds-wallet-protections",
-      "publishedAt": "2026-09-14T14:01:04.000Z"
-    },
-    {
-      "id": "cc92451fd564ee4ee3a0",
-      "source": "Cointelegraph",
-      "title": "Fragmented regulations limit stablecoin adoption in international finance: WTO head",
-      "summary": "Stablecoins may reduce trade finance friction, fragmented regulatory regimes limit their adoption to just 3% of global payments, according to the World Trade Organization.",
-      "url": "https://cointelegraph.com/news/fragmented-regulations-limit-stablecoin-adoption-in-international-finance-wto-director?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T13:30:00.000Z"
-    },
-    {
-      "id": "316c18ece7e6584851d9",
-      "source": "Cointelegraph",
-      "title": "HYPE price could suffer as Binance takes its revenue: Alice Liu",
-      "summary": "Token buybacks have pushed Hyperliquid to all time highs, but Alice Liu from CoinMarketCap warns that Binance poses a threat to the revenue stream it depends on to pay for them.",
-      "url": "https://cointelegraph.com/magazine/hype-price-could-suffer-as-binance-takes-its-revenue-alice-liu?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T13:30:00.000Z"
-    },
-    {
-      "id": "b675b6572962c0a192ea",
-      "source": "The Block",
-      "title": "Bitmine adds 27,180 ETH as adviser Tom DeMark sees sharp move in coming weeks",
-      "summary": "Bitmine added 27,180 ETH, taking its holdings to 5.96 million as advisor Tom DeMark forecasts a sharp upward move.",
-      "url": "https://www.theblock.co/news/business/2026-09-14-bitmine-adds-27180-eth-as-adviser-tom-demark-sees-sharp-move-in-coming-weeks-414621",
-      "publishedAt": "2026-09-14T13:20:51.000Z"
-    },
-    {
-      "id": "25388b362c9a33b08479",
-      "source": "The Block",
-      "title": "S&P Global leads strategic investment in crypto data firm Kaiko, extending Series B to $110 million",
-      "summary": "BNP Paribas, Nasdaq Ventures, RBC, Coinbase Ventures, DRW Venture Capital and several others joined the extension round.",
-      "url": "https://www.theblock.co/news/deals/2026-09-14-sp-global-leads-strategic-investment-in-crypto-data-firm-kaiko-extending-series-b-to-110-million-414618",
-      "publishedAt": "2026-09-14T13:13:06.000Z"
-    },
-    {
-      "id": "9134544450be37a2cf7f",
-      "source": "CoinDesk",
-      "title": "Bitmine adds $68 million in ether as Tom Lee sees more upside catalysts ahead",
-      "summary": "The Ethereum treasury firm is closing in on its 5% accumulation goal as Lee points to a rising ETH-BTC ratio and institutional demand.",
-      "url": "https://www.coindesk.com/business/2026/09/14/bitmine-adds-usd68-million-in-ether-as-tom-lee-sees-more-upside-catalysts-ahead",
-      "publishedAt": "2026-09-14T12:58:42.000Z"
-    },
-    {
-      "id": "3fa44274e9819b75f87e",
-      "source": "Bitcoin Magazine",
-      "title": "A Bitcoin Berkshire Model: Orange Juice",
-      "summary": "Bitcoin Magazine A Bitcoin Berkshire Model: Orange Juice Orange Juice is a new corporate Bitcoin playbook imitating Berkshire Hathaway. This post A Bitcoin Berkshire Model: Orange Juice first appeared on Bitcoin Magazine and is written by Allard Peng .",
-      "url": "https://bitcoinmagazine.com/bitcoin-for-corporations/bitcoin-berkshire-orange-juice",
-      "publishedAt": "2026-09-14T12:43:26.000Z"
-    },
-    {
-      "id": "687e9ad5c1937aaea26e",
-      "source": "The Block",
-      "title": "Strategy repurchases $139 million of STRC shares, leaves bitcoin holdings unchanged",
-      "summary": "Strategy's total holdings account for roughly 4% of the 21 million bitcoin supply cap — worth roughly $66 billion.",
-      "url": "https://www.theblock.co/news/business/2026-09-14-strategy-strc-bitcoin-mstr-414603",
-      "publishedAt": "2026-09-14T12:08:37.000Z"
-    },
-    {
-      "id": "c4762af2a318b82361c5",
-      "source": "CoinDesk",
-      "title": "Dogecoin ETFs struggled for buyers while rival XRP and Solana funds pulled in $3 billion",
-      "summary": "Bitwise's BWOW dogecoin ETF will close after 10 months, adding to weak demand across DOGE funds and raising a harder question for altcoin ETFs: What problem are they actually solving?",
-      "url": "https://www.coindesk.com/markets/2026/09/14/dogecoin-etfs-struggled-for-buyers-while-rival-xrp-and-solana-funds-pulled-in-usd3-billion",
-      "publishedAt": "2026-09-14T12:08:35.000Z"
-    },
-    {
-      "id": "dce1c9a73f55fdfa859b",
-      "source": "CoinDesk",
-      "title": "Trump agrees to stricter ethics rules to save Clarity Act crypto bill: AP",
-      "summary": "President Donald Trump agreed to expanded conflict-of-interest rules and state-level enforcement powers to secure key Senate votes for the Clarity Act.",
-      "url": "https://www.coindesk.com/policy/2026/09/14/trump-agrees-to-stricter-ethics-rules-to-save-clarity-act-crypto-bill-ap",
-      "publishedAt": "2026-09-14T12:07:19.000Z"
-    },
-    {
-      "id": "d86feef7b3bfbd3a2668",
-      "source": "CoinDesk",
-      "title": "FCA considers exempting tokenized gold from fund rules to defend London market",
-      "summary": "The Financial Conduct Authority is exploring a bespoke regulatory framework with the Treasury to carve out digital gold from traditional fund laws.",
-      "url": "https://www.coindesk.com/business/2026/09/14/fca-considers-exempting-tokenized-gold-from-fund-rules-to-defend-london-market",
-      "publishedAt": "2026-09-14T11:58:28.000Z"
-    },
-    {
-      "id": "53dc85ea4fcdbb86c142",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin climbs near $79,000 as stocks narrow declines",
-      "summary": "The Federal Reserve's two-day policy meeting begins tomorrow, with nearly all now expecting the U.S. central bank to hike its benchmark policy rate by 25 basis points.",
-      "url": "https://www.coindesk.com/tech/2026/09/14/live-updates-bitcoin-manages-small-gains-as-stocks-drop-on-ai-concern-oil-surges",
-      "publishedAt": "2026-09-14T11:44:21.000Z"
-    },
-    {
-      "id": "f1949d5e3a16ecc5d02c",
-      "source": "Cointelegraph",
-      "title": "EU cyber rules put crypto wallet makers on 24-hour reporting clock",
-      "summary": "Crypto wallet providers must submit an early vulnerability report within 24 hours and a full notification within 72 hours of exploits, or risk administrative fines of as much as $17.3 million.",
-      "url": "https://cointelegraph.com/news/eu-cyber-rules-put-crypto-wallet-24-hour-reporting?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-14T11:38:44.000Z"
-    },
-    {
-      "id": "f8bec72105d8d1d30a57",
-      "source": "CoinDesk",
-      "title": "Crypto market outperforms as call for slower AI development weighs on tech stocks",
-      "summary": "Your day-ahead look for Sept. 14, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/09/14/crypto-market-outperforms-as-call-for-slower-ai-development-weighs-on-tech-stocks",
-      "publishedAt": "2026-09-14T11:15:00.000Z"
-    },
-    {
-      "id": "e316b6fb8f163e572dea",
-      "source": "Decrypt",
-      "title": "India Begins Tokenizing Its $620 Billion Corporate Bond Market",
-      "summary": "SEBI and the RBI's \"Demat 2.0\" pilot issues corporate bonds as digital tokens and settles them with the wholesale digital rupee, with three companies already raising about $107 million.",
-      "url": "https://decrypt.co/378120/india-begins-tokenizing-its-620-billion-corporate-bond-market",
-      "publishedAt": "2026-09-14T11:01:05.000Z"
-    },
-    {
-      "id": "8257b47d512d07e12e7c",
-      "source": "CoinDesk",
-      "title": "Bitcoin climbs to $78,000 as crypto sits out the AI selloff",
-      "summary": "Bitcoin rose 1.9% since midnight UTC while Nasdaq 100 index futures fell 1.65% on calls to slow AI development and crude gained almost 4% on a Saudi pipeline closure.",
-      "url": "https://www.coindesk.com/markets/2026/09/14/bitcoin-climbs-to-usd78-000-as-crypto-sits-out-the-ai-selloff",
-      "publishedAt": "2026-09-14T10:09:41.000Z"
     }
   ]
 }
