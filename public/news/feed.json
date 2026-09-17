@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T21:23:36.700Z",
+  "generatedAt": "2026-09-17T04:59:17.827Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,94 @@
     }
   ],
   "items": [
+    {
+      "id": "bc4284c7363b8c5b1a37",
+      "source": "CoinDesk",
+      "title": "Zcash jumps 23% as bitcoin and major tokens rise despite Fed’s first hike since 2023",
+      "summary": "Bitcoin traded above $76,000 as the Fed projected limited further tightening, while Paradigm’s Matt Huang discussed Zcash’s role as a privacy complement to bitcoin.",
+      "url": "https://www.coindesk.com/markets/2026/09/17/zcash-jumps-23-as-bitcoin-and-major-tokens-rise-despite-fed-s-first-hike-since-2023",
+      "publishedAt": "2026-09-17T04:47:27.000Z"
+    },
+    {
+      "id": "4821eb92a628f417270c",
+      "source": "CoinDesk",
+      "title": "Goldman pivots, now forecasts Fed rate hike in October",
+      "summary": "The Fed is likely to raise rates by 25 basis points in October, Goldman said, drawing attention to Fed's own hawkish near term rate projections.",
+      "url": "https://www.coindesk.com/markets/2026/09/17/goldman-expects-another-fed-rate-hike-in-october",
+      "publishedAt": "2026-09-17T04:17:55.000Z"
+    },
+    {
+      "id": "901dc8d47e18e973a1ad",
+      "source": "CryptoSlate",
+      "title": "Ethereum’s client diversity picture fractures under incompatible estimates",
+      "summary": "Client estimates already disagree, while daily key rotation could weaken the public traces used to detect concentrated risk. The post Ethereum’s client diversity picture fractures under incompatible estimates appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/ethereums-client-diversity-picture-fractures-under-incompatible-estimates/",
+      "publishedAt": "2026-09-17T03:30:37.000Z"
+    },
+    {
+      "id": "5ddf3d8f7d0bf0efb989",
+      "source": "Cointelegraph",
+      "title": "Bitcoin absorbs Fed rate hike as officials see more tightening",
+      "summary": "Bitcoin showed little immediate reaction to the Fed’s first rate increase since 2023, but 16 of 18 officials expect at least one more hike before the end of the year.",
+      "url": "https://cointelegraph.com/markets/bitcoin-absorbs-fed-rate-hike-as-officials-see-more-tightening?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-17T02:52:08.000Z"
+    },
+    {
+      "id": "85b988a123b5be17373e",
+      "source": "The Block",
+      "title": "‘Not the end’: Sen. Gillibrand says Democrats still committed to passing Clarity Act",
+      "summary": "Industry analysts say it is highly unlikely for the bill to pass this Congress, and instead pointed to the SEC and CFTC's rulemaking efforts.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-16-sen-gillibrand-still-committed-to-clarity-415326",
+      "publishedAt": "2026-09-17T02:09:31.000Z"
+    },
+    {
+      "id": "c8fcc42208f1b17bb7b9",
+      "source": "CryptoSlate",
+      "title": "Circle opens Arc mainnet as it seeks an edge for USDC utility",
+      "summary": "The network uses one USDC balance for payments and fees, but catching its rival depends on additional demand. The post Circle opens Arc mainnet as it seeks an edge for USDC utility appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/circle-opens-arc-mainnet-as-it-seeks-an-edge-for-usdc-utility/",
+      "publishedAt": "2026-09-17T01:50:26.000Z"
+    },
+    {
+      "id": "88c232e40a007decf5db",
+      "source": "The Block",
+      "title": "House committee moves to codify Trump’s Strategic Bitcoin Reserve",
+      "summary": "A House committee advanced a bill to create a strategic bitcoin reserve, which would codify Trump's plan for permanent bitcoin holdings.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-16-house-committee-moves-bitcoin-reserve-bill-415317",
+      "publishedAt": "2026-09-17T00:56:10.000Z"
+    },
+    {
+      "id": "45004769cb4022ab9df6",
+      "source": "Cointelegraph",
+      "title": "US lawmakers advance bill to lock Trump’s Bitcoin reserve into law",
+      "summary": "The legislation seeks to codify Trump’s Bitcoin reserve policy, locking up Bitcoin acquired through civil and criminal forfeiture for 20 years.",
+      "url": "https://cointelegraph.com/news/us-bitcoin-reserve-bill-passes-house-committee?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-17T00:23:44.000Z"
+    },
+    {
+      "id": "8070640e58f5599d5758",
+      "source": "CryptoSlate",
+      "title": "ECB opens merchant applications for controlled 2027 digital euro pilot",
+      "summary": "Online merchants can apply by Oct. 27 for the controlled 2027 pilot, while issuance remains contingent on EU legislation. The post ECB opens merchant applications for controlled 2027 digital euro pilot appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/ecb-opens-merchant-applications-for-controlled-2027-digital-euro-pilot/",
+      "publishedAt": "2026-09-17T00:20:31.000Z"
+    },
+    {
+      "id": "810ea0310360b907f5dc",
+      "source": "CryptoSlate",
+      "title": "Bitcoin miners have amassed $100 billion of AI deals, but almost none of the revenue exists yet",
+      "summary": "Bitcoin miners have signed more than $100 billion in AI contracts while generating barely $1.1 billion in annualized revenue. More than 4 gigawatts of artificial intelligence and high-performance computing capacity are under contract across publicly traded…",
+      "url": "https://cryptoslate.com/bitcoin-miners-have-amassed-100-billion-of-ai-deals-but-almost-none-of-the-revenue-exists-yet/",
+      "publishedAt": "2026-09-16T22:10:35.000Z"
+    },
+    {
+      "id": "36aa24882ac4265f4de3",
+      "source": "Decrypt",
+      "title": "Crypto Tax Bill Clears House Committee After Clarity Act Setback",
+      "summary": "The bill would exempt qualifying crypto fees from gain-or-loss calculations and restrict tax-loss deductions on tokens sold and quickly repurchased.",
+      "url": "https://decrypt.co/378449/crypto-tax-bill-clears-house-committee",
+      "publishedAt": "2026-09-16T21:46:03.000Z"
+    },
     {
       "id": "aa25018ec65c67a4a73c",
       "source": "Decrypt",
@@ -338,14 +426,6 @@
       "publishedAt": "2026-09-16T15:50:07.000Z"
     },
     {
-      "id": "eeb9f1df9e6163aabf4f",
-      "source": "CryptoSlate",
-      "title": "Cardano fees covered just 0.7% of staking rewards as transactions fall 72%",
-      "summary": "Leios can add capacity, but Cardano still needs enough paying demand to close a roughly 150-fold gap. The post Cardano fees covered just 0.7% of staking rewards as transactions fall 72% appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/cardano-fees-covered-just-0-7-of-staking-rewards-as-transactions-fall-72/",
-      "publishedAt": "2026-09-16T15:45:51.000Z"
-    },
-    {
       "id": "61b48dd2842adb0c81d1",
       "source": "Bitcoin Magazine",
       "title": "Deutsche Bank To Debut Bitcoin Custody for Institutional Clients",
@@ -402,14 +482,6 @@
       "publishedAt": "2026-09-16T14:35:43.000Z"
     },
     {
-      "id": "7766ab09d51e52ae0602",
-      "source": "CryptoSlate",
-      "title": "UK opens a major loophole for stablecoin payments while clamping down on crypto lending",
-      "summary": "Routine transfers and cash exchanges could qualify, while return-right lending, crypto swaps and continuing custody remain potentially regulated. The post UK opens a major loophole for stablecoin payments while clamping down on crypto lending appeared first…",
-      "url": "https://cryptoslate.com/uk-opens-a-major-loophole-for-stablecoin-payments-while-clamping-down-on-crypto-lending/",
-      "publishedAt": "2026-09-16T14:30:12.000Z"
-    },
-    {
       "id": "edf65b45a3460a68acd2",
       "source": "CoinDesk",
       "title": "Blockchain finance platform Theo launches tokenized silver backed by $40 million in active leases",
@@ -426,28 +498,12 @@
       "publishedAt": "2026-09-16T14:00:00.000Z"
     },
     {
-      "id": "6fca1695c7d14fb5b84c",
-      "source": "CryptoSlate",
-      "title": "Unlocking the Trillion-Token Era: B.AI’s Global Settlement Layer for the Agent Economy",
-      "summary": "Summary: Positioned squarely between foundation models and AI agents, B.AI is integrating compute routing, decentralized settlement, and full-stack agent infrastructure to establish itself as an undoubted spearhead in AI infrastructure. Just five months…",
-      "url": "https://cryptoslate.com/bai-global-settlement-layer-ai-agent-economy/",
-      "publishedAt": "2026-09-16T13:44:14.000Z"
-    },
-    {
       "id": "1dc18f10cdbddaaf3a1f",
       "source": "Cointelegraph",
       "title": "Revolut ID thefts highlight KYC’s dangers: Here’s how to fix it",
       "summary": "Zero-knowledge technology could let companies verify who you are without storing your identity documents. So why isn’t it already standard practice?",
       "url": "https://cointelegraph.com/magazine/revolut-id-thefts-highlight-kycs-dangers-heres-how-to-fix-it?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-16T13:30:00.000Z"
-    },
-    {
-      "id": "75ca4c081a3a32e5fe14",
-      "source": "CryptoSlate",
-      "title": "Celsius sues BitMEX for $495 million just 11 days before exchange shutdown",
-      "summary": "Celsius Network’s bankruptcy estate has sued BitMEX over a 2020 liquidation cascade it says cost more than 6,360 Bitcoin. The complaint, filed Sept. 12 in the US Bankruptcy Court for the Southern District of New York, accuses entities behind the crypto…",
-      "url": "https://cryptoslate.com/celsius-sues-bitmex-for-495-million-just-11-days-before-exchange-shutdown/",
-      "publishedAt": "2026-09-16T13:20:18.000Z"
     },
     {
       "id": "07e47361a2f2927ccc03",
@@ -640,62 +696,6 @@
       "summary": "Bitcoin exchange demand on Coinbase declined after the US Senate voted against the CLARITY Act, while traders sent BTC to exchanges at an unrealized loss.",
       "url": "https://cointelegraph.com/markets/bitcoin-coinbase-premium-hits-monthly-low-as-clarity-act-vote-squeezes-us-demand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-16T09:55:16.000Z"
-    },
-    {
-      "id": "44d32ecf7fbf9cee0716",
-      "source": "CoinDesk",
-      "title": "Two Robinhood engineers charged with insider trading using Hyperliquid perpetuals",
-      "summary": "U.S. prosecutors allege two engineers used confidential Robinhood token listing data to front-run announcements using Hyperliquid perpetual futures.",
-      "url": "https://www.coindesk.com/business/2026/09/16/two-robinhood-engineers-charged-with-insider-trading-using-hyperliquid-perpetuals",
-      "publishedAt": "2026-09-16T09:42:37.000Z"
-    },
-    {
-      "id": "f549fc8f889227f2d63c",
-      "source": "Decrypt",
-      "title": "UK Backs Money Laundering Crackdown With $676M and 500 New Officers",
-      "summary": "The Home Office names crypto alongside fintech and AI as drivers of a threat the NCA puts at £100 billion a year in the UK.",
-      "url": "https://decrypt.co/378337/uk-backs-money-laundering-crackdown-with-676m-and-500-new-officers",
-      "publishedAt": "2026-09-16T09:41:53.000Z"
-    },
-    {
-      "id": "6e60b2121911debe344a",
-      "source": "Decrypt",
-      "title": "Tonkeeper Becomes Keeper as Wallet Adds Bitcoin, Ethereum, and Tron",
-      "summary": "The self-custodial wallet is expanding beyond The Open Network, with support for seven blockchains and more financial products planned.",
-      "url": "https://decrypt.co/378265/tonkeeper-keeper-adds-bitcoin-ethereum-tron",
-      "publishedAt": "2026-09-16T09:01:03.000Z"
-    },
-    {
-      "id": "d1ab759ab138b1a4a6d4",
-      "source": "Cointelegraph",
-      "title": "ECB seeks online merchants for 2027 digital euro pilot",
-      "summary": "Euro-area online and mobile merchants can apply until Oct. 27 to test beta digital euro payments in a 12-month pilot.",
-      "url": "https://cointelegraph.com/news/ecb-online-merchants-2027-digital-euro-pilot?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-16T08:36:44.000Z"
-    },
-    {
-      "id": "c0e20b2a5853905da201",
-      "source": "CoinDesk",
-      "title": "Ethereum, Base give up on common wallet standard after months of talks",
-      "summary": "Ethereum is moving ahead with EIP-8141 while Coinbase-backed Base backs EIP-8130, leaving wallets and apps that span both networks facing different transaction systems.",
-      "url": "https://www.coindesk.com/tech/2026/09/16/ethereum-base-give-up-on-common-wallet-standard-after-months-of-talks",
-      "publishedAt": "2026-09-16T08:07:59.000Z"
-    },
-    {
-      "id": "15486993865aec705783",
-      "source": "Decrypt",
-      "title": "Crypto Exchange CoinEx Is Shutting Down After Nine Years, Giving Users Until December to Cash Out",
-      "summary": "The Hong Kong-founded exchange blamed a prolonged crypto winter and rising compliance costs, closing the books on a run that began in December 2017.",
-      "url": "https://decrypt.co/378324/coinex-shutting-down",
-      "publishedAt": "2026-09-16T08:01:03.000Z"
-    },
-    {
-      "id": "478f041c48c13e59caaf",
-      "source": "The Block",
-      "title": "Underdog sues Connecticut to stop sports prediction market crackdown",
-      "summary": "The lawsuit follows cease-and-desist orders the state issued to prediction market platforms, including Underdog, Polymarket, and Coinbase.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-16-underdog-sues-connecticut-415242",
-      "publishedAt": "2026-09-16T07:08:26.000Z"
     }
   ]
 }
