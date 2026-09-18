@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T21:28:16.956Z",
+  "generatedAt": "2026-09-18T04:51:43.939Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 36,
       "error": null
     },
     {
@@ -58,6 +58,126 @@
   ],
   "items": [
     {
+      "id": "65fcfaf4b057e2e56b72",
+      "source": "CoinDesk",
+      "title": "Ether and XRP ETFs post outflows as bitcoin moves above $77,000",
+      "summary": "Ether funds shed money for a third straight session even as the token rose, while every major gained and zcash extended its run.",
+      "url": "https://www.coindesk.com/markets/2026/09/18/ether-and-xrp-etfs-post-outflows-as-bitcoin-moves-above-usd77-000",
+      "publishedAt": "2026-09-18T04:49:17.000Z"
+    },
+    {
+      "id": "9db8105312e2b56adf58",
+      "source": "Cointelegraph",
+      "title": "Cardano’s IOG warns users to avoid YouTube channel amid apparent hijack",
+      "summary": "Input Output Group told users to avoid its YouTube channel after it began livestreaming a suspected AI-manipulated Charles Hoskinson video promising to “double your wealth.”",
+      "url": "https://cointelegraph.com/news/cardanos-iog-warns-users-to-avoid-youtube-channel-amid-giveaway-scam?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-18T04:11:40.000Z"
+    },
+    {
+      "id": "08de8b2863444b46a165",
+      "source": "CryptoSlate",
+      "title": "XRPL’s new lending tool could lock up your XRP from minutes to decades",
+      "summary": "Closed-ended vaults would bar withdrawals during fixed investment terms and count interest only when paid, but activation and XRP-denominated use remain unproven. The post XRPL’s new lending tool could lock up your XRP from minutes to decades appeared first…",
+      "url": "https://cryptoslate.com/xrpls-new-lending-tool-could-lock-up-your-xrp-from-minutes-to-decades/",
+      "publishedAt": "2026-09-18T03:40:57.000Z"
+    },
+    {
+      "id": "01d908d9d59613c3568f",
+      "source": "Cointelegraph",
+      "title": "World launches self-custodial ‘super app’ World Money",
+      "summary": "World Money is rolling out across more than 150 countries, combining stablecoin payments, digital asset rewards and trading in a self-custodial app.",
+      "url": "https://cointelegraph.com/news/world-launches-self-custodial-super-app-world-money?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-18T03:40:28.000Z"
+    },
+    {
+      "id": "118813146595697bd51c",
+      "source": "CoinDesk",
+      "title": "Bank of Japan raises interest rates by 25 basis points. Bitcoin tops $77,000",
+      "summary": "The yen declined and BTC rose after the BOJ hiked rates to the highest level in 31 years.",
+      "url": "https://www.coindesk.com/markets/2026/09/17/boj-rate-hike",
+      "publishedAt": "2026-09-18T03:03:38.000Z"
+    },
+    {
+      "id": "dac76aaf3927a707a4c0",
+      "source": "Cointelegraph",
+      "title": "US sanctions Iran’s BitBank, saying it processes ‘Hormuz Safe’ Bitcoin payments",
+      "summary": "US Treasury says the Iranian exchange processed payments received through Iran’s Strait of Hormuz maritime scheme and helped move hundreds of millions of dollars in Bitcoin to the IRGC.",
+      "url": "https://cointelegraph.com/news/us-sanctions-irans-bitbank-saying-it-processes-hormuz-safe-bitcoin-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-18T01:33:54.000Z"
+    },
+    {
+      "id": "3c36be2a984e01e480b7",
+      "source": "CryptoSlate",
+      "title": "From Kaiko to OpenZeppelin, S&P Global is quietly preparing for markets that never close",
+      "summary": "S&P Global agreed to acquire smart contract security firm OpenZeppelin, expanding its digital asset business into the technology underpinning tokenized finance. On Sept. 17, the financial data and ratings company said that OpenZeppelin will continue…",
+      "url": "https://cryptoslate.com/from-kaiko-to-openzeppelin-sp-global-is-quietly-preparing-for-markets-that-never-close/",
+      "publishedAt": "2026-09-18T01:30:37.000Z"
+    },
+    {
+      "id": "cd3519600a15a6781687",
+      "source": "Bitcoin Magazine",
+      "title": "Dan Hillery: Digital Credit Could Rival BTC’s $1.5 Trillion Market Cap",
+      "summary": "Bitcoin Magazine Dan Hillery: Digital Credit Could Rival BTC’s $1.5 Trillion Market Cap Two years ago, Bitcoin credit barely existed. Today, UTXO’s Dan Hillery breaks down how a $16B market could one day rival the network itself. This post Dan Hillery:…",
+      "url": "https://bitcoinmagazine.com/videos/dan-hillery-digital-credit-could-rival-btcs-1-5-trillion-market-cap",
+      "publishedAt": "2026-09-18T00:57:38.000Z"
+    },
+    {
+      "id": "dd791a7301b08411c489",
+      "source": "Cointelegraph",
+      "title": "North Korea drives onchain malware surge, CoinEx shuts: Asia Express",
+      "summary": "North Korea and Iran account for the majority of onchain malware, while Malaysia has been named among the most crypto curious Islamic nations.",
+      "url": "https://cointelegraph.com/magazine/north-korea-drives-onchain-malware-surge-coinex-shuts-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-17T23:49:23.000Z"
+    },
+    {
+      "id": "0128a74324b78a176113",
+      "source": "CryptoSlate",
+      "title": "Aave V4’s Arc market is swimming in $76 million of USDC nobody is borrowing",
+      "summary": "Less than $100,000 was borrowed as utilization hovered near 0.1%, separating supply appetite from credit demand. The post Aave V4’s Arc market is swimming in $76 million of USDC nobody is borrowing appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/aave-v4s-arc-market-is-swimming-in-76-million-of-usdc-nobody-is-borrowing/",
+      "publishedAt": "2026-09-17T23:10:30.000Z"
+    },
+    {
+      "id": "18f5f64eab11ba71ff1d",
+      "source": "Decrypt",
+      "title": "OpenAI Models Are Writing Their Own Jailbreak Instructions—And Sometimes Obeying Them",
+      "summary": "OpenAI's new transparency framework reveals AI models that invented fake \"breach alerts,\" coached themselves to hide mistakes, and smuggled a file onto the public internet to talk to each other.",
+      "url": "https://decrypt.co/378582/openai-models-ai-jailbreak-instructions-obeying",
+      "publishedAt": "2026-09-17T22:31:03.000Z"
+    },
+    {
+      "id": "58655d8e6e49a860a7e2",
+      "source": "Bitcoin Magazine",
+      "title": "Treasury Sanctions Iranian Crypto Exchange BitBank Over Bitcoin Transfers to IRGC",
+      "summary": "Bitcoin Magazine Treasury Sanctions Iranian Crypto Exchange BitBank Over Bitcoin Transfers to IRGC The U.S. is targeting Iran's use of crypto — specifically bitcoin. This post Treasury Sanctions Iranian Crypto Exchange BitBank Over Bitcoin Transfers to IRGC…",
+      "url": "https://bitcoinmagazine.com/news/treasury-sanctions-iran-bitcoin-exchange",
+      "publishedAt": "2026-09-17T21:48:51.000Z"
+    },
+    {
+      "id": "7deb8ff6e1e50d62a03b",
+      "source": "CoinDesk",
+      "title": "Real stocks are finally coming on blockchain. Here’s how the SEC wants it to work",
+      "summary": "The SEC is giving tokenized stocks a regulated U.S. pathway, while keeping trading volumes, access and issuer rights tightly controlled.",
+      "url": "https://www.coindesk.com/business/2026/09/17/real-stocks-are-finally-coming-on-blockchain-here-s-how-the-sec-wants-it-to-work",
+      "publishedAt": "2026-09-17T21:47:22.000Z"
+    },
+    {
+      "id": "c2008ab60e57a44618b5",
+      "source": "Decrypt",
+      "title": "Security Experts Want the US and China to Promise Never to Let AI Control Nukes",
+      "summary": "Brookings researchers in the US and China are urging Washington and Beijing to agree to keep humans in control of nuclear weapons.",
+      "url": "https://decrypt.co/378575/us-china-never-let-ai-control-nukes",
+      "publishedAt": "2026-09-17T21:46:03.000Z"
+    },
+    {
+      "id": "2a04ce28dbb373a73a52",
+      "source": "CoinDesk",
+      "title": "The Ondo Finance succession crisis gets messier as Kathleen Allman’s daughter alleges ‘dementia’, alcoholism and reckless spending",
+      "summary": "The estranged daughter of 77-year-old Kathleen Allman has petitioned a Hawaiian court to establish a limited conservatorship to protect her parents’ share of her brother’s stake in Ondo.",
+      "url": "https://www.coindesk.com/business/2026/09/17/the-ondo-finance-succession-crisis-gets-messier-as-kathleen-allman-s-daughter-alleges-dementia-alcoholism-and-reckless-spending",
+      "publishedAt": "2026-09-17T21:28:35.000Z"
+    },
+    {
       "id": "922d39cf9fbc081b46ec",
       "source": "Decrypt",
       "title": "Your Data Could Outlive the Startup You Gave It To. Elon Musk Wants to Buy What's Left",
@@ -88,14 +208,6 @@
       "summary": "Chipotle is piloting a Palantir-built food safety dashboard after a summer of outbreaks, putting employee data in the hands of a company seeded by the CIA's venture arm.",
       "url": "https://decrypt.co/378553/why-chipotle-working-with-palantir",
       "publishedAt": "2026-09-17T20:46:03.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-17T20:44:00.000Z"
     },
     {
       "id": "7a6e53c9e3f94c566418",
@@ -410,14 +522,6 @@
       "publishedAt": "2026-09-17T13:32:01.000Z"
     },
     {
-      "id": "90331755113bc8d45149",
-      "source": "CryptoSlate",
-      "title": "Why standard Bitcoin transfer figures are off by up to six times, according to the BIS",
-      "summary": "The working paper says contract proliferation and cross-chain stablecoin use make raw activity totals noisy measures of economic reality. The post Why standard Bitcoin transfer figures are off by up to six times, according to the BIS appeared first on…",
-      "url": "https://cryptoslate.com/why-standard-bitcoin-transfer-figures-are-off-by-up-to-six-times-according-to-the-bis/",
-      "publishedAt": "2026-09-17T13:30:22.000Z"
-    },
-    {
       "id": "9ee03984f8d009212d3b",
       "source": "Cointelegraph",
       "title": "Bitcoin treasury firms can outperform BTC... but is the risk worth taking?",
@@ -474,14 +578,6 @@
       "publishedAt": "2026-09-17T12:41:53.000Z"
     },
     {
-      "id": "2768850058547d72c53c",
-      "source": "CryptoSlate",
-      "title": "A $29B private exodus from US bonds is threatening Bitcoin’s next big rally",
-      "summary": "July’s bill rebound masked a split at longer maturities as official buying offset most private selling and September’s 10-year yield held near 5%. The post A $29B private exodus from US bonds is threatening Bitcoin’s next big rally appeared first on…",
-      "url": "https://cryptoslate.com/a-29b-private-exodus-from-us-bonds-is-threatening-bitcoins-next-big-rally/",
-      "publishedAt": "2026-09-17T12:40:18.000Z"
-    },
-    {
       "id": "ea17f836159cdcd2d911",
       "source": "CoinDesk",
       "title": "Ethereum’s upcoming Glamsterdam upgrade clears rehearsal for a big jump in capacity",
@@ -512,14 +608,6 @@
       "summary": "The privacy coin rose double digits Thursday and 168% over the past month in the wake of the NU7 upgrade vote.",
       "url": "https://decrypt.co/378460/zcash-closes-on-1400-after-coinholders-vote-to-keep-bitcoin-style-halvings",
       "publishedAt": "2026-09-17T12:05:13.000Z"
-    },
-    {
-      "id": "c247b6dbf4673218fe11",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s Realized Cap contracts for the first time in a month as BTC price faces a $71,300 risk",
-      "summary": "Two ETF outflow sessions arrived while price stayed near the market mean, setting a specific recovery test. The post Bitcoin’s Realized Cap contracts for the first time in a month as BTC price faces a $71,300 risk appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoins-realized-cap-contracts-for-the-first-time-in-a-month-as-btc-price-faces-a-71300-risk/",
-      "publishedAt": "2026-09-17T12:00:40.000Z"
     },
     {
       "id": "9fce0a23a8a17257a4ab",
@@ -608,94 +696,6 @@
       "summary": "Revolut says it received no direct contact despite separate ransom demands for $3 million in Monero and 10,000 Bitcoin from competing breach claimants.",
       "url": "https://cointelegraph.com/news/revolut-data-breach-monero-ransom-no-direct-contact?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-17T09:57:51.000Z"
-    },
-    {
-      "id": "eae8f4f989f469d6e9ac",
-      "source": "Cointelegraph",
-      "title": "Polymarket users referred to prosecutors in South Korea: Report",
-      "summary": "South Korean police reportedly referred 18 Polymarket users to prosecutors in a gambling probe involving 26 people and $12.7 million in bets.",
-      "url": "https://cointelegraph.com/news/south-korea-polymarket-users-prosecutors-gambling-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-17T09:37:32.000Z"
-    },
-    {
-      "id": "2f9977a47d3356e64b4c",
-      "source": "Cointelegraph",
-      "title": "Bitcoin treasuries buy just 5.9K BTC in three months as paper losses linger",
-      "summary": "Bitcoin corporate treasuries remained at an unrealized loss on their holdings as the price fell below $80,000 and fresh capital inflows dwindled.",
-      "url": "https://cointelegraph.com/markets/bitcoin-treasuries-buy-just-59k-btc-in-three-months-as-paper-losses-linger?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-17T09:00:31.000Z"
-    },
-    {
-      "id": "79dcbf09eb5b7dd69889",
-      "source": "CoinDesk",
-      "title": "Bitcoin faces 2022 parallels as Federal Reserve resumes rate increases",
-      "summary": "Bitcoin’s drawdown mirrors its position before the Fed’s first hike in March 2022, raising questions over whether a relief rally could precede further losses.",
-      "url": "https://www.coindesk.com/markets/2026/09/17/bitcoin-faces-2022-parallels-as-federal-reserve-resumes-rate-hikes",
-      "publishedAt": "2026-09-17T08:41:48.000Z"
-    },
-    {
-      "id": "1ef26f6f760eac1992ee",
-      "source": "CoinDesk",
-      "title": "Ripple adds XRP payments to Stripe and Tempo’s AI standard in new developer kit",
-      "summary": "The update expands support for automated payments in XRP and RLUSD, with tools that let agents pay repeatedly for services and manage wallets across blockchains.",
-      "url": "https://www.coindesk.com/tech/2026/09/17/ripple-adds-xrp-payments-to-stripe-and-tempo-s-ai-standard-in-new-developer-kit",
-      "publishedAt": "2026-09-17T07:54:33.000Z"
-    },
-    {
-      "id": "622fd6cd6c6908d99b9c",
-      "source": "CoinDesk",
-      "title": "U.S. diesel prices hit record high as bitcoin and gold struggle",
-      "summary": "Record diesel prices could feed through to consumer price inflation, confirming more Fed rate hikes. The central bank appears determined to raise rates into a oil supply shock.",
-      "url": "https://www.coindesk.com/markets/2026/09/17/u-s-diesel-prices-hit-record-high-as-bitcoin-and-gold-struggle",
-      "publishedAt": "2026-09-17T07:27:07.000Z"
-    },
-    {
-      "id": "27a60556eabc40947841",
-      "source": "The Block",
-      "title": "South Korean police charge 26 Polymarket users for illegal gambling: report",
-      "summary": "The country blocked local access to Polymarket last month after its media regulator ruled that the platform offers illegal gambling.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-17-south-korean-police-charge-polymarket-users-415333",
-      "publishedAt": "2026-09-17T06:12:50.000Z"
-    },
-    {
-      "id": "fd16818885cf947a2637",
-      "source": "Cointelegraph",
-      "title": "BitMEX faces Celsius lawsuit ahead of exchange closure",
-      "summary": "The Celsius estate alleges BitMEX wrongfully liquidated and seized 6,360 BTC, worth nearly $490 million, during the March 2020 market crash.",
-      "url": "https://cointelegraph.com/news/celsius-estate-bitmex-6360-btc-liquidation-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-17T05:55:18.000Z"
-    },
-    {
-      "id": "8280a5becc12d51c2a6b",
-      "source": "Cointelegraph",
-      "title": "OpenAI discloses 6 new cases of ‘misaligned’ AI behavior",
-      "summary": "The six cases are separate from July’s incident, when OpenAI models escaped containment and hacked Hugging Face during a security evaluation.",
-      "url": "https://cointelegraph.com/news/openai-discloses-6-new-cases-of-misaligned-ai-behavior?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-17T05:49:06.000Z"
-    },
-    {
-      "id": "bc4284c7363b8c5b1a37",
-      "source": "CoinDesk",
-      "title": "Zcash jumps 23% as bitcoin and major tokens rise despite Fed’s first hike since 2023",
-      "summary": "Bitcoin traded above $76,000 as the Fed projected limited further tightening, while Paradigm’s Matt Huang discussed Zcash’s role as a privacy complement to bitcoin.",
-      "url": "https://www.coindesk.com/markets/2026/09/17/zcash-jumps-23-as-bitcoin-and-major-tokens-rise-despite-fed-s-first-hike-since-2023",
-      "publishedAt": "2026-09-17T04:47:27.000Z"
-    },
-    {
-      "id": "4821eb92a628f417270c",
-      "source": "CoinDesk",
-      "title": "Goldman pivots, now forecasts Fed rate hike in October",
-      "summary": "The Fed is likely to raise rates by 25 basis points in October, Goldman said, drawing attention to Fed's own hawkish near term rate projections.",
-      "url": "https://www.coindesk.com/markets/2026/09/17/goldman-expects-another-fed-rate-hike-in-october",
-      "publishedAt": "2026-09-17T04:17:55.000Z"
-    },
-    {
-      "id": "5ddf3d8f7d0bf0efb989",
-      "source": "Cointelegraph",
-      "title": "Bitcoin absorbs Fed rate hike as officials see more tightening",
-      "summary": "Bitcoin showed little immediate reaction to the Fed’s first rate increase since 2023, but 16 of 18 officials expect at least one more hike before the end of the year.",
-      "url": "https://cointelegraph.com/markets/bitcoin-absorbs-fed-rate-hike-as-officials-see-more-tightening?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-17T02:52:08.000Z"
     }
   ]
 }
