@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T11:09:29.621Z",
+  "generatedAt": "2026-09-19T15:56:32.281Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -58,20 +58,108 @@
   ],
   "items": [
     {
+      "id": "ddbbdfb2e40dd6ba1b6f",
+      "source": "CryptoSlate",
+      "title": "ZEC’s 100% rally above $1500 sends Grayscale’s Zcash ETF within $85 million of $1 billion",
+      "summary": "ZCSH holders would receive three shares for every one held as the fund cuts per-share NAV proportionately without changing investment value solely because of the split. The post ZEC’s 100% rally above $1500 sends Grayscale’s Zcash ETF within $85 million of…",
+      "url": "https://cryptoslate.com/zecs-100-rally-above-1500-sends-grayscales-zcash-etf-within-85-million-of-1-billion/",
+      "publishedAt": "2026-09-19T15:50:04.000Z"
+    },
+    {
+      "id": "9fdb1576766129d70ac1",
+      "source": "The Block",
+      "title": "Visa to close Crossmint memecoin rewards loophole following The Block investigation: report",
+      "summary": "Though the Crossmint-powered memecoin sales are still live on both apps, Visa's grace period is expected to end next week, per the report.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-19-visa-to-close-crossmint-memecoin-rewards-loophole-following-the-block-investigation-report-415866",
+      "publishedAt": "2026-09-19T15:11:22.000Z"
+    },
+    {
+      "id": "09ea29f33c571ba92d8c",
+      "source": "Decrypt",
+      "title": "Grayscale Is Making Its Red-Hot Zcash ETF More Affordable",
+      "summary": "The Zcash ETF is splitting its shares three ways after pulling in more than $233 million in under a month, as Wall Street piles into crypto's hottest privacy trade.",
+      "url": "https://decrypt.co/378675/grayscale-zcash-etf-more-affordable-split",
+      "publishedAt": "2026-09-19T15:01:03.000Z"
+    },
+    {
+      "id": "5404377d890c34d1af4d",
+      "source": "CoinDesk",
+      "title": "'We have lost control': Crypto pioneer warns AI could trigger systemic banking and infrastructure shocks",
+      "summary": "Marc van der Chijs sold much of his bitcoin to invest in AI. Now, growing concerns about the technology accompany a move to put some profits back into crypto.",
+      "url": "https://www.coindesk.com/markets/2026/09/17/we-have-lost-control-crypto-pioneer-warns-ai-could-trigger-systemic-banking-and-infrastructure-shocks",
+      "publishedAt": "2026-09-19T14:00:00.000Z"
+    },
+    {
+      "id": "1965d0319c9e539221d9",
+      "source": "CoinDesk",
+      "title": "Ripple says asset managers are preparing for XRP Ledger’s next payments upgrade",
+      "summary": "The upcoming Batch V1.1 can make linked asset and payment transfers succeed together or fail together, and Ripple says commercial projects are already being built around the feature after an extensive security review.",
+      "url": "https://www.coindesk.com/tech/2026/09/19/ripple-says-asset-managers-are-preparing-for-xrp-ledger-s-next-payments-upgrade",
+      "publishedAt": "2026-09-19T13:39:15.000Z"
+    },
+    {
+      "id": "4afbe2ffda6bb43e83f8",
+      "source": "CryptoSlate",
+      "title": "Bitcoin faces an October 18 test as Trump prepares new Russia tariffs",
+      "summary": "Trump’s new law sets the clock, but rates, targets and energy-market spillovers will decide whether crypto feels it. The post Bitcoin faces an October 18 test as Trump prepares new Russia tariffs appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-faces-an-october-18-test-as-trump-prepares-new-russia-tariffs/",
+      "publishedAt": "2026-09-19T13:20:13.000Z"
+    },
+    {
+      "id": "a39b677c08ffd345ff6c",
+      "source": "Decrypt",
+      "title": "Solana's Heartbeat Quickens: Block Times Fall 17% in Latest Speed Upgrade",
+      "summary": "The network's clock just sped up again, but the extra speed goes to freshness, not capacity.",
+      "url": "https://decrypt.co/378674/solana-heartbeat-quickens-speed-upgrade",
+      "publishedAt": "2026-09-19T13:01:04.000Z"
+    },
+    {
+      "id": "f0a87d0beb6cac26b15e",
+      "source": "CoinDesk",
+      "title": "'The orange tie stays': Michael Saylor responds to venture capitalist's bitcoin obituary",
+      "summary": "\"Bitcoin feels like the CD in the age of Spotify, the DVD in the age of Netflix,\" wrote Jason Calacanis.",
+      "url": "https://www.coindesk.com/markets/2026/09/19/the-orange-tie-stays-michael-saylor-responds-to-venture-capitalist-s-bitcoin-obituary",
+      "publishedAt": "2026-09-19T12:13:57.000Z"
+    },
+    {
+      "id": "afab7a12d8c291ecec1e",
+      "source": "CryptoSlate",
+      "title": "Did RWA futures really overtake crypto? Only if you ignore 90% of the market",
+      "summary": "A $107.6 billion crossover on selected venues shrinks to about 15.2% when compared with CoinDesk's broader CEX derivatives total. The post Did RWA futures really overtake crypto? Only if you ignore 90% of the market appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/rwa-futures-only-overtook-crypto-in-one-narrow-market-sample/",
+      "publishedAt": "2026-09-19T12:05:28.000Z"
+    },
+    {
+      "id": "881de67f1905f635cdae",
+      "source": "CoinDesk",
+      "title": "Robinhood Chain fees collapse 97% even as transactions stay near record highs",
+      "summary": "Seven-day average fees fell 82% while transaction counts slipped 6%, with about $1.5 billion a day still changing hands.",
+      "url": "https://www.coindesk.com/business/2026/09/19/robinhood-chain-fees-collapse-97-even-as-transactions-stay-near-record-highs",
+      "publishedAt": "2026-09-19T12:00:00.000Z"
+    },
+    {
+      "id": "d92e41a8f1cf8cc5b7e5",
+      "source": "CoinDesk",
+      "title": "Why Wall Street giants build tokenization money for institutions, not regular consumers",
+      "summary": "JPMorgan and Citi move billions in tokenized deposits, but only among their branches. A U.K. challenger bank is about to do something neither has done.",
+      "url": "https://www.coindesk.com/business/2026/09/15/why-wall-street-giants-build-tokenization-money-for-institutions-not-regular-consumers",
+      "publishedAt": "2026-09-19T12:00:00.000Z"
+    },
+    {
+      "id": "7d2cfc9033437d1dcac1",
+      "source": "Cointelegraph",
+      "title": "Bastion wins conditional OCC approval for national trust bank charter",
+      "summary": "Bastion Platforms National Trust Company will offer stablecoin custody and wallets, payment infrastructure and white-label issuance from a single federally regulated entity.",
+      "url": "https://cointelegraph.com/news/bastion-wins-conditional-occ-approval-for-national-trust-bank-charter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-19T11:47:29.000Z"
+    },
+    {
       "id": "667928bc7a5863b8a1d6",
       "source": "CryptoSlate",
       "title": "Brazil blocks stablecoins from key cross-border payment rail as $1.1 trillion market faces new limits",
       "summary": "Brazil's central bank will bar virtual assets, including stablecoins, from settling one specific type of international payment flow starting Oct. 1. Resolution 561 targets the settlement leg between regulated foreign-exchange providers and their overseas…",
       "url": "https://cryptoslate.com/brazil-blocks-stablecoins-from-key-cross-border-payment-rail-as-1-1-trillion-market-faces-new-limits/",
       "publishedAt": "2026-09-19T10:40:55.000Z"
-    },
-    {
-      "id": "60a28878194154996b06",
-      "source": "Cointelegraph",
-      "title": "Dtcpay welcomes SBI Group as strategic investor extending Series A to $25M",
-      "summary": "Singapore-based payments company completes Series A funding round with Japanese investor SBI Group.",
-      "url": "https://cointelegraph.com/news/dtcpay-welcomes-sbi-group-as-strategic-investor-extending-series-a-to-25m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-19T09:56:47.000Z"
     },
     {
       "id": "91bcd99842b650e4d387",
@@ -154,14 +242,6 @@
       "publishedAt": "2026-09-18T21:00:00.000Z"
     },
     {
-      "id": "317c3c7f06604ef8dfef",
-      "source": "CryptoSlate",
-      "title": "Bitcoin rallies after BOJ’s 1.25% hike, but the real yen-carry test starts next week",
-      "summary": "The yen weakened after the decision, leaving immediate unwind pressure limited as higher funding costs move toward implementation. The post Bitcoin rallies after BOJ’s 1.25% hike, but the real yen-carry test starts next week appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitcoin-rallies-after-bojs-1-25-hike-but-the-real-yen-carry-test-starts-next-week/",
-      "publishedAt": "2026-09-18T20:30:28.000Z"
-    },
-    {
       "id": "ef095ffec2fce6b4a833",
       "source": "Bitcoin Magazine",
       "title": "CFTC Sends Proposal To Regulate Crypto Transactions Following Clarity Act Fail",
@@ -178,14 +258,6 @@
       "publishedAt": "2026-09-18T19:53:54.000Z"
     },
     {
-      "id": "668a431765e436b57841",
-      "source": "CryptoSlate",
-      "title": "Why SBI just put millions behind a Singapore startup’s stablecoin push",
-      "summary": "The Singapore firm plans merchant, enterprise-portal and app expansion as SBI joins the Vertex-led round. The post Why SBI just put millions behind a Singapore startup’s stablecoin push appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/why-sbi-just-put-millions-behind-a-singapore-startups-stablecoin-push/",
-      "publishedAt": "2026-09-18T19:50:45.000Z"
-    },
-    {
       "id": "c46e68483720f8594414",
       "source": "Decrypt",
       "title": "Zcash Is Running—Devs Want to Make It Faster",
@@ -200,14 +272,6 @@
       "summary": "Binance is joining a growing number of crypto exchanges offering around-the-clock exposure to foreign exchange markets through perpetual futures.",
       "url": "https://cointelegraph.com/news/binance-expands-tradfi-push-with-247-foreign-exchange-perpetuals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-18T19:06:30.000Z"
-    },
-    {
-      "id": "27ef13d69e428b48e681",
-      "source": "CryptoSlate",
-      "title": "FCA draws the UK boundary for offshore crypto platforms ahead of 2027 rules",
-      "summary": "Direct consumer access and agency trading can bring offshore services within scope when the rules begin in October 2027. The post FCA draws the UK boundary for offshore crypto platforms ahead of 2027 rules appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/fca-draws-the-uk-boundary-for-offshore-crypto-platforms-ahead-of-2027-rules/",
-      "publishedAt": "2026-09-18T18:45:35.000Z"
     },
     {
       "id": "dafabdc0023e63201e2d",
@@ -632,70 +696,6 @@
       "summary": "The SEC is giving tokenized stocks a regulated U.S. pathway, while keeping trading volumes, access and issuer rights tightly controlled.",
       "url": "https://www.coindesk.com/business/2026/09/17/real-stocks-are-finally-coming-on-blockchain-here-s-how-the-sec-wants-it-to-work",
       "publishedAt": "2026-09-17T21:47:22.000Z"
-    },
-    {
-      "id": "c2008ab60e57a44618b5",
-      "source": "Decrypt",
-      "title": "Security Experts Want the US and China to Promise Never to Let AI Control Nukes",
-      "summary": "Brookings researchers in the US and China are urging Washington and Beijing to agree to keep humans in control of nuclear weapons.",
-      "url": "https://decrypt.co/378575/us-china-never-let-ai-control-nukes",
-      "publishedAt": "2026-09-17T21:46:03.000Z"
-    },
-    {
-      "id": "2a04ce28dbb373a73a52",
-      "source": "CoinDesk",
-      "title": "The Ondo Finance succession crisis gets messier as Kathleen Allman’s daughter alleges ‘dementia’, alcoholism and reckless spending",
-      "summary": "The estranged daughter of 77-year-old Kathleen Allman has petitioned a Hawaiian court to establish a limited conservatorship to protect her parents’ share of her brother’s stake in Ondo.",
-      "url": "https://www.coindesk.com/business/2026/09/17/the-ondo-finance-succession-crisis-gets-messier-as-kathleen-allman-s-daughter-alleges-dementia-alcoholism-and-reckless-spending",
-      "publishedAt": "2026-09-17T21:28:35.000Z"
-    },
-    {
-      "id": "922d39cf9fbc081b46ec",
-      "source": "Decrypt",
-      "title": "Your Data Could Outlive the Startup You Gave It To. Elon Musk Wants to Buy What's Left",
-      "summary": "SpaceX's AI division has held internal talks about buying customer records from dead startups—cheap fuel for Grok, no questions asked, because there's nobody left to ask them.",
-      "url": "https://decrypt.co/378573/elon-musk-spacex-buy-startup-data-train-ai",
-      "publishedAt": "2026-09-17T21:16:03.000Z"
-    },
-    {
-      "id": "6c2af8be4195a9a1910e",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin Price Unlikely To Be Bothered by Interest Rate Hike: Grayscale",
-      "summary": "Bitcoin Magazine Bitcoin Price Unlikely To Be Bothered by Interest Rate Hike: Grayscale The Federal Reserve hiked interest rates on Wednesday — and may do so again this year — but bitcoin's price is unlikely to be hurt, Grayscale argued. This post Bitcoin…",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-not-bothered-by-fed-says-grayscale",
-      "publishedAt": "2026-09-17T21:08:51.000Z"
-    },
-    {
-      "id": "30049858ccd451de0a35",
-      "source": "Decrypt",
-      "title": "Why Is Chipotle Now Working With the CIA-Funded Palantir?",
-      "summary": "Chipotle is piloting a Palantir-built food safety dashboard after a summer of outbreaks, putting employee data in the hands of a company seeded by the CIA's venture arm.",
-      "url": "https://decrypt.co/378553/why-chipotle-working-with-palantir",
-      "publishedAt": "2026-09-17T20:46:03.000Z"
-    },
-    {
-      "id": "7a6e53c9e3f94c566418",
-      "source": "Decrypt",
-      "title": "CFTC Opens Door for Crypto Apps to Offer Regulated Derivatives Access",
-      "summary": "In a no-action letter, the CFTC said certain software providers can connect users to regulated derivatives markets without registering as brokers.",
-      "url": "https://decrypt.co/378560/cftc-crypto-apps-regulated-derivatives-access",
-      "publishedAt": "2026-09-17T20:16:04.000Z"
-    },
-    {
-      "id": "8d9c363053917ebfeacb",
-      "source": "The Block",
-      "title": "US sanctions Iranian crypto exchange BitBank over alleged bitcoin transfers to IRGC",
-      "summary": "Treasury said the previously sanctioned Hormuz Safe platform used BitBank to transfer payments collected since June.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-17-us-sanctions-iranian-crypto-exchange-bitbank-alleged-bitcoin-transfers-to-irgc-415462",
-      "publishedAt": "2026-09-17T20:05:28.000Z"
-    },
-    {
-      "id": "0c9f4d5f85e262fc5d95",
-      "source": "Decrypt",
-      "title": "OpenAI Says It's Made Progress on a Second $1 Million Math Problem",
-      "summary": "Days after its disputed Navier-Stokes claim, OpenAI says it's made \"substantial progress\" on another Millennium Prize math problem—and won't say which one yet.",
-      "url": "https://decrypt.co/378551/openai-progress-second-millennium-prize-math-problem",
-      "publishedAt": "2026-09-17T19:32:22.000Z"
     }
   ]
 }
