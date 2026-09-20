@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T20:48:28.204Z",
+  "generatedAt": "2026-09-20T05:00:39.432Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 57,
       "error": null
     },
     {
@@ -57,6 +57,22 @@
     }
   ],
   "items": [
+    {
+      "id": "68e363597c315ce61c62",
+      "source": "CryptoSlate",
+      "title": "Gen Z are investing like Boomers – with some surprising portfolio decisions",
+      "summary": "Like fashion, investing eventually finds something embarrassing in the back of the wardrobe and puts it on again. Millennial-era crypto gave us yield-bearing dog coins and all kinds of food-themed financial contraptions. Now Gen Z has entered the market in…",
+      "url": "https://cryptoslate.com/gen-z-investors-have-portfolios-boomers-would-approve-of/",
+      "publishedAt": "2026-09-19T22:05:40.000Z"
+    },
+    {
+      "id": "ee59ddaaec8318cac8df",
+      "source": "CryptoSlate",
+      "title": "Why Trump backed a crypto ethics rule that stopped at the family business",
+      "summary": "Washington came surprisingly close this week to writing a dollar amount into one of its thorniest crypto ethics rule debates. Under the final Senate draft of the CLARITY Act, senior federal officials holding equity worth at least $15,000 in certain…",
+      "url": "https://cryptoslate.com/trump-backed-a-crypto-ethics-rule-that-stopped-at-the-family-business/",
+      "publishedAt": "2026-09-19T21:02:29.000Z"
+    },
     {
       "id": "16fda223dabd4a5354a0",
       "source": "CryptoSlate",
@@ -250,28 +266,12 @@
       "publishedAt": "2026-09-19T10:40:55.000Z"
     },
     {
-      "id": "91bcd99842b650e4d387",
-      "source": "CryptoSlate",
-      "title": "Bitcoin survived the Fed and CLARITY, and now faces the next major test at $82,000 this weekend",
-      "summary": "Bitcoin hit an intraday high of $81,400 on Friday, approaching the low-$82,000 zone that has capped every recovery attempt since late August. US spot Bitcoin ETF shares stop trading once American markets close for the weekend. Any further push through that…",
-      "url": "https://cryptoslate.com/bitcoin-survived-the-fed-and-clarity-and-now-faces-the-next-major-test-at-82000-this-weekend/",
-      "publishedAt": "2026-09-19T09:06:06.000Z"
-    },
-    {
       "id": "3ce84fabf5cb32ae55cf",
       "source": "Cointelegraph",
       "title": "Hong Kong jails former banker over $1.6B false credit, cryptocurrency bribes: Report",
       "summary": "Former banking official gets four years in prison over false letters of credit and accepting $470,000 in cryptocurrency bribes.",
       "url": "https://cointelegraph.com/news/hong-kong-jails-former-banker-over-16b-false-credit-cryptocurrency-bribes-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-19T07:50:58.000Z"
-    },
-    {
-      "id": "ae44e5face8a9d4f9f19",
-      "source": "CryptoSlate",
-      "title": "Ethereum co-founder Vitalik Buterin argues that local AI can protect your privacy without losing speed",
-      "summary": "Faster private inference makes laptop orchestration practical, while spending authority remains behind hard limits, transaction checks and human approval. The post Ethereum co-founder Vitalik Buterin argues that local AI can protect your privacy without…",
-      "url": "https://cryptoslate.com/ethereum-cofounder-vitalik-says-local-ai-is-nearly-ready-but-crypto-wallets-still-cannot-trust-it-alone/",
-      "publishedAt": "2026-09-19T04:30:33.000Z"
     },
     {
       "id": "b4d0747e6f383c4c342b",
