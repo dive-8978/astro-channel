@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T11:33:41.089Z",
+  "generatedAt": "2026-09-20T16:14:02.989Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 56,
       "error": null
     },
     {
@@ -57,6 +57,126 @@
     }
   ],
   "items": [
+    {
+      "id": "d5c91834f0af4d1a053f",
+      "source": "The Block",
+      "title": "Polymarket faced $10 million fraud attempt as its CEO pushed growth over compliance concerns: WSJ",
+      "summary": "In a separate attack, hackers compromised nearly 500 users' accounts using stolen personal information, according to the report.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-20-polymarket-faced-10-million-fraud-attempt-as-its-ceo-pushed-growth-over-compliance-concerns-wsj-415875",
+      "publishedAt": "2026-09-20T16:07:19.000Z"
+    },
+    {
+      "id": "21a9c4b63967365a1c3f",
+      "source": "Decrypt",
+      "title": "Visa Moves to Close Meme Coin Credit Card Rewards Loophole",
+      "summary": "After banks lost their push for tighter stablecoin rules in the failed Clarity Act, JP Morgan scored a narrower win as Visa moves to stop meme coin purchases from being coded as ordinary \"digital media\" and earning card rewards.",
+      "url": "https://decrypt.co/378697/visa-close-meme-coin-credit-card-rewards-loophole",
+      "publishedAt": "2026-09-20T16:01:03.000Z"
+    },
+    {
+      "id": "2152f6fb93b61a992901",
+      "source": "CryptoSlate",
+      "title": "EU staking review threatens crypto yields and network security could pay the price",
+      "summary": "Some of the most consequential financial rules begin with surprisingly little text. For example, on page 36 of the European Commission's current MiCA review, item 66 asks whether Europe's treatment of staking is adequate and, if it isn't, what requirements…",
+      "url": "https://cryptoslate.com/staking-is-becoming-too-large-for-europe-to-leave-alone/",
+      "publishedAt": "2026-09-20T15:05:37.000Z"
+    },
+    {
+      "id": "b4c4006cef4193a4cd72",
+      "source": "CoinDesk",
+      "title": "Crypto platform Gemini’s stock is down 80% from its IPO. That’s reviving takeover speculation",
+      "summary": "The crypto platform’s market value has fallen to about $753 million, putting fresh attention on the licenses, custody infrastructure and customer relationships a buyer could inherit.",
+      "url": "https://www.coindesk.com/business/2026/09/20/gemini-s-stock-is-down-80-from-its-ipo-that-s-reviving-takeover-speculation",
+      "publishedAt": "2026-09-20T14:54:48.000Z"
+    },
+    {
+      "id": "7542227c2e4fb5027e55",
+      "source": "Decrypt",
+      "title": "Why Holding Anything But Bitcoin Has Been a Losing Bet for Two Years",
+      "summary": "A Glassnode and Bybit report frames the divergence as the defining feature of this cycle, with froth pooling in the market's riskiest corners even as Bitcoin does the heavy lifting.",
+      "url": "https://decrypt.co/378695/holding-anything-but-bitcoin-losing-bet",
+      "publishedAt": "2026-09-20T14:01:03.000Z"
+    },
+    {
+      "id": "4faf9f775d7dce4857f4",
+      "source": "CryptoSlate",
+      "title": "Why Russia’s harsh 1% crypto cap actually protects bank customer assets",
+      "summary": "The draft counts banks’ own holdings and crypto-linked instruments against capital but conditionally excludes customer assets. The post Why Russia’s harsh 1% crypto cap actually protects bank customer assets appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bank-of-russia-proposes-1-crypto-capital-cap-while-carving-out-some-client-custody/",
+      "publishedAt": "2026-09-20T13:35:19.000Z"
+    },
+    {
+      "id": "aa8956a871b9653728e7",
+      "source": "Bitcoin Magazine",
+      "title": "Move Over Housing – Bitcoin is Gen Z’s New Wealth Building Asset",
+      "summary": "Bitcoin Magazine Move Over Housing – Bitcoin is Gen Z’s New Wealth Building Asset Gen Z now makes up less than 5% of the new home market and Hunter Albright of SALT Lending thinks that changes what assets an entire generation chooses to build wealth with.…",
+      "url": "https://bitcoinmagazine.com/videos/move-over-housing-bitcoin-is-gen-zs-new-wealth-building-asset",
+      "publishedAt": "2026-09-20T13:34:01.000Z"
+    },
+    {
+      "id": "a6033140da00ce5075a4",
+      "source": "Bitcoin Magazine",
+      "title": "T. Rowe Price’s Blue Macellari: Bitcoin is Now Core to the Debasement Conversation",
+      "summary": "Bitcoin Magazine T. Rowe Price’s Blue Macellari: Bitcoin is Now Core to the Debasement Conversation T. Rowe Price’s Blue Macellari shares her insider perspective on the current state of the Treasury market. This post T. Rowe Price’s Blue Macellari: Bitcoin…",
+      "url": "https://bitcoinmagazine.com/videos/t-rowe-prices-blue-macellari-bitcoin-is-now-core-to-the-debasement-conversation",
+      "publishedAt": "2026-09-20T13:24:37.000Z"
+    },
+    {
+      "id": "3c50e20f525c707bb63b",
+      "source": "Bitcoin Magazine",
+      "title": "Coinbase Policy Chief: Strategic Bitcoin Reserve Bill Outlook",
+      "summary": "Bitcoin Magazine Coinbase Policy Chief: Strategic Bitcoin Reserve Bill Outlook The Clarity Act's cloture vote failed. Coinbase Chief Policy Officer Faryar Shirzad breaks down what went wrong and where regulation goes next. This post Coinbase Policy Chief:…",
+      "url": "https://bitcoinmagazine.com/videos/coinbase-policy-chief-strategic-bitcoin-reserve-bill-outlook",
+      "publishedAt": "2026-09-20T13:15:42.000Z"
+    },
+    {
+      "id": "a267e9d78dab1b9ebe9c",
+      "source": "Bitcoin Magazine",
+      "title": "Strategy CEO Phong Le: We Want to Be the JPMorgan of Bitcoin",
+      "summary": "Bitcoin Magazine Strategy CEO Phong Le: We Want to Be the JPMorgan of Bitcoin CEO Phong Le explains how MicroStrategy plans to become the \"JPMorgan of Bitcoin\" by making markets and providing liquidity for an 8-billion-person economy. This post Strategy CEO…",
+      "url": "https://bitcoinmagazine.com/videos/strategy-ceo-phong-le-jpmorgan-of-bitcoin",
+      "publishedAt": "2026-09-20T13:06:46.000Z"
+    },
+    {
+      "id": "df4fc8a6546909c32cb9",
+      "source": "Bitcoin Magazine",
+      "title": "Why Legendary Investor Bill Miller IV has “Never Been More Bullish on Bitcoin”",
+      "summary": "Bitcoin Magazine Why Legendary Investor Bill Miller IV has “Never Been More Bullish on Bitcoin” Miller Value Partners CEO Bill Miller IV explains why worsening fiscal deficits make Bitcoin further undervalued today than at the last cycle peak. This post Why…",
+      "url": "https://bitcoinmagazine.com/videos/bill-miller-iv-bullish-on-bitcoin",
+      "publishedAt": "2026-09-20T12:57:34.000Z"
+    },
+    {
+      "id": "91778c63989b7b2f0b10",
+      "source": "CryptoSlate",
+      "title": "Stablecoin salaries can leave workers paying to access their wages",
+      "summary": "Every paycheck eventually has to pay for something: rent, groceries, transport, or bills. Stablecoins can move between wallets in seconds. But that does not mean an employee can spend the money immediately. They may still need to convert the stablecoins into…",
+      "url": "https://cryptoslate.com/stablecoin-salaries-can-leave-workers-paying-to-access-their-wages/",
+      "publishedAt": "2026-09-20T12:05:36.000Z"
+    },
+    {
+      "id": "e53f7a46e9dcbbb2bd9e",
+      "source": "Cointelegraph",
+      "title": "Trump says US will form ‘AI Force’ and appoint AI czar: Reports",
+      "summary": "Trump posted on Truth Social that his new project would manage the fast-growing sector without adding regulations that could slow innovation.",
+      "url": "https://cointelegraph.com/news/trump-says-us-will-form-ai-force-and-appoint-ai-czar-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-20T12:00:52.000Z"
+    },
+    {
+      "id": "c6d71314f53f3d3c4674",
+      "source": "CoinDesk",
+      "title": "Coinbase, Robinhood, Circle could be early winners of SEC's tokenized-stock push, analysts say",
+      "summary": "Goldman Sachs and Citizens analysts said the agency's move create new opportunities in custody, tokenization infrastructure and stablecoin settlement, while giving brokers room to expand onchain products.",
+      "url": "https://www.coindesk.com/business/2026/09/20/coinbase-robinhood-circle-could-be-early-winners-of-sec-s-tokenized-stock-push-analysts-say",
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
+    {
+      "id": "cf46d1d89efe3083725b",
+      "source": "CoinDesk",
+      "title": "Crypto traders braced for a total wipeout this week but Bitcoin had other plans",
+      "summary": "Market experts view bitcoin’s price stability as evidence of its fundamental independence from Washington, maintaining that global liquidity and adoption cycles remain the primary growth drivers.",
+      "url": "https://www.coindesk.com/markets/2026/09/18/crypto-traders-braced-for-a-total-wipeout-this-week-but-bitcoin-had-other-plans",
+      "publishedAt": "2026-09-20T12:00:00.000Z"
+    },
     {
       "id": "6a214f6c9c32ff1ac038",
       "source": "CryptoSlate",
@@ -138,14 +258,6 @@
       "publishedAt": "2026-09-19T19:18:00.000Z"
     },
     {
-      "id": "4bc67151e42a6958b134",
-      "source": "CryptoSlate",
-      "title": "Circle wants you to love USDC a little like you love Chelsea",
-      "summary": "Chelsea has found a cool new shirt sponsor whose main product is…a stablecoin? USDC is designed to be worth one dollar. Today, tomorrow, next Tuesday: one dollar. If everything is working properly, absolutely nothing should happen to its price, so there is…",
-      "url": "https://cryptoslate.com/circle-wants-you-to-love-usdc-a-little-like-you-love-chelsea/",
-      "publishedAt": "2026-09-19T19:00:16.000Z"
-    },
-    {
       "id": "fe1466e2668eca730562",
       "source": "Cointelegraph",
       "title": "Kalshi joins Coinbase with own filing for US stock perpetual futures",
@@ -154,28 +266,12 @@
       "publishedAt": "2026-09-19T18:40:00.000Z"
     },
     {
-      "id": "1d45fdc0b0a8183e5428",
-      "source": "CryptoSlate",
-      "title": "Anthropic’s potential $2 trillion IPO is fueling an $80 million crypto trade",
-      "summary": "Anthropic’s prospective $2 trillion IPO has already spawned nearly $80 million in crypto derivatives bets before its public debut. Open interest in futures linked to the Claude developer has climbed to about $79.27 million, close to a record $80 million, as…",
-      "url": "https://cryptoslate.com/anthropics-potential-2-trillion-ipo-is-fueling-an-80-million-crypto-trade/",
-      "publishedAt": "2026-09-19T18:05:02.000Z"
-    },
-    {
       "id": "1ef241a6b1b34d54d3ec",
       "source": "The Block",
       "title": "Bitcoin ETFs eke out positive week with $433 million Friday inflow as ether funds snap four-week inflow streak",
       "summary": "Fidelity's FBTC accounted for $310.7 million of Friday’s overall $433 million net inflow, a notable sum that helped offset earlier withdrawals.",
       "url": "https://www.theblock.co/news/markets/2026-09-19-bitcoin-etfs-eke-out-positive-week-with-433-million-friday-inflow-as-ether-funds-snap-four-week-inflow-streak-415871",
       "publishedAt": "2026-09-19T18:01:09.000Z"
-    },
-    {
-      "id": "a2670b944f410bb6ef2d",
-      "source": "CryptoSlate",
-      "title": "AI was supposed to take scammers’ jobs, but it gave them superpowers instead",
-      "summary": "For anyone worried that AI would eliminate every profession except the one sending messages about your frozen crypto account, there's unwelcome news for that last bastion of human enterprise. Fraud has found an automation budget. Scamming has always required…",
-      "url": "https://cryptoslate.com/ai-was-supposed-to-take-scammers-jobs-but-it-gave-them-superpowers-instead/",
-      "publishedAt": "2026-09-19T17:10:40.000Z"
     },
     {
       "id": "e668fe7edd3a0c562370",
@@ -600,102 +696,6 @@
       "summary": "Another central bank hiked rates overnight, this time the Bank of Japan. The move failed to halt the slide in the yen.",
       "url": "https://www.coindesk.com/tech/2026/09/18/live-updates-hype-leads-altcoin-rally-as-bitcoin-recovers-toward-usd78-000",
       "publishedAt": "2026-09-18T09:49:51.000Z"
-    },
-    {
-      "id": "e7e48f88732031e6951f",
-      "source": "Cointelegraph",
-      "title": "Stablecoin payments firm dtcpay closes $25M round with SBI backing",
-      "summary": "Dtcpay plans to expand its merchant network and payment products after completing a $25 million Series A backed by Japan’s SBI Group.",
-      "url": "https://cointelegraph.com/news/dtcpay-25m-series-a-sbi-stablecoin-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-18T09:14:03.000Z"
-    },
-    {
-      "id": "c0c7fe0a0a197ee53da7",
-      "source": "Decrypt",
-      "title": "Treasury Sanctions Crypto Exchange Behind Iran's Bitcoin Tolls on Hormuz Ships",
-      "summary": "OFAC says hundreds of millions of dollars in Bitcoin moved through BitBank to the Revolutionary Guards in two months.",
-      "url": "https://decrypt.co/378604/treasury-sanctions-crypto-exchange-behind-irans-bitcoin-tolls-on-hormuz-ships",
-      "publishedAt": "2026-09-18T09:01:55.000Z"
-    },
-    {
-      "id": "3c96c5ad784420015b90",
-      "source": "Cointelegraph",
-      "title": "Binance brushes off Lagarde MiCA speculation, reaffirms Europe commitment",
-      "summary": "Binance declined to address reports of ECB intervention in its Greek MiCA bid, saying it remains committed to securing authorization in Europe.",
-      "url": "https://cointelegraph.com/news/binance-cites-speculation-report-ecb-chief-mica-intervention?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-18T08:50:38.000Z"
-    },
-    {
-      "id": "29e6a5cea1ac189450d5",
-      "source": "Cointelegraph",
-      "title": "Bitcoin cycle bottom may already be in at $58K, says analyst James Check",
-      "summary": "Onchain analyst James Check says Bitcoin may have bottomed near $58,000 after two capitulations and warns against anchoring to an October low.",
-      "url": "https://cointelegraph.com/markets/bitcoin-cycle-bottom-58k-james-check?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-18T08:47:20.000Z"
-    },
-    {
-      "id": "7191714f6bf9dd0f4bb3",
-      "source": "CoinDesk",
-      "title": "SBI Group backs payments firm dtcpay in $25 million funding round",
-      "summary": "Stablecoin payments company dtcpay completed a $25 million Series A funding round with a strategic investment from Japan’s SBI Group.",
-      "url": "https://www.coindesk.com/markets/2026/09/18/sbi-group-backs-payments-firm-dtcpay-in-usd25-million-funding-round",
-      "publishedAt": "2026-09-18T07:37:32.000Z"
-    },
-    {
-      "id": "e01dce20a5f7b5ef31d1",
-      "source": "CoinDesk",
-      "title": "Iran’s Strait of Hormuz toll booth ran through a bitcoin exchange, U.S. says",
-      "summary": "The U.S. Treasury sanctioned BitBank, a Tehran exchange it says moved hundreds of millions of dollars in bitcoin to the Revolutionary Guards and handled payments collected from ships buying passage through the world’s most important oil chokepoint.",
-      "url": "https://www.coindesk.com/policy/2026/09/18/iran-s-strait-of-hormuz-toll-booth-ran-through-a-bitcoin-exchange-u-s-says",
-      "publishedAt": "2026-09-18T06:52:23.000Z"
-    },
-    {
-      "id": "5befdc7dc06aad34c8c6",
-      "source": "CoinDesk",
-      "title": "Solana speeds up blocks by 17%, but transaction capacity stays the same",
-      "summary": "The network is cutting its target slot time to 250 milliseconds, giving apps fresher blockchain data and validators shorter control windows while reducing the amount of work allowed in each slot.",
-      "url": "https://www.coindesk.com/tech/2026/09/18/solana-speeds-up-blocks-by-17-but-transaction-capacity-stays-the-same",
-      "publishedAt": "2026-09-18T06:16:57.000Z"
-    },
-    {
-      "id": "6e0920db8af5388afcea",
-      "source": "CoinDesk",
-      "title": "Corporate treasuries bought just 5,900 bitcoin in 3 months. Other demand signals look weak, too.",
-      "summary": "Corporate treasuries bought just 5,900 bitcoin in three months, while broader demand signals remain weak.",
-      "url": "https://www.coindesk.com/markets/2026/09/18/corporate-treasuries-bought-just-5-900-bitcoin-in-3-months-other-demand-signals-look-weak-too",
-      "publishedAt": "2026-09-18T05:43:21.000Z"
-    },
-    {
-      "id": "810e3a2aa812ed60c23f",
-      "source": "The Block",
-      "title": "Stablecoin payments firm dtcpay closes $25 million Series A with SBI Group investment",
-      "summary": "The fresh capital enables it to scale product suite and merchant network, including a revamped business portal for enterprise clients.",
-      "url": "https://www.theblock.co/news/business/2026-09-18-dtcpay-series-a-sbi-group-415483",
-      "publishedAt": "2026-09-18T05:29:10.000Z"
-    },
-    {
-      "id": "b3234797da6f44514e6e",
-      "source": "CoinDesk",
-      "title": "Ethereum confirms Glamsterdam dates, but warns 'fake' builders could stall the chain",
-      "summary": "Free test ether lets fake builders outbid rivals and withhold transaction payloads, while client teams get half the usual review time before Sepolia.",
-      "url": "https://www.coindesk.com/tech/2026/09/18/ethereum-confirms-glamsterdam-dates-but-warns-fake-builders-could-stall-the-chain",
-      "publishedAt": "2026-09-18T05:23:29.000Z"
-    },
-    {
-      "id": "b7a69360c3091ea805f1",
-      "source": "Cointelegraph",
-      "title": "Zcash targets November for NU7 mainnet upgrade with 25-second blocks",
-      "summary": "NU7 will cut Zcash block times to 25 seconds and preserve its halving schedule, with testnet activation planned for Oct. 6.",
-      "url": "https://cointelegraph.com/news/zcash-nu7-november-mainnet-activation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-18T04:51:29.000Z"
-    },
-    {
-      "id": "65fcfaf4b057e2e56b72",
-      "source": "CoinDesk",
-      "title": "Ether and XRP ETFs post outflows as crypto majors move higher",
-      "summary": "Ether funds shed money for a third straight session even as the token rose, while every major gained and zcash extended its run.",
-      "url": "https://www.coindesk.com/markets/2026/09/18/ether-and-xrp-etfs-post-outflows-as-bitcoin-moves-above-usd77-000",
-      "publishedAt": "2026-09-18T04:49:17.000Z"
     }
   ]
 }
