@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T16:14:02.989Z",
+  "generatedAt": "2026-09-20T20:54:18.271Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 56,
+      "itemCount": 36,
       "error": null
     },
     {
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "8eea291ed53a5e1e9ccb",
+      "source": "CryptoSlate",
+      "title": "Why keeping your private keys safe won’t always stop crypto theft",
+      "summary": "Almost 4,000 Bitcoin left Liquid's reserve on Sept. 6 through a withdrawal the network approved, even though the private keys used to authorize it hadn't been stolen. Software had accepted a withdrawal that should never have qualified. Liquid lets people…",
+      "url": "https://cryptoslate.com/who-pays-when-bitcoin-disappears-without-anyone-stealing-the-keys/",
+      "publishedAt": "2026-09-20T20:30:43.000Z"
+    },
+    {
+      "id": "50efe885d9359a60872d",
+      "source": "The Block",
+      "title": "ZetaChain votes to shut down Layer 1 network and move ZETA to Solana",
+      "summary": "The team plans to focus instead on Anuma, its private AI app, though the migration will still take one more vote.",
+      "url": "https://www.theblock.co/news/defi/2026-09-20-zetachain-votes-to-shut-down-layer-1-network-and-move-zeta-to-solana-415878",
+      "publishedAt": "2026-09-20T20:11:49.000Z"
+    },
+    {
+      "id": "559d7acafc355cd0686a",
+      "source": "CryptoSlate",
+      "title": "Why Solana’s new 250ms speed boost could actually trigger network instability",
+      "summary": "Early mainnet data look stable, but the path to 200ms may depend more on leader handoffs, client agreement and infrastructure diversity than headline throughput. The post Why Solana’s new 250ms speed boost could actually trigger network instability appeared…",
+      "url": "https://cryptoslate.com/solanas-250ms-slots-turn-validator-coordination-into-the-networks-next-security-test/",
+      "publishedAt": "2026-09-20T19:20:38.000Z"
+    },
+    {
+      "id": "d5fc2bb5c9792fe10779",
+      "source": "CryptoSlate",
+      "title": "Offshore Bitcoin futures crash 97% as traders abandon traditional risk",
+      "summary": "A strange thing has happened to Bitcoin's derivatives market over the past five years. The market is larger, institutions play a much bigger role, exchanges offer more sophisticated products, and traders have become far better at moving risk around. At the…",
+      "url": "https://cryptoslate.com/goodbye-futures-bitcoin-found-better-ways-to-trade/",
+      "publishedAt": "2026-09-20T17:15:37.000Z"
+    },
     {
       "id": "d5c91834f0af4d1a053f",
       "source": "The Block",
@@ -212,7 +244,7 @@
     {
       "id": "f5129f9504dd1f632af6",
       "source": "Cointelegraph",
-      "title": "Anthropic tabs Accenture as embedded evaluator to help with AI slowdown proposal",
+      "title": "Anthropic taps Accenture as embedded evaluator to help with AI slowdown proposal",
       "summary": "The partnership is non-exclusive, and Anthropic expects to announce other evaluators in forthcoming weeks with which it will also work.",
       "url": "https://cointelegraph.com/news/anthropic-tabs-accenture-as-embedded-evaluator-to-help-with-ai-slowdown-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-20T07:51:24.000Z"
@@ -224,30 +256,6 @@
       "summary": "The one-year share rose 0.98 percentage points in a month while adjacent age bands shifted around the threshold. The post Why Bitcoin’s 63% HODL wave isn’t the mega bull signal everyone thinks it is appeared first on CryptoSlate .",
       "url": "https://cryptoslate.com/why-bitcoins-63-3-hodl-wave-isnt-the-mega-bull-signal-everyone-thinks-it-is/",
       "publishedAt": "2026-09-20T06:30:40.000Z"
-    },
-    {
-      "id": "68e363597c315ce61c62",
-      "source": "CryptoSlate",
-      "title": "Gen Z are investing like Boomers – with some surprising portfolio decisions",
-      "summary": "Like fashion, investing eventually finds something embarrassing in the back of the wardrobe and puts it on again. Millennial-era crypto gave us yield-bearing dog coins and all kinds of food-themed financial contraptions. Now Gen Z has entered the market in…",
-      "url": "https://cryptoslate.com/gen-z-investors-have-portfolios-boomers-would-approve-of/",
-      "publishedAt": "2026-09-19T22:05:40.000Z"
-    },
-    {
-      "id": "ee59ddaaec8318cac8df",
-      "source": "CryptoSlate",
-      "title": "Why Trump backed a crypto ethics rule that stopped at the family business",
-      "summary": "Washington came surprisingly close this week to writing a dollar amount into one of its thorniest crypto ethics rule debates. Under the final Senate draft of the CLARITY Act, senior federal officials holding equity worth at least $15,000 in certain…",
-      "url": "https://cryptoslate.com/trump-backed-a-crypto-ethics-rule-that-stopped-at-the-family-business/",
-      "publishedAt": "2026-09-19T21:02:29.000Z"
-    },
-    {
-      "id": "16fda223dabd4a5354a0",
-      "source": "CryptoSlate",
-      "title": "Fidelity surge brings in $310M BTC saving Bitcoin ETFs from a disastrous week",
-      "summary": "Friday broadened demand, yet the two-day rebound left the midweek withdrawal gap partly open. The post Fidelity surge brings in $310M BTC saving Bitcoin ETFs from a disastrous week appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/fidelity-surge-brings-in-310m-btc-saving-bitcoin-etfs-from-a-disastrous-week/",
-      "publishedAt": "2026-09-19T20:10:27.000Z"
     },
     {
       "id": "5e46e65f6d8d86c4fb3d",
@@ -688,14 +696,6 @@
       "summary": "Investigators say tracing the network's crypto transactions exposed links to organized crime and murder-for-hire.",
       "url": "https://decrypt.co/378611/uae-sweden-arrest-seven-over-7-1m-crypto-laundering-ring-linked-to-contract-killings",
       "publishedAt": "2026-09-18T09:57:33.000Z"
-    },
-    {
-      "id": "c1fd3dca071f97a476bb",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin climbs over $80,000 as crypto shakes off Clarity failure and higher interest rates",
-      "summary": "Another central bank hiked rates overnight, this time the Bank of Japan. The move failed to halt the slide in the yen.",
-      "url": "https://www.coindesk.com/tech/2026/09/18/live-updates-hype-leads-altcoin-rally-as-bitcoin-recovers-toward-usd78-000",
-      "publishedAt": "2026-09-18T09:49:51.000Z"
     }
   ]
 }
