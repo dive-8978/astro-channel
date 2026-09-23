@@ -200,9 +200,11 @@ h1 { margin: 0; font-size: clamp(3rem, 8vw, 6.8rem); line-height: .96; letter-sp
 }
 @media (max-width: 640px) {
   .shell { width: min(100% - 28px, 1180px); }
-  .nav { min-height: 62px; }
-  .brand span { max-width: 185px; line-height: 1.1; }
-  .nav nav { gap: 14px; }
+  .nav { min-height: 62px; gap: 10px; }
+  .brand { font-size: .9rem; }
+  .brand span { max-width: 150px; line-height: 1.1; }
+  .nav nav { gap: 10px; }
+  .nav nav a { font-size: .82rem; }
   .nav nav a:nth-child(3) { display: none; }
   .news-hero { min-height: calc(100vh - 62px); background-position: 62% center; }
   .hero-inner { padding-top: 64px; padding-bottom: 28px; }
