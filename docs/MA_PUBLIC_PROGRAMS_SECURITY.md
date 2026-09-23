@@ -23,6 +23,19 @@ The app may navigate to the official HTTPS page with only `lang` and a generic
 `source=ma-app` marker. It must not place a wallet address, card identifier,
 inventory, signature or bearer credential in the URL.
 
+The public catalog is aligned with the current MA registry in
+`src/config/GameFiCardAssets.js`: 98 exclusive card IDs and avatar codes
+`115`–`212`. `phoenix-cosmic` is the canonical ID for the third Phoenix image.
+The four Purple Blue Whale images are not four cards: they are artwork choices
+(`jelly-dream`, `coral-family`, `ocean-leap`, `happy-spray`) for the single MA
+card ID `blue-whale-purple`. They remain migration-pending and ineligible.
+
+Future redemption must treat every browser-supplied card ID as untrusted. The
+server must resolve the authenticated account's immutable draw/inventory record,
+compare its canonical card ID and artwork ID with the versioned registry, and
+bind that server record to the one-time challenge. A matching display label is
+never sufficient evidence of ownership.
+
 The claim button remains disabled until all of the following exist:
 
 1. Server-issued card inventory with an immutable draw record.
