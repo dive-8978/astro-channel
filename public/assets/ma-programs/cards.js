@@ -13,7 +13,7 @@
 
   var LANGS = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko'];
   var LANG_INDEX = { en: 0, zh: 1, es: 2, fr: 3, de: 4, ja: 5, ko: 6 };
-  var PAGE_SIZE = 24;
+  var PAGE_SIZE = 30;
 
   // Kept byte-for-byte consistent with src/services/GameCenterI18n.js.
   var ANIMAL_NAMES = {
@@ -85,7 +85,8 @@
       variant: '{name} · Card {index}', results: 'Showing {shown} of {total} cards',
       loadMore: 'Load more cards', imageAlt: '{name}, card {index}, {rarity} tier',
       tier: 'Tier', amount: 'Proposed reference', status: 'Status',
-      planningOnly: 'Planning only — not active', empty: 'No cards match this filter.'
+      planningOnly: 'Planning only — not active', empty: 'No cards match this filter.',
+      appId: 'MA ID {id}', avatarCode: 'Avatar {code}', artwork: '{name} · Artwork {index}', artworkId: 'Art {id}'
     },
     zh: {
       all: '全部', app: '应用卡片', legacy: '旧卡迁移',
@@ -93,7 +94,8 @@
       variant: '{name} · 卡片 {index}', results: '已显示 {shown} / {total} 张卡片',
       loadMore: '加载更多卡片', imageAlt: '{name}，第 {index} 张，{rarity} 等级',
       tier: '等级', amount: '拟议参考值', status: '状态',
-      planningOnly: '仅为规划方案 — 尚未启用', empty: '此筛选条件下没有卡片。'
+      planningOnly: '仅为规划方案 — 尚未启用', empty: '此筛选条件下没有卡片。',
+      appId: 'MA 编号 {id}', avatarCode: '头像代码 {code}', artwork: '{name} · 图稿 {index}', artworkId: '图稿 {id}'
     },
     es: {
       all: 'Todas', app: 'Cartas de la app', legacy: 'Migración heredada',
@@ -101,7 +103,8 @@
       variant: '{name} · Carta {index}', results: 'Mostrando {shown} de {total} cartas',
       loadMore: 'Cargar más cartas', imageAlt: '{name}, carta {index}, nivel {rarity}',
       tier: 'Nivel', amount: 'Referencia propuesta', status: 'Estado',
-      planningOnly: 'Solo planificación — no activo', empty: 'Ninguna carta coincide con este filtro.'
+      planningOnly: 'Solo planificación — no activo', empty: 'Ninguna carta coincide con este filtro.',
+      appId: 'ID MA {id}', avatarCode: 'Avatar {code}', artwork: '{name} · Arte {index}', artworkId: 'Arte {id}'
     },
     fr: {
       all: 'Toutes', app: 'Cartes de l’app', legacy: 'Migration héritée',
@@ -109,7 +112,8 @@
       variant: '{name} · Carte {index}', results: '{shown} cartes affichées sur {total}',
       loadMore: 'Afficher plus de cartes', imageAlt: '{name}, carte {index}, niveau {rarity}',
       tier: 'Niveau', amount: 'Référence proposée', status: 'Statut',
-      planningOnly: 'Planification uniquement — inactif', empty: 'Aucune carte ne correspond à ce filtre.'
+      planningOnly: 'Planification uniquement — inactif', empty: 'Aucune carte ne correspond à ce filtre.',
+      appId: 'ID MA {id}', avatarCode: 'Avatar {code}', artwork: '{name} · Visuel {index}', artworkId: 'Visuel {id}'
     },
     de: {
       all: 'Alle', app: 'App-Karten', legacy: 'Altdaten-Migration',
@@ -117,7 +121,8 @@
       variant: '{name} · Karte {index}', results: '{shown} von {total} Karten angezeigt',
       loadMore: 'Mehr Karten laden', imageAlt: '{name}, Karte {index}, Stufe {rarity}',
       tier: 'Stufe', amount: 'Vorgeschlagener Referenzwert', status: 'Status',
-      planningOnly: 'Nur Planung — nicht aktiv', empty: 'Keine Karten entsprechen diesem Filter.'
+      planningOnly: 'Nur Planung — nicht aktiv', empty: 'Keine Karten entsprechen diesem Filter.',
+      appId: 'MA-ID {id}', avatarCode: 'Avatar {code}', artwork: '{name} · Motiv {index}', artworkId: 'Motiv {id}'
     },
     ja: {
       all: 'すべて', app: 'アプリカード', legacy: '旧カード移行',
@@ -125,7 +130,8 @@
       variant: '{name} · カード {index}', results: '{total}枚中{shown}枚を表示',
       loadMore: 'さらにカードを表示', imageAlt: '{name}、カード{index}、{rarity}ランク',
       tier: 'ランク', amount: '提案参考値', status: '状態',
-      planningOnly: '計画案のみ — 未稼働', empty: 'この条件に一致するカードはありません。'
+      planningOnly: '計画案のみ — 未稼働', empty: 'この条件に一致するカードはありません。',
+      appId: 'MA ID {id}', avatarCode: 'アバター {code}', artwork: '{name} · アート {index}', artworkId: 'アート {id}'
     },
     ko: {
       all: '전체', app: '앱 카드', legacy: '기존 카드 이전',
@@ -133,7 +139,8 @@
       variant: '{name} · 카드 {index}', results: '전체 {total}장 중 {shown}장 표시',
       loadMore: '카드 더 보기', imageAlt: '{name}, 카드 {index}, {rarity} 등급',
       tier: '등급', amount: '제안 참고값', status: '상태',
-      planningOnly: '계획안 전용 — 미가동', empty: '이 필터에 맞는 카드가 없습니다.'
+      planningOnly: '계획안 전용 — 미가동', empty: '이 필터에 맞는 카드가 없습니다.',
+      appId: 'MA ID {id}', avatarCode: '아바타 {code}', artwork: '{name} · 아트 {index}', artworkId: '아트 {id}'
     }
   };
 
@@ -160,6 +167,7 @@
 
   function makeAppCatalog() {
     var cards = [];
+    var avatarCode = 115;
     Object.keys(VARIANT_COUNTS).forEach(function (animalId) {
       var count = VARIANT_COUNTS[animalId];
       for (var index = 1; index <= count; index += 1) {
@@ -174,28 +182,36 @@
           image: '/assets/ma-programs/cards/' + animalId + '_' + index + '.jpg',
           source: 'ma-game-center',
           eligibility: 'planning',
-          proposedMA: PROPOSED_REFERENCE_SCHEDULE[rarity]
+          proposedMA: PROPOSED_REFERENCE_SCHEDULE[rarity],
+          avatarCode: String(avatarCode)
         }));
+        avatarCode += 1;
       }
     });
     return cards;
   }
 
   function makeLegacyCatalog() {
-    var cards = [];
-    for (var index = 1; index <= 4; index += 1) {
-      cards.push(Object.freeze({
-        id: 'blue-whale-purple-' + index,
+    var artworks = [
+      { id: 'jelly-dream', file: 'purple_whale_card_1.jpg' },
+      { id: 'coral-family', file: 'purple_whale_card_2.jpg' },
+      { id: 'ocean-leap', file: 'purple_whale_card_3.jpg' },
+      { id: 'happy-spray', file: 'purple_whale_card_4.jpg' }
+    ];
+    return artworks.map(function (artwork, offset) {
+      return Object.freeze({
+        id: 'blue-whale-purple',
+        catalogKey: 'blue-whale-purple:' + artwork.id,
+        artworkId: artwork.id,
         animalId: 'blue-whale-purple',
-        index: index,
+        index: offset + 1,
         rarity: 'LEGACY',
-        image: '/assets/ma-programs/cards/purple_whale_card_' + index + '.jpg',
+        image: '/assets/ma-programs/cards/' + artwork.file,
         source: 'legacy-purple-whale',
         eligibility: 'migration-pending',
         proposedMA: null
-      }));
-    }
-    return cards;
+      });
+    });
   }
 
   var APP_CARDS = Object.freeze(makeAppCatalog());
@@ -224,14 +240,13 @@
     var article = document.createElement('article');
     article.className = 'catalog-card';
     article.dataset.cardId = card.id;
+    if (card.artworkId) article.dataset.artworkId = card.artworkId;
     article.dataset.rarity = card.rarity;
 
     var image = document.createElement('img');
     image.src = card.image;
     image.loading = 'lazy';
     image.decoding = 'async';
-    image.width = 620;
-    image.height = 849;
     image.alt = text('imageAlt', {
       name: animalName(card.animalId, lang),
       index: card.index,
@@ -241,16 +256,22 @@
     var copy = document.createElement('div');
     copy.className = 'catalog-copy';
     var title = document.createElement('strong');
-    title.textContent = text('variant', {
+    title.textContent = text(card.artworkId ? 'artwork' : 'variant', {
       name: animalName(card.animalId, lang),
       index: card.index
     }, lang);
+    var identity = document.createElement('small');
+    identity.className = 'catalog-identity';
+    identity.textContent = text('appId', { id: card.id }, lang) + ' · ' + (card.artworkId
+      ? text('artworkId', { id: card.artworkId }, lang)
+      : text('avatarCode', { code: card.avatarCode }, lang));
     var detail = document.createElement('span');
     detail.textContent = card.eligibility === 'migration-pending'
       ? text('migration', null, lang)
       : card.rarity + ' · ' + text('proposed', { amount: formatMA(card.proposedMA, lang) }, lang);
 
     copy.appendChild(title);
+    copy.appendChild(identity);
     copy.appendChild(detail);
     article.appendChild(image);
     article.appendChild(copy);
