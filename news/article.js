@@ -17,14 +17,15 @@
 
   document.title = `${story.title} | Astro Open Infrastructure`;
   document.querySelector('meta[name="description"]').content = story.dek;
+  const phaseTone = ["verified", "active", "planned"].includes(story.phaseTone) ? story.phaseTone : "active";
   root.innerHTML = `
     <article>
       <header class="article-hero">
         <div class="shell">
-          <div class="article-kicker">${escapeHtml(story.type)} · ${escapeHtml(story.section)}</div>
+          <div class="article-kicker">${escapeHtml(story.project || story.section)} · ${escapeHtml(story.type)}</div>
           <h1>${escapeHtml(story.title)}</h1>
           <p class="article-dek">${escapeHtml(story.dek)}</p>
-          <div class="article-byline"><strong>${escapeHtml(story.byline)}</strong><time datetime="${story.date}">${escapeHtml(story.displayDate)}</time><span>Official publication</span></div>
+          <div class="article-byline"><strong>${escapeHtml(story.byline)}</strong><time datetime="${story.date}">${escapeHtml(story.displayDate)}</time><span class="phase-badge ${phaseTone}">${escapeHtml(story.phase || "Official publication")}</span></div>
         </div>
       </header>
       <img class="article-image" src="${escapeHtml(story.image)}" alt="">
