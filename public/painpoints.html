@@ -91,6 +91,14 @@
     .btn-secondary { background: rgba(255,255,255,.06); backdrop-filter: blur(14px); }
     .btn-disabled { color: #9caabd; background: rgba(255,255,255,.035); cursor: not-allowed; }
     .btn-disabled small { color: var(--cyan); font-size: 9px; text-transform: uppercase; }
+    .program-quicklinks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .program-pill {
+      min-height: 38px; display: inline-flex; align-items: center; gap: 7px;
+      padding: 0 12px; border: 1px solid rgba(115,220,255,.28); border-radius: 999px;
+      background: rgba(115,220,255,.07); color: #dff7ff; font-size: 12px; font-weight: 700;
+    }
+    .program-pill:hover { border-color: var(--cyan); background: rgba(115,220,255,.13); }
+    .program-pill i { width: 15px; height: 15px; color: var(--cyan); }
     .micro { margin-top: 23px; display: flex; flex-wrap: wrap; gap: 18px; color: #90a0b4; font-size: 12px; }
     .micro span { display: flex; align-items: center; gap: 7px; }
     .device-stage { position: relative; min-height: 620px; display: grid; place-items: center; }
@@ -146,6 +154,12 @@
     .endpoint { padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.025); }
     .endpoint code { display: block; margin: 18px 0 10px; color: var(--cyan); font-size: clamp(13px, 2vw, 17px); overflow-wrap: anywhere; }
     .endpoint p { margin: 0; color: var(--muted); font-size: 13px; }
+    .program-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .program-card { min-height: 260px; display: flex; flex-direction: column; transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+    .program-card:hover { transform: translateY(-2px); border-color: rgba(115,220,255,.54); background: rgba(115,220,255,.055); }
+    .program-card h3 { margin: 24px 0 10px; font-size: 22px; }
+    .program-card p { margin-bottom: 22px; }
+    .program-card .btn { width: 100%; min-height: 44px; margin-top: auto; padding: 0 14px; font-size: 13px; }
     .cta { text-align: center; }
     .cta img { width: 108px; height: 108px; border-radius: 26px; box-shadow: 0 0 46px rgba(86,171,255,.34); }
     .cta h2 { margin: 26px auto 16px; max-width: 760px; font-size: clamp(40px, 6vw, 72px); line-height: 1; }
@@ -170,6 +184,7 @@
       .links { display: none; }
       .hero { padding-top: 118px; }
       .hero-grid, .transfer, .channel { grid-template-columns: 1fr; }
+      .program-grid { grid-template-columns: 1fr; }
       .hero-copy, .device-stage { min-width: 0; }
       .hero-copy { text-align: center; }
       .eyebrow, .actions, .micro { justify-content: center; }
@@ -187,6 +202,8 @@
       h1 { font-size: 44px; overflow-wrap: anywhere; }
       .lead { font-size: 16px; }
       .actions .btn { width: 100%; }
+      .program-quicklinks { display: grid; grid-template-columns: 1fr; }
+      .program-pill { min-height: 44px; justify-content: center; border-radius: 8px; }
       .device-stage { min-height: 510px; }
       .device { width: 236px; border-radius: 31px; }
       .device img { border-radius: 24px; }
@@ -215,6 +232,8 @@
         <a href="#product"><span data-lang="en">Product</span><span data-lang="zh">产品</span></a>
         <a href="#security"><span data-lang="en">Security</span><span data-lang="zh">安全</span></a>
         <a href="#channel"><span data-lang="en">Channel</span><span data-lang="zh">通道</span></a>
+        <a href="#ma-programs"><span data-lang="en">Programs</span><span data-lang="zh">计划</span></a>
+        <a href="newsroom.html"><span data-lang="en">Newsroom</span><span data-lang="zh">新闻</span></a>
         <a href="https://www.astrochannel.one/roadmap.html">AstroWallet AI</a>
       </div>
       <button class="icon-button" id="lang" title="Language" aria-label="Switch language"><i data-lucide="languages"></i></button>
@@ -233,6 +252,11 @@
             <a class="btn btn-primary" href="#download"><i data-lucide="download"></i><span data-lang="en">Get MA for Android</span><span data-lang="zh">下载 Android 版</span></a>
             <span class="btn btn-disabled" aria-disabled="true"><i data-lucide="apple"></i><span data-lang="en">iOS · Coming Soon</span><span data-lang="zh">iOS · 即将上线</span><small>TestFlight</small></span>
             <a class="btn btn-secondary" href="#product"><i data-lucide="message-circle-more"></i><span data-lang="en">Explore MA</span><span data-lang="zh">探索 MA</span></a>
+          </div>
+          <div class="program-quicklinks" aria-label="MA program pages">
+            <a class="program-pill" href="ma-card-redemption.html"><i data-lucide="layers-3"></i><span data-lang="en">Card Redemption</span><span data-lang="zh">卡片兑换</span></a>
+            <a class="program-pill" href="ma-burn.html"><i data-lucide="flame"></i><span data-lang="en">Daily Burn</span><span data-lang="zh">每日燃烧</span></a>
+            <a class="program-pill" href="ma-mother-love.html"><i data-lucide="heart-handshake"></i><span data-lang="en">Mother Fund</span><span data-lang="zh">妈妈基金</span></a>
           </div>
           <div class="micro">
             <span><i data-lucide="shield-check" size="15"></i><span data-lang="en">Wallet signature identity</span><span data-lang="zh">钱包签名身份</span></span>
@@ -321,10 +345,10 @@
           <h2><span data-lang="en">Cards, supply, and care.</span><span data-lang="zh">卡片、供应量与关爱。</span></h2>
           <p><span data-lang="en">Open the official program pages. They are read-only until the relevant on-chain and consent checks are complete.</span><span data-lang="zh">进入官方计划页面。相关链上与授权核验完成前，页面保持只读。</span></p>
         </div>
-        <div class="channel">
-          <article class="endpoint"><i data-lucide="layers-3"></i><code><a href="ma-card-redemption.html">ma-card-redemption.html</a></code><p data-lang="en">Card gallery, proposed reference values, and the future app-to-web redemption boundary.</p><p data-lang="zh">卡片画廊、拟议参考值，以及未来应用到网页的兑换边界。</p></article>
-          <article class="endpoint"><i data-lucide="flame"></i><code><a href="ma-burn.html">ma-burn.html</a></code><p data-lang="en">100M MA reserve, 273,972 MA daily plan, and transaction proof standard.</p><p data-lang="zh">1 亿 MA 储备、每日 273,972 MA 计划与交易核验标准。</p></article>
-          <article class="endpoint"><i data-lucide="heart-handshake"></i><code><a href="ma-mother-love.html">ma-mother-love.html</a></code><p data-lang="en">The meaning of MA and a consent-first wall for every verified mother helped.</p><p data-lang="zh">MA 的意义，以及为每一位获得帮助且完成授权核验的妈妈准备的故事墙。</p></article>
+        <div class="program-grid">
+          <article class="endpoint program-card"><i data-lucide="layers-3"></i><h3><span data-lang="en">Card Redemption</span><span data-lang="zh">卡片兑换</span></h3><p data-lang="en">Card gallery, proposed reference values, and the future app-to-web redemption boundary.</p><p data-lang="zh">卡片画廊、拟议参考值，以及未来应用到网页的兑换边界。</p><a class="btn btn-secondary" href="ma-card-redemption.html"><span data-lang="en">Open Card Redemption</span><span data-lang="zh">打开卡片兑换</span><i data-lucide="arrow-up-right"></i></a></article>
+          <article class="endpoint program-card"><i data-lucide="flame"></i><h3><span data-lang="en">Daily Burn</span><span data-lang="zh">每日燃烧</span></h3><p data-lang="en">100M MA reserve, 273,972 MA daily plan, and transaction proof standard.</p><p data-lang="zh">1 亿 MA 储备、每日 273,972 MA 计划与交易核验标准。</p><a class="btn btn-secondary" href="ma-burn.html"><span data-lang="en">Open Daily Burn</span><span data-lang="zh">打开每日燃烧</span><i data-lucide="arrow-up-right"></i></a></article>
+          <article class="endpoint program-card"><i data-lucide="heart-handshake"></i><h3><span data-lang="en">Mother Fund</span><span data-lang="zh">妈妈基金</span></h3><p data-lang="en">The meaning of MA and a consent-first wall for every verified mother helped.</p><p data-lang="zh">MA 的意义，以及为每一位获得帮助且完成授权核验的妈妈准备的故事墙。</p><a class="btn btn-secondary" href="ma-mother-love.html"><span data-lang="en">Open Mother Fund</span><span data-lang="zh">打开妈妈基金</span><i data-lucide="arrow-up-right"></i></a></article>
         </div>
       </div>
     </section>
