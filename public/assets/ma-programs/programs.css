@@ -192,7 +192,7 @@ tbody tr:last-child td { border-bottom: 0; }
 .portrait-dot:nth-child(7) { left: 19%; bottom: 2%; }
 .vision-caption { position: absolute; inset: auto 22px 20px; z-index: 2; color: #dce7f3; font-size: 11px; text-align: center; }
 .allocation-bar { height: 16px; overflow: hidden; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.04); }
-.allocation-bar span { width: 3%; min-width: 20px; height: 100%; display: block; background: linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--accent); }
+.allocation-bar span { width: 1%; height: 100%; display: block; background: linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px var(--accent); }
 .story-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .story-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); }
 .story-card img { width: 100%; aspect-ratio: 4/3; display: block; object-fit: cover; }

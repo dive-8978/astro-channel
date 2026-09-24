@@ -1,0 +1,16 @@
+{
+  "revision": "2026-09-25",
+  "status": "proposal-not-active",
+  "initialSupplyReferenceMA": 1000000000,
+  "redemption": {
+    "poolMA": 7000000,
+    "targetYears": [3, 5],
+    "baselineYears": 5,
+    "referenceScale": "7/30",
+    "rounding": "floor-to-2-decimals",
+    "referenceMA": {"N":2.33,"R":5.83,"SR":14,"SSR":35,"UR":93.33,"LR":233.33,"MR":583.33,"MYTHIC":2333.33,"COSMIC":11666.66}
+  },
+  "motherFund": {"allocationMA":10000000,"initialSupplyPercent":1},
+  "burn": {"reserveMA":50000000,"days":365,"days1To364MA":136986,"day365MA":137096,"roundingAdjustmentMA":110,"startDate":null},
+  "notice": "Planning figures only. Activation requires verified contracts, funded reserves, eligibility and published final rules. No token value guarantee."
+}
