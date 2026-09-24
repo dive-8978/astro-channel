@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T21:34:38.501Z",
+  "generatedAt": "2026-09-24T05:00:56.957Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,110 @@
     }
   ],
   "items": [
+    {
+      "id": "db68b59656dbc1902342",
+      "source": "Cointelegraph",
+      "title": "Bitcoin’s ‘last resort’ quantum-safe solution just got 79% cheaper: StarkWare",
+      "summary": "A weeklong optimization challenge cut the estimated GPU cost of preparing an experimental quantum-resistant Bitcoin transaction to under $67, potentially making the “last-resort measure” a little easier on the wallet.",
+      "url": "https://cointelegraph.com/news/bitcoins-last-resort-quantum-safe-solution-just-got-79-cheaper-starkware?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T04:52:40.000Z"
+    },
+    {
+      "id": "cae83496413f6689ee75",
+      "source": "Cointelegraph",
+      "title": "US weighs overseas push for dollar-backed stablecoins: Bloomberg",
+      "summary": "The reported initiative could involve private-sector companies and several US agencies as Washington looks to expand the international use of dollar-backed stablecoins.",
+      "url": "https://cointelegraph.com/news/us-overseas-dollar-stablecoins-trump-administration?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T04:44:12.000Z"
+    },
+    {
+      "id": "40d263e2bddb9ebeb850",
+      "source": "CryptoSlate",
+      "title": "Galaxy adds $100M Sky token and institutional adoption is tested",
+      "summary": "Clients can pledge the savings token, though the companies disclosed no sUSDS-backed client loan volume. The post Galaxy adds $100M Sky token and institutional adoption is tested appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/galaxy-adds-100m-sky-token-and-institutional-adoption-is-tested/",
+      "publishedAt": "2026-09-24T04:30:35.000Z"
+    },
+    {
+      "id": "4eb6b8097c402a26af21",
+      "source": "CoinDesk",
+      "title": "Dogecoin down 8%, bitcoin under $84,000 as Treasury yields hit highest level since 2007",
+      "summary": "A rebound in oil, the strongest U.S. business survey in five years and a poorly received five-year note sale pushed borrowing costs higher, with DOGE leading token losses.",
+      "url": "https://www.coindesk.com/markets/2026/09/24/dogecoin-down-8-bitcoin-under-usd84-000-as-treasury-yields-hit-highest-level-since-2007",
+      "publishedAt": "2026-09-24T04:13:01.000Z"
+    },
+    {
+      "id": "359b2a67b3a6e2caa5a3",
+      "source": "CryptoSlate",
+      "title": "Cardano proposal slashes fees by 55%, but it comes with a cost for small pools",
+      "summary": "DReps and the committee now decide the narrower 75 ADA proposal; any delegator gain still depends on what pools charge. The post Cardano proposal slashes fees by 55%, but it comes with a cost for small pools appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/cardano-proposal-slashes-fees-by-55-but-it-comes-with-a-cost-for-small-pools/",
+      "publishedAt": "2026-09-24T02:50:26.000Z"
+    },
+    {
+      "id": "e9994047f84fcc3cc56c",
+      "source": "CryptoSlate",
+      "title": "White hats recover 52 Bitcoin from Coldcard exploit, and a new public portal lets victims check eligibility",
+      "summary": "A Sept. 21 transaction points owners toward a trust address check for an earlier disclosed rescue, with any return subject to verification. The post White hats recover 52 Bitcoin from Coldcard exploit, and a new public portal lets victims check eligibility…",
+      "url": "https://cryptoslate.com/white-hats-recover-52-bitcoin-from-coldcard-exploit-and-a-new-public-portal-lets-victims-check-eligibility/",
+      "publishedAt": "2026-09-24T01:10:28.000Z"
+    },
+    {
+      "id": "7230500120fa74ee0e6c",
+      "source": "Cointelegraph",
+      "title": "Kalshi says CFTC hasn’t contacted it over ‘unusual’ $5B trading activity",
+      "summary": "Kalshi said nearly $5 billion in similarly sized Ether perpetual trades reflected its liquidity incentive programs and rejected allegations that the activity was wash trading.",
+      "url": "https://cointelegraph.com/news/kalshi-says-cftc-hasnt-contacted-it-over-unusual-5b-trading-activity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T00:53:09.000Z"
+    },
+    {
+      "id": "0eb438ca8e16eb459cf5",
+      "source": "CryptoSlate",
+      "title": "Bitcoin slips below $85,000 as 5% Treasury yield returns to haunt risk assets",
+      "summary": "Bitcoin fell below $85,000 on Sept. 23 after stronger-than-expected US business activity sent Treasury yields higher and flushed leveraged longs. The reversal broke the momentum behind a rebound that had accelerated as Bitcoin pushed through a large…",
+      "url": "https://cryptoslate.com/bitcoin-slips-below-85000-as-5-treasury-yield-returns-to-haunt-risk-assets/",
+      "publishedAt": "2026-09-23T23:40:38.000Z"
+    },
+    {
+      "id": "a81b6ead6fd7f97f631b",
+      "source": "Decrypt",
+      "title": "Anthropic Says Claude Found Something Big in DNA. It Just Doesn't Know What",
+      "summary": "Anthropic says Claude autonomously found a new CRISPR-like enzyme system. Even Dario Amodei admits nobody knows what it actually does.",
+      "url": "https://decrypt.co/379128/anthropic-claude-found-something-big-dna-doesnt-know-what",
+      "publishedAt": "2026-09-23T22:56:03.000Z"
+    },
+    {
+      "id": "64a1fd1d4372d3b0ee72",
+      "source": "Decrypt",
+      "title": "An AI Agent Just Hacked a Government Website for the First Time, Australia PM Says",
+      "summary": "Anthony Albanese said the agent accessed public and non-public files on a Medicare statistics portal in June, calling OpenAI's three-month delay in disclosing the breach \"unacceptable.\"",
+      "url": "https://decrypt.co/379134/an-ai-agent-just-hacked-a-government-website-for-the-first-time-australia-pm-says",
+      "publishedAt": "2026-09-23T22:31:45.000Z"
+    },
+    {
+      "id": "5eb08f4512258d3bc1fa",
+      "source": "Decrypt",
+      "title": "OpenAI Gives Ukraine Access to Daybreak AI Cyber-Defense Tool",
+      "summary": "OpenAI is giving Ukraine's government access to Daybreak, its AI vulnerability-hunting system, as the country's cyber defenders face a record wave of attacks on hospitals, power grids, and government networks.",
+      "url": "https://decrypt.co/379126/openai-ukraine-access-daybreak-ai-cyber-defense-tool",
+      "publishedAt": "2026-09-23T22:06:04.000Z"
+    },
+    {
+      "id": "a064c004c59e4b643993",
+      "source": "CryptoSlate",
+      "title": "Circle launches 24/7 stablecoin FX engine as it chases a slice of the $10 trillion currency market",
+      "summary": "Screened firms can settle supported stablecoin pairs together, while local fiat access and custody require separate arrangements. The post Circle launches 24/7 stablecoin FX engine as it chases a slice of the $10 trillion currency market appeared first on…",
+      "url": "https://cryptoslate.com/circle-launches-24-7-stablecoin-fx-engine-as-it-chases-a-slice-of-the-10-trillion-currency-market/",
+      "publishedAt": "2026-09-23T22:00:28.000Z"
+    },
+    {
+      "id": "028d61b332d7fe042e8e",
+      "source": "Cointelegraph",
+      "title": "Ex-SEC acting chair: Agency dropped crypto cases to avoid issues with credibility",
+      "summary": "SEC Commissioner Mark Uyeda said that the agency dropped many cases against crypto companies in early 2025 to avoid potential credibility problems in court.",
+      "url": "https://cointelegraph.com/news/sec-mark-uyeda-agency-dropped-crypto-cases?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-23T21:47:52.000Z"
+    },
     {
       "id": "7b7415a1768b06d6d4d1",
       "source": "Decrypt",
@@ -330,14 +434,6 @@
       "publishedAt": "2026-09-23T15:41:46.000Z"
     },
     {
-      "id": "cdfa0043e877ea48bc81",
-      "source": "CryptoSlate",
-      "title": "Coin Metrics revises 19 months of ETF wallet data but by how much?",
-      "summary": "The update spans 35 daily and 25 hourly series, yet no cause, direction or numerical delta was disclosed. The post Coin Metrics revises 19 months of ETF wallet data but by how much? appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/coin-metrics-corrected-19-months-of-bitcoin-etf-wallet-data-without-saying-how-much-changed-publicly/",
-      "publishedAt": "2026-09-23T15:40:29.000Z"
-    },
-    {
       "id": "ea2bd421c190ac6333fd",
       "source": "The Block",
       "title": "Blockchain.com, NYSE plan access to tokenized US stocks and ETFs",
@@ -354,14 +450,6 @@
       "publishedAt": "2026-09-23T15:26:35.000Z"
     },
     {
-      "id": "7530d4eff9c8cf44a518",
-      "source": "CryptoSlate",
-      "title": "Bitcoin ETFs just erased a $5.7 billion hole, but profit-taking is swallowing the new demand",
-      "summary": "A second large inflow met weak price follow-through. Dated fund reports and an earlier rise in profit taking leave the seller behind the move unidentified. The post Bitcoin ETFs just erased a $5.7 billion hole, but profit-taking is swallowing the new demand…",
-      "url": "https://cryptoslate.com/bitcoin-etfs-just-erased-a-5-7-billion-hole-but-profit-taking-is-swallowing-the-new-demand/",
-      "publishedAt": "2026-09-23T15:10:03.000Z"
-    },
-    {
       "id": "7f575a1a71ae8e3804c9",
       "source": "CoinDesk",
       "title": "Crypto Long & Short: Inside the chain settling $150 billion of stablecoins a week",
@@ -376,14 +464,6 @@
       "summary": "Bitcoin long liquidations mounted as BTC/USD briefly traded below $84,000, while analysis flagged key support to hold.",
       "url": "https://cointelegraph.com/markets/bitcoin-long-liquidations-hit-280m-as-btc-price-dips-under-84k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-23T14:52:11.000Z"
-    },
-    {
-      "id": "197244f05507eaf53afc",
-      "source": "CryptoSlate",
-      "title": "Solana moves Alpenglow into testnet as SOL nears January highs",
-      "summary": "Anza began the rollout process, while the feature tracker and a live genesis-certificate check showed the consensus handoff had not yet occurred. The post Solana moves Alpenglow into testnet as SOL nears January highs appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/solana-moves-alpenglow-into-testnet-as-sol-nears-january-highs/",
-      "publishedAt": "2026-09-23T14:40:54.000Z"
     },
     {
       "id": "22efccba496d566b52cb",
@@ -432,14 +512,6 @@
       "summary": "Bitcoin Magazine Dave Weisberger on Why Bitcoin FOMO Hasn’t Even Started Yet CoinRoutes’ Dave Weisberger explains why ending Bitcoin's 100% bank collateral haircut will be bigger for institutions than ETFs or MSTR. This post Dave Weisberger on Why Bitcoin…",
       "url": "https://bitcoinmagazine.com/videos/dave-weisberger-bitcoin-fomo-hasnt-started-yet",
       "publishedAt": "2026-09-23T13:31:49.000Z"
-    },
-    {
-      "id": "856ae7fb41a4de09dbae",
-      "source": "CryptoSlate",
-      "title": "Altcoin demand meets $18B threat as flows move into RWA perps as just 19% of traders keep alts",
-      "summary": "Traditional-asset perps filled a crypto-volume gap while Hyperliquid cohorts remained mostly segmented by their entry market. The post Altcoin demand meets $18B threat as flows move into RWA perps as just 19% of traders keep alts appeared first on…",
-      "url": "https://cryptoslate.com/altcoin-demand-faces-18b-threat-as-flows-move-into-rwa-perps-while-only-19-of-traders-keep-altcoins/",
-      "publishedAt": "2026-09-23T13:30:50.000Z"
     },
     {
       "id": "566fc7c6b80c0a5d61bf",
@@ -496,14 +568,6 @@
       "summary": "Global crypto activity fell 1.6% to $9.4 trillion despite a massive $2.1 trillion market cap contraction, Chainalysis says.",
       "url": "https://www.theblock.co/news/ecosystems/2026-09-23-crypto-economy-fell-just-1-6-in-12-months-despite-2-1-trillion-market-cap-rout-chainalysis-says-416150",
       "publishedAt": "2026-09-23T13:00:00.000Z"
-    },
-    {
-      "id": "f927e6e8f4a4baa6a57a",
-      "source": "CryptoSlate",
-      "title": "Why Mastercard’s $25 billion crypto expansion isn’t what it seems",
-      "summary": "SoFi is migrating its card program into SoFiUSD, while the amount already settled in the token remains undisclosed. The post Why Mastercard’s $25 billion crypto expansion isn’t what it seems appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/sofis-mastercard-stablecoin-settlement-is-live-but-its-25-billion-figure-is-still-a-projection/",
-      "publishedAt": "2026-09-23T12:30:03.000Z"
     },
     {
       "id": "971e3ee0eecfd7b11896",
@@ -632,70 +696,6 @@
       "summary": "The proposed NU7 change would disable version 4 transactions, leaving ZEC in Zcash’s legacy Sprout shielded pool unspendable.",
       "url": "https://cointelegraph.com/news/zcash-nu7-upgrade-sprout-funds-unspendable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-23T08:07:10.000Z"
-    },
-    {
-      "id": "4615ed5d95660f6c3ae6",
-      "source": "CoinDesk",
-      "title": "Coinbase users can now borrow USDC against bitcoin at a fixed rate",
-      "summary": "Coinbase now allows users to borrow the USDC stablecoin against their bitcoin at a fixed interest rate and repayment date.",
-      "url": "https://www.coindesk.com/markets/2026/09/23/coinbase-users-can-now-borrow-usdc-against-bitcoin-at-a-fixed-rate",
-      "publishedAt": "2026-09-23T07:49:23.000Z"
-    },
-    {
-      "id": "0f7e0c9b6ee8e5e4c710",
-      "source": "CoinDesk",
-      "title": "XRP Ledger retries upgrade that lets banks split payment and compliance duties",
-      "summary": "The upgrade could activate Oct. 5, letting businesses give another account limited powers such as making payments or approving customers without handing over full control.",
-      "url": "https://www.coindesk.com/tech/2026/09/23/xrp-ledger-retries-upgrade-that-lets-banks-split-payment-and-compliance-duties",
-      "publishedAt": "2026-09-23T07:37:46.000Z"
-    },
-    {
-      "id": "706bb0205ee887629b64",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs take in $1.7B in 2 days as BTC tops holder cost basis",
-      "summary": "US spot Bitcoin ETFs recorded more than $1.7 billion in net inflows over two days as Bitcoin rose above investors’ estimated average cost basis.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etf-inflow-2-days-holder-profitable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T07:25:05.000Z"
-    },
-    {
-      "id": "64f4b18eac7cf47be6ea",
-      "source": "Cointelegraph",
-      "title": "US Treasury secretary emerges as frontrunner for Trump’s AI czar role: Report",
-      "summary": "US President Donald Trump previously tapped David Sacks as his AI and crypto czar before Sacks stepped down from the role earlier this year after reaching his service limit as a special government employee.",
-      "url": "https://cointelegraph.com/news/us-treasury-secretary-emerges-as-contender-for-trumps-ai-czar-role?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T05:34:49.000Z"
-    },
-    {
-      "id": "094b2f1ffad747124c93",
-      "source": "Cointelegraph",
-      "title": "Malicious iOS app FomoPeek linked to $580K crypto theft, SlowMist says",
-      "summary": "SlowMist said malicious FomoPeek versions distributed through Apple’s App Store used iOS kernel exploits to escape the sandbox and access sensitive data from other apps.",
-      "url": "https://cointelegraph.com/news/fomopeek-ios-app-580k-crypto-theft?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T05:22:21.000Z"
-    },
-    {
-      "id": "e39e016cf8780b162fc5",
-      "source": "CoinDesk",
-      "title": "Solana starts testing upgrade that could cut finality from 12.8 seconds to 150 milliseconds",
-      "summary": "Alpenglow would let exchanges, bridges and merchants treat payments as irreversible almost immediately.",
-      "url": "https://www.coindesk.com/tech/2026/09/23/solana-starts-testing-upgrade-that-could-cut-finality-from-12-8-seconds-to-150-milliseconds",
-      "publishedAt": "2026-09-23T05:16:22.000Z"
-    },
-    {
-      "id": "248aa8eb1ec2474fdda1",
-      "source": "CoinDesk",
-      "title": "Bitcoin's on a streak it hasn't hit since 2012",
-      "summary": "Bitcoin’s 10% September gain puts it on track for a rare three-month winning streak last seen in 2012.",
-      "url": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-on-a-streak-it-hasn-t-hit-since-2012",
-      "publishedAt": "2026-09-23T05:12:42.000Z"
-    },
-    {
-      "id": "bdd85122566e7deaf052",
-      "source": "The Block",
-      "title": "Canada’s big six banks explore tokenized deposit system to modernize payments",
-      "summary": "The banks said the first phase of the project involves moving tokenized deposits efficiently across financial institutions.",
-      "url": "https://www.theblock.co/news/business/2026-09-23-canada-banks-tokenized-deposit-system-416129",
-      "publishedAt": "2026-09-23T04:57:07.000Z"
     }
   ]
 }
