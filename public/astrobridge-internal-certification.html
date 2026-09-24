@@ -3,71 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstroBridge Internal Security Certification</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800&display=swap" rel="stylesheet">
+<meta name="description" content="AstroBridge and MA integration readiness report with verified test evidence and explicit production deployment boundaries.">
+<title>AstroBridge Audit &amp; Deployment Readiness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-body{background:#020112;color:#fff;min-height:100vh;padding:48px 22px}
-.wrap{max-width:980px;margin:0 auto}
-.back{display:inline-block;color:#4cc9f0;text-decoration:none;margin-bottom:36px;font-weight:700}
-.card{background:rgba(255,255,255,0.06);border:1px solid rgba(76,201,240,0.28);border-radius:28px;padding:42px;box-shadow:0 0 80px rgba(76,201,240,0.22);backdrop-filter:blur(18px)}
-h1{font-size:2.7rem;line-height:1.1;margin-bottom:16px;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{color:#a8dadc;font-size:1.08rem;line-height:1.7;margin-bottom:30px}
-.badge{display:inline-block;border:1px solid rgba(76,201,240,0.6);border-radius:999px;padding:10px 18px;color:#4cc9f0;font-weight:800;margin-bottom:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0}
-.item{background:rgba(2,6,24,0.7);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:18px}
-.item strong{display:block;color:#fff;margin-bottom:8px}
-.item span{color:#c4f1ff;line-height:1.55}
-h2{font-size:1.45rem;margin:34px 0 14px;color:#fff}
-ul{padding-left:22px;color:#c4f1ff;line-height:1.8}
-.notice{margin-top:28px;padding:18px 20px;border-radius:18px;background:rgba(247,37,133,0.1);border:1px solid rgba(247,37,133,0.35);color:#ffd6e8;line-height:1.65}
-footer{color:#7faabc;text-align:center;margin-top:34px;font-size:.95rem}
+:root{color-scheme:dark;--bg:#020112;--panel:rgba(10,15,36,.86);--panel2:rgba(4,9,27,.82);--cyan:#4cc9f0;--pink:#f72585;--green:#66f6a7;--amber:#ffd166;--text:#f7fbff;--muted:#afd7e6;--line:rgba(125,211,252,.22)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;padding:28px 20px 56px;background:radial-gradient(circle at 12% 0%,rgba(76,201,240,.15),transparent 32%),radial-gradient(circle at 92% 10%,rgba(247,37,133,.13),transparent 28%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
+.wrap{position:relative;max-width:1120px;margin:0 auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}
+.back{color:var(--cyan);text-decoration:none;font-weight:800}
+.language{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.88rem;font-weight:700}
+select{appearance:none;border:1px solid rgba(76,201,240,.45);border-radius:999px;background:#080c22;color:#fff;padding:10px 34px 10px 14px;font:inherit;background-image:linear-gradient(45deg,transparent 50%,var(--cyan) 50%),linear-gradient(135deg,var(--cyan) 50%,transparent 50%);background-position:calc(100% - 17px) 15px,calc(100% - 12px) 15px;background-size:5px 5px;background-repeat:no-repeat}
+.hero,.section{background:var(--panel);border:1px solid var(--line);box-shadow:0 28px 100px rgba(0,0,0,.34);backdrop-filter:blur(18px)}
+.hero{border-radius:30px;padding:46px;margin-bottom:20px;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:310px;height:310px;border-radius:50%;right:-130px;top:-150px;background:radial-gradient(circle,rgba(76,201,240,.24),transparent 68%)}
+.badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,209,102,.55);border-radius:999px;padding:9px 15px;color:var(--amber);font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
+.badge:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 14px var(--amber)}
+h1{max-width:840px;margin:0 0 16px;font-size:clamp(2.3rem,6vw,4.7rem);line-height:1.02;letter-spacing:-.045em;background:linear-gradient(90deg,#fff 0%,#baf1ff 48%,#ffb7d8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:850px;margin:0;color:var(--muted);font-size:clamp(1rem,2vw,1.18rem);line-height:1.75}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.meta span{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.045);border-radius:999px;padding:9px 13px;color:#dff7ff;font-size:.85rem}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.metric{min-height:142px;padding:20px;border-radius:20px;background:var(--panel2);border:1px solid rgba(255,255,255,.1)}
+.metric b{display:block;font-size:1.55rem;margin-bottom:9px;color:var(--green)}
+.metric.pending b{color:var(--amber)}
+.metric span{color:var(--muted);font-size:.92rem;line-height:1.5}
+.section{border-radius:24px;padding:32px;margin-top:20px}
+.section h2{font-size:clamp(1.35rem,3vw,1.8rem);margin:0 0 10px}
+.section-intro{margin:0 0 22px;color:var(--muted);line-height:1.7}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.evidence{padding:20px;border-radius:18px;background:rgba(2,6,24,.72);border:1px solid rgba(255,255,255,.09)}
+.evidence h3{margin:0 0 12px;font-size:1rem;color:#fff}
+.evidence p{margin:0;color:var(--muted);line-height:1.65;font-size:.94rem}
+.status{display:inline-block;margin-bottom:12px;padding:5px 9px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.status.ok{color:var(--green);background:rgba(102,246,167,.1);border:1px solid rgba(102,246,167,.28)}
+.status.wait{color:var(--amber);background:rgba(255,209,102,.1);border:1px solid rgba(255,209,102,.28)}
+.list{display:grid;gap:12px;margin:0;padding:0;list-style:none;counter-reset:item}
+.list li{position:relative;padding:17px 18px 17px 52px;border-radius:16px;background:rgba(2,6,24,.66);border:1px solid rgba(255,255,255,.08);color:#d8f3fc;line-height:1.6}
+.list li:before{counter-increment:item;content:counter(item);position:absolute;left:16px;top:16px;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;background:rgba(76,201,240,.14);color:var(--cyan);font-size:.75rem;font-weight:800}
+.boundary{padding:21px;border-radius:18px;border:1px solid rgba(255,209,102,.34);background:rgba(255,209,102,.075);color:#ffe8ab;line-height:1.7}
+.boundary strong{display:block;color:#fff;margin-bottom:5px}
+.download-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 17px;border-radius:13px;text-decoration:none;font-weight:800}
+.button.primary{background:linear-gradient(90deg,var(--cyan),#8ce8ff);color:#04111c}
+.button.secondary{border:1px solid rgba(76,201,240,.42);color:var(--cyan);background:rgba(76,201,240,.06)}
+.hashes{overflow:auto;margin-top:18px;border-radius:16px;background:#01040e;border:1px solid rgba(255,255,255,.08);padding:16px;color:#9bdcf0;font:12px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre}
+footer{color:#769cac;text-align:center;margin-top:28px;font-size:.88rem;line-height:1.6}
+@media(max-width:820px){.summary{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr}.hero{padding:32px 24px}.section{padding:26px 22px}}
+@media(max-width:520px){body{padding:20px 14px 42px}.topbar{align-items:flex-start}.language span{display:none}.summary{grid-template-columns:1fr}.metric{min-height:0}h1{font-size:2.35rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="back" href="index.html">← Back to AstroBridge</a>
-  <div class="card">
-    <div class="badge">PASS WITH FOLLOW-UP REQUIREMENTS</div>
-    <h1>AstroBridge Internal Technical Security Certification</h1>
-    <p class="sub">Certificate ID: AB-INTERNAL-SEC-2026-06-17<br>Project: AstroBridge / AstroChannel / AstroWallet-AI<br>Version Reviewed: v7 Public Channel / Production Pilot</p>
-
-    <div class="grid">
-      <div class="item"><strong>Build</strong><span>TypeScript build passed.</span></div>
-      <div class="item"><strong>Tests</strong><span>Project test suite passed, 5/5.</span></div>
-      <div class="item"><strong>Dependencies</strong><span>Production dependency audit: 0 vulnerabilities.</span></div>
-      <div class="item"><strong>Node Pilot</strong><span>3-node Docker health test passed.</span></div>
-    </div>
-
-    <h2>Certification Statement</h2>
-    <p class="sub">AstroBridge is internally certified for controlled production pilot use as a non-custodial full-chain intelligent intent API network.</p>
-
-    <h2>Verified Scope</h2>
-    <ul>
-      <li>Standardized signed-intent API channel</li>
-      <li>Non-custodial transaction flow</li>
-      <li>Owner Signature protected operator actions</li>
-      <li>Redis-backed queue and state layer</li>
-      <li>PM2 service orchestration and Docker-based P2P node service</li>
-      <li>AstroWallet-AI wallet channel and P2P communication foundation</li>
-    </ul>
-
-    <h2>Security Improvements Completed</h2>
-    <ul>
-      <li>Removed sensitive Owner Signature value previews from logs.</li>
-      <li>Removed full frontend signature value logging.</li>
-      <li>Fixed AstroWallet-AI signature propagation.</li>
-      <li>Disabled fast-mode risk bypass by default.</li>
-      <li>Added public API rate limiting.</li>
-      <li>Disabled production test intent endpoint by default.</li>
-    </ul>
-
-    <h2>Current Phase</h2>
-    <p class="sub">AstroBridge is in the Public Channel / Production Pilot phase. Astro token economics are reserved for a future phase and are not active in the current public-channel phase.</p>
-
-    <div class="notice">This is an internal engineering certification for production pilot readiness. It is not a substitute for an independent third-party security audit, legal compliance review, or exchange onboarding audit.</div>
+<main class="wrap">
+  <div class="topbar">
+    <a class="back" href="index.html" data-i18n="back">← Back to AstroBridge</a>
+    <label class="language"><span data-i18n="language">Language</span>
+      <select id="languageSelect" aria-label="Language">
+        <option value="en">English</option><option value="zh">中文</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="ko">한국어</option>
+      </select>
+    </label>
   </div>
-  <footer>© AstroBridge Internal Technical Review · 2026</footer>
-</div>
+
+  <section class="hero">
+    <div class="badge" data-i18n="badge">Implementation complete · production deployment pending</div>
+    <h1 data-i18n="title">MA / AstroBridge Integration Readiness Report</h1>
+    <p class="lead" data-i18n="lead">This engineering evidence records what is implemented and tested, what is already reachable in production, and what still requires AstroBridge server deployment. It does not turn a pending production dependency into a completed live service.</p>
+    <div class="meta">
+      <span data-i18n="reportId">Report ID: AB-MA-READY-2026-09-24</span>
+      <span data-i18n="issued">Issued: 24 September 2026</span>
+      <span data-i18n="scope">Scope: MA 1.6.9 / AstroBridge v7</span>
+    </div>
+    <div class="summary">
+      <div class="metric"><b>22 / 22</b><span data-i18n="metricTests">AstroBridge backend regression tests passed.</span></div>
+      <div class="metric"><b>PASS</b><span data-i18n="metricDoctor">MA assets, source syntax and both edition names passed diagnostics.</span></div>
+      <div class="metric"><b>2</b><span data-i18n="metricBuilds">Signed Android editions built: Full and Official.</span></div>
+      <div class="metric pending"><b>404</b><span data-i18n="metricPending">New swap and garden endpoints remain absent from production until deployment.</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 data-i18n="implementedTitle">Verified implementation evidence</h2>
+    <p class="section-intro" data-i18n="implementedIntro">The following items exist in current source and passed local build or automated verification.</p>
+    <div class="two-col" id="implementedGrid"></div>
+  </section>
+
+  <section class="section">
+    <h2 data-i18n="liveTitle">Production status at report time</h2>
+    <p class="section-intro" data-i18n="liveIntro">Live network observations are kept separate from local implementation evidence.</p>
+    <div class="two-col">
+      <div class="evidence"><span class="status ok" data-i18n="online">Verified online</span><h3 data-i18n="onlineTitle">Existing public foundation</h3><p data-i18n="onlineBody">Official MA pages, public HTTPS/WSS access, signed P2P authentication and supported EVM RPC connectivity were reachable during the audit.</p></div>
+      <div class="evidence"><span class="status wait" data-i18n="pending">Deployment pending</span><h3 data-i18n="pendingTitle">New production integration routes</h3><p data-i18n="pendingBody">The new swap-assets and garden-catalog routes returned HTTP 404. No funded swap, token approval, burn, redemption or NFT mint was submitted.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 data-i18n="deployTitle">Required AstroBridge server deployment</h2>
+    <p class="section-intro" data-i18n="deployIntro">These server actions are required before the completed integration package can be called live.</p>
+    <ol class="list" id="deployList"></ol>
+  </section>
+
+  <section class="section">
+    <h2 data-i18n="remainingTitle">Separate systems not completed by this deployment</h2>
+    <p class="section-intro" data-i18n="remainingIntro">These items require additional backend, contract or governance work and are not represented as live.</p>
+    <ol class="list" id="remainingList"></ol>
+  </section>
+
+  <section class="section">
+    <div class="boundary"><strong data-i18n="boundaryTitle">Evidence boundary</strong><span data-i18n="boundaryBody">This is a dated internal engineering readiness report. It proves recorded builds, checks and observed endpoints; it is not an independent third-party security audit, a legal opinion, or proof of an unperformed value transfer. Production claims must be updated only after deployment and live acceptance evidence.</span></div>
+    <div class="download-row">
+      <a class="button primary" href="audits/ma-astrobridge-integration-2026-09-24.json" data-i18n="manifest">Open machine-readable evidence</a>
+    </div>
+    <div class="hashes">SERVER PATCH  bacf4f60b572af3d3a0601c33e587f6f582ada16eff588e056ab8ba3403fd06b
+MA FULL APK   66d911bf45b29442a55ff9afa1a6574b4e2655b87b878a8bce76b2273ebb5130
+MA APK        5ad5c15fc48c7b21b065ad89eb7dc62ab0429970420d8e553070014f20d6dd72
+SIGNER CERT   bb4bf64bda35618c55a1d60c0d40ba5a1d641d4c4b3c58566f63b2a91e1589fa</div>
+  </section>
+
+  <footer data-i18n="footer">AstroBridge Internal Engineering Evidence · Report state: implementation ready, production activation pending.</footer>
+</main>
+<script>
+const copy={
+en:{back:'← Back to AstroBridge',language:'Language',badge:'Implementation complete · production deployment pending',title:'MA / AstroBridge Integration Readiness Report',lead:'This engineering evidence records what is implemented and tested, what is already reachable in production, and what still requires AstroBridge server deployment. It does not turn a pending production dependency into a completed live service.',reportId:'Report ID: AB-MA-READY-2026-09-24',issued:'Issued: 24 September 2026',scope:'Scope: MA 1.6.9 / AstroBridge v7',metricTests:'AstroBridge backend regression tests passed.',metricDoctor:'MA assets, source syntax and both edition names passed diagnostics.',metricBuilds:'Signed Android editions built: Full and Official.',metricPending:'New swap and garden endpoints remain absent from production until deployment.',implementedTitle:'Verified implementation evidence',implementedIntro:'The following items exist in current source and passed local build or automated verification.',implemented:[['Live swap path','Allowlisted LI.FI quotes for six EVM chains, provider transaction validation, explicit wallet confirmation, ERC-20 allowance and source-chain broadcast.'],['Market coverage','The server-side market adapter covers the wallet Top 20 with Binance and CoinGecko fallback.'],['Guarded MA garden store','Catalog and quote APIs plus replay, eligibility and price protection are implemented. Checkout stays fail-closed until final contracts and prices are configured.'],['NFT metadata integrity','Wallet-signed metadata upload, real Pinata/IPFS CID validation and claim authorization bound to claim, CID and time are implemented.']],liveTitle:'Production status at report time',liveIntro:'Live network observations are kept separate from local implementation evidence.',online:'Verified online',onlineTitle:'Existing public foundation',onlineBody:'Official MA pages, public HTTPS/WSS access, signed P2P authentication and supported EVM RPC connectivity were reachable during the audit.',pending:'Deployment pending',pendingTitle:'New production integration routes',pendingBody:'The new swap-assets and garden-catalog routes returned HTTP 404. No funded swap, token approval, burn, redemption or NFT mint was submitted.',deployTitle:'Required AstroBridge server deployment',deployIntro:'These server actions are required before the completed integration package can be called live.',deploy:['Install the prepared AstroBridge source package, run the 22-test suite, reload only astrobridge-api and verify the public endpoints.','Configure the LI.FI integrator/API quota, Pinata JWT, NFT authorization signer, BSC RPC and NFT contract address using server-side secret files.','After MA launch, configure the final audited MA token and garden-store addresses, approved prices and levels; keep checkout disabled until independently verified.','Run an approved low-value swap and NFT mint canary, then record source receipt, destination balance and on-chain token URI before enabling the new APP build.'],remainingTitle:'Separate systems not completed by this deployment',remainingIntro:'These items require additional backend, contract or governance work and are not represented as live.',remaining:['A server-authoritative card inventory and reward ledger, followed by a one-time challenge bridge for web redemption.','Final MA burn reserve policy, audited burn/redemption contracts and public on-chain proof feeds.','Mother Fund beneficiary intake, consent, review, approval, payout and evidence-storage workflows.','Approved node identities and stakes plus running NodeServer processes and real signed heartbeats.'],boundaryTitle:'Evidence boundary',boundaryBody:'This is a dated internal engineering readiness report. It proves recorded builds, checks and observed endpoints; it is not an independent third-party security audit, a legal opinion, or proof of an unperformed value transfer. Production claims must be updated only after deployment and live acceptance evidence.',manifest:'Open machine-readable evidence',oldCertificate:'View June 2026 internal certificate',footer:'AstroBridge Internal Engineering Evidence · Report state: implementation ready, production activation pending.'},
+zh:{back:'← 返回 AstroBridge',language:'语言',badge:'开发完成 · 等待生产服务器部署',title:'MA / AstroBridge 集成就绪报告',lead:'本工程证据记录已经实现并通过测试的内容、生产环境中已经可访问的内容，以及仍需 AstroBridge 服务器部署的内容。尚未部署的生产依赖不会被描述成已经上线。',reportId:'报告编号：AB-MA-READY-2026-09-24',issued:'发布日期：2026年9月24日',scope:'范围：MA 1.6.9 / AstroBridge v7',metricTests:'AstroBridge 后端回归测试全部通过。',metricDoctor:'MA 资源、源码语法及两个版本名称检查通过。',metricBuilds:'已构建并签名 Full版与官方版 Android 安装包。',metricPending:'新的兑换与种植园接口部署前仍未出现在生产环境。',implementedTitle:'已核验的实现证据',implementedIntro:'以下功能已存在于当前源码，并通过本地构建或自动化验证。',implemented:[['真实兑换通道','实现了六条 EVM 链的白名单 LI.FI 报价、第三方交易校验、钱包明确确认、ERC-20 授权和源链广播。'],['行情覆盖','服务端行情适配器通过 Binance 和 CoinGecko 备用源覆盖钱包 Top 20。'],['受控的 MA 种植园商店','已实现目录、报价接口以及防重放、资格和价格保护。最终合约和价格配置完成前，结账保持关闭。'],['NFT 元数据完整性','已实现钱包签名上传、真实 Pinata/IPFS CID 校验，以及绑定申请、CID 和时间的铸造授权。']],liveTitle:'报告时点的生产状态',liveIntro:'线上网络观察与本地实现证据分开记录。',online:'已验证在线',onlineTitle:'现有公共基础',onlineBody:'审计期间，MA 官方页面、公共 HTTPS/WSS、P2P 签名认证和已支持的 EVM RPC 均可访问。',pending:'等待部署',pendingTitle:'新的生产集成接口',pendingBody:'新的兑换资产和种植园目录接口返回 HTTP 404。尚未提交真实资金兑换、代币授权、销毁、卡片兑换或 NFT 铸造。',deployTitle:'AstroBridge 服务器必须完成的部署',deployIntro:'完成以下服务器操作后，本次已完成的集成包才能称为正式上线。',deploy:['安装准备好的 AstroBridge 源码包，运行 22 项测试，仅重载 astrobridge-api，并验证公共接口。','用服务器端密钥文件配置 LI.FI 配额、Pinata JWT、NFT 授权钱包、BSC RPC 和 NFT 合约地址。','MA 发布后配置最终审计过的 MA 代币与种植园商店合约地址、批准价格和等级；独立核验前保持结账关闭。','进行经批准的小额兑换和 NFT 铸造验证，在启用新版 APP 前记录源链回执、目标余额和链上 token URI。'],remainingTitle:'本次部署不能直接完成的独立系统',remainingIntro:'以下内容仍需要额外的后端、合约或治理工作，当前不表示为已上线。',remaining:['服务端权威卡片库存与奖励账本，以及用于网页兑换的一次性挑战桥接。','最终 MA 销毁储备政策、审计过的销毁/兑换合约和公开链上证明。','妈妈基金受助申请、同意、审核、批准、拨款和凭证存储流程。','获批的节点身份与质押、实际运行的 NodeServer 进程和真实签名心跳。'],boundaryTitle:'证据边界',boundaryBody:'这是一份有日期的内部工程就绪报告。它证明所记录的构建、检查和接口观察；它不是第三方独立安全审计、法律意见，也不能证明尚未执行的资金交易。只有完成部署和真实验收后才能更新生产状态。',manifest:'查看机器可读证据',oldCertificate:'查看 2026年6月内部证书',footer:'AstroBridge 内部工程证据 · 报告状态：开发就绪，等待生产部署。'},
+es:{back:'← Volver a AstroBridge',language:'Idioma',badge:'Implementación terminada · despliegue pendiente',title:'Informe de preparación de integración MA / AstroBridge',lead:'Esta evidencia técnica separa lo implementado y probado, lo que ya está disponible en producción y lo que aún requiere despliegue en AstroBridge.',reportId:'ID: AB-MA-READY-2026-09-24',issued:'Emitido: 24 de septiembre de 2026',scope:'Alcance: MA 1.6.9 / AstroBridge v7',metricTests:'Pruebas de regresión del backend aprobadas.',metricDoctor:'Activos, sintaxis y nombres de ambas ediciones de MA aprobados.',metricBuilds:'Ediciones Android firmadas: Full y Official.',metricPending:'Los nuevos endpoints de intercambio y jardín esperan despliegue.',implementedTitle:'Evidencia de implementación verificada',implementedIntro:'Estos elementos existen en el código actual y superaron la compilación o pruebas automáticas.',implemented:[['Ruta de intercambio real','Cotizaciones LI.FI permitidas para seis cadenas EVM, validación de transacción, confirmación, allowance ERC-20 y emisión en la cadena origen.'],['Cobertura de mercado','El adaptador del servidor cubre el Top 20 con Binance y respaldo de CoinGecko.'],['Tienda MA protegida','APIs de catálogo y cotización con protección de repetición, elegibilidad y precio; la compra permanece cerrada hasta configurar contratos y precios.'],['Integridad NFT','Carga de metadatos firmada, CID Pinata/IPFS real y autorización vinculada a solicitud, CID y tiempo.']],liveTitle:'Estado de producción al emitir el informe',liveIntro:'Las observaciones en vivo están separadas de la evidencia local.',online:'En línea verificado',onlineTitle:'Base pública existente',onlineBody:'Las páginas MA, HTTPS/WSS, autenticación P2P firmada y RPC EVM compatibles fueron accesibles.',pending:'Despliegue pendiente',pendingTitle:'Nuevas rutas de integración',pendingBody:'Las nuevas rutas devolvieron HTTP 404. No se ejecutaron intercambios con fondos, aprobaciones, burns, canjes ni mint NFT.',deployTitle:'Despliegue requerido en AstroBridge',deployIntro:'Estas acciones son necesarias antes de declarar activo el paquete.',deploy:['Instalar el paquete, ejecutar 22 pruebas, recargar solo astrobridge-api y verificar endpoints.','Configurar LI.FI, Pinata JWT, firmante NFT, BSC RPC y contrato NFT mediante secretos del servidor.','Tras lanzar MA, configurar token y tienda auditados, precios y niveles; mantener compras desactivadas hasta verificación.','Ejecutar una prueba autorizada de bajo valor de swap y mint NFT y registrar recibos y saldo destino.'],remainingTitle:'Sistemas separados aún no completados',remainingIntro:'Requieren trabajo adicional y no se presentan como activos.',remaining:['Inventario y libro de recompensas de tarjetas en servidor, más puente de desafío único.','Política y contratos auditados de burn/canje MA con pruebas públicas.','Flujo de solicitudes, revisión, pagos y evidencias del Mother Fund.','Identidades y stakes de nodos aprobados, NodeServer y latidos firmados.'],boundaryTitle:'Límite de evidencia',boundaryBody:'Informe interno fechado. No es auditoría independiente, opinión legal ni prueba de una transferencia no realizada.',manifest:'Abrir evidencia legible por máquina',oldCertificate:'Ver certificado interno de junio de 2026',footer:'Evidencia interna de AstroBridge · implementación lista, activación pendiente.'},
+fr:{back:'← Retour à AstroBridge',language:'Langue',badge:'Implémentation terminée · déploiement en attente',title:'Rapport de préparation MA / AstroBridge',lead:'Cette preuve technique sépare ce qui est implémenté et testé, ce qui est déjà accessible en production et ce qui attend encore le déploiement AstroBridge.',reportId:'ID : AB-MA-READY-2026-09-24',issued:'Publié le 24 septembre 2026',scope:'Périmètre : MA 1.6.9 / AstroBridge v7',metricTests:'Tests de régression backend réussis.',metricDoctor:'Ressources, syntaxe et noms des deux éditions MA validés.',metricBuilds:'Deux éditions Android signées : Full et Official.',metricPending:'Les nouveaux endpoints swap et jardin attendent le déploiement.',implementedTitle:'Preuves d’implémentation vérifiées',implementedIntro:'Ces éléments existent dans le code actuel et ont passé la compilation ou les tests.',implemented:[['Parcours swap réel','Cotations LI.FI autorisées sur six chaînes EVM, validation, confirmation, allowance ERC-20 et diffusion source.'],['Couverture marché','Le service couvre le Top 20 avec Binance et un repli CoinGecko.'],['Boutique MA protégée','Catalogue et devis avec protections anti-rejeu, éligibilité et prix ; achat fermé jusqu’à la configuration finale.'],['Intégrité NFT','Métadonnées signées, vrai CID Pinata/IPFS et autorisation liée à la demande, au CID et au temps.']],liveTitle:'État de production au jour du rapport',liveIntro:'Les observations en ligne sont séparées des preuves locales.',online:'En ligne vérifié',onlineTitle:'Base publique existante',onlineBody:'Pages MA, HTTPS/WSS, authentification P2P signée et RPC EVM pris en charge étaient accessibles.',pending:'Déploiement en attente',pendingTitle:'Nouvelles routes d’intégration',pendingBody:'Les nouvelles routes renvoyaient HTTP 404. Aucun swap financé, approval, burn, échange de carte ou mint NFT n’a été exécuté.',deployTitle:'Déploiement AstroBridge requis',deployIntro:'Ces actions serveur sont nécessaires avant de déclarer le paquet actif.',deploy:['Installer le paquet, exécuter 22 tests, recharger seulement astrobridge-api et vérifier les endpoints.','Configurer LI.FI, Pinata JWT, le signataire NFT, le RPC BSC et le contrat NFT via des secrets serveur.','Après le lancement MA, configurer token, boutique, prix et niveaux audités ; garder l’achat désactivé avant vérification.','Exécuter un canari approuvé de faible valeur pour le swap et le mint NFT, puis enregistrer reçus et solde destination.'],remainingTitle:'Systèmes distincts non terminés',remainingIntro:'Ils exigent du travail supplémentaire et ne sont pas présentés comme actifs.',remaining:['Inventaire serveur et registre de récompenses des cartes, puis pont à défi unique.','Politique et contrats audités de burn/échange MA avec preuves publiques.','Flux Mother Fund : demande, consentement, examen, paiement et justificatifs.','Identités et stakes de nœuds approuvés, NodeServer et battements signés.'],boundaryTitle:'Limite de la preuve',boundaryBody:'Rapport interne daté. Ce n’est ni un audit tiers, ni un avis juridique, ni la preuve d’un transfert non effectué.',manifest:'Ouvrir la preuve lisible par machine',oldCertificate:'Voir le certificat interne de juin 2026',footer:'Preuve interne AstroBridge · implémentation prête, activation en attente.'},
+de:{back:'← Zurück zu AstroBridge',language:'Sprache',badge:'Implementierung abgeschlossen · Deployment ausstehend',title:'MA / AstroBridge Integrationsbereitschaft',lead:'Dieser technische Nachweis trennt implementierte und getestete Funktionen, bereits erreichbare Produktion und noch ausstehendes AstroBridge-Deployment.',reportId:'Bericht: AB-MA-READY-2026-09-24',issued:'Ausgestellt: 24. September 2026',scope:'Umfang: MA 1.6.9 / AstroBridge v7',metricTests:'Backend-Regressionstests bestanden.',metricDoctor:'MA-Ressourcen, Syntax und beide Editionsnamen geprüft.',metricBuilds:'Signierte Android-Editionen: Full und Official.',metricPending:'Neue Swap- und Garten-Endpunkte warten auf Deployment.',implementedTitle:'Verifizierte Implementierungsnachweise',implementedIntro:'Diese Funktionen sind im aktuellen Quellcode vorhanden und wurden gebaut oder automatisiert geprüft.',implemented:[['Realer Swap-Pfad','Zugelassene LI.FI-Angebote für sechs EVM-Chains, Transaktionsprüfung, Bestätigung, ERC-20-Allowance und Broadcast.'],['Marktabdeckung','Serverseitige Top-20-Abdeckung mit Binance und CoinGecko-Fallback.'],['Geschützter MA-Garten-Shop','Katalog und Angebote mit Replay-, Eignungs- und Preisschutz; Checkout bleibt bis zur finalen Konfiguration geschlossen.'],['NFT-Integrität','Signierter Metadaten-Upload, echte Pinata/IPFS-CIDs und an Antrag, CID und Zeit gebundene Autorisierung.']],liveTitle:'Produktionsstatus zum Berichtszeitpunkt',liveIntro:'Live-Beobachtungen sind von lokalen Nachweisen getrennt.',online:'Online verifiziert',onlineTitle:'Bestehende öffentliche Basis',onlineBody:'MA-Seiten, HTTPS/WSS, signierte P2P-Authentifizierung und unterstützte EVM-RPCs waren erreichbar.',pending:'Deployment ausstehend',pendingTitle:'Neue Integrationsrouten',pendingBody:'Die neuen Routen lieferten HTTP 404. Kein finanzierter Swap, Approval, Burn, Kartentausch oder NFT-Mint wurde ausgeführt.',deployTitle:'Erforderliches AstroBridge-Deployment',deployIntro:'Diese Serveraktionen sind vor der Live-Freigabe erforderlich.',deploy:['Paket installieren, 22 Tests ausführen, nur astrobridge-api neu laden und Endpunkte prüfen.','LI.FI, Pinata JWT, NFT-Signer, BSC-RPC und NFT-Vertrag über Server-Secrets konfigurieren.','Nach MA-Start geprüfte Token-/Shop-Adressen, Preise und Level konfigurieren; Checkout bis zur Prüfung deaktiviert lassen.','Genehmigten Kleinstwert-Swap und NFT-Mint durchführen und Quittung sowie Zielsaldo dokumentieren.'],remainingTitle:'Nicht durch dieses Deployment abgeschlossene Systeme',remainingIntro:'Diese Systeme benötigen zusätzliche Arbeit und gelten nicht als live.',remaining:['Autoritatives Karteninventar und Reward-Ledger plus Einmal-Challenge-Bridge.','Finale MA-Burn-Politik, geprüfte Verträge und öffentliche On-Chain-Nachweise.','Mother-Fund-Prozess für Antrag, Einwilligung, Prüfung, Auszahlung und Belege.','Genehmigte Node-Identitäten/Stakes, laufende NodeServer und signierte Heartbeats.'],boundaryTitle:'Nachweisgrenze',boundaryBody:'Datierter interner Engineering-Bericht; kein unabhängiges Audit, Rechtsgutachten oder Nachweis einer nicht ausgeführten Wertübertragung.',manifest:'Maschinenlesbaren Nachweis öffnen',oldCertificate:'Internes Zertifikat Juni 2026',footer:'Interner AstroBridge-Nachweis · Implementierung bereit, Aktivierung ausstehend.'},
+ja:{back:'← AstroBridge に戻る',language:'言語',badge:'実装完了 · 本番サーバー展開待ち',title:'MA / AstroBridge 統合準備レポート',lead:'実装・テスト済みの内容、本番で到達可能な内容、AstroBridge の展開が必要な内容を明確に分けた技術証拠です。',reportId:'レポートID：AB-MA-READY-2026-09-24',issued:'発行日：2026年9月24日',scope:'対象：MA 1.6.9 / AstroBridge v7',metricTests:'バックエンド回帰テストに合格。',metricDoctor:'MA の素材、構文、両エディション名を確認。',metricBuilds:'署名済み Android 版：Full / Official。',metricPending:'新しいスワップ・農園 API は展開待ちです。',implementedTitle:'検証済み実装証拠',implementedIntro:'以下は現行ソースに存在し、ビルドまたは自動テストに合格しています。',implemented:[['実スワップ経路','6 EVM チェーンの許可済み LI.FI 見積、取引検証、明示確認、ERC-20 承認、送信を実装。'],['市場データ','Binance と CoinGecko フォールバックでウォレット Top 20 をサーバー側対応。'],['保護された MA 農園ストア','カタログ、見積、再送・資格・価格保護を実装。最終設定までは購入停止。'],['NFT 完全性','ウォレット署名メタデータ、実 Pinata/IPFS CID、申請・CID・時刻に結び付く認可を実装。']],liveTitle:'報告時点の本番状態',liveIntro:'オンライン観測とローカル実装証拠を分離しています。',online:'オンライン確認済み',onlineTitle:'既存の公開基盤',onlineBody:'MA 公式ページ、HTTPS/WSS、署名付き P2P 認証、対応 EVM RPC を確認しました。',pending:'展開待ち',pendingTitle:'新しい本番統合 API',pendingBody:'新 API は HTTP 404 でした。資金を使う swap、承認、burn、カード交換、NFT mint は未実行です。',deployTitle:'必要な AstroBridge サーバー展開',deployIntro:'統合パッケージを本番稼働と呼ぶ前に必要な作業です。',deploy:['パッケージ導入、22テスト実行、astrobridge-api のみ再読込、公開 API を確認。','サーバー秘密情報で LI.FI、Pinata JWT、NFT 署名者、BSC RPC、NFT 契約を設定。','MA 公開後、監査済みトークン/ストア、価格、レベルを設定し、確認までは購入停止。','承認済み小額 swap と NFT mint を実行し、送信レシート、宛先残高、token URI を記録。'],remainingTitle:'この展開だけでは完了しない別システム',remainingIntro:'追加のバックエンド、契約、ガバナンス作業が必要で、稼働中とは表示しません。',remaining:['サーバー権威カード台帳と報酬台帳、Web 交換用の一回限りチャレンジ。','MA burn 方針、監査済み burn/交換契約、公開オンチェーン証明。','Mother Fund の申請、同意、審査、承認、支払、証拠保存。','承認済みノードID/ステーク、NodeServer、署名付きハートビート。'],boundaryTitle:'証拠の範囲',boundaryBody:'日付付き社内技術レポートです。第三者監査、法的意見、未実行の資金移動の証明ではありません。',manifest:'機械可読証拠を開く',oldCertificate:'2026年6月の社内証明を見る',footer:'AstroBridge 社内技術証拠 · 実装準備完了、本番有効化待ち。'},
+ko:{back:'← AstroBridge로 돌아가기',language:'언어',badge:'구현 완료 · 운영 서버 배포 대기',title:'MA / AstroBridge 통합 준비 보고서',lead:'구현·검증된 항목, 현재 운영에서 접근 가능한 항목, AstroBridge 서버 배포가 필요한 항목을 분리한 엔지니어링 증거입니다.',reportId:'보고서 ID: AB-MA-READY-2026-09-24',issued:'발행일: 2026년 9월 24일',scope:'범위: MA 1.6.9 / AstroBridge v7',metricTests:'백엔드 회귀 테스트 통과.',metricDoctor:'MA 자산, 소스 구문, 두 에디션 이름 검사 통과.',metricBuilds:'서명된 Android Full 및 Official 빌드.',metricPending:'새 스왑·농장 API는 운영 배포 대기 중입니다.',implementedTitle:'검증된 구현 증거',implementedIntro:'다음 항목은 현재 소스에 있으며 빌드 또는 자동 검증을 통과했습니다.',implemented:[['실제 스왑 경로','6개 EVM 체인의 허용된 LI.FI 견적, 거래 검증, 명시적 확인, ERC-20 승인 및 소스 체인 전송.'],['시장 범위','Binance와 CoinGecko 폴백으로 지갑 Top 20을 서버에서 지원.'],['보호된 MA 농장 상점','카탈로그·견적 및 재전송, 자격, 가격 보호 구현. 최종 설정 전 결제는 비활성화.'],['NFT 무결성','지갑 서명 메타데이터, 실제 Pinata/IPFS CID, 신청·CID·시간에 결합된 권한 구현.']],liveTitle:'보고 시점의 운영 상태',liveIntro:'실시간 네트워크 관측과 로컬 구현 증거를 분리합니다.',online:'온라인 확인',onlineTitle:'기존 공개 기반',onlineBody:'MA 공식 페이지, HTTPS/WSS, 서명 P2P 인증과 지원 EVM RPC에 접근 가능했습니다.',pending:'배포 대기',pendingTitle:'새 운영 통합 API',pendingBody:'새 API는 HTTP 404였습니다. 자금이 있는 스왑, 승인, 소각, 카드 교환, NFT 민팅은 실행하지 않았습니다.',deployTitle:'필요한 AstroBridge 서버 배포',deployIntro:'완성된 통합 패키지를 운영 중이라고 하기 전에 필요한 서버 작업입니다.',deploy:['패키지 설치, 22개 테스트, astrobridge-api만 재시작하고 공개 API 확인.','서버 비밀 파일로 LI.FI, Pinata JWT, NFT 서명자, BSC RPC, NFT 계약 설정.','MA 출시 후 검증된 토큰/상점 주소, 가격, 레벨을 설정하고 확인 전 결제 비활성화 유지.','승인된 소액 스왑과 NFT 민팅을 실행하고 소스 영수증, 대상 잔액, token URI 기록.'],remainingTitle:'이번 배포만으로 완료되지 않는 별도 시스템',remainingIntro:'추가 백엔드, 계약 또는 거버넌스 작업이 필요하며 운영 중으로 표시하지 않습니다.',remaining:['서버 권위 카드/보상 원장과 웹 교환용 일회성 챌린지 브리지.','최종 MA 소각 정책, 감사된 소각/교환 계약 및 공개 온체인 증거.','Mother Fund 신청, 동의, 심사, 승인, 지급, 증빙 저장 절차.','승인된 노드 ID/스테이크, 실행 중인 NodeServer 및 서명 하트비트.'],boundaryTitle:'증거 범위',boundaryBody:'날짜가 있는 내부 엔지니어링 보고서이며 제3자 감사, 법률 의견, 실행하지 않은 가치 이전의 증거가 아닙니다.',manifest:'기계 판독 증거 열기',oldCertificate:'2026년 6월 내부 인증 보기',footer:'AstroBridge 내부 엔지니어링 증거 · 구현 준비 완료, 운영 활성화 대기.'}
+};
+const sourceLabel={en:'Implementation verified',zh:'已核验实现',es:'Implementación verificada',fr:'Implémentation vérifiée',de:'Implementierung verifiziert',ja:'実装確認済み',ko:'구현 확인'};
+const select=document.getElementById('languageSelect');
+function render(lang){const c=copy[lang]||copy.en;document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const value=c[el.dataset.i18n];if(value)el.textContent=value});document.getElementById('implementedGrid').innerHTML=c.implemented.map(([title,body])=>`<div class="evidence"><span class="status ok">${sourceLabel[lang]||sourceLabel.en}</span><h3>${title}</h3><p>${body}</p></div>`).join('');document.getElementById('deployList').innerHTML=c.deploy.map(item=>`<li>${item}</li>`).join('');document.getElementById('remainingList').innerHTML=c.remaining.map(item=>`<li>${item}</li>`).join('');select.value=lang;localStorage.setItem('astro-site-language',lang)}
+select.addEventListener('change',event=>render(event.target.value));
+render(localStorage.getItem('astro-site-language')||'en');
+</script>
 </body>
 </html>
