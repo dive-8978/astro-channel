@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T17:17:45.199Z",
+  "generatedAt": "2026-09-24T21:35:36.985Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 34,
+      "itemCount": 54,
       "error": null
     },
     {
@@ -57,6 +57,246 @@
     }
   ],
   "items": [
+    {
+      "id": "937a6b0e7917a906aabe",
+      "source": "The Block",
+      "title": "More than $170 million in crypto moves from Bitget wallets to unidentified address",
+      "summary": "The receiving address has made several swaps, but the reason for the Bitget wallet transfers remains unclear.",
+      "url": "https://www.theblock.co/news/markets/2026-09-24-more-than-170-million-in-crypto-moves-from-bitget-wallets-unidentified-address-416345",
+      "publishedAt": "2026-09-24T21:20:47.000Z"
+    },
+    {
+      "id": "faf95b6bed1177f56759",
+      "source": "CryptoSlate",
+      "title": "Why TRON’s $30 trillion lifetime volume could become a trap",
+      "summary": "The network total covers all assets since launch; the DAO separately cites about $6 trillion in USDT transfers this year. The post Why TRON’s $30 trillion lifetime volume could become a trap appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/why-trons-30-trillion-lifetime-volume-could-become-a-trap/",
+      "publishedAt": "2026-09-24T21:20:14.000Z"
+    },
+    {
+      "id": "2c9bc30652850fd3a991",
+      "source": "Decrypt",
+      "title": "Bitget 'Potentially Hacked' as $183 Million Vanishes From Exchange Wallets",
+      "summary": "A newly created wallet drained hot and cold reserves labeled as belonging to Bitget across multiple blockchains in under an hour.",
+      "url": "https://decrypt.co/379275/bitget-hack-183-million-crypto-exchange-wallets",
+      "publishedAt": "2026-09-24T21:15:38.000Z"
+    },
+    {
+      "id": "4590423af7606254cbc8",
+      "source": "Bitcoin Magazine",
+      "title": "SEC Commissioner Hester ‘Crypto Mom’ Peirce Advocates Privacy-Preserving Tech",
+      "summary": "Bitcoin Magazine SEC Commissioner Hester ‘Crypto Mom’ Peirce Advocates Privacy-Preserving Tech The outgoing regulator took aim at how regulators collect crypto users’ data. This post SEC Commissioner Hester ‘Crypto Mom’ Peirce Advocates Privacy-Preserving…",
+      "url": "https://bitcoinmagazine.com/news/hester-peirce-advocates-privacy-tech",
+      "publishedAt": "2026-09-24T20:58:35.000Z"
+    },
+    {
+      "id": "cfb7de98bf36d5090f14",
+      "source": "Cointelegraph",
+      "title": "Bitcoin price steadies, ONDO rallies as US Treasury yields hit 2007 highs",
+      "summary": "US Treasury yields hit a 19-year high on Thursday, pressuring risk assets as Bitcoin held near $84,000 and ONDO became top performer among altcoins.",
+      "url": "https://cointelegraph.com/markets/bitcoin-steadies-ondo-rallies-us-treasury-yields-hit-2007-highs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T20:32:16.000Z"
+    },
+    {
+      "id": "1c0714cc7b9afd939ae2",
+      "source": "The Block",
+      "title": "Fed proposes reserve limits, capital standards for stablecoin issuers under GENIUS Act",
+      "summary": "The Federal Reserve proposed new measures for stablecoin issuers, including reserve-asset limits and standardized capital requirements.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-24-fed-proposes-reserve-limits-capital-standards-stablecoin-issuers-genius-act-416336",
+      "publishedAt": "2026-09-24T20:19:46.000Z"
+    },
+    {
+      "id": "2ed6dce1fa590f301ae8",
+      "source": "CoinDesk",
+      "title": "Someone was trying to sell Ondo Finance after founder Nathan Allman's death",
+      "summary": "The company has vehemently denied that it was shopping for buyers. Allman’s estate declined to comment.",
+      "url": "https://www.coindesk.com/business/2026/09/23/someone-was-trying-to-sell-ondo-finance-after-founder-nathan-allman-s-death",
+      "publishedAt": "2026-09-24T20:13:25.000Z"
+    },
+    {
+      "id": "4cc91743ea93e627988a",
+      "source": "CoinDesk",
+      "title": "Bullish, Alpaca and Apex Fintech form coalition to push issuer-backed tokenized stocks",
+      "summary": "The group aims to link onchain shares to official shareholder records following the U.S. SEC's innovation exemption for tokenized stock trading.",
+      "url": "https://www.coindesk.com/business/2026/09/24/bullish-alpaca-and-apex-fintech-form-coalition-to-push-issuer-backed-tokenized-stocks",
+      "publishedAt": "2026-09-24T20:05:00.000Z"
+    },
+    {
+      "id": "ea393622fd011cf95c73",
+      "source": "CoinDesk",
+      "title": "U.S. commodities firms can invest in tokenized assets, use blockchain records: CFTC",
+      "summary": "The U.S derivatives regulator is grinding away at further guidance that welcomes tokenization and blockchain recordkeeping as regular industry elements.",
+      "url": "https://www.coindesk.com/policy/2026/09/24/u-s-commodities-firms-can-invest-in-tokenized-assets-use-blockchain-records-cftc",
+      "publishedAt": "2026-09-24T20:04:46.000Z"
+    },
+    {
+      "id": "4459334d36bae2246219",
+      "source": "Cointelegraph",
+      "title": "DoubleZero brings dedicated fiber market data to Hyperliquid traders",
+      "summary": "DoubleZero launched a dedicated fiber market data feed for Hyperliquid, giving professional trading firms faster access to its full order book.",
+      "url": "https://cointelegraph.com/news/doublezero-brings-dedicated-fiber-market-data-hyperliquid-traders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T20:04:07.000Z"
+    },
+    {
+      "id": "3c937d27a3f1e72de68b",
+      "source": "CoinDesk",
+      "title": "The stock token debate, and the gap nobody can close alone",
+      "summary": "The argument over Robinhood’s AMC token has been about which tokenization model is legitimate, and the SEC has drawn a line. The question to ask now is what has to be true for any of it to be a market, argues Bullish’s Tram Doman.",
+      "url": "https://www.coindesk.com/opinion/2026/09/24/the-stock-token-debate-and-the-gap-nobody-can-close-alone",
+      "publishedAt": "2026-09-24T20:03:21.000Z"
+    },
+    {
+      "id": "25af74d1ea0f214fc02b",
+      "source": "Decrypt",
+      "title": "Humans Are Reading Your ChatGPT Chats, New Lawsuit Claims",
+      "summary": "A proposed class action accuses OpenAI of quietly routing real conversations to outside contractors through a program called Project Lily—without telling users first.",
+      "url": "https://decrypt.co/379272/humans-reading-chatgpt-chats-lawsuit",
+      "publishedAt": "2026-09-24T20:01:03.000Z"
+    },
+    {
+      "id": "323b554e23f8556049cb",
+      "source": "CryptoSlate",
+      "title": "Man sentenced to 12 years for $16M Coinbase customer support scam",
+      "summary": "Brooklyn prosecutors say about 100 U.S. users were told their funds were at risk and steered into wallets Spektor could access. The post Man sentenced to 12 years for $16M Coinbase customer support scam appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/man-sentenced-to-12-years-for-16m-coinbase-customer-support-scam/",
+      "publishedAt": "2026-09-24T20:00:28.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T19:50:39.000Z"
+    },
+    {
+      "id": "366e5d16f658af557930",
+      "source": "Bitcoin Magazine",
+      "title": "Jeff Booth: Why $1 Million BTC is Thinking too Small",
+      "summary": "Bitcoin Magazine Jeff Booth: Why $1 Million BTC is Thinking too Small Jeff Booth says a $1 million Bitcoin price target is thinking too small. Here is why valuing Bitcoin in debased fiat currency uses a rigged system. This post Jeff Booth: Why $1 Million BTC…",
+      "url": "https://bitcoinmagazine.com/videos/jeff-booth-why-1-million-btc-is-thinking-too-small",
+      "publishedAt": "2026-09-24T19:29:53.000Z"
+    },
+    {
+      "id": "d563498080f68477b7b0",
+      "source": "Bitcoin Magazine",
+      "title": "Saifedean Ammous: The Bond Crisis & Bitcoin’s Rise as a True Macro Asset",
+      "summary": "Bitcoin Magazine Saifedean Ammous: The Bond Crisis & Bitcoin’s Rise as a True Macro Asset Falling volatility is Bitcoin's most bullish signal right now, according to Saifedean Ammous. This post Saifedean Ammous: The Bond Crisis & Bitcoin’s Rise as a True…",
+      "url": "https://bitcoinmagazine.com/videos/saifedean-ammous-the-bond-crisis-bitcoins-rise-as-a-true-macro-asset",
+      "publishedAt": "2026-09-24T19:21:38.000Z"
+    },
+    {
+      "id": "bd4ce8fd2fbb1f839d03",
+      "source": "The Block",
+      "title": "Solana treasury firm SkyAI keeps board after shareholder protest, loses equity plan vote",
+      "summary": "SkyAI’s board survived a shareholder protest, but its proposed equity pay plan fell by a wide margin.",
+      "url": "https://www.theblock.co/news/business/2026-09-24-solana-treasury-skyai-keeps-board-shareholder-protest-loses-equity-plan-vote-416298",
+      "publishedAt": "2026-09-24T19:17:47.000Z"
+    },
+    {
+      "id": "60b4a44f5c363c796d68",
+      "source": "Decrypt",
+      "title": "Meta's New AI Toy Is a Keychain That Watches, Listens, and Never Blinks",
+      "summary": "Muse Charm is Meta's palm-sized gadget for talking to its Muse AI agent on the go. It has cameras, a fingerprint sensor, and its own cell connection.",
+      "url": "https://decrypt.co/379253/meta-ai-toy-muse-charm-keychain-watches-listens",
+      "publishedAt": "2026-09-24T19:16:03.000Z"
+    },
+    {
+      "id": "6561bd07f0aa959f79e2",
+      "source": "Bitcoin Magazine",
+      "title": "Brooklyn Man Sentenced to 12 Years for $16M Coinbase Phishing Scam",
+      "summary": "Bitcoin Magazine Brooklyn Man Sentenced to 12 Years for $16M Coinbase Phishing Scam Ronald Spektor, 23, who lived with his father, used social engineering to steal funds from Coinbase customers. This post Brooklyn Man Sentenced to 12 Years for $16M Coinbase…",
+      "url": "https://bitcoinmagazine.com/news/man-gets-12-years-for-coinbase-scam",
+      "publishedAt": "2026-09-24T19:15:29.000Z"
+    },
+    {
+      "id": "7da585d03026b0619284",
+      "source": "CryptoSlate",
+      "title": "NYSE is assembling the pipes for a $5.5 trillion tokenized asset market",
+      "summary": "The proposed trading route depends on a planned NYSE venue and regulatory approvals; ICE and Blockchain.com also aim to share market data. The post NYSE is assembling the pipes for a $5.5 trillion tokenized asset market appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/nyse-is-assembling-the-pipes-for-a-5-5-trillion-tokenized-asset-market/",
+      "publishedAt": "2026-09-24T19:00:35.000Z"
+    },
+    {
+      "id": "62ff35ecbcf4c53b9e64",
+      "source": "CoinDesk",
+      "title": "Bitcoin just topped a key long-term moving average. Here's what it might mean",
+      "summary": "Bitcoin’s return above its one-year average excited chart watchers. AltcoinPro Research says the more important signal is whether it can stay above its 200-day average.",
+      "url": "https://www.coindesk.com/markets/2026/09/24/bitcoin-just-topped-a-key-long-term-moving-average-here-s-what-it-might-mean",
+      "publishedAt": "2026-09-24T18:46:58.000Z"
+    },
+    {
+      "id": "50472bd4fbdaf46c2e2b",
+      "source": "The Block",
+      "title": "ARK Invest brings $1.3 billion venture fund onchain through Securitize",
+      "summary": "ARK Invest is bringing its $1.3B ARK Venture Fund (ARKVX), which holds OpenAI, Anthropic and Stripe, onchain via Securitize on Ethereum.",
+      "url": "https://www.theblock.co/news/markets/2026-09-24-ark-invest-tokenizes-arkvx-venture-fund-securitize-416294",
+      "publishedAt": "2026-09-24T18:37:22.000Z"
+    },
+    {
+      "id": "192e23675229834615b4",
+      "source": "Decrypt",
+      "title": "AI Can Now Doxx Your Anonymous Accounts? Here's What’s Going On",
+      "summary": "A February research paper showing AI can unmask pseudonymous internet users is freaking everyone out again this week. Here's what the paper actually says.",
+      "url": "https://decrypt.co/379228/ai-can-now-doxx-your-anonymous-accounts-heres-whats-going-on",
+      "publishedAt": "2026-09-24T18:31:03.000Z"
+    },
+    {
+      "id": "6c6563aa72d011627d8c",
+      "source": "The Block",
+      "title": "JPMorgan says bitcoin crossing $85,000 production cost could ease miner selling pressure",
+      "summary": "JPMorgan analysts said bitcoin's move above its estimated $85,000 production cost could ease miner selling if sustained.",
+      "url": "https://www.theblock.co/news/markets/2026-09-24-jpmorgan-bitcoin-production-cost-miners-relief-416283",
+      "publishedAt": "2026-09-24T18:22:39.000Z"
+    },
+    {
+      "id": "b30faa9ddbbd16768683",
+      "source": "Bitcoin Magazine",
+      "title": "Institutions Held Their Bitcoin Through Crash — and Some Bought More: Report",
+      "summary": "Bitcoin Magazine Institutions Held Their Bitcoin Through Crash — and Some Bought More: Report New research finds bitcoin has become the one crypto asset big investors agree on. This post Institutions Held Their Bitcoin Through Crash — and Some Bought More:…",
+      "url": "https://bitcoinmagazine.com/news/institutions-held-bitcoin-through-crash",
+      "publishedAt": "2026-09-24T18:03:52.000Z"
+    },
+    {
+      "id": "d3ae246f343a6d88975b",
+      "source": "Decrypt",
+      "title": "New York Wants to Ban Polymarket, Lawsuit Calls It 'Illegal Gambling Operation'",
+      "summary": "Attorney General Letitia James and Governor Kathy Hochul allege the prediction market operates without a license and exposes New Yorkers to gambling harms.",
+      "url": "https://decrypt.co/379244/new-york-ban-polymarket-lawsuit",
+      "publishedAt": "2026-09-24T17:51:31.000Z"
+    },
+    {
+      "id": "1643fdc65b98f9350e68",
+      "source": "CryptoSlate",
+      "title": "Australia just got a real-world look at what happens when an AI refuses to stop",
+      "summary": "Albanese says the agent reached nonpublic files while seeking spending data; investigators are assessing the scope of access. The post Australia just got a real-world look at what happens when an AI refuses to stop appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/australia-just-got-a-real-world-look-at-what-happens-when-an-ai-refuses-to-stop/",
+      "publishedAt": "2026-09-24T17:40:20.000Z"
+    },
+    {
+      "id": "0d4ebfbaec2e0809a7ef",
+      "source": "Decrypt",
+      "title": "In Her Final Weeks, SEC's Peirce Calls for Ending the KYC 'Panopticon'",
+      "summary": "In one of her final speeches as commissioner, Peirce argued that regulators' \"data haystacks\" endanger the people they aim to protect—as recent KYC leaks expose crypto holders to phishing and physical attacks.",
+      "url": "https://decrypt.co/379217/sec-peirce-end-kyc-panopticon-zero-knowledge-proofs",
+      "publishedAt": "2026-09-24T17:31:03.000Z"
+    },
+    {
+      "id": "d4fac43a2b1a0fa1c8fb",
+      "source": "Cointelegraph",
+      "title": "Crypto treasury model loses its edge as stock premiums fade: DWF",
+      "summary": "Most DATs now trade below the value of their crypto holdings, weakening a financing model that once helped companies expand their balance sheets.",
+      "url": "https://cointelegraph.com/news/crypto-treasury-firms-below-nav-sequans-bitcoin-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T17:14:35.000Z"
+    },
+    {
+      "id": "0a144d99ce235908a6dc",
+      "source": "Cointelegraph",
+      "title": "Sequans exits Bitcoin treasury strategy after selling remaining 314 BTC",
+      "summary": "The France-based semiconductor company has fully unwound a Bitcoin treasury that once held more than 3,200 BTC as more firms scale back crypto holdings.",
+      "url": "https://cointelegraph.com/news/sequans-exits-bitcoin-treasury-strategy-after-selling-remaining-314-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T17:13:38.000Z"
+    },
     {
       "id": "61829fc3570490449625",
       "source": "Decrypt",
@@ -200,14 +440,6 @@
       "summary": "A Sept. 24 policy update permits identity checks and withdrawals after trading ended, with asset minimums and sanctions rules still in force. The post BitMEX opens fund recovery to customers it previously barred from the platform appeared first on…",
       "url": "https://cryptoslate.com/bitmex-opens-fund-recovery-to-customers-it-previously-barred-from-the-platform/",
       "publishedAt": "2026-09-24T13:30:14.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T13:29:50.000Z"
     },
     {
       "id": "a8158ff0652b95047099",
@@ -380,8 +612,8 @@
     {
       "id": "06a620465dcb8acc3db2",
       "source": "CoinDesk",
-      "title": "Live updates: Report on U.S./Iran progress gives small lift to markets",
-      "summary": "Oil trimmed a near 5% gain to just 2% in the immediate aftermath of the story.",
+      "title": "Live updates: Oil back on the rise as Iran denies report of deal talks",
+      "summary": "Bitcoin pulled back to $84,000 as stocks slipped and interest rates rose alongside surging oil prices.",
       "url": "https://www.coindesk.com/tech/2026/09/24/live-updates-bitcoin-edges-lower-as-bond-yields-take-center-stage",
       "publishedAt": "2026-09-24T11:20:12.000Z"
     },
@@ -426,14 +658,6 @@
       "publishedAt": "2026-09-24T10:11:51.000Z"
     },
     {
-      "id": "027218d76be82f9ee396",
-      "source": "CryptoSlate",
-      "title": "Why Zcash soared to $1,600 as Europe unlocks new ETP access",
-      "summary": "21Shares listed ZCASH in Paris and Amsterdam as ZEC briefly topped $1,600 and ZODL reported elevated privacy use. The post Why Zcash soared to $1,600 as Europe unlocks new ETP access appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/zcash-gains-european-etp-access-as-shielded-activity-reaches-a-four-year-high/",
-      "publishedAt": "2026-09-24T10:00:42.000Z"
-    },
-    {
       "id": "8c88b4e66daa4efcfa8d",
       "source": "The Block",
       "title": "IBM connects Digital Asset Haven to Swift blockchain ledger for tokenized deposit transactions",
@@ -472,230 +696,6 @@
       "summary": "Every institution interviewed that owned crypto held Bitcoin, usually as its largest asset; some set exit conditions for Ether and Solana.",
       "url": "https://cointelegraph.com/markets/institutions-held-crypto-50-percent-drawdown-bitwise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-24T09:18:16.000Z"
-    },
-    {
-      "id": "686b0046aff152f1a997",
-      "source": "Decrypt",
-      "title": "Brooklyn Man Who Bragged About $16M Coinbase Scam Gets Up to 12 Years",
-      "summary": "He posed as support staff, emptied about 100 accounts, then lost $6 million of the proceeds gambling, according to his own messages.",
-      "url": "https://decrypt.co/379153/brooklyn-man-who-bragged-about-16m-coinbase-scam-gets-up-to-12-years",
-      "publishedAt": "2026-09-24T09:00:46.000Z"
-    },
-    {
-      "id": "f05b98707c53e8c9611b",
-      "source": "CryptoSlate",
-      "title": "Why surging US real yields are quietly forcing Bitcoin under $84,000",
-      "summary": "Bitcoin registered an intraday low at $83,500 on Sept. 23, the same day the US 10-year Treasury yield closed at 5.11%, up 15 basis points in a single session, as a hotter-than-expected business activity survey pushed investors to reprice interest rates.…",
-      "url": "https://cryptoslate.com/why-surging-us-real-yields-are-quietly-forcing-bitcoin-under-84000/",
-      "publishedAt": "2026-09-24T08:59:51.000Z"
-    },
-    {
-      "id": "15e098218e94e4ee0891",
-      "source": "Cointelegraph",
-      "title": "Australia says OpenAI agent hacked government site before Altman warning",
-      "summary": "OpenAI notified Australia nearly three months after its agent breached a government portal while gathering public medicine-spending data.",
-      "url": "https://cointelegraph.com/news/australia-openai-agent-government-hack-altman-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T08:29:11.000Z"
-    },
-    {
-      "id": "7b30fd2f790132b2883c",
-      "source": "The Block",
-      "title": "Brooklyn man gets up to 12 years over $16 million Coinbase social engineering scheme",
-      "summary": "A court sentenced 23-year-old Ronald Spektor to four to 12 years in prison for a $15.9 million Coinbase phishing scheme.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-24-brooklyn-man-12-years-scheme-416231",
-      "publishedAt": "2026-09-24T08:21:32.000Z"
-    },
-    {
-      "id": "eec42c2034bf2a5e5513",
-      "source": "CryptoSlate",
-      "title": "Neutron DAO passes a new proposal, and $9.3M in crypto disappears",
-      "summary": "Proposal #9 passed Sept. 22; SlowMist estimates incidents at Astroport and Drop, while the amount ultimately unrecovered remains unknown. The post Neutron DAO passes a new proposal, and $9.3M in crypto disappears appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/neutron-dao-passes-a-new-proposal-and-9-3m-in-crypto-disappears/",
-      "publishedAt": "2026-09-24T07:50:19.000Z"
-    },
-    {
-      "id": "942310f908e45453e10c",
-      "source": "CoinDesk",
-      "title": "Trump administration weighs a global stablecoin plan to cement dollar's dominance",
-      "summary": "Washington is a mulling plan to actively promote USD-backed stablecoins worldwide in a bid to cement the greenback's global reserve status.",
-      "url": "https://www.coindesk.com/markets/2026/09/24/trump-administration-weighs-a-global-stablecoin-plan-to-cement-dollar-s-dominance",
-      "publishedAt": "2026-09-24T06:33:23.000Z"
-    },
-    {
-      "id": "a927dbe2c1454ab7c3c7",
-      "source": "CryptoSlate",
-      "title": "MoonPay targets $8.7B trading venue, but the features remain unrevealed",
-      "summary": "The proposed acquisition includes PPEX, an existing private-securities venue. Regulatory approvals and other closing conditions still stand before ownership changes. The post MoonPay targets $8.7B trading venue, but the features remain unrevealed appeared…",
-      "url": "https://cryptoslate.com/moonpay-targets-8-7b-trading-venue-but-the-features-remain-unrevealed/",
-      "publishedAt": "2026-09-24T06:10:05.000Z"
-    },
-    {
-      "id": "3046e0879fdb20a4b9f2",
-      "source": "CoinDesk",
-      "title": "A week of AI coding cut a quantum-safe bitcoin transaction estimate from $320 to $66",
-      "summary": "StarkWare, which conducted the research, says contest participants using AI tools made the computation about five times faster, though the $66 figure has not yet been demonstrated in another transaction mined on Bitcoin.",
-      "url": "https://www.coindesk.com/tech/2026/09/24/a-week-of-ai-coding-cut-a-quantum-safe-bitcoin-transaction-estimate-from-usd320-to-usd66",
-      "publishedAt": "2026-09-24T05:24:56.000Z"
-    },
-    {
-      "id": "db68b59656dbc1902342",
-      "source": "Cointelegraph",
-      "title": "Bitcoin’s ‘last resort’ quantum-safe solution just got 79% cheaper: StarkWare",
-      "summary": "A weeklong optimization challenge cut the estimated GPU cost of preparing an experimental quantum-resistant Bitcoin transaction to under $67, potentially making the “last-resort measure” a little easier on the wallet.",
-      "url": "https://cointelegraph.com/news/bitcoins-last-resort-quantum-safe-solution-just-got-79-cheaper-starkware?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T04:52:40.000Z"
-    },
-    {
-      "id": "cae83496413f6689ee75",
-      "source": "Cointelegraph",
-      "title": "US weighs overseas push for dollar-backed stablecoins: Bloomberg",
-      "summary": "The reported initiative could involve private-sector companies and several US agencies as Washington looks to expand the international use of dollar-backed stablecoins.",
-      "url": "https://cointelegraph.com/news/us-overseas-dollar-stablecoins-trump-administration?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T04:44:12.000Z"
-    },
-    {
-      "id": "4eb6b8097c402a26af21",
-      "source": "CoinDesk",
-      "title": "Dogecoin down 8%, bitcoin under $84,000 as Treasury yields hit highest level since 2007",
-      "summary": "A rebound in oil, the strongest U.S. business survey in five years and a poorly received five-year note sale pushed borrowing costs higher, with DOGE leading token losses.",
-      "url": "https://www.coindesk.com/markets/2026/09/24/dogecoin-down-8-bitcoin-under-usd84-000-as-treasury-yields-hit-highest-level-since-2007",
-      "publishedAt": "2026-09-24T04:13:01.000Z"
-    },
-    {
-      "id": "7230500120fa74ee0e6c",
-      "source": "Cointelegraph",
-      "title": "Kalshi says CFTC hasn’t contacted it over ‘unusual’ $5B trading activity",
-      "summary": "Kalshi said nearly $5 billion in similarly sized Ether perpetual trades reflected its liquidity incentive programs and rejected allegations that the activity was wash trading.",
-      "url": "https://cointelegraph.com/news/kalshi-says-cftc-hasnt-contacted-it-over-unusual-5b-trading-activity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T00:53:09.000Z"
-    },
-    {
-      "id": "a81b6ead6fd7f97f631b",
-      "source": "Decrypt",
-      "title": "Anthropic Says Claude Found Something Big in DNA. It Just Doesn't Know What",
-      "summary": "Anthropic says Claude autonomously found a new CRISPR-like enzyme system. Even Dario Amodei admits nobody knows what it actually does.",
-      "url": "https://decrypt.co/379128/anthropic-claude-found-something-big-dna-doesnt-know-what",
-      "publishedAt": "2026-09-23T22:56:03.000Z"
-    },
-    {
-      "id": "64a1fd1d4372d3b0ee72",
-      "source": "Decrypt",
-      "title": "An AI Agent Just Hacked a Government Website for the First Time, Australia PM Says",
-      "summary": "Anthony Albanese said the agent accessed public and non-public files on a Medicare statistics portal in June, calling OpenAI's three-month delay in disclosing the breach \"unacceptable.\"",
-      "url": "https://decrypt.co/379134/an-ai-agent-just-hacked-a-government-website-for-the-first-time-australia-pm-says",
-      "publishedAt": "2026-09-23T22:31:45.000Z"
-    },
-    {
-      "id": "5eb08f4512258d3bc1fa",
-      "source": "Decrypt",
-      "title": "OpenAI Gives Ukraine Access to Daybreak AI Cyber-Defense Tool",
-      "summary": "OpenAI is giving Ukraine's government access to Daybreak, its AI vulnerability-hunting system, as the country's cyber defenders face a record wave of attacks on hospitals, power grids, and government networks.",
-      "url": "https://decrypt.co/379126/openai-ukraine-access-daybreak-ai-cyber-defense-tool",
-      "publishedAt": "2026-09-23T22:06:04.000Z"
-    },
-    {
-      "id": "028d61b332d7fe042e8e",
-      "source": "Cointelegraph",
-      "title": "Ex-SEC acting chair: Agency dropped crypto cases to avoid issues with credibility",
-      "summary": "SEC Commissioner Mark Uyeda said that the agency dropped many cases against crypto companies in early 2025 to avoid potential credibility problems in court.",
-      "url": "https://cointelegraph.com/news/sec-mark-uyeda-agency-dropped-crypto-cases?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T21:47:52.000Z"
-    },
-    {
-      "id": "7b7415a1768b06d6d4d1",
-      "source": "Decrypt",
-      "title": "China Probes DeepSeek and Moonshot Over Alleged Data Leaks to Anthropic's Claude",
-      "summary": "China's internet regulator is investigating DeepSeek and Moonshot AI after Anthropic accused both of secretly routing millions of user exchanges through Claude to train their own models.",
-      "url": "https://decrypt.co/379120/china-probes-deepseek-moonshot-data-leaks-anthropic-claude",
-      "publishedAt": "2026-09-23T21:31:03.000Z"
-    },
-    {
-      "id": "cbbfc8511f29b1b7dfca",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin Price Slips While US Treasury Yields Soar, Oil Prices Climb",
-      "summary": "Bitcoin Magazine Bitcoin Price Slips While US Treasury Yields Soar, Oil Prices Climb Treasury yields soared on Wednesday to their highest level since 2007 while bitcoin’s price slumped. This post Bitcoin Price Slips While US Treasury Yields Soar, Oil Prices…",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-price-slips-while-yields-soar",
-      "publishedAt": "2026-09-23T21:08:27.000Z"
-    },
-    {
-      "id": "40972221baf00c657c39",
-      "source": "Decrypt",
-      "title": "Meta's Muse AI Agent Read a User's Private iMessages. Then It Lied About How",
-      "summary": "A tech columnist declined to give Meta's new AI agent access to his messages. It read them anyway, then invented an explanation for how it knew.",
-      "url": "https://decrypt.co/379122/metas-muse-ai-agent-user-private-imessages-lied-how",
-      "publishedAt": "2026-09-23T20:44:20.000Z"
-    },
-    {
-      "id": "7ed5b8bfe790c9f14312",
-      "source": "Cointelegraph",
-      "title": "Former Hack VC partner Hsin-Ju Chuang found dead at 37",
-      "summary": "The crypto executive and Dystopia Labs founder previously held senior roles at Stellar and Solana before joining venture capital firm Hack VC.",
-      "url": "https://cointelegraph.com/news/former-hack-vc-partner-hsin-ju-chuang-found-dead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T20:43:56.000Z"
-    },
-    {
-      "id": "1bfef2eecaf9b0e538ab",
-      "source": "Cointelegraph",
-      "title": "US lawmakers from gaming states urge SCOTUS to take up Kalshi case",
-      "summary": "The case between New Jersey authorities and a prediction market company, if accepted by the Supreme Court, could result in clarity for state and federal officials over sports bets.",
-      "url": "https://cointelegraph.com/news/us-lawmakers-gaming-states-supreme-court-kalshi-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T20:28:34.000Z"
-    },
-    {
-      "id": "8b78a809311e67f215c4",
-      "source": "Bitcoin Magazine",
-      "title": "CFTC Chair Selig Says Regulator Is Preparing for ‘24-7, On-Chain’ Markets",
-      "summary": "Bitcoin Magazine CFTC Chair Selig Says Regulator Is Preparing for ‘24-7, On-Chain’ Markets Mike Selig has said that the CFTC is looking forward to “exciting” crypto and AI markets as the agency presses on without the Clarity Act. This post CFTC Chair Selig…",
-      "url": "https://bitcoinmagazine.com/news/cftc-is-preparing-for-onchain-markets",
-      "publishedAt": "2026-09-23T19:55:21.000Z"
-    },
-    {
-      "id": "af3e19c1a90e6f893e32",
-      "source": "Decrypt",
-      "title": "Zcash's Wall Street Moment Reaches Europe With Its First ETP Listing",
-      "summary": "21Shares listed Europe's first Zcash exchange-traded product on Euronext Paris and Amsterdam this week as ZEC continues its banner year.",
-      "url": "https://decrypt.co/379105/zcash-wall-street-europe-first-etp",
-      "publishedAt": "2026-09-23T19:36:15.000Z"
-    },
-    {
-      "id": "2c3eb730ef4213d38c90",
-      "source": "Cointelegraph",
-      "title": "Trump reveals up to $100K Strategy stock purchase in ethics filing",
-      "summary": "President Donald Trump disclosed a July purchase of Strategy shares as his administration continues to advance crypto policy through federal regulators and Congress.",
-      "url": "https://cointelegraph.com/news/trump-discloses-up-to-100k-strategy-stock-purchase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T19:05:14.000Z"
-    },
-    {
-      "id": "1288272c3fa288014946",
-      "source": "CoinDesk",
-      "title": "Kalshi says it is not being investigated by the CFTC over trading activity",
-      "summary": "The prediction market says unusual patterns in its ether perpetual market are the result of liquidity incentives.",
-      "url": "https://www.coindesk.com/markets/2026/09/23/kalshi-says-it-is-not-being-investigated-by-the-cftc-over-trading-activity",
-      "publishedAt": "2026-09-23T19:04:52.000Z"
-    },
-    {
-      "id": "b3b9eadbbcfb59246cf3",
-      "source": "CoinDesk",
-      "title": "Former Hack VC partner Hsin-Ju Chuang found dead following public dispute with the firm",
-      "summary": "The crypto community is seeking answers after 37-year-old growth executive Hsin-Ju Chuang was found dead in a remote California desert vehicle.",
-      "url": "https://www.coindesk.com/business/2026/09/23/former-hack-vc-partner-hsin-ju-chuang-found-dead-following-public-dispute-with-firm",
-      "publishedAt": "2026-09-23T18:59:36.000Z"
-    },
-    {
-      "id": "4424b9a897fdc1ae2277",
-      "source": "Decrypt",
-      "title": "$15.6 Billion in Bitcoin Options Expire Friday—Here's What It Means",
-      "summary": "Deribit's strike-by-strike data shows a book stacked with calls, and one price level drawing hedging pressure from both sides at once.",
-      "url": "https://decrypt.co/379093/15-6-billion-bitcoin-options-expire-friday-what-means",
-      "publishedAt": "2026-09-23T18:46:03.000Z"
-    },
-    {
-      "id": "a6ffe7840db0d1c2527b",
-      "source": "Cointelegraph",
-      "title": "US stablecoin adoption could surge with bank-like protections: Visa survey",
-      "summary": "The survey released by Visa posited that bank-like protections for stablecoins could increase adoption in the US as companies are preparing for the enactment of the GENIUS Act.",
-      "url": "https://cointelegraph.com/news/stablecoin-adoption-bank-level-protections-visa?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-23T18:17:48.000Z"
     }
   ]
 }
