@@ -1,0 +1,47 @@
+{
+  "schema": "astrobridge.engineering-evidence.v1",
+  "reportId": "AB-MA-READY-2026-09-24",
+  "issuedAt": "2026-09-24T16:15:00+08:00",
+  "scope": ["MA 1.6.9 build 34", "AstroBridge v7", "AstroChannel public MA pages"],
+  "conclusion": "Implementation package ready; production deployment and acceptance remain pending.",
+  "verified": {
+    "astroBridgeRegressionTests": {"passed": 22, "total": 22},
+    "maDiagnostics": "passed",
+    "androidBuilds": [
+      {"edition": "Full", "package": "com.astrowallet.ai.full", "versionName": "1.6.9", "versionCode": 34, "sha256": "66d911bf45b29442a55ff9afa1a6574b4e2655b87b878a8bce76b2273ebb5130"},
+      {"edition": "Official", "package": "com.astrowallet.ai", "versionName": "1.6.9", "versionCode": 34, "sha256": "5ad5c15fc48c7b21b065ad89eb7dc62ab0429970420d8e553070014f20d6dd72"}
+    ],
+    "androidSignerCertificateSha256": "bb4bf64bda35618c55a1d60c0d40ba5a1d641d4c4b3c58566f63b2a91e1589fa",
+    "serverPatchSha256": "bacf4f60b572af3d3a0601c33e587f6f582ada16eff588e056ab8ba3403fd06b"
+  },
+  "implementedNotYetDeployed": [
+    "Allowlisted live LI.FI quotes for BSC, Ethereum, Polygon, Arbitrum, Avalanche and Base",
+    "Wallet confirmation, ERC-20 allowance and source-chain transaction broadcast",
+    "Top-20 server-side market coverage with provider fallback",
+    "Fail-closed MA garden catalog and checkout manifest",
+    "Wallet-signed Pinata/IPFS NFT metadata and claim authorization binding"
+  ],
+  "productionObservations": {
+    "apiHealth": "reachable",
+    "officialMaPages": "reachable",
+    "signedP2pAuthentication": "passed",
+    "swapAssetsEndpoint": "HTTP 404 at report time",
+    "gardenCatalogEndpoint": "HTTP 404 at report time",
+    "fundedSwapPerformed": false,
+    "nftMintPerformed": false
+  },
+  "requiredDeployment": [
+    "Deploy and build the prepared AstroBridge patch and reload astrobridge-api",
+    "Configure LI.FI, Pinata, NFT authorization signer, BSC RPC and NFT contract values server-side",
+    "Configure final audited MA token and garden-store values only after MA launch",
+    "Run approved low-value swap and NFT mint acceptance canaries"
+  ],
+  "notCompletedByThisPackage": [
+    "Server-authoritative card inventory and reward ledger",
+    "Secure Browser one-time challenge bridge for card redemption",
+    "Final MA burn and redemption policy/contracts",
+    "Mother Fund intake, review, payout and evidence backend",
+    "Approved NodeServer identity, stake and heartbeat rollout"
+  ],
+  "evidenceBoundary": "Internal dated engineering evidence. Not an independent third-party audit, legal opinion, or proof of an unperformed value transfer."
+}
