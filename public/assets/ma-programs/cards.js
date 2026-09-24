@@ -67,16 +67,16 @@
 
   // Proposed reference schedule. It does not activate or create an entitlement.
   var PROPOSED_REFERENCE_SCHEDULE = Object.freeze({
-    N: 10,
-    R: 25,
-    SR: 60,
-    SSR: 150,
-    UR: 400,
-    LR: 1000,
-    MR: 2500,
-    MYTHIC: 10000,
-    COSMIC: 50000
-  });
+    "N": 2.33,
+    "R": 5.83,
+    "SR": 14,
+    "SSR": 35,
+    "UR": 93.33,
+    "LR": 233.33,
+    "MR": 583.33,
+    "MYTHIC": 2333.33,
+    "COSMIC": 11666.66
+});
 
   var COPY = {
     en: {
@@ -226,7 +226,7 @@
   var state = { filter: 'all', visible: PAGE_SIZE };
 
   function formatMA(amount, lang) {
-    return new Intl.NumberFormat(lang || language(), { maximumFractionDigits: 0 }).format(amount);
+    return new Intl.NumberFormat(lang || language(), { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(amount);
   }
 
   function filteredCards() {

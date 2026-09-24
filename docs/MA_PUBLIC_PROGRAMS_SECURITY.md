@@ -42,7 +42,7 @@ The claim button remains disabled until all of the following exist:
 2. A single-use challenge bound to account, card, destination wallet, quote,
    expiry and chain ID.
 3. Atomic replay prevention and an auditable claim ledger.
-4. A funded 30,000,000 MA pool and audited settlement contract.
+4. A funded 7,000,000 MA pool and audited settlement contract.
 5. Published eligibility, migration and dispute rules.
 
 The four legacy purple-whale cards are marked migration-pending. They must not
@@ -51,8 +51,8 @@ card cannot be claimed twice.
 
 The displayed rarity values are a proposed reference schedule, not a guaranteed
 live quote. The target redemption window is three to five years, with a
-five-year baseline daily budget of `30,000,000 / (5 × 365) = 16,438.356 MA`.
-For comparison, a three-year pace is `30,000,000 / (3 × 365) = 27,397.260 MA`.
+five-year baseline daily budget of `7,000,000 / (5 × 365) = 3,835.616 MA`.
+For comparison, a three-year pace is `7,000,000 / (3 × 365) = 6,392.694 MA`.
 The active governance rule will publish one of these schedules before launch
 and uses this multiplier:
 
@@ -67,14 +67,14 @@ day's published multiplier.
 
 The planning figures are:
 
-- Planned reserve: 100,000,000 MA
-- Planned daily amount: 273,972 MA
-- 365 scheduled actions: 99,999,780 MA
-- Unallocated remainder: 220 MA
+- Planned reserve: 50,000,000 MA
+- Days 1–364 daily amount: 136,986 MA
+- 365 scheduled actions: 50,000,000 MA
+- Day 365 includes rounding adjustment: 110 MA
 
 Before activation, governance must publish the start time, token and vault
-addresses, execution contract, destination, pause model and treatment of the
-220 MA remainder. Sending ERC-20 tokens to a dead address often makes them
+addresses, execution contract, destination, pause model and final-day total of 137,096 MA (including the
+110 MA adjustment). Sending ERC-20 tokens to a dead address often makes them
 inaccessible without reducing `totalSupply`; the public definition of “burned”
 must therefore match the final contract behavior.
 
@@ -115,8 +115,8 @@ withdrawable. Use an approved alias and broad region whenever possible. Do not
 publish a precise home address, identity document, phone number, child identity,
 wallet address or sensitive medical detail.
 
-The fixed allocation statement is “30,000,000 MA, equal to 3% of the planned
-initial 1,000,000,000 MA supply.” It must not be described as 3% of the current
+The fixed allocation statement is “10,000,000 MA, equal to 1% of the planned
+initial 1,000,000,000 MA supply.” It must not be described as 1% of the current
 supply after burns. A fiat reference value appears only when a verified MA price
 source is available.
 

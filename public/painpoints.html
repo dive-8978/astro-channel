@@ -246,20 +246,21 @@
         <div class="hero-copy">
           <div class="eyebrow"><span class="status-dot"></span><span data-lang="en">AstroBridge dedicated channel</span><span data-lang="zh">AstroBridge 专属通道</span></div>
           <h1><span data-lang="en">Private chat.<br><span>Native value.</span></span><span data-lang="zh">私密聊天。<br><span>价值直达。</span></span></h1>
-          <p class="lead" data-lang="en">MA brings familiar, effortless messaging together with a self-custody wallet and signed P2P delivery.</p>
-          <p class="lead" data-lang="zh">MA 将熟悉顺手的即时聊天、自托管钱包与签名 P2P 投递融为一个入口。</p>
+          <p class="lead" data-lang="en">Your identity, beyond a phone number. MA brings address-based chat identity, wallet tools and local-first experiences into one app. Chat identity and funds wallet are separate.</p>
+          <p class="lead" data-lang="zh">身份，不必从手机号开始。MA 将地址身份聊天、钱包工具和本地优先体验融为一个应用。聊天身份与资金钱包相互独立。</p>
           <div class="actions">
             <a class="btn btn-primary" href="#download"><i data-lucide="download"></i><span data-lang="en">Get MA for Android</span><span data-lang="zh">下载 Android 版</span></a>
             <span class="btn btn-disabled" aria-disabled="true"><i data-lucide="apple"></i><span data-lang="en">iOS · Coming Soon</span><span data-lang="zh">iOS · 即将上线</span><small>TestFlight</small></span>
             <a class="btn btn-secondary" href="#product"><i data-lucide="message-circle-more"></i><span data-lang="en">Explore MA</span><span data-lang="zh">探索 MA</span></a>
           </div>
           <div class="program-quicklinks" aria-label="MA program pages">
+            <a class="program-pill" href="professional.html#principles"><span data-lang="en">Professional view · MA identity</span><span data-lang="zh">专业官网 · MA 身份体系</span></a>
             <a class="program-pill" href="ma-card-redemption.html"><i data-lucide="layers-3"></i><span data-lang="en">Card Redemption</span><span data-lang="zh">卡片兑换</span></a>
             <a class="program-pill" href="ma-burn.html"><i data-lucide="flame"></i><span data-lang="en">Daily Burn</span><span data-lang="zh">每日燃烧</span></a>
             <a class="program-pill" href="ma-mother-love.html"><i data-lucide="heart-handshake"></i><span data-lang="en">Mother Fund</span><span data-lang="zh">妈妈基金</span></a>
           </div>
           <div class="micro">
-            <span><i data-lucide="shield-check" size="15"></i><span data-lang="en">Wallet signature identity</span><span data-lang="zh">钱包签名身份</span></span>
+            <span><i data-lucide="shield-check" size="15"></i><span data-lang="en">No phone number required</span><span data-lang="zh">无需手机号创建聊天身份</span></span>
             <span><i data-lucide="languages" size="15"></i><span data-lang="en">7 languages</span><span data-lang="zh">支持 7 种语言</span></span>
             <span><i data-lucide="hard-drive" size="15"></i><span data-lang="en">Local-first data</span><span data-lang="zh">数据本地优先</span></span>
           </div>
@@ -267,7 +268,7 @@
         <div class="device-stage" aria-label="MA application preview">
           <div class="device"><img src="ma-device-preview.png" alt="MA running on Android"></div>
           <div class="live-chip">
-            <strong><span class="status-dot"></span><span data-lang="en">P2P channel online</span><span data-lang="zh">P2P 通道在线</span></strong>
+            <strong><span class="status-dot"></span><span data-lang="en">Signed P2P delivery</span><span data-lang="zh">签名 P2P 投递</span></strong>
             <code>wss://p2p************/chat</code>
           </div>
         </div>
@@ -275,7 +276,7 @@
     </section>
 
     <div class="wrap metrics">
-      <div class="metric"><strong id="nodes">180+</strong><span data-lang="en">Global healthy nodes</span><span data-lang="zh">全球健康节点</span></div>
+      <div class="metric"><strong id="nodes">MA</strong><span data-lang="en">Address-based chat identity</span><span data-lang="zh">地址身份聊天</span></div>
       <div class="metric"><strong>2</strong><span data-lang="en">Dedicated AstroBridge channels</span><span data-lang="zh">AstroBridge 专属通道</span></div>
       <div class="metric"><strong>7</strong><span data-lang="en">Interface languages</span><span data-lang="zh">界面语言</span></div>
     </div>
@@ -526,14 +527,7 @@
       throw lastError || new Error("Range download failed.");
     }
 
-    fetch("https://api.astrochannel.one/nodes/online")
-      .then(response => response.ok ? response.json() : Promise.reject())
-      .then(data => {
-        const candidates = [data.count, data.total, data.onlineNodes, data.healthyNodes, data.nodes];
-        const value = candidates.find(item => Number.isFinite(Number(item)) && typeof item !== "boolean");
-        if (value) document.getElementById("nodes").textContent = value;
-      })
-      .catch(() => {});
+    // Node health belongs in a timestamped readiness report, not a decorative metric.
   </script>
 </body>
 </html>
