@@ -33,4 +33,6 @@ for(const [lang,copy]of Object.entries(content)){
 assert(content.en.boundBody.includes('cannot cancel'));
 assert(content.en.techScope.includes('roadmap'));
 assert(content.en.impactStatus.includes('No completed aid cases'));
+assert(!read('public/professional.html').includes('data-p="f3"'), 'Official MA marketing must omit Full-only reader card');
+for(const copy of Object.values(content)) assert(!('f3' in copy) && !('f3b' in copy));
 console.log('PASS MA allocation arithmetic, scaled rarity references, page links, seven-language coverage and news mirrors');
