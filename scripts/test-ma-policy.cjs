@@ -35,4 +35,15 @@ assert(content.en.techScope.includes('roadmap'));
 assert(content.en.impactStatus.includes('No completed aid cases'));
 assert(!read('public/professional.html').includes('data-p="f3"'), 'Official MA marketing must omit Full-only reader card');
 for(const copy of Object.values(content)) assert(!('f3' in copy) && !('f3b' in copy));
+for(const lang of ['en','zh','es','fr','de','ja','ko']){
+  const nodes=['label','title','tagline','body'].map(key=>({dataset:{maVision:key},textContent:''}));
+  const root={lang},section={};let callback;
+  const document={documentElement:root,querySelector:()=>({}),querySelectorAll:selector=>selector==='[data-ma-vision]'?nodes:[section]};
+  vm.runInNewContext(read('public/assets/ma-vision.js'),{document,location:{search:''},URLSearchParams,MutationObserver:class {constructor(fn){callback=fn;}observe(){}}});
+  assert(nodes.every(n=>n.textContent.length>0));assert.equal(section.lang,lang);
+  if(lang==='zh')assert.equal(nodes[1].textContent,'让数字货币成为全球通用货币。');
+  root.lang='en';callback();assert.equal(nodes[0].textContent,'OUR VISION');
+  assert.equal(nodes[1].textContent,'Make digital currency a universal currency.');
+}
+for(const file of ['index.html','public/professional.html'])assert(read(file).includes('data-ma-vision="label">OUR VISION'));
 console.log('PASS MA allocation arithmetic, scaled rarity references, page links, seven-language coverage and news mirrors');

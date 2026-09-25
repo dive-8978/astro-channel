@@ -1,0 +1,7 @@
+.ma-vision{position:relative;isolation:isolate;padding:64px 6%;background:#193a31;color:#f5f7f1;border-block:1px solid #527065;text-align:left}
+.ma-vision .ma-vision-label{font-size:12px;font-weight:700;letter-spacing:.15em;color:#d4e8a7;margin:0 0 20px}
+.ma-vision h2{font-size:clamp(30px,4.2vw,60px);line-height:1.12;letter-spacing:-.035em;max-width:1000px;margin:0 0 24px;color:inherit;overflow-wrap:break-word}
+.ma-vision .ma-vision-tagline{font-size:clamp(17px,2vw,23px);line-height:1.5;color:#e5efdf;margin:0 0 14px}
+.ma-vision .ma-vision-body{font-size:15px;line-height:1.8;color:#c9d6cd;max-width:770px;margin:0}
+.ma-vision--classic{max-width:1160px;margin:0 auto 70px;border:1px solid #437667;border-radius:18px;background:linear-gradient(120deg,#102e2b,#13203a)}
+@media(max-width:650px){.ma-vision{padding:42px 6%}.ma-vision--classic{margin-bottom:40px}.ma-vision h2{letter-spacing:-.02em}}
