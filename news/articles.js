@@ -1,5 +1,45 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "ma-android-security-release-candidate-20260926",
+    "title": "MA and MA full Advance to a New Android Security Release Candidate",
+    "dek": "Version 1.6.10 strengthens local key storage, improves Android compatibility and brings both editions through a fresh round of engineering checks.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "MA",
+    "phase": "Release candidate",
+    "phaseTone": "active",
+    "date": "2026-09-26",
+    "displayDate": "September 26, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-ma.png",
+    "body": [
+      "MA and MA full have completed signed Android release-candidate builds for version 1.6.10, build 35. The two editions retain their distinct names and application identifiers. MA full includes additional Bible and hymn reading tools; the MA edition does not bundle that library.",
+      "The release moves wallet credentials, chat identity keys and other sensitive local records into system-backed secure storage. Existing records within the same application are migrated only after a secure write and read-back check succeed. If storage cannot be accessed, the app stops the startup flow and offers a retry instead of silently substituting a new identity.",
+      "Twelve migration and failure-path tests passed, including failed writes, corrupt data, concurrent access and removal behavior. Both Android builds also passed the 16 KB ELF alignment check for all 32 included 64-bit native libraries, as well as APK ZIP alignment and signing checks. These are build-level checks, not proof of operation on every device.",
+      "The update also requires login and community consent before automatic chat authentication at startup or resume. English remains the fresh-install default, with the existing seven-language choice preserved. Regression checks cover calling and notification logic, camera-based message sending, wallet presentation, reading navigation, games and the garden.",
+      "The new Android package identifiers are separate from the older test applications. Installing them does not automatically move an older application's wallet or chat history. Users should retain the old application and securely back up recovery information before any account or installation change. Never send a private key or recovery phrase to support.",
+      "Google Play publication is still being prepared. This article does not announce store approval or global availability. Device acceptance and the remaining release requirements are tracked separately. Server-controlled purchases, NFT issuance, MA redemption, burns and Mother Fund disbursements are not activated by a mobile build.",
+      "System-backed storage improves protection of data at rest. It does not turn an internet-connected app into a cold wallet or guarantee security on a compromised device. Blockchain transfers should still be reviewed carefully: MA cannot cancel a confirmed on-chain transfer."
+    ],
+    "facts": [
+      "MA: com.astrobridge.ma, version 1.6.10 / build 35.",
+      "MA full: com.astrobridge.ma.full, version 1.6.10 / build 35.",
+      "12 of 12 secure-storage migration tests passed.",
+      "32 of 32 64-bit native libraries passed ELF alignment checks in each build."
+    ],
+    "status": "Internal engineering release-candidate record. Not a third-party audit, Google Play approval, full device acceptance or a claim that all planned blockchain services are live.",
+    "links": [
+      {
+        "label": "Build verification record",
+        "url": "/data/ma-release-1.6.10.json"
+      },
+      {
+        "label": "MA privacy policy",
+        "url": "/ma-privacy.html"
+      }
+    ]
+  },
+  {
     slug: "building-open-infrastructure-in-public",
     title: "Why We Are Building Astro Open Infrastructure in Public",
     dek: "A founder’s note on turning separate products into an inspectable, non-custodial protocol framework.",

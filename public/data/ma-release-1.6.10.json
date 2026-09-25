@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-26",
+  "status": "release-candidate-not-published-on-google-play",
+  "version": "1.6.10",
+  "versionCode": 35,
+  "source": "AstroBridge internal engineering checks",
+  "independentAudit": false,
+  "artifacts": [
+    {
+      "edition": "MA",
+      "package": "com.astrobridge.ma",
+      "aabSha256": "ad3ae825e899ad4b5851a6a94e3834e847dc2f6da36fa8e312662331e9c2dbe9",
+      "apkSha256": "009452f5616351cca2c2c865fb4bef7526ca2f8abb6a7c1c45150847e2ca29be"
+    },
+    {
+      "edition": "MA full",
+      "package": "com.astrobridge.ma.full",
+      "aabSha256": "eaa9504249040c8a29cde526f2cdc847979d1935a3f488f936a6937714a0a078",
+      "apkSha256": "f60046cbd94032e62e79ba55988b8905f574c5741757e3bc68a163339621c060"
+    }
+  ],
+  "checks": {
+    "secureStorageUnitTests": {
+      "passed": 12,
+      "total": 12
+    },
+    "nativeElf16KbAlignmentPerEdition": {
+      "passed": 32,
+      "total": 32
+    },
+    "apkZipAlignment16Kb": true,
+    "apkSignatureVerified": true,
+    "aabSignatureVerified": true,
+    "deviceAcceptance": "pending",
+    "googlePlayUploaded": false,
+    "googlePlayPublished": false
+  },
+  "limitations": [
+    "A 16 KB device runtime test has not been completed.",
+    "No real-funds transfer or multi-device call capacity acceptance is asserted.",
+    "Server-side gated functions are not enabled by this release."
+  ]
+}
