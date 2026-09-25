@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T05:04:41.963Z",
+  "generatedAt": "2026-09-25T11:58:02.944Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 34,
+      "itemCount": 35,
       "error": null
     },
     {
@@ -58,12 +58,196 @@
   ],
   "items": [
     {
+      "id": "89251a2ffc1177ad00b0",
+      "source": "CoinDesk",
+      "title": "Bond volatility surges while bitcoin and Wall Street stay calm",
+      "summary": "Bond volatility is at its highest since March, while the bitcoin VIX, BVIV and Wall Street's VIX remain near its yearly low.",
+      "url": "https://www.coindesk.com/markets/2026/09/25/bond-volatility-surges-while-bitcoin-and-wall-street-stay-calm",
+      "publishedAt": "2026-09-25T11:54:28.000Z"
+    },
+    {
+      "id": "a0c0ac2eb6a4f1dc43e0",
+      "source": "CoinDesk",
+      "title": "Bitcoin holders are cashing out, just not the way they did at prior market tops",
+      "summary": "Your day-ahead look for Sept. 25, 2026",
+      "url": "https://www.coindesk.com/daybook-us/2026/09/25/bitcoin-holders-are-cashing-out-just-not-the-way-they-did-at-prior-market-tops",
+      "publishedAt": "2026-09-25T11:29:04.000Z"
+    },
+    {
+      "id": "80f400c97a1d0e58601a",
+      "source": "Cointelegraph",
+      "title": "IBIT options price trading more calmly after Bitcoin rebound",
+      "summary": "IBIT’s expected volatility sits near the bottom of its 12-month range, according to Saxo Bank’s analysis of options data from Sept. 23.",
+      "url": "https://cointelegraph.com/markets/ibit-options-trading-bitcoins-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T11:11:33.000Z"
+    },
+    {
+      "id": "792cda373ac4e7dca4c9",
+      "source": "Decrypt",
+      "title": "KelpDAO Developer Sues LayerZero Over $292M Bridge Exploit",
+      "summary": "Evercrest says LayerZero approved the single-verifier configuration in writing multiple times, then warned a different developer about it.",
+      "url": "https://decrypt.co/379288/kelpdao-developer-sues-layerzero-over-292m-bridge-exploit",
+      "publishedAt": "2026-09-25T11:09:52.000Z"
+    },
+    {
+      "id": "691c3a7260a1154cbaed",
+      "source": "The Block",
+      "title": "Ethena expands USDe backing strategy into bStocks and equity perpetuals on Binance",
+      "summary": "Ethena is adding Binance bStocks and equity perpetuals to the basis trade used for USDe's backing strategy.",
+      "url": "https://www.theblock.co/news/deals/2026-09-25-ethena-expands-usde-backing-strategy-into-bstocks-and-equity-perpetuals-on-binance-416367",
+      "publishedAt": "2026-09-25T11:00:00.000Z"
+    },
+    {
+      "id": "f54ef07d3c2a5b0c254a",
+      "source": "CryptoSlate",
+      "title": "MultiversX restarts after exploit halt, but Kraken still bars new EGLD trades",
+      "summary": "Mainnet blocks resumed Sept. 24, while Kraken's latest EGLD notice kept trading cancel-only and deposits and withdrawals paused. The post MultiversX restarts after exploit halt, but Kraken still bars new EGLD trades appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/multiversx-restarts-after-exploit-halt-but-kraken-still-bars-new-egld-trades/",
+      "publishedAt": "2026-09-25T10:50:09.000Z"
+    },
+    {
+      "id": "73b587560f265f1f04c0",
+      "source": "CoinDesk",
+      "title": "Altcoins rally across the board as bitcoin consolidates near $84,000",
+      "summary": "Quant jumped 39% over 24 hours and 93 of 100 CoinDesk 100 constituents rose, with the altcoin season index at its highest in more than three months.",
+      "url": "https://www.coindesk.com/markets/2026/09/25/altcoins-rally-across-the-board-as-bitcoin-consolidates-near-usd84-000",
+      "publishedAt": "2026-09-25T09:59:45.000Z"
+    },
+    {
+      "id": "f453235ef4a1c6dcd228",
+      "source": "CryptoSlate",
+      "title": "Bitget’s North Korea-linked $352 million hack could drain 76% of its protection fund",
+      "summary": "At a $464 million reference value, covering the full estimate from the fund would leave about $112 million, below its stated floor. The post Bitget’s North Korea-linked $352 million hack could drain 76% of its protection fund appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitgets-north-korea-linked-352-million-hack-could-drain-76-of-its-protection-fund/",
+      "publishedAt": "2026-09-25T09:50:42.000Z"
+    },
+    {
+      "id": "42b19734100622164120",
+      "source": "Decrypt",
+      "title": "Researchers Publish 'Zcash-Style' Design for Private Bitcoin Transfers",
+      "summary": "The Shielded Bitcoin spec hides senders, receivers and amounts, but leaves how BTC enters and exits the system to a later paper.",
+      "url": "https://decrypt.co/379280/researchers-publish-zcash-style-design-for-private-bitcoin-transfers",
+      "publishedAt": "2026-09-25T09:50:01.000Z"
+    },
+    {
+      "id": "f84ccba85228268b842e",
+      "source": "Cointelegraph",
+      "title": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
+      "summary": "Yuga Labs’ 0xQuit said the NFTs are safe and will be returned once the risk passes, while holders were urged to revoke NFT permissions.",
+      "url": "https://cointelegraph.com/news/magic-eden-nft-whitehat-vulnerability?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T09:48:53.000Z"
+    },
+    {
+      "id": "e9279c6ae6dab371a558",
+      "source": "The Block",
+      "title": "KelpDAO sues LayerZero, claims it endorsed setup used in $292 million rsETH exploit",
+      "summary": "KelpDAO sued LayerZero and Bryan Pellegrino over the April 18 rsETH exploit, alleging the bridge setup was endorsed in writing.",
+      "url": "https://www.theblock.co/news/regulation/2026-09-25-kelpdao-sues-layerzero-claims-it-endorsed-setup-used-in-292-million-rseth-exploit-416361",
+      "publishedAt": "2026-09-25T09:13:08.000Z"
+    },
+    {
+      "id": "dd31e7e55332f5edcf44",
+      "source": "CoinDesk",
+      "title": "Bitcoin ETFs have erased a $5.8 billion hole",
+      "summary": "At one point in July, ETFs were down $5.8 billion in net outflows for the year. Now, that’s turned into $800 million in net inflows.",
+      "url": "https://www.coindesk.com/markets/2026/09/25/bitcoin-etfs-have-erased-a-usd5-8-billion-hole",
+      "publishedAt": "2026-09-25T09:13:01.000Z"
+    },
+    {
+      "id": "d241109a97301cedf738",
+      "source": "CoinDesk",
+      "title": "KelpDAO sues LayerZero for the largest exploit 2026 has seen so far",
+      "summary": "The cross-chain lending protocol accused LayerZero and its co-founder Brian Pellegrino of failing to disclose weaknesses in their protocol, which led to the $292 million hack.",
+      "url": "https://www.coindesk.com/business/2026/09/25/kelpdao-sues-layerzero-for-the-largest-exploit-2026-has-seen-so-far",
+      "publishedAt": "2026-09-25T08:58:03.000Z"
+    },
+    {
+      "id": "a28d690a7bf8d15151f7",
+      "source": "Cointelegraph",
+      "title": "KelpDAO sues LayerZero, CEO over $292M rsETH bridge exploit",
+      "summary": "KelpDAO says LayerZero endorsed its bridge setup before the attack, while CEO Bryan Pellegrino has dismissed the lawsuit as meritless.",
+      "url": "https://cointelegraph.com/news/kelpdao-layerzero-lawsuit-rseth-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T08:51:17.000Z"
+    },
+    {
+      "id": "73e002dcba25e4bf994e",
+      "source": "CryptoSlate",
+      "title": "Solana DEX volume spike hides circular trades, and automated bots are blamed",
+      "summary": "Bitquery's indexed-pool screen finds repeated round trips, but the depth available to independent traders has not been measured. The post Solana DEX volume spike hides circular trades, and automated bots are blamed appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/solana-dex-volume-spike-hides-circular-trades-and-automated-bots-are-blamed/",
+      "publishedAt": "2026-09-25T08:30:11.000Z"
+    },
+    {
+      "id": "15c55a4ee83226e2cb56",
+      "source": "Cointelegraph",
+      "title": "Bitcoin ETF inflows slow to $191M as six-day streak reaches $2.8B",
+      "summary": "US spot Bitcoin ETFs drew $191 million Thursday as daily inflows slowed for a third day, lifting year-to-date net flows to $787 million.",
+      "url": "https://cointelegraph.com/markets/bitcoin-etf-six-day-streak-2-8-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T07:41:36.000Z"
+    },
+    {
+      "id": "b4b446e13e7348b0fa13",
+      "source": "Cointelegraph",
+      "title": "Samourai Wallet co-founder faces transfer after 30-day jail ordeal",
+      "summary": "Keonne Rodriguez says he and 70 others face another move after their treatment program was deactivated. His previous transfer took 30 days.",
+      "url": "https://cointelegraph.com/news/samourai-wallet-co-founder-30-day-prison-transfer?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T07:28:18.000Z"
+    },
+    {
+      "id": "79287d0bcb974081e44b",
+      "source": "CryptoSlate",
+      "title": "Payy bridge exploit freezes crypto cards, and no balances remain safe",
+      "summary": "Payy says the bridge was drained, while the extent of any customer losses remains undisclosed. The post Payy bridge exploit freezes crypto cards, and no balances remain safe appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/payy-bridge-exploit-freezes-crypto-cards-and-no-balances-remain-safe/",
+      "publishedAt": "2026-09-25T07:10:06.000Z"
+    },
+    {
+      "id": "3ac09a8dc2b53c908246",
+      "source": "CoinDesk",
+      "title": "Live updates: Bitcoin steadies below $85,000 as bond selloff pauses",
+      "summary": "Treasury yields eased from multi-decade highs and oil slipped on reports of a phased U.S.-Iran deal, with roughly $14 billion in bitcoin options set to expire on Deribit on Friday.",
+      "url": "https://www.coindesk.com/markets/2026/09/25/live-updates-bitcoin-steadies-near-usd84-000-as-the-bond-selloff-pauses",
+      "publishedAt": "2026-09-25T07:09:11.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T05:30:56.000Z"
+    },
+    {
+      "id": "4c1caa1ea8d4e0a3248b",
+      "source": "CryptoSlate",
+      "title": "Ondo unlocks BlackRock portfolio strategies, but only non-US traders benefit",
+      "summary": "BlackRock supplies the allocations; Ondo issues the securities and requires onboarding before direct minting or redemption. The post Ondo unlocks BlackRock portfolio strategies, but only non-US traders benefit appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/ondo-unlocks-blackrock-portfolio-strategies-but-only-non-us-traders-benefit/",
+      "publishedAt": "2026-09-25T05:20:44.000Z"
+    },
+    {
+      "id": "2ce2339c09a77c88acb3",
+      "source": "Cointelegraph",
+      "title": "Australian PM warns of AI’s ‘furious pace’ after agent breached government site",
+      "summary": "Anthony Albanese said governments must help shape AI’s development, after revealing earlier that an OpenAI agent accessed non-public files on an Australian Medicare data portal.",
+      "url": "https://cointelegraph.com/news/australia-pm-warns-of-ais-furious-pace-after-agent-breached-government-site?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T05:06:22.000Z"
+    },
+    {
       "id": "9337c5c283cb57ae4f9a",
       "source": "Cointelegraph",
       "title": "Researchers propose Zcash-style private Bitcoin transfers without a soft fork",
       "summary": "Shielded Bitcoin would use zero-knowledge proofs and encrypted notes to hide transaction details without changing Bitcoin consensus, but researchers have raised questions about anonymity and quantum resistance.",
       "url": "https://cointelegraph.com/news/shielded-bitcoin-zcash-style-privacy-no-soft-fork?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-25T04:41:06.000Z"
+    },
+    {
+      "id": "912527b70d163f478561",
+      "source": "CoinDesk",
+      "title": "Bitget's $352 million hack happened via spoofed transfers, not private keys, CEO Gracy Chen says",
+      "summary": "Bitget lost $351.6 million after attackers compromised a wallet backend, spoofed transaction data, Chen said on X.",
+      "url": "https://www.coindesk.com/markets/2026/09/25/bitget-s-usd351-million-hack-happened-via-spoofed-transfers-not-private-keys-ceo-gray-chen-says",
+      "publishedAt": "2026-09-25T04:29:34.000Z"
     },
     {
       "id": "0dcdbda8bff8ee57b05c",
@@ -204,18 +388,10 @@
     {
       "id": "937a6b0e7917a906aabe",
       "source": "The Block",
-      "title": "More than $170 million in crypto moves from Bitget wallets to unidentified address",
-      "summary": "The receiving address has made several swaps, but the reason for the Bitget wallet transfers remains unclear.",
+      "title": "Bitget confirms $351.6 million security breach affecting exchange hot wallets",
+      "summary": "Bitget said private keys were not compromised and that losses from the incident will be covered by its User Protection Fund.",
       "url": "https://www.theblock.co/news/markets/2026-09-24-more-than-170-million-in-crypto-moves-from-bitget-wallets-unidentified-address-416345",
       "publishedAt": "2026-09-24T21:20:47.000Z"
-    },
-    {
-      "id": "faf95b6bed1177f56759",
-      "source": "CryptoSlate",
-      "title": "Why TRON’s $30 trillion lifetime volume could become a trap",
-      "summary": "The network total covers all assets since launch; the DAO separately cites about $6 trillion in USDT transfers this year. The post Why TRON’s $30 trillion lifetime volume could become a trap appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/why-trons-30-trillion-lifetime-volume-could-become-a-trap/",
-      "publishedAt": "2026-09-24T21:20:14.000Z"
     },
     {
       "id": "2c9bc30652850fd3a991",
@@ -298,22 +474,6 @@
       "publishedAt": "2026-09-24T20:01:03.000Z"
     },
     {
-      "id": "323b554e23f8556049cb",
-      "source": "CryptoSlate",
-      "title": "Man sentenced to 12 years for $16M Coinbase customer support scam",
-      "summary": "Brooklyn prosecutors say about 100 U.S. users were told their funds were at risk and steered into wallets Spektor could access. The post Man sentenced to 12 years for $16M Coinbase customer support scam appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/man-sentenced-to-12-years-for-16m-coinbase-customer-support-scam/",
-      "publishedAt": "2026-09-24T20:00:28.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T19:50:39.000Z"
-    },
-    {
       "id": "366e5d16f658af557930",
       "source": "Bitcoin Magazine",
       "title": "Jeff Booth: Why $1 Million BTC is Thinking too Small",
@@ -352,14 +512,6 @@
       "summary": "Bitcoin Magazine Brooklyn Man Sentenced to 12 Years for $16M Coinbase Phishing Scam Ronald Spektor, 23, who lived with his father, used social engineering to steal funds from Coinbase customers. This post Brooklyn Man Sentenced to 12 Years for $16M Coinbase…",
       "url": "https://bitcoinmagazine.com/news/man-gets-12-years-for-coinbase-scam",
       "publishedAt": "2026-09-24T19:15:29.000Z"
-    },
-    {
-      "id": "7da585d03026b0619284",
-      "source": "CryptoSlate",
-      "title": "NYSE is assembling the pipes for a $5.5 trillion tokenized asset market",
-      "summary": "The proposed trading route depends on a planned NYSE venue and regulatory approvals; ICE and Blockchain.com also aim to share market data. The post NYSE is assembling the pipes for a $5.5 trillion tokenized asset market appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/nyse-is-assembling-the-pipes-for-a-5-5-trillion-tokenized-asset-market/",
-      "publishedAt": "2026-09-24T19:00:35.000Z"
     },
     {
       "id": "62ff35ecbcf4c53b9e64",
@@ -410,14 +562,6 @@
       "publishedAt": "2026-09-24T17:51:31.000Z"
     },
     {
-      "id": "1643fdc65b98f9350e68",
-      "source": "CryptoSlate",
-      "title": "Australia just got a real-world look at what happens when an AI refuses to stop",
-      "summary": "Albanese says the agent reached nonpublic files while seeking spending data; investigators are assessing the scope of access. The post Australia just got a real-world look at what happens when an AI refuses to stop appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/australia-just-got-a-real-world-look-at-what-happens-when-an-ai-refuses-to-stop/",
-      "publishedAt": "2026-09-24T17:40:20.000Z"
-    },
-    {
       "id": "0d4ebfbaec2e0809a7ef",
       "source": "Decrypt",
       "title": "In Her Final Weeks, SEC's Peirce Calls for Ending the KYC 'Panopticon'",
@@ -448,14 +592,6 @@
       "summary": "Washington may fund private stablecoin ventures abroad to protect the dollar's reserve status and prop up Treasury demand.",
       "url": "https://decrypt.co/379219/us-stablecoins-weapon-dollar-dominance",
       "publishedAt": "2026-09-24T16:55:43.000Z"
-    },
-    {
-      "id": "f11be1700a48f5f4e5af",
-      "source": "CryptoSlate",
-      "title": "Crypto’s bear market wiped out over $2 trillion, yet on-chain activity held above $9 trillion",
-      "summary": "Rounded transfer gains total $268 billion, while category boundaries and a conflicting P2P sentence limit the payment inference. The post Crypto’s bear market wiped out over $2 trillion, yet on-chain activity held above $9 trillion appeared first on…",
-      "url": "https://cryptoslate.com/cryptos-bear-market-wiped-out-over-2-trillion-yet-on-chain-activity-held-above-9-trillion/",
-      "publishedAt": "2026-09-24T16:40:47.000Z"
     },
     {
       "id": "d1f1f8b623830903b3be",
@@ -560,142 +696,6 @@
       "summary": "Ondo has launched three onchain portfolio tokens based on model portfolio strategies developed by BlackRock.",
       "url": "https://www.theblock.co/news/markets/2026-09-24-ondo-launches-onchain-portfolio-tokens-based-blackrock-developed-strategies-416260",
       "publishedAt": "2026-09-24T14:27:45.000Z"
-    },
-    {
-      "id": "a8158ff0652b95047099",
-      "source": "Cointelegraph",
-      "title": "IBM opens beta Swift ledger link for 24/7 tokenized deposits",
-      "summary": "IBM’s beta link lets banks instruct tokenized deposit transfers on Swift’s ledger using existing payment messages and compliance processes.",
-      "url": "https://cointelegraph.com/news/ibm-banks-swift-ledger-tokenized-deposit-transfers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T13:29:06.000Z"
-    },
-    {
-      "id": "5432c37e6c433273c9d4",
-      "source": "Bitcoin Magazine",
-      "title": "Former CFTC Commissioner Giancarlo: Why Rate Hikes Could Benefit Bitcoin",
-      "summary": "Bitcoin Magazine Former CFTC Commissioner Giancarlo: Why Rate Hikes Could Benefit Bitcoin Former CFTC Chair Chris Giancarlo explains why BTC serves as digital gold and a future currency anchor. This post Former CFTC Commissioner Giancarlo: Why Rate Hikes…",
-      "url": "https://bitcoinmagazine.com/videos/former-cftc-commissioner-giancarlo-why-rate-hikes-could-benefit-bitcoin",
-      "publishedAt": "2026-09-24T13:06:00.000Z"
-    },
-    {
-      "id": "7a33caafbdc69e698553",
-      "source": "Decrypt",
-      "title": "Solana Foundation Hires Binance's Former Global CMO for Institutional Push",
-      "summary": "Rachel Conlan arrives as chief strategy officer and Polygon Labs' Jamal Raees takes over payments, both recruited from elsewhere in crypto.",
-      "url": "https://decrypt.co/379179/solana-foundation-hires-binances-former-global-cmo-for-institutional-push",
-      "publishedAt": "2026-09-24T13:03:03.000Z"
-    },
-    {
-      "id": "515e14f20c038c1952a9",
-      "source": "Decrypt",
-      "title": "Decrypt Media and FOMO Hour’s Thought Leader Farokh Sarmad to Take Main Stage at NEXTPredict NY Conference",
-      "summary": "Premier Partnership will livestream the Main Stage through Decrypt Media and bring Rug Radio and FOMO HOUR programming onsite.",
-      "url": "https://decrypt.co/379042/decrypt-media-and-fomo-hours-thought-leader-farokh-sarmad-to-take-main-stage-at-nextpredict-ny-conference",
-      "publishedAt": "2026-09-24T13:01:16.000Z"
-    },
-    {
-      "id": "9d6c367b953299e9a273",
-      "source": "Decrypt",
-      "title": "Elliptic Wants Every Cop to Read a Crypto Wallet in Seconds—With AI",
-      "summary": "Elliptic’s new AI-assisted tool, called Pulse, lets any officer input a wallet address or transaction hash and get a plain-language summary in seconds, aiming to bring crypto tracing beyond specialized units.",
-      "url": "https://decrypt.co/379113/elliptic-crypto-wallet-ai-pulse",
-      "publishedAt": "2026-09-24T13:01:03.000Z"
-    },
-    {
-      "id": "b9d6205c9234911a45d2",
-      "source": "CoinDesk",
-      "title": "Cathie Wood's ARK teams with Securitize to tokenize venture fund with OpenAI, Anthropic stakes",
-      "summary": "The ARK Venture Fund is bringing exposure to sought-after private tech companies onchain through Securitize, first on Ethereum then potentially expanding to other chains.",
-      "url": "https://www.coindesk.com/business/2026/09/24/cathie-wood-s-ark-teams-with-securitize-to-tokenize-venture-fund-with-openai-anthropic-stakes",
-      "publishedAt": "2026-09-24T13:00:00.000Z"
-    },
-    {
-      "id": "bd20d05063fa0d0b8c5d",
-      "source": "CoinDesk",
-      "title": "Solana Foundation hires Binance, Polygon veterans as it ramps up tokenized finance push",
-      "summary": "Rachel Conlan and Jamal Raees join as Solana aims to court institutions moving payments and assets onchain.",
-      "url": "https://www.coindesk.com/business/2026/09/24/solana-foundation-hires-binance-polygon-veterans-as-it-ramps-up-tokenized-finance-push",
-      "publishedAt": "2026-09-24T13:00:00.000Z"
-    },
-    {
-      "id": "1e62d7d3436b80d4d1d6",
-      "source": "Cointelegraph",
-      "title": "Solana Foundation hires ex-Binance CMO and payments exec as new partnerships expand",
-      "summary": "Rachel Conlan will oversee institutional partnerships and ecosystem growth, while Jamal Raees will focus on stablecoins and tokenized deposits, following a wave of new partnerships.",
-      "url": "https://cointelegraph.com/news/solana-foundation-binance-cmo-payments-executive?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T13:00:00.000Z"
-    },
-    {
-      "id": "3740b9d933bf1da60ef5",
-      "source": "The Block",
-      "title": "Solana Foundation taps Binance, Polygon vets to drive institutional adoption and payments",
-      "summary": "Solana Foundation appointed Rachel Conlan as chief strategy officer and former Polygon Labs exec Jamal Raees as GM of payments.",
-      "url": "https://www.theblock.co/news/ecosystems/2026-09-24-solana-foundation-taps-binance-polygon-vets-to-drive-institutional-adoption-and-payments-416254",
-      "publishedAt": "2026-09-24T13:00:00.000Z"
-    },
-    {
-      "id": "79d4a3cd1a521f7590c4",
-      "source": "CoinDesk",
-      "title": "Crypto investment firm RockawayX is betting $150 million on yield becoming next big use case",
-      "summary": "The $2 billion digital-asset investment firm rolls out an initiative to back, build and provide liquidity to projects bringing real-world yields into DeFi.",
-      "url": "https://www.coindesk.com/business/2026/09/23/rockawayx-is-betting-usd150-million-on-yield-becoming-crypto-s-next-big-use-case",
-      "publishedAt": "2026-09-24T12:31:53.000Z"
-    },
-    {
-      "id": "272a1a98a23f77e25a25",
-      "source": "CoinDesk",
-      "title": "EU's financial regulator to make AI and tokenization a supervisory priority in 2027",
-      "summary": "European regulators will map how financial firms use the technologies in client-facing products and begin checks on the most affected businesses.",
-      "url": "https://www.coindesk.com/policy/2026/09/24/eu-s-financial-regulator-to-make-ai-and-tokenization-a-supervisory-priority-in-2027",
-      "publishedAt": "2026-09-24T12:26:43.000Z"
-    },
-    {
-      "id": "5ca2ae2a9b8907dccf24",
-      "source": "Cointelegraph",
-      "title": "HIFI raises $37M to expand stablecoin payments, tokenized markets",
-      "summary": "HIFI CEO Zach Walsh told Cointelegraph the $37 million Series A is the company’s first priced funding round, though HIFI did not disclose its valuation.",
-      "url": "https://cointelegraph.com/news/hifi-raises-37m-to-expand-stablecoin-payments-tokenized-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T12:00:00.000Z"
-    },
-    {
-      "id": "71ebf31ab149fe4f998b",
-      "source": "The Block",
-      "title": "HIFI raises $37 million Series A to expand tokenized capital markets infrastructure",
-      "summary": "HIFI raised $37 million in Series A funding led by Left Lane Capital to scale tokenized settlement infrastructure.",
-      "url": "https://www.theblock.co/news/business/2026-09-24-hifi-raises-37-million-series-a-to-expand-tokenized-capital-markets-infrastructure-416242",
-      "publishedAt": "2026-09-24T12:00:00.000Z"
-    },
-    {
-      "id": "3a7b6c71f6df58a9c307",
-      "source": "Decrypt",
-      "title": "Morning Minute: Selig Says ‘It’s Go Time’ for CFTC Crypto Rules",
-      "summary": "The CFTC has been extremely busy ever since the Clarity Act failed its vote, and it appears they’re ready to accelerate.",
-      "url": "https://decrypt.co/379169/morning-minute-selig-says-its-go-time-for-cftc-crypto-rules",
-      "publishedAt": "2026-09-24T11:56:11.000Z"
-    },
-    {
-      "id": "ec46ed798a288187301b",
-      "source": "CoinDesk",
-      "title": "Brooklyn man sent to prison for 12 years for stealing $16M in a Coinbase phishing scheme",
-      "summary": "The fraudster managed to scam about 100 people across the United States, convincing them of transferring funds to him, claiming their accounts had been hacked.",
-      "url": "https://www.coindesk.com/business/2026/09/24/brooklyn-man-sent-to-prison-for-12-years-for-stealing-usd16m-in-a-coinbase-phishing-scheme",
-      "publishedAt": "2026-09-24T11:33:57.000Z"
-    },
-    {
-      "id": "fce0205ce86afcb25fdd",
-      "source": "CoinDesk",
-      "title": "Litecoin token has its moment as network activity booms",
-      "summary": "Your day-ahead look for Sept. 24, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/09/24/litecoin-token-has-its-moment-as-network-activity-booms",
-      "publishedAt": "2026-09-24T11:26:18.000Z"
-    },
-    {
-      "id": "52c42ba526e7af2cc147",
-      "source": "Cointelegraph",
-      "title": "Era of pure crypto exchanges is ending, Bybit CEO says",
-      "summary": "Bybit’s global campaign positions it as a broader financial platform, though its stock, gold and forex derivatives were already available.",
-      "url": "https://cointelegraph.com/news/era-pure-crypto-exchanges-end-bybit-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T11:24:07.000Z"
     }
   ]
 }
