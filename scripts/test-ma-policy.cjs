@@ -21,4 +21,16 @@ assert.equal(Object.keys(translations).length,6);
 Object.entries(translations).forEach(([lang,values])=>assert.equal(values.length,fields.length,lang));
 for(const key of fields)assert(read('public/professional.html').includes(`data-p="${key}"`),key);
 assert.equal(read('news/official-updates.js'),read('public/news/official-updates.js'));
+const sandbox={window:{}};vm.runInNewContext(read('public/assets/professional-content.js'),sandbox);
+const content=sandbox.window.ASTRO_PROFESSIONAL_CONTENT;
+assert.equal(Object.keys(content).length,7);
+for(const [lang,copy]of Object.entries(content)){
+  for(const [key,value]of Object.entries(content.en)){
+    assert.equal(typeof copy[key],'string',`${lang}:${key}`);assert(copy[key].length>0);
+    assert(read('public/professional.html').includes(`data-p="${key}"`),key);
+  }
+}
+assert(content.en.boundBody.includes('cannot cancel'));
+assert(content.en.techScope.includes('roadmap'));
+assert(content.en.impactStatus.includes('No completed aid cases'));
 console.log('PASS MA allocation arithmetic, scaled rarity references, page links, seven-language coverage and news mirrors');

@@ -17,7 +17,7 @@
   if(!new URLSearchParams(location.search).has('lang')){try{language=normalize(localStorage.getItem('ma.program.language'));}catch(_){}}
   function apply(lang){
     language=lang==='en'||translations[lang]?lang:'en';
-    const dictionary=translations[language]?Object.fromEntries(fields.map((key,i)=>[key,translations[language][i]])):english;
+    const dictionary={...english,...(translations[language]?Object.fromEntries(fields.map((key,i)=>[key,translations[language][i]])):{}),...(window.ASTRO_PROFESSIONAL_CONTENT?.[language]||{})};
     nodes.forEach(node=>{node.textContent=dictionary[node.dataset.p]||english[node.dataset.p];});
     const heading=document.querySelector('h1');
     const [first,second]=heading.textContent.split('\n');
