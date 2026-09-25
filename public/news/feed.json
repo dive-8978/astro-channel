@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T11:58:02.944Z",
+  "generatedAt": "2026-09-25T17:17:58.517Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 34,
       "error": null
     },
     {
@@ -57,6 +57,230 @@
     }
   ],
   "items": [
+    {
+      "id": "0bbc99fd74299e2a60dc",
+      "source": "Decrypt",
+      "title": "Bitget Hack Losses Climb to $387M: Here’s What Happened, and Why North Korea Is a Suspect",
+      "summary": "An attacker faked internal transfer requests to drain $387.5 million from Bitget's hot and warm wallets, and the exchange's CEO says the fingerprints look like Pyongyang's.",
+      "url": "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
+      "publishedAt": "2026-09-25T17:08:57.000Z"
+    },
+    {
+      "id": "5f465e7f4b65f27d4695",
+      "source": "CryptoSlate",
+      "title": "Strategy’s daily dividend proposal puts Bitcoin funding back in investors’ hands",
+      "summary": "The four preferred shares would pay more often at current rates. Whether buyers bid them higher remains unproved. The post Strategy’s daily dividend proposal puts Bitcoin funding back in investors’ hands appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/strategys-daily-dividend-proposal-puts-bitcoin-funding-back-in-investors-hands/",
+      "publishedAt": "2026-09-25T17:00:30.000Z"
+    },
+    {
+      "id": "9a6075c4b0a3d545834e",
+      "source": "Cointelegraph",
+      "title": "Strategy seeks shareholder approval for daily preferred stock dividends",
+      "summary": "Strategy’s proposal would move STRC and its three other preferred stocks to daily dividend payments, following a similar move by Bitcoin treasury firm Strive.",
+      "url": "https://cointelegraph.com/news/strategy-seeks-shareholder-approval-daily-preferred-stock-dividends?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T16:34:16.000Z"
+    },
+    {
+      "id": "1a16889f4e67490c1f5e",
+      "source": "Decrypt",
+      "title": "Magic Eden Warns Old Ethereum NFT Listings Are Exposed to Payment Processor Exploit",
+      "summary": "A flaw in Limit Break's Payment Processor V2 put old Magic Eden Ethereum listings at risk, prompting a whitehat rescue of more than 23,000 NFTs.",
+      "url": "https://decrypt.co/379342/magic-eden-old-ethereum-nft-listings-exposed-exploit",
+      "publishedAt": "2026-09-25T16:17:19.000Z"
+    },
+    {
+      "id": "14edcd901df0d889984b",
+      "source": "Decrypt",
+      "title": "Bitcoin Rally Slows as $15.6 Billion Options Expiry Hits—XRP and Solana Keep Climbing",
+      "summary": "Pullback or reversal? Here's what the charts suggest for BTC.",
+      "url": "https://decrypt.co/379319/bitcoin-slows-billion-options-expiry-xrp-solana",
+      "publishedAt": "2026-09-25T16:06:23.000Z"
+    },
+    {
+      "id": "4e24e79150d3b3c547c1",
+      "source": "CryptoSlate",
+      "title": "Why a $2.38 XRP price target is actually hiding a $1.18 crash risk",
+      "summary": "A bullish Market Signal tracks the rally, while the $1.63 median and pending forecast history leave adoption and rates as the next tests. The post Why a $2.38 XRP price target is actually hiding a $1.18 crash risk appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/xrps-rebound-nears-its-december-median-but-the-forecast-leaves-plenty-of-downside/",
+      "publishedAt": "2026-09-25T16:00:53.000Z"
+    },
+    {
+      "id": "6e73092887573528ba64",
+      "source": "Cointelegraph",
+      "title": "Crypto Biz: Wall Street and crypto fight for the same turf",
+      "summary": "Stablecoins and tokenized assets are pushing banks, exchanges and crypto companies into the same markets, from payments to stocks and ETFs.",
+      "url": "https://cointelegraph.com/news/crypto-biz-crypto-tradfi-stablecoins-tokenized-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T15:49:34.000Z"
+    },
+    {
+      "id": "7b34a8fdace0eb07044f",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin Treasury Strategy Proposes Daily Dividends For Preferred Stocks",
+      "summary": "Bitcoin Magazine Bitcoin Treasury Strategy Proposes Daily Dividends For Preferred Stocks Strategy stockholders are being asked to attend a meeting to approve daily dividends on STRF, STRC, STRK, and STRD. This post Bitcoin Treasury Strategy Proposes Daily…",
+      "url": "https://bitcoinmagazine.com/news/strategy-proposes-daily-dividends",
+      "publishedAt": "2026-09-25T15:39:53.000Z"
+    },
+    {
+      "id": "513ba9d848a014c01da3",
+      "source": "Bitcoin Magazine",
+      "title": "Is US Defence Secretary Pete Hegseth a Bitcoiner? This Is What His Accounts Say",
+      "summary": "Bitcoin Magazine Is US Defence Secretary Pete Hegseth a Bitcoiner? This Is What His Accounts Say U.S. Defence Secretary Pete Hegseth has millions of dollars in investments. But how much of it is in bitcoin? This post Is US Defence Secretary Pete Hegseth a…",
+      "url": "https://bitcoinmagazine.com/news/is-us-defence-secretary-pete-hegseth-a-bitcoiner-this-is-what-his-accounts-say",
+      "publishedAt": "2026-09-25T15:35:30.000Z"
+    },
+    {
+      "id": "29956f5a2fce38b6659c",
+      "source": "CryptoSlate",
+      "title": "US crypto ETFs draw over $3 billion this week, with nearly $800 million flowing beyond Bitcoin",
+      "summary": "US crypto exchange-traded funds have pulled in more than $3 billion this week as fresh demand spread beyond Bitcoin into Ethereum and altcoin products. Spot ETFs tracking Bitcoin, Ethereum, Solana, XRP and Zcash recorded about $3.04 billion of combined net…",
+      "url": "https://cryptoslate.com/us-crypto-etfs-draw-over-3-billion-this-week-with-nearly-800-million-flowing-beyond-bitcoin/",
+      "publishedAt": "2026-09-25T15:00:30.000Z"
+    },
+    {
+      "id": "ac9b0cac48773f74c3f8",
+      "source": "CoinDesk",
+      "title": "Circle and Tether step in to freeze hacker wallet after massive Bitget crypto heist",
+      "summary": "The stablecoin issuer blacklisted a wallet holding about $318,000 in USDT and USDC. Most of the stolen funds sit in ether, which can't be frozen.",
+      "url": "https://www.coindesk.com/markets/2026/09/25/circle-and-tether-step-in-to-freeze-hacker-wallet-after-massive-bitget-crypto-heist",
+      "publishedAt": "2026-09-25T14:41:53.000Z"
+    },
+    {
+      "id": "c755dc0e7b508f19fa75",
+      "source": "CoinDesk",
+      "title": "Tokenization is moving faster than Washington",
+      "summary": "Regulatory clarity is not simply a legal or political issue, argues former New York Governor Andrew Cuomo. It is an economic one.",
+      "url": "https://www.coindesk.com/opinion/2026/09/25/tokenization-is-moving-faster-than-washington",
+      "publishedAt": "2026-09-25T14:37:32.000Z"
+    },
+    {
+      "id": "80bc45852ecb5920e13e",
+      "source": "CoinDesk",
+      "title": "Tether confirms minimal EQIBank exposure following $89M US asset seizure",
+      "summary": "While Tether's stated ceiling places its maximum exposure under $64 million, the incident underscores lingering counterparty risks in fiat gateway networks.",
+      "url": "https://www.coindesk.com/policy/2026/09/25/tether-confirms-minimal-eqibank-exposure-following-usd89m-us-asset-seizure",
+      "publishedAt": "2026-09-25T14:32:48.000Z"
+    },
+    {
+      "id": "14520dfba43144be15dd",
+      "source": "CoinDesk",
+      "title": "Strategy proposes daily dividends to bring STRC back toward $100",
+      "summary": "STRC has remained below $100 since May, despite a 12% dividend rate and roughly $1 billion in preferred share buybacks.",
+      "url": "https://www.coindesk.com/markets/2026/09/25/strategy-proposes-daily-dividends-to-bring-strc-back-toward-usd100",
+      "publishedAt": "2026-09-25T14:22:07.000Z"
+    },
+    {
+      "id": "586c714d0b911d509069",
+      "source": "The Block",
+      "title": "Magic Eden legacy approvals leave $5.7 million in NFTs exposed to exploit before rescue",
+      "summary": "Magic Eden legacy approvals exposed $5.7 million in NFTs to an exploit before whitehats rescued 23,155 tokens.",
+      "url": "https://www.theblock.co/news/web3/2026-09-25-magic-eden-legacy-approvals-leave-5-7-million-in-nfts-exposed-to-exploit-before-rescue-416874",
+      "publishedAt": "2026-09-25T14:09:15.000Z"
+    },
+    {
+      "id": "34de784006fd9d55590a",
+      "source": "CryptoSlate",
+      "title": "Bitcoin faces a new inflation test after diesel hits a nominal $6.53 record",
+      "summary": "Lower distillate stocks add to fuel pressure, while upcoming September price reports will test whether freight costs spread. The post Bitcoin faces a new inflation test after diesel hits a nominal $6.53 record appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitcoin-faces-a-new-inflation-test-after-diesel-hits-a-nominal-6-53-record/",
+      "publishedAt": "2026-09-25T14:00:08.000Z"
+    },
+    {
+      "id": "df54b742d7246d7f702e",
+      "source": "The Block",
+      "title": "Aave V4 on Base adds Coinbase tokenized stocks as collateral for USDC loans",
+      "summary": "Aave V4 added Apple, Nvidia, Tesla, and four more tokenized stocks as collateral for USDC loans for non-U.S. users.",
+      "url": "https://www.theblock.co/news/defi/2026-09-25-aave-v4-on-base-adds-coinbase-tokenized-stocks-as-collateral-for-usdc-loans-416372",
+      "publishedAt": "2026-09-25T14:00:00.000Z"
+    },
+    {
+      "id": "7fdfc421b6fea32fecdc",
+      "source": "The Block",
+      "title": "Strategy proposes daily dividends for STRC, STRD, STRF and STRK preferred stocks",
+      "summary": "Strategy is seeking shareholder approval to pay daily dividends across its four U.S.-listed preferred stocks.",
+      "url": "https://www.theblock.co/news/business/2026-09-25-strategy-proposes-daily-dividends-for-strc-strd-strf-and-strk-preferred-stocks-416869",
+      "publishedAt": "2026-09-25T13:48:57.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T13:32:49.000Z"
+    },
+    {
+      "id": "6b8e36793ad1b1b8f6c6",
+      "source": "Cointelegraph",
+      "title": "Exchanges reporting crypto gains to IRS becomes tax nightmare",
+      "summary": "The IRS can now see your crypto gains, but has no idea about the cost-basis. That’s proving to be a big headache for some cryptocurrency investors.",
+      "url": "https://cointelegraph.com/magazine/exchanges-reporting-crypto-gains-to-irs-becomes-tax-nightmare?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T13:30:00.000Z"
+    },
+    {
+      "id": "e4879b017e267660dce3",
+      "source": "Decrypt",
+      "title": "Strategy Wants Its Preferred Stock Dividends to Accrue 365 Days a Year",
+      "summary": "STRF, STRC, STRK and STRD would accrue dividends on weekends and holidays, in a move Strategy says will dampen volatility.",
+      "url": "https://decrypt.co/379309/strategy-wants-its-preferred-stock-dividends-to-accrue-365-days-a-year",
+      "publishedAt": "2026-09-25T13:22:00.000Z"
+    },
+    {
+      "id": "822c665be05b91d226cf",
+      "source": "Bitcoin Magazine",
+      "title": "Mitchell Askew Explains What 15M Inactive BTC Means for Bitcoin’s Next Move",
+      "summary": "Bitcoin Magazine Mitchell Askew Explains What 15M Inactive BTC Means for Bitcoin’s Next Move Bitcoin is rallying despite macro headwinds. Mitchell Askew explains why on-chain data and 15M BTC in long-term supply signal seller exhaustion. This post Mitchell…",
+      "url": "https://bitcoinmagazine.com/videos/mitchell-askew-explains-what-15m-inactive-btc-means-for-bitcoins-next-move",
+      "publishedAt": "2026-09-25T13:18:01.000Z"
+    },
+    {
+      "id": "b6c3f1ef91a4feb907e1",
+      "source": "Decrypt",
+      "title": "Morgan Stanley Joins NEXTPredict as Prediction Markets Bet on 'More Institutional' Play",
+      "summary": "The bulk of prediction market trades are still sports bets, while valuations are predicated on rising institutional interest.",
+      "url": "https://decrypt.co/379218/morgan-stanley-joins-nextpredict-as-prediction-markets-bet-on-more-institutional-play",
+      "publishedAt": "2026-09-25T13:16:03.000Z"
+    },
+    {
+      "id": "8a11ab758c5c216efe5d",
+      "source": "Decrypt",
+      "title": "Morning Minute: BlackRock Leans Deeper Into Tokenization with Ondo",
+      "summary": "The biggest financial institutions in the world are bringing more products onchain, and the pace is accelerating.",
+      "url": "https://decrypt.co/379292/morning-minute-blackrock-leans-deeper-into-tokenization-with-ondo",
+      "publishedAt": "2026-09-25T13:04:06.000Z"
+    },
+    {
+      "id": "cfd8ed293f3c886db562",
+      "source": "CryptoSlate",
+      "title": "SEC’s Hester Peirce wants to end crypto’s KYC honeypots before stablecoin rules create more of them",
+      "summary": "Covered direct issuer customers would still provide identifying fields, while reliance on another institution remains conditional. The post SEC’s Hester Peirce wants to end crypto’s KYC honeypots before stablecoin rules create more of them appeared first on…",
+      "url": "https://cryptoslate.com/secs-hester-peirce-wants-to-end-cryptos-kyc-honeypots-before-stablecoin-rules-create-more-of-them/",
+      "publishedAt": "2026-09-25T13:00:23.000Z"
+    },
+    {
+      "id": "0a108706d069706cace1",
+      "source": "Cointelegraph",
+      "title": "CoinMarketCap buys CoinGlass to expand crypto derivatives data",
+      "summary": "CoinGlass will retain its brand and team, while its website, app, free tools, API and pricing will remain unchanged following the acquisition.",
+      "url": "https://cointelegraph.com/news/coinmarketcap-coinglass-expand-crypto-derivatives-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T12:44:30.000Z"
+    },
+    {
+      "id": "dc9071c312ead511f629",
+      "source": "Cointelegraph",
+      "title": "SlowMist has yet to confirm crypto theft from iPhone Safari attack",
+      "summary": "The analyzed Safari sample targets iOS 18.4–18.6.2 using previously patched flaws, while its effectiveness on iOS 26.5 remains unverified.",
+      "url": "https://cointelegraph.com/news/no-confirmed-crypto-theft-iphone-safari-attack-slowmist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T12:19:34.000Z"
+    },
+    {
+      "id": "fa2465bcabe8eab1d4d6",
+      "source": "Decrypt",
+      "title": "Defense Secretary Pete Hegseth Holds Bitcoin in a Coinbase Wallet, Filing Shows",
+      "summary": "Two entries in his annual disclosure put the holding somewhere between $16,000 and $65,000, alongside more than $1 million in cash.",
+      "url": "https://decrypt.co/379290/defense-secretary-pete-hegseth-holds-bitcoin-in-a-coinbase-wallet-filing-shows",
+      "publishedAt": "2026-09-25T12:01:15.000Z"
+    },
     {
       "id": "89251a2ffc1177ad00b0",
       "source": "CoinDesk",
@@ -148,7 +372,7 @@
     {
       "id": "dd31e7e55332f5edcf44",
       "source": "CoinDesk",
-      "title": "Bitcoin ETFs have erased a $5.8 billion hole",
+      "title": "Bitcoin ETF flows turn positive for 2026 after erasing $5.8 billion deficit",
       "summary": "At one point in July, ETFs were down $5.8 billion in net outflows for the year. Now, that’s turned into $800 million in net inflows.",
       "url": "https://www.coindesk.com/markets/2026/09/25/bitcoin-etfs-have-erased-a-usd5-8-billion-hole",
       "publishedAt": "2026-09-25T09:13:01.000Z"
@@ -204,18 +428,10 @@
     {
       "id": "3ac09a8dc2b53c908246",
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin steadies below $85,000 as bond selloff pauses",
-      "summary": "Treasury yields eased from multi-decade highs and oil slipped on reports of a phased U.S.-Iran deal, with roughly $14 billion in bitcoin options set to expire on Deribit on Friday.",
+      "title": "Live updates: Bitcoin moves to $84,000, oil slides on latest report of Middle East progress",
+      "summary": "Separate reports from Axios and CBS suggest some positive movement in U.S.-Iran negotiations.",
       "url": "https://www.coindesk.com/markets/2026/09/25/live-updates-bitcoin-steadies-near-usd84-000-as-the-bond-selloff-pauses",
       "publishedAt": "2026-09-25T07:09:11.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-25T05:30:56.000Z"
     },
     {
       "id": "4c1caa1ea8d4e0a3248b",
@@ -250,36 +466,12 @@
       "publishedAt": "2026-09-25T04:29:34.000Z"
     },
     {
-      "id": "0dcdbda8bff8ee57b05c",
-      "source": "CryptoSlate",
-      "title": "Two obscure pools fuel 2.8B XRPL volume, but only 185 trades caused it",
-      "summary": "Both pools trade issued tokens, and the feed does not reveal how it values each fill. The post Two obscure pools fuel 2.8B XRPL volume, but only 185 trades caused it appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/two-obscure-pools-fuel-2-8b-xrpl-volume-but-only-185-trades-caused-it/",
-      "publishedAt": "2026-09-25T03:40:59.000Z"
-    },
-    {
-      "id": "d9ec8fd6d9387f18099d",
-      "source": "CryptoSlate",
-      "title": "Bitcoin researchers target privacy coins with Zcash-style shielded transfers",
-      "summary": "Bitcoin researchers have proposed a system for private transfers directly on the network without requiring a soft fork or changes to its consensus rules. The Sept. 24 paper from [[alloc] init] researchers Clara Shikhelman, Mikhail Komarov, and Aleksei…",
-      "url": "https://cryptoslate.com/bitcoin-researchers-target-privacy-coins-with-zcash-style-shielded-transfers/",
-      "publishedAt": "2026-09-25T02:10:32.000Z"
-    },
-    {
       "id": "239f7dd9813e71bc5775",
       "source": "Cointelegraph",
       "title": "Block brings Bitcoin Lightning payments to x402 for AI agents",
       "summary": "Block joins Google, Microsoft, AWS and Coinbase in backing x402, an open payment standard enabling agentic AI commerce.",
       "url": "https://cointelegraph.com/news/block-brings-bitcoin-lightning-payments-to-x402-for-ai-agents?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-25T02:00:54.000Z"
-    },
-    {
-      "id": "a0d9ab022376794153cc",
-      "source": "CryptoSlate",
-      "title": "Lightning Labs discloses critical bug marking canceled invoices paid, risking free product delivery",
-      "summary": "The disclosed flaw affected older software and could mislead merchants; the tapd and lnd fixes shipped in 2025. The post Lightning Labs discloses critical bug marking canceled invoices paid, risking free product delivery appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/lightning-labs-discloses-critical-bug-marking-canceled-invoices-paid-risking-free-product-delivery/",
-      "publishedAt": "2026-09-25T00:40:46.000Z"
     },
     {
       "id": "7bf91b4cd02f8a0728cd",
@@ -306,14 +498,6 @@
       "publishedAt": "2026-09-24T22:53:59.000Z"
     },
     {
-      "id": "91b12174b2bfd323b7c9",
-      "source": "CryptoSlate",
-      "title": "New York sues Polymarket, seeks triple gains and $100,000 penalties over prediction markets",
-      "summary": "New York has sued Polymarket, alleging its US prediction market is an unlicensed gambling business operating across the state. On Sept. 24, Attorney General Letitia James asked a New York state court to stop QCX LLC, which operates as Polymarket US, from…",
-      "url": "https://cryptoslate.com/new-york-sues-polymarket-seeks-triple-gains-and-100000-penalties-over-prediction-markets/",
-      "publishedAt": "2026-09-24T22:50:47.000Z"
-    },
-    {
       "id": "68dcdbe686d15d8b9ee9",
       "source": "CoinDesk",
       "title": "New York sues Polymarket, alleging it is running an illegal gambling operation",
@@ -328,14 +512,6 @@
       "summary": "The Fed proposed rules on putting last year's GENIUS Act into place with regulations, including those governing stablecoin yield programs.",
       "url": "https://www.coindesk.com/policy/2026/09/24/u-s-federal-reserve-moves-on-proposals-to-implement-genius-act-for-stablecoins",
       "publishedAt": "2026-09-24T22:28:49.000Z"
-    },
-    {
-      "id": "41ef72baabec756e2d1b",
-      "source": "CryptoSlate",
-      "title": "Bitget’s $351.6 million hack pushes September crypto losses to 2026 high",
-      "summary": "Bitget has suspended withdrawals after unauthorized transfers drained about $351.6 million from a limited number of its hot and warm wallets. The crypto exchange detected the transfers at 18:31 UTC on Sept. 24 and activated its emergency response procedures…",
-      "url": "https://cryptoslate.com/bitgets-351-6-million-hack-pushes-september-crypto-losses-to-2026-high/",
-      "publishedAt": "2026-09-24T22:10:42.000Z"
     },
     {
       "id": "a1c9a86f48888b773f6f",
@@ -388,7 +564,7 @@
     {
       "id": "937a6b0e7917a906aabe",
       "source": "The Block",
-      "title": "Bitget confirms $351.6 million security breach affecting exchange hot wallets",
+      "title": "Bitget confirms $387.5 million security breach affecting exchange hot wallets",
       "summary": "Bitget said private keys were not compromised and that losses from the incident will be covered by its User Protection Fund.",
       "url": "https://www.theblock.co/news/markets/2026-09-24-more-than-170-million-in-crypto-moves-from-bitget-wallets-unidentified-address-416345",
       "publishedAt": "2026-09-24T21:20:47.000Z"
@@ -436,7 +612,7 @@
     {
       "id": "4cc91743ea93e627988a",
       "source": "CoinDesk",
-      "title": "Bullish, Alpaca and Apex Fintech form coalition to push issuer-backed tokenized stocks",
+      "title": "Bullish, Alpaca, Apex Fintech and DriveWealth form coalition to push issuer-backed tokenized stocks",
       "summary": "The group aims to link onchain shares to official shareholder records following the U.S. SEC's innovation exemption for tokenized stock trading.",
       "url": "https://www.coindesk.com/business/2026/09/24/bullish-alpaca-and-apex-fintech-form-coalition-to-push-issuer-backed-tokenized-stocks",
       "publishedAt": "2026-09-24T20:05:00.000Z"
@@ -520,182 +696,6 @@
       "summary": "Bitcoin’s return above its one-year average excited chart watchers. AltcoinPro Research says the more important signal is whether it can stay above its 200-day average.",
       "url": "https://www.coindesk.com/markets/2026/09/24/bitcoin-just-topped-a-key-long-term-moving-average-here-s-what-it-might-mean",
       "publishedAt": "2026-09-24T18:46:58.000Z"
-    },
-    {
-      "id": "50472bd4fbdaf46c2e2b",
-      "source": "The Block",
-      "title": "ARK Invest brings $1.3 billion venture fund onchain through Securitize",
-      "summary": "ARK Invest is bringing its $1.3B ARK Venture Fund (ARKVX), which holds OpenAI, Anthropic and Stripe, onchain via Securitize on Ethereum.",
-      "url": "https://www.theblock.co/news/markets/2026-09-24-ark-invest-tokenizes-arkvx-venture-fund-securitize-416294",
-      "publishedAt": "2026-09-24T18:37:22.000Z"
-    },
-    {
-      "id": "192e23675229834615b4",
-      "source": "Decrypt",
-      "title": "AI Can Now Doxx Your Anonymous Accounts? Here's What’s Going On",
-      "summary": "A February research paper showing AI can unmask pseudonymous internet users is freaking everyone out again this week. Here's what the paper actually says.",
-      "url": "https://decrypt.co/379228/ai-can-now-doxx-your-anonymous-accounts-heres-whats-going-on",
-      "publishedAt": "2026-09-24T18:31:03.000Z"
-    },
-    {
-      "id": "6c6563aa72d011627d8c",
-      "source": "The Block",
-      "title": "JPMorgan says bitcoin crossing $85,000 production cost could ease miner selling pressure",
-      "summary": "JPMorgan analysts said bitcoin's move above its estimated $85,000 production cost could ease miner selling if sustained.",
-      "url": "https://www.theblock.co/news/markets/2026-09-24-jpmorgan-bitcoin-production-cost-miners-relief-416283",
-      "publishedAt": "2026-09-24T18:22:39.000Z"
-    },
-    {
-      "id": "b30faa9ddbbd16768683",
-      "source": "Bitcoin Magazine",
-      "title": "Institutions Held Their Bitcoin Through Crash — and Some Bought More: Report",
-      "summary": "Bitcoin Magazine Institutions Held Their Bitcoin Through Crash — and Some Bought More: Report New research finds bitcoin has become the one crypto asset big investors agree on. This post Institutions Held Their Bitcoin Through Crash — and Some Bought More:…",
-      "url": "https://bitcoinmagazine.com/news/institutions-held-bitcoin-through-crash",
-      "publishedAt": "2026-09-24T18:03:52.000Z"
-    },
-    {
-      "id": "d3ae246f343a6d88975b",
-      "source": "Decrypt",
-      "title": "New York Wants to Ban Polymarket, Lawsuit Calls It 'Illegal Gambling Operation'",
-      "summary": "Attorney General Letitia James and Governor Kathy Hochul allege the prediction market operates without a license and exposes New Yorkers to gambling harms.",
-      "url": "https://decrypt.co/379244/new-york-ban-polymarket-lawsuit",
-      "publishedAt": "2026-09-24T17:51:31.000Z"
-    },
-    {
-      "id": "0d4ebfbaec2e0809a7ef",
-      "source": "Decrypt",
-      "title": "In Her Final Weeks, SEC's Peirce Calls for Ending the KYC 'Panopticon'",
-      "summary": "In one of her final speeches as commissioner, Peirce argued that regulators' \"data haystacks\" endanger the people they aim to protect—as recent KYC leaks expose crypto holders to phishing and physical attacks.",
-      "url": "https://decrypt.co/379217/sec-peirce-end-kyc-panopticon-zero-knowledge-proofs",
-      "publishedAt": "2026-09-24T17:31:03.000Z"
-    },
-    {
-      "id": "d4fac43a2b1a0fa1c8fb",
-      "source": "Cointelegraph",
-      "title": "Crypto treasury model loses its edge as stock premiums fade: DWF",
-      "summary": "Most DATs now trade below the value of their crypto holdings, weakening a financing model that once helped companies expand their balance sheets.",
-      "url": "https://cointelegraph.com/news/crypto-treasury-firms-below-nav-sequans-bitcoin-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T17:14:35.000Z"
-    },
-    {
-      "id": "0a144d99ce235908a6dc",
-      "source": "Cointelegraph",
-      "title": "Sequans exits Bitcoin treasury strategy after selling remaining 314 BTC",
-      "summary": "The France-based semiconductor company has fully unwound a Bitcoin treasury that once held more than 3,200 BTC as more firms scale back crypto holdings.",
-      "url": "https://cointelegraph.com/news/sequans-exits-bitcoin-treasury-strategy-after-selling-remaining-314-btc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T17:13:38.000Z"
-    },
-    {
-      "id": "61829fc3570490449625",
-      "source": "Decrypt",
-      "title": "US Aims to Turn Stablecoins Into a Weapon for Dollar Dominance",
-      "summary": "Washington may fund private stablecoin ventures abroad to protect the dollar's reserve status and prop up Treasury demand.",
-      "url": "https://decrypt.co/379219/us-stablecoins-weapon-dollar-dominance",
-      "publishedAt": "2026-09-24T16:55:43.000Z"
-    },
-    {
-      "id": "d1f1f8b623830903b3be",
-      "source": "The Block",
-      "title": "New York moves to block Polymarket from the state, alleging it’s running an illegal gambling operation",
-      "summary": "New York has sued Polymarket, accusing it of operating an illegal gambling operation and asking a court to block it from operating.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-24-new-york-block-polymarket-alleging-illegal-gambling-operation-416279",
-      "publishedAt": "2026-09-24T16:25:05.000Z"
-    },
-    {
-      "id": "47b7dd274a0409ed5085",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin Traders Brace for $15B Options Expiry as Bulls Eye $100,000",
-      "summary": "Bitcoin Magazine Bitcoin Traders Brace for $15B Options Expiry as Bulls Eye $100,000 There are more bitcoin bets on higher prices ahead of Friday’s expiry. This post Bitcoin Traders Brace for $15B Options Expiry as Bulls Eye $100,000 first appeared on…",
-      "url": "https://bitcoinmagazine.com/markets/bitcoin-traders-await-15-billion-expiry",
-      "publishedAt": "2026-09-24T16:16:37.000Z"
-    },
-    {
-      "id": "be94abb081b8a016fccb",
-      "source": "Decrypt",
-      "title": "Bitcoin Breakout Cools as Fed Rate-Hike Bets Climb",
-      "summary": "Bitcoin has slipped back below $85,000 after tagging an eight-month high near $87,400 last week, with rising odds of an October Fed hike taking some air out of the rally.",
-      "url": "https://decrypt.co/379189/bitcoins-breakout-cools-fed-rate-hike-bets-climb",
-      "publishedAt": "2026-09-24T16:01:01.000Z"
-    },
-    {
-      "id": "5cf8274ba3004be2a815",
-      "source": "Cointelegraph",
-      "title": "SoFi tie-up shows stablecoins can provide alternative blockchain settlement rail",
-      "summary": "SoFi dives deeper into payments as it moves its entire card program to blockchain-based settlement using its SoFiUSD stablecoin, with more than $25 billion in expected annualized volume.",
-      "url": "https://cointelegraph.com/news/sofi-moves-25b-card-program-to-stablecoin-settlement-with-mastercard?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T15:57:00.000Z"
-    },
-    {
-      "id": "b67be0cff8800f65c827",
-      "source": "CoinDesk",
-      "title": "Crypto casino Duelbits goes offline after $7 million hot wallet hack",
-      "summary": "Attackers drained Duelbits' hot wallets across four blockchains; about $6 million in stolen funds now sits in a single Ethereum address.",
-      "url": "https://www.coindesk.com/business/2026/09/24/crypto-casino-duelbits-goes-offline-after-usd7m-hot-wallet-hack",
-      "publishedAt": "2026-09-24T15:48:20.000Z"
-    },
-    {
-      "id": "672289c307e9ce3818aa",
-      "source": "Cointelegraph",
-      "title": "New York sues Polymarket over alleged illegal gambling business",
-      "summary": "The action filed by state lawmakers followed a similar lawsuit against prediction markets company Kalshi in July that alleged the platform was running an illegal gambling operation.",
-      "url": "https://cointelegraph.com/news/new-york-polymarket-illegal-gambling-operation-lawsuit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T15:27:29.000Z"
-    },
-    {
-      "id": "0bcdd20091571d32d24e",
-      "source": "CoinDesk",
-      "title": "Bitcoin’s bear markets are getting milder. Bull markets may be next",
-      "summary": "Bitcoin’s latest bear market was milder than past crashes as ETFs, institutional investors and a maturing market reshape its cycles.",
-      "url": "https://www.coindesk.com/markets/2026/09/24/bitcoin-s-bear-markets-are-getting-milder-the-bull-markets-may-be-next",
-      "publishedAt": "2026-09-24T15:26:34.000Z"
-    },
-    {
-      "id": "bb4dd783f2fc2e68c09a",
-      "source": "Decrypt",
-      "title": "£10K Reward Offered After UK Couple Attacked in Crypto Home Invasion",
-      "summary": "Police believe the robbery was planned and targeted, with instructions relayed to the three attackers by a fourth man on a video call.",
-      "url": "https://decrypt.co/379186/10k-reward-offered-after-uk-couple-attacked-in-crypto-home-invasion",
-      "publishedAt": "2026-09-24T15:08:26.000Z"
-    },
-    {
-      "id": "75f234f79678378fcae9",
-      "source": "CoinDesk",
-      "title": "UK’s largest banks complete world’s first interbank transactions using tokenized deposits",
-      "summary": "Barclays, NatWest, and HSBC and others used tokenized deposits for remortgages and a marketplace-payment test, taking bank-issued digital cash beyond a single institution.",
-      "url": "https://www.coindesk.com/business/2026/09/24/uk-s-largest-banks-complete-world-s-first-interbank-transactions-using-tokenized-deposits",
-      "publishedAt": "2026-09-24T15:07:18.000Z"
-    },
-    {
-      "id": "50c8e86dfc4f23b43735",
-      "source": "CoinDesk",
-      "title": "Crypto for Advisors:The hidden costs of holding your own bitcoin",
-      "summary": "Open the original publisher to read this report.",
-      "url": "https://www.coindesk.com/coindesk-indices/2026/09/24/crypto-for-advisors-the-hidden-costs-of-holding-your-own-bitcoin",
-      "publishedAt": "2026-09-24T14:49:28.000Z"
-    },
-    {
-      "id": "5997d3b7fd12b5fa0ba0",
-      "source": "CoinDesk",
-      "title": "European stablecoin issuer Qivalis sees transformation of global trade finance",
-      "summary": "Jan-Oliver Sell, the CEO and founder of Qivalis, said the entire trade finance supply chain is moving into stablecoins.",
-      "url": "https://www.coindesk.com/business/2026/09/24/european-stablecoin-issuer-qivalis-sees-transformation-of-global-trade-finance",
-      "publishedAt": "2026-09-24T14:41:05.000Z"
-    },
-    {
-      "id": "3998c937f9934f7c132a",
-      "source": "Bitcoin Magazine",
-      "title": "[[alloc] init] Releases Shielded Bitcoin Proposal For Private Bitcoin Transactions",
-      "summary": "Bitcoin Magazine [[alloc] init] Releases Shielded Bitcoin Proposal For Private Bitcoin Transactions Shielded Bitcoin, a proposal from [[alloc] init], would enable Bitcoin transactions with strong privacy. This post [[alloc] init] Releases Shielded Bitcoin…",
-      "url": "https://bitcoinmagazine.com/technical/alloc-init-releases-shielded-bitcoin-proposal-for-private-bitcoin-transactions",
-      "publishedAt": "2026-09-24T14:36:22.000Z"
-    },
-    {
-      "id": "6dea212ba655ae128a6e",
-      "source": "The Block",
-      "title": "Ondo launches onchain portfolio tokens based on BlackRock-developed strategies",
-      "summary": "Ondo has launched three onchain portfolio tokens based on model portfolio strategies developed by BlackRock.",
-      "url": "https://www.theblock.co/news/markets/2026-09-24-ondo-launches-onchain-portfolio-tokens-based-blackrock-developed-strategies-416260",
-      "publishedAt": "2026-09-24T14:27:45.000Z"
     }
   ]
 }
