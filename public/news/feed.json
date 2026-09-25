@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T21:35:36.985Z",
+  "generatedAt": "2026-09-25T05:04:41.963Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 54,
+      "itemCount": 34,
       "error": null
     },
     {
@@ -58,6 +58,150 @@
   ],
   "items": [
     {
+      "id": "9337c5c283cb57ae4f9a",
+      "source": "Cointelegraph",
+      "title": "Researchers propose Zcash-style private Bitcoin transfers without a soft fork",
+      "summary": "Shielded Bitcoin would use zero-knowledge proofs and encrypted notes to hide transaction details without changing Bitcoin consensus, but researchers have raised questions about anonymity and quantum resistance.",
+      "url": "https://cointelegraph.com/news/shielded-bitcoin-zcash-style-privacy-no-soft-fork?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T04:41:06.000Z"
+    },
+    {
+      "id": "0dcdbda8bff8ee57b05c",
+      "source": "CryptoSlate",
+      "title": "Two obscure pools fuel 2.8B XRPL volume, but only 185 trades caused it",
+      "summary": "Both pools trade issued tokens, and the feed does not reveal how it values each fill. The post Two obscure pools fuel 2.8B XRPL volume, but only 185 trades caused it appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/two-obscure-pools-fuel-2-8b-xrpl-volume-but-only-185-trades-caused-it/",
+      "publishedAt": "2026-09-25T03:40:59.000Z"
+    },
+    {
+      "id": "d9ec8fd6d9387f18099d",
+      "source": "CryptoSlate",
+      "title": "Bitcoin researchers target privacy coins with Zcash-style shielded transfers",
+      "summary": "Bitcoin researchers have proposed a system for private transfers directly on the network without requiring a soft fork or changes to its consensus rules. The Sept. 24 paper from [[alloc] init] researchers Clara Shikhelman, Mikhail Komarov, and Aleksei…",
+      "url": "https://cryptoslate.com/bitcoin-researchers-target-privacy-coins-with-zcash-style-shielded-transfers/",
+      "publishedAt": "2026-09-25T02:10:32.000Z"
+    },
+    {
+      "id": "239f7dd9813e71bc5775",
+      "source": "Cointelegraph",
+      "title": "Block brings Bitcoin Lightning payments to x402 for AI agents",
+      "summary": "Block joins Google, Microsoft, AWS and Coinbase in backing x402, an open payment standard enabling agentic AI commerce.",
+      "url": "https://cointelegraph.com/news/block-brings-bitcoin-lightning-payments-to-x402-for-ai-agents?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T02:00:54.000Z"
+    },
+    {
+      "id": "a0d9ab022376794153cc",
+      "source": "CryptoSlate",
+      "title": "Lightning Labs discloses critical bug marking canceled invoices paid, risking free product delivery",
+      "summary": "The disclosed flaw affected older software and could mislead merchants; the tapd and lnd fixes shipped in 2025. The post Lightning Labs discloses critical bug marking canceled invoices paid, risking free product delivery appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/lightning-labs-discloses-critical-bug-marking-canceled-invoices-paid-risking-free-product-delivery/",
+      "publishedAt": "2026-09-25T00:40:46.000Z"
+    },
+    {
+      "id": "7bf91b4cd02f8a0728cd",
+      "source": "Cointelegraph",
+      "title": "Bitget CEO suspects North Korea behind $352M hack, citing IP clues",
+      "summary": "Bitget CEO Gracy Chen said a preliminary investigation found IP addresses matching VPN choices associated with a DPRK hacking group.",
+      "url": "https://cointelegraph.com/news/bitget-ceo-suspects-north-korea-behind-352m-hack-citing-ip-clues?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-25T00:32:46.000Z"
+    },
+    {
+      "id": "6cb7d69ecaf05f42be9f",
+      "source": "Cointelegraph",
+      "title": "Asia dominates Crypto Adoption Index, Bitget’s $352M hack: Asia Express",
+      "summary": "The APAC region accounts for half of the Global Crypto Adoption Index. Bitget suffers massive $352M loss and OpenAI forgets to mention its agents hacked the Australian Government.",
+      "url": "https://cointelegraph.com/magazine/asia-dominates-crypto-adoption-index-bitgets-356m-hack-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T23:27:17.000Z"
+    },
+    {
+      "id": "ac4d7de02043e70cd2ad",
+      "source": "Bitcoin Magazine",
+      "title": "Nearly $352M Moved From Crypto Exchange Bitget Wallets in Suspected Hack",
+      "summary": "Bitcoin Magazine Nearly $352M Moved From Crypto Exchange Bitget Wallets in Suspected Hack Crypto exchange Bitget detected unauthorized transfers and has temporarily halted withdrawals. This post Nearly $352M Moved From Crypto Exchange Bitget Wallets in…",
+      "url": "https://bitcoinmagazine.com/news/bitget-suffers-352-million-hack",
+      "publishedAt": "2026-09-24T22:53:59.000Z"
+    },
+    {
+      "id": "91b12174b2bfd323b7c9",
+      "source": "CryptoSlate",
+      "title": "New York sues Polymarket, seeks triple gains and $100,000 penalties over prediction markets",
+      "summary": "New York has sued Polymarket, alleging its US prediction market is an unlicensed gambling business operating across the state. On Sept. 24, Attorney General Letitia James asked a New York state court to stop QCX LLC, which operates as Polymarket US, from…",
+      "url": "https://cryptoslate.com/new-york-sues-polymarket-seeks-triple-gains-and-100000-penalties-over-prediction-markets/",
+      "publishedAt": "2026-09-24T22:50:47.000Z"
+    },
+    {
+      "id": "68dcdbe686d15d8b9ee9",
+      "source": "CoinDesk",
+      "title": "New York sues Polymarket, alleging it is running an illegal gambling operation",
+      "summary": "The state wants to block Polymarket from operating without a gambling license and recover allegedly illegal gains.",
+      "url": "https://www.coindesk.com/policy/2026/09/24/new-york-sues-polymarket-alleging-it-is-running-an-illegal-gambling-operation",
+      "publishedAt": "2026-09-24T22:41:44.000Z"
+    },
+    {
+      "id": "280eda81427b2bca9044",
+      "source": "CoinDesk",
+      "title": "U.S. Federal Reserve moves on proposals to implement GENIUS Act for stablecoins",
+      "summary": "The Fed proposed rules on putting last year's GENIUS Act into place with regulations, including those governing stablecoin yield programs.",
+      "url": "https://www.coindesk.com/policy/2026/09/24/u-s-federal-reserve-moves-on-proposals-to-implement-genius-act-for-stablecoins",
+      "publishedAt": "2026-09-24T22:28:49.000Z"
+    },
+    {
+      "id": "41ef72baabec756e2d1b",
+      "source": "CryptoSlate",
+      "title": "Bitget’s $351.6 million hack pushes September crypto losses to 2026 high",
+      "summary": "Bitget has suspended withdrawals after unauthorized transfers drained about $351.6 million from a limited number of its hot and warm wallets. The crypto exchange detected the transfers at 18:31 UTC on Sept. 24 and activated its emergency response procedures…",
+      "url": "https://cryptoslate.com/bitgets-351-6-million-hack-pushes-september-crypto-losses-to-2026-high/",
+      "publishedAt": "2026-09-24T22:10:42.000Z"
+    },
+    {
+      "id": "a1c9a86f48888b773f6f",
+      "source": "Cointelegraph",
+      "title": "Fed proposes new capital, redemption rules for stablecoin issuers",
+      "summary": "The Fed’s proposal would set capital requirements, a two-day redemption window and new reserve disclosures as regulators implement the GENIUS Act.",
+      "url": "https://cointelegraph.com/news/fed-proposes-new-capital-redemption-rules-for-stablecoin-issuers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T22:10:09.000Z"
+    },
+    {
+      "id": "2bcb25409e78e344c8d8",
+      "source": "Bitcoin Magazine",
+      "title": "New York Sues Polymarket, Calling Prediction Market an Illegal Gambling Operation",
+      "summary": "Bitcoin Magazine New York Sues Polymarket, Calling Prediction Market an Illegal Gambling Operation Attorney General Letitia James and Governor Kathy Hochul allege Polymarket operates without a license in a new complaint. This post New York Sues Polymarket,…",
+      "url": "https://bitcoinmagazine.com/news/new-york-sues-polymarket",
+      "publishedAt": "2026-09-24T22:09:02.000Z"
+    },
+    {
+      "id": "e319fbea61994601525c",
+      "source": "CoinDesk",
+      "title": "Crypto exchange Bitget says $352 million affected in a hack, claims user funds are 'safe'",
+      "summary": "Bitget CEO Gracy Chen announced the hack shortly after independent researchers flagged unusual wallet movements.",
+      "url": "https://www.coindesk.com/markets/2026/09/24/crypto-exchange-bitget-loses-usd352-million-in-hack-claims-user-funds-are-safe",
+      "publishedAt": "2026-09-24T21:59:32.000Z"
+    },
+    {
+      "id": "7686c0ca00a758d66b88",
+      "source": "Decrypt",
+      "title": "Federal Reserve Unveils Stablecoin Rules on Reserves and Capital",
+      "summary": "The central bank opened two proposals for comment under the GENIUS Act, requiring issuers it supervises to back tokens fully with safe assets and creating an application process for banks seeking to issue stablecoins.",
+      "url": "https://decrypt.co/379274/federal-reserve-unveils-stablecoin-rules-on-reserves-and-capital",
+      "publishedAt": "2026-09-24T21:56:03.000Z"
+    },
+    {
+      "id": "29d161795105e470c299",
+      "source": "Cointelegraph",
+      "title": "Bitget confirms $352M security breach, suspends withdrawals",
+      "summary": "Bitget said unauthorized transfers affected a limited number of hot wallets, while cold wallets and most platform assets remained unaffected.",
+      "url": "https://cointelegraph.com/news/bitget-calls-security-withdrawal-claims-unverified-amid-178m-breach-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T21:47:17.000Z"
+    },
+    {
+      "id": "c22b6eeaa1b740756072",
+      "source": "Cointelegraph",
+      "title": "CFTC updates guidance on tokenized assets, blockchain records after failed vote",
+      "summary": "Although the CFTC chair did not say the failed vote on the CLARITY Act was behind new rules for authorized crypto entities, he said the move was “to provide regulatory clarity.“",
+      "url": "https://cointelegraph.com/news/cftc-digital-assets-regulation-failed-clarity-vote?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-24T21:42:51.000Z"
+    },
+    {
       "id": "937a6b0e7917a906aabe",
       "source": "The Block",
       "title": "More than $170 million in crypto moves from Bitget wallets to unidentified address",
@@ -76,7 +220,7 @@
     {
       "id": "2c9bc30652850fd3a991",
       "source": "Decrypt",
-      "title": "Bitget 'Potentially Hacked' as $183 Million Vanishes From Exchange Wallets",
+      "title": "Bitget Hacked as $350 Million Vanishes From Crypto Exchange Wallets",
       "summary": "A newly created wallet drained hot and cold reserves labeled as belonging to Bitget across multiple blockchains in under an hour.",
       "url": "https://decrypt.co/379275/bitget-hack-183-million-crypto-exchange-wallets",
       "publishedAt": "2026-09-24T21:15:38.000Z"
@@ -354,14 +498,6 @@
       "publishedAt": "2026-09-24T15:48:20.000Z"
     },
     {
-      "id": "a2041aefb86f2aa0faa5",
-      "source": "CryptoSlate",
-      "title": "Coinbase’s fixed-rate Bitcoin loans can put healthy collateral at risk after maturity",
-      "summary": "An unpaid balance can make a position eligible for liquidation even without a Bitcoin price drop. The post Coinbase’s fixed-rate Bitcoin loans can put healthy collateral at risk after maturity appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/coinbases-fixed-rate-bitcoin-loans-can-put-healthy-collateral-at-risk-after-maturity/",
-      "publishedAt": "2026-09-24T15:30:59.000Z"
-    },
-    {
       "id": "672289c307e9ce3818aa",
       "source": "Cointelegraph",
       "title": "New York sues Polymarket over alleged illegal gambling business",
@@ -418,28 +554,12 @@
       "publishedAt": "2026-09-24T14:36:22.000Z"
     },
     {
-      "id": "9320c349a731c78f6100",
-      "source": "CryptoSlate",
-      "title": "CFTC staff presses exchanges on political speech prediction market bets, asks how to prevent manipulation",
-      "summary": "The Sept. 22 advisory asks exchanges to explain contract-specific safeguards while Kalshi continues to list speech markets. The post CFTC staff presses exchanges on political speech prediction market bets, asks how to prevent manipulation appeared first on…",
-      "url": "https://cryptoslate.com/cftc-staff-presses-exchanges-on-political-speech-prediction-market-bets-asks-how-to-prevent-manipulation/",
-      "publishedAt": "2026-09-24T14:30:53.000Z"
-    },
-    {
       "id": "6dea212ba655ae128a6e",
       "source": "The Block",
       "title": "Ondo launches onchain portfolio tokens based on BlackRock-developed strategies",
       "summary": "Ondo has launched three onchain portfolio tokens based on model portfolio strategies developed by BlackRock.",
       "url": "https://www.theblock.co/news/markets/2026-09-24-ondo-launches-onchain-portfolio-tokens-based-blackrock-developed-strategies-416260",
       "publishedAt": "2026-09-24T14:27:45.000Z"
-    },
-    {
-      "id": "01951fe37d0ae0cc653c",
-      "source": "CryptoSlate",
-      "title": "BitMEX opens fund recovery to customers it previously barred from the platform",
-      "summary": "A Sept. 24 policy update permits identity checks and withdrawals after trading ended, with asset minimums and sanctions rules still in force. The post BitMEX opens fund recovery to customers it previously barred from the platform appeared first on…",
-      "url": "https://cryptoslate.com/bitmex-opens-fund-recovery-to-customers-it-previously-barred-from-the-platform/",
-      "publishedAt": "2026-09-24T13:30:14.000Z"
     },
     {
       "id": "a8158ff0652b95047099",
@@ -514,22 +634,6 @@
       "publishedAt": "2026-09-24T13:00:00.000Z"
     },
     {
-      "id": "8138c55d308ade81d719",
-      "source": "Bitcoin Magazine",
-      "title": "Bloomberg’s James Seyffart: Why Trillions in Advisor Wealth Could Flow Into Bitcoin",
-      "summary": "Bitcoin Magazine Bloomberg’s James Seyffart: Why Trillions in Advisor Wealth Could Flow Into Bitcoin Trillions in advisor wealth remain on the sidelines. Bloomberg analyst James Seyffart explains how strict wirehouse rules still cap Bitcoin ETF adoption.…",
-      "url": "https://bitcoinmagazine.com/videos/bloombergs-james-seyffart-why-trillions-in-advisor-wealth-could-flow-into-bitcoin",
-      "publishedAt": "2026-09-24T12:58:37.000Z"
-    },
-    {
-      "id": "86df23da31c6b5c85e65",
-      "source": "Bitcoin Magazine",
-      "title": "Brent Johnson: BTC the Best “Pure Play” Asset for Rising Global Liquidity",
-      "summary": "Bitcoin Magazine Brent Johnson: BTC the Best “Pure Play” Asset for Rising Global Liquidity Is Bitcoin money or the ultimate liquidity play? Santiago Capital’s Brent Johnson shares why BTC, digital assets, and stablecoins are built to last. This post Brent…",
-      "url": "https://bitcoinmagazine.com/videos/brent-johnson-btc-best-asset-for-rising-global-liquidity",
-      "publishedAt": "2026-09-24T12:52:03.000Z"
-    },
-    {
       "id": "79d4a3cd1a521f7590c4",
       "source": "CoinDesk",
       "title": "Crypto investment firm RockawayX is betting $150 million on yield becoming next big use case",
@@ -544,14 +648,6 @@
       "summary": "European regulators will map how financial firms use the technologies in client-facing products and begin checks on the most affected businesses.",
       "url": "https://www.coindesk.com/policy/2026/09/24/eu-s-financial-regulator-to-make-ai-and-tokenization-a-supervisory-priority-in-2027",
       "publishedAt": "2026-09-24T12:26:43.000Z"
-    },
-    {
-      "id": "5ae5fb5f483c99a1fd3a",
-      "source": "CryptoSlate",
-      "title": "Alpen says AI identified Liquid’s $320M BTC exploit in an hour. Could a payout limit have stopped it?",
-      "summary": "Its post-attack replay explains the cache flaw, while SideSwap says a 4,000 L-BTC order faced no size or velocity hold. The post Alpen says AI identified Liquid’s $320M BTC exploit in an hour. Could a payout limit have stopped it? appeared first on…",
-      "url": "https://cryptoslate.com/alpen-says-ai-diagnosed-liquids-320-million-exploit-in-an-hour-could-a-payout-limit-have-stopped-it/",
-      "publishedAt": "2026-09-24T12:20:10.000Z"
     },
     {
       "id": "5ca2ae2a9b8907dccf24",
@@ -600,102 +696,6 @@
       "summary": "Bybit’s global campaign positions it as a broader financial platform, though its stock, gold and forex derivatives were already available.",
       "url": "https://cointelegraph.com/news/era-pure-crypto-exchanges-end-bybit-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-24T11:24:07.000Z"
-    },
-    {
-      "id": "50ff5708d4c67cb20f09",
-      "source": "CryptoSlate",
-      "title": "Cosmos restarted to seize $2.2 million in stolen ATOM, but 169,000 tokens still escaped",
-      "summary": "The chain-wide pause reached unrelated Hub users; secured Neutron-linked funds now sit in a validator multisig. The post Cosmos restarted to seize $2.2 million in stolen ATOM, but 169,000 tokens still escaped appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/cosmos-restarted-to-seize-2-2-million-in-stolen-atom-but-169000-tokens-still-escaped/",
-      "publishedAt": "2026-09-24T11:20:49.000Z"
-    },
-    {
-      "id": "06a620465dcb8acc3db2",
-      "source": "CoinDesk",
-      "title": "Live updates: Oil back on the rise as Iran denies report of deal talks",
-      "summary": "Bitcoin pulled back to $84,000 as stocks slipped and interest rates rose alongside surging oil prices.",
-      "url": "https://www.coindesk.com/tech/2026/09/24/live-updates-bitcoin-edges-lower-as-bond-yields-take-center-stage",
-      "publishedAt": "2026-09-24T11:20:12.000Z"
-    },
-    {
-      "id": "8caa977f57749fda6ca7",
-      "source": "Decrypt",
-      "title": "Q-Day Could Arrive Before Quantum Computers Are Commercially Useful, EU Warns",
-      "summary": "The threat could arrive before quantum computers are commercially useful, and member states have until the end of 2026 to plan for it.",
-      "url": "https://decrypt.co/379167/q-day-could-arrive-before-quantum-computers-are-commercially-useful-eu-warns",
-      "publishedAt": "2026-09-24T11:05:19.000Z"
-    },
-    {
-      "id": "6766c058978662e773fa",
-      "source": "CoinDesk",
-      "title": "Bitcoin slides to $83,300 as bond yields hit highest level since 2007",
-      "summary": "The 10-year Treasury yield reached its highest since 2007, sending U.S. stocks and crypto lower before Asian and European traders bought the dip.",
-      "url": "https://www.coindesk.com/markets/2026/09/24/bitcoin-steadies-near-usd84-000-after-bond-yields-hit-a-2007-high",
-      "publishedAt": "2026-09-24T10:30:28.000Z"
-    },
-    {
-      "id": "f6db8075978e10de53a5",
-      "source": "Cointelegraph",
-      "title": "EU banking watchdog calls for crypto lending rules under MiCA",
-      "summary": "The EBA outlined potential rules for crypto lending and firms providing access to DeFi protocols as part of the European Commission’s MiCA review.",
-      "url": "https://cointelegraph.com/news/eu-eba-crypto-lending-defi-mica-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T10:30:00.000Z"
-    },
-    {
-      "id": "9d150cf5c056748ae9c2",
-      "source": "Cointelegraph",
-      "title": "Bitcoin falls below $84K as 10-year Treasury yield hits 19-year high",
-      "summary": "Bitcoin traded near $83,200 as Fed hike odds reached about 75% and Treasury prepared a $6 billion buyback of long-dated bonds.",
-      "url": "https://cointelegraph.com/markets/bitcoin-fall-84k-treasury-yield-hits-19-year-high?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T10:15:03.000Z"
-    },
-    {
-      "id": "7a7a2a84e3fc7b15b310",
-      "source": "CoinDesk",
-      "title": "Traders price in 4 Fed rate hikes by June 2027 as bitcoin slides below $83,000",
-      "summary": "The four-hike path is the most likely outcome, while rising bond yields and a stronger dollar weigh on bitcoin and gold.",
-      "url": "https://www.coindesk.com/markets/2026/09/24/traders-are-pricing-in-4-fed-rate-hikes-as-bitcoin-slides-below-usd83-000",
-      "publishedAt": "2026-09-24T10:11:51.000Z"
-    },
-    {
-      "id": "8c88b4e66daa4efcfa8d",
-      "source": "The Block",
-      "title": "IBM connects Digital Asset Haven to Swift blockchain ledger for tokenized deposit transactions",
-      "summary": "IBM Digital Asset Haven clients can now connect to Swift's shared ledger and instruct tokenized deposit transactions.",
-      "url": "https://www.theblock.co/news/business/2026-09-24-ibm-connects-digital-asset-haven-to-swift-blockchain-ledger-for-tokenized-deposit-transactions-416237",
-      "publishedAt": "2026-09-24T10:00:00.000Z"
-    },
-    {
-      "id": "9e938353693fa330cfb3",
-      "source": "CoinDesk",
-      "title": "The data proves it: Bitcoin doesn't care about rising bond yields over long-term",
-      "summary": "Long-term, BTC ignores rising bond yields. In the short term, however, surging bond volatility could easily dampen crypto's animal spirits.",
-      "url": "https://www.coindesk.com/markets/2026/09/24/the-data-proves-it-bitcoin-doesn-t-care-about-rising-bond-yields-over-long-term",
-      "publishedAt": "2026-09-24T09:48:09.000Z"
-    },
-    {
-      "id": "46f08475bca587263eee",
-      "source": "CoinDesk",
-      "title": "EU financial watchdogs warn quantum computing poses imminent threat to blockchain encryption",
-      "summary": "The warning brings renewed urgency to the debate over how bitcoin should deal with legacy addresses whose public keys are already exposed onchain.",
-      "url": "https://www.coindesk.com/tech/2026/09/24/eu-financial-watchdogs-warn-quantum-computing-poses-imminent-threat-to-blockchain-encryption",
-      "publishedAt": "2026-09-24T09:32:48.000Z"
-    },
-    {
-      "id": "585fe33416914c872a1b",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs add $347M as BTC falls below $84K after topping $87K",
-      "summary": "US spot Bitcoin ETF inflows slowed to $347 million on Wednesday as Bitcoin fell below $84,000, while five-day inflows reached $2.65 billion.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etf-347-million-inflow-btc-below-84k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T09:32:44.000Z"
-    },
-    {
-      "id": "9b5c2471047fcca1f165",
-      "source": "Cointelegraph",
-      "title": "Institutions held crypto through 50% drawdown, Bitwise finds",
-      "summary": "Every institution interviewed that owned crypto held Bitcoin, usually as its largest asset; some set exit conditions for Ether and Solana.",
-      "url": "https://cointelegraph.com/markets/institutions-held-crypto-50-percent-drawdown-bitwise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-24T09:18:16.000Z"
     }
   ]
 }
