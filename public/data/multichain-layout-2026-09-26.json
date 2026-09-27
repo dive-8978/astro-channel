@@ -1,0 +1,373 @@
+{
+  "reportId": "AB-MULTICHAIN-2026-09-26",
+  "issued": "2026-09-26",
+  "observedAtUtc": "2026-09-25T16:28:05.989464+00:00",
+  "scope": "AstroBridge backend source inventory; separate from MA mobile supported assets",
+  "reviewType": "Internal source capability review; not a new security audit",
+  "counts": {
+    "networkLabelGroups": 47,
+    "auxiliaryGroups": 2,
+    "rpcUrlEntries": 163,
+    "rpcUrlsInNetworkLabelGroups": 121,
+    "rpcUrlsInAuxiliaryGroups": 42,
+    "coreChainConfigEntries": 12,
+    "swapAllowlistEntries": 6
+  },
+  "networkGroups": [
+    {
+      "key": "SUPER",
+      "classification": "auxiliary_pool",
+      "urlEntries": 4,
+      "sourceLine": 16
+    },
+    {
+      "key": "ETH",
+      "classification": "network_label",
+      "urlEntries": 10,
+      "sourceLine": 23
+    },
+    {
+      "key": "BSC",
+      "classification": "network_label",
+      "urlEntries": 8,
+      "sourceLine": 35
+    },
+    {
+      "key": "POLYGON",
+      "classification": "network_label",
+      "urlEntries": 5,
+      "sourceLine": 45
+    },
+    {
+      "key": "AVALANCHE",
+      "classification": "network_label",
+      "urlEntries": 4,
+      "sourceLine": 52
+    },
+    {
+      "key": "FANTOM",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 58
+    },
+    {
+      "key": "GNOSIS",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 63
+    },
+    {
+      "key": "CELO",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 68
+    },
+    {
+      "key": "HARMONY",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 73
+    },
+    {
+      "key": "MOONBEAM",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 77
+    },
+    {
+      "key": "CRONOS",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 82
+    },
+    {
+      "key": "KAVA",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 87
+    },
+    {
+      "key": "METIS",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 91
+    },
+    {
+      "key": "BOBA",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 95
+    },
+    {
+      "key": "ARBITRUM",
+      "classification": "network_label",
+      "urlEntries": 5,
+      "sourceLine": 99
+    },
+    {
+      "key": "OPTIMISM",
+      "classification": "network_label",
+      "urlEntries": 4,
+      "sourceLine": 106
+    },
+    {
+      "key": "BASE",
+      "classification": "network_label",
+      "urlEntries": 4,
+      "sourceLine": 112
+    },
+    {
+      "key": "SCROLL",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 118
+    },
+    {
+      "key": "LINEA",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 123
+    },
+    {
+      "key": "MANTA",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 128
+    },
+    {
+      "key": "ZKSYNC",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 132
+    },
+    {
+      "key": "BLAST",
+      "classification": "network_label",
+      "urlEntries": 3,
+      "sourceLine": 137
+    },
+    {
+      "key": "MODE",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 142
+    },
+    {
+      "key": "TAIKO",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 146
+    },
+    {
+      "key": "ZETA",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 150
+    },
+    {
+      "key": "IMMUTABLE",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 154
+    },
+    {
+      "key": "POLYGON_ZKEVM",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 158
+    },
+    {
+      "key": "ETHERLINK",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 162
+    },
+    {
+      "key": "STARKNET",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 166
+    },
+    {
+      "key": "OKC",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 170
+    },
+    {
+      "key": "KCC",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 174
+    },
+    {
+      "key": "HECO",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 178
+    },
+    {
+      "key": "CORE",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 182
+    },
+    {
+      "key": "RONIN",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 186
+    },
+    {
+      "key": "KLAYTN",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 191
+    },
+    {
+      "key": "VELAS",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 195
+    },
+    {
+      "key": "TELOS",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 198
+    },
+    {
+      "key": "ULTRON",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 202
+    },
+    {
+      "key": "VECHAIN",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 205
+    },
+    {
+      "key": "CONFLUX",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 208
+    },
+    {
+      "key": "IOTEX",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 212
+    },
+    {
+      "key": "WANCHAIN",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 216
+    },
+    {
+      "key": "SYSCOIN",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 220
+    },
+    {
+      "key": "ROOTSTOCK",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 225
+    },
+    {
+      "key": "STACKS",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 229
+    },
+    {
+      "key": "CHILIZ",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 233
+    },
+    {
+      "key": "WAX",
+      "classification": "network_label",
+      "urlEntries": 2,
+      "sourceLine": 236
+    },
+    {
+      "key": "FLOW",
+      "classification": "network_label",
+      "urlEntries": 1,
+      "sourceLine": 240
+    },
+    {
+      "key": "EDGE",
+      "classification": "auxiliary_pool",
+      "urlEntries": 38,
+      "sourceLine": 244
+    }
+  ],
+  "coreChainConfigKeys": [
+    "ETH",
+    "BASE",
+    "POLYGON",
+    "BSC",
+    "ARBITRUM",
+    "OPTIMISM",
+    "SEPOLIA",
+    "SOLANA",
+    "SUI",
+    "APTOS",
+    "COSMOS",
+    "SOROBAN"
+  ],
+  "swapAllowlistKeys": [
+    "BSC",
+    "ETH",
+    "POLYGON",
+    "ARBITRUM",
+    "AVALANCHE",
+    "BASE"
+  ],
+  "sourceFiles": [
+    {
+      "path": "src/chain/EvmChainClient.ts",
+      "sha256": "23ca419c5413420ac6e686d08cc7e7df36cfff25918cbfff751d8233d9190acf"
+    },
+    {
+      "path": "src/config/chains.ts",
+      "sha256": "0ffabd607bc73286e4d9a58425741ca56e2eb27cd126e5a02b2087cc0d14145f"
+    },
+    {
+      "path": "src/chain/NonEvmChainClient.ts",
+      "sha256": "e8bbc2918bf05c33d1eab9e33fd3d0528684ac4c8dcdf5abf486b18a12996c2d"
+    },
+    {
+      "path": "src/chain/ChainRouter.ts",
+      "sha256": "04dc6fd878bf74c0d5a105a9cad1a31b1a058b88a58af5f4711e6307fd48316f"
+    },
+    {
+      "path": "src/intent/IntentExecutor.ts",
+      "sha256": "ba5e7b4af57d9f4c009a3da4fbbb56531be7d3c643d440f94cc66d741bcded11"
+    },
+    {
+      "path": "src/api/SwapQuoteApi.ts",
+      "sha256": "b0b56bdb31c72ca381689cb168baeb9055d5a09655c02c090b173598b7f529b1"
+    },
+    {
+      "path": "src/config.ts",
+      "sha256": "f30d59d39716b7eba6f153d1492734b99b0305c163aa607d8ac8ed5145ddffe8"
+    }
+  ],
+  "method": "Read source text without executing backend modules; count top-level RPC group keys and literal URL entries. SUPER and EDGE are auxiliary groups. Chain labels are not proof of current network operation.",
+  "currentReviewLimits": [
+    "No funded transfer or cross-chain settlement was submitted in this source review.",
+    "RPC entries were not individually probed; retired, renamed or incompatible endpoints may be present.",
+    "No global blockchain coverage percentage or latency benchmark is established.",
+    "Non-EVM execution methods inspected in this snapshot include placeholder results.",
+    "Source hashes identify the reviewed local snapshot; they do not establish the deployed binary version."
+  ],
+  "sourceHashesRecheckedOn": "2026-09-28"
+}

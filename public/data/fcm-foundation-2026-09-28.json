@@ -1,0 +1,62 @@
+{
+  "reportId": "AB-FCM-FOUNDATION-20260928",
+  "classification": "Internal engineering release record; not independent certification",
+  "publishedAt": "2026-09-27T16:54:13.160Z",
+  "observedAt": "2026-09-27T17:07:02.819000+00:00",
+  "scope": "Android call-push foundation for MA and MA full; actual FCM delivery remains disabled",
+  "serverVersion": "ma-call-push-2026-09-28-r4",
+  "verification": {
+    "localRegressionPassed": 56,
+    "serverCandidateRegressionPassed": 48,
+    "serverIsolatedRedisChecksPassed": 12,
+    "localAofCrashRecoveryChecksPassed": 4,
+    "releaseRollbackSimulationChecksPassed": 6,
+    "publishedFilesMatchingLocalSha256": 43,
+    "unrelatedProcessesUnchanged": 9,
+    "productionRollbackDrillPerformed": false
+  },
+  "callPush": {
+    "enabled": false,
+    "serverVersion": "ma-call-push-2026-09-28-r4",
+    "accessMode": "disabled",
+    "publicRolloutPercent": 0,
+    "publicReleaseReady": false,
+    "allowedWalletCount": 0,
+    "tokenEncryptionConfigured": true,
+    "appPolicyCount": 0,
+    "apnsConfigured": false,
+    "fcmConfigured": false,
+    "oemGatewayConfigured": false,
+    "durableQueueIncluded": true,
+    "apiReady": false,
+    "clientIntegrationVerified": false,
+    "realDeviceAcceptancePassed": false,
+    "acceptanceEvidence": null,
+    "runtime": {
+      "redisConnected": true,
+      "redisDurable": true,
+      "workerHeartbeatFresh": true,
+      "workerAgeMs": 1966,
+      "queue": {
+        "waiting": 0,
+        "active": 0,
+        "delayed": 0,
+        "failed": 0,
+        "oldestWaitingAgeMs": null
+      },
+      "fcm": {}
+    }
+  },
+  "protectedFeatures": {
+    "gardenCheckoutEnabled": false,
+    "nftClaimAuthorizationEnabled": false
+  },
+  "pending": [
+    "Firebase project and two Android registrations",
+    "Dedicated FCM sender credentials and client configurations",
+    "Android client integration",
+    "Allowlisted two-device background, lock-screen, process-termination and call-lifecycle acceptance",
+    "Small public rollout only after acceptance"
+  ],
+  "readinessUrl": "https://api.astrochannel.one/api/integrations/readiness"
+}

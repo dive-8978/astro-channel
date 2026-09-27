@@ -1,4 +1,116 @@
 window.ASTRO_ARTICLES = [
+{
+  "slug": "ma-android-fcm-server-foundation-20260928",
+  "title": "AstroBridge Deploys the Server Foundation for MA Android Offline Calls",
+  "dek": "A scoped server upgrade adds durable call-push processing and staged access controls. FCM delivery remains disabled pending Firebase setup, Android integration and device acceptance.",
+  "type": "Engineering Update",
+  "section": "Engineering",
+  "project": "AstroBridge",
+  "phase": "Foundation deployed; activation pending",
+  "phaseTone": "active",
+  "date": "2026-09-28",
+  "displayDate": "September 28, 2026",
+  "byline": "AstroBridge Engineering",
+  "image": "/assets/news-ma.png",
+  "body": [
+    "AstroBridge has deployed the Android call-push foundation for MA and MA full. The update prepares a separate delivery path for incoming-call events when an Android client is not connected in the foreground. It does not yet enable Firebase Cloud Messaging delivery or announce a completed offline-calling release.",
+    "The server code includes durable Redis queue processing, worker heartbeat reporting, encrypted device-token storage and package-specific FCM HTTP v1 sending support. Wallet-signed requests, notification preferences, peer allow and block controls, request limits, duplicate-call protection and call expiry provide controls for staged testing.",
+    "Three access modes are implemented: disabled, allowlist and public-authenticated. The deployed service remains disabled with public rollout at zero. Firebase configuration, the Android client integration and a recorded two-device acceptance run are still required before an allowlisted trial and any subsequent small public rollout.",
+    "The deployment was limited to the call-push components. Forty-three published files were checked against their local SHA-256 hashes, with matching results. The release record also confirms that nine unrelated managed processes retained their process identities, statuses and restart counts. Existing production configuration and historical data were preserved, and rollback files were retained.",
+    "Verification passed 56 local regression tests, 48 tests in the server candidate suite and 12 isolated Redis checks on the server. Four local crash-recovery checks and six deployment/rollback simulation checks also passed. These checks are internal engineering evidence; no production rollback drill or successful phone delivery is inferred from them.",
+    "At publication, public readiness reports durable Redis connectivity and a fresh worker heartbeat, while FCM configuration, client integration and real-device acceptance remain incomplete. The next acceptance run must cover background and lock-screen calls, supported process-termination scenarios, answering, rejection, cancellation and timeout. Garden checkout and NFT authorization remain disabled."
+  ],
+  "facts": [
+    "43 published files match the local release by SHA-256.",
+    "56 local regression tests and 48 server candidate tests passed.",
+    "12 isolated server Redis checks passed.",
+    "FCM sending is disabled; client and real-device acceptance are pending."
+  ],
+  "status": "Server foundation deployed. This is not an offline-call launch, Google Play approval, global delivery guarantee or proof that Android background disconnection has been fixed.",
+  "links": [
+    {
+      "label": "Dated public release record",
+      "url": "/data/fcm-foundation-2026-09-28.json"
+    },
+    {
+      "label": "Current integration readiness",
+      "url": "https://api.astrochannel.one/api/integrations/readiness"
+    }
+  ]
+},
+{
+  "slug": "ma-android-dual-device-engineering-review-20260927",
+  "title": "MA and MA full Complete a New Round of Android Device Checks",
+  "dek": "The September 27 review records foreground messaging and voice-call progress, while background delivery and mobile web connectivity remain acceptance blockers.",
+  "type": "Engineering Update",
+  "section": "Engineering",
+  "project": "MA",
+  "phase": "Device review; blockers open",
+  "phaseTone": "active",
+  "date": "2026-09-27",
+  "displayDate": "September 27, 2026",
+  "byline": "AstroBridge Engineering",
+  "image": "/assets/news-ma.png",
+  "body": [
+    "MA and MA full version 1.6.12, build 37, were reviewed on an Android phone and tablet on September 27. Both editions installed and launched on both devices. The review captured an English friend-request flow, acceptance acknowledgements and bidirectional foreground messages.",
+    "The foreground voice-call check showed an incoming-call interface, answering, a connected state and an approximately five-minute session with active microphone access. Acoustic quality was not measured, and this observation does not establish video, group-call capacity or reliability across other networks.",
+    "Localization work made historical call summaries render from language-neutral metadata and corrected an English transfer label. Seven-language resource checks and tablet language switching were recorded. The later dual-device review still found a chat timestamp and several game accessibility labels that needed localization work; these results do not amount to a complete native-language editorial review.",
+    "The dual-device review reported a conditional fail overall. Background message notifications and incoming-call alerts did not arrive in the tested scenarios. One message appeared after the app returned to the foreground, demonstrating catch-up in that case rather than real-time background delivery. Some in-app MA web pages also encountered connection-reset errors on a tested device.",
+    "These findings inform the server call-push work and the next client acceptance cycle. Thirty-five automated regression groups completed successfully in the recorded review, but passing automated checks does not close the observed device blockers. No live-fund transfer, cross-chain settlement, Google Play approval or iOS acceptance is announced by this update."
+  ],
+  "facts": [
+    "Tested builds: MA and MA full 1.6.12 (37).",
+    "35 automated regression groups completed successfully in the recorded review.",
+    "Foreground bidirectional messaging and a connected voice session were observed.",
+    "Overall device-review verdict: conditional fail; background delivery remained blocked."
+  ],
+  "status": "Dated internal review of specific builds and scenarios, not a current claim that all defects are resolved or that the applications are generally released.",
+  "links": [
+    {
+      "label": "Public device-review summary",
+      "url": "/data/ma-device-review-2026-09-27.json"
+    },
+    {
+      "label": "MA privacy policy",
+      "url": "/ma-privacy.html"
+    }
+  ]
+},
+{
+  "slug": "astrobridge-multichain-code-inventory-20260926",
+  "title": "AstroBridge Documents Its Multi-Chain Architecture Across 47 Network Groups",
+  "dek": "A backend source review records 47 network-labeled RPC groups and 163 configured URL entries, with a roadmap from broad integration coverage to reproducible per-chain execution evidence.",
+  "type": "Engineering Update",
+  "section": "Engineering",
+  "project": "AstroBridge",
+  "phase": "Source inventory reviewed",
+  "phaseTone": "active",
+  "date": "2026-09-26",
+  "displayDate": "September 26, 2026",
+  "byline": "AstroBridge Engineering",
+  "image": "/assets/news-astrobridge.png",
+  "body": [
+    "AstroBridge has developed a broad multi-chain integration layout in its backend. An internal source review dated September 26, 2026 identifies 47 network-labeled groups in its RPC pool, plus two auxiliary groups named SUPER and EDGE. Together, these contain 163 configured URL entries. The inventory documents source coverage; it does not count independently operated servers or establish that every endpoint is currently available.",
+    "The configured network groups include Ethereum, BNB Smart Chain, Polygon, Avalanche, Arbitrum, Optimism, Base, Scroll, Linea, zkSync, Manta, Core, Ronin and Rootstock, among others. Some entries refer to different protocol families or historical network names. Compatibility must therefore be assessed against each network’s current protocol and deployment state.",
+    "This backend scope is broader than any one mobile screen or swap product. The core CHAIN_CONFIG table contains 12 entries, including mainnet, testnet and non-EVM adapter configurations. A separate swap API allowlist contains six networks. These inventories describe different integration layers and must not be added together as a count of fully supported chains.",
+    "The backend contains EVM transaction submission and receipt-handling code, alongside non-EVM adapter entry points. Several non-EVM execution methods in the inspected snapshot still return placeholder identifiers. A protocol label or configured endpoint therefore cannot, by itself, establish signed execution or completed cross-chain settlement.",
+    "The next engineering priorities are a unified capability registry, explicit chain-ID checks, bounded failover within the requested network, and reproducible per-chain acceptance records. Unknown or unsupported requests should be rejected rather than silently redirected to another network. Cross-chain acceptance records should include both the source transaction and destination receipt.",
+    "AstroBridge’s development direction is a non-custodial intent network that helps wallets, applications and agents integrate with multiple chains through consistent authorization, routing and execution records. Broad source coverage is the foundation; repeatable reliability and a useful developer experience are the next milestones."
+  ],
+  "facts": [
+    "47 network-labeled RPC groups plus 2 auxiliary groups in the inspected source.",
+    "163 configured URL entries: 121 in network groups and 42 in auxiliary groups.",
+    "12 core chain configuration entries and a separate 6-network swap allowlist.",
+    "Dated source hashes and the full group inventory accompany this internal review."
+  ],
+  "status": "Internal source capability review dated September 26. Configured network labels are not proof of live availability, universal execution, independent security certification or a measured performance benchmark.",
+  "links": [
+    {
+      "label": "Dated source inventory and review limits",
+      "url": "/data/multichain-layout-2026-09-26.json"
+    }
+  ]
+},
   {
     "slug": "ma-android-security-release-candidate-20260926",
     "title": "MA and MA full Advance to a New Android Security Release Candidate",

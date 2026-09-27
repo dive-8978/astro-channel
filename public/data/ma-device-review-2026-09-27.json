@@ -1,0 +1,43 @@
+{
+  "reportId": "MA-DEVICE-REVIEW-20260927",
+  "date": "2026-09-27",
+  "classification": "Internal engineering review",
+  "version": "1.6.12",
+  "versionCode": 37,
+  "packages": [
+    "com.astrobridge.ma",
+    "com.astrobridge.ma.full"
+  ],
+  "devices": [
+    {
+      "model": "vivo PA2473",
+      "android": "16"
+    },
+    {
+      "model": "OnePlus 7 Pro GM1910",
+      "android": "12"
+    }
+  ],
+  "overallVerdict": "Conditional fail",
+  "automatedRegressionGroupsPassed": 35,
+  "observed": [
+    "Both editions installed and launched on both devices",
+    "Bidirectional foreground messaging",
+    "Answered voice call with connected state for approximately 4m59s; acoustic quality not measured",
+    "English preference retained after restart"
+  ],
+  "blockers": [
+    "Background message notification absent in tested scenario",
+    "Background incoming-call notification/UI absent in tested scenario",
+    "In-app MA web page connection resets on a tested device",
+    "Remaining localized labels and layout defects"
+  ],
+  "notVerified": [
+    "Live-fund transfer",
+    "Cross-chain settlement",
+    "Offline push",
+    "48-device capacity",
+    "Native iOS behavior",
+    "Store approval"
+  ]
+}
