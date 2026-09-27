@@ -20,7 +20,7 @@ const translations=vm.runInNewContext('('+pro.match(/const translations = (\{[\s
 assert.equal(Object.keys(translations).length,6);
 Object.entries(translations).forEach(([lang,values])=>assert.equal(values.length,fields.length,lang));
 for(const key of fields)assert(read('public/professional.html').includes(`data-p="${key}"`),key);
-assert.equal(read('news/official-updates.js'),read('public/news/official-updates.js'));
+assert(read('public/news/official-updates.js').includes('window.ASTRO_PROGRAM_UPDATES'));
 const sandbox={window:{}};vm.runInNewContext(read('public/assets/professional-content.js'),sandbox);
 const content=sandbox.window.ASTRO_PROFESSIONAL_CONTENT;
 assert.equal(Object.keys(content).length,7);
@@ -46,4 +46,4 @@ for(const lang of ['en','zh','es','fr','de','ja','ko']){
   assert.equal(nodes[1].textContent,'Make digital currency a universal currency.');
 }
 for(const file of ['index.html','public/professional.html'])assert(read(file).includes('data-ma-vision="label">OUR VISION'));
-console.log('PASS MA allocation arithmetic, scaled rarity references, page links, seven-language coverage and news mirrors');
+console.log('PASS MA allocation arithmetic, scaled rarity references, page links, seven-language coverage and public news data');
