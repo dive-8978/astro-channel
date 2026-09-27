@@ -51,4 +51,11 @@ const certificateHash=crypto.createHash('sha256').update(fs.readFileSync(certifi
 assert.equal(certificateHash,'50d3f6c714b862706de19aaf35af19f229ca8e142f18ea86094c2f56e8948ee7');
 for(const file of ['public/company.html','public/trust.html'])assert(read(file).includes(certificatePath.replace('public','')));
 assert(read('public/company.html').includes(certificateHash));
+const signatureRecordPath='/company-documents/astrobridge-ci-signature-verification-2026-09-27.html';
+for(const file of ['public/company.html','public/trust.html'])assert(read(file).includes(signatureRecordPath));
+const signatureRecord=read('public'+signatureRecordPath);
+assert(signatureRecord.includes(certificateHash));
+assert(signatureRecord.includes('CMS Verification successful'));
+assert(signatureRecord.includes('-noverify'));
+assert(signatureRecord.includes('did not validate a complete trust chain'));
 console.log('PASS MA policy, seven-language coverage, public news data, and company certificate integrity');
