@@ -77,7 +77,7 @@
     </section>
 
     <section class="panel">
-      <p class="eyebrow">Reproduce the check · 复现核验</p>
+      <p class="eyebrow">Verification command · 核验命令</p>
       <h2>Verification method</h2>
       <p>The PDF signature field was read without altering the source file. Its <code>/ByteRange</code> was reconstructed, the DER CMS object was extracted, and OpenSSL checked the detached signature against those exact bytes. / 核验过程只读访问原文件：重建签名字段的 <code>/ByteRange</code>，提取 DER CMS 对象，再由 OpenSSL 对这些原始字节核验分离式签名。</p>
       <pre><code>openssl cms -verify -binary -inform DER \
@@ -92,10 +92,11 @@ cmp -s astro-ci-signed.bin astro-ci-verified-content.bin \
     </section>
 
     <section class="panel">
-      <div class="boundary"><strong>Scope and limitation / 范围与限制</strong>This check confirms that the PDF bytes covered by the embedded CMS signature are cryptographically consistent with that signature. It used OpenSSL <code>-noverify</code> and did not validate a complete trust chain, current certificate policy, OCSP/CRL revocation status, or an independent trusted timestamp. It is not a financial-services licence, security audit, legal opinion, or additional compliance certification. / 本次核验确认 PDF 中被嵌入式 CMS 签名覆盖的字节与签名在密码学上一致。核验使用 OpenSSL <code>-noverify</code>，没有验证完整信任链、当前证书策略、OCSP/CRL 吊销状态或独立可信时间戳；它不属于金融牌照、安全审计、法律意见或额外合规认证。</div>
+      <div class="boundary"><strong>Scope and limitation / 范围与限制</strong>This check confirms that the PDF bytes covered by the embedded CMS signature are cryptographically consistent with that signature. It used OpenSSL <code>-noverify</code> and did not validate a complete trust chain, current certificate policy, OCSP/CRL revocation status, or an independent trusted timestamp. This cryptographic check does not establish current company-register or business-registration status; verify current status through the Hong Kong Companies Registry. It is not a financial-services licence, security audit, legal opinion, or additional compliance certification. / 本次核验确认 PDF 中被嵌入式 CMS 签名覆盖的字节与签名在密码学上一致。核验使用 OpenSSL <code>-noverify</code>，没有验证完整信任链、当前证书策略、OCSP/CRL 吊销状态或独立可信时间戳。本次密码学核验不证明公司当前登记状态或商业登记状态；当前状态应通过香港公司注册处复核。它不属于金融牌照、安全审计、法律意见或额外合规认证。</div>
       <div class="actions">
         <a class="button primary" href="/company-documents/astrobridge-certificate-of-incorporation-2026-09-14.pdf">Original certificate PDF / 原始证书</a>
         <a class="button" href="https://www.cr.gov.hk/docs/wrpt/wk_new%26changednamecoys_20260914.pdf#page=28" rel="noopener noreferrer">Official weekly record / 官方周报 ↗</a>
+        <a class="button" href="https://www.cr.gov.hk/en/electronic/e-servicesportal/e-search.htm" rel="noopener noreferrer">Registry search / 注册处查询 ↗</a>
         <a class="button" href="/trust.html">Trust Center / 可信中心</a>
       </div>
     </section>
