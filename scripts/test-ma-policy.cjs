@@ -56,6 +56,7 @@ assert(!read('public/company.html').includes('Certificate No. / 证书编号'));
 const signatureRecordPath='/company-documents/astrobridge-ci-signature-verification-2026-09-27.html';
 for(const file of ['public/company.html','public/trust.html'])assert(read(file).includes(signatureRecordPath));
 const signatureRecord=read('public'+signatureRecordPath);
+assert(read('public/sitemap.xml').includes(signatureRecordPath));
 assert(signatureRecord.includes(certificateHash));
 assert(signatureRecord.includes('CMS Verification successful'));
 assert(signatureRecord.includes('-noverify'));
