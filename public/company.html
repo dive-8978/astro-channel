@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050716">
+  <meta name="description" content="Official company profile for AstroBridge Technology Limited, a Hong Kong technology company developing blockchain interoperability, online communications, and AI security technology.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AstroBridge Technology Limited | Company Profile">
+  <meta property="og:description" content="Document-backed company facts, current research focus, and the future AI safety and security direction of AstroBridge Technology Limited.">
+  <meta property="og:url" content="https://www.astrochannel.one/company.html">
+  <meta property="og:image" content="https://www.astrochannel.one/assets/astrobridge-company-logo.png">
+  <link rel="canonical" href="https://www.astrochannel.one/company.html">
+  <link rel="icon" href="/favicon.ico">
+  <title>AstroBridge Technology Limited | Company Profile</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #030411;
+      --surface: rgba(10, 15, 35, .82);
+      --surface-strong: rgba(12, 19, 44, .94);
+      --line: rgba(127, 225, 255, .18);
+      --line-strong: rgba(127, 225, 255, .36);
+      --text: #f4fbff;
+      --muted: #a8cad7;
+      --cyan: #53dcff;
+      --pink: #ff4da6;
+      --green: #72f1b8;
+      --amber: #ffd47a;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% -8%, rgba(83, 220, 255, .18), transparent 32rem),
+        radial-gradient(circle at 95% 8%, rgba(255, 77, 166, .14), transparent 28rem),
+        linear-gradient(180deg, #030411 0%, #06091a 58%, #03040d 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; border-radius: 8px; }
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: -60px;
+      z-index: 20;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #020b12;
+      background: var(--cyan);
+      font-weight: 800;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 16px; }
+    .shell { width: min(calc(100% - 36px), var(--max)); margin-inline: auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(127, 225, 255, .12);
+      background: rgba(3, 4, 17, .82);
+      backdrop-filter: blur(18px);
+    }
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 900; letter-spacing: -.02em; }
+    .brand img { width: 42px; height: 42px; border-radius: 12px; box-shadow: 0 0 24px rgba(83, 220, 255, .28); }
+    .brand span small { display: block; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+    .nav-links a { padding: 9px 12px; border-radius: 999px; color: #d8f5ff; text-decoration: none; font-size: .87rem; font-weight: 750; }
+    .nav-links a:hover { background: rgba(83, 220, 255, .08); color: #fff; }
+    main { padding: 52px 0 72px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(240px, .6fr);
+      gap: 44px;
+      align-items: center;
+      padding: clamp(28px, 6vw, 68px);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      background: linear-gradient(135deg, rgba(13, 20, 47, .94), rgba(5, 10, 27, .82));
+      box-shadow: 0 32px 100px rgba(0, 0, 0, .34);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -170px;
+      bottom: -210px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,77,166,.32), transparent 68%);
+      pointer-events: none;
+    }
+    .eyebrow { margin: 0 0 16px; color: var(--cyan); font-size: .78rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 18px; font-size: clamp(2.45rem, 6.2vw, 5.7rem); line-height: .98; letter-spacing: -.055em; }
+    h1 span { display: block; background: linear-gradient(90deg, #fff 5%, #a8edff 55%, #ffb0d4); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .hero-lead { max-width: 780px; margin-bottom: 0; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.2rem); }
+    .hero-logo { position: relative; z-index: 1; width: min(100%, 285px); justify-self: end; padding: 14px; border: 1px solid var(--line-strong); border-radius: 28px; background: rgba(2, 7, 22, .68); box-shadow: 0 20px 70px rgba(83, 220, 255, .13); }
+    .hero-logo img { display: block; width: 100%; border-radius: 20px; }
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
+    .fact { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .fact small { display: block; margin-bottom: 8px; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+    .fact strong { display: block; color: #fff; font-size: 1rem; line-height: 1.35; }
+    .fact em { display: block; margin-top: 6px; color: #82afbf; font-size: .78rem; font-style: normal; }
+    .section { margin-top: 22px; padding: clamp(26px, 5vw, 48px); border: 1px solid var(--line); border-radius: 26px; background: var(--surface); box-shadow: 0 20px 70px rgba(0,0,0,.18); }
+    .section-heading { max-width: 800px; margin-bottom: 26px; }
+    .section h2 { margin-bottom: 10px; font-size: clamp(1.65rem, 3.2vw, 2.65rem); line-height: 1.1; letter-spacing: -.035em; }
+    .section-heading > p { margin-bottom: 0; color: var(--muted); }
+    .bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .language-panel { padding: 24px; border: 1px solid rgba(255,255,255,.08); border-radius: 19px; background: rgba(2, 7, 22, .58); }
+    .language-panel h3 { margin-bottom: 12px; color: #fff; font-size: 1.08rem; }
+    .language-panel p:last-child { margin-bottom: 0; }
+    .language-tag { display: inline-block; margin-bottom: 14px; color: var(--cyan); font-size: .68rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .focus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .focus-card { min-height: 185px; padding: 24px; border: 1px solid rgba(255,255,255,.08); border-radius: 19px; background: rgba(2,7,22,.62); }
+    .focus-card .number { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-bottom: 18px; border-radius: 10px; color: #03131b; background: linear-gradient(135deg, var(--cyan), #b6f3ff); font-size: .78rem; font-weight: 900; }
+    .focus-card h3 { margin-bottom: 9px; font-size: 1.02rem; }
+    .focus-card p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+    .future { border-color: rgba(255,77,166,.24); background: linear-gradient(135deg, rgba(20,12,40,.9), rgba(8,12,32,.88)); }
+    .future-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+    .future-list li { position: relative; padding: 17px 18px 17px 48px; border: 1px solid rgba(255,77,166,.15); border-radius: 16px; color: #d9eff7; background: rgba(2,7,22,.48); }
+    .future-list li::before { content: "✦"; position: absolute; left: 18px; top: 16px; color: var(--pink); }
+    .boundary { margin-top: 22px; padding: 20px 22px; border: 1px solid rgba(255,212,122,.3); border-radius: 17px; color: #f5dfac; background: rgba(255,212,122,.06); }
+    .boundary strong { display: block; margin-bottom: 5px; color: #fff; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .button { display: inline-flex; align-items: center; min-height: 46px; padding: 10px 17px; border: 1px solid var(--line-strong); border-radius: 13px; color: var(--cyan); background: rgba(83,220,255,.06); text-decoration: none; font-weight: 850; }
+    .button.primary { border: 0; color: #03131b; background: linear-gradient(100deg, var(--cyan), #a8edff); }
+    footer { padding: 30px 0 42px; color: #769aaa; text-align: center; font-size: .84rem; }
+    footer a { color: #9edff1; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-logo { width: 180px; justify-self: start; }
+      .facts { grid-template-columns: 1fr 1fr; }
+      .nav { align-items: flex-start; padding-block: 14px; }
+      .nav-links { max-width: 55%; }
+    }
+    @media (max-width: 700px) {
+      .bilingual, .focus-grid, .future-list { grid-template-columns: 1fr; }
+      .nav-links a:not(:last-child) { display: none; }
+      .nav-links { max-width: none; }
+    }
+    @media (max-width: 520px) {
+      .shell { width: min(calc(100% - 24px), var(--max)); }
+      main { padding-top: 24px; }
+      .hero { padding: 26px 22px; border-radius: 24px; }
+      .hero-logo { width: 132px; }
+      .facts { grid-template-columns: 1fr; }
+      .section { padding: 24px 20px; }
+      .brand span small { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .skip-link { transition: none; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AstroBridge Technology Limited",
+    "alternateName": "AstroBridge",
+    "url": "https://www.astrochannel.one/",
+    "logo": "https://www.astrochannel.one/assets/astrobridge-company-logo.png",
+    "foundingDate": "2026-09-14",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Hong Kong"
+    },
+    "description": "A Hong Kong technology company developing blockchain interoperability, cross-chain transaction infrastructure, online communications, and AI security technologies, with future AI safety and security as a long-term direction.",
+    "sameAs": [
+      "https://x.com/Astro___Channel",
+      "https://github.com/dive-8978/astro-channel"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content / 跳至正文</a>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="/">
+        <img src="/assets/astrobridge-company-logo.png" alt="AstroBridge logo" width="42" height="42">
+        <span>AstroBridge <small>Technology Limited</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home / 首页</a>
+        <a href="/trust.html">Trust / 可信中心</a>
+        <a href="https://x.com/Astro___Channel" rel="noopener noreferrer">X ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content" class="shell">
+    <section class="hero" aria-labelledby="company-title">
+      <div>
+        <p class="eyebrow">Official company profile · 官方公司简介</p>
+        <h1 id="company-title">AstroBridge <span>Technology Limited</span></h1>
+        <p class="hero-lead">A Hong Kong technology company researching and developing software infrastructure for interoperable blockchains, user-controlled digital transactions, online communications, and safer AI systems.</p>
+        <p class="hero-lead" lang="zh-Hans">一家在香港成立的科技公司，研发面向区块链互操作、用户自主数字交易、在线通信与更安全人工智能系统的软件基础设施。</p>
+      </div>
+      <div class="hero-logo"><img src="/assets/astrobridge-company-logo.png" alt="AstroBridge official company mark" width="1290" height="1290"></div>
+    </section>
+
+    <section class="facts" aria-label="Document-backed company facts">
+      <div class="fact"><small>Legal name / 法定名称</small><strong>AstroBridge Technology Limited</strong><em>Document-checked / 文件已核对</em></div>
+      <div class="fact"><small>Registration identifier / 公司登记识别号</small><strong>81225055</strong><em>Source: Certificate of Incorporation</em></div>
+      <div class="fact"><small>Jurisdiction / 注册地</small><strong>Hong Kong</strong><em>Limited company / 有限公司</em></div>
+      <div class="fact"><small>Incorporated / 成立日期</small><strong>14 September 2026</strong><em>2026年9月14日</em></div>
+    </section>
+
+    <section class="section" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">Who we are · 关于我们</p>
+        <h2 id="about-title">Technology for connected digital networks</h2>
+      </div>
+      <div class="bilingual">
+        <article class="language-panel" lang="en">
+          <span class="language-tag">English</span>
+          <h3>Company description</h3>
+          <p>AstroBridge Technology Limited is a Hong Kong technology company developing software and infrastructure for digital networks. Its focus areas include blockchain interoperability protocols and transaction routing, non-custodial blockchain transfers and wallet connectivity, online chat and real-time communications, and AI-assisted security detection, risk analysis, and system protection.</p>
+          <p>AstroBridge is the infrastructure and research brand. MA is the user-facing application family through which selected communication, identity, wallet, and blockchain features are developed and evaluated.</p>
+        </article>
+        <article class="language-panel" lang="zh-Hans">
+          <span class="language-tag">中文</span>
+          <h3>公司简介</h3>
+          <p>AstroBridge Technology Limited 是一家在香港成立的科技公司，研发面向数字网络的软件与技术基础设施。公司的重点方向包括区块链跨链协议与交易路由、非托管区块链转账与钱包连接、在线聊天与实时通信，以及由人工智能辅助的安全检测、风险分析和系统保护。</p>
+          <p>AstroBridge 是基础设施与研发品牌。MA 是面向用户的应用产品系列，用于开发和评估部分通信、身份、钱包与区块链功能。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="focus-title">
+      <div class="section-heading">
+        <p class="eyebrow">Current research focus · 当前研发重点</p>
+        <h2 id="focus-title">Four connected technology areas</h2>
+        <p>These are areas of active research and development. Availability varies by feature, network, build, and deployment stage.</p>
+      </div>
+      <div class="focus-grid">
+        <article class="focus-card"><span class="number">01</span><h3>Blockchain interoperability / 区块链互操作</h3><p>Protocols and routing software for coordinating compatible requests across blockchain networks. / 面向不同区块链网络兼容请求的协议与路由软件。</p></article>
+        <article class="focus-card"><span class="number">02</span><h3>User-controlled transfers / 用户自主转账</h3><p>Non-custodial transaction flows and wallet connectivity designed to keep final authorization with the user. / 非托管交易流程与钱包连接，最终授权由用户掌握。</p></article>
+        <article class="focus-card"><span class="number">03</span><h3>Online communications / 在线通信</h3><p>Messaging, identity, signaling, and real-time communication technologies developed through the MA application family. / 通过 MA 应用产品系列研发聊天、身份、信令与实时通信技术。</p></article>
+        <article class="focus-card"><span class="number">04</span><h3>AI-assisted security / AI 辅助安全</h3><p>Research into risk analysis, anomaly detection, permission controls, and traceable safeguards for connected systems. / 研究面向互联系统的风险分析、异常检测、权限控制与可追踪保护机制。</p></article>
+      </div>
+    </section>
+
+    <section class="section future" aria-labelledby="future-title">
+      <div class="section-heading">
+        <p class="eyebrow">Long-term direction · 长期发展方向</p>
+        <h2 id="future-title">Future AI safety and security / 未来 AI 安全</h2>
+        <p>Future AI safety and security is a long-term core direction for AstroBridge Technology Limited. / 未来 AI 安全是 AstroBridge Technology Limited 的长期核心发展方向。</p>
+      </div>
+      <div class="bilingual">
+        <article class="language-panel" lang="en">
+          <span class="language-tag">Research direction</span>
+          <h3>Safer agents, devices, and automated systems</h3>
+          <p>Planned research includes trusted identity and least-privilege controls for AI agents, protection from malicious instructions and abnormal behavior, model and data privacy, auditability, meaningful human control, and secure authorization for intelligent devices and robotic collaboration.</p>
+        </article>
+        <article class="language-panel" lang="zh-Hans">
+          <span class="language-tag">研发方向</span>
+          <h3>更安全的智能体、设备与自动化系统</h3>
+          <p>计划研究 AI Agent 的可信身份与最小权限控制、恶意指令和异常行为防护、模型与数据隐私、安全审计、人类最终控制，以及智能设备和机器人协作场景中的安全授权。</p>
+        </article>
+      </div>
+      <ul class="future-list">
+        <li>Trusted identity, signatures, and permission boundaries / 可信身份、签名认证与权限边界</li>
+        <li>Prompt-injection and malicious-instruction defense / 提示注入与恶意指令防护</li>
+        <li>Explicit human approval for high-risk actions / 高风险操作的人类明确授权</li>
+        <li>Private, traceable, and auditable system design / 隐私保护、可追踪与可审计设计</li>
+        <li>Risk monitoring and incident response / 风险监测与事件响应</li>
+        <li>Safe robotics orchestration and emergency stops / 机器人安全编排与紧急停止机制</li>
+      </ul>
+      <div class="boundary"><strong>Status boundary / 状态边界</strong>These items describe future research and development. They are not claims that every capability is already in production, independently certified, or able to eliminate all AI risk. / 以上内容属于未来研发与发展方向，不表示所有能力已经投入生产、获得独立认证或能够消除全部 AI 风险。</div>
+    </section>
+
+    <section class="section" aria-labelledby="verify-title">
+      <div class="section-heading">
+        <p class="eyebrow">Verify our public evidence · 核验公开证据</p>
+        <h2 id="verify-title">Facts, source, tests, and boundaries</h2>
+        <p>Our Trust Center separates company facts, public technical controls, automated external checks, and internal engineering evidence. Current registry status can be checked through the Hong Kong Companies Registry. / 可信中心将公司事实、公开技术控制、外部自动化检测与内部工程证据分开呈现；当前登记状态可通过香港公司注册处查询。</p>
+      </div>
+      <div class="actions">
+        <a class="button primary" href="/trust.html">Open Trust Center / 打开可信中心</a>
+        <a class="button" href="https://www.cr.gov.hk/en/electronic/e-servicesportal/e-search.htm" rel="noopener noreferrer">HK Companies Registry / 香港公司注册处 ↗</a>
+        <a class="button" href="https://github.com/dive-8978/astro-channel" rel="noopener noreferrer">Public repository / 公开代码库 ↗</a>
+        <a class="button" href="https://x.com/Astro___Channel" rel="noopener noreferrer">Official X / 官方 X ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <div>© 2026 AstroBridge Technology Limited · Hong Kong · Registration identifier 81225055</div>
+    <div><a href="/ma-privacy.html">Privacy / 隐私</a> · <a href="/ma-data-deletion.html">Data deletion / 数据删除</a> · <a href="/trust.html">Trust / 可信中心</a></div>
+  </footer>
+</body>
+</html>

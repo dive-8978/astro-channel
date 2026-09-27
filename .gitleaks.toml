@@ -1,0 +1,29 @@
+[extend]
+useDefault = true
+
+[[rules]]
+id = "evm-private-key-assignment"
+description = "EVM private key assigned in source or configuration"
+regex = '''(?i)(?:signer[_-]?private[_-]?key|private[_-]?key)\s*[:=]\s*["']?((?:0x)?[0-9a-f]{64})["']?'''
+secretGroup = 1
+keywords = ["private", "signer"]
+
+[rules.allowlist]
+paths = ['''(?i)\.env\.example$''']
+
+[[rules]]
+id = "database-password-assignment"
+description = "Database password assigned in source or configuration"
+regex = '''(?i)(?:db[_-]?password|database[_-]?password)\s*[:=]\s*["']?([^\s"'#]{8,})["']?'''
+secretGroup = 1
+keywords = ["password"]
+
+[rules.allowlist]
+paths = ['''(?i)\.env\.example$''']
+regexes = ['''(?i)(?:replace|example|placeholder|change[-_]?me|local)''']
+
+[[allowlists]]
+description = "Public EVM contract addresses are identifiers, not API secrets"
+targetRules = ["generic-api-key"]
+regexTarget = "line"
+regexes = ['''(?i)\b0x[0-9a-f]{40}\b''']

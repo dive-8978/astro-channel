@@ -1,35 +1,43 @@
-# MemeAstro (MA) Airdrop Backend
+# AstroBridge public website
 
-This repository contains the backend and smart contract for the MemeAstro (MA) Triple Airdrop on BNB Chain.
+This repository contains the source for the public AstroBridge website at
+[www.astrochannel.one](https://www.astrochannel.one/), including public MA
+product information and dated engineering evidence.
 
-## Project Overview
+## Evidence boundaries
 
-- Token: **MemeAstro (MA)**
-- Total Supply: 1000B MA
-- Airdrop Pool: 35% (350B MA)
-- Eco / Dev Pool: 65% (650B MA)
-- Lockup: 3 months for MA airdrop
-- Long-term benefit: Hold MA 6 months → ASTRO mainnet token airdrop (10,000 MA = 1 ASTRO)
+AstroBridge publishes three different types of evidence and labels them
+separately:
 
-## Tech Stack
+- **Official company facts** identify the legal entity and cite the source
+  document used to verify each field.
+- **External automated checks** link to the service that ran the check and show
+  the observation date. A scanner score is not a regulatory approval or an
+  independent audit.
+- **Internal engineering reports** document builds, tests, and deployment
+  boundaries. They are not presented as third-party certification.
 
-- Backend: Node.js + Express + TypeScript
-- Database: PostgreSQL
-- Smart Contract: Solidity (OpenZeppelin ERC20)
+The public evidence index is available at
+[www.astrochannel.one/trust.html](https://www.astrochannel.one/trust.html).
 
-## API Endpoints
-
-| Endpoint                  | Method | Description                        |
-|----------------------------|--------|------------------------------------|
-| `/api/verify-imei`         | POST   | Verify 15-digit IMEI               |
-| `/api/verify-x`            | POST   | Verify X (Twitter) follow          |
-| `/api/verify-bridge`       | POST   | Verify cross-chain transfer        |
-| `/api/reward?wallet=...`  | GET    | Get user reward & verification     |
-| `/api/claim`               | POST   | Claim MA airdrop, returns signature |
-
-## Usage
-
-1. Install dependencies:
+## Local checks
 
 ```bash
-npm install
+npm ci
+npm test
+```
+
+The root build publishes static files from `public/`. Production AstroBridge and
+MA backend services are maintained and deployed separately; files in this
+website repository are not proof that an API is live.
+
+## Security
+
+Please do not open public issues for suspected vulnerabilities. Follow the
+private reporting instructions in [SECURITY.md](SECURITY.md).
+
+## License
+
+No open-source license is granted for this repository. The source is publicly
+viewable for transparency; all rights remain with their respective owners
+unless a file states otherwise.

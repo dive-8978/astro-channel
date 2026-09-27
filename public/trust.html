@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050716">
+  <meta name="description" content="AstroBridge Trust Center: public company facts, source and security controls, automated external assessments, and clearly labeled internal engineering evidence.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AstroBridge Trust Center | Verifiable Public Evidence">
+  <meta property="og:description" content="Inspect AstroBridge company facts, source, security policies, external automated assessments, and internal engineering evidence with explicit boundaries.">
+  <meta property="og:url" content="https://www.astrochannel.one/trust.html">
+  <meta property="og:image" content="https://www.astrochannel.one/assets/astrobridge-company-logo.png">
+  <link rel="canonical" href="https://www.astrochannel.one/trust.html">
+  <link rel="icon" href="/favicon.ico">
+  <title>AstroBridge Trust Center | Verifiable Public Evidence</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #030411;
+      --surface: rgba(10, 15, 35, .84);
+      --surface-2: rgba(4, 9, 26, .68);
+      --line: rgba(127, 225, 255, .18);
+      --line-strong: rgba(127, 225, 255, .38);
+      --text: #f4fbff;
+      --muted: #a8cad7;
+      --cyan: #53dcff;
+      --pink: #ff4da6;
+      --green: #72f1b8;
+      --amber: #ffd47a;
+      --blue: #8fb7ff;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% -5%, rgba(83, 220, 255, .2), transparent 31rem),
+        radial-gradient(circle at 94% 5%, rgba(255, 77, 166, .14), transparent 28rem),
+        linear-gradient(180deg, #030411 0%, #06091a 58%, #03040d 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; border-radius: 8px; }
+    .skip-link { position: fixed; left: 16px; top: -60px; z-index: 20; padding: 10px 14px; border-radius: 10px; color: #020b12; background: var(--cyan); font-weight: 800; transition: top .2s ease; }
+    .skip-link:focus { top: 16px; }
+    .shell { width: min(calc(100% - 36px), var(--max)); margin-inline: auto; }
+    .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(127, 225, 255, .12); background: rgba(3, 4, 17, .82); backdrop-filter: blur(18px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 900; letter-spacing: -.02em; }
+    .brand img { width: 42px; height: 42px; border-radius: 12px; box-shadow: 0 0 24px rgba(83, 220, 255, .28); }
+    .brand span small { display: block; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+    .nav-links a { padding: 9px 12px; border-radius: 999px; color: #d8f5ff; text-decoration: none; font-size: .87rem; font-weight: 750; }
+    .nav-links a:hover { background: rgba(83, 220, 255, .08); color: #fff; }
+    main { padding: 52px 0 72px; }
+    .hero { position: relative; overflow: hidden; padding: clamp(30px, 6vw, 68px); border: 1px solid var(--line); border-radius: 32px; background: linear-gradient(135deg, rgba(13, 20, 47, .96), rgba(5, 10, 27, .82)); box-shadow: 0 32px 100px rgba(0,0,0,.34); }
+    .hero::after { content: ""; position: absolute; width: 380px; height: 380px; right: -170px; top: -220px; border-radius: 50%; background: radial-gradient(circle, rgba(255,77,166,.32), transparent 68%); pointer-events: none; }
+    .eyebrow { margin: 0 0 16px; color: var(--cyan); font-size: .78rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 900px; margin-bottom: 18px; font-size: clamp(2.6rem, 6.4vw, 5.8rem); line-height: .98; letter-spacing: -.055em; background: linear-gradient(90deg, #fff 5%, #a8edff 55%, #ffb0d4); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .hero-lead { max-width: 900px; margin-bottom: 8px; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.2rem); }
+    .updated { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; padding: 8px 12px; border: 1px solid rgba(114,241,184,.25); border-radius: 999px; color: var(--green); background: rgba(114,241,184,.06); font-size: .78rem; font-weight: 800; }
+    .updated::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px var(--green); }
+    .principles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
+    .principle { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+    .principle strong { display: block; margin-bottom: 7px; color: #fff; font-size: .98rem; }
+    .principle span { display: block; color: var(--muted); font-size: .82rem; }
+    .section { margin-top: 22px; padding: clamp(26px, 5vw, 48px); border: 1px solid var(--line); border-radius: 26px; background: var(--surface); box-shadow: 0 20px 70px rgba(0,0,0,.18); }
+    .section-heading { max-width: 860px; margin-bottom: 26px; }
+    .section h2 { margin-bottom: 10px; font-size: clamp(1.65rem, 3.2vw, 2.65rem); line-height: 1.1; letter-spacing: -.035em; }
+    .section-heading > p { margin-bottom: 0; color: var(--muted); }
+    .notice { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 26px; }
+    .notice > div { padding: 20px 22px; border: 1px solid rgba(255,212,122,.28); border-radius: 17px; color: #f2deb0; background: rgba(255,212,122,.055); }
+    .notice strong { display: block; margin-bottom: 5px; color: #fff; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .evidence-card { display: flex; flex-direction: column; min-height: 312px; padding: 24px; border: 1px solid rgba(255,255,255,.09); border-radius: 20px; background: var(--surface-2); }
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+    .category { color: #8eb5c4; font-size: .68rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .status { flex: none; display: inline-flex; align-items: center; min-height: 28px; padding: 4px 9px; border: 1px solid currentColor; border-radius: 999px; font-size: .67rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+    .status.public { color: var(--green); background: rgba(114,241,184,.06); }
+    .status.external { color: var(--blue); background: rgba(143,183,255,.07); }
+    .status.pending { color: var(--amber); background: rgba(255,212,122,.06); }
+    .status.internal { color: var(--pink); background: rgba(255,77,166,.06); }
+    .evidence-card h3 { margin-bottom: 9px; font-size: 1.15rem; }
+    .evidence-card > p { margin-bottom: 17px; color: var(--muted); font-size: .92rem; }
+    .meta { display: grid; gap: 8px; margin: auto 0 0; padding: 15px 0 0; border-top: 1px solid rgba(255,255,255,.08); }
+    .meta-row { display: grid; grid-template-columns: 86px 1fr; gap: 10px; color: #bedae4; font-size: .78rem; }
+    .meta-row b { color: #779ead; font-size: .67rem; letter-spacing: .06em; text-transform: uppercase; }
+    .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .button { display: inline-flex; align-items: center; min-height: 42px; padding: 9px 14px; border: 1px solid var(--line-strong); border-radius: 12px; color: var(--cyan); background: rgba(83,220,255,.06); text-decoration: none; font-size: .82rem; font-weight: 850; }
+    .button:hover { border-color: var(--cyan); background: rgba(83,220,255,.1); }
+    .button.primary { border: 0; color: #03131b; background: linear-gradient(100deg, var(--cyan), #a8edff); }
+    .register { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
+    .register th { padding: 0 14px 5px; color: #779ead; font-size: .68rem; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
+    .register td { padding: 15px 14px; color: #cce8f1; background: rgba(2,7,22,.6); border-top: 1px solid rgba(255,255,255,.07); border-bottom: 1px solid rgba(255,255,255,.07); font-size: .87rem; }
+    .register td:first-child { border-left: 1px solid rgba(255,255,255,.07); border-radius: 13px 0 0 13px; color: #fff; font-weight: 800; }
+    .register td:last-child { border-right: 1px solid rgba(255,255,255,.07); border-radius: 0 13px 13px 0; }
+    .register a { color: var(--cyan); }
+    .pipeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
+    .pipeline li { position: relative; min-height: 160px; padding: 52px 20px 20px; border: 1px solid rgba(255,255,255,.08); border-radius: 18px; color: var(--muted); background: rgba(2,7,22,.55); }
+    .pipeline li::before { counter-increment: step; content: counter(step); position: absolute; top: 16px; left: 18px; display: grid; place-items: center; width: 27px; height: 27px; border-radius: 9px; color: #03131b; background: var(--cyan); font-size: .75rem; font-weight: 900; }
+    .pipeline strong { display: block; margin-bottom: 7px; color: #fff; }
+    footer { padding: 30px 0 42px; color: #769aaa; text-align: center; font-size: .84rem; }
+    footer a { color: #9edff1; }
+    @media (max-width: 900px) {
+      .principles { grid-template-columns: 1fr 1fr; }
+      .pipeline { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; padding-block: 14px; }
+      .nav-links { max-width: 55%; }
+    }
+    @media (max-width: 720px) {
+      .evidence-grid, .notice { grid-template-columns: 1fr; }
+      .register thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      .register, .register tbody, .register tr, .register td { display: block; width: 100%; }
+      .register tr { margin-bottom: 12px; border: 1px solid rgba(255,255,255,.07); border-radius: 14px; background: rgba(2,7,22,.6); }
+      .register td { padding: 10px 14px; border: 0; background: none; }
+      .register td:first-child, .register td:last-child { border: 0; border-radius: 0; }
+      .register td::before { content: attr(data-label); display: block; margin-bottom: 2px; color: #779ead; font-size: .63rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+      .nav-links a:not(:last-child) { display: none; }
+      .nav-links { max-width: none; }
+    }
+    @media (max-width: 520px) {
+      .shell { width: min(calc(100% - 24px), var(--max)); }
+      main { padding-top: 24px; }
+      .hero { padding: 28px 22px; border-radius: 24px; }
+      .principles { grid-template-columns: 1fr; }
+      .section { padding: 24px 20px; }
+      .evidence-card { min-height: 0; }
+      .brand span small { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .skip-link { transition: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content / 跳至正文</a>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="/">
+        <img src="/assets/astrobridge-company-logo.png" alt="AstroBridge logo" width="42" height="42">
+        <span>AstroBridge <small>Trust Center · 可信中心</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home / 首页</a>
+        <a href="/company.html">Company / 公司</a>
+        <a href="https://github.com/dive-8978/astro-channel" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content" class="shell">
+    <section class="hero" aria-labelledby="trust-title">
+      <p class="eyebrow">Evidence, status, and boundaries · 证据、状态与边界</p>
+      <h1 id="trust-title">AstroBridge Trust Center</h1>
+      <p class="hero-lead">Inspect the public facts and controls behind AstroBridge and MA. Every item identifies its source, status, update date, and what the evidence does—and does not—prove.</p>
+      <p class="hero-lead" lang="zh-Hans">核验 AstroBridge 与 MA 背后的公开事实和技术控制。每项证据均标明来源、状态、更新时间，以及它能够和不能够证明的内容。</p>
+      <div class="updated">Last reviewed / 最近复核：27 September 2026 · 2026年9月27日</div>
+    </section>
+
+    <section class="principles" aria-label="Evidence categories">
+      <div class="principle"><strong>Company facts</strong><span>Document-backed / 正式文件核对</span></div>
+      <div class="principle"><strong>Public controls</strong><span>Source and policies / 代码与政策</span></div>
+      <div class="principle"><strong>External checks</strong><span>Automated assessments / 自动化检测</span></div>
+      <div class="principle"><strong>Internal evidence</strong><span>Engineering records / 工程记录</span></div>
+    </section>
+
+    <section class="section" aria-labelledby="evidence-title">
+      <div class="section-heading">
+        <p class="eyebrow">Evidence register · 证据登记</p>
+        <h2 id="evidence-title">Publicly inspectable evidence</h2>
+        <p>Links open the current public source or live assessment page. Scores and workflow results can change after a new deployment or scan. / 链接指向当前公开来源或实时检测页面；新部署或重新扫描后，分数与工作流结果可能变化。</p>
+      </div>
+
+      <div class="notice">
+        <div><strong>Automated assessment / 自动化检测</strong>MDN Observatory, SSL Labs, Internet.nl, CodeQL, and OpenSSF Scorecard are technical signals produced by automated tools. They are not government approval, regulatory licensing, legal compliance certification, or a complete security audit.</div>
+        <div lang="zh-Hans"><strong>证据边界</strong>MDN Observatory、SSL Labs、Internet.nl、CodeQL 与 OpenSSF Scorecard 是自动化工具产生的技术信号，不等于政府批准、监管许可、法律合规认证或完整安全审计。</div>
+      </div>
+
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">Company identity / 公司身份</span><span class="status public">Document-checked</span></div>
+          <h3>Hong Kong incorporation facts / 香港公司成立事实</h3>
+          <p>Certificate-backed facts: AstroBridge Technology Limited, registration identifier 81225055, Hong Kong, incorporated on 14 September 2026. Current registry status should be checked through the Hong Kong Companies Registry. Sensitive addresses and personal details are not published here. / 已依据公司注册证核对法定名称、登记识别号、注册地及成立日期；当前登记状态应通过香港公司注册处查询。本页不公开敏感地址或个人资料。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>Legal identity fact record / 法律主体事实记录</span></div>
+            <div class="meta-row"><b>Updated</b><span>2026-09-27</span></div>
+            <div class="meta-row"><b>Boundary</b><span>Document review; not a claim of a regulated financial licence. / 文件核对，不代表获得受监管金融牌照。</span></div>
+          </div>
+          <div class="actions"><a class="button primary" href="/company.html">Company profile / 公司简介</a><a class="button" href="https://www.cr.gov.hk/en/electronic/e-servicesportal/e-search.htm" rel="noopener noreferrer">HK Companies Registry / 香港公司注册处 ↗</a></div>
+        </article>
+
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">Public controls / 公开控制</span><span class="status public">Published</span></div>
+          <h3>Source, security policy, and security.txt / 源码与安全政策</h3>
+          <p>The public repository, vulnerability reporting policy, and standard security contact file make project ownership and reporting paths inspectable. / 公开代码库、漏洞报告政策与标准 security.txt，使项目代码和安全报告路径可以核验。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>Public-source governance and vulnerability intake / 公开源码治理与漏洞受理</span></div>
+            <div class="meta-row"><b>Updated</b><span>2026-09-27</span></div>
+            <div class="meta-row"><b>Boundary</b><span>Publication is a control; it does not prove that no vulnerability exists. / 公开控制不代表系统不存在漏洞。</span></div>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/dive-8978/astro-channel" rel="noopener noreferrer">Repository ↗</a>
+            <a class="button" href="https://github.com/dive-8978/astro-channel/security/policy" rel="noopener noreferrer">Security policy ↗</a>
+            <a class="button" href="/.well-known/security.txt">security.txt</a>
+          </div>
+        </article>
+
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">Static analysis / 静态分析</span><span class="status pending">Publication pending</span></div>
+          <h3>GitHub CodeQL</h3>
+          <p>The CodeQL workflow is prepared and awaiting publication through an authorized GitHub workflow update. No scan result is claimed until the first workflow completes. / CodeQL 工作流已准备完成，正等待通过获得授权的 GitHub 工作流更新发布；首次运行完成前，不对结果作任何“通过”表述。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>Automated source-code analysis / 自动化源码分析</span></div>
+            <div class="meta-row"><b>Updated</b><span>Prepared 2026-09-27</span></div>
+            <div class="meta-row"><b>Boundary</b><span>Automated analysis, not certification or a manual penetration test. / 自动化分析，不是认证或人工渗透测试。</span></div>
+          </div>
+          <div class="actions"><a class="button primary" href="https://github.com/dive-8978/astro-channel/security/code-scanning" rel="noopener noreferrer">Open live results ↗</a></div>
+        </article>
+
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">Supply-chain posture / 供应链状态</span><span class="status pending">Publication pending</span></div>
+          <h3>OpenSSF Scorecard</h3>
+          <p>The Scorecard workflow is prepared and awaiting publication through an authorized GitHub workflow update. A score will be shown only after a successful public run. / Scorecard 工作流已准备完成，正等待通过获得授权的 GitHub 工作流更新发布；只有公开运行成功后才会展示分数。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>Automated open-source security posture / 自动化开源安全状态</span></div>
+            <div class="meta-row"><b>Updated</b><span>Prepared 2026-09-27</span></div>
+            <div class="meta-row"><b>Boundary</b><span>A score is not an audit, guarantee, or regulatory approval. / 分数不是审计、保证或监管批准。</span></div>
+          </div>
+          <div class="actions"><a class="button primary" href="https://scorecard.dev/viewer/?uri=github.com/dive-8978/astro-channel" rel="noopener noreferrer">Open Scorecard viewer ↗</a></div>
+        </article>
+
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">Web headers / 网页响应头</span><span class="status external">Automated assessment</span></div>
+          <h3>MDN HTTP Observatory</h3>
+          <p>MDN Observatory checks a defined set of browser-facing HTTP security headers. Use the linked live result for the current grade and scan time. / MDN Observatory 检查一组面向浏览器的 HTTP 安全响应头；当前评分和检测时间以实时结果页为准。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>External automated website configuration check / 外部网站配置自动检测</span></div>
+            <div class="meta-row"><b>Updated</b><span>Live result / 实时结果</span></div>
+            <div class="meta-row"><b>Boundary</b><span>Header coverage only; not full application security certification. / 仅覆盖响应头，不是完整应用安全认证。</span></div>
+          </div>
+          <div class="actions"><a class="button primary" href="https://developer.mozilla.org/en-US/observatory/analyze?host=www.astrochannel.one" rel="noopener noreferrer">Open MDN result ↗</a></div>
+        </article>
+
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">TLS configuration / TLS 配置</span><span class="status external">Automated assessment</span></div>
+          <h3>Qualys SSL Labs Server Test</h3>
+          <p>SSL Labs tests the public HTTPS endpoint's TLS protocol and certificate configuration. Results can differ by endpoint and deployment. / SSL Labs 检测公开 HTTPS 端点的 TLS 协议与证书配置；结果可能随端点和部署变化。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>External automated TLS assessment / 外部 TLS 自动化评估</span></div>
+            <div class="meta-row"><b>Updated</b><span>Live result / 实时结果</span></div>
+            <div class="meta-row"><b>Boundary</b><span>TLS configuration report; not product or company certification. / TLS 配置报告，不是产品或公司认证。</span></div>
+          </div>
+          <div class="actions"><a class="button primary" href="https://www.ssllabs.com/ssltest/analyze.html?d=www.astrochannel.one" rel="noopener noreferrer">Open SSL Labs result ↗</a></div>
+        </article>
+
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">Internet standards / 互联网标准</span><span class="status external">Automated assessment</span></div>
+          <h3>Internet.nl Website Test</h3>
+          <p>Internet.nl checks selected modern internet standards, including HTTPS, DNSSEC, IPv6, security options, and RPKI where applicable. / Internet.nl 检查 HTTPS、DNSSEC、IPv6、安全选项及适用时的 RPKI 等现代互联网标准。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>External automated standards conformance check / 外部标准符合性自动检测</span></div>
+            <div class="meta-row"><b>Updated</b><span>Live result / 实时结果</span></div>
+            <div class="meta-row"><b>Boundary</b><span>Scope is limited to the standards tested; it is not legal compliance certification. / 范围限于所测标准，不是法律合规认证。</span></div>
+          </div>
+          <div class="actions"><a class="button primary" href="https://internet.nl/site/www.astrochannel.one/" rel="noopener noreferrer">Open Internet.nl result ↗</a></div>
+        </article>
+
+        <article class="evidence-card">
+          <div class="card-top"><span class="category">Engineering evidence / 工程证据</span><span class="status internal">Internal report</span></div>
+          <h3>MA / AstroBridge integration readiness</h3>
+          <p>A dated internal report separates tested implementation, observed production endpoints, and deployment work that remained pending at the report date. / 有日期的内部报告将已测试实现、已观察的生产端点与报告时仍待部署的工作分开记录。</p>
+          <div class="meta">
+            <div class="meta-row"><b>Category</b><span>Internal engineering readiness record / 内部工程就绪记录</span></div>
+            <div class="meta-row"><b>Updated</b><span>Report issued 2026-09-24</span></div>
+            <div class="meta-row"><b>Boundary</b><span>Not an independent third-party audit, legal opinion, or regulatory certification. / 不是第三方独立审计、法律意见或监管认证。</span></div>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="/astrobridge-internal-certification.html">Open internal report</a>
+            <a class="button" href="/audits/ma-astrobridge-integration-2026-09-24.json">Machine-readable evidence</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="register-title">
+      <div class="section-heading">
+        <p class="eyebrow">Claim register · 声明登记</p>
+        <h2 id="register-title">What each label means</h2>
+        <p>We publish a label only when the underlying evidence exists. Pending work remains visibly pending. / 只有底层证据真实存在时才发布相应标签；未完成的项目始终明确标注为待完成。</p>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="register">
+          <thead><tr><th>Label</th><th>Evidence owner</th><th>Meaning</th><th>Does not mean</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Label">Document-checked / 文件已核对</td><td data-label="Owner">AstroBridge record review</td><td data-label="Meaning">Fact matched to an official company document.</td><td data-label="Limit">Government endorsement or regulated licence.</td></tr>
+            <tr><td data-label="Label">Published / 已公开</td><td data-label="Owner">AstroBridge public repository</td><td data-label="Meaning">The control or policy can be inspected publicly.</td><td data-label="Limit">Proof that no defect or vulnerability exists.</td></tr>
+            <tr><td data-label="Label">Automated assessment / 自动化检测</td><td data-label="Owner">Named external tool</td><td data-label="Meaning">The tool checked its documented technical scope.</td><td data-label="Limit">Manual audit, certification, or legal compliance.</td></tr>
+            <tr><td data-label="Label">Internal report / 内部报告</td><td data-label="Owner">AstroBridge engineering</td><td data-label="Meaning">A dated record of specified builds, tests, and observations.</td><td data-label="Limit">Independent assurance or third-party security audit.</td></tr>
+            <tr><td data-label="Label">Pending / 待完成</td><td data-label="Owner">Named workflow or application</td><td data-label="Meaning">The control is prepared or enabled, but a result is not yet claimed.</td><td data-label="Limit">A pass, award, certification, or completed review.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="process-title">
+      <div class="section-heading">
+        <p class="eyebrow">Publication rule · 发布规则</p>
+        <h2 id="process-title">Evidence before badges</h2>
+        <p>Free programs and public scanners can improve transparency, but a badge is published only after the current result can be verified. / 免费项目和公开检测可以提升透明度，但只有当前结果可被核验后才会展示徽章。</p>
+      </div>
+      <ol class="pipeline">
+        <li><strong>Prepare / 准备</strong>Publish the relevant policy, control, or technical change and identify its owner.</li>
+        <li><strong>Verify / 核验</strong>Run the external check or workflow, inspect the result, and preserve its date and scope.</li>
+        <li><strong>Describe accurately / 准确说明</strong>Publish the result with its limits; remove or update stale evidence when the underlying state changes.</li>
+      </ol>
+      <div class="actions">
+        <a class="button primary" href="/company.html">Company profile / 公司简介</a>
+        <a class="button" href="https://github.com/dive-8978/astro-channel/security/policy" rel="noopener noreferrer">Report a vulnerability / 报告漏洞 ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <div>© 2026 AstroBridge Technology Limited · Evidence reviewed 2026-09-27</div>
+    <div><a href="/company.html">Company / 公司</a> · <a href="/ma-privacy.html">Privacy / 隐私</a> · <a href="/.well-known/security.txt">Security contact / 安全联系</a></div>
+  </footer>
+</body>
+</html>
