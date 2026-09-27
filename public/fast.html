@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AstroBridge • 极速跨链模式 (v8.0)</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Exo+2:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+  <script src="/vendor/tailwindcss/3.4.17/tailwindcss.js"></script>
+  <link href="/vendor/fonts/orbitron/5.3.0/font.css" rel="stylesheet">
+  <link href="/vendor/fonts/exo-2/5.3.0/font.css" rel="stylesheet">
+  <link href="/vendor/fontawesome-free/7.3.1/css/all.min.css" rel="stylesheet">
+  <script src="/vendor/ethers/6.13.2/ethers.umd.min.js"></script>
 
   <style>
     body {
       background: #02000d;
-      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
+      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('/assets/third-party/pillarsofcreation-composite-esa-webb.jpg');
       background-size: cover; background-position: center; background-attachment: fixed;
       color: #e3f2fd; font-family: 'Exo 2', sans-serif;
     }
@@ -24,6 +25,9 @@
   </style>
 </head>
 <body class="min-h-screen">
+<aside aria-label="Background image credit" style="position:fixed;right:10px;bottom:8px;z-index:70;max-width:min(760px,calc(100vw - 20px));padding:4px 7px;background:rgba(2,0,13,.78);color:#cbd5e1;font:10px/1.35 system-ui,sans-serif;border-radius:4px;text-align:right">
+  Background image: <a href="https://esawebb.org/images/pillarsofcreation_composite/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">NASA, ESA, CSA, STScI, J. DePasquale (STScI), A. Pagan (STScI), A. M. Koekemoer (STScI)</a>
+</aside>
 
 <div class="max-w-3xl mx-auto pt-10 px-6">
 

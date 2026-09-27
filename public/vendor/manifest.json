@@ -1,0 +1,947 @@
+{
+  "schemaVersion": 1,
+  "generatedOn": "2026-09-27",
+  "scope": "AstroBridge public website vendored runtime assets; technical inventory pending designated legal review",
+  "components": [
+    {
+      "name": "tailwindcss-browser",
+      "version": "3.4.17",
+      "license": "MIT",
+      "source": "https://cdn.tailwindcss.com/3.4.17",
+      "notice": "public/vendor/tailwindcss/3.4.17/LICENSE",
+      "references": [
+        "public/AstroSwap.html",
+        "public/console.html",
+        "public/fast.html",
+        "public/products.html",
+        "public/roadmap.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/tailwindcss/3.4.17/LICENSE",
+          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
+          "bytes": 1071
+        },
+        {
+          "path": "public/vendor/tailwindcss/3.4.17/package.json",
+          "sha256": "56330837214a14ffcf0faba46f0f94fb23209778f5d4cc0a2bed7d775108c8d1",
+          "bytes": 3430
+        },
+        {
+          "path": "public/vendor/tailwindcss/3.4.17/tailwindcss.js",
+          "sha256": "176e894661aa9cdc9a5cba6c720044cbbf7b8bd80d1c9a142a7c24b1b6c50d15",
+          "bytes": 407279
+        }
+      ]
+    },
+    {
+      "name": "@fortawesome/fontawesome-free",
+      "version": "7.3.1",
+      "license": "CC-BY-4.0 AND OFL-1.1 AND MIT",
+      "source": "npm:@fortawesome/fontawesome-free@7.3.1",
+      "notice": "public/vendor/fontawesome-free/7.3.1/LICENSE.txt",
+      "references": [
+        "public/console.html",
+        "public/fast.html",
+        "public/products.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/fontawesome-free/7.3.1/LICENSE.txt",
+          "sha256": "20c6f40715a567c97b80f6944beb8bb325835cab47ea7dcab89ee3b8e077eced",
+          "bytes": 7427
+        },
+        {
+          "path": "public/vendor/fontawesome-free/7.3.1/css/all.min.css",
+          "sha256": "e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b",
+          "bytes": 90336
+        },
+        {
+          "path": "public/vendor/fontawesome-free/7.3.1/package.json",
+          "sha256": "62645083964d411622a0ecdede32bc20b36236c194bc5fd11ea21a0099f7d059",
+          "bytes": 709
+        },
+        {
+          "path": "public/vendor/fontawesome-free/7.3.1/webfonts/fa-brands-400.woff2",
+          "sha256": "ff66d1cfb67dbe3da432bbe36572cabfa4eef0e591303c2cba111474ba1d15bc",
+          "bytes": 115420
+        },
+        {
+          "path": "public/vendor/fontawesome-free/7.3.1/webfonts/fa-regular-400.woff2",
+          "sha256": "f4722d10b9e1b41eefe3b51a026312ee1970edb7782f94b0080d3d475945734c",
+          "bytes": 19512
+        },
+        {
+          "path": "public/vendor/fontawesome-free/7.3.1/webfonts/fa-solid-900.woff2",
+          "sha256": "24e5fae26b41c08b2df81c91669f5aaae71d81a84a4713fc56b5c621b78dd456",
+          "bytes": 119488
+        },
+        {
+          "path": "public/vendor/fontawesome-free/7.3.1/webfonts/fa-v4compatibility.woff2",
+          "sha256": "c776ee1f1fe21cd72195e91de7afd5c9dbd007e9d06016254d65fbcc091398ca",
+          "bytes": 4168
+        }
+      ]
+    },
+    {
+      "name": "@fontsource/inter",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "source": "npm:@fontsource/inter@5.3.0",
+      "notice": "public/vendor/fonts/inter/5.3.0/LICENSE",
+      "references": [
+        "index.html",
+        "public/astrobridge-internal-certification.html",
+        "public/community.html",
+        "public/ma-burn.html",
+        "public/ma-card-redemption.html",
+        "public/ma-mother-love.html",
+        "public/memeastro.html",
+        "public/painpoints.html",
+        "public/progress.html",
+        "public/roadmap.html",
+        "public/team.html",
+        "public/technology.html",
+        "public/tokenomics.html",
+        "public/vision.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/LICENSE",
+          "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+          "bytes": 4477
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-400-normal.woff2",
+          "sha256": "f0bb586459ce8f09b238285040f17e3e9e9538b2c5a7aae0775194e33c36c3c3",
+          "bytes": 7712
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-500-normal.woff2",
+          "sha256": "b77a86ec16aadc157f4a99e8898d71cd75ea264753d9bdf13f962f8c3988cbb0",
+          "bytes": 7900
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-600-normal.woff2",
+          "sha256": "6c2a37f82a676bcd441b735e4e2cda4edb8873a059ab9c362a84f0711f257041",
+          "bytes": 7972
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-700-normal.woff2",
+          "sha256": "5917871d3cc970d8ce195101cbf65c1f68ec948022eb6070030342bb7edfb3bb",
+          "bytes": 7904
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-800-normal.woff2",
+          "sha256": "e84cb164b47aaad63db12da876c341c59f78b6b25f9069dcdea3c1f8ca8b8f9b",
+          "bytes": 7992
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-900-normal.woff2",
+          "sha256": "b077cd77ee8e020e7abee610cdd384f31443257ebd921077646b1239421635ae",
+          "bytes": 7808
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-ext-400-normal.woff2",
+          "sha256": "ef572f9187a8be018d9d9c2c6b77c1f6cb2af4199f02fc16c292ea10ab25a2cc",
+          "bytes": 10232
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-ext-500-normal.woff2",
+          "sha256": "1c2db92d3cd9b237ca7c9c07af556d542f28ded1db54cd4382cf776501c5291f",
+          "bytes": 10432
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-ext-600-normal.woff2",
+          "sha256": "509fca9c59564f9a846fa69bc647f9b050fc11abf1c9f6f3da71fb2d5ed425bd",
+          "bytes": 10484
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-ext-700-normal.woff2",
+          "sha256": "a46b99781170971e2c99a87ff7ee9f5cf90a9dfcd18175e1be6300201d030123",
+          "bytes": 10496
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-ext-800-normal.woff2",
+          "sha256": "5c3f504d068a53469514175401cb3fe4d210231f44df0ef15d3da5f32d9ff445",
+          "bytes": 10440
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-cyrillic-ext-900-normal.woff2",
+          "sha256": "bab6fa98dec970eb67cd74cf7c9da3c18eb924eb381314544b5da2448b789e81",
+          "bytes": 10164
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-400-normal.woff2",
+          "sha256": "c15ddd00a9927b56f5c655a41f976f79bd848a20cce91fc14227751872a1cc27",
+          "bytes": 7776
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-500-normal.woff2",
+          "sha256": "cc197d79d33a3615a047baae85f4d1957f6f98b8898313658e160b1d519b1b6f",
+          "bytes": 7920
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-600-normal.woff2",
+          "sha256": "9c5a897f9d9fcfe60d90631d766ae62b4bf1edd76633fa7a4b2f8c87e036789b",
+          "bytes": 7944
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-700-normal.woff2",
+          "sha256": "737c6c91cd60372d30e6540096ada83c89c9b4613cd7472e3366bf2e07ad99f1",
+          "bytes": 7920
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-800-normal.woff2",
+          "sha256": "18a6a4a8e29310db74c01b9d85b30e708e0b1fd8d9a2d01a259b82fe4d112422",
+          "bytes": 7892
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-900-normal.woff2",
+          "sha256": "b247a595e1774ac8274daad7061f6e2f4638a1f3ab73a89afcf4fef1a2e1a2e5",
+          "bytes": 7840
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-ext-400-normal.woff2",
+          "sha256": "eadedd9e13c2582430a9fb1519eb86152fdabb483a6f66d90f8d8a52e977a1b7",
+          "bytes": 5264
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-ext-500-normal.woff2",
+          "sha256": "75a9ec9383a3b7a7bf7cfb94f64edf38d9cfdc5f7ffa0cbed2733627a6e4426d",
+          "bytes": 5428
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-ext-600-normal.woff2",
+          "sha256": "399f94d75aa73403e40e2353e8c0cc75c38f7362a6ca263b3b02d9723157ffe5",
+          "bytes": 5432
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-ext-700-normal.woff2",
+          "sha256": "b7b2732ebc981b30a5463ffc850407649dba41e625aee124cc63293da4547629",
+          "bytes": 5444
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-ext-800-normal.woff2",
+          "sha256": "33bc91a610e159df66b874231f4c8f0037ac947fdd1b270cc60a7ee658a2c21f",
+          "bytes": 5548
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-greek-ext-900-normal.woff2",
+          "sha256": "0a5995a6b462e34fa2663f4d8dad1684d2b55eb28999b2bc85274cd055f498e5",
+          "bytes": 5348
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-400-normal.woff2",
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+          "bytes": 23664
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-500-normal.woff2",
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+          "bytes": 24272
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-600-normal.woff2",
+          "sha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+          "bytes": 24452
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-700-normal.woff2",
+          "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491",
+          "bytes": 24356
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-800-normal.woff2",
+          "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d",
+          "bytes": 24400
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-900-normal.woff2",
+          "sha256": "d5c0ed7b8b5dde97d48b97947d740bbd8ad3ba9f2c5cc6b8280f16acba2d828e",
+          "bytes": 23900
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-ext-400-normal.woff2",
+          "sha256": "6744a7f509ebc6ab220a6cd4ea77e898adf014f03d88dcda5d45d8a9feefb4e9",
+          "bytes": 35000
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-ext-500-normal.woff2",
+          "sha256": "2c6fbc42d315528beb06c1096df45487bf4186c4b78b8111d12c9c951f8acca2",
+          "bytes": 36024
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-ext-600-normal.woff2",
+          "sha256": "e4bdf67b0cd15ca9e184509275be95db942195d3cc2b17f6a0452f2adf75d0bf",
+          "bytes": 36260
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-ext-700-normal.woff2",
+          "sha256": "143f9504f1377012aa3e39c90c4354ef429cb0494b9ac0e1437f1a81e5412236",
+          "bytes": 36244
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-ext-800-normal.woff2",
+          "sha256": "eade55593308b9e4916dd7f47826929ce3e40cad85a2b338d56e5fd1e7bf8e5e",
+          "bytes": 36128
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-latin-ext-900-normal.woff2",
+          "sha256": "de536299a1eeca46fe494787380486ec890627e0d50e1be18ef6001cbd1e5105",
+          "bytes": 35328
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-vietnamese-400-normal.woff2",
+          "sha256": "547ad9fdaeb0ae43487f4b8a02e47c36553c0c0cb73c8aa98f93b7b615f6b55d",
+          "bytes": 4972
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-vietnamese-500-normal.woff2",
+          "sha256": "44e36aa5a8f12130029a29bb0e6695d0262b67446ce321e878b1fb56162b5de6",
+          "bytes": 5112
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-vietnamese-600-normal.woff2",
+          "sha256": "1aeb94ae9db052a4a2fe6f3046f928cff1fdbd7abdf870a9a01c13cae6faeba5",
+          "bytes": 5100
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-vietnamese-700-normal.woff2",
+          "sha256": "5fafa3829a16d9ea5ac3a67c51e54186353122790b604a3e361f96cab188da8b",
+          "bytes": 5104
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-vietnamese-800-normal.woff2",
+          "sha256": "37852ffd38e1064bd06a0b95aed12cbb4f248c6f0b5ffcf9c1a4ffc40500b22c",
+          "bytes": 5176
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/files/inter-vietnamese-900-normal.woff2",
+          "sha256": "885b386e9391ec4856c6dc78fff64ecaae1b9995a4b766a6900d6fb3b0d6744d",
+          "bytes": 5028
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/font.css",
+          "sha256": "86454086ff20ca95fd5c3c4483a23f46f7fc9e9e479c9d7dc542e545ebbf068d",
+          "bytes": 13403
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/metadata.json",
+          "sha256": "c2c4b99241edcf1bc2653e9b1d3713d5074f38e819239c550c0159cb534457d9",
+          "bytes": 951
+        },
+        {
+          "path": "public/vendor/fonts/inter/5.3.0/package.json",
+          "sha256": "05d03ec21754e37cf7da007c840e2f0a893c8161a53ee782d7c810e8a99c7cc5",
+          "bytes": 1446
+        }
+      ]
+    },
+    {
+      "name": "@fontsource/space-grotesk",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "source": "npm:@fontsource/space-grotesk@5.3.0",
+      "notice": "public/vendor/fonts/space-grotesk/5.3.0/LICENSE",
+      "references": [
+        "public/ma-burn.html",
+        "public/ma-card-redemption.html",
+        "public/ma-mother-love.html",
+        "public/painpoints.html",
+        "public/roadmap.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/LICENSE",
+          "sha256": "18a4de52385f6b988782639d5d0cc1326e5a8c2de9a7f01d7b20d9aedcc60943",
+          "bytes": 4401
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-latin-500-normal.woff2",
+          "sha256": "1b1a8131d9edf975d9decee81e2f2bf504812f7a4f498e5500f28a613e22e64c",
+          "bytes": 13312
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-latin-600-normal.woff2",
+          "sha256": "685bbbf69fa616df1ef81847c85fc76be097ddfb3468ff2257be54511ab3130f",
+          "bytes": 13284
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-latin-700-normal.woff2",
+          "sha256": "35f8aec56cfd5cbfdb03cc68733a54a0b05bb3617ffcd5fd332badc0b045ca55",
+          "bytes": 12840
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-latin-ext-500-normal.woff2",
+          "sha256": "ed7e064eda944f88ce2f40101ec20e214004decdf5c0b9ad9219ae21be2dbf13",
+          "bytes": 12272
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-latin-ext-600-normal.woff2",
+          "sha256": "0bdc872e2806e0eb2ecca08221ea0b49d36efd9b9239a5744b81afbc0376e9cf",
+          "bytes": 12288
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-latin-ext-700-normal.woff2",
+          "sha256": "7ce350b706d79c955ebf91314295f39fa82999f980b7e9beee743c2f3580a15e",
+          "bytes": 11992
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-vietnamese-500-normal.woff2",
+          "sha256": "d5eb999d825de1ad0c6f81ccca6958906f3288d1368106a71fa16f4b36b57933",
+          "bytes": 4324
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-vietnamese-600-normal.woff2",
+          "sha256": "21ea402c1d5a8f928f5d338b7c8b5f807efa12795cca0cbdc9938cad1474a6d8",
+          "bytes": 4312
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/files/space-grotesk-vietnamese-700-normal.woff2",
+          "sha256": "96a6d0a746a024bfbcc0b09ed15278755070d73b686e6856458dd0ca8f5d772a",
+          "bytes": 4204
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/font.css",
+          "sha256": "61c87485075b72493a919fe962471ee8356de4d0ea93493f097eac8cc59e6642",
+          "bytes": 3641
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/metadata.json",
+          "sha256": "dbe18757008ad3d0b4502002e3f0907ad59cab8002305fd29f63fdefbdbd22ba",
+          "bytes": 640
+        },
+        {
+          "path": "public/vendor/fonts/space-grotesk/5.3.0/package.json",
+          "sha256": "d2e083756e468e319238102db5585e9aaeb0318c9ec4726d1f7c07a12aba2da4",
+          "bytes": 1494
+        }
+      ]
+    },
+    {
+      "name": "@fontsource/orbitron",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "source": "npm:@fontsource/orbitron@5.3.0",
+      "notice": "public/vendor/fonts/orbitron/5.3.0/LICENSE",
+      "references": [
+        "astro-bridge/bridge.html",
+        "public/AstroSwap.html",
+        "public/console.html",
+        "public/fast.html",
+        "public/products.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/fonts/orbitron/5.3.0/LICENSE",
+          "sha256": "075b0137b7a19be521031442001478342ebafc1923f01092b8dc51afc4341041",
+          "bytes": 4388
+        },
+        {
+          "path": "public/vendor/fonts/orbitron/5.3.0/files/orbitron-latin-400-normal.woff2",
+          "sha256": "9320ca80be2f4275e7aaa009bc058b9ea46264d4f92b06f0b822c3405cf45841",
+          "bytes": 6396
+        },
+        {
+          "path": "public/vendor/fonts/orbitron/5.3.0/files/orbitron-latin-500-normal.woff2",
+          "sha256": "c13360768270c65d6c97701b100a88993885671dfdfd2a400aa58ea0195381ea",
+          "bytes": 6596
+        },
+        {
+          "path": "public/vendor/fonts/orbitron/5.3.0/files/orbitron-latin-700-normal.woff2",
+          "sha256": "ee6acc5ad5349018f9ca71fab8118144160e110838931874150a1ac3f97db38d",
+          "bytes": 6528
+        },
+        {
+          "path": "public/vendor/fonts/orbitron/5.3.0/font.css",
+          "sha256": "0967b1ece168e0a7f8791cc14b46d637c621637457578b8a5af5dfb5c4c8e49d",
+          "bytes": 1136
+        },
+        {
+          "path": "public/vendor/fonts/orbitron/5.3.0/metadata.json",
+          "sha256": "b51893fb8a37bc760225245099b5e2d7ca7091a584783b25fc2df0f06a7e1b98",
+          "bytes": 595
+        },
+        {
+          "path": "public/vendor/fonts/orbitron/5.3.0/package.json",
+          "sha256": "2bc1e7b80b9274f4f1ae76fa3147062cda4fb3798acd26ae9a51b5f82b77f8cf",
+          "bytes": 1464
+        }
+      ]
+    },
+    {
+      "name": "@fontsource/exo-2",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "source": "npm:@fontsource/exo-2@5.3.0",
+      "notice": "public/vendor/fonts/exo-2/5.3.0/LICENSE",
+      "references": [
+        "public/console.html",
+        "public/fast.html",
+        "public/products.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/LICENSE",
+          "sha256": "7644b74e07215f62af4ebbfcf2b0f06a428d70d32c41e751fba93763a683c3f5",
+          "bytes": 4489
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-cyrillic-300-normal.woff2",
+          "sha256": "6ad464969635459f1e612664f65bffb87fffcad7288670c7e2f94bee5dc69f57",
+          "bytes": 7844
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-cyrillic-400-normal.woff2",
+          "sha256": "fa7e0b05b08b8279a7390d43e3b93d3b814006b949ec8c5ea009372c7fed72dc",
+          "bytes": 7852
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-cyrillic-500-normal.woff2",
+          "sha256": "8ed23b777072f55597385dfaf72d596168598e432d6b7b6bda2ff02b8c11b145",
+          "bytes": 8000
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-cyrillic-ext-300-normal.woff2",
+          "sha256": "61c8800885b58c767b744b93901d666ae2f101858bf2abc11058c1dbe02893fa",
+          "bytes": 10084
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-cyrillic-ext-400-normal.woff2",
+          "sha256": "0721ec73cde573a6ca648cda243950d3427e63f2d85606ebb3b32296601dfa40",
+          "bytes": 9836
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-cyrillic-ext-500-normal.woff2",
+          "sha256": "2877e3910d5757fcbe937343d082f288b316e30ef2a183a3b23798f856094ac6",
+          "bytes": 10272
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-latin-300-normal.woff2",
+          "sha256": "102d590154ecb7f2611cfd9b501d76bb257e6284e3c0f460dbdd5db202c0e101",
+          "bytes": 16848
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-latin-400-normal.woff2",
+          "sha256": "49c9cd329161f5c5feed3ae80a788199f2dce127c00828e027a61261cf602491",
+          "bytes": 16720
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-latin-500-normal.woff2",
+          "sha256": "78b3f89f94236f0298cbb49ef6839627430f3aac63a00c75f468a60477742e03",
+          "bytes": 17192
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-latin-ext-300-normal.woff2",
+          "sha256": "74e53eff5754a35c2b8015948af77cc67e223611c72a67be74b54f58b01a0f0b",
+          "bytes": 13476
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-latin-ext-400-normal.woff2",
+          "sha256": "151e5e35844527fd849ea278bf738b032d59f8f2f377827b3674766497663440",
+          "bytes": 13336
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-latin-ext-500-normal.woff2",
+          "sha256": "895280f078779d27197d03d656573f830bf26fccf5d4ddb495476f9229cfa4d7",
+          "bytes": 13852
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-vietnamese-300-normal.woff2",
+          "sha256": "c78685ed6840270e34da82c0abd8095008932607431e211cc75f8562cd04fc82",
+          "bytes": 4568
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-vietnamese-400-normal.woff2",
+          "sha256": "596b1b5bb8d47815bbec2ec79cbb2957df6a579afac356ae62b0510a882ff076",
+          "bytes": 4528
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/files/exo-2-vietnamese-500-normal.woff2",
+          "sha256": "9c03a44427f8a341a0d3c4891c121e4978ecf8459a3a754b2bd58fe8349e5a9d",
+          "bytes": 4616
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/font.css",
+          "sha256": "e8cfb366dd06c401658c9fbc96a6e37abd9f1b39c95f1731fe59ccdc62f7079f",
+          "bytes": 5138
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/metadata.json",
+          "sha256": "5a80d9ddf74b88df8ca57fa0e7e687134c864eab45fa46531e98e40aabcde6c2",
+          "bytes": 837
+        },
+        {
+          "path": "public/vendor/fonts/exo-2/5.3.0/package.json",
+          "sha256": "d670203d6bd474f871f00831d72ece60ce461c7c7950e04d5c77c127b2b045c2",
+          "bytes": 1446
+        }
+      ]
+    },
+    {
+      "name": "three",
+      "version": "0.134.0",
+      "license": "MIT",
+      "source": "npm:three@0.134.0",
+      "notice": "public/vendor/three/0.134.0/LICENSE",
+      "references": [
+        "index.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/three/0.134.0/LICENSE",
+          "sha256": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f",
+          "bytes": 1081
+        },
+        {
+          "path": "public/vendor/three/0.134.0/build/three.min.js",
+          "sha256": "74782bdbcf6518f7745ed77035968fcae95ed4ab5c9a0f90cf646a69c20785ec",
+          "bytes": 615601
+        },
+        {
+          "path": "public/vendor/three/0.134.0/examples/js/controls/OrbitControls.js",
+          "sha256": "c82ab5badf4f657c7f479f15be54c5b1d6b416d85fdeec585576614db94f17d4",
+          "bytes": 26583
+        },
+        {
+          "path": "public/vendor/three/0.134.0/package.json",
+          "sha256": "8fe10385de52c0eb22ae9d023ae6d066c75f945c1ecfeb6d78ec88f043b66add",
+          "bytes": 3695
+        }
+      ]
+    },
+    {
+      "name": "three",
+      "version": "0.150.1",
+      "license": "MIT",
+      "source": "npm:three@0.150.1",
+      "notice": "public/vendor/three/0.150.1/LICENSE",
+      "references": [
+        "public/astro-dev-3d/index.html",
+        "public/astro-dev-3d/main.js"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/three/0.150.1/LICENSE",
+          "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+          "bytes": 1081
+        },
+        {
+          "path": "public/vendor/three/0.150.1/build/three.module.js",
+          "sha256": "02c8e18af8a24a7e55aa0d1899e68ab5923a9c5dc49964793c4bc06a0b051388",
+          "bytes": 1178963
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/controls/OrbitControls.js",
+          "sha256": "f2dbf54130a40d2369e48481b5e3a26c6f128690fed27a727982b4ec8869811d",
+          "bytes": 26182
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/postprocessing/EffectComposer.js",
+          "sha256": "9db17abf4291e65a31344b89182c266d32411c53765af3e371d6591c54075401",
+          "bytes": 4574
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/postprocessing/MaskPass.js",
+          "sha256": "7d5e7e930f4662140d7eb81e78e72a2d872ceb1e990c7c05d0acc590c46cc307",
+          "bytes": 2120
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/postprocessing/Pass.js",
+          "sha256": "68ffd9b89af536c36c222792f2cebae0f86d45df5c6e6cd305a90d926bf7ce0d",
+          "bytes": 1580
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/postprocessing/RenderPass.js",
+          "sha256": "f53c0480c46cdb94c9c5b2f35599ac7e4578e9cbd80bff0341d274742452c9b9",
+          "bytes": 1734
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/postprocessing/ShaderPass.js",
+          "sha256": "eaa540228a6e7072bba80b63533dc6e7dabe0bc771dd261fc728afecf15b71f6",
+          "bytes": 1505
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/postprocessing/UnrealBloomPass.js",
+          "sha256": "ff5540caf29d327d057310327c610b5ef46457039ec24be4b74eb97e76d2b404",
+          "bytes": 12256
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/shaders/CopyShader.js",
+          "sha256": "456bf0b9a8f25deda6bf24cff93a82fa209099bd70da0761e340f869c3b3d8cf",
+          "bytes": 546
+        },
+        {
+          "path": "public/vendor/three/0.150.1/examples/jsm/shaders/LuminosityHighPassShader.js",
+          "sha256": "57de46c2601ab4f14697608d0825eb0db6d53eae0614365e9ffc90de188790c2",
+          "bytes": 1156
+        },
+        {
+          "path": "public/vendor/three/0.150.1/package.json",
+          "sha256": "a3e78f554d90523b75adc3961b17646970a39f56fe3630ff36ed53b41bd9347b",
+          "bytes": 3764
+        }
+      ]
+    },
+    {
+      "name": "three",
+      "version": "0.168.0",
+      "license": "MIT",
+      "source": "npm:three@0.168.0",
+      "notice": "public/vendor/three/0.168.0/LICENSE",
+      "references": [
+        "public/astro-dev-3d.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/three/0.168.0/LICENSE",
+          "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+          "bytes": 1081
+        },
+        {
+          "path": "public/vendor/three/0.168.0/build/three.module.js",
+          "sha256": "bdbe1d0133b5e8e02bd6299abc75338ab32e5225c0db39f4f3e76a22cbbeb156",
+          "bytes": 1298981
+        },
+        {
+          "path": "public/vendor/three/0.168.0/examples/jsm/controls/OrbitControls.js",
+          "sha256": "80efaadea4f8a636a65fb0bd08bfef62f3d93a0bb94e2e7500f23176c5c07f4e",
+          "bytes": 32134
+        },
+        {
+          "path": "public/vendor/three/0.168.0/package.json",
+          "sha256": "e00a7843bdeb216e59832b2a29323e7a34ed568918c91cef9b97288324cee4b2",
+          "bytes": 4373
+        }
+      ]
+    },
+    {
+      "name": "ethers",
+      "version": "5.7.2",
+      "license": "MIT",
+      "source": "npm:ethers@5.7.2",
+      "notice": "public/vendor/ethers/5.7.2/LICENSE.md",
+      "references": [
+        "astro-bridge/bridge.html",
+        "public/AstroSwap.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/ethers/5.7.2/LICENSE.md",
+          "sha256": "38f156ca482f33e6ec062da7c682da058c65c2932782fd4ea47aaecd01138704",
+          "bytes": 1070
+        },
+        {
+          "path": "public/vendor/ethers/5.7.2/ethers.umd.min.js",
+          "sha256": "a66293a6a2bb4dee061a68612be0be3c5c0ab7e4068ab8d98a4a357baf664c73",
+          "bytes": 760171
+        },
+        {
+          "path": "public/vendor/ethers/5.7.2/package.json",
+          "sha256": "631e41d98185d7388f92471c437917217710482e63f9a6c3617423f3eafab7cd",
+          "bytes": 2226
+        }
+      ]
+    },
+    {
+      "name": "ethers",
+      "version": "6.13.2",
+      "license": "MIT",
+      "source": "npm:ethers@6.13.2",
+      "notice": "public/vendor/ethers/6.13.2/LICENSE.md",
+      "references": [
+        "public/console.html",
+        "public/fast.html",
+        "public/products.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/ethers/6.13.2/LICENSE.md",
+          "sha256": "a90ff8eedc2c3b456d6594d60aa287ba30ea911b3e0f1c4bb359a9c8f3f2e37e",
+          "bytes": 1075
+        },
+        {
+          "path": "public/vendor/ethers/6.13.2/ethers.umd.min.js",
+          "sha256": "74e00c3e2a9ccd312e6d5154f9ccb0911d1b34cb49bc8220244a292a0a773c21",
+          "bytes": 505773
+        },
+        {
+          "path": "public/vendor/ethers/6.13.2/package.json",
+          "sha256": "e700ca38eb5f298f7ad8dd6c609593d785ebf987f4223b58495cfb0ffe3fcb39",
+          "bytes": 4945
+        }
+      ]
+    },
+    {
+      "name": "leaflet",
+      "version": "1.9.4",
+      "license": "BSD-2-Clause",
+      "source": "npm:leaflet@1.9.4",
+      "notice": "public/vendor/leaflet/1.9.4/LICENSE",
+      "references": [
+        "public/global-console.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/leaflet/1.9.4/LICENSE",
+          "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+          "bytes": 1395
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/images/layers-2x.png",
+          "sha256": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf",
+          "bytes": 1259
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/images/layers.png",
+          "sha256": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6",
+          "bytes": 696
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/images/marker-icon-2x.png",
+          "sha256": "00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528",
+          "bytes": 2464
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/images/marker-icon.png",
+          "sha256": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437",
+          "bytes": 1466
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/images/marker-shadow.png",
+          "sha256": "264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da",
+          "bytes": 618
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/leaflet.css",
+          "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+          "bytes": 14806
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/leaflet.js",
+          "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+          "bytes": 147552
+        },
+        {
+          "path": "public/vendor/leaflet/1.9.4/package.json",
+          "sha256": "f070235e01c500ce19a3c687112f8d401e12abda49acd9f98a553c6f217368fa",
+          "bytes": 3779
+        }
+      ]
+    },
+    {
+      "name": "particles.js",
+      "version": "2.0.0",
+      "license": "MIT",
+      "source": "npm:particles.js@2.0.0",
+      "notice": "public/vendor/particles.js/2.0.0/LICENSE.md",
+      "references": [
+        "public/community.html",
+        "public/memeastro.html",
+        "public/technology.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/particles.js/2.0.0/LICENSE.md",
+          "sha256": "532182df366be739b90fe7ec64552d0e833c07d97f870a68d1870e0c77f3fced",
+          "bytes": 1082
+        },
+        {
+          "path": "public/vendor/particles.js/2.0.0/package.json",
+          "sha256": "23905164059ac4439e609b141e40f39936c7719e74ceb936f39a756e65f6790f",
+          "bytes": 659
+        },
+        {
+          "path": "public/vendor/particles.js/2.0.0/particles.js",
+          "sha256": "89c8e085c3da89b31fd63bf88102068b931e58d1de9b64a2b29728ac28827d28",
+          "bytes": 43009
+        }
+      ]
+    },
+    {
+      "name": "lucide",
+      "version": "0.468.0",
+      "license": "ISC",
+      "source": "npm:lucide@0.468.0",
+      "notice": "public/vendor/lucide/0.468.0/LICENSE",
+      "references": [
+        "public/painpoints.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/lucide/0.468.0/LICENSE",
+          "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc",
+          "bytes": 880
+        },
+        {
+          "path": "public/vendor/lucide/0.468.0/lucide.min.js",
+          "sha256": "3411692820cb8d47543f69496aa25fd603a358f4498046f41c508a5a3342210e",
+          "bytes": 357796
+        },
+        {
+          "path": "public/vendor/lucide/0.468.0/package.json",
+          "sha256": "3f791258e84c988fed87e83591c9c0c477059908d72214d4d52853acc7a04450",
+          "bytes": 1753
+        }
+      ]
+    },
+    {
+      "name": "chart.js",
+      "version": "4.5.1",
+      "license": "MIT",
+      "source": "npm:chart.js@4.5.1",
+      "notice": "public/vendor/chart.js/4.5.1/LICENSE.md",
+      "references": [
+        "astro-bridge/bridge.html"
+      ],
+      "files": [
+        {
+          "path": "public/vendor/chart.js/4.5.1/LICENSE.md",
+          "sha256": "41a84aa2caba645f966a18d9c2056b73e6d3a81d80bc0046bc0011a2634d4cce",
+          "bytes": 1093
+        },
+        {
+          "path": "public/vendor/chart.js/4.5.1/chart.umd.min.js",
+          "sha256": "48444a82d4edcb5bec0f1965faacdde18d9c17db3063d042abada2f705c9f54a",
+          "bytes": 208522
+        },
+        {
+          "path": "public/vendor/chart.js/4.5.1/package.json",
+          "sha256": "27ef92f77f147da2897d6ade86f84b1ea2eb14193d077668e1e947e03f0ca0c9",
+          "bytes": 4293
+        }
+      ]
+    }
+  ],
+  "visualAssets": [
+    {
+      "path": "public/assets/third-party/pillarsofcreation-composite-esa-webb.jpg",
+      "sha256": "fd1e98f53a2e6574a1329267d6295822dc63dd16b6e9540c7e61ba1d0b4019ac",
+      "bytes": 489369,
+      "title": "Pillars of Creation (NIRCam and MIRI Composite Image), screensize JPEG",
+      "license": "CC-BY-4.0",
+      "source": "https://cdn.esawebb.org/archives/images/screen/pillarsofcreation_composite.jpg",
+      "sourcePage": "https://esawebb.org/images/pillarsofcreation_composite/",
+      "terms": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, STScI, J. DePasquale (STScI), A. Pagan (STScI), A. M. Koekemoer (STScI)",
+      "references": [
+        "public/console.html",
+        "public/fast.html",
+        "public/products.html"
+      ]
+    }
+  ],
+  "externalServices": [
+    {
+      "name": "OpenStreetMap standard raster tiles",
+      "endpoint": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+      "licenseAttribution": "© OpenStreetMap contributors",
+      "license": "ODbL-1.0 for data; tile service subject to OSMF policy",
+      "terms": "https://operations.osmfoundation.org/policies/tiles/",
+      "reference": "public/global-console.html",
+      "frozen": false,
+      "releaseBlocker": "Provider availability, policy review, and non-frozen tile bytes remain open"
+    }
+  ]
+}

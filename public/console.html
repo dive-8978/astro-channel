@@ -7,7 +7,7 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/favicon.ico">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/vendor/tailwindcss/3.4.17/tailwindcss.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -27,16 +27,15 @@
       }
     }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+  <link href="/vendor/fonts/orbitron/5.3.0/font.css" rel="stylesheet">
+  <link href="/vendor/fonts/exo-2/5.3.0/font.css" rel="stylesheet">
+  <link href="/vendor/fontawesome-free/7.3.1/css/all.min.css" rel="stylesheet">
+  <script src="/vendor/ethers/6.13.2/ethers.umd.min.js"></script>
   <style>
     * { direction: ltr !important; unicode-bidi: normal !important; }
     body {
       background: #02000d;
-      background-image: url('https://cdn.esawebb.org/archives/images/publicationjpg/pillars_of_creation_composite.jpg');
+      background-image: url('/assets/third-party/pillarsofcreation-composite-esa-webb.jpg');
       background-size: cover; background-position: center 30%; background-attachment: fixed;
       color: #e3f2fd; font-family: 'Exo 2', sans-serif; min-height: 100vh;
       margin: 0; overflow-x: hidden; position: relative;
@@ -84,6 +83,9 @@
   </style>
 </head>
 <body>
+<aside aria-label="Background image credit" style="position:fixed;right:10px;bottom:8px;z-index:70;max-width:min(760px,calc(100vw - 20px));padding:4px 7px;background:rgba(2,0,13,.78);color:#cbd5e1;font:10px/1.35 system-ui,sans-serif;border-radius:4px;text-align:right">
+  Background image: <a href="https://esawebb.org/images/pillarsofcreation_composite/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">NASA, ESA, CSA, STScI, J. DePasquale (STScI), A. Pagan (STScI), A. M. Koekemoer (STScI)</a>
+</aside>
 <div class="nebula-flow"></div>
 
 <nav class="glass-panel px-6 py-5 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
@@ -120,7 +122,7 @@
     </div>
     <div class="grid grid-cols-2 gap-4">
       <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="metamask">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" class="w-14 h-14 mx-auto mb-3" alt="MetaMask">
+        <i class="fas fa-wallet text-5xl mb-3 block" aria-hidden="true"></i>
         <div class="font-medium">MetaMask</div>
       </button>
       <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="walletconnect">
@@ -128,9 +130,7 @@
         <div class="font-medium">WalletConnect</div>
       </button>
       <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="coinbase">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.com_logo.svg/1200px-Bitcoin.com_logo.svg.png" 
-             onerror="this.src='https://cdn-icons-png.flaticon.com/512/5968/5968890.png';" 
-             class="w-14 h-14 mx-auto mb-3" alt="Coinbase">
+        <i class="fas fa-coins text-5xl mb-3 block" aria-hidden="true"></i>
         <div class="font-medium">Coinbase Wallet</div>
       </button>
       <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="injected">

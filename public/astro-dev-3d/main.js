@@ -1,3 +1,9 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
 // 返回主页
 document.getElementById('backBtn').onclick=()=>window.location.href='index.html';
 
@@ -29,15 +35,15 @@ renderer.toneMapping=THREE.ReinhardToneMapping;
 container.appendChild(renderer.domElement);
 
 // 控制器
-const controls=new THREE.OrbitControls(camera, renderer.domElement);
+const controls=new OrbitControls(camera, renderer.domElement);
 controls.enableDamping=true;
 controls.minDistance=15;
 controls.maxDistance=120;
 
 // Bloom
-const composer=new THREE.EffectComposer(renderer);
-composer.addPass(new THREE.RenderPass(scene,camera));
-const bloomPass=new THREE.UnrealBloomPass(new THREE.Vector2(window.innerWidth,window.innerHeight),1.7,0.4,0.06);
+const composer=new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene,camera));
+const bloomPass=new UnrealBloomPass(new THREE.Vector2(window.innerWidth,window.innerHeight),1.7,0.4,0.06);
 composer.addPass(bloomPass);
 
 // 背景银河

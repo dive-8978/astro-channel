@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "npm run test:policy && npm run build",
+    "test": "npm run test:vendor && npm run test:policy && npm run build",
+    "test:vendor": "node scripts/verify-vendored-runtime.cjs",
     "test:policy": "node scripts/test-ma-policy.cjs"
   },
   "keywords": [],
