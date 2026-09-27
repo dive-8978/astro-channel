@@ -1,4 +1,4 @@
-const fs=require('fs'),assert=require('assert/strict'),vm=require('vm');
+const fs=require('fs'),assert=require('assert/strict'),vm=require('vm'),crypto=require('crypto');
 const read=p=>fs.readFileSync(p,'utf8');
 const policy=JSON.parse(read('public/data/ma-program-policy.json'));
 assert.equal(policy.burn.days1To364MA*364+policy.burn.day365MA,50000000);
@@ -46,4 +46,9 @@ for(const lang of ['en','zh','es','fr','de','ja','ko']){
   assert.equal(nodes[1].textContent,'Make digital currency a universal currency.');
 }
 for(const file of ['index.html','public/professional.html'])assert(read(file).includes('data-ma-vision="label">OUR VISION'));
-console.log('PASS MA allocation arithmetic, scaled rarity references, page links, seven-language coverage and public news data');
+const certificatePath='public/company-documents/astrobridge-certificate-of-incorporation-2026-09-14.pdf';
+const certificateHash=crypto.createHash('sha256').update(fs.readFileSync(certificatePath)).digest('hex');
+assert.equal(certificateHash,'50d3f6c714b862706de19aaf35af19f229ca8e142f18ea86094c2f56e8948ee7');
+for(const file of ['public/company.html','public/trust.html'])assert(read(file).includes(certificatePath.replace('public','')));
+assert(read('public/company.html').includes(certificateHash));
+console.log('PASS MA policy, seven-language coverage, public news data, and company certificate integrity');

@@ -139,6 +139,13 @@
     .language-panel h3 { margin-bottom: 12px; color: #fff; font-size: 1.08rem; }
     .language-panel p:last-child { margin-bottom: 0; }
     .language-tag { display: inline-block; margin-bottom: 14px; color: var(--cyan); font-size: .68rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .certificate-panel { display: grid; grid-template-columns: minmax(230px, .72fr) minmax(0, 1.28fr); gap: 30px; align-items: center; }
+    .certificate-preview { display: block; padding: 12px; border: 1px solid var(--line-strong); border-radius: 20px; background: #fff; box-shadow: 0 22px 70px rgba(0,0,0,.3); }
+    .certificate-preview img { display: block; width: 100%; height: auto; border-radius: 10px; }
+    .certificate-details dl { display: grid; grid-template-columns: 150px 1fr; gap: 10px 16px; margin: 22px 0 0; }
+    .certificate-details dt { color: #7ea5b4; font-size: .72rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+    .certificate-details dd { margin: 0; color: #d9eff7; }
+    .certificate-hash { overflow-wrap: anywhere; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .72rem; }
     .focus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
     .focus-card { min-height: 185px; padding: 24px; border: 1px solid rgba(255,255,255,.08); border-radius: 19px; background: rgba(2,7,22,.62); }
     .focus-card .number { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-bottom: 18px; border-radius: 10px; color: #03131b; background: linear-gradient(135deg, var(--cyan), #b6f3ff); font-size: .78rem; font-weight: 900; }
@@ -163,7 +170,10 @@
       .nav-links { max-width: 55%; }
     }
     @media (max-width: 700px) {
-      .bilingual, .focus-grid, .future-list { grid-template-columns: 1fr; }
+      .bilingual, .focus-grid, .future-list, .certificate-panel { grid-template-columns: 1fr; }
+      .certificate-preview { max-width: 330px; }
+      .certificate-details dl { grid-template-columns: 1fr; gap: 4px; }
+      .certificate-details dd { margin-bottom: 10px; }
       .nav-links a:not(:last-child) { display: none; }
       .nav-links { max-width: none; }
     }
@@ -187,11 +197,17 @@
     "url": "https://www.astrochannel.one/",
     "logo": "https://www.astrochannel.one/assets/astrobridge-company-logo.png",
     "foundingDate": "2026-09-14",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "Hong Kong Companies Registry Certificate No.",
+      "value": "81225055"
+    },
     "foundingLocation": {
       "@type": "Place",
       "name": "Hong Kong"
     },
     "description": "A Hong Kong technology company developing blockchain interoperability, cross-chain transaction infrastructure, online communications, and AI security technologies, with future AI safety and security as a long-term direction.",
+    "subjectOf": "https://www.astrochannel.one/company-documents/astrobridge-certificate-of-incorporation-2026-09-14.pdf",
     "sameAs": [
       "https://x.com/Astro___Channel",
       "https://github.com/dive-8978/astro-channel"
@@ -231,6 +247,30 @@
       <div class="fact"><small>Registration identifier / 公司登记识别号</small><strong>81225055</strong><em>Source: Certificate of Incorporation</em></div>
       <div class="fact"><small>Jurisdiction / 注册地</small><strong>Hong Kong</strong><em>Limited company / 有限公司</em></div>
       <div class="fact"><small>Incorporated / 成立日期</small><strong>14 September 2026</strong><em>2026年9月14日</em></div>
+    </section>
+
+    <section class="section" aria-labelledby="certificate-title">
+      <div class="certificate-panel">
+        <a class="certificate-preview" href="/company-documents/astrobridge-certificate-of-incorporation-2026-09-14.pdf" aria-label="Open the official Certificate of Incorporation PDF">
+          <img src="/assets/certificates/astrobridge-certificate-of-incorporation-2026-09-14.png" alt="Hong Kong Companies Registry Certificate of Incorporation for AstroBridge Technology Limited" width="1191" height="1684">
+        </a>
+        <div class="certificate-details">
+          <p class="eyebrow">Government-issued certificate · 政府签发证书</p>
+          <h2 id="certificate-title">Certificate of Incorporation / 公司注册证明书</h2>
+          <p>Issued by the Hong Kong Companies Registry for AstroBridge Technology Limited. The original PDF is published so that the legal name, registration identifier, jurisdiction, and issue date can be inspected directly. / 本证书由香港公司注册处向 AstroBridge Technology Limited 签发。官网公开原始 PDF，便于直接核验法定名称、登记识别号、注册地及签发日期。</p>
+          <dl>
+            <dt>Issuer / 签发机构</dt><dd>Hong Kong Companies Registry / 香港公司注册处</dd>
+            <dt>Certificate No. / 证书编号</dt><dd>81225055</dd>
+            <dt>Issued / 签发日期</dt><dd>14 September 2026 / 2026年9月14日</dd>
+            <dt>PDF SHA-256</dt><dd class="certificate-hash">50d3f6c714b862706de19aaf35af19f229ca8e142f18ea86094c2f56e8948ee7</dd>
+          </dl>
+          <div class="actions">
+            <a class="button primary" href="/company-documents/astrobridge-certificate-of-incorporation-2026-09-14.pdf">View official PDF / 查看正式证书</a>
+            <a class="button" href="https://www.cr.gov.hk/en/electronic/e-servicesportal/e-search.htm" rel="noopener noreferrer">Registry search / 注册处查询 ↗</a>
+          </div>
+          <div class="boundary"><strong>Certificate boundary / 证书边界</strong>This certificate proves legal incorporation in Hong Kong. It is not a financial-services licence, security audit, product approval, trademark registration, or statement that every AstroBridge or MA feature is operational. / 本证书证明公司在香港依法成立，不等于金融服务牌照、安全审计、产品批准、商标注册，也不代表 AstroBridge 或 MA 的全部功能均已上线。</div>
+        </div>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="about-title">
