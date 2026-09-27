@@ -84,6 +84,24 @@ for (const cssFile of walk(path.join(publicDir, 'vendor'), (file) => file.endsWi
 }
 
 const deployHtml = [path.join(root, 'index.html'), ...walk(publicDir, (file) => file.endsWith('.html'))];
+// Keep the inventory aligned with the deployed pages and the retained bridge
+// source pages, without treating the latter as part of the deployment artifact.
+const referenceHtml = [...deployHtml];
+for (const sourceDir of ['astro-bridge', 'bridge']) {
+  const dir = path.join(root, sourceDir);
+  if (fs.existsSync(dir)) referenceHtml.push(...walk(dir, (file) => file.endsWith('.html')));
+}
+for (const component of manifest.components) {
+  const localPrefix = `/${path.relative(publicDir, path.dirname(path.join(root, component.notice))).split(path.sep).join('/')}/`;
+  const actualReferences = referenceHtml
+    .filter((file) => fs.readFileSync(file, 'utf8').includes(localPrefix))
+    .map((file) => path.relative(root, file).split(path.sep).join('/'))
+    .sort();
+  if (JSON.stringify([...component.references].sort()) !== JSON.stringify(actualReferences)) {
+    throw new Error(`Stale component references for ${component.name}@${component.version}: expected ${actualReferences.join(', ')}`);
+  }
+}
+
 for (const htmlFile of deployHtml) {
   const html = fs.readFileSync(htmlFile, 'utf8');
   for (const match of html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)) {
@@ -115,14 +133,26 @@ for (const htmlFile of deployHtml) {
   }
 }
 
-const readinessPage = fs.readFileSync(path.join(publicDir, 'global-console.html'), 'utf8');
-for (const retiredMapDependency of [
+const mapPage = fs.readFileSync(path.join(publicDir, 'global-console.html'), 'utf8');
+for (const requiredMapReference of [
   'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-  '/vendor/leaflet/',
+  '/vendor/leaflet/1.9.4/leaflet.css',
+  '/vendor/leaflet/1.9.4/leaflet.js',
+  'https://www.openstreetmap.org/copyright',
+  'OpenStreetMap contributors',
 ]) {
-  if (readinessPage.includes(retiredMapDependency)) {
-    throw new Error(`Retired map dependency remains in Network Readiness: ${retiredMapDependency}`);
+  if (!mapPage.includes(requiredMapReference)) {
+    throw new Error(`Missing map asset or attribution: ${requiredMapReference}`);
   }
+}
+if (!/attribution\s*:\s*['"][^\n]*https:\/\/www\.openstreetmap\.org\/copyright[^\n]*OpenStreetMap contributors/.test(mapPage)) {
+  throw new Error('The Leaflet map must display linked OpenStreetMap attribution.');
+}
+const mapService = (manifest.externalServices || []).find((service) => service.origin === 'https://tile.openstreetmap.org');
+if (!mapService || !mapService.references.includes('public/global-console.html') ||
+    mapService.copyright !== 'https://www.openstreetmap.org/copyright' ||
+    mapService.usagePolicy !== 'https://operations.osmfoundation.org/policies/tiles/') {
+  throw new Error('Missing OpenStreetMap tile-service provenance or usage-policy record.');
 }
 
 const vercelConfig = fs.readFileSync(path.join(root, 'vercel.json'), 'utf8');

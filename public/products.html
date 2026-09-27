@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AstroBridge • Cross-Chain Preview (v8.0)</title>
   <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <title>AstroBridge • Cross-Chain Compatibility Preview</title>
   <script src="/vendor/tailwindcss/3.4.17/tailwindcss.js"></script>
   <link href="/vendor/fonts/orbitron/5.3.0/font.css" rel="stylesheet">
   <link href="/vendor/fonts/exo-2/5.3.0/font.css" rel="stylesheet">
@@ -23,15 +23,11 @@
     }
     .glass { background: rgba(15,23,50,0.75); backdrop-filter: blur(20px); border: 1px solid rgba(64,196,255,0.3); }
     .neon-cyan { text-shadow: 0 0 20px #22d3ee; }
-    .btn-fast { background: linear-gradient(90deg, #22d3ee, #06b6d4); box-shadow: 0 0 30px rgba(34,211,238,.55); transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease; }
-    .btn-fast:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 0 42px rgba(34,211,238,.72); }
-    .btn-fast:disabled { cursor: not-allowed; opacity: .45; box-shadow: none; }
-    .evidence-note { border-left: 3px solid #22d3ee; background: rgba(8,145,178,.10); }
-    .safety-note { border: 1px solid rgba(250,204,21,.35); background: rgba(113,63,18,.18); }
+    .btn-fast { background: linear-gradient(90deg, #22d3ee, #06b6d4); box-shadow: 0 0 30px #22d3ee; }
+    .btn-fast:hover { transform: scale(1.05); box-shadow: 0 0 45px #22d3ee; }
     /* 移动端适配：钱包按钮和导航栏 */
     @media (max-width: 640px) {
-      .header-nav { align-items: flex-start; flex-direction: column; gap: 1rem; }
-      .header-actions { width: 100%; flex-wrap: wrap; }
+      .header-nav { flex-wrap: nowrap; }
       .home-btn { font-size: 1.25rem; padding: 0.5rem; }
       #connectBtn { padding: 0.5rem 1rem; font-size: 0.875rem; }
       #languageSelect { padding: 0.5rem; font-size: 0.875rem; }
@@ -48,10 +44,10 @@
   <!-- Header (已修改：添加Home按钮) -->
   <div class="flex justify-between items-center mb-8 header-nav">
     <div>
-      <h1 class="text-4xl font-orbitron neon-cyan flex items-center gap-3"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="42" height="42" class="w-[42px] h-[42px] object-contain">ASTROBRIDGE</h1>
-      <p class="text-cyan-400 text-sm">Cross-Chain Compatibility / Integration Preview</p>
+      <h1 class="text-4xl font-orbitron neon-cyan"><img src="/assets/astrobridge-mark-256.png" alt="" width="40" height="48" style="display:inline-block;width:40px;height:48px;object-fit:contain;vertical-align:middle"> ASTROBRIDGE</h1>
+      <p class="text-cyan-400 text-sm">Cross-Chain Preview • v8.0</p>
     </div>
-    <div class="flex items-center gap-3 header-actions">
+    <div class="flex items-center gap-3">
       <!-- Home小房子按钮 -->
       <button onclick="window.location.href='/'" class="text-cyan-400 hover:text-white transition-colors home-btn">
         <i class="fas fa-home"></i>
@@ -73,21 +69,15 @@
   <div class="glass rounded-3xl p-8">
 
     <div class="text-center mb-8">
-      <div class="inline-flex items-center gap-3 bg-cyan-500/10 text-cyan-300 px-6 py-2.5 rounded-2xl text-sm font-medium">
-        Six EVM compatibility tracks implemented • Production deployment and funded acceptance pending
+      <div class="inline-flex items-center gap-3 bg-cyan-500/10 text-cyan-400 px-6 py-2.5 rounded-2xl text-sm font-medium">
+        ⚡ Local preview • Token references are not live route availability
       </div>
-    </div>
-
-    <div class="evidence-note rounded-2xl p-5 mb-8 text-sm text-slate-300">
-      <p class="font-semibold text-cyan-300 mb-1">Evidence-bounded integration preview</p>
-      <p>This browser tool checks local input and builds a route preview. It does not request a live quote, bridge assets, or broadcast a transaction. The dated engineering report records allowlisted LI.FI implementation for BSC, Ethereum, Polygon, Arbitrum, Avalanche and Base; deployment and low-value acceptance remain pending.</p>
-      <a class="inline-block mt-2 text-cyan-300 underline underline-offset-4" href="/audits/ma-astrobridge-integration-2026-09-24.json">View the dated engineering report</a>
     </div>
 
     <div class="space-y-6">
       <div>
         <label id="toLabel" class="block text-sm text-gray-400 mb-2">Recipient Address</label>
-        <input id="toAddress" type="text" 
+        <input id="toAddress" type="text"
                class="w-full bg-black/70 border border-cyan-400/40 rounded-2xl px-6 py-5 text-white font-mono focus:outline-none focus:border-cyan-400"
                placeholder="0x742d35Cc6634C0532925a3b844Bc454e4438f44e">
       </div>
@@ -95,123 +85,115 @@
       <div class="grid grid-cols-2 gap-6">
         <div>
           <label id="amountLabel" class="block text-sm text-gray-400 mb-2">Amount</label>
-          <input id="amount" type="text" 
+          <input id="amount" type="text"
                  class="w-full bg-black/70 border border-cyan-400/40 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-cyan-400"
                  placeholder="0.05">
         </div>
         <div>
           <label id="tokenLabel" class="block text-sm text-gray-400 mb-2">Token</label>
           <select id="token" class="w-full bg-black/70 border border-cyan-400/40 rounded-2xl px-6 py-5 text-white focus:outline-none">
-            <option value="NATIVE">Native asset (illustrative)</option>
-            <option value="USDT">USDT (route-dependent)</option>
-            <option value="USDC">USDC (route-dependent)</option>
+            <option value="ETH">ETH</option>
+            <option value="BNB">BNB</option>
+            <option value="USDT">USDT</option>
+            <option value="USDC">USDC</option>
+            <option value="ASTRO">ASTRO (Proposed)</option>
+
+            <!-- Extended token list (60+ tokens) -->
+            <option value="DAI">DAI</option>
+            <option value="WBTC">WBTC</option>
+            <option value="LINK">Chainlink (LINK)</option>
+            <option value="UNI">Uniswap (UNI)</option>
+            <option value="AAVE">Aave (AAVE)</option>
+            <option value="MKR">Maker (MKR)</option>
+            <option value="COMP">Compound (COMP)</option>
+            <option value="SUSHI">SushiSwap (SUSHI)</option>
+            <option value="CRV">Curve (CRV)</option>
+            <option value="SNX">Synthetix (SNX)</option>
+            <option value="YFI">Yearn Finance (YFI)</option>
+            <option value="CAKE">PancakeSwap (CAKE)</option>
+            <option value="MATIC">Polygon (MATIC)</option>
+            <option value="AVAX">Avalanche (AVAX)</option>
+            <option value="SOL">Solana (SOL)</option>
+            <option value="ADA">Cardano (ADA)</option>
+            <option value="DOT">Polkadot (DOT)</option>
+            <option value="ATOM">Cosmos (ATOM)</option>
+            <option value="NEAR">NEAR Protocol</option>
+            <option value="FTM">Fantom (FTM)</option>
+            <option value="ARB">Arbitrum (ARB)</option>
+            <option value="OP">Optimism (OP)</option>
+            <option value="TON">TON Coin</option>
+            <option value="TRX">TRON (TRX)</option>
+            <option value="XRP">XRP</option>
+            <option value="DOGE">Dogecoin (DOGE)</option>
+            <option value="SHIB">Shiba Inu (SHIB)</option>
+            <option value="PEPE">PEPE</option>
+            <option value="BONK">BONK</option>
+            <option value="WIF">dogwifhat (WIF)</option>
+            <option value="PENDLE">Pendle (PENDLE)</option>
+            <option value="GMX">GMX</option>
+            <option value="INJ">Injective (INJ)</option>
+            <option value="TIA">Celestia (TIA)</option>
+            <option value="SEI">Sei (SEI)</option>
+            <option value="SUI">Sui (SUI)</option>
+            <option value="APT">Aptos (APT)</option>
+            <option value="KAS">Kaspa (KAS)</option>
+            <option value="ALGO">Algorand (ALGO)</option>
+            <option value="FIL">Filecoin (FIL)</option>
+            <option value="VET">VeChain (VET)</option>
+            <option value="HBAR">Hedera (HBAR)</option>
+            <option value="XLM">Stellar (XLM)</option>
+            <option value="EOS">EOS</option>
+            <option value="XTZ">Tezos (XTZ)</option>
+            <option value="THETA">Theta Network</option>
+            <option value="MANA">Decentraland (MANA)</option>
+            <option value="SAND">The Sandbox (SAND)</option>
+            <option value="AXS">Axie Infinity (AXS)</option>
+            <option value="GALA">Gala (GALA)</option>
+            <option value="IMX">Immutable (IMX)</option>
+            <option value="RNDR">Render (RNDR)</option>
+            <option value="FET">Fetch.ai (FET)</option>
           </select>
-          <p class="mt-2 text-xs text-slate-500">Asset availability must come from a deployed route; these choices do not promise a live market.</p>
         </div>
       </div>
 
       <div>
         <label id="chainLabel" class="block text-sm text-gray-400 mb-2">Destination Chain</label>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          <button type="button" onclick="selectChain(this)" data-chain="Ethereum" class="chain-btn active glass py-4 rounded-2xl text-sm font-medium bg-cyan-400/30">Ethereum</button>
-          <button type="button" onclick="selectChain(this)" data-chain="BSC" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">BSC</button>
-          <button type="button" onclick="selectChain(this)" data-chain="Polygon" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">Polygon</button>
-          <button type="button" onclick="selectChain(this)" data-chain="Arbitrum" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">Arbitrum</button>
-          <button type="button" onclick="selectChain(this)" data-chain="Avalanche" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">Avalanche</button>
-          <button type="button" onclick="selectChain(this)" data-chain="Base" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">Base</button>
+        <div class="grid grid-cols-4 gap-3">
+          <button onclick="selectChain(this)" data-chain="ETH" class="chain-btn active glass py-4 rounded-2xl text-sm font-medium">ETH</button>
+          <button onclick="selectChain(this)" data-chain="BSC" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">BSC</button>
+          <button onclick="selectChain(this)" data-chain="BASE" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">BASE</button>
+          <button onclick="selectChain(this)" data-chain="ARBITRUM" class="chain-btn glass py-4 rounded-2xl text-sm font-medium">ARB</button>
         </div>
       </div>
     </div>
 
-    <div class="safety-note rounded-2xl p-5 mt-8 text-sm text-amber-100">
-      <p class="font-semibold text-amber-300 mb-1"><i class="fas fa-shield-halved mr-2"></i>Before any production transfer</p>
-      <p>A deployed route must be available. Your wallet must display the exact network, asset, amount, recipient, allowance (when needed) and network fee for your confirmation. Fees and completion time vary by route and chain conditions.</p>
-      <label class="flex items-start gap-3 mt-4 cursor-pointer">
-        <input id="previewConsent" type="checkbox" class="mt-1 accent-cyan-400">
-        <span id="consentText">I understand this is a local integration preview and no transaction will be sent.</span>
-      </label>
-    </div>
-
-    <button id="executeBtn" disabled class="w-full mt-6 btn-fast py-6 rounded-3xl text-xl font-medium flex items-center justify-center gap-3">
-      <i class="fas fa-route"></i> <span id="executeText">Build Local Route Preview</span>
+    <button id="executeBtn" class="w-full mt-10 btn-fast py-7 rounded-3xl text-2xl font-medium flex items-center justify-center gap-3">
+      <i class="fas fa-bolt"></i> <span id="executeText">Preview Transfer</span>
     </button>
 
-    <div id="result" class="hidden mt-8 p-6 glass rounded-2xl text-center" role="status" aria-live="polite"></div>
+    <div id="result" class="hidden mt-8 p-6 glass rounded-2xl text-center"></div>
   </div>
 
   <div class="text-center text-xs text-gray-500 mt-10">
-    AstroBridge compatibility preview • No live quote or transaction broadcast
+    AstroBridge Cross-Chain Preview • Live execution requires route validation and release acceptance
   </div>
 </div>
 
 <script>
+// ==================== Multi-language Support ====================
 const translations = {
-  zh: {
-    toLabel: "接收地址", amountLabel: "转账金额", tokenLabel: "资产示例", chainLabel: "目标链",
-    connectText: "连接钱包", executeText: "生成本地路线预览",
-    consentText: "我明白这是本地集成预览，不会发送任何交易。",
-    walletUnavailable: "请在支持 EVM 钱包的浏览器中打开此页面。", connectFirst: "请先连接钱包。",
-    enterValid: "请输入有效的 EVM 接收地址和大于 0 的金额。",
-    sameChain: "目标链需要与当前连接的钱包网络不同。",
-    unsupported: "当前钱包网络不在六条已实现的 EVM 兼容路径中。",
-    previewReady: "本地路线预览已生成", noBroadcast: "没有请求实时报价，也没有广播交易。",
-    pending: "生产路线是否可用取决于完成部署和验收。", source: "钱包网络",
-    destination: "目标兼容路径", asset: "资产示例"
-  },
-  en: {
-    toLabel: "Recipient Address", amountLabel: "Amount", tokenLabel: "Illustrative Asset", chainLabel: "Destination Chain",
-    connectText: "Connect Wallet", executeText: "Build Local Route Preview",
-    consentText: "I understand this is a local integration preview and no transaction will be sent.",
-    walletUnavailable: "Open this page in a browser with an EVM wallet.", connectFirst: "Connect a wallet first.",
-    enterValid: "Enter a valid EVM recipient address and an amount greater than zero.",
-    sameChain: "Choose a destination different from the connected wallet network.",
-    unsupported: "The connected wallet network is outside the six implemented EVM compatibility tracks.",
-    previewReady: "Local route preview ready", noBroadcast: "No live quote was requested and no transaction was broadcast.",
-    pending: "Production route availability depends on completed deployment and acceptance.", source: "Wallet network",
-    destination: "Destination compatibility track", asset: "Illustrative asset"
-  },
-  es: {
-    toLabel: "Dirección de destino", amountLabel: "Cantidad", tokenLabel: "Activo ilustrativo", chainLabel: "Cadena de destino",
-    connectText: "Conectar cartera", executeText: "Crear vista previa local",
-    consentText: "Entiendo que esta es una vista previa local y que no se enviará ninguna transacción."
-  },
-  fr: {
-    toLabel: "Adresse destinataire", amountLabel: "Montant", tokenLabel: "Actif illustratif", chainLabel: "Chaîne de destination",
-    connectText: "Connecter le portefeuille", executeText: "Créer l’aperçu local",
-    consentText: "Je comprends qu’il s’agit d’un aperçu local et qu’aucune transaction ne sera envoyée."
-  },
-  ja: {
-    toLabel: "受取アドレス", amountLabel: "金額", tokenLabel: "表示用資産", chainLabel: "宛先チェーン",
-    connectText: "ウォレット接続", executeText: "ローカル経路をプレビュー",
-    consentText: "これはローカル統合プレビューであり、取引は送信されないことを理解しました。"
-  },
-  ko: {
-    toLabel: "받는 주소", amountLabel: "금액", tokenLabel: "예시 자산", chainLabel: "대상 체인",
-    connectText: "지갑 연결", executeText: "로컬 경로 미리보기",
-    consentText: "이 기능은 로컬 통합 미리보기이며 거래가 전송되지 않음을 이해합니다."
-  }
+  zh: { toLabel: "接收地址", amountLabel: "转账金额", tokenLabel: "代币", chainLabel: "目标链", connectText: "连接钱包", executeText: "预览转账路线" },
+  en: { toLabel: "Recipient Address", amountLabel: "Amount", tokenLabel: "Token", chainLabel: "Destination Chain", connectText: "Connect Wallet", executeText: "Preview Transfer" },
+  es: { toLabel: "Dirección de Destino", amountLabel: "Cantidad", tokenLabel: "Token", chainLabel: "Cadena Destino", connectText: "Conectar Wallet", executeText: "Vista previa" },
+  fr: { toLabel: "Adresse Destinataire", amountLabel: "Montant", tokenLabel: "Token", chainLabel: "Chaîne Destination", connectText: "Connecter Wallet", executeText: "Aperçu du transfert" },
+  ja: { toLabel: "受取アドレス", amountLabel: "金額", tokenLabel: "トークン", chainLabel: "対象チェーン", connectText: "ウォレット接続", executeText: "送金プレビュー" },
+  ko: { toLabel: "받는 주소", amountLabel: "금액", tokenLabel: "토큰", chainLabel: "대상 체인", connectText: "지갑 연결", executeText: "전송 미리보기" }
 };
 
-let currentLang = document.documentElement.lang.toLowerCase().startsWith('zh') ? 'zh' : 'en';
-let userAddress = null;
-let provider = null;
-let selectedChain = "Ethereum";
-
-const supportedChainIds = {
-  "1": "Ethereum",
-  "56": "BSC",
-  "137": "Polygon",
-  "42161": "Arbitrum",
-  "43114": "Avalanche",
-  "8453": "Base"
-};
+let currentLang = 'en';
 
 function t(key) {
   return translations[currentLang]?.[key] || translations.en[key] || key;
-}
-
-function shortenAddress(address) {
-  return `${address.slice(0, 6)}...${address.slice(-4)}`;
 }
 
 function updateLanguage() {
@@ -219,101 +201,77 @@ function updateLanguage() {
   document.getElementById('amountLabel').textContent = t('amountLabel');
   document.getElementById('tokenLabel').textContent = t('tokenLabel');
   document.getElementById('chainLabel').textContent = t('chainLabel');
-  document.getElementById('connectText').textContent = userAddress ? shortenAddress(userAddress) : t('connectText');
+  document.getElementById('connectText').textContent = t('connectText');
   document.getElementById('executeText').textContent = t('executeText');
-  document.getElementById('consentText').textContent = t('consentText');
 }
 
-function setWalletAccount(address) {
-  userAddress = address || null;
-  provider = userAddress && window.ethereum ? new ethers.BrowserProvider(window.ethereum) : null;
-  document.getElementById('connectText').textContent = userAddress ? shortenAddress(userAddress) : t('connectText');
+// ==================== 设备判断：PC/移动端钱包唤起 ====================
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
+// ==================== Wallet Connection (已修改：区分PC/移动端) ====================
+let userAddress = null;
+let provider = null;
+let selectedChain = "ETH";
 
 document.getElementById('connectBtn').onclick = async () => {
-  if (!window.ethereum) return alert(t('walletUnavailable'));
+  if (isMobile() && !window.ethereum) {
+    window.location.href = `https://metamask.app.link/dapp/${window.location.host}${window.location.pathname}`;
+    return;
+  }
+
+  // PC端：保持原有插件唤起逻辑
+  if (!window.ethereum) return alert("Please install MetaMask or other EVM wallet");
 
   try {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-    setWalletAccount(accounts[0]);
-    log(`Wallet connected for local preview: ${shortenAddress(userAddress)}`);
-  } catch (error) {
-    log(`Wallet connection failed: ${error.message}`);
+    provider = new ethers.BrowserProvider(window.ethereum);
+    userAddress = accounts[0];
+
+    const short = userAddress.slice(0,6) + '...' + userAddress.slice(-4);
+    document.getElementById('connectText').textContent = short;
+    log(`✅ Connected ${short}`, 'text-cyan-400');
+  } catch (e) {
+    log('Connection failed', 'text-red-400');
   }
 };
 
-if (window.ethereum?.on) {
-  window.ethereum.on('accountsChanged', (accounts) => setWalletAccount(accounts[0]));
-  window.ethereum.on('chainChanged', () => {
-    provider = userAddress ? new ethers.BrowserProvider(window.ethereum) : null;
-  });
+// ==================== Chain Selection ====================
+function selectChain(el) {
+  document.querySelectorAll('.chain-btn').forEach(b => b.classList.remove('active', 'bg-cyan-400/30'));
+  el.classList.add('active', 'bg-cyan-400/30');
+  selectedChain = el.dataset.chain;
 }
 
-function selectChain(element) {
-  document.querySelectorAll('.chain-btn').forEach((button) => button.classList.remove('active', 'bg-cyan-400/30'));
-  element.classList.add('active', 'bg-cyan-400/30');
-  selectedChain = element.dataset.chain;
-}
-
-document.getElementById('previewConsent').addEventListener('change', (event) => {
-  document.getElementById('executeBtn').disabled = !event.target.checked;
-});
-
-document.getElementById('executeBtn').onclick = async () => {
+// ==================== Execute Ultra-Fast Transfer ====================
+document.getElementById('executeBtn').onclick = () => {
   const to = document.getElementById('toAddress').value.trim();
   const amount = document.getElementById('amount').value.trim();
   const token = document.getElementById('token').value;
-
-  if (!userAddress || !provider) return alert(t('connectFirst'));
-  if (!ethers.isAddress(to) || !/^(?:0|[1-9]\d{0,39})(?:\.\d{1,18})?$/.test(amount) || Number(amount) <= 0) {
-    return alert(t('enterValid'));
+  const result = document.getElementById('result');
+  result.classList.remove('hidden');
+  if (!/^0x[0-9a-fA-F]{40}$/.test(to) || !/^(?:0|[1-9][0-9]*)(?:\.[0-9]+)?$/.test(amount) || !Number.isFinite(Number(amount)) || Number(amount) <= 0) {
+    result.textContent = currentLang === 'zh' ? '请输入有效的 EVM 接收地址和大于 0 的金额。' : 'Enter a valid EVM recipient address and an amount greater than zero.';
+    return;
   }
-
-  const button = document.getElementById('executeBtn');
-  button.disabled = true;
-  button.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${t('executeText')}`;
-
-  try {
-    const network = await provider.getNetwork();
-    const sourceChain = supportedChainIds[network.chainId.toString()];
-    if (!sourceChain) return alert(t('unsupported'));
-    if (sourceChain === selectedChain) return alert(t('sameChain'));
-
-    const result = document.getElementById('result');
-    result.classList.remove('hidden');
-    result.innerHTML = `
-      <p class="text-cyan-300 text-lg font-semibold">✓ ${t('previewReady')}</p>
-      <dl class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-sm">
-        <div class="glass rounded-xl p-3"><dt class="text-slate-500">${t('source')}</dt><dd>${sourceChain}</dd></div>
-        <div class="glass rounded-xl p-3"><dt class="text-slate-500">${t('destination')}</dt><dd>${selectedChain}</dd></div>
-        <div class="glass rounded-xl p-3"><dt class="text-slate-500">${t('asset')}</dt><dd>${token}</dd></div>
-        <div class="glass rounded-xl p-3"><dt class="text-slate-500">${t('amountLabel')}</dt><dd>${amount}</dd></div>
-      </dl>
-      <p class="font-mono text-xs break-all mt-4 text-slate-400">${to}</p>
-      <p class="text-sm text-amber-200 mt-4">${t('noBroadcast')}</p>
-      <p class="text-xs text-slate-400 mt-2">${t('pending')}</p>
-    `;
-  } catch (error) {
-    log(`Local preview failed: ${error.message}`);
-    alert(error.message);
-  } finally {
-    button.disabled = !document.getElementById('previewConsent').checked;
-    button.innerHTML = `<i class="fas fa-route"></i> ${t('executeText')}`;
-  }
+  result.textContent = currentLang === 'zh'
+    ? `本地路线预览：${amount} ${token} → ${selectedChain} · ${to}。这不是实时报价；该路线仍需验证。本页面不会请求签名或发送交易。`
+    : `Local route preview: ${amount} ${token} → ${selectedChain} · ${to}. This is not a live quote; route availability still needs validation. This page does not request a signature or send a transaction.`;
 };
 
-function log(message) {
-  console.log(`[AstroBridge preview] ${message}`);
+function log(msg, color = 'text-white') {
+  console.log(`%c${msg}`, `color: ${color === 'text-cyan-400' ? '#22d3ee' : '#67e8f9'}`);
 }
 
-document.getElementById('languageSelect').onchange = (event) => {
-  currentLang = event.target.value;
+// Initialize
+document.getElementById('languageSelect').onchange = (e) => {
+  currentLang = e.target.value;
   updateLanguage();
 };
 
-document.getElementById('languageSelect').value = currentLang;
 updateLanguage();
-log("Local compatibility preview loaded; transaction broadcast is disabled.");
+log("🚀 AstroBridge Cross-Chain Preview Ready (v8.0)", "text-cyan-400");
 </script>
 </body>
 </html>

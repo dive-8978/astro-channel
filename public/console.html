@@ -1,229 +1,632 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AstroBridge local intent planning demonstration. No real execution, signature or transaction broadcast.">
-  <meta name="theme-color" content="#050615">
-  <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/vendor/fonts/orbitron/5.3.0/font.css">
-  <link rel="stylesheet" href="/vendor/fonts/exo-2/5.3.0/font.css">
-  <title>AstroBridge · Intent Planning Demo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AstroBridge • Global Intelligent Intent Network Terminal (v7.0) · Demo</title>
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+  <script src="/vendor/tailwindcss/3.4.17/tailwindcss.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'genesis-blue': '#40c4ff',
+            'genesis-purple': '#7c4dff',
+            'void-black': '#02000d',
+            'star-gold': '#ffd700',
+            'nebula-teal': '#26c6da',
+          },
+          fontFamily: {
+            'orbitron': ['Orbitron', 'sans-serif'],
+            'exo': ['Exo 2', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link href="/vendor/fonts/orbitron/5.3.0/font.css" rel="stylesheet">
+  <link href="/vendor/fonts/exo-2/5.3.0/font.css" rel="stylesheet">
+  <link href="/vendor/fontawesome-free/7.3.1/css/all.min.css" rel="stylesheet">
   <style>
-    :root { color-scheme:dark; --ink:#f3f7ff; --muted:#9aa9be; --line:rgba(130,166,211,.2); --panel:rgba(7,15,37,.79); --cyan:#5ee7f5; --violet:#a78bfa; --amber:#fbbf24; --green:#4ade80; --red:#fb7185; }
-    * { box-sizing:border-box; }
-    body { min-height:100vh; margin:0; overflow-x:hidden; color:var(--ink); font-family:'Exo 2',ui-sans-serif,system-ui,sans-serif; background:#03040d url('/assets/third-party/pillarsofcreation-composite-esa-webb.jpg') center 22%/cover fixed no-repeat; }
-    body::before { content:""; position:fixed; inset:0; z-index:-1; background:linear-gradient(180deg,rgba(2,4,17,.7),rgba(2,4,17,.94) 55%,#02030a),radial-gradient(circle at 50% 5%,rgba(84,68,255,.22),transparent 36rem); }
-    button,textarea,select { font:inherit; }
-    button { -webkit-tap-highlight-color:transparent; }
-    button:focus-visible,a:focus-visible,textarea:focus-visible,select:focus-visible { outline:3px solid rgba(94,231,245,.65); outline-offset:3px; }
-    .shell { width:min(1120px,calc(100% - 38px)); margin:0 auto; }
-    .panel { border:1px solid var(--line); border-radius:22px; background:var(--panel); box-shadow:0 24px 80px rgba(0,0,0,.3); backdrop-filter:blur(20px) saturate(135%); }
-    .topbar { position:sticky; top:0; z-index:30; border-bottom:1px solid var(--line); background:rgba(2,5,17,.84); backdrop-filter:blur(20px); }
-    .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand { display:flex; align-items:center; gap:12px; color:var(--ink); text-decoration:none; }
-    .brand img { width:40px; height:40px; object-fit:contain; }
-    .brand strong { display:block; font:700 1rem/1.1 'Orbitron',sans-serif; letter-spacing:.08em; }
-    .brand small { display:block; margin-top:4px; color:var(--muted); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
-    .nav-actions { display:flex; align-items:center; gap:10px; }
-    select,.secondary-button { min-height:40px; border:1px solid var(--line); border-radius:11px; color:var(--ink); background:rgba(4,10,25,.86); }
-    select { padding:0 12px; }
-    .secondary-button { padding:0 14px; cursor:pointer; }
-    .demo-strip { border-bottom:1px solid rgba(251,191,36,.25); background:rgba(120,68,4,.33); }
-    .demo-inner { min-height:48px; display:flex; align-items:center; justify-content:center; gap:12px; text-align:center; color:#ffdda1; font-size:.82rem; line-height:1.45; }
-    .demo-inner strong { min-width:0; overflow-wrap:anywhere; }
-    .demo-badge { flex:0 0 auto; padding:5px 9px; border:1px solid rgba(251,191,36,.45); border-radius:999px; background:rgba(251,191,36,.13); color:#ffe09b; font-size:.68rem; font-weight:900; letter-spacing:.13em; text-transform:uppercase; }
-    main { padding:74px 0 50px; }
-    .hero { width:100%; max-width:860px; min-width:0; margin:0 auto 34px; text-align:center; }
-    .eyebrow { margin:0 0 13px; color:var(--cyan); font-size:.72rem; font-weight:850; letter-spacing:.15em; text-transform:uppercase; }
-    h1,h2,h3,p { margin-top:0; }
-    h1 { max-width:100%; margin-bottom:16px; overflow-wrap:anywhere; font:700 clamp(2.5rem,7vw,5.4rem)/1 'Orbitron',sans-serif; letter-spacing:-.055em; text-wrap:balance; text-shadow:0 0 38px rgba(94,231,245,.2); }
-    .hero p:last-child { max-width:700px; margin:0 auto; color:#c1cbda; font-size:clamp(1rem,2vw,1.14rem); line-height:1.65; }
-    .boundary { margin-bottom:18px; padding:20px 22px; display:grid; grid-template-columns:auto 1fr; gap:16px; align-items:start; border-color:rgba(251,191,36,.32); background:linear-gradient(135deg,rgba(80,45,4,.52),rgba(7,15,37,.86)); }
-    .boundary-icon { display:grid; place-items:center; width:42px; height:42px; border:1px solid rgba(251,191,36,.45); border-radius:13px; color:var(--amber); font-weight:900; }
-    .boundary h2 { margin-bottom:5px; color:#ffe2a8; font-size:1.05rem; letter-spacing:.02em; }
-    .boundary p { margin:0; color:#c9b990; font-size:.84rem; line-height:1.55; }
-    .composer { padding:26px; }
-    .composer-head { display:flex; justify-content:space-between; gap:18px; margin-bottom:16px; }
-    .composer h2,.result-card h2 { margin-bottom:4px; font:650 1.15rem/1.3 'Orbitron',sans-serif; letter-spacing:.02em; }
-    .microcopy { margin:0; color:var(--muted); font-size:.8rem; line-height:1.5; }
-    textarea { width:100%; min-height:132px; resize:vertical; padding:18px; border:1px solid rgba(94,231,245,.25); border-radius:16px; color:var(--ink); background:rgba(2,5,15,.76); line-height:1.6; }
-    textarea::placeholder { color:#75849a; }
-    .composer-actions { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; margin-top:16px; }
-    .button-row { display:flex; flex-wrap:wrap; gap:10px; }
-    .primary-button,.ghost-button { min-height:44px; padding:0 17px; border-radius:12px; font-weight:800; cursor:pointer; transition:transform .18s ease,opacity .18s ease; }
-    .primary-button { border:0; color:#031019; background:linear-gradient(135deg,#71ebf4,#9f8cff); box-shadow:0 10px 30px rgba(94,231,245,.18); }
-    .ghost-button { border:1px solid var(--line); color:var(--ink); background:rgba(8,18,42,.8); }
-    .primary-button:hover,.ghost-button:hover,.secondary-button:hover { transform:translateY(-1px); }
-    button:disabled { cursor:not-allowed; opacity:.42; transform:none !important; }
-    .wallet-state { color:var(--muted); font-size:.76rem; }
-    .content-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
-    .result-card { min-height:330px; padding:24px; }
-    .empty { display:grid; place-items:center; min-height:238px; color:#718096; text-align:center; line-height:1.6; }
-    .plan-title { display:flex; justify-content:space-between; gap:12px; align-items:center; margin:18px 0; }
-    .plan-title strong { color:var(--cyan); font-size:1.08rem; }
-    .status-chip { padding:5px 9px; border:1px solid rgba(94,231,245,.28); border-radius:999px; color:var(--cyan); background:rgba(94,231,245,.08); font-size:.65rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
-    .plan-list { display:grid; grid-template-columns:minmax(90px,.5fr) minmax(0,1fr); gap:0; margin:0; }
-    .plan-list dt,.plan-list dd { margin:0; padding:10px 0; border-top:1px solid rgba(130,166,211,.12); line-height:1.45; }
-    .plan-list dt { color:var(--muted); font-size:.78rem; }
-    .plan-list dd { text-align:right; font-size:.84rem; overflow-wrap:anywhere; }
-    .notice { margin-top:16px; padding:13px; border:1px solid rgba(251,191,36,.22); border-radius:12px; color:#d8c79d; background:rgba(251,191,36,.06); font-size:.76rem; line-height:1.5; }
-    .log { max-height:258px; overflow:auto; margin-top:18px; font:500 .78rem/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
-    .log-entry { margin-bottom:8px; padding:9px 11px; border-left:2px solid #60708a; border-radius:0 9px 9px 0; color:#b8c4d4; background:rgba(2,6,17,.42); }
-    .log-entry.ok { border-left-color:var(--green); color:#baf7ca; }
-    .log-entry.warn { border-left-color:var(--amber); color:#f4d99c; }
-    .lower-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-top:18px; }
-    .route,.limits { padding:24px; }
-    .route h2,.limits h2,.history h2 { margin-bottom:16px; font:650 1rem/1.3 'Orbitron',sans-serif; }
-    .route-steps { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; }
-    .route-step { position:relative; min-height:112px; padding:15px; border:1px solid rgba(94,231,245,.17); border-radius:14px; background:rgba(7,19,39,.78); }
-    .route-step b { display:block; margin-bottom:8px; color:var(--cyan); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; }
-    .route-step span { color:#bac7d7; font-size:.75rem; line-height:1.45; }
-    .limit-list { list-style:none; margin:0; padding:0; }
-    .limit-list li { display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-top:1px solid rgba(130,166,211,.14); font-size:.8rem; }
-    .limit-list li:first-child { border-top:0; padding-top:0; }
-    .limit-list span { color:var(--muted); }
-    .limit-list b { text-align:right; color:#dfe7f3; }
-    .history { margin-top:18px; padding:24px; }
-    .history-list { display:grid; gap:8px; }
-    .history-row { display:flex; justify-content:space-between; gap:16px; padding:12px 14px; border:1px solid rgba(130,166,211,.12); border-radius:11px; background:rgba(3,9,24,.5); font-size:.78rem; }
-    .history-row span:last-child { color:var(--green); }
-    .modal { position:fixed; inset:0; z-index:60; display:none; place-items:center; padding:20px; background:rgba(0,0,0,.8); }
-    .modal.open { display:grid; }
-    .modal-card { width:min(460px,100%); padding:26px; }
-    .modal-head { display:flex; justify-content:space-between; gap:16px; align-items:start; }
-    .modal-head h2 { margin-bottom:8px; font:650 1.15rem/1.3 'Orbitron',sans-serif; }
-    .close-button { width:38px; height:38px; border:1px solid var(--line); border-radius:10px; color:var(--ink); background:transparent; cursor:pointer; font-size:1.2rem; }
-    .wallet-option { width:100%; min-height:56px; margin-top:20px; border:1px solid rgba(94,231,245,.3); border-radius:14px; color:var(--ink); background:rgba(94,231,245,.09); cursor:pointer; font-weight:800; }
-    .wallet-fineprint { margin:16px 0 0; color:var(--muted); font-size:.76rem; line-height:1.55; }
-    footer { padding:24px 0 46px; color:#7e8ba0; text-align:center; font-size:.72rem; line-height:1.6; }
-    @media (max-width:820px) { .nav { align-items:flex-start; flex-direction:column; padding:14px 0; } .nav-actions { width:100%; justify-content:space-between; } .demo-inner { align-items:flex-start; padding:10px 0; text-align:left; } main { padding-top:48px; } .content-grid,.lower-grid { grid-template-columns:1fr; } .route-steps { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media (max-width:520px) { .shell { width:calc(100% - 24px); max-width:1120px; } .brand small { display:none; } .nav-actions { align-items:stretch; flex-direction:column; } .nav-actions select,.secondary-button { width:100%; } h1 { font-size:2.2rem; line-height:1.08; letter-spacing:-.04em; } .hero p:last-child { font-size:.94rem; } .boundary { grid-template-columns:1fr; } .composer,.result-card,.route,.limits,.history { padding:18px; } .composer-head,.composer-actions { align-items:flex-start; flex-direction:column; } .button-row,.button-row button { width:100%; } .route-steps { grid-template-columns:1fr; } .history-row { align-items:flex-start; flex-direction:column; } }
-    @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+    * { direction: ltr !important; unicode-bidi: normal !important; }
+    body {
+      background: #02000d;
+      background-image: url('/assets/third-party/pillarsofcreation-composite-esa-webb.jpg');
+      background-size: cover; background-position: center 30%; background-attachment: fixed;
+      color: #e3f2fd; font-family: 'Exo 2', sans-serif; min-height: 100vh;
+      margin: 0; overflow-x: hidden; position: relative;
+    }
+    .nebula-flow {
+      position: fixed; inset: 0; z-index: -3; pointer-events: none;
+      background: radial-gradient(ellipse at 40% 30%, rgba(124,7,255,0.10) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 65%, rgba(38,198,218,0.08) 0%, transparent 65%);
+      background-size: 220% 220%; animation: nebula-flow 520s ease-in-out infinite;
+      mix-blend-mode: screen; opacity: 0.4; filter: blur(70px);
+    }
+    @keyframes nebula-flow { 0%,100% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } }
+    .glass-panel {
+      background: rgba(8,15,40,0.26); backdrop-filter: blur(22px) saturate(180%);
+      border: 1px solid rgba(64,196,255,0.20);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.55), inset 0 0 20px rgba(64,196,255,0.05);
+      border-radius: 1.25rem; transition: all 0.4s ease;
+    }
+    .neon-text { text-shadow: 0 0 10px #40c4ff, 0 0 20px #7c4dff; }
+    .btn-neon {
+      background: linear-gradient(135deg, #40c4ff, #7c4dff);
+      box-shadow: 0 0 20px rgba(64,196,255,0.5); transition: all 0.4s;
+    }
+    .btn-neon:hover { box-shadow: 0 0 40px rgba(64,196,255,0.75); transform: scale(1.03); }
+
+    #nodePanel {
+      height: 320px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #40c4ff40 #1a1a2e;
+    }
+    #nodePanel::-webkit-scrollbar {
+      width: 6px;
+    }
+    #nodePanel::-webkit-scrollbar-thumb {
+      background: #40c4ff40;
+      border-radius: 20px;
+    }
+
+    .health-bar { height: 8px; background: #334155; border-radius: 9999px; margin: 12px 0; overflow: hidden; }
+    .health-fill { height: 100%; transition: width 0.8s ease; }
+    .healthy { background: #22c55e; }
+    .warning { background: #eab308; }
+    .critical { background: #ef4444; }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="shell nav">
-      <a class="brand" href="/index.html" aria-label="AstroBridge home"><img src="/assets/astrobridge-mark-256.png" alt="" width="40" height="40"><span><strong>ASTROBRIDGE</strong><small id="brandSubtitle">Intent planning lab</small></span></a>
-      <div class="nav-actions">
-        <select id="languageSelect" aria-label="Language"><option value="en">English</option><option value="zh">中文（简体）</option></select>
-        <button id="connectButton" class="secondary-button" type="button">Connect wallet · read-only</button>
-      </div>
+<aside aria-label="Background image credit" style="position:fixed;right:10px;bottom:8px;z-index:70;max-width:min(760px,calc(100vw - 20px));padding:4px 7px;background:rgba(2,0,13,.78);color:#cbd5e1;font:10px/1.35 system-ui,sans-serif;border-radius:4px;text-align:right">
+  Background image: <a href="https://esawebb.org/images/pillarsofcreation_composite/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">NASA, ESA, CSA, STScI, J. DePasquale (STScI), A. Pagan (STScI), A. M. Koekemoer (STScI)</a>
+</aside>
+<div class="nebula-flow"></div>
+
+<nav class="glass-panel px-6 py-5 flex justify-between items-center sticky top-0 z-50 border-b border-genesis-blue/20 backdrop-blur-xl">
+  <div class="flex items-center gap-4">
+    <a href="/" class="text-3xl text-genesis-blue hover:text-white" aria-label="AstroBridge home"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge" width="48" height="56" style="object-fit:contain;min-width:48px"></a>
+    <h1 id="nav-title" class="text-3xl font-orbitron font-bold neon-text">ASTROBRIDGE</h1>
+    <span id="nav-subtitle" class="text-xs px-3 py-1 bg-genesis-purple/20 rounded-full border border-genesis-purple/40">Global Intelligent Intent Network v7.0</span>
+  </div>
+  <div class="flex items-center gap-4">
+    <select id="languageSelect" class="bg-void-black/80 border border-genesis-blue/30 text-white px-4 py-2 rounded-xl text-sm focus:outline-none focus:border-genesis-blue">
+      <option value="en" selected>English</option>
+      <option value="zh">中文 (简体)</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+    </select>
+    <button id="connectBtn" class="btn-neon px-6 py-2.5 rounded-2xl text-sm uppercase tracking-wider">
+      <i class="fas fa-wallet mr-2"></i><span id="connect-text">Connect Wallet</span>
+    </button>
+    <button id="disconnectBtn" class="hidden px-5 py-2.5 text-red-400 hover:text-red-300">
+      <i class="fas fa-power-off mr-1"></i> Disconnect
+    </button>
+  </div>
+</nav>
+
+<div id="walletModal" class="fixed inset-0 bg-black/80 hidden flex items-center justify-center z-[60] px-4">
+  <div class="glass-panel p-8 rounded-3xl max-w-md w-full">
+    <div class="flex justify-between items-center mb-8">
+      <h3 id="modal-title" class="text-2xl font-orbitron neon-text">Connect Wallet</h3>
+      <button id="closeWallet" class="text-3xl text-genesis-blue hover:text-white"><i class="fas fa-times"></i></button>
     </div>
-  </header>
-  <div class="demo-strip"><div class="shell demo-inner"><span class="demo-badge">Demo</span><strong id="demoStrip">NO REAL EXECUTION · No signature · No transaction broadcast · No backend submission</strong></div></div>
-
-  <main class="shell">
-    <section class="hero"><p class="eyebrow" id="heroEyebrow">Local planning simulation</p><h1 id="heroTitle">Intent Planning Lab</h1><p id="heroCopy">Explore how a transfer intent could be structured. Everything on this page stays in your browser session and no real transaction is created.</p></section>
-
-    <section class="panel boundary" aria-labelledby="boundaryTitle"><div class="boundary-icon">!</div><div><h2 id="boundaryTitle">DEMO / NO REAL EXECUTION</h2><p id="boundaryCopy">The planner does not request a signature, broadcast a transaction, submit an intent to a backend, or claim that a route is available. Wallet connection reads only the selected public address and chain ID.</p></div></section>
-
-    <section class="panel composer" aria-labelledby="composerTitle">
-      <div class="composer-head"><div><h2 id="composerTitle">Describe a transfer</h2><p class="microcopy" id="composerCopy">Example: Plan 0.05 ETH to 0x123… on Base</p></div><span class="status-chip" id="sessionChip">Session only</span></div>
-      <textarea id="intentInput" aria-label="Transfer intent" placeholder="Example: Plan 0.05 ETH to 0x123... on Base"></textarea>
-      <div class="composer-actions"><div class="button-row"><button id="planButton" class="primary-button" type="button">Build local plan</button><button id="simulateButton" class="ghost-button" type="button" disabled>Run local simulation</button></div><span id="walletState" class="wallet-state">Wallet not connected · simulation remains available</span></div>
-    </section>
-
-    <div class="content-grid">
-      <section class="panel result-card" aria-labelledby="planTitle"><h2 id="planTitle">Local plan</h2><p class="microcopy" id="planCopy">A deterministic browser-only interpretation.</p><div id="planResult" class="empty">Enter an intent to build a local demonstration plan.</div></section>
-      <section class="panel result-card" aria-labelledby="logTitle"><h2 id="logTitle">Simulation log</h2><p class="microcopy" id="logCopy">Every step shown here is simulated locally.</p><div id="simulationLog" class="log" role="log" aria-live="polite"><div class="log-entry warn">Demo initialized. Network execution is disabled.</div></div></section>
+    <div class="grid grid-cols-2 gap-4">
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="metamask">
+        <i class="fas fa-wallet text-5xl mb-3 block" aria-hidden="true"></i>
+        <div class="font-medium">MetaMask</div>
+      </button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="walletconnect">
+        <i class="fas fa-link text-5xl mb-3 block"></i>
+        <div class="font-medium">WalletConnect</div>
+      </button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="coinbase">
+        <i class="fas fa-coins text-5xl mb-3 block" aria-hidden="true"></i>
+        <div class="font-medium">Coinbase Wallet</div>
+      </button>
+      <button class="wallet-option glass-panel p-6 text-center hover:bg-genesis-blue/10" data-provider="injected">
+        <i class="fas fa-plug text-5xl mb-3 block"></i>
+        <div class="font-medium">Any Wallet</div>
+      </button>
     </div>
+    <p class="text-center text-xs opacity-60 mt-6">Browser wallet connection reads the selected address and chain only. WalletConnect and standalone Coinbase connectors are not integrated.</p>
+  </div>
+</div>
 
-    <div class="lower-grid">
-      <section class="panel route" aria-labelledby="routeTitle"><h2 id="routeTitle">Illustrative route stages</h2><div class="route-steps"><div class="route-step"><b>01 · Parse</b><span>Extract the stated asset, amount, destination and chain.</span></div><div class="route-step"><b>02 · Check</b><span>Flag missing fields for human review. No security verdict is issued.</span></div><div class="route-step"><b>03 · Compare</b><span>Describe a possible provider-selection step without querying a live quote.</span></div><div class="route-step"><b>04 · Confirm</b><span>Stop before signatures, approvals or any transaction broadcast.</span></div></div></section>
-      <section class="panel limits" aria-labelledby="limitsTitle"><h2 id="limitsTitle">Runtime boundary</h2><ul class="limit-list"><li><span>Real execution</span><b>Disabled</b></li><li><span>Wallet signatures</span><b>Never requested</b></li><li><span>Transaction broadcast</span><b>None</b></li><li><span>Backend calls</span><b>None</b></li><li><span>Live route / fee data</span><b>Unavailable</b></li><li><span>History</span><b>Current tab only</b></li></ul></section>
-    </div>
-
-    <section class="panel history" aria-labelledby="historyTitle"><h2 id="historyTitle">Session simulation history</h2><div id="historyList" class="history-list"><p class="microcopy" id="historyEmpty">No local simulations yet.</p></div></section>
-  </main>
-
-  <div id="walletModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="walletModalTitle">
-    <div class="panel modal-card"><div class="modal-head"><div><h2 id="walletModalTitle">Read-only wallet connection</h2><p class="microcopy" id="walletModalCopy">This page requests account visibility and reads the active chain ID. It never asks for a signature or transaction.</p></div><button id="closeWallet" class="close-button" type="button" aria-label="Close">×</button></div><button id="browserWallet" class="wallet-option" type="button">Connect browser wallet · read-only</button><p class="wallet-fineprint" id="walletFineprint">Connection is optional. The planning simulation works without a wallet.</p></div>
+<main class="max-w-6xl mx-auto p-6 pt-16">
+  <div class="text-center mb-12">
+    <p id="demo-notice" class="text-star-gold text-sm mb-4">DEMO · Browser-only planning and simulation. No signature, transaction broadcast, or live node telemetry.</p>
+    <h2 id="main-title" class="text-5xl md:text-6xl font-orbitron neon-text mb-4">Local Intent Demo Terminal</h2>
+    <p id="main-subtitle" class="text-xl opacity-90">Describe an intent → Local parsing → Preview → Simulation</p>
   </div>
 
-  <footer class="shell"><span id="footerText">© 2026 AstroBridge · Local demonstration only · No financial execution</span><br>Background: NASA, ESA, CSA, STScI, J. DePasquale, A. Pagan and A. M. Koekemoer.</footer>
+  <section class="glass-panel p-8 mb-10">
+    <h3 id="intent-title" class="text-2xl font-orbitron neon-text mb-6">Your Intent</h3>
+    <textarea id="intentInput" rows="4"
+      class="w-full bg-void-black/70 border border-genesis-blue/40 rounded-2xl p-6 text-white placeholder-gray-400 focus:outline-none focus:border-genesis-blue resize-none font-mono text-base"
+      placeholder="Example: Send 0.05 ETH to 0x123... on BSC"></textarea>
+    <div class="flex flex-wrap gap-4 justify-center mt-8">
+      <button id="parseBtn" class="btn-neon px-10 py-4 rounded-2xl text-base font-medium tracking-wider">
+        <i class="fas fa-brain mr-3"></i> <span id="parse-text">Parse Local Intent</span>
+      </button>
+      <button id="executeBtn" class="btn-neon px-10 py-4 rounded-2xl text-base font-medium tracking-wider" disabled>
+        <i class="fas fa-rocket mr-3"></i> <span id="execute-text">Simulate Intent</span>
+      </button>
+    </div>
+  </section>
 
-  <script>
-    (() => {
-      'use strict';
-      const copy = {
-        en:{brandSubtitle:'Intent planning lab',demoStrip:'NO REAL EXECUTION · No signature · No transaction broadcast · No backend submission',heroEyebrow:'Local planning simulation',heroTitle:'Intent Planning Lab',heroCopy:'Explore how a transfer intent could be structured. Everything on this page stays in your browser session and no real transaction is created.',boundaryTitle:'DEMO / NO REAL EXECUTION',boundaryCopy:'The planner does not request a signature, broadcast a transaction, submit an intent to a backend, or claim that a route is available. Wallet connection reads only the selected public address and chain ID.',composerTitle:'Describe a transfer',composerCopy:'Example: Plan 0.05 ETH to 0x123… on Base',sessionChip:'Session only',placeholder:'Example: Plan 0.05 ETH to 0x123... on Base',planButton:'Build local plan',simulateButton:'Run local simulation',walletIdle:'Wallet not connected · simulation remains available',planTitle:'Local plan',planCopy:'A deterministic browser-only interpretation.',planEmpty:'Enter an intent to build a local demonstration plan.',logTitle:'Simulation log',logCopy:'Every step shown here is simulated locally.',routeTitle:'Illustrative route stages',limitsTitle:'Runtime boundary',historyTitle:'Session simulation history',historyEmpty:'No local simulations yet.',walletModalTitle:'Read-only wallet connection',walletModalCopy:'This page requests account visibility and reads the active chain ID. It never asks for a signature or transaction.',browserWallet:'Connect browser wallet · read-only',walletFineprint:'Connection is optional. The planning simulation works without a wallet.',footerText:'© 2026 AstroBridge · Local demonstration only · No financial execution',emptyAlert:'Describe an intent first.',planned:'Local plan created. No network request was made.',simulateFirst:'Build a local plan first.',simStart:'Started browser-only simulation.',simNoSign:'No wallet signature requested.',simNoTx:'No transaction created or broadcast.',simNoBackend:'No backend or route provider contacted.',simDone:'Simulation complete. Result exists only in this tab.',walletMissing:'No browser wallet was detected.',walletConnecting:'Requesting read-only account access…',walletConnected:'Read-only wallet connected',walletFailed:'Wallet connection was not completed.',disconnect:'Disconnect view',localStatus:'Simulated locally'},
-        zh:{brandSubtitle:'意图规划实验室',demoStrip:'演示模式 / 不会真实执行 · 不签名 · 不广播交易 · 不提交后端',heroEyebrow:'浏览器本地规划模拟',heroTitle:'意图规划实验室',heroCopy:'体验转账意图如何被结构化。此页面的全部操作只保留在当前浏览器标签中，不会创建真实交易。',boundaryTitle:'演示模式 / 不会真实执行',boundaryCopy:'本页面不会请求签名、广播交易、向后端提交意图，也不会声称路线真实可用。钱包连接只读取所选公开地址与链 ID。',composerTitle:'描述一笔转账',composerCopy:'示例：规划在 Base 上向 0x123… 转 0.05 ETH',sessionChip:'仅当前会话',placeholder:'示例：规划在 Base 上向 0x123... 转 0.05 ETH',planButton:'生成本地计划',simulateButton:'运行本地模拟',walletIdle:'钱包未连接 · 仍可使用模拟',planTitle:'本地计划',planCopy:'由浏览器本地规则解析，仅用于演示。',planEmpty:'输入意图后生成本地演示计划。',logTitle:'模拟日志',logCopy:'这里显示的每一步均为本地模拟。',routeTitle:'示意路线阶段',limitsTitle:'运行边界',historyTitle:'当前会话模拟记录',historyEmpty:'尚无本地模拟记录。',walletModalTitle:'只读钱包连接',walletModalCopy:'本页面只请求查看账户，并读取当前链 ID；不会请求签名或交易。',browserWallet:'连接浏览器钱包 · 只读',walletFineprint:'钱包连接为可选项；不连接钱包也可使用规划模拟。',footerText:'© 2026 AstroBridge · 仅本地演示 · 不执行资金交易',emptyAlert:'请先描述你的意图。',planned:'本地计划已生成，未发出网络请求。',simulateFirst:'请先生成本地计划。',simStart:'开始浏览器本地模拟。',simNoSign:'没有请求钱包签名。',simNoTx:'没有创建或广播交易。',simNoBackend:'没有联系后端或路线提供方。',simDone:'模拟完成，结果仅存在于当前标签页。',walletMissing:'未检测到浏览器钱包。',walletConnecting:'正在请求只读账户访问…',walletConnected:'只读钱包已连接',walletFailed:'钱包连接未完成。',disconnect:'断开显示',localStatus:'仅本地模拟'}
-      };
-      let language = 'en';
-      let connectedAddress = '';
-      let connectedChain = '';
-      let currentPlan = null;
-      const history = [];
-      const ids = ['brandSubtitle','demoStrip','heroEyebrow','heroTitle','heroCopy','boundaryTitle','boundaryCopy','composerTitle','composerCopy','sessionChip','planButton','simulateButton','planTitle','planCopy','logTitle','logCopy','routeTitle','limitsTitle','historyTitle','walletModalTitle','walletModalCopy','browserWallet','walletFineprint','footerText'];
-      const $ = id => document.getElementById(id);
-      const text = key => copy[language][key] || copy.en[key] || key;
+  <div class="grid lg:grid-cols-2 gap-8">
+    <div class="glass-panel p-8">
+      <h4 id="parsed-title" class="text-2xl font-orbitron neon-text mb-6">Local Parsed Plan</h4>
+      <div id="parsedPlan" class="min-h-[280px] text-sm leading-relaxed"></div>
+    </div>
 
-      function applyLanguage() {
-        document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-        ids.forEach(id => { if ($(id)) $(id).textContent = text(id); });
-        $('intentInput').placeholder = text('placeholder');
-        updateWalletState();
-        if (!currentPlan) $('planResult').textContent = text('planEmpty');
-        if (!history.length) $('historyEmpty').textContent = text('historyEmpty');
+    <div class="glass-panel p-8">
+      <h4 id="log-title" class="text-2xl font-orbitron neon-text mb-6">Execution Log</h4>
+      <div id="statusLog" class="font-mono text-sm max-h-[280px] overflow-y-auto space-y-1"></div>
+    </div>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-8 mt-8">
+    <div class="glass-panel p-8">
+      <h4 id="node-title" class="text-2xl font-orbitron neon-text mb-6">Demo Node Routing</h4>
+      <div id="nodePanel" class="space-y-5 text-sm"></div>
+    </div>
+
+    <div class="glass-panel p-8">
+      <h4 id="metrics-title" class="text-2xl font-orbitron neon-text mb-6">Demo Network Metrics</h4>
+      <div id="metricsPanel" class="grid grid-cols-2 gap-6 text-sm"></div>
+    </div>
+  </div>
+
+  <div class="glass-panel p-8 mt-8">
+    <h4 id="history-title" class="text-2xl font-orbitron neon-text mb-6">Recent Intent History</h4>
+    <div id="historyList" class="space-y-3 max-h-[200px] overflow-y-auto"></div>
+  </div>
+</main>
+
+<footer class="glass-panel py-8 text-center text-sm opacity-75 mt-12 border-t border-genesis-blue/20">
+  <p id="footer-text">© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0</p>
+</footer>
+
+<script>
+// ==================== 日志函数 ====================
+function log(message, colorClass = "text-white") {
+  const logEl = document.getElementById('statusLog');
+  if (!logEl) return;
+  const entry = document.createElement('div');
+  entry.className = `py-1 ${colorClass}`;
+  entry.textContent = `> ${message}`;
+  logEl.appendChild(entry);
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+// ==================== 完整多语言翻译包 ====================
+const translations = {
+  en: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Global Intelligent Intent Network v7.0",
+    modalTitle: "Connect Wallet",
+    mainTitle: "AI Intent Execution Terminal",
+    mainSubtitle: "Speak your intent → AI parses → Robots route → On-chain execution",
+    intentTitle: "Your Intent",
+    parseText: "AI Parse Intent",
+    executeText: "Execute Intent",
+    parsedTitle: "AI Parsed Plan",
+    logTitle: "Execution Log",
+    nodeTitle: "Node Routing",
+    metricsTitle: "Network Metrics",
+    historyTitle: "Recent Intent History",
+    footer: "© 2026 AstroBridge — Global Intelligent Intent Network • Whitepaper V7.0",
+    connectText: "Connect Wallet",
+    disconnectText: "Disconnect",
+    parsedDefault: "AI parsed result will appear here..."
+  },
+  zh: {
+    navTitle: "星桥网络",
+    navSubtitle: "全球智能意图网络 v7.0",
+    modalTitle: "连接钱包",
+    mainTitle: "AI 意图执行终端",
+    mainSubtitle: "说出你的意图 → AI 解析 → 机器人路由 → 链上执行",
+    intentTitle: "你的意图",
+    parseText: "AI 解析意图",
+    executeText: "执行意图",
+    parsedTitle: "AI 解析结果",
+    logTitle: "执行日志",
+    nodeTitle: "节点路由",
+    metricsTitle: "网络指标",
+    historyTitle: "最近意图记录",
+    footer: "© 2026 星桥网络 — 全球智能意图网络 • 白皮书 V7.0",
+    connectText: "连接钱包",
+    disconnectText: "断开连接",
+    parsedDefault: "AI 解析结果将显示在这里..."
+  },
+  es: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Red Global de Intención Inteligente",
+    modalTitle: "Conectar Wallet",
+    mainTitle: "Terminal de Ejecución de Intención IA",
+    mainSubtitle: "Di tu intención → IA analiza → Robots enrutan → Ejecución en cadena",
+    intentTitle: "Tu Intención",
+    parseText: "Analizar con IA",
+    executeText: "Ejecutar Intención",
+    parsedTitle: "Plan Analizado por IA",
+    logTitle: "Registro de Ejecución",
+    nodeTitle: "Enrutamiento de Nodos",
+    metricsTitle: "Métricas de Red",
+    historyTitle: "Historial Reciente",
+    footer: "© 2026 AstroBridge — Red Global de Intención Inteligente",
+    connectText: "Conectar Wallet",
+    disconnectText: "Desconectar",
+    parsedDefault: "El resultado de IA aparecerá aquí..."
+  },
+  fr: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Réseau Global d'Intention Intelligente",
+    modalTitle: "Connecter Wallet",
+    mainTitle: "Terminal d'Exécution d'Intention IA",
+    mainSubtitle: "Exprime ton intention → IA analyse → Robots routent → Exécution on-chain",
+    intentTitle: "Ton Intention",
+    parseText: "Analyser avec IA",
+    executeText: "Exécuter l'Intention",
+    parsedTitle: "Plan Analysé par IA",
+    logTitle: "Journal d'Exécution",
+    nodeTitle: "Routage des Nœuds",
+    metricsTitle: "Métriques Réseau",
+    historyTitle: "Historique Récent",
+    footer: "© 2026 AstroBridge — Réseau Global d'Intention Intelligente",
+    connectText: "Connecter Wallet",
+    disconnectText: "Déconnecter",
+    parsedDefault: "Le résultat IA apparaîtra ici..."
+  },
+  ja: {
+    navTitle: "アストロブリッジ",
+    navSubtitle: "グローバルインテントネットワーク",
+    modalTitle: "ウォレット接続",
+    mainTitle: "AI インテント実行ターミナル",
+    mainSubtitle: "意図を伝える → AI解析 → ロボットルーティング → オンチェーン実行",
+    intentTitle: "あなたの意図",
+    parseText: "AIで解析",
+    executeText: "インテント実行",
+    parsedTitle: "AI解析プラン",
+    logTitle: "実行ログ",
+    nodeTitle: "ノードルーティング",
+    metricsTitle: "ネットワーク指標",
+    historyTitle: "最近のインテント履歴",
+    footer: "© 2026 AstroBridge — グローバルインテントネットワーク",
+    connectText: "ウォレット接続",
+    disconnectText: "切断",
+    parsedDefault: "AI解析結果がここに表示されます..."
+  },
+  ko: {
+    navTitle: "아스트로브릿지",
+    navSubtitle: "글로벌 인텐트 네트워크",
+    modalTitle: "지갑 연결",
+    mainTitle: "AI 인텐트 실행 터미널",
+    mainSubtitle: "의도를 말하세요 → AI 분석 → 로봇 라우팅 → 온체인 실행",
+    intentTitle: "당신의 인텐트",
+    parseText: "AI 분석",
+    executeText: "인텐트 실행",
+    parsedTitle: "AI 분석 계획",
+    logTitle: "실행 로그",
+    nodeTitle: "노드 라우팅",
+    metricsTitle: "네트워크 지표",
+    historyTitle: "최근 인텐트 기록",
+    footer: "© 2026 AstroBridge — 글로벌 인텐트 네트워크",
+    connectText: "지갑 연결",
+    disconnectText: "연결 해제",
+    parsedDefault: "AI 분석 결과가 여기에 표시됩니다..."
+  },
+  de: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Globales Intelligentes Intent-Netzwerk",
+    modalTitle: "Wallet verbinden",
+    mainTitle: "KI-Intent-Ausführungsterminal",
+    mainSubtitle: "Sage deine Absicht → KI analysiert → Roboter routen → On-Chain-Ausführung",
+    intentTitle: "Deine Absicht",
+    parseText: "KI-Analyse",
+    executeText: "Intent ausführen",
+    parsedTitle: "KI-Analyseplan",
+    logTitle: "Ausführungsprotokoll",
+    nodeTitle: "Knoten-Routing",
+    metricsTitle: "Netzwerkmetriken",
+    historyTitle: "Letzte Intents",
+    footer: "© 2026 AstroBridge — Globales Intelligentes Intent-Netzwerk",
+    connectText: "Wallet verbinden",
+    disconnectText: "Trennen",
+    parsedDefault: "KI-Analyseergebnis wird hier angezeigt..."
+  },
+  ru: {
+    navTitle: "ASTROBRIDGE",
+    navSubtitle: "Глобальная сеть интеллектуальных намерений",
+    modalTitle: "Подключить кошелек",
+    mainTitle: "Терминал выполнения намерений ИИ",
+    mainSubtitle: "Выразите свое намерение → ИИ анализирует → Роботы маршрутизируют → Выполнение на блокчейне",
+    intentTitle: "Ваше намерение",
+    parseText: "Анализ ИИ",
+    executeText: "Выполнить намерение",
+    parsedTitle: "План, проанализированный ИИ",
+    logTitle: "Журнал выполнения",
+    nodeTitle: "Маршрутизация узлов",
+    metricsTitle: "Метрики сети",
+    historyTitle: "Недавние намерения",
+    footer: "© 2026 AstroBridge — Глобальная сеть интеллектуальных намерений",
+    connectText: "Подключить кошелек",
+    disconnectText: "Отключить",
+    parsedDefault: "Результат анализа ИИ появится здесь..."
+  }
+};
+
+// Keep the original multilingual terminal layout while identifying its local demo behavior.
+const demoLabels = {
+  en: ['Local Intent Demo Terminal', 'Describe an intent → Local parsing → Preview → Simulation', 'Parse Local Intent', 'Simulate Intent', 'Local Parsed Plan', 'Demo Node Routing', 'Demo Network Metrics', 'Local parsed result will appear here...', 'DEMO · Browser-only planning and simulation. No signature, transaction broadcast, or live node telemetry.'],
+  zh: ['本地意图演示终端', '描述意图 → 本地解析 → 计划预览 → 模拟执行', '本地解析意图', '模拟意图', '本地解析计划', '演示节点路由', '演示网络指标', '本地解析结果将显示在这里…', '演示模式 · 仅在浏览器中解析与模拟，不签名、不广播交易，不代表真实节点监控。'],
+  es: ['Terminal de demostración local', 'Describe → Análisis local → Vista previa → Simulación', 'Analizar localmente', 'Simular intención', 'Plan local', 'Rutas ilustrativas', 'Métricas de demostración', 'El plan local aparecerá aquí...', 'DEMO · Simulación local. Sin firma, transmisión de transacciones ni telemetría de nodos en vivo.'],
+  fr: ['Terminal de démonstration locale', 'Décrire → Analyse locale → Aperçu → Simulation', 'Analyser localement', 'Simuler', 'Plan local', 'Routage illustratif', 'Mesures de démonstration', 'Le plan local apparaîtra ici...', 'DÉMO · Simulation locale. Aucune signature, diffusion de transaction ou télémétrie de nœuds en direct.'],
+  ja: ['ローカル意図デモ端末', '意図の説明 → ローカル解析 → プレビュー → シミュレーション', 'ローカル解析', 'シミュレーション', 'ローカルプラン', 'ルーティング例', 'デモ指標', 'ローカル解析結果がここに表示されます…', 'デモ · ブラウザー内の解析とシミュレーションのみ。署名・送信・実ノード監視は行いません。'],
+  ko: ['로컬 인텐트 데모 터미널', '설명 → 로컬 분석 → 미리 보기 → 시뮬레이션', '로컬 분석', '시뮬레이션', '로컬 계획', '예시 노드 라우팅', '데모 지표', '로컬 분석 결과가 여기에 표시됩니다…', '데모 · 브라우저 내 분석 및 시뮬레이션입니다. 서명, 거래 전송, 실제 노드 모니터링은 없습니다.'],
+  de: ['Lokales Intent-Demoterminal', 'Beschreiben → Lokal analysieren → Vorschau → Simulation', 'Lokal analysieren', 'Simulieren', 'Lokaler Plan', 'Beispiel-Routing', 'Demo-Metriken', 'Der lokale Plan erscheint hier...', 'DEMO · Lokale Simulation. Keine Signatur, Transaktionsübertragung oder Live-Knotenüberwachung.'],
+  ru: ['Локальный демонстрационный терминал', 'Описание → Локальный разбор → Просмотр → Симуляция', 'Локальный разбор', 'Симуляция', 'Локальный план', 'Пример маршрутизации', 'Демонстрационные метрики', 'Локальный план появится здесь...', 'ДЕМО · Локальная симуляция. Без подписи, отправки транзакций и мониторинга реальных узлов.']
+};
+Object.entries(demoLabels).forEach(([language, labels]) => {
+  ['mainTitle', 'mainSubtitle', 'parseText', 'executeText', 'parsedTitle', 'nodeTitle', 'metricsTitle', 'parsedDefault', 'demoNotice'].forEach((key, index) => {
+    translations[language][key] = labels[index];
+  });
+});
+
+let currentLang = 'en';
+let userAddress = null;
+let parsedIntent = null;
+let currentDetectedChainId = '0xaa36a7';
+let currentDetectedChainName = 'sepolia';
+
+// ==================== 多语言更新函数（原缺失，已补全） ====================
+function updateLanguage() {
+  const els = {
+    'demo-notice': 'demoNotice',
+    'nav-title': 'navTitle',
+    'nav-subtitle': 'navSubtitle',
+    'modal-title': 'modalTitle',
+    'main-title': 'mainTitle',
+    'main-subtitle': 'mainSubtitle',
+    'intent-title': 'intentTitle',
+    'parse-text': 'parseText',
+    'execute-text': 'executeText',
+    'parsed-title': 'parsedTitle',
+    'log-title': 'logTitle',
+    'node-title': 'nodeTitle',
+    'metrics-title': 'metricsTitle',
+    'history-title': 'historyTitle',
+    'footer-text': 'footer',
+    'connect-text': 'connectText'
+  };
+
+  Object.keys(els).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(els[id]);
+  });
+
+  const parsedEl = document.getElementById('parsedPlan');
+  if (parsedEl && parsedEl.innerHTML.trim() === '') {
+    parsedEl.textContent = t('parsedDefault');
+  }
+}
+
+function t(key) {
+  return translations[currentLang]?.[key] || translations.en[key] || key;
+}
+
+// ==================== 钱包连接（已强化 v6） ====================
+async function connectWallet(providerType) {
+  try {
+    log(`🔌 正在连接 ${providerType}...`, "text-blue-300");
+
+    if (providerType === "metamask" || providerType === "injected") {
+      if (!window.ethereum) {
+        alert("未检测到 MetaMask，请安装 MetaMask 浏览器扩展后重试。");
+        return;
       }
-      function addLog(message, tone='') {
-        const item = document.createElement('div'); item.className = `log-entry ${tone}`.trim(); item.textContent = `[${new Date().toLocaleTimeString()}] ${message}`; $('simulationLog').appendChild(item); $('simulationLog').scrollTop = $('simulationLog').scrollHeight;
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      if (!accounts.length) throw new Error('No account selected');
+      userAddress = accounts[0];
+    } else {
+      alert("当前仅支持浏览器注入钱包；该选项尚未集成。");
+      return;
+    }
+
+    // v7.0 Fix: 确保地址一定显示（核心修复）
+    const shortAddress = `${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+    document.getElementById('connect-text').textContent = shortAddress;
+    log(`✅ 钱包地址已显示: ${shortAddress}`, "text-green-400");
+
+    try {
+      currentDetectedChainId = await window.ethereum.request({ method: 'eth_chainId' });
+      const chainMap = { '0x1': 'ethereum', '0x89': 'polygon', '0x38': 'bsc', '0x2105': 'base', '0xa': 'optimism', '0xa4b1': 'arbitrum', '0xaa36a7': 'sepolia' };
+      currentDetectedChainName = chainMap[currentDetectedChainId] || 'sepolia';
+      log(`✅ 已连接 ${currentDetectedChainName.toUpperCase()} 网络`, "text-green-400");
+    } catch (e) {}
+
+    document.getElementById('connectBtn').classList.add('hidden');
+    document.getElementById('disconnectBtn').classList.remove('hidden');
+
+    log(`✅ 钱包连接成功: ${userAddress}`, "text-green-400");
+    document.getElementById('walletModal').classList.add('hidden');
+
+  } catch (error) {
+    log(`❌ 连接失败: ${error.message || error}`, "text-red-400");
+  }
+}
+
+function disconnectWallet() {
+  userAddress = null;
+  document.getElementById('connectBtn').classList.remove('hidden');
+  document.getElementById('disconnectBtn').classList.add('hidden');
+  document.getElementById('connect-text').textContent = "Connect Wallet";
+  log("🔌 钱包已断开", "text-yellow-400");
+}
+
+// v7.0 新增：账户和链变更监听（提升连接稳定性）
+function setupWalletListeners() {
+  if (window.ethereum && typeof window.ethereum.on === 'function') {
+    window.ethereum.on('accountsChanged', (accounts) => {
+      if (accounts.length === 0) {
+        disconnectWallet();
+      } else {
+        userAddress = accounts[0];
+        const short = `${userAddress.slice(0,6)}...${userAddress.slice(-4)}`;
+        document.getElementById('connect-text').textContent = short;
+        log(`🔄 账户已切换: ${short}`, "text-yellow-400");
       }
-      function shorten(value) { return value ? `${value.slice(0,6)}…${value.slice(-4)}` : ''; }
-      function chainName(chainId) { return ({'0x1':'Ethereum','0x38':'BNB Chain','0x89':'Polygon','0xa4b1':'Arbitrum','0xa86a':'Avalanche','0x2105':'Base','0xaa36a7':'Sepolia'})[chainId] || chainId || 'Unknown chain'; }
-      function updateWalletState() { $('walletState').textContent = connectedAddress ? `${text('walletConnected')}: ${shorten(connectedAddress)} · ${chainName(connectedChain)}` : text('walletIdle'); $('connectButton').textContent = connectedAddress ? `${shorten(connectedAddress)} · ${text('disconnect')}` : text('browserWallet'); }
-      function detectPlan(raw) {
-        const upper = raw.toUpperCase();
-        const address = raw.match(/0x[a-fA-F0-9]{40}/)?.[0] || (language === 'zh' ? '未提供' : 'Not provided');
-        const amount = raw.match(/(?:^|\s)(\d+(?:\.\d+)?)(?:\s|$)/)?.[1] || (language === 'zh' ? '未提供' : 'Not provided');
-        const token = ['USDC','USDT','ETH','BNB','MATIC','AVAX'].find(symbol => upper.includes(symbol)) || (language === 'zh' ? '未指定' : 'Unspecified');
-        const chains = [['BSC','BNB Chain'],['BNB','BNB Chain'],['ARBITRUM','Arbitrum'],['AVALANCHE','Avalanche'],['AVAX','Avalanche'],['POLYGON','Polygon'],['MATIC','Polygon'],['BASE','Base'],['ETHEREUM','Ethereum'],['ETH','Ethereum']];
-        const chain = chains.find(([needle]) => upper.includes(needle))?.[1] || (language === 'zh' ? '未指定' : 'Unspecified');
-        return {id:`demo_${Date.now().toString(36)}`,action:language === 'zh' ? '转账规划' : 'Transfer plan',token,amount,address,chain};
-      }
-      function renderPlan(plan) {
-        const labels = language === 'zh' ? {action:'动作',token:'资产',amount:'数量',address:'接收地址',chain:'目标链',risk:'风险判断',fee:'费用估算'} : {action:'Action',token:'Asset',amount:'Amount',address:'Recipient',chain:'Target chain',risk:'Risk verdict',fee:'Fee estimate'};
-        const values = {action:plan.action,token:plan.token,amount:plan.amount,address:plan.address,chain:plan.chain,risk:language === 'zh' ? '未评估' : 'Not assessed',fee:language === 'zh' ? '未查询实时数据' : 'No live quote requested'};
-        $('planResult').className = '';
-        $('planResult').replaceChildren();
-        const title = document.createElement('div'); title.className='plan-title'; const strong=document.createElement('strong'); strong.textContent=language === 'zh' ? '计划草案' : 'Draft plan'; const chip=document.createElement('span'); chip.className='status-chip'; chip.textContent=text('localStatus'); title.append(strong,chip);
-        const list=document.createElement('dl'); list.className='plan-list'; Object.keys(labels).forEach(key => { const dt=document.createElement('dt'); const dd=document.createElement('dd'); dt.textContent=labels[key]; dd.textContent=values[key]; list.append(dt,dd); });
-        const note=document.createElement('div'); note.className='notice'; note.textContent=language === 'zh' ? '这是本地演示解析，不是报价、安全审查或可执行交易。' : 'This local interpretation is not a quote, security review or executable transaction.';
-        $('planResult').append(title,list,note);
-      }
-      function renderHistory() {
-        $('historyList').replaceChildren();
-        history.forEach(entry => { const row=document.createElement('div'); row.className='history-row'; const id=document.createElement('span'); id.textContent=entry.id; const state=document.createElement('span'); state.textContent=text('localStatus'); row.append(id,state); $('historyList').appendChild(row); });
-      }
-      function buildPlan() {
-        const raw=$('intentInput').value.trim(); if (!raw) { window.alert(text('emptyAlert')); return; }
-        currentPlan=detectPlan(raw); renderPlan(currentPlan); $('simulateButton').disabled=false; addLog(text('planned'),'ok');
-      }
-      function simulate() {
-        if (!currentPlan) { window.alert(text('simulateFirst')); return; }
-        $('simulateButton').disabled=true; addLog(text('simStart')); [text('simNoSign'),text('simNoTx'),text('simNoBackend'),text('simDone')].forEach((message,index) => window.setTimeout(() => { addLog(message,index === 3 ? 'ok' : 'warn'); if (index === 3) { history.unshift({id:currentPlan.id}); renderHistory(); $('simulateButton').disabled=false; } },220*(index+1)));
-      }
-      async function connectReadOnly() {
-        if (connectedAddress) { connectedAddress=''; connectedChain=''; updateWalletState(); return; }
-        if (!window.ethereum?.request) { window.alert(text('walletMissing')); return; }
-        $('browserWallet').disabled=true; $('browserWallet').textContent=text('walletConnecting');
-        try { const accounts=await window.ethereum.request({method:'eth_requestAccounts'}); connectedAddress=accounts?.[0] || ''; connectedChain=await window.ethereum.request({method:'eth_chainId'}); updateWalletState(); addLog(`${text('walletConnected')}: ${shorten(connectedAddress)}`,'ok'); $('walletModal').classList.remove('open'); }
-        catch (error) { addLog(text('walletFailed'),'warn'); }
-        finally { $('browserWallet').disabled=false; $('browserWallet').textContent=text('browserWallet'); }
-      }
-      $('languageSelect').addEventListener('change',event => { language=event.target.value; applyLanguage(); if (currentPlan) renderPlan(currentPlan); renderHistory(); });
-      $('connectButton').addEventListener('click',() => { if (connectedAddress) { connectedAddress=''; connectedChain=''; updateWalletState(); addLog(language === 'zh' ? '钱包显示已断开。' : 'Wallet view disconnected.','warn'); } else $('walletModal').classList.add('open'); });
-      $('closeWallet').addEventListener('click',() => $('walletModal').classList.remove('open'));
-      $('walletModal').addEventListener('click',event => { if (event.target === $('walletModal')) $('walletModal').classList.remove('open'); });
-      $('browserWallet').addEventListener('click',connectReadOnly); $('planButton').addEventListener('click',buildPlan); $('simulateButton').addEventListener('click',simulate);
-      if (window.ethereum?.on) { window.ethereum.on('accountsChanged',accounts => { connectedAddress=accounts?.[0] || ''; updateWalletState(); }); window.ethereum.on('chainChanged',chainId => { connectedChain=chainId; updateWalletState(); }); }
-      applyLanguage(); updateWalletState();
-    })();
-  </script>
+    });
+
+    window.ethereum.on('chainChanged', () => {
+      window.location.reload();
+    });
+  }
+}
+
+// ==================== 事件绑定 ====================
+document.getElementById('connectBtn').onclick = () => document.getElementById('walletModal').classList.remove('hidden');
+document.getElementById('closeWallet').onclick = () => document.getElementById('walletModal').classList.add('hidden');
+document.getElementById('disconnectBtn').onclick = disconnectWallet;
+
+document.querySelectorAll('.wallet-option').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const providerType = btn.getAttribute('data-provider');
+    connectWallet(providerType);
+  });
+});
+
+document.getElementById('languageSelect').addEventListener('change', (e) => {
+  currentLang = e.target.value;
+  updateLanguage();
+});
+
+// ==================== Demonstration panels ====================
+function loadNodeRouting() {
+  document.getElementById('nodePanel').innerHTML = `
+    <div class="flex justify-between py-2 border-b border-genesis-blue/10"><span>Intent parsing</span><span class="text-blue-400">Local preview</span></div>
+    <div class="flex justify-between py-2 border-b border-genesis-blue/10"><span>Route planning</span><span class="text-yellow-400">Illustrative</span></div>
+    <div class="flex justify-between py-2 border-b border-genesis-blue/10"><span>Live nodes</span><span class="text-yellow-400">Not measured</span></div>`;
+}
+
+function loadMetrics() {
+  document.getElementById('metricsPanel').innerHTML = `
+    <div><span>Active Intents</span><div class="text-genesis-blue">Not measured</div></div>
+    <div><span>Nodes Online</span><div class="text-genesis-blue">Not measured</div></div>
+    <div><span>Success Rate</span><div class="text-genesis-blue">Not measured</div></div>`;
+}
+
+// ==================== AI Parse ====================
+document.getElementById('parseBtn').onclick = () => {
+  const rawText = document.getElementById('intentInput').value.trim();
+  if (!rawText) return alert("请输入你的意图");
+
+  const parsedPlan = document.getElementById('parsedPlan');
+  parsedPlan.innerHTML = `<div class="flex items-center gap-4 text-genesis-blue"><i class="fas fa-brain fa-spin text-3xl"></i><span>正在生成本地意图预览…</span></div>`;
+  log("🧠 开始本地规则解析（演示）…", "text-blue-300");
+
+  setTimeout(() => {
+    const upper = rawText.toUpperCase();
+    let actionType = "Transfer preview", tokenSymbol = "ETH", amount = "Not specified";
+    let toAddress = "Not specified", chain = "Not specified";
+
+    if (upper.includes("USDC")) { tokenSymbol = "USDC"; actionType = "ERC20 transfer preview"; }
+    else if (upper.includes("USDT")) { tokenSymbol = "USDT"; actionType = "ERC20 transfer preview"; }
+
+    const amountMatch = rawText.replace(/0x[a-fA-F0-9]{40}/gi, "").match(/(\d+\.?\d*)/);
+    if (amountMatch) amount = amountMatch[1];
+
+    const addressMatch = rawText.match(/0x[a-fA-F0-9]{40}/i);
+    if (addressMatch) toAddress = addressMatch[0];
+
+    if (upper.includes("BSC") || upper.includes("BNB")) { chain = "BNB Chain"; if (upper.includes("BNB")) tokenSymbol = "BNB"; }
+    else if (upper.includes("SEPOLIA")) chain = "Sepolia";
+    else if (upper.includes("BASE")) chain = "Base";
+    else if (upper.includes("ARBITRUM")) chain = "Arbitrum";
+    else if (upper.includes("ETHEREUM")) chain = "Ethereum";
+
+    const intentId = `demo_${Date.now().toString(36).toUpperCase()}`;
+    parsedIntent = { intentId, actionType, tokenSymbol, amount, toAddress, chain, mode: "local-demo" };
+
+    parsedPlan.innerHTML = `
+      <div class="space-y-6">
+        <div class="flex justify-between items-center">
+          <strong class="text-genesis-blue text-2xl">本地意图预览已生成</strong>
+          <span class="text-xs bg-green-500/20 text-green-400 px-4 py-1 rounded-2xl">ID: ${intentId}</span>
+        </div>
+        <div class="grid grid-cols-2 gap-x-12 gap-y-5 text-base">
+          <div class="text-gray-400">Action</div><div>${actionType}</div>
+          <div class="text-gray-400">Token</div><div>${tokenSymbol}</div>
+          <div class="text-gray-400">Amount</div><div>${amount} ${tokenSymbol}</div>
+          <div class="text-gray-400">To</div><div class="font-mono break-all">${toAddress}</div>
+          <div class="text-gray-400">Chain</div><div>${chain}</div>
+          <div class="text-gray-400">Risk Score</div><div class="text-yellow-400">Not assessed</div>
+          <div class="text-gray-400">Est. Astro Fee</div><div class="text-star-gold">Not quoted</div>
+        </div>
+        <div class="pt-6 border-t border-genesis-blue/30 text-sm opacity-80">
+          • 本地规则解析，仅供预览<br>
+          • 未验证路线、报价或链上风险<br>
+          • 不签名、不广播、不提交服务器
+        </div>
+        <button onclick="copyParsedIntent()" class="w-full py-3.5 text-sm border border-genesis-blue/50 hover:bg-genesis-blue/10 rounded-2xl">
+          📋 复制意图 JSON
+        </button>
+      </div>
+    `;
+
+    log(`本地演示解析完成 → ${actionType} ${amount} ${tokenSymbol}`, "text-green-400");
+    document.getElementById('executeBtn').disabled = false;
+  }, 900);
+};
+
+function copyParsedIntent() {
+  if (!parsedIntent) return;
+  const text = JSON.stringify(parsedIntent, null, 2);
+  navigator.clipboard.writeText(text).then(() => {
+    alert("已复制到剪贴板！");
+  });
+}
+
+// ==================== Local demonstration only ====================
+document.getElementById('executeBtn').onclick = () => {
+  if (!parsedIntent) return;
+  log('本地模拟完成：未请求签名，未创建或广播交易，未提交后端。', 'text-blue-300');
+  addToHistory(parsedIntent.intentId, 'Simulated locally');
+};
+
+function addToHistory(id, status) {
+  const historyList = document.getElementById('historyList');
+  const color = "text-blue-300";
+  historyList.innerHTML =
+    `<div class="flex justify-between py-3 border-b border-genesis-blue/10 text-sm">
+      <span class="font-mono">${id}</span><span class="${color}">${status}</span>
+    </div>` + historyList.innerHTML;
+}
+
+async function pollIntentStatus(intentId) {
+  // 保留空实现，不影响页面
+}
+
+// ==================== 初始化 ====================
+updateLanguage();
+loadNodeRouting();
+loadMetrics();
+
+log("AstroBridge v7.0 本地演示已就绪 · 无真实交易执行", "text-blue-300");
+
+// v7.0 Fix: 初始化钱包监听
+setupWalletListeners();
+
+</script>
 </body>
 </html>

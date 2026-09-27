@@ -1,33 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="AstroWallet AI historical interface study and evidence-bounded product roadmap from AstroBridge.">
-  <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
-  <title>AstroWallet AI | Concept Archive &amp; Roadmap</title>
-  <link href="/vendor/fonts/inter/5.3.0/font.css" rel="stylesheet"><link href="/vendor/fonts/space-grotesk/5.3.0/font.css" rel="stylesheet">
-  <style>
-    :root{color-scheme:dark;--bg:#03050a;--panel:rgba(10,17,30,.82);--line:rgba(255,255,255,.11);--text:#f7f9fc;--muted:#9ca9bb;--cyan:#5ee7f5;--violet:#9a78ff;--gold:#efc86b;--green:#63e6a8;--amber:#ffb96b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:radial-gradient(circle at 15% 8%,rgba(94,231,245,.12),transparent 28rem),radial-gradient(circle at 88% 20%,rgba(154,120,255,.13),transparent 31rem),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}body:before{content:"";position:fixed;inset:0;z-index:-1;opacity:.22;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(#000,transparent 80%)}a{color:inherit}.shell{width:min(1180px,calc(100% - 40px));margin:auto}.site-header{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(3,5,10,.78);backdrop-filter:blur(20px)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 1.03rem 'Space Grotesk',sans-serif}.brand img{width:42px;height:42px;filter:drop-shadow(0 0 13px rgba(94,231,245,.23))}.brand small{display:block;margin-top:2px;color:var(--muted);font:500 .68rem Inter,sans-serif;letter-spacing:.13em;text-transform:uppercase}.nav-links{display:flex;gap:22px}.nav-links a{color:var(--muted);font-size:.83rem;font-weight:700;text-decoration:none}.nav-links a:hover{color:#fff}.hero{padding:112px 0 74px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid rgba(239,200,107,.34);border-radius:999px;background:rgba(239,200,107,.07);color:#ffe2a0;font-size:.72rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 13px var(--gold)}h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif}h1{max-width:940px;margin:26px auto 22px;font-size:clamp(3rem,8vw,6.8rem);line-height:.94;letter-spacing:-.065em}h1 span{background:linear-gradient(95deg,var(--cyan),#a8ccff 47%,#d4b8ff);background-clip:text;color:transparent}.lead{max-width:790px;margin:0 auto;color:#b4becc;font-size:clamp(1.03rem,2vw,1.22rem);line-height:1.72}.lead.zh{margin-top:9px;color:#7f8da2;font-size:.97rem}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:33px}.button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 20px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.035);font-size:.84rem;font-weight:760;text-decoration:none;transition:.2s}.button.primary{border-color:transparent;background:linear-gradient(115deg,#46dbe8,#7f7bff);color:#02050b;box-shadow:0 16px 46px rgba(81,196,235,.2)}.button:hover{transform:translateY(-2px);border-color:rgba(94,231,245,.42)}.boundary{display:grid;grid-template-columns:auto 1fr;gap:17px;max-width:930px;margin:58px auto 0;padding:20px 22px;border:1px solid rgba(255,185,107,.28);border-radius:18px;background:rgba(255,185,107,.055);text-align:left}.boundary b{display:grid;width:36px;height:36px;place-items:center;border-radius:11px;background:rgba(255,185,107,.12);color:var(--amber)}.boundary strong{display:block;margin:1px 0 6px;font-size:.9rem}.boundary p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.7}section{padding:88px 0}.section-head{max-width:740px;margin-bottom:38px}.kicker{margin-bottom:12px;color:var(--cyan);font-size:.72rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}h2{margin:0 0 13px;font-size:clamp(2rem,4.8vw,3.45rem);line-height:1.06;letter-spacing:-.045em}.section-head p{margin:0;color:var(--muted);line-height:1.72}.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.capture{position:relative;overflow:hidden;margin:0;border:1px solid var(--line);border-radius:24px;background:#090d16;box-shadow:0 24px 60px rgba(0,0,0,.26)}.capture img{display:block;width:100%;height:100%;min-height:330px;object-fit:cover;object-position:top;opacity:.8;filter:saturate(.82);transition:.45s}.capture:after{content:"ARCHIVED CONCEPT";position:absolute;left:10px;right:10px;bottom:10px;padding:9px 8px;border:1px solid rgba(255,255,255,.15);border-radius:10px;background:rgba(4,7,13,.84);color:#d2dae6;font-size:.58rem;font-weight:800;letter-spacing:.1em;text-align:center}.capture:hover img{transform:scale(1.025);opacity:.95}.state-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{min-height:270px;padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(16,25,43,.8),rgba(7,11,20,.93))}.number{display:grid;width:40px;height:40px;margin-bottom:34px;place-items:center;border:1px solid rgba(94,231,245,.22);border-radius:12px;color:var(--cyan);font:700 .8rem 'Space Grotesk',sans-serif}.card h3{margin:0 0 9px;font-size:1.22rem}.card p{margin:0;color:var(--muted);font-size:.89rem;line-height:1.68}.card p+p{margin-top:7px;color:#738197;font-size:.79rem}.card a{display:inline-block;margin-top:20px;color:#baf7ff;font-size:.81rem;font-weight:760;text-decoration:none}.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.phase{min-height:260px;padding:25px;border:1px solid var(--line);border-radius:20px;background:rgba(8,13,23,.78)}.phase .dot{width:12px;height:12px;margin-bottom:43px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}.phase:nth-child(1) .dot{background:var(--green)}.phase:nth-child(3) .dot{background:var(--amber)}.phase:nth-child(4) .dot{background:var(--violet)}.phase small{color:var(--cyan);font-weight:800;letter-spacing:.11em;text-transform:uppercase}.phase h3{margin:11px 0 10px;font-size:1.08rem}.phase p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.65}.phase p+p{margin-top:9px;color:#718096;font-size:.76rem}.closing{margin-top:48px;padding:40px;border:1px solid rgba(94,231,245,.2);border-radius:28px;background:linear-gradient(120deg,rgba(94,231,245,.09),rgba(154,120,255,.08));text-align:center}.closing h3{margin:0 0 10px;font-size:clamp(1.5rem,3vw,2.2rem)}.closing p{max-width:700px;margin:auto;color:var(--muted);line-height:1.7}footer{padding:34px 0 48px;border-top:1px solid var(--line);color:#69768a;font-size:.76rem}.footer-row{display:flex;justify-content:space-between;gap:20px}@media(max-width:960px){.gallery{grid-template-columns:repeat(3,1fr)}.roadmap{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.shell{width:min(100% - 28px,1180px)}.nav{min-height:68px}.nav-links a:not(:last-child){display:none}.brand img{width:37px;height:37px}.hero{padding:78px 0 54px}.boundary{grid-template-columns:1fr}section{padding:65px 0}.gallery{grid-template-columns:repeat(2,1fr)}.gallery .capture:last-child{display:none}.capture img{min-height:285px}.state-grid,.roadmap{grid-template-columns:1fr}.closing{padding:29px 21px}.footer-row{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+    <title>AstroWallet AI - Roadmap & Product Preview</title>
+    <link href="/vendor/fonts/inter/5.3.0/font.css" rel="stylesheet">
+    <link href="/vendor/fonts/space-grotesk/5.3.0/font.css" rel="stylesheet">
+    <script src="/vendor/tailwindcss/3.4.17/tailwindcss.js"></script>
+    <style>
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .title-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .screenshot {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: perspective(1200px) translateZ(0);
+        }
+
+        .screenshot:hover {
+            transform: translateY(-12px) scale(1.03) perspective(1200px) translateZ(20px);
+            box-shadow: 0 0 60px rgba(76, 201, 240, 0.5);
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(76, 201, 240, 0.6);
+            animation: floatParticle 25s linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) scale(1); }
+            100% { transform: translateY(-100vh) scale(0.5); }
+        }
+    </style>
 </head>
-<body>
-  <header class="site-header"><div class="shell nav"><a class="brand" href="/" aria-label="AstroBridge home"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="42" height="42"><span>AstroWallet AI<small>by AstroBridge</small></span></a><nav class="nav-links" aria-label="Primary"><a href="#archive">Concept archive</a><a href="#direction">Direction</a><a href="/progress.html">Project progress</a><a href="/painpoints.html#download">Current MA release</a></nav></div></header>
-  <main>
-    <section class="hero"><div class="shell"><div class="eyebrow">Historical concept · roadmap preview</div><h1>AstroWallet AI<br><span>ideas with clear boundaries.</span></h1><p class="lead">A preserved interface study and a forward-looking direction for user-authorized wallet intelligence. Current availability is shown through MA and dated engineering evidence.</p><p class="lead zh" lang="zh-Hans">这里保留早期界面探索，并公开面向用户授权的钱包智能路线。当前可用内容以 MA 页面和有日期的工程证据为准。</p><div class="actions"><a class="button primary" href="/painpoints.html#download">Open current MA downloads / 下载当前 MA</a><a class="button" href="/astrobridge-internal-certification.html">Review engineering evidence / 查看工程证据</a></div><aside class="boundary"><b>i</b><div><strong>Concept status / 概念状态</strong><p>The visuals below are archived design studies. They do not announce a current AstroWallet AI release, token-based access, investment returns, automatic earnings, price protection, or protection against loss. / 下方视觉稿属于历史设计探索，不代表当前 AstroWallet AI 已发布，也不代表代币门槛、投资收益、自动盈利、保价或损失保障。</p></div></aside></div></section>
-    <section id="archive"><div class="shell"><div class="section-head"><div class="kicker">01 · Design record</div><h2>Interface studies, preserved as history.</h2><p>These captures document a visual direction explored during product design. They remain useful as design references and are intentionally separated from current release claims.</p></div><div class="gallery"><figure class="capture"><img src="/IMG_9785.PNG" alt="Archived home interface concept" loading="lazy"></figure><figure class="capture"><img src="/IMG_9786.PNG" alt="Archived assistant interface concept" loading="lazy"></figure><figure class="capture"><img src="/IMG_9787.PNG" alt="Archived assets interface concept" loading="lazy"></figure><figure class="capture"><img src="/IMG_9788.PNG" alt="Archived automation interface concept" loading="lazy"></figure><figure class="capture"><img src="/IMG_9789.PNG" alt="Archived settings interface concept" loading="lazy"></figure></div></div></section>
-    <section id="direction"><div class="shell"><div class="section-head"><div class="kicker">02 · Evidence boundary</div><h2>What the project can say today.</h2><p>Each statement links to the page that defines its evidence and limits. Status changes only after new verification is published.</p></div><div class="state-grid">
-      <article class="card"><div class="number">01</div><h3>Current public product</h3><p>MA is the current public AstroBridge application page for address-based chat, wallet tools and Android distribution.</p><p lang="zh-Hans">MA 是当前公开的 AstroBridge 应用入口，提供地址身份聊天、钱包工具与 Android 下载。</p><a href="/painpoints.html#download">Open MA release page →</a></article>
-      <article class="card"><div class="number">02</div><h3>Implemented and tested</h3><p>The dated internal readiness report records source implementation, builds and regression checks for the MA / AstroBridge integration.</p><p lang="zh-Hans">有日期的内部就绪报告记录了 MA / AstroBridge 集成的源码实现、构建与回归检查。</p><a href="/astrobridge-internal-certification.html">Read the dated report →</a></article>
-      <article class="card"><div class="number">03</div><h3>Deployment still gated</h3><p>Production activation, final configuration and approved low-value canaries remain explicit gates wherever the readiness report marks them pending.</p><p lang="zh-Hans">报告中标记为待完成的内容，仍须经过生产部署、最终配置与获批的小额验证。</p><a href="/progress.html">View project states →</a></article>
-      <article class="card"><div class="number">04</div><h3>Future research</h3><p>Natural-language wallet intent, AI security controls and user-authorized automation remain research directions until design, security and deployment evidence exists.</p><p lang="zh-Hans">自然语言钱包意图、AI 安全控制与用户授权自动化属于未来研究方向，需以设计、安全和部署证据为准。</p><a href="/trust.html">Open the Trust Center →</a></article>
-    </div></div></section>
-    <section><div class="shell"><div class="section-head"><div class="kicker">03 · Roadmap logic</div><h2>No promised dates. Clear release gates.</h2><p>The sequence describes how a concept becomes a verifiable product. It is a decision framework, not a delivery countdown.</p></div><div class="roadmap">
-      <article class="phase"><div class="dot"></div><small>Preserved</small><h3>Concept archive</h3><p>Keep the original interface studies available with visible historical labels.</p><p lang="zh-Hans">保留原始界面探索，并明确标注为历史概念。</p></article>
-      <article class="phase"><div class="dot"></div><small>Evidence first</small><h3>Architecture validation</h3><p>Document source, build and test results with scope and limitations.</p><p lang="zh-Hans">记录源码、构建与测试结果，同时公开证据范围与限制。</p></article>
-      <article class="phase"><div class="dot"></div><small>Gated</small><h3>Production activation</h3><p>Complete server configuration and approved canaries before changing a feature to live.</p><p lang="zh-Hans">完成服务器配置与获批验证后，才能把功能状态改为已上线。</p></article>
-      <article class="phase"><div class="dot"></div><small>Research</small><h3>Safe wallet intelligence</h3><p>Explore explainable intent, explicit confirmation, recovery and AI security controls.</p><p lang="zh-Hans">研究可解释意图、明确确认、恢复能力与 AI 安全控制。</p></article>
-    </div><div class="closing"><h3>The live product path begins with MA.</h3><p>For current Android packages and product details, use the official MA release section. For technical status, use the dated engineering report and project progress page.</p><div class="actions"><a class="button primary" href="/painpoints.html#download">Go to MA downloads</a><a class="button" href="/progress.html">Open project progress</a></div></div></div></section>
-  </main>
-  <footer><div class="shell footer-row"><span>© 2026 AstroBridge Technology Limited</span><span>Concept archive · no financial promises · evidence-linked status</span></div></footer>
+<body class="min-h-screen">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-cyan-500/20">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- 专业黑框 + 发光 Logo -->
+      <div class="w-12 h-12 rounded-xl bg-black border border-white/20 shadow-lg shadow-cyan-500/30 flex items-center justify-center">
+        <img src="/assets/astrobridge-mark-256.png" alt="AstroBridge Logo" class="w-9 h-9 object-contain drop-shadow-[0_0_10px_rgba(76,201,240,0.8)]">
+      </div>
+      <span class="title-font text-2xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AstroWallet AI</span>
+    </div>
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="/" class="hover:text-cyan-400 transition-colors">Home</a>
+      <a href="#screenshots" class="hover:text-cyan-400 transition-colors">Screenshots</a>
+      <a href="#roadmap" class="hover:text-cyan-400 transition-colors">Roadmap</a>
+      <a href="#whitepaper" class="text-cyan-400 font-semibold">Whitepaper</a>
+    </div>
+
+    <a href="/painpoints.html" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl font-semibold hover:scale-105 transition-all">
+      Explore MA
+    </a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-bg pt-32 pb-20 relative min-h-screen flex items-center">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h1 class="title-font text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+      AstroWallet AI<br><span class="text-cyan-400">Product Roadmap</span>
+    </h1>
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+      Historical Concept <span class="text-cyan-400 font-bold">V1.2</span> — Local Sovereign AI Wallet Research
+    </p>
+  </div>
+  <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+</section>
+
+<!-- Screenshots -->
+<section id="screenshots" class="py-24 bg-black">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="title-font text-5xl font-bold mb-4">Historical Product Preview</h2>
+      <p class="text-gray-400 text-lg">V1.2 concept screenshots · not a current release or offer</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <img src="IMG_9785.PNG" alt="Home Screen" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+      <img src="IMG_9786.PNG" alt="AI Assistant" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+      <img src="IMG_9787.PNG" alt="Assets Page" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+      <img src="IMG_9788.PNG" alt="AI Auto Earn" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+      <img src="IMG_9789.PNG" alt="Settings" class="screenshot rounded-3xl border border-cyan-500/20 shadow-2xl w-full h-auto object-cover">
+    </div>
+  </div>
+</section>
+
+<!-- Whitepaper Section -->
+<section id="whitepaper" class="py-24 bg-zinc-950">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="title-font text-5xl font-bold text-center mb-12">AstroWallet AI Concept V1.2</h2>
+
+    <div class="prose prose-invert max-w-none text-gray-300 space-y-10">
+      <p class="text-xl leading-relaxed text-center">
+        This historical AstroWallet AI proposal records an earlier product direction. Features shown below require separate release confirmation.
+      </p>
+
+      <!-- VIP Highlight -->
+      <div class="bg-gradient-to-br from-yellow-900/30 to-amber-900/20 border border-yellow-400/50 rounded-3xl p-10 text-center">
+        <div class="inline-flex items-center gap-3 bg-yellow-400/10 px-6 py-3 rounded-2xl mb-6">
+          <span class="text-3xl">⭐</span>
+          <span class="text-yellow-400 font-bold text-xl">PROPOSED VIP CONCEPT</span>
+        </div>
+        <h3 class="text-3xl font-bold mb-4">
+          Access Terms <span class="text-yellow-400">Under Review</span>
+        </h3>
+        <p class="text-4xl title-font font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400 mb-6">
+          AI-Assisted<br>Wallet Experience
+        </p>
+        <p class="text-gray-400 text-lg">
+          Research proposal only • No guaranteed yield or loss protection • No active token requirement
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-black/50 border border-cyan-500/30 rounded-3xl p-8">
+          <h3 class="text-cyan-400 font-semibold mb-4">Proposed Core Features</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Fully Local AI Intent Execution</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> AstroBridge Dedicated Channel</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Risk controls subject to validation</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Natural Language Commands</li>
+          </ul>
+        </div>
+        <div class="bg-black/50 border border-cyan-500/30 rounded-3xl p-8">
+          <h3 class="text-cyan-400 font-semibold mb-4">Security & Privacy Goals</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Biometric Authentication</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Local-first data design</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> User Sovereignty First</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400">✓</span> Decentralized Non-Custodial</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roadmap -->
+<section id="roadmap" class="py-24 bg-black">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="title-font text-5xl font-bold text-center mb-16">Development Roadmap</h2>
+    <div class="space-y-12">
+      <div class="flex gap-8">
+        <div class="w-32 text-right flex-shrink-0">
+          <div class="text-cyan-400 font-mono text-xl font-bold">V1.2</div>
+          <div class="text-sm text-gray-500">Historical • Q2 2026</div>
+        </div>
+        <div class="flex-1 bg-black/50 border border-cyan-500/30 rounded-3xl p-8">
+          <h3 class="text-2xl font-semibold mb-6">Local Sovereign Smart Wallet</h3>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
+            <li class="flex items-start gap-3"><span class="text-emerald-400 mt-1">✓</span> Fully Local AI Intent Execution</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400 mt-1">✓</span> AstroBridge Dedicated Channel</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400 mt-1">✓</span> Risk-control research</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400 mt-1">✓</span> Camera Scanner</li>
+            <li class="flex items-start gap-3"><span class="text-emerald-400 mt-1">✓</span> AI-assisted wallet research</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-black py-12 text-center text-gray-500 text-sm border-t border-cyan-900/30">
+  <p>AstroWallet AI — Historical AstroBridge Product Concept</p>
+  <p class="mt-2">© 2026 AstroWallet AI • Privacy First • Sovereignty First</p>
+</footer>
+
+<script>
+  function createParticles() {
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 5 + 2;
+      p.style.width = `${size}px`;
+      p.style.height = `${size}px`;
+      p.style.left = `${Math.random() * 100}vw`;
+      p.style.animationDuration = `${Math.random() * 25 + 20}s`;
+      p.style.animationDelay = `-${Math.random() * 30}s`;
+      container.appendChild(p);
+    }
+  }
+  window.onload = createParticles;
+</script>
+
 </body>
 </html>

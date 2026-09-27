@@ -1,86 +1,197 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A local-only AstroBridge interface preview for six implemented EVM compatibility tracks. No quote, signature or transaction broadcast.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AstroBridge | Mini Swap + Side Dashboard</title>
   <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="alternate icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <title>AstroBridge | Six-Chain Interface Preview</title>
-  <link href="/vendor/fonts/inter/5.3.0/font.css" rel="stylesheet">
+  <script src="/vendor/tailwindcss/3.4.17/tailwindcss.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'genesis-blue': '#40c4ff',
+            'genesis-purple': '#7c4dff',
+            'void-black': '#02000d',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="/vendor/fonts/orbitron/5.3.0/font.css" rel="stylesheet">
+  <script src="/vendor/ethers/5.7.2/ethers.umd.min.js"></script>
   <style>
-    :root{--bg:#020617;--panel:rgba(9,20,43,.78);--line:rgba(76,201,240,.25);--cyan:#4cc9f0;--pink:#f72585;--text:#e8f3f8;--muted:#9eb8c7;--amber:#ffd166}
-    *{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 16% 12%,rgba(76,201,240,.12),transparent 36%),radial-gradient(circle at 86% 78%,rgba(247,37,133,.1),transparent 34%),var(--bg);color:var(--text);font-family:'Inter',sans-serif}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(76,201,240,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(76,201,240,.035) 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
-    .shell{position:relative;z-index:1;max-width:1120px;margin:auto;padding:28px 20px 64px} header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:52px}
-    .brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none;font-size:1.12rem;font-weight:800}.brand img{width:44px;height:44px;object-fit:contain}.home{color:var(--cyan);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:10px 16px;background:rgba(76,201,240,.06)}
-    .hero{max-width:820px;margin:0 auto 34px;text-align:center}.eyebrow{color:var(--cyan);font-size:.76rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}h1{font-size:clamp(2.2rem,6vw,4.8rem);line-height:1.02;margin:14px 0 18px;background:linear-gradient(110deg,#fff 5%,#9ae8ff 48%,#ff8fc1);-webkit-background-clip:text;color:transparent}.hero p{margin:0 auto;color:var(--muted);font-size:1.03rem;line-height:1.75;max-width:760px}
-    .status{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:rgba(76,201,240,.06);color:#d8f6ff;font-size:.78rem}.pill.pending{border-color:rgba(255,209,102,.32);background:rgba(255,209,102,.07);color:#ffe4a3}
-    .layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:22px;align-items:start}.panel{border:1px solid var(--line);border-radius:22px;background:var(--panel);box-shadow:0 24px 80px rgba(0,0,0,.28);backdrop-filter:blur(18px);padding:26px}.panel h2{font-size:1.14rem;margin:0 0 7px}.panel-intro{color:var(--muted);font-size:.88rem;line-height:1.6;margin:0 0 24px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}label{display:block;color:#bfd5df;font-size:.78rem;font-weight:700;margin-bottom:7px}input,select{width:100%;border:1px solid rgba(76,201,240,.32);border-radius:12px;background:#040b1c;color:#fff;padding:13px 14px;font:inherit;outline:none}input:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(76,201,240,.12)}.full{grid-column:1/-1}.swap-arrow{grid-column:1/-1;text-align:center;color:var(--cyan);font-size:1.3rem;margin:-3px 0}
-    .notice{grid-column:1/-1;border:1px solid rgba(255,209,102,.28);border-radius:14px;background:rgba(255,209,102,.07);color:#ffe9b5;padding:14px;font-size:.82rem;line-height:1.6}.consent{display:flex;align-items:flex-start;gap:10px;margin:17px 0 0;color:#bdd1dc;font-size:.82rem;line-height:1.5}.consent input{width:auto;margin-top:3px;accent-color:var(--cyan)}button{width:100%;margin-top:18px;border:0;border-radius:13px;padding:14px 18px;background:linear-gradient(100deg,var(--cyan),#7c4dff);color:#07111d;font:inherit;font-weight:900;cursor:pointer;transition:.2s}button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 12px 30px rgba(76,201,240,.25)}button:disabled{cursor:not-allowed;opacity:.4}
-    #result{display:none;margin-top:18px;border:1px solid rgba(76,201,240,.3);border-radius:14px;background:rgba(76,201,240,.06);padding:16px;color:#cdeef8;line-height:1.65;font-size:.86rem}#result.show{display:block}#result strong{color:#fff}.facts{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}.facts li{display:flex;justify-content:space-between;gap:18px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07);color:var(--muted);font-size:.84rem}.facts b{color:#eafaff;text-align:right}.facts .pending-text{color:var(--amber)}.links{display:grid;gap:10px;margin-top:22px}.links a{display:block;text-align:center;text-decoration:none;border:1px solid var(--line);border-radius:11px;padding:11px;color:var(--cyan);background:rgba(76,201,240,.05);font-size:.84rem;font-weight:700}footer{color:#718b9a;text-align:center;margin-top:38px;font-size:.76rem;line-height:1.6}
-    @media(max-width:820px){.layout{grid-template-columns:1fr}.side{order:-1}}@media(max-width:560px){header{margin-bottom:38px}.brand span{display:none}.grid{grid-template-columns:1fr}.full,.swap-arrow{grid-column:1}.panel{padding:20px}.shell{padding-inline:14px}}
+    body{background:#02000d;min-height:100vh;position:relative;overflow-x:hidden;}
+    /* 全屏悬浮粒子背景 */
+    #particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+    /* 高透高亮立体玻璃升级，立体感+强光外发光 */
+    .glass-sm{
+      background:rgba(8,15,40,0.25);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(64,196,255,0.45);
+      border-radius:1.2rem;
+      box-shadow: 0 0 25px rgba(64,196,255,0.35),
+                  inset 0 0 15px rgba(64,196,255,0.15);
+      transform:translateZ(8px);
+    }
+    .btn-swap{
+      background:linear-gradient(135deg,#40c4ff,#7c4dff);
+      box-shadow:0 0 20px rgba(64,196,255,0.6);
+      border-radius:0.8rem;
+    }
+    .btn-swap:hover{
+      box-shadow:0 0 40px rgba(64,196,255,0.9);
+      transform:scale(1.03) translateZ(12px);
+    }
+    .side-dash{width:280px;max-height:90vh;}
+    .num-live{animation:pulse-num 1.2s infinite;}
+    @keyframes pulse-num{0%,100%{opacity:1;}50%{opacity:0.7;}}
+    /* 粒子闪烁动画 */
+    @keyframes particle-float{
+      0%{transform:translateY(0) translateX(0);opacity:0.2;}
+      50%{transform:translateY(-15px) translateX(8px);opacity:0.8;}
+      100%{transform:translateY(0) translateX(0);opacity:0.2;}
+    }
+    .particle{
+      position:absolute;background:#40c4ff;border-radius:50%;
+      animation:particle-float 6s ease-in-out infinite;
+    }
+    /* 核心修复：下拉框原生选项深色透明，干掉白色背景 */
+    select {
+      background-color: transparent !important;
+      color: #fff !important;
+      border-color: rgba(64,196,255,0.5) !important;
+    }
+    select option {
+      background: #02000d !important;
+      color: #fff !important;
+    }
   </style>
 </head>
-<body>
-  <div class="shell">
-    <header><a class="brand" href="/index.html"><img src="/assets/astrobridge-mark-256.png" width="44" height="44" alt="AstroBridge emblem"><span>AstroBridge</span></a><a class="home" href="/index.html">Back to home</a></header>
-    <main>
-      <section class="hero">
-        <div class="eyebrow">Local interface preview</div>
-        <h1>Explore a six-chain intent route.</h1>
-        <p>This page models user input locally for the six EVM compatibility tracks recorded in AstroBridge’s dated engineering report. It does not request a live quote, connect a wallet, ask for a signature or broadcast a transaction.</p>
-        <div class="status" aria-label="Engineering status"><span class="pill">BSC · Ethereum · Polygon</span><span class="pill">Arbitrum · Avalanche · Base</span><span class="pill pending">Production deployment pending</span></div>
-      </section>
-      <div class="layout">
-        <section class="panel" aria-labelledby="preview-title">
-          <h2 id="preview-title">Build a local route preview</h2><p class="panel-intro">Selections stay in this browser page and are used only to render the summary below.</p>
-          <form id="previewForm" class="grid" novalidate>
-            <div><label for="sourceChain">Source chain</label><select id="sourceChain" required><option>BSC</option><option>Ethereum</option><option>Polygon</option><option>Arbitrum</option><option>Avalanche</option><option>Base</option></select></div>
-            <div><label for="destinationChain">Destination chain</label><select id="destinationChain" required><option>BSC</option><option selected>Ethereum</option><option>Polygon</option><option>Arbitrum</option><option>Avalanche</option><option>Base</option></select></div>
-            <div class="swap-arrow" aria-hidden="true">↓</div>
-            <div><label for="asset">Illustrative asset</label><select id="asset" required><option>Native asset</option><option>USDT</option><option>USDC</option></select></div>
-            <div><label for="amount">Amount</label><input id="amount" inputmode="decimal" autocomplete="off" placeholder="0.01" required></div>
-            <div class="full"><label for="recipient">Recipient address</label><input id="recipient" autocomplete="off" spellcheck="false" placeholder="0x…" required></div>
-            <div class="notice"><strong>Preview boundary:</strong> a valid-looking input does not mean liquidity, a production route, an asset contract or a quote is available. Verify all details in a trusted wallet only after a production service is published.</div>
-            <label class="consent full"><input id="acknowledge" type="checkbox"><span>I understand this creates a local preview only and sends nothing.</span></label>
-            <button id="previewButton" class="full" type="submit" disabled>Build local preview</button>
-          </form>
-          <div id="result" role="status" aria-live="polite"></div>
-        </section>
-        <aside class="panel side" aria-labelledby="evidence-title">
-          <h2 id="evidence-title">Evidence status</h2><p class="panel-intro">This status is descriptive, not a live operations dashboard.</p>
-          <ul class="facts"><li><span>Compatibility tracks</span><b>6 implemented / tested</b></li><li><span>Production deployment</span><b class="pending-text">Pending</b></li><li><span>Funded acceptance</span><b class="pending-text">Pending</b></li><li><span>Wallet connection</span><b>Disabled here</b></li><li><span>Transaction broadcast</span><b>Disabled here</b></li></ul>
-          <div class="links"><a href="/products.html">Open Cross-chain Preview →</a><a href="/astrobridge-internal-certification.html">Read readiness evidence →</a></div>
-        </aside>
-      </div>
-    </main>
-    <footer>© 2026 AstroBridge · Interface preview · No live quote, signature or transaction broadcast</footer>
+<body class="flex items-start justify-center gap-4 p-6 font-sans flex-wrap relative z-10">
+<!-- 全屏悬浮粒子画布 -->
+<div id="particles"></div>
+
+<!-- 左侧：带Logo顶部 + 立体高亮兑换主窗口 -->
+<div class="glass-sm p-5 w-full max-w-md">
+  <!-- 修复img标签语法错误，适配Logo路径 -->
+  <div class="flex justify-between items-center mb-4">
+    <div class="flex items-center gap-2">
+      <img src="/assets/astrobridge-mark-256.png" alt="AstroBridge Logo" class="h-9 w-8 object-contain">
+      <h1 class="text-xl font-orbitron text-genesis-blue">Astro Mini Swap</h1>
+    </div>
+    <button id="connBtn" class="btn-swap px-3 py-1.5 rounded-lg text-sm">Connect</button>
   </div>
-  <script>
-    const form = document.getElementById('previewForm');
-    const acknowledge = document.getElementById('acknowledge');
-    const button = document.getElementById('previewButton');
-    const result = document.getElementById('result');
-    const escapeText = (value) => String(value).replace(/[&<>"']/g, (character) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
-    acknowledge.addEventListener('change', () => { button.disabled = !acknowledge.checked; });
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const source = document.getElementById('sourceChain').value;
-      const destination = document.getElementById('destinationChain').value;
-      const asset = document.getElementById('asset').value;
-      const amount = document.getElementById('amount').value.trim();
-      const recipient = document.getElementById('recipient').value.trim();
-      const validAmount = /^(?:0|[1-9]\d*)(?:\.\d+)?$/.test(amount) && Number(amount) > 0;
-      const validRecipient = /^0x[a-fA-F0-9]{40}$/.test(recipient);
-      result.classList.add('show');
-      if (source === destination) { result.textContent = 'Choose two different networks to model a cross-chain route.'; return; }
-      if (!validAmount || !validRecipient) { result.textContent = 'Enter a positive amount and a 42-character EVM address to build the local preview.'; return; }
-      result.innerHTML = '<strong>Local preview created.</strong><br>' + escapeText(amount) + ' ' + escapeText(asset) + ' · ' + escapeText(source) + ' → ' + escapeText(destination) + '<br>' + 'Recipient: ' + escapeText(recipient) + '<br>' + '<strong>No quote was requested, no wallet was connected and no transaction was sent.</strong>';
-    });
-  </script>
+
+  <div class="mb-3">
+    <div class="flex justify-between text-xs text-gray-200 mb-1"><span>From</span><span>Preview • No balance loaded</span></div>
+    <div class="flex gap-2">
+      <!-- 全透明下拉、宽度w-2/5统一 -->
+     <select class="bg-transparent border border-genesis-blue/50 rounded-lg p-2 text-sm text-white w-2/5">
+        <option value="56" selected>BSC</option>
+        <option value="1">Ethereum</option>
+        <option value="137">Polygon</option>
+        <option value="42161">Arbitrum One</option>
+        <option value="43114">Avalanche C-Chain</option>
+        <option value="8453">Base</option>
+      </select>
+      <input type="text" placeholder="0.00" class="bg-void-black/80 border border-genesis-blue/50 rounded-lg p-2 text-white w-3/5 text-right">
+    </div>
+  </div>
+
+  <div class="flex justify-center my-2"><button class="p-2 rounded-full border border-genesis-blue/60 text-genesis-blue shadow-lg shadow-genesis-blue/40">⇅</button></div>
+
+  <div class="mb-4">
+    <div class="flex justify-between text-xs text-gray-200 mb-1"><span>To</span></div>
+    <div class="flex gap-2">
+      <!-- To端下拉同样全透明统一样式 -->
+ <select class="bg-transparent border border-genesis-blue/50 rounded-lg p-2 text-sm text-white w-2/5">
+        <option value="56">BSC</option>
+        <option value="1" selected>Ethereum</option>
+        <option value="137">Polygon</option>
+        <option value="42161">Arbitrum One</option>
+        <option value="43114">Avalanche C-Chain</option>
+        <option value="8453">Base</option>
+      </select>
+      <input type="text" placeholder="Receive Address" class="bg-void-black/80 border border-genesis-blue/50 rounded-lg p-2 text-white w-3/5 text-right font-mono text-xs">
+    </div>
+  </div>
+
+  <div class="text-xs text-gray-200 mb-4 flex justify-between"><span>Local preview • No quote</span><span class="text-genesis-blue font-bold">Mini Cross-Chain</span></div>
+  <button id="sendBtn" class="btn-swap w-full py-3 rounded-xl font-medium disabled:opacity-40 disabled:cursor-not-allowed">Preview Transfer</button>
+
+  <div class="glass-sm p-3 mt-4 max-h-28 overflow-y-auto text-xs font-mono text-gray-100" id="miniLog"></div>
+</div>
+
+<!-- 右侧高亮立体仪表盘 -->
+<div class="glass-sm side-dash p-4 sticky top-6">
+  <div class="flex items-center justify-center gap-2 mb-4 border-b border-genesis-blue/30 pb-2">
+    <img src="/assets/astrobridge-mark-256.png" alt="Logo" class="h-7 w-6 object-contain">
+    <h2 class="text-base font-orbitron text-genesis-blue">Network Status</h2>
+  </div>
+
+  <div class="space-y-4 text-sm">
+    <div class="flex justify-between"><span class="text-gray-200">Health Nodes</span><span id="liveNodes" class="text-green-400 num-live font-orbitron">Unavailable</span></div>
+    <div class="flex justify-between"><span class="text-gray-200">Queue Waiting</span><span id="liveQueue" class="text-genesis-blue font-orbitron">Unavailable</span></div>
+    <div class="flex justify-between"><span class="text-gray-200">Success Rate</span><span id="liveRate" class="text-green-400 font-orbitron">Unavailable</span></div>
+  </div>
+
+  <div class="mt-4 pt-3 border-t border-genesis-blue/30">
+    <p class="text-xs text-gray-200 mb-2">Recent Tx Hash — no live feed</p >
+    <div id="txRoll" class="text-xs font-mono text-gray-100 max-h-32 overflow-y-auto break-all"></div>
+  </div>
+</div>
+
+<script>
+// 自动生成全屏悬浮科幻粒子
+(function createParticles(){
+  const wrap = document.getElementById('particles');
+  const count = 94;
+  for(let i=0;i<count;i++){
+    const p = document.createElement('div');
+    p.className='particle';
+    let s = Math.random()*4+1;
+    p.style.width = s+'px';p.style.height=s+'px';
+    p.style.left = Math.random()*100+'%';
+    p.style.top = Math.random()*100+'%';
+    p.style.animationDelay = Math.random()*6+'s';
+    wrap.appendChild(p);
+  }
+})();
+
+let userAddress = null;
+const miniLog = document.getElementById('miniLog');
+function logTxt(s){ miniLog.textContent += `> ${s}\n`; miniLog.scrollTop=miniLog.scrollHeight; }
+
+document.getElementById('connBtn').onclick = async () => {
+  if (!window.ethereum) return logTxt('No EVM wallet detected');
+  try {
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    userAddress = accounts[0];
+    if (!userAddress) return logTxt('No wallet account selected');
+    document.getElementById('connBtn').textContent = userAddress.slice(0,6)+'...';
+    logTxt('Wallet connected for account display only.');
+  } catch (error) { logTxt('Wallet connection was not completed.'); }
+};
+
+document.getElementById('sendBtn').onclick = () => {
+  const [fromChain, toChain] = document.querySelectorAll('select');
+  const [amountInput, addressInput] = document.querySelectorAll('input');
+  const amount = amountInput.value.trim();
+  const address = addressInput.value.trim();
+  if (!/^(?:0|[1-9][0-9]*)(?:\.[0-9]+)?$/.test(amount) || !Number.isFinite(Number(amount)) || Number(amount) <= 0 || !/^0x[0-9a-fA-F]{40}$/.test(address)) {
+    return logTxt('Enter an amount greater than zero and a valid EVM recipient address.');
+  }
+  logTxt(`Local preview: ${fromChain.selectedOptions[0].textContent} → ${toChain.selectedOptions[0].textContent}; amount ${amount}; recipient ${address}.`);
+  logTxt('Route, asset and quote require validation before live execution. No signature or transaction was requested.');
+};
+
+document.getElementById('txRoll').textContent = 'No verified transaction feed is connected.';
+logTxt('Local interface preview. Six EVM selections do not guarantee live route availability.');
+</script>
 </body>
 </html>
