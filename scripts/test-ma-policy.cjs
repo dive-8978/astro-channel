@@ -46,7 +46,8 @@ for(const lang of ['en','zh','es','fr','de','ja','ko']){
   assert.equal(nodes[1].textContent,'Make digital currency a universal currency.');
 }
 for(const file of ['index.html','public/professional.html'])assert(read(file).includes('data-ma-vision="label">OUR VISION'));
-assert(read('index.html').includes('Government-issued Certificate of Incorporation'));
+// Company evidence stays accessible through secondary navigation.
+for(const page of ['company.html','trust.html'])assert(read('index.html').includes(`href="${page}"`));
 const certificatePath='public/company-documents/astrobridge-certificate-of-incorporation-2026-09-14.pdf';
 const certificateHash=crypto.createHash('sha256').update(fs.readFileSync(certificatePath)).digest('hex');
 assert.equal(certificateHash,'50d3f6c714b862706de19aaf35af19f229ca8e142f18ea86094c2f56e8948ee7');
