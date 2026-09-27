@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T05:25:16.070Z",
+  "generatedAt": "2026-09-27T12:11:13.599Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 34,
+      "itemCount": 54,
       "error": null
     },
     {
@@ -57,6 +57,46 @@
     }
   ],
   "items": [
+    {
+      "id": "7984dbe4123bb425736e",
+      "source": "CoinDesk",
+      "title": "How months of work on the Clarity Act all fell apart",
+      "summary": "Interviews with industry participants and legislative aides paint a picture of a blown bill-writing process, with sources pointing to nearly every facet of the bill's development and the debate around it as contributing factors to this month's failed vote.",
+      "url": "https://www.coindesk.com/news-analysis/2026/09/27/how-months-of-work-on-the-clarity-act-all-fell-apart",
+      "publishedAt": "2026-09-27T12:00:00.000Z"
+    },
+    {
+      "id": "5d960e4d32bbbc325100",
+      "source": "CryptoSlate",
+      "title": "Prediction markets promised better information and hired Hollywood",
+      "summary": "Sydney Sweeney is helping sell sports predictions, which is a pretty good indication that prediction markets have moved beyond the people who enjoy arguing about probability on the internet. Novig's Sept. 9 campaign announcement introduced the actress as a…",
+      "url": "https://cryptoslate.com/prediction-markets-promised-better-information-and-hired-hollywood/",
+      "publishedAt": "2026-09-27T11:00:50.000Z"
+    },
+    {
+      "id": "4caa6485aabb2150270c",
+      "source": "Cointelegraph",
+      "title": "Riot Platforms repays $200M credit facility, releases collateral",
+      "summary": "The Bitcoin miner has continued to expand its data-center business as well.",
+      "url": "https://cointelegraph.com/news/riot-platforms-repays-200m-credit-facility-releases-collateral?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-27T09:57:19.000Z"
+    },
+    {
+      "id": "5555d8ea48deaf423a33",
+      "source": "CryptoSlate",
+      "title": "Why your tokenized stock could stop trading for three months",
+      "summary": "Buying a tokenized stock sounds as though it should be simple. You pick a company you know, buy a token representing its shares, and hold it in a digital wallet. The appeal is familiar stock investing with some of the convenience of crypto, potentially…",
+      "url": "https://cryptoslate.com/why-your-tokenized-stock-could-stop-trading-for-three-months/",
+      "publishedAt": "2026-09-27T09:01:10.000Z"
+    },
+    {
+      "id": "60ae5469c35ae7e2e6c1",
+      "source": "Cointelegraph",
+      "title": "Saylor outlines ‘bill of digital rights’ to help build prosperity in future economy",
+      "summary": "Our ambition should be to “enable 10 million new companies to raise capital,” Strategy’s executive chairman Michael Saylor wrote in an essay.",
+      "url": "https://cointelegraph.com/news/saylor-outlines-bill-of-digital-rights-to-help-build-prosperity-in-future-economy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-27T07:18:42.000Z"
+    },
     {
       "id": "f59331ab8f782c18b344",
       "source": "CryptoSlate",
@@ -256,22 +296,6 @@
       "summary": "Researchers have mapped out private bitcoin-denominated transfers that run alongside Bitcoin, but the system still lacks a finished way to lock up real BTC and release it again.",
       "url": "https://www.coindesk.com/tech/2026/09/25/bitcoin-could-soon-get-zcash-style-shielded-privacy-without-changing-its-rules",
       "publishedAt": "2026-09-26T12:00:00.000Z"
-    },
-    {
-      "id": "5bbea418d1e30559750a",
-      "source": "CryptoSlate",
-      "title": "Why cash hoarding in the UK proves the world still craves permissionless money",
-      "summary": "You can spend weeks paying for everything with your phone and still feel better knowing there's some cash at home. That might sound old-fashioned until your bank's app stops working, your card gets declined for reasons nobody can explain, or the power goes…",
-      "url": "https://cryptoslate.com/why-cash-hoarding-in-the-uk-proves-the-world-still-craves-permissionless-money/",
-      "publishedAt": "2026-09-26T11:05:05.000Z"
-    },
-    {
-      "id": "46854db9acb41e67fb2a",
-      "source": "CryptoSlate",
-      "title": "Bitcoin posts on X can pay even when Bitcoin doesn’t",
-      "summary": "You don't have to own Bitcoin to make money from people getting excited about it. On X, just posting about it can be a business in itself, and the company now wants £207,384 back from people it alleges took that business a bit too far. In its Sept. 17…",
-      "url": "https://cryptoslate.com/bitcoin-posts-on-x-can-pay-even-when-bitcoin-doesnt/",
-      "publishedAt": "2026-09-26T09:05:19.000Z"
     },
     {
       "id": "fe390bd19e20dab48a9a",
@@ -672,30 +696,6 @@
       "summary": "Quant jumped 39% over 24 hours and 93 of 100 CoinDesk 100 constituents rose, with the altcoin season index at its highest in more than three months.",
       "url": "https://www.coindesk.com/markets/2026/09/25/altcoins-rally-across-the-board-as-bitcoin-consolidates-near-usd84-000",
       "publishedAt": "2026-09-25T09:59:45.000Z"
-    },
-    {
-      "id": "42b19734100622164120",
-      "source": "Decrypt",
-      "title": "Researchers Publish 'Zcash-Style' Design for Private Bitcoin Transfers",
-      "summary": "The Shielded Bitcoin spec hides senders, receivers and amounts, but leaves how BTC enters and exits the system to a later paper.",
-      "url": "https://decrypt.co/379280/researchers-publish-zcash-style-design-for-private-bitcoin-transfers",
-      "publishedAt": "2026-09-25T09:50:01.000Z"
-    },
-    {
-      "id": "f84ccba85228268b842e",
-      "source": "Cointelegraph",
-      "title": "Magic Eden scare puts 3,832 NFTs in whitehat protective custody",
-      "summary": "Yuga Labs’ 0xQuit said the NFTs are safe and will be returned once the risk passes, while holders were urged to revoke NFT permissions.",
-      "url": "https://cointelegraph.com/news/magic-eden-nft-whitehat-vulnerability?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-25T09:48:53.000Z"
-    },
-    {
-      "id": "e9279c6ae6dab371a558",
-      "source": "The Block",
-      "title": "KelpDAO sues LayerZero, claims it endorsed setup used in $292 million rsETH exploit",
-      "summary": "KelpDAO sued LayerZero and Bryan Pellegrino over the April 18 rsETH exploit, alleging the bridge setup was endorsed in writing.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-25-kelpdao-sues-layerzero-claims-it-endorsed-setup-used-in-292-million-rseth-exploit-416361",
-      "publishedAt": "2026-09-25T09:13:08.000Z"
     }
   ]
 }
