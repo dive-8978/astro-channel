@@ -13,3 +13,6 @@ window.ASTRO_PROFESSIONAL_CONTENT = (() => {
   };
   return Object.fromEntries(Object.entries(values).map(([lang,rows])=>[lang,Object.fromEntries(keys.map((key,i)=>[key,rows[i]]))]));
 })();
+
+// Proposed network card; preserve all existing product copy.
+Object.entries({"en": "Proposed network: sponsored internal transfers for MA, MiniBTC and future ASTRO. Explore the staged plan.", "zh": "规划中的自有网络：平台承担 MA、MiniBTC 与未来 ASTRO 内部基础转账成本。查看分阶段计划。", "es": "Red propuesta: transferencias internas patrocinadas para MA, MiniBTC y el futuro ASTRO. Consulta el plan por etapas.", "fr": "Réseau proposé : transferts internes sponsorisés pour MA, MiniBTC et le futur ASTRO. Découvrez le plan par étapes.", "de": "Geplantes Netzwerk: gesponserte interne Transfers für MA, MiniBTC und künftig ASTRO. Zum stufenweisen Plan.", "ja": "計画中の独自ネットワーク：MA、MiniBTC、将来のASTROの内部送金費用を運営側が負担。段階的な計画をご覧ください。", "ko": "계획 중인 자체 네트워크: MA, MiniBTC 및 향후 ASTRO의 내부 전송 비용을 운영 측이 부담합니다. 단계별 계획을 확인하세요."}).forEach(([lang,text])=>{window.ASTRO_PROFESSIONAL_CONTENT[lang].chainPlan=text;});
