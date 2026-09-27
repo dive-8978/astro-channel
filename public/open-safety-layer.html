@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="description" content="Astro Open Safety Layer is free, open infrastructure for blockchain intent fingerprinting, simulation, safety assessment, route ranking and verifiable receipts.">
   <title>Astro Open Safety Layer</title>
-  <link rel="icon" href="/favicon.ico">
   <style>
     :root{color-scheme:dark;--bg:#071016;--ink:#f4f7f8;--muted:#aab8bd;--line:#29404a;--cyan:#55d7ee;--green:#69dea4;--gold:#f0c76a;--red:#f07878;--violet:#b3a6ff;--panel:#0d1a21}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.62}a{color:inherit}.wrap{width:min(1140px,calc(100% - 40px));margin:auto}
@@ -24,21 +27,21 @@
   </style>
 </head>
 <body>
-  <header><div class="wrap nav"><a class="brand" href="index.html">Astro <span>Open Safety Layer</span></a><a class="back" href="open-infrastructure.html">Open Infrastructure</a></div></header>
+  <header><div class="wrap nav"><a class="brand" href="index.html" style="display:flex;align-items:center;gap:10px;"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="30" height="30">Astro <span>Open Safety Layer</span></a><a class="back" href="open-infrastructure.html">Open Infrastructure</a></div></header>
   <main>
     <section class="hero"><div class="wrap hero-copy">
       <div class="eyebrow">Free public-interest Web3 infrastructure</div>
       <h1>Astro Open Safety Layer</h1>
       <p class="lead">A non-custodial boundary for fingerprinting, simulating and assessing blockchain intents before authorization, then issuing a verifiable safety receipt.</p>
       <div class="actions"><a class="button primary" href="https://astro-open-safety-layer.vercel.app/.well-known/astro-safety">Open the live API</a><a class="button" href="#status">Implementation status</a><a class="button" href="open-infrastructure.html#rfc">Read the RFC index</a></div>
-      <div class="status"><span>Public beta API live</span><span>Apache-2.0</span><span>No private keys or custody</span></div>
+      <div class="status"><span>Public beta API live</span><span>Apache-2.0</span><span>No private keys or custody</span><span>Hosted RPC chains: 0</span></div>
     </div></section>
 
     <section class="band"><div class="wrap"><div class="section-head"><div class="kicker">Shared safety boundary</div><h2>One check between intent and execution</h2><p class="muted">Wallets, dapps, agents and bridges can use the same machine-readable decision without handing Astro control of user assets.</p></div>
       <div class="pipeline">
         <div class="stage"><strong>01 · ENVELOPE</strong><p>Normalize actor, actions, constraints, nonce and deadline.</p></div>
         <div class="stage"><strong>02 · FINGERPRINT</strong><p>Generate a deterministic SHA-256 identity for the complete intent.</p></div>
-        <div class="stage"><strong>03 · SIMULATE</strong><p>Run static policy checks and optional allowlisted RPC calls.</p></div>
+        <div class="stage"><strong>03 · SIMULATE</strong><p>Run static policy checks and, where configured, optional allowlisted RPC calls.</p></div>
         <div class="stage"><strong>04 · ASSESS</strong><p>Return explainable signals and allow, review or block.</p></div>
         <div class="stage"><strong>05 · RECEIPT</strong><p>Sign the result using a published Ed25519 verification key.</p></div>
       </div>
@@ -46,7 +49,7 @@
 
     <section class="band alt"><div class="wrap split">
       <div><div class="kicker">Deterministic policy</div><h2>Safety decisions with evidence</h2><p class="muted">The reference engine checks what it can prove and labels what it cannot. Unknown never silently becomes safe.</p>
-        <ul class="rules"><li><b>Destinations</b><span>Invalid EVM and zero-address detection.</span></li><li><b>Permissions</b><span>ERC-20 unlimited approval and operator-wide NFT approval detection.</span></li><li><b>Constraints</b><span>Deadline, aggregate value and human approval thresholds.</span></li><li><b>Simulation</b><span>Optional eth_call and gas estimation through configured RPC endpoints.</span></li><li><b>Threat feed</b><span>Evidence submissions remain pending until reviewed.</span></li></ul>
+        <ul class="rules"><li><b>Destinations</b><span>Invalid EVM and zero-address detection.</span></li><li><b>Permissions</b><span>ERC-20 unlimited approval and operator-wide NFT approval detection.</span></li><li><b>Constraints</b><span>Deadline, aggregate value and human approval thresholds.</span></li><li><b>Simulation</b><span>The adapter supports optional <code>eth_call</code> and gas estimation through configured RPC endpoints. The hosted beta currently reports <code>rpcChains: []</code>, so live RPC simulation is unavailable there.</span></li><li><b>Threat feed</b><span>Evidence submissions remain pending until reviewed.</span></li></ul>
       </div>
       <pre class="terminal"><span class="method">POST</span> <span class="path">/v1/check</span>
 
@@ -59,17 +62,17 @@
       "requireHumanApprovalAbove": "20"
     }
   },
-  "liveRpc": true
+  "liveRpc": false
 }
 
 decision: "allow" | "review" | "block"
 signals: explainable evidence[]</pre>
     </div></section>
 
-    <section class="band" id="api"><div class="wrap"><div class="section-head"><div class="kicker">Open API · v0.1</div><h2>Small surface, portable integration</h2><p class="muted">The TypeScript reference implementation includes OpenAPI discovery, an SDK, Docker deployment and request controls. Public beta base URL: <a href="https://astro-open-safety-layer.vercel.app">astro-open-safety-layer.vercel.app</a>.</p></div>
+    <section class="band" id="api"><div class="wrap"><div class="section-head"><div class="kicker">Open API · v0.1</div><h2>Small surface, portable integration</h2><p class="muted">The TypeScript reference implementation includes OpenAPI discovery, an SDK, Docker deployment and request controls. Inspect the hosted beta through its <a href="https://astro-open-safety-layer.vercel.app/.well-known/astro-safety">protocol discovery document</a> or <a href="https://astro-open-safety-layer.vercel.app/openapi.json">OpenAPI specification</a>.</p></div>
       <table class="api-table"><thead><tr><th>Method</th><th>Endpoint</th><th>Purpose</th></tr></thead><tbody>
         <tr><td>POST</td><td><code>/v1/intents/fingerprint</code></td><td>Validate and fingerprint an AOI intent envelope.</td></tr>
-        <tr><td>POST</td><td><code>/v1/simulate</code></td><td>Run deterministic checks and optional chain simulation.</td></tr>
+        <tr><td>POST</td><td><code>/v1/simulate</code></td><td>Run deterministic checks; live chain simulation requires a configured RPC endpoint.</td></tr>
         <tr><td>POST</td><td><code>/v1/check</code></td><td>Return simulation plus an explainable safety decision.</td></tr>
         <tr><td>POST</td><td><code>/v1/route</code></td><td>Rank integrator-supplied routes by fee, speed and safety.</td></tr>
         <tr><td>POST</td><td><code>/v1/receipts</code></td><td>Issue an Ed25519-signed safety receipt.</td></tr>
@@ -78,10 +81,10 @@ signals: explainable evidence[]</pre>
       </tbody></table>
     </div></section>
 
-    <section class="band alt" id="status"><div class="wrap"><div class="section-head"><div class="kicker">Transparent delivery status</div><h2>Implemented claims stay separate from rollout plans</h2></div>
+    <section class="band alt" id="status"><div class="wrap"><div class="section-head"><div class="kicker">Transparent delivery status</div><h2>Implemented claims stay separate from rollout plans</h2><p class="muted">Status checked 27 September 2026: the hosted beta <a href="https://astro-open-safety-layer.vercel.app/health">health response</a> reports <code>rpcChains: []</code>. Static checks and signed receipts are available; live RPC simulation remains unavailable until allowlisted chain endpoints are configured.</p></div>
       <div class="truth">
-        <section class="ready"><h3>Implemented and tested</h3><ul><li>Public beta endpoint with persistent Ed25519 signing key</li><li>Intent schema and canonical fingerprints</li><li>Static security rules and explainable scoring</li><li>Allowlisted EVM RPC simulation adapter</li><li>Route candidate ranking</li><li>Signed receipt issue and verification</li><li>Safety-feed lookup and moderated submission</li><li>TypeScript SDK, Docker and automated tests</li></ul></section>
-        <section class="next"><h3>Next public rollout</h3><ul><li>Custom API domain, key history and uptime dashboard</li><li>Append-only receipt storage</li><li>Reviewed threat-intelligence dataset</li><li>Independent security audit</li><li>Wallet and dapp compatibility pilots</li><li>Additional chain-specific simulation adapters</li></ul></section>
+        <section class="ready"><h3>Implemented and tested</h3><ul><li>Public beta endpoint with persistent Ed25519 signing key</li><li>Intent schema and canonical fingerprints</li><li>Static security rules and explainable scoring</li><li>Allowlisted EVM RPC simulation adapter in the reference implementation</li><li>Route candidate ranking</li><li>Signed receipt issue and verification</li><li>Safety-feed lookup and moderated submission</li><li>TypeScript SDK, Docker and automated tests</li></ul></section>
+        <section class="next"><h3>Next public rollout</h3><ul><li>Configure and validate allowlisted hosted RPC endpoints</li><li>Custom API domain, key history and uptime dashboard</li><li>Append-only receipt storage</li><li>Reviewed threat-intelligence dataset</li><li>Independent security audit</li><li>Wallet and dapp compatibility pilots</li><li>Additional chain-specific simulation adapters</li></ul></section>
       </div>
     </div></section>
 

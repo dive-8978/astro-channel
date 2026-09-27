@@ -2,7 +2,7 @@ window.ASTRO_PROGRAM_UPDATES = [
   {
     id: "ma-policy-and-identity-20260925", project: "MA",
     title: "MA revises its program allocations and introduces a professional website",
-    summary: "The revised plan allocates 7 million MA to card redemption over 3–5 years, 10 million MA to the Mother Fund, and 50 million MA to a 365-day burn schedule after activation. MA uses phone-number-free, address-based chat identity, separate from the funds wallet. Explore the new professional view and its security boundaries.",
+    summary: "The revised proposal sets 7 million MA for card redemption over 3–5 years, 10 million MA for the Mother Fund, and a proposed 50 million MA allocation with a target 365-day burn schedule, subject to final policy approval and contract implementation. MA uses phone-number-free, address-based chat identity, separate from the funds wallet. Explore the new professional view and its security boundaries.",
     phase: "Planning", phaseTone: "planned", date: "2026-09-25", displayDate: "September 25, 2026",
     url: "/professional.html", evidence: "Published design and revised proposal only. No funded reserves, live redemption, completed burns, independent security certification or global-first claim."
   },

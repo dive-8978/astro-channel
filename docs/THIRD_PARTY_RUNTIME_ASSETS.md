@@ -14,15 +14,15 @@ an OpenChain conformance claim, an independent audit, or legal approval.
 
 | Runtime item | Frozen version | License record | Website use |
 |---|---:|---|---|
-| Tailwind browser runtime | 3.4.17 | MIT, local `LICENSE` | AstroSwap, console, fast, products, roadmap |
-| Font Awesome Free | 7.3.1 | icons CC BY 4.0; fonts OFL 1.1; code MIT, local `LICENSE.txt` | console, fast, products |
+| Tailwind browser runtime | 3.4.17 | MIT, local `LICENSE` | fast and products compatibility previews |
+| Font Awesome Free | 7.3.1 | icons CC BY 4.0; fonts OFL 1.1; code MIT, local `LICENSE.txt` | fast and products compatibility previews |
 | Inter | Fontsource 5.3.0 | OFL 1.1 with upstream copyright notice | general site typography |
 | Space Grotesk | Fontsource 5.3.0 | OFL 1.1 with upstream copyright notice | MA program and roadmap pages |
 | Orbitron | Fontsource 5.3.0 | OFL 1.1 with upstream copyright notice | bridge and console headings |
 | Exo 2 | Fontsource 5.3.0 | OFL 1.1 with upstream copyright notice | bridge and console body text |
-| Three.js | 0.134.0, 0.150.1, 0.168.0 | MIT, one local notice per version | home and developer visualizations |
-| Ethers | 5.7.2, 6.13.2 | MIT, one local notice per version | wallet/transfer pages |
-| Leaflet | 1.9.4 | BSD-2-Clause, local `LICENSE` | global console |
+| Three.js | 0.134.0, 0.150.1, 0.168.0 | MIT, one local notice per version | 0.168.0 developer visualization; older frozen copies retained without current page references |
+| Ethers | 5.7.2, 6.13.2 | MIT, one local notice per version | legacy bridge and read-only compatibility previews |
+| Leaflet | 1.9.4 | BSD-2-Clause, local `LICENSE` | frozen copy retained; no current page reference |
 | particles.js | 2.0.0 | MIT, local `LICENSE.md` | community, MemeAstro, technology |
 | Lucide | 0.468.0 | ISC, local `LICENSE` | pain-points page |
 | Chart.js | 4.5.1 | MIT, local `LICENSE.md` | legacy bridge source page |
@@ -41,6 +41,16 @@ The Tailwind file is the exact immutable 3.4.17 browser artifact to which the
 former floating URL redirected on 2026-09-27. This removes release drift, but a
 future approved release should still prefer build-time compiled Tailwind CSS to
 remove the browser compiler.
+
+## Declared external runtime services
+
+The machine-readable manifest also records the two cross-origin services used
+at runtime. Network Readiness performs a read-only health/discovery request to
+the Astro Open Safety Layer public beta. The MA download service worker range-
+fetches versioned APK/AAB parts from the `ma151-g00-dive.vercel.app` through
+`ma151-g23-dive.vercel.app` release origins. These are availability and file-
+delivery dependencies; neither is represented as independent audit, network
+capacity, RPC-chain, settlement, or certification evidence.
 
 ## Approved visual asset
 
@@ -72,25 +82,19 @@ brand association and removes three mutable remote image requests.
 
 ## Remaining blockers and boundaries
 
-1. **OpenStreetMap tiles remain an external service.** Leaflet is now local,
-   the page uses the policy-required `tile.openstreetmap.org` URL and links
-   visible OpenStreetMap copyright attribution. Tile bytes and availability are
-   intentionally not frozen or bulk-downloaded because OSMF prohibits scraping
-   and offline prefetch on its community service. Company review of the service
-   policy, expected traffic, privacy boundary, and production provider is still
-   required. Policy: https://operations.osmfoundation.org/policies/tiles/
-2. **The legacy `astro-bridge/bridge.html` LiFi SDK URL returns HTTP 404.** It is
-   outside the Vite deployment artifact and was not replaced because LiFi 2.7.0
-   does not supply the referenced UMD file; migration is a functional code
+1. **The legacy `astro-bridge/bridge.html` and
+   `bridge/frontend/public/index.html` LiFi SDK URLs return HTTP 404.** They are
+   outside the Vite deployment artifact and were not replaced because LiFi
+   2.7.0 does not supply the referenced UMD file; migration is a functional code
    change requiring bridge tests.
-3. **`src/utils/lifiHelper.js` uses a non-existent `@latest` UMD widget URL.**
+2. **`src/utils/lifiHelper.js` uses a non-existent `@latest` UMD widget URL.**
    The helper is not part of the current static entry, but it must be removed or
    migrated before that React source is admitted to the supported release.
-4. **`src/Home.jsx` references an Unsplash URL.** The component is not imported
+3. **`src/Home.jsx` references an Unsplash URL.** The component is not imported
    by the current static entry and the image is absent from the built artifact.
    Rights/provenance review or an approved local replacement is required before
    activating it.
-5. Package metadata and upstream license texts have been preserved, but the
+4. Package metadata and upstream license texts have been preserved, but the
    designated compliance/legal reviewer must still approve the final license
    obligations, notices, trademark treatment, and release record.
 
@@ -103,8 +107,8 @@ brand association and removes three mutable remote image requests.
 - B-003: Google Fonts runtime calls are removed from the deploy surface and
   exact OFL font files/notices are supplied.
 - B-004: listed CDN components are vendored and represented in the runtime
-  manifest; the two unused/broken LiFi source references remain open and a final
-  release SBOM merge is still required.
-- B-014: the ESA image and wallet-logo requests are resolved; OpenStreetMap is
-  documented but remains an external-service blocker until company approval or
-  migration to an approved provider.
+  manifest; the three unused/broken LiFi source references remain open and a
+  final release SBOM merge is still required.
+- B-014: the ESA image and wallet-logo requests are resolved; the map and its
+  OpenStreetMap/Leaflet runtime dependency were removed from Network Readiness,
+  so the current deployed HTML has no external tile-service dependency.

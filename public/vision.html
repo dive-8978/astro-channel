@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <title>AstroBridge - Vision</title>
 <link href="/vendor/fonts/inter/5.3.0/font.css" rel="stylesheet">
 <style>
@@ -20,7 +24,7 @@ body{background:#020617;color:#fff;overflow-x:hidden}
 
 .container{max-width:1200px;margin:auto;padding:40px 20px;position:relative;z-index:2}
 nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
-.logo{font-size:2rem;font-weight:800;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.logo{display:inline-flex;align-items:center;font-size:2rem;font-weight:800;text-decoration:none;background:linear-gradient(90deg,#4cc9f0,#f72585);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav-right{display:flex;align-items:center;gap:24px}
 .nav-links{display:flex;gap:22px}
 .nav-links a{color:#a8dadc;text-decoration:none;font-weight:500;transition:.3s}
@@ -91,17 +95,20 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 @media(max-width:768px){
   .page-title{font-size:2rem}
   .content-row {flex-direction:column}
+  .nav-links{display:none}
+  .nav-right{gap:10px}
+  .logo{font-size:1.45rem}
+  .container{padding:22px 14px}
 }
 </style>
 </head>
 <body>
 
-<a href="index.html" class="back-home">← Home</a>
 <canvas id="sphereCanvas"></canvas>
 
 <div class="container">
 <nav>
-  <div class="logo">AstroBridge</div>
+  <a class="logo" href="/"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="36" height="36" style="width:1.25em;height:1.25em;margin-right:8px;vertical-align:middle;">AstroBridge</a>
   <div class="nav-right">
     <div class="nav-links">
       <a href="vision.html">Vision</a>
@@ -116,21 +123,21 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
 </nav>
 
 <h1 class="page-title">Vision</h1>
-<p class="page-desc">The world’s first intelligent intent network for Web3 and robot economy.</p>
+<p class="page-desc">A staged vision for user-authorized intent assistance across compatible networks.</p>
 
 <div class="content-row">
   <div class="left-text">
     <div class="card">
-      <h3>Intent-Centric Future</h3>
-      <p>AstroBridge redefines blockchain interaction: users only need to state their intent, and the network autonomously routes, executes, and settles across any chain.</p>
+      <h3>User-Authorized Intents</h3>
+      <p>Our direction is to turn a user’s stated goal into a clear route preview, with the network, asset, recipient, fees and risks visible before any wallet action.</p>
     </div>
     <div class="card">
-      <h3>AI Autonomous Agents</h3>
-      <p>Decentralized AI agents handle cross-chain operations, liquidity optimization, risk control, and governance without human intervention.</p>
+      <h3>Assistance With Human Control</h3>
+      <p>Future AI assistance may compare routes and surface risk signals. The user remains in control: execution requires explicit authorization through the user’s wallet or another documented approval mechanism.</p>
     </div>
     <div class="card">
-      <h3>Open Web3 Ecosystem</h3>
-      <p>One intent layer to unify all chains, apps, robots, and assets into a single seamless experience.</p>
+      <h3>Phased Interoperability</h3>
+      <p>Compatibility will expand only after implementation, security review, deployment and acceptance testing. Current engineering evidence covers six EVM compatibility tracks with production deployment still pending. <a href="/astrobridge-internal-certification.html" style="color:#4cc9f0">Review readiness evidence →</a></p>
     </div>
   </div>
 
@@ -139,13 +146,13 @@ footer{margin-top:60px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.
     <div class="flow-box">
       <div class="flow-item">User Intent</div>
       <div class="flow-arrow"></div>
-      <div class="flow-item">AI Understanding</div>
+      <div class="flow-item">Local Validation</div>
       <div class="flow-arrow"></div>
-      <div class="flow-item">Cross-Chain Routing</div>
+      <div class="flow-item">Route Preview</div>
       <div class="flow-arrow"></div>
-      <div class="flow-item">Autonomous Execution</div>
+      <div class="flow-item">Explicit User Confirmation</div>
       <div class="flow-arrow"></div>
-      <div class="flow-item">Final Settlement</div>
+      <div class="flow-item">Wallet Submission When Available</div>
     </div>
   </div>
 </div>

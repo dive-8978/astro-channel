@@ -1,0 +1,36 @@
+{
+  "name": "AstroBridge",
+  "short_name": "AstroBridge",
+  "description": "AstroBridge company, evidence center, cross-chain compatibility previews, MA communication, and AI safety research.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#030411",
+  "theme_color": "#07111f",
+  "icons": [
+    {
+      "src": "/assets/astrobridge-mark-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/astrobridge-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/astrobridge-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/astrobridge-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

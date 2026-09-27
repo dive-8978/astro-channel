@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <title>AstroBridge - Technology</title>
 <link href="/vendor/fonts/inter/5.3.0/font.css" rel="stylesheet">
 <style>
@@ -78,6 +82,14 @@ nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:
 .tech-node .icon {
   font-size: 28px;
 }
+.tech-node small {
+  display:block;
+  font-size:0.65rem;
+  line-height:1.35;
+  font-weight:600;
+  color:#dff8ff;
+  opacity:0.9;
+}
 .tech-node.big .icon {
   font-size: 36px;
 }
@@ -131,7 +143,7 @@ footer{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.
 <div class="container">
 
 <nav>
-  <div class="logo">AstroBridge</div>
+  <div class="logo"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="36" height="36" style="width:1.25em;height:1.25em;margin-right:8px;vertical-align:middle;">AstroBridge</div>
   <div class="nav-right">
     <div class="nav-links">
       <a href="vision.html">Vision</a>
@@ -146,62 +158,71 @@ footer{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.
 </nav>
 
 <h1 class="page-title">Technology</h1>
-<p class="page-desc">9-Layer Modular Architecture · Full On-Chain Alignment</p>
+<p class="page-desc">Engineering evidence and research goals, separated by delivery stage.</p>
 
 <div class="tech-grid">
   <div class="tech-node big">
     <div class="icon">🪪</div>
-    <div>Intent Core</div>
+    <div>Six EVM Tracks</div>
+    <small>Implemented &amp; tested<br>deployment pending</small>
   </div>
   <div class="tech-node">
     <div class="icon">🤖</div>
-    <div>AI Engine</div>
+    <div>Route Preview</div>
+    <small>Browser interface</small>
   </div>
   <div class="tech-node">
     <div class="icon">🤖</div>
-    <div>Robot Cluster</div>
+    <div>AI Assistance</div>
+    <small>Research</small>
   </div>
   <div class="tech-node big">
     <div class="icon">🌍</div>
-    <div>Chain Compatibility</div>
+    <div>Production Routing</div>
+    <small>Deployment pending</small>
   </div>
   <div class="tech-node">
     <div class="icon">⚡</div>
-    <div>Distributed Queue</div>
+    <div>Safety Gates</div>
+    <small>Staged validation</small>
   </div>
   <div class="tech-node">
     <div class="icon">🪐</div>
-    <div>Free Node Network</div>
+    <div>Node Network</div>
+    <small>Roadmap proposal</small>
   </div>
   <div class="tech-node big">
     <div class="icon">🌕</div>
-    <div>Solver Network</div>
+    <div>Solver Competition</div>
+    <small>Roadmap proposal</small>
   </div>
   <div class="tech-node">
     <div class="icon">🛡️</div>
-    <div>Security & ZK</div>
+    <div>ZK / Light Clients</div>
+    <small>Research direction</small>
   </div>
   <div class="tech-node big">
     <div class="icon">🖥️</div>
-    <div>API & Console</div>
+    <div>API &amp; Console</div>
+    <small>Interface preview</small>
   </div>
 </div>
 
 <div class="tech-card">
-  <h3>Intent Layer</h3>
-  <p>Natural intent → structured intent → autonomous execution across any chain.</p>
+  <h3>Current Engineering Evidence</h3>
+  <p>The dated internal report records allowlisted LI.FI implementation and testing for BSC, Ethereum, Polygon, Arbitrum, Avalanche and Base. Production deployment and funded low-value acceptance were still pending at the report date. <a href="/astrobridge-internal-certification.html" style="color:#4cc9f0">Open the readiness report →</a></p>
 </div>
 <div class="tech-card">
-  <h3>AI Routing Engine</h3>
-  <p>Real-time path finding, gas optimization, liquidity routing, and risk modeling.</p>
+  <h3>Preview Before Execution</h3>
+  <p>Current public interfaces can validate local input and illustrate a route request. They do not establish live liquidity, quote availability, settlement or transaction broadcast.</p>
 </div>
 <div class="tech-card">
-  <h3>Decentralized Solver Network</h3>
-  <p>Nodes compete to fulfill intents with best price, speed, and security.</p>
+  <h3>Node and Solver Research</h3>
+  <p>A decentralized node network and solver competition are roadmap proposals. Participation rules, incentives, anti-abuse controls and production capacity have not been launched.</p>
 </div>
 <div class="tech-card">
-  <h3>Cross-Chain Verification</h3>
-  <p>Lightclient & ZK-based universal verification without trusted relays.</p>
+  <h3>Verification Research</h3>
+  <p>Light-client and zero-knowledge verification are research directions. AstroBridge does not currently claim universal trust-minimized verification or full on-chain execution.</p>
 </div>
 
 <footer>

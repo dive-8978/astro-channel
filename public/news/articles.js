@@ -98,7 +98,7 @@ window.ASTRO_ARTICLES = [
     ],
     status: "Public beta. No claim of independent audit, production certification or universal chain coverage.",
     links: [
-      { label: "Public API", url: "https://astro-open-safety-layer.vercel.app" },
+      { label: "OpenAPI specification", url: "https://astro-open-safety-layer.vercel.app/openapi.json" },
       { label: "Source code", url: "https://github.com/dive-8978/astro-open-safety-layer" },
       { label: "Product page", url: "https://www.astrochannel.one/open-safety-layer.html" }
     ]
@@ -131,7 +131,7 @@ window.ASTRO_ARTICLES = [
     status: "Version 0.1 interoperability primitive. Cross-language compatibility review remains future work.",
     links: [
       { label: "Open Infrastructure RFC index", url: "https://www.astrochannel.one/open-infrastructure.html#rfc" },
-      { label: "Safety Layer API", url: "https://astro-open-safety-layer.vercel.app" }
+      { label: "Safety Layer discovery", url: "https://astro-open-safety-layer.vercel.app/.well-known/astro-safety" }
     ]
   },
   {

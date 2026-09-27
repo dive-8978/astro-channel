@@ -10,11 +10,8 @@
       "source": "https://cdn.tailwindcss.com/3.4.17",
       "notice": "public/vendor/tailwindcss/3.4.17/LICENSE",
       "references": [
-        "public/AstroSwap.html",
-        "public/console.html",
         "public/fast.html",
-        "public/products.html",
-        "public/roadmap.html"
+        "public/products.html"
       ],
       "files": [
         {
@@ -41,7 +38,6 @@
       "source": "npm:@fortawesome/fontawesome-free@7.3.1",
       "notice": "public/vendor/fontawesome-free/7.3.1/LICENSE.txt",
       "references": [
-        "public/console.html",
         "public/fast.html",
         "public/products.html"
       ],
@@ -90,20 +86,20 @@
       "source": "npm:@fontsource/inter@5.3.0",
       "notice": "public/vendor/fonts/inter/5.3.0/LICENSE",
       "references": [
-        "index.html",
         "public/astrobridge-internal-certification.html",
-        "public/community.html",
-        "public/ma-burn.html",
-        "public/ma-card-redemption.html",
-        "public/ma-mother-love.html",
-        "public/memeastro.html",
-        "public/painpoints.html",
-        "public/progress.html",
-        "public/roadmap.html",
         "public/team.html",
-        "public/technology.html",
+        "public/memeastro.html",
+        "public/community.html",
+        "public/painpoints.html",
+        "public/AstroSwap.html",
+        "public/progress.html",
         "public/tokenomics.html",
-        "public/vision.html"
+        "public/technology.html",
+        "public/vision.html",
+        "public/roadmap.html",
+        "public/ma-mother-love.html",
+        "public/ma-card-redemption.html",
+        "public/ma-burn.html"
       ],
       "files": [
         {
@@ -345,11 +341,12 @@
       "source": "npm:@fontsource/space-grotesk@5.3.0",
       "notice": "public/vendor/fonts/space-grotesk/5.3.0/LICENSE",
       "references": [
-        "public/ma-burn.html",
-        "public/ma-card-redemption.html",
-        "public/ma-mother-love.html",
         "public/painpoints.html",
-        "public/roadmap.html"
+        "public/progress.html",
+        "public/roadmap.html",
+        "public/ma-mother-love.html",
+        "public/ma-card-redemption.html",
+        "public/ma-burn.html"
       ],
       "files": [
         {
@@ -427,7 +424,6 @@
       "notice": "public/vendor/fonts/orbitron/5.3.0/LICENSE",
       "references": [
         "astro-bridge/bridge.html",
-        "public/AstroSwap.html",
         "public/console.html",
         "public/fast.html",
         "public/products.html"
@@ -585,9 +581,7 @@
       "license": "MIT",
       "source": "npm:three@0.134.0",
       "notice": "public/vendor/three/0.134.0/LICENSE",
-      "references": [
-        "index.html"
-      ],
+      "references": [],
       "files": [
         {
           "path": "public/vendor/three/0.134.0/LICENSE",
@@ -617,10 +611,7 @@
       "license": "MIT",
       "source": "npm:three@0.150.1",
       "notice": "public/vendor/three/0.150.1/LICENSE",
-      "references": [
-        "public/astro-dev-3d/index.html",
-        "public/astro-dev-3d/main.js"
-      ],
+      "references": [],
       "files": [
         {
           "path": "public/vendor/three/0.150.1/LICENSE",
@@ -723,8 +714,7 @@
       "source": "npm:ethers@5.7.2",
       "notice": "public/vendor/ethers/5.7.2/LICENSE.md",
       "references": [
-        "astro-bridge/bridge.html",
-        "public/AstroSwap.html"
+        "astro-bridge/bridge.html"
       ],
       "files": [
         {
@@ -751,7 +741,6 @@
       "source": "npm:ethers@6.13.2",
       "notice": "public/vendor/ethers/6.13.2/LICENSE.md",
       "references": [
-        "public/console.html",
         "public/fast.html",
         "public/products.html"
       ],
@@ -779,9 +768,7 @@
       "license": "BSD-2-Clause",
       "source": "npm:leaflet@1.9.4",
       "notice": "public/vendor/leaflet/1.9.4/LICENSE",
-      "references": [
-        "public/global-console.html"
-      ],
+      "references": [],
       "files": [
         {
           "path": "public/vendor/leaflet/1.9.4/LICENSE",
@@ -934,14 +921,24 @@
   ],
   "externalServices": [
     {
-      "name": "OpenStreetMap standard raster tiles",
-      "endpoint": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-      "licenseAttribution": "© OpenStreetMap contributors",
-      "license": "ODbL-1.0 for data; tile service subject to OSMF policy",
-      "terms": "https://operations.osmfoundation.org/policies/tiles/",
-      "reference": "public/global-console.html",
-      "frozen": false,
-      "releaseBlocker": "Provider availability, policy review, and non-frozen tile bytes remain open"
+      "name": "Astro Open Safety Layer public beta",
+      "origin": "https://astro-open-safety-layer.vercel.app",
+      "purpose": "Read-only health and capability discovery used by Network Readiness.",
+      "references": [
+        "public/global-console.html"
+      ],
+      "boundary": "Availability confirms only that the requested public endpoint answered; it is not uptime, capacity, RPC-chain, audit, or settlement proof."
+    },
+    {
+      "name": "MA 1.5.1 segmented release storage",
+      "originPattern": "https://ma151-g00-dive.vercel.app through https://ma151-g23-dive.vercel.app",
+      "purpose": "Range-fetched APK and AAB parts assembled by the MA download service worker.",
+      "references": [
+        "public/ma-download-manifest.js",
+        "public/ma-download-sw.js",
+        "public/painpoints.html"
+      ],
+      "boundary": "External immutable release-part hosting; each public download remains a service-worker virtual route."
     }
   ]
 }

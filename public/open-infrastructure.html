@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Astro Open Infrastructure is the open protocol framework connecting AstroBridge, AstroChat, AstroWallet AI, AstroAI Chain and AstroRealms.">
+  <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="description" content="Astro Open Infrastructure is the open protocol framework connecting AstroBridge, MA, AstroWallet AI, AstroAI Chain and AstroRealms, with clear delivery stages.">
   <title>Astro Open Infrastructure</title>
-  <link rel="icon" href="/favicon.ico">
   <style>
     :root {
       color-scheme: dark;
@@ -94,6 +97,7 @@
     .ecosystem { grid-template-columns: repeat(5, 1fr); }
     .unit { background: var(--surface-2); padding: 24px; min-width: 0; }
     .unit b { display: block; color: var(--green); margin-bottom: 7px; }
+    .stage-label { display: inline-block; margin-bottom: 12px; color: var(--gold); font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .unit p { color: var(--muted); font-size: .94rem; }
     .flow { counter-reset: step; display: grid; gap: 0; border-top: 1px solid var(--line); }
     .flow li {
@@ -139,7 +143,7 @@
 <body>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="index.html"><img src="/favicon.ico" alt="">Astro Open Infrastructure</a>
+      <a class="brand" href="index.html"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="28" height="28">Astro Open Infrastructure</a>
       <a class="back" href="index.html">Back to AstroBridge</a>
     </div>
   </header>
@@ -176,20 +180,21 @@
 
     <section class="band alt">
       <div class="wrap">
-        <div class="section-head"><div class="kicker">Ecosystem framework</div><h2>Five systems, clear responsibilities</h2></div>
+        <div class="section-head"><div class="kicker">Ecosystem framework</div><h2>Five systems, clear responsibilities</h2><p class="muted">Stage labels distinguish current products, reference implementations, prototypes and roadmap work. They do not imply that every integration is deployed or independently audited.</p></div>
         <div class="ecosystem">
-          <div class="unit"><b>AstroBridge</b><p>Safety assessment, intent routing and execution coordination.</p></div>
-          <div class="unit"><b>AstroChat</b><p>Human-to-human and human-to-agent intent entry.</p></div>
-          <div class="unit"><b>AstroWallet AI</b><p>Non-custodial asset control and signature entry.</p></div>
-          <div class="unit"><b>AstroAI Chain</b><p>Intent fingerprints, contribution records and execution proofs.</p></div>
-          <div class="unit"><b>AstroRealms</b><p>Mobile node participation and world-state experience.</p></div>
+          <div class="unit"><span class="stage-label">Current product · staged integrations</span><b>AstroBridge</b><p>Safety assessment, intent routing and execution coordination; individual network paths retain their own deployment gates.</p></div>
+          <div class="unit"><span class="stage-label">Current product</span><b>MA</b><p>Human-to-human and human-to-agent intent entry.</p></div>
+          <div class="unit"><span class="stage-label">Reference implementation</span><b>AstroWallet AI</b><p>Non-custodial asset control and signature entry under active development.</p></div>
+          <div class="unit"><span class="stage-label">Reference implementation</span><b>AstroAI Chain</b><p>Intent fingerprints, contribution records and execution proofs; no public mainnet is claimed.</p></div>
+          <div class="unit"><span class="stage-label">Prototype</span><b>AstroRealms</b><p>Mobile participation and world-state experience backed by reference integration.</p></div>
         </div>
+        <p class="notice"><strong>Roadmap:</strong> cross-product interoperability, independently operated nodes and production security review remain future delivery work.</p>
       </div>
     </section>
 
     <section class="band" id="governance">
       <div class="wrap">
-        <div class="section-head"><div class="kicker">Governance</div><h2>Open decisions with recorded rationale</h2><p class="muted">Initial bodies are defined by responsibility. Membership and voting records must be published before any body claims active representative authority.</p></div>
+        <div class="section-head"><div class="kicker">Governance · Roadmap</div><h2>Open decisions with recorded rationale</h2><p class="muted">The governance model is a published roadmap. Initial bodies are defined by responsibility; membership and voting records must be published before any body claims active representative authority.</p></div>
         <div class="governance">
           <div class="unit"><h3>Protocol Council</h3><p>Maintains RFCs, compatibility rules, versioning and public technical rationale.</p></div>
           <div class="unit"><h3>Security Council</h3><p>Coordinates vulnerability intake, emergency response and independent audits.</p></div>

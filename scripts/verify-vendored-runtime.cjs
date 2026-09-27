@@ -54,6 +54,20 @@ for (const asset of manifest.visualAssets) {
   }
 }
 
+for (const service of manifest.externalServices || []) {
+  if (!service.name || !service.purpose || !Array.isArray(service.references) || service.references.length === 0) {
+    throw new Error(`Incomplete external service record: ${JSON.stringify(service)}`);
+  }
+  if (!service.origin && !service.originPattern) {
+    throw new Error(`External service has no origin: ${service.name}`);
+  }
+  for (const reference of service.references) {
+    if (!fs.existsSync(path.join(root, reference))) {
+      throw new Error(`Missing external-service reference file: ${reference}`);
+    }
+  }
+}
+
 // Every URL emitted by vendored CSS must resolve to a supplied local file.
 for (const cssFile of walk(path.join(publicDir, 'vendor'), (file) => file.endsWith('.css'))) {
   const css = fs.readFileSync(cssFile, 'utf8');
@@ -101,10 +115,14 @@ for (const htmlFile of deployHtml) {
   }
 }
 
-const mapPage = fs.readFileSync(path.join(publicDir, 'global-console.html'), 'utf8');
-if (!mapPage.includes('https://tile.openstreetmap.org/{z}/{x}/{y}.png') ||
-    !mapPage.includes('https://www.openstreetmap.org/copyright')) {
-  throw new Error('OpenStreetMap endpoint or visible license attribution is missing');
+const readinessPage = fs.readFileSync(path.join(publicDir, 'global-console.html'), 'utf8');
+for (const retiredMapDependency of [
+  'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  '/vendor/leaflet/',
+]) {
+  if (readinessPage.includes(retiredMapDependency)) {
+    throw new Error(`Retired map dependency remains in Network Readiness: ${retiredMapDependency}`);
+  }
 }
 
 const vercelConfig = fs.readFileSync(path.join(root, 'vercel.json'), 'utf8');

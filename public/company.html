@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#050716">
   <meta name="description" content="Official company profile for AstroBridge Technology Limited, a Hong Kong technology company developing blockchain interoperability, online communications, and AI security technology.">
@@ -10,9 +14,14 @@
   <meta property="og:title" content="AstroBridge Technology Limited | Company Profile">
   <meta property="og:description" content="Document-backed company facts, current research focus, and the future AI safety and security direction of AstroBridge Technology Limited.">
   <meta property="og:url" content="https://www.astrochannel.one/company.html">
-  <meta property="og:image" content="https://www.astrochannel.one/assets/astrobridge-company-logo.png">
+  <meta property="og:image" content="https://www.astrochannel.one/assets/astrobridge-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AstroBridge gold bridge-shaped A emblem and company wordmark">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.astrochannel.one/assets/astrobridge-og.png">
+  <meta name="twitter:image:alt" content="AstroBridge gold bridge-shaped A emblem and company wordmark">
   <link rel="canonical" href="https://www.astrochannel.one/company.html">
-  <link rel="icon" href="/favicon.ico">
   <title>AstroBridge Technology Limited | Company Profile</title>
   <style>
     :root {
@@ -88,7 +97,7 @@
       gap: 24px;
     }
     .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 900; letter-spacing: -.02em; }
-    .brand img { width: 42px; height: 42px; border-radius: 12px; box-shadow: 0 0 24px rgba(83, 220, 255, .28); }
+    .brand img { width: 42px; height: 42px; filter: drop-shadow(0 0 12px rgba(83, 220, 255, .22)); }
     .brand span small { display: block; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
     .nav-links a { padding: 9px 12px; border-radius: 999px; color: #d8f5ff; text-decoration: none; font-size: .87rem; font-weight: 750; }
@@ -124,7 +133,7 @@
     h1 span { display: block; background: linear-gradient(90deg, #fff 5%, #a8edff 55%, #ffb0d4); background-clip: text; -webkit-background-clip: text; color: transparent; }
     .hero-lead { max-width: 780px; margin-bottom: 0; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.2rem); }
     .hero-logo { position: relative; z-index: 1; width: min(100%, 285px); justify-self: end; padding: 14px; border: 1px solid var(--line-strong); border-radius: 28px; background: rgba(2, 7, 22, .68); box-shadow: 0 20px 70px rgba(83, 220, 255, .13); }
-    .hero-logo img { display: block; width: 100%; height: auto; border-radius: 20px; }
+    .hero-logo img { display: block; width: 100%; height: auto; filter: drop-shadow(0 22px 26px rgba(0, 0, 0, .34)); }
     .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 20px; }
     .fact { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
     .fact small { display: block; margin-bottom: 8px; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
@@ -220,7 +229,7 @@
   <header class="site-header">
     <nav class="shell nav" aria-label="Primary navigation">
       <a class="brand" href="/">
-        <img src="/assets/astrobridge-company-logo.png" alt="AstroBridge logo" width="42" height="42">
+        <img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="42" height="42">
         <span>AstroBridge <small>Technology Limited</small></span>
       </a>
       <div class="nav-links">
@@ -239,7 +248,7 @@
         <p class="hero-lead">A Hong Kong technology company researching and developing software infrastructure for interoperable blockchains, user-controlled digital transactions, online communications, and safer AI systems.</p>
         <p class="hero-lead" lang="zh-Hans">一家在香港成立的科技公司，研发面向区块链互操作、用户自主数字交易、在线通信与更安全人工智能系统的软件基础设施。</p>
       </div>
-      <div class="hero-logo"><img src="/assets/astrobridge-company-logo.png" alt="AstroBridge official company mark" width="1290" height="1290"></div>
+      <div class="hero-logo"><img src="/assets/astrobridge-company-logo.png" alt="AstroBridge official company mark" width="1024" height="1024"></div>
     </section>
 
     <section class="facts" aria-label="Document-backed company facts">

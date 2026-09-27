@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#050716">
   <meta name="description" content="AstroBridge Trust Center: public company facts, source and security controls, automated external assessments, and clearly labeled internal engineering evidence.">
@@ -10,9 +14,14 @@
   <meta property="og:title" content="AstroBridge Trust Center | Verifiable Public Evidence">
   <meta property="og:description" content="Inspect AstroBridge company facts, source, security policies, external automated assessments, and internal engineering evidence with explicit boundaries.">
   <meta property="og:url" content="https://www.astrochannel.one/trust.html">
-  <meta property="og:image" content="https://www.astrochannel.one/assets/astrobridge-company-logo.png">
+  <meta property="og:image" content="https://www.astrochannel.one/assets/astrobridge-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AstroBridge gold bridge-shaped A emblem and company wordmark">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.astrochannel.one/assets/astrobridge-og.png">
+  <meta name="twitter:image:alt" content="AstroBridge gold bridge-shaped A emblem and company wordmark">
   <link rel="canonical" href="https://www.astrochannel.one/trust.html">
-  <link rel="icon" href="/favicon.ico">
   <title>AstroBridge Trust Center | Verifiable Public Evidence</title>
   <style>
     :root {
@@ -65,7 +74,7 @@
     .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(127, 225, 255, .12); background: rgba(3, 4, 17, .82); backdrop-filter: blur(18px); }
     .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 900; letter-spacing: -.02em; }
-    .brand img { width: 42px; height: 42px; border-radius: 12px; box-shadow: 0 0 24px rgba(83, 220, 255, .28); }
+    .brand img { width: 42px; height: 42px; filter: drop-shadow(0 0 12px rgba(83, 220, 255, .22)); }
     .brand span small { display: block; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
     .nav-links a { padding: 9px 12px; border-radius: 999px; color: #d8f5ff; text-decoration: none; font-size: .87rem; font-weight: 750; }
@@ -108,6 +117,7 @@
     .button { display: inline-flex; align-items: center; min-height: 42px; padding: 9px 14px; border: 1px solid var(--line-strong); border-radius: 12px; color: var(--cyan); background: rgba(83,220,255,.06); text-decoration: none; font-size: .82rem; font-weight: 850; }
     .button:hover { border-color: var(--cyan); background: rgba(83,220,255,.1); }
     .button.primary { border: 0; color: #03131b; background: linear-gradient(100deg, var(--cyan), #a8edff); }
+    .button.disabled { border-color: rgba(255,212,122,.28); color: var(--amber); background: rgba(255,212,122,.05); cursor: not-allowed; opacity: .85; }
     .register { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
     .register th { padding: 0 14px 5px; color: #779ead; font-size: .68rem; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
     .register td { padding: 15px 14px; color: #cce8f1; background: rgba(2,7,22,.6); border-top: 1px solid rgba(255,255,255,.07); border-bottom: 1px solid rgba(255,255,255,.07); font-size: .87rem; }
@@ -154,7 +164,7 @@
   <header class="site-header">
     <nav class="shell nav" aria-label="Primary navigation">
       <a class="brand" href="/">
-        <img src="/assets/astrobridge-company-logo.png" alt="AstroBridge logo" width="42" height="42">
+        <img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="42" height="42">
         <span>AstroBridge <small>Trust Center · 可信中心</small></span>
       </a>
       <div class="nav-links">
@@ -185,7 +195,7 @@
       <div class="section-heading">
         <p class="eyebrow">Evidence register · 证据登记</p>
         <h2 id="evidence-title">Publicly inspectable evidence</h2>
-        <p>Links open the current public source or live assessment page. Scores and workflow results can change after a new deployment or scan. / 链接指向当前公开来源或实时检测页面；新部署或重新扫描后，分数与工作流结果可能变化。</p>
+        <p>Where a result is available, its link opens the current public source or assessment page. Pending checks remain unlinked until a public run exists. Scores and workflow results can change after a new deployment or scan. / 已有结果的项目会链接至当前公开来源或检测页面；待运行项目在公开结果产生前不提供结果链接。新部署或重新扫描后，分数与工作流结果可能变化。</p>
       </div>
 
       <div class="notice">
@@ -231,7 +241,7 @@
             <div class="meta-row"><b>Updated</b><span>Prepared 2026-09-27</span></div>
             <div class="meta-row"><b>Boundary</b><span>Automated analysis, not certification or a manual penetration test. / 自动化分析，不是认证或人工渗透测试。</span></div>
           </div>
-          <div class="actions"><a class="button primary" href="https://github.com/dive-8978/astro-channel/security/code-scanning" rel="noopener noreferrer">Open live results ↗</a></div>
+          <div class="actions"><span class="button disabled" aria-disabled="true">Results link pending first public run / 首次公开运行后提供链接</span></div>
         </article>
 
         <article class="evidence-card">

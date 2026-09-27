@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <title>AstroBridge - Team</title>
 <link href="/vendor/fonts/inter/5.3.0/font.css" rel="stylesheet">
 <style>
@@ -36,6 +40,13 @@ body{
   width:100%;
   max-width:1000px;
 }
+.brand{
+  display:inline-flex;align-items:center;gap:10px;margin-bottom:32px;color:#fff;text-decoration:none;font-size:1.15rem;font-weight:800;
+}
+.brand img{width:42px;height:42px;object-fit:contain}
+.evidence-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.evidence-links a{color:#4cc9f0;border:1px solid rgba(76,201,240,.45);border-radius:999px;padding:10px 16px;text-decoration:none;background:rgba(76,201,240,.08)}
+.evidence-links a:hover{background:rgba(76,201,240,.16)}
 
 /* 标题 */
 .title{
@@ -119,29 +130,34 @@ body{
 <canvas class="particles" id="particles"></canvas>
 
 <div class="container">
-  <h1 class="title">Team</h1>
-  <div class="desc">Built by real builders.</div>
+  <a class="brand" href="/index.html"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="42" height="42"><span>AstroBridge</span></a>
+  <h1 class="title">Contribution Model</h1>
+  <div class="desc">Public evidence before biographies or unsupported team-size claims.</div>
 
   <div class="team-grid">
     <div class="team-card">
-      <h3>Founder & Builder</h3>
-      <p>Independent founder, full-stack developer and architect of AstroBridge.</p>
+      <h3>Company Stewardship</h3>
+      <p>AstroBridge Technology Limited maintains the public project direction, company records and evidence center. Corporate status does not certify product security or regulated financial activity.</p>
     </div>
 
     <div class="team-card">
-      <h3>Global Code Farmers</h3>
-      <p>Volunteer developers and contributors from around the world, building together.</p>
+      <h3>Engineering Contributions</h3>
+      <p>Implemented work should be assessed through source history, dated build records and reproducible tests. This page does not invent names, locations or a global headcount.</p>
     </div>
 
     <div class="team-card">
-      <h3>AI Assistants</h3>
-      <p>AI-powered support for code, architecture, automation and system optimization.</p>
+      <h3>AI-Assisted Tooling</h3>
+      <p>AI tools may support research, code review and documentation. Human maintainers remain responsible for approvals, releases and public claims.</p>
     </div>
 
     <div class="team-card">
-      <h3>Community Contributors</h3>
-      <p>Node runners, testers and community members supporting the network.</p>
+      <h3>Future Contribution Paths</h3>
+      <p>Developer, tester, researcher, translator and future node-operator roles are contribution models under development. No active node-runner network is claimed here.</p>
     </div>
+  </div>
+  <div class="evidence-links">
+    <a href="https://github.com/dive-8978/astro-channel" target="_blank" rel="noopener noreferrer">Public repository ↗</a>
+    <a href="/trust.html">Trust &amp; evidence →</a>
   </div>
 </div>
 
