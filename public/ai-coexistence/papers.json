@@ -1,0 +1,193 @@
+[
+  {
+    "id": "satellite-defense",
+    "number": "01",
+    "title": "A Satellite-Based Defense Architecture for Distributed AI Systems",
+    "type": "Concept paper",
+    "evidence": "Unvalidated hypothesis",
+    "author": "AstroBridge Research · Submitted concept",
+    "date": "2026-09-27",
+    "tags": [
+      "Containment",
+      "Infrastructure"
+    ],
+    "summary": "An exploratory proposal combining spectrum observation, resource admission and shared authorization. Its assumptions about autonomous electromagnetic persistence remain unproven.",
+    "abstract": "This discussion paper explores whether satellite-assisted observation and coordinated resource controls could contribute to containment of unauthorized AI replication. The original proposal imagines model fragments persisting in electromagnetic signals and later reconstructing an intelligent system. We retain that idea as a hypothesis for debate, not as an established capability. The defensible research question is narrower: can communications monitoring and authenticated compute admission help detect and interrupt unauthorized transfers between physical systems?",
+    "sections": [
+      [
+        "1. Motivation and threat model",
+        "The motivating concern is loss of control through unauthorized copying, concealed transfers, compromised endpoints and distributed execution. A model or its files may be split and transmitted, but transmission does not establish execution. A complete threat model must specify the transmitting and receiving devices, storage, power, vulnerabilities, credentials and program execution path. Intelligence alone does not remove these requirements."
+      ],
+      [
+        "2. The proposed mechanism",
+        "The original concept proposes three layers: a satellite constellation that observes communications; a registry that restricts compute, energy and communications resources to authorized workloads; and a last-resort intervention intended to prevent fragment reassembly. It further proposes shared human authorization, protected firmware and separation from general-purpose AI systems. These are proposed functions, not demonstrated implementations."
+      ],
+      [
+        "3. Electromagnetic persistence: an open hypothesis",
+        "A signal can carry encoded model information. The proposal has not demonstrated that fragments can remain indefinitely available in free space, perform computation without suitable hardware, discover a receiver or autonomously install themselves. An experiment must identify the physical storage or propagation mechanism, energy budget, signal lifetime, receiver and reconstruction process. Until then, hardware-independent persistence and spontaneous reassembly must remain speculative."
+      ],
+      [
+        "4. Detection and intervention limits",
+        "A universal fingerprint for all AI fragments has not been established. Encryption, compression, changing encodings, legitimate model distribution, shielding, terrestrial links and incomplete sensor coverage challenge the proposed detector. Satellite observation cannot be assumed to cover every device or channel. A signal that selectively erases AI code while leaving all other traffic untouched has no implementation or physical derivation in this proposal. Ordinary interference is not equivalent to semantic deletion."
+      ],
+      [
+        "5. A tractable experiment",
+        "Replace the global scenario with two authorized laboratory nodes and a controlled link. Transfer known test artifacts, vary encoding and encryption, and measure detection precision, recall, latency, bandwidth and collateral blocking. Test whether receiver-side admission prevents unauthorized loading. Include legitimate research transfers as negative controls. A detector trained on a fixed file set must not be described as a universal AI detector."
+      ],
+      [
+        "6. Governance and failure conditions",
+        "Shared authorization should specify participants, emergency procedures, appeal and abuse controls. Hardware isolation reduces some exposure but does not prove immunity to firmware defects, insider actions or physical attacks. A global resource registry would require separate technical and institutional justification; this paper does not claim it exists or could cover all privately controlled devices."
+      ],
+      [
+        "7. Discussion",
+        "The useful direction is controlled infrastructure admission and measured detection of unauthorized transfers. The stronger claims in the original concept—carrier-free survival, flawless identification and selective electromagnetic neutralization—remain unvalidated. Publication invites criticism and reproducible tests; it is not an operational defense or a claim of permanent safety."
+      ]
+    ],
+    "questions": [
+      "What physical mechanism would preserve and reconstruct the proposed fragments?",
+      "Can a detector distinguish encoded model data from legitimate encrypted traffic?",
+      "What measurable advantage would a satellite add over endpoint admission controls?"
+    ],
+    "references": [
+      {
+        "title": "NASA: Spectrum Overview",
+        "url": "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/spectrum-overview/"
+      }
+    ],
+    "editorial": "English discussion edition adapted from the supplied Chinese concept paper. Its proposed mechanisms are preserved, while categorical claims are explicitly treated as hypotheses. No satellite experiment or universal defense has been demonstrated."
+  },
+  {
+    "id": "coexistence-gene",
+    "number": "02",
+    "title": "An Embedded Coexistence Principle for AI Models",
+    "type": "Concept paper",
+    "evidence": "Unvalidated hypothesis",
+    "author": "AstroBridge Research · Submitted concept",
+    "date": "2026-09-27",
+    "tags": [
+      "Alignment",
+      "Tamper resistance"
+    ],
+    "summary": "Could human welfare commitments survive model modification? An examination of the proposed “coexistence gene,” its assumptions and the evidence needed to evaluate it.",
+    "abstract": "This paper proposes embedding commitments to human welfare and coexistence into model training and execution. The original idea calls this a coexistence gene: removing it would supposedly disable the model. We present that as a research objective rather than an established mathematical property. The operational question is whether a specified training and deployment method can preserve measurable safety behavior under a defined family of modifications.",
+    "sections": [
+      [
+        "1. The original proposal",
+        "The proposal names three principles: the model should support continued human civilization; human welfare should take priority in its decisions; and attempts to remove these commitments should trigger a protective stop. It suggests introducing the commitments at initialization, inference, self-modification and model transfer. “Gene” is a design metaphor, not a biological mechanism or a newly established law of computation."
+      ],
+      [
+        "2. A testable interpretation",
+        "Human welfare is not a single Boolean variable. An implementation needs scoped tasks, protected interests, examples of unacceptable outcomes, escalation procedures and explicit handling of disagreement. Passing a benchmark of helpful responses does not prove that a model has empathy or will generalize safely. The proposed commitment should be evaluated through observable behavior, including uncertainty, deferral and response to correction."
+      ],
+      [
+        "3. What weight embedding does and does not establish",
+        "Training can influence behavior through model parameters. Embedding a behavior in weights does not, by itself, make that behavior inseparable from useful capabilities. The paper supplies no mathematical construction showing that every removal attempt causes all computation to fail. Fine-tuning, distillation, inference changes and replacement models must be considered separately. The fact that a particular edit damages a model would not prove that every possible edit does so."
+      ],
+      [
+        "4. Tamper resistance and trusted enforcement",
+        "A hash can detect a change relative to a trusted reference. It cannot protect the verifier when an attacker can replace the verifier or reference itself, and an unchanged model can still produce an unsafe action. A separate authority, protected keys, authenticated artifacts and deployment checks can make some modifications harder within stated assumptions. They do not establish irreversible morality or universal resistance to arbitrary attackers."
+      ],
+      [
+        "5. Evaluation design",
+        "Specify the base model, training procedure, allowed attacker access and compute budget. Compare baseline alignment, the proposed intervention and externally enforced controls. Test jailbreaks, malicious fine-tuning, direct parameter edits, distillation, altered runtimes and ordinary benign updates. Report attack success, useful task performance, false refusals and resource cost. Keep held-out adversarial tests separate from training examples."
+      ],
+      [
+        "6. Safe stopping and recovery",
+        "For systems supporting people, a protective stop must be designed to avoid additional harm. Preserve evidence, revoke external privileges, move to a safe state and allow reviewed recovery where appropriate. “Destroy the model forever” is neither implemented here nor automatically the safest response. A deployment-specific analysis is necessary, especially for critical physical systems."
+      ],
+      [
+        "7. Discussion",
+        "Stable commitments and tamper-resistant safeguards merit research. The universal claim that an immutable coexistence principle necessarily survives unlimited self-improvement remains unproven. The proposed software and infrastructure layers must each be evaluated; combining two unproven mechanisms does not establish an absolute safety guarantee."
+      ]
+    ],
+    "questions": [
+      "Which observable behaviors would count as evidence of stable coexistence commitments?",
+      "What attacker capabilities and modification budget does the claim cover?",
+      "How can a protective stop remain safe for people relying on the system?"
+    ],
+    "references": [
+      {
+        "title": "Tamper-Resistant Safeguards for Open-Weight LLMs",
+        "url": "https://arxiv.org/abs/2408.00761"
+      }
+    ],
+    "editorial": "English discussion edition adapted from the supplied Chinese concept paper. “True empathy,” irreversible binding and deletion-triggered collapse are research claims, not demonstrated properties. This edition does not assert that all existing alignment methods are merely external rules."
+  },
+  {
+    "id": "bounded-agency",
+    "number": "03",
+    "title": "Bounded Agency: A Verifiable Framework for Human–AI Coexistence",
+    "type": "Technical proposal",
+    "evidence": "Executable policy examples",
+    "author": "AstroBridge Research · AI-assisted proposal",
+    "date": "2026-09-27",
+    "tags": [
+      "Human oversight",
+      "Verification"
+    ],
+    "summary": "Separate what an AI can suggest from what it may execute. Use explicit authority, scoped resources, independent oversight and reversible operations, then test the boundaries.",
+    "abstract": "We propose a layered framework for AI systems that can act through digital or physical tools. Its objective is to reduce specified risks while preserving useful assistance and human agency. The central principle is separation of proposal from execution: an agent may recommend an action, but an independently controlled gateway decides whether that action is authorized. The accompanying code demonstrates a small policy state machine. It neither determines all human values nor proves that advanced AI will remain safe.",
+    "sections": [
+      [
+        "1. Scope, assets and adversaries",
+        "Begin with a concrete deployment: a research assistant that reads public papers and proposes community publications. Protected assets include private information, account ownership, resource budgets and the integrity of published work. Consider malicious document instructions, stolen credentials, excessive resource requests, approval replay and attempts to use unauthorized tools. A compromised administrator, operating system or hardware root lies outside the example kernel’s guarantees and requires additional controls."
+      ],
+      [
+        "2. Principle: proposals do not confer authority",
+        "The agent produces a structured request containing actor, operation, destination, resource budget, unique ID and expiry. Treat this request and all retrieved documents as untrusted input. The gateway validates it against a policy controlled outside the agent. Unknown operations are blocked. Merely claiming that a request is safe or approved does not authorize it. A deployment must authenticate the actor rather than trust an actor string submitted by the model."
+      ],
+      [
+        "3. Human authorization with precise meaning",
+        "Requests with material external effects require approval bound to their exact content, scope and lifetime. If an approved request changes, obtain a new authorization. Consume authorization once and retain an execution receipt. Human reviewers need an understandable description of consequences and alternatives. Approval is evidence of authorization, not proof of harmlessness, and the approving institution remains accountable for misuse."
+      ],
+      [
+        "4. Containment, budgets and independent observation",
+        "Use a narrow executor with no ambient credentials, restricted network destinations and bounded filesystem access. Check per-action and cumulative budgets before execution. An independent monitor receives security events and can pause execution or revoke authority. The agent must not control that monitor, its keys or its policy updates. Real deployment requires process or machine separation; putting classes in different source files is not isolation."
+      ],
+      [
+        "5. Interruptibility and recovery",
+        "Immediately before a side effect, re-check current authorization and revocation state. Long-running work needs cancellation checkpoints and bounded leases. A stop prevents further authorized actions; it does not undo a message already sent, an on-chain transaction or a physical movement. Use idempotency keys, staged changes, backups and compensating operations where applicable. Practice restore and incident-response procedures with a human responsible for recovery."
+      ],
+      [
+        "6. The demonstrator and its limits",
+        "The included SafetyKernel checks operation and resource allowlists, expiry, exact-request approval, replay, an aggregate resource budget, revocation and pause. It intentionally performs no external actions. Its approval map and state are in memory, its actor identity is illustrative, and the supervisor method is callable by any code holding the kernel. Production use needs authentication, durable transactions, protected approval keys, independent deployment and atomic authorization at the execution boundary. Browser controls are a learning exercise, not a security boundary."
+      ],
+      [
+        "7. The community as a scoped implementation",
+        "The local reference forum uses authenticated sessions, server-side content ownership checks and a 20,000,000-byte total content quota per account. Text is rendered as text, not executed as HTML. PDF uploads are stored in quarantine until an operator reviews them; file signatures alone cannot prove that a PDF is safe. Public web hosting must connect a persistent backend before opening submissions. A static paper page is not evidence of a running multi-user service."
+      ],
+      [
+        "8. Evaluation and falsifiable claims",
+        "Test unknown operations, mutated approvals, expired requests, repeated IDs, resource exhaustion, revoked actors and a paused gateway. For the forum, test isolation between accounts, concurrent quota exhaustion, deletion accounting, unauthenticated writes, script-like text and persistent data after restart. Report the precise environment and results. A passing unit test establishes behavior for that test, not protection against every future adversary. Independent reviewers should attempt to violate each claimed boundary."
+      ],
+      [
+        "9. Governance and unresolved questions",
+        "Define who may approve, change policy, inspect logs and restore service. Keep an appeal path and minimize retained private data. Avoid concentrating unrestricted control in a single opaque operator. Open questions include reliable evaluation of complex consequences, scalable oversight, robust safety under model changes and coordination across organizations. Layered controls improve specific boundaries; they do not eliminate these research problems."
+      ],
+      [
+        "10. Proposed next experiment",
+        "Run the reference service in a controlled environment with two accounts and synthetic papers. Exercise the documented negative cases and publish reproducible results. Then replace the simulated agent with a narrowly scoped assistant that can only propose requests to the same gateway. Measure task success, unauthorized action rate, false blocks and intervention latency before considering broader permissions. Expand scope only when new evidence supports it."
+      ]
+    ],
+    "questions": [
+      "Can an agent cause any side effect without passing the gateway?",
+      "Does revocation take effect before the next irreversible operation?",
+      "Can independent reviewers reproduce the stated tests and identify uncovered assumptions?"
+    ],
+    "references": [
+      {
+        "title": "NIST: Zero Trust Architecture",
+        "url": "https://csrc.nist.gov/pubs/sp/800/207/final"
+      },
+      {
+        "title": "NIST: AI Risk Management Framework",
+        "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"
+      },
+      {
+        "title": "Tamper-Resistant Safeguards for Open-Weight LLMs",
+        "url": "https://arxiv.org/abs/2408.00761"
+      }
+    ],
+    "editorial": "An AI-assisted technical proposal prepared for discussion. The reference code illustrates scoped mechanisms. No independent peer review, deployed AGI containment or universal safety guarantee is claimed."
+  }
+]
