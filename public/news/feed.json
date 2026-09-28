@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:25:38.428Z",
+  "generatedAt": "2026-09-28T05:32:45.926Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,86 @@
     }
   ],
   "items": [
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-28T04:57:00.000Z"
+    },
+    {
+      "id": "6442ca40880f3130a94b",
+      "source": "Cointelegraph",
+      "title": "Vitalik Buterin says Hegotá could be Ethereum’s last ‘normal’ fork",
+      "summary": "Ethereum’s Vitalik Buterin said PeerDAS marked the start of Ethereum’s transition “from being just a blockchain to being something much more powerful.”",
+      "url": "https://cointelegraph.com/news/vitalik-hegota-ethereum-last-normal-fork?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-28T04:44:15.000Z"
+    },
+    {
+      "id": "72ae6284d029b3da49c5",
+      "source": "CoinDesk",
+      "title": "Bitcoin, Nasdaq futures decline as Trump won’t rule out more Iran strikes",
+      "summary": "Trump on Sunday didn’t rule out additional strikes on Iran before the midterm elections, even as he said the war could end soon.",
+      "url": "https://www.coindesk.com/markets/2026/09/28/bitcoin-and-nasdaq-futures-decline-as-trump-won-t-rule-out-more-iran-strikes",
+      "publishedAt": "2026-09-28T03:58:52.000Z"
+    },
+    {
+      "id": "8796c044730ff29c6418",
+      "source": "Cointelegraph",
+      "title": "Newsom signs California ban on public officials issuing memecoins",
+      "summary": "The law also restricts crypto companies from offering certain memecoins tied to public officials to California residents and takes effect for tokens issued from Jan. 1, 2027.",
+      "url": "https://cointelegraph.com/news/newsom-signs-california-ban-on-public-officials-issuing-memecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-28T02:23:42.000Z"
+    },
+    {
+      "id": "c56bca3a09eb044102da",
+      "source": "CryptoSlate",
+      "title": "A $202 billion US Treasury settlement hits September 30, and it could trigger a surprise move in Bitcoin",
+      "summary": "Treasury coupon supply meets calm financing, with SOFR and Bitcoin derivatives set to show whether pressure spreads. The post A $202 billion US Treasury settlement hits September 30, and it could trigger a surprise move in Bitcoin appeared first on…",
+      "url": "https://cryptoslate.com/a-202-billion-u-s-treasury-settlement-hits-september-30-and-it-could-trigger-a-surprise-move-in-bitcoin/",
+      "publishedAt": "2026-09-28T01:15:14.000Z"
+    },
+    {
+      "id": "65f2045381be867052ff",
+      "source": "Cointelegraph",
+      "title": "Zano rolls blockchain back a month after Gateway Address exploit",
+      "summary": "The Zano blockchain has been restarted at the block height that came immediately before Hard Fork 6, which introduced Gateway Addresses.",
+      "url": "https://cointelegraph.com/news/zano-rolls-blockchain-back-a-month-after-gateway-address-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-28T01:09:22.000Z"
+    },
+    {
+      "id": "922a05df7b887ed1912d",
+      "source": "Cointelegraph",
+      "title": "THORChain under fire over Bitget, ETH evolves beyond blockchain: Hodler’s Digest",
+      "summary": "THORChain refuses to blacklist addresses linked to the Bitget hack. Vitalik Buterin says Ethereum is evolving from being a mere blockchain, into a world cryptographic computer.",
+      "url": "https://cointelegraph.com/magazine/thorchain-under-fire-over-bitget-hack-eth-is-beyond-blockchain-now?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-27T23:43:18.000Z"
+    },
+    {
+      "id": "95cad95ba680e5221036",
+      "source": "CryptoSlate",
+      "title": "Core Lightning patches flaw that could let revoked channel state escape penalty",
+      "summary": "The flaw was fixed in v26.06.7, but older builds and some early Docker images still call for an upgrade check. The post Core Lightning patches flaw that could let revoked channel state escape penalty appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/core-lightning-revoked-channel-penalty-flaw/",
+      "publishedAt": "2026-09-27T23:15:38.000Z"
+    },
+    {
+      "id": "9cd19fafbc6fea1eedfe",
+      "source": "CryptoSlate",
+      "title": "Aave’s live stock-token loans expose USDC lenders to a weekend price gap",
+      "summary": "The Base hub permits up to $21 million in USDC borrowing against seven Coinbase stock tokens while their collateral feeds hold Friday's value through the weekend. The post Aave’s live stock-token loans expose USDC lenders to a weekend price gap appeared…",
+      "url": "https://cryptoslate.com/aave-stock-token-loans-expose-usdc-lenders-to-weekend-price-gap/",
+      "publishedAt": "2026-09-27T22:15:14.000Z"
+    },
+    {
+      "id": "2c6793ec3460653b4459",
+      "source": "The Block",
+      "title": "Onchain analyst links $18.4 million in Robinhood Chain memecoin extractions to single rug-pull operation",
+      "summary": "The creators of 10 Pons V2 launches exempted a set of wallets from Pons' anti-sniping tax; those wallets went on to buy most of each token's supply, per onchain data.",
+      "url": "https://www.theblock.co/news/defi/2026-09-27-onchain-analyst-links-18-4-million-in-robinhood-chain-memecoin-extractions-to-single-rug-pull-operation-416960",
+      "publishedAt": "2026-09-27T22:02:57.000Z"
+    },
     {
       "id": "e9841fd694f3f48abafe",
       "source": "CryptoSlate",
@@ -146,28 +226,12 @@
       "publishedAt": "2026-09-27T14:29:13.000Z"
     },
     {
-      "id": "e38ec1048f53019beabb",
-      "source": "CryptoSlate",
-      "title": "Visa cuts reported stablecoin volume but there’s no proof payments fell",
-      "summary": "Expanded address labels lowered adjusted dollar volume, but the adjusted count fell less than 2% and payment use remains unmeasured. The post Visa cuts reported stablecoin volume but there’s no proof payments fell appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/visas-stablecoin-reset-cuts-measured-value-while-transfer-counts-barely-move/",
-      "publishedAt": "2026-09-27T14:00:34.000Z"
-    },
-    {
       "id": "79ccc0466a65e02d037e",
       "source": "Decrypt",
       "title": "SEC Staff Says Token Buybacks Don't Make Crypto a Security—If the Network Works",
       "summary": "New SEC staff guidance says announcing a token buyback on a functional network isn't a promise that turns the token into a security, a shift one attorney says makes securities laws look \"opt-in.\"",
       "url": "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security",
       "publishedAt": "2026-09-27T13:01:03.000Z"
-    },
-    {
-      "id": "606aaacaf23b720d2b88",
-      "source": "CryptoSlate",
-      "title": "Ethereum is not instant, but collateral could make it feel that way",
-      "summary": "When a payment app tells you a transfer is complete, you start making decisions. You hand over whatever you've sold, spend the money you've received, or close the app and get on with your day. That little confirmation you get is enough for you to stop…",
-      "url": "https://cryptoslate.com/ethereum-isnt-instant-but-collateral-could-make-it-feel-that-way/",
-      "publishedAt": "2026-09-27T13:00:50.000Z"
     },
     {
       "id": "5a82a831917c13d547da",
@@ -184,14 +248,6 @@
       "summary": "Interviews with industry participants and legislative aides paint a picture of a blown bill-writing process, with sources pointing to nearly every facet of the bill's development and the debate around it as contributing factors to this month's failed vote.",
       "url": "https://www.coindesk.com/news-analysis/2026/09/27/how-months-of-work-on-the-clarity-act-all-fell-apart",
       "publishedAt": "2026-09-27T12:00:00.000Z"
-    },
-    {
-      "id": "5d960e4d32bbbc325100",
-      "source": "CryptoSlate",
-      "title": "Prediction markets promised better information and hired Hollywood",
-      "summary": "Sydney Sweeney is helping sell sports predictions, which is a pretty good indication that prediction markets have moved beyond the people who enjoy arguing about probability on the internet. Novig's Sept. 9 campaign announcement introduced the actress as a…",
-      "url": "https://cryptoslate.com/prediction-markets-promised-better-information-and-hired-hollywood/",
-      "publishedAt": "2026-09-27T11:00:50.000Z"
     },
     {
       "id": "4caa6485aabb2150270c",
@@ -324,18 +380,10 @@
     {
       "id": "9bd23d057fa32e950d15",
       "source": "CoinDesk",
-      "title": "Bitget hacker moves $83 million in stolen XRP that Ripple cannot freeze",
+      "title": "Bitget hacker moves $83 million in stolen XRP beyond reach of freeze controls",
       "summary": "Two wallets have been almost emptied and a third is being drained, with about $75 million remaining across the five original holding accounts.",
       "url": "https://www.coindesk.com/markets/2026/09/26/bitget-hacker-moves-usd83-million-in-stolen-xrp-that-ripple-cannot-freeze",
       "publishedAt": "2026-09-26T12:56:41.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-26T12:17:00.000Z"
     },
     {
       "id": "fb4c17b3bd65c176859f",
@@ -648,54 +696,6 @@
       "summary": "STRF, STRC, STRK and STRD would accrue dividends on weekends and holidays, in a move Strategy says will dampen volatility.",
       "url": "https://decrypt.co/379309/strategy-wants-its-preferred-stock-dividends-to-accrue-365-days-a-year",
       "publishedAt": "2026-09-25T13:22:00.000Z"
-    },
-    {
-      "id": "822c665be05b91d226cf",
-      "source": "Bitcoin Magazine",
-      "title": "Mitchell Askew Explains What 15M Inactive BTC Means for Bitcoin’s Next Move",
-      "summary": "Bitcoin Magazine Mitchell Askew Explains What 15M Inactive BTC Means for Bitcoin’s Next Move Bitcoin is rallying despite macro headwinds. Mitchell Askew explains why on-chain data and 15M BTC in long-term supply signal seller exhaustion. This post Mitchell…",
-      "url": "https://bitcoinmagazine.com/videos/mitchell-askew-explains-what-15m-inactive-btc-means-for-bitcoins-next-move",
-      "publishedAt": "2026-09-25T13:18:01.000Z"
-    },
-    {
-      "id": "b6c3f1ef91a4feb907e1",
-      "source": "Decrypt",
-      "title": "Morgan Stanley Joins NEXTPredict as Prediction Markets Bet on 'More Institutional' Play",
-      "summary": "The bulk of prediction market trades are still sports bets, while valuations are predicated on rising institutional interest.",
-      "url": "https://decrypt.co/379218/morgan-stanley-joins-nextpredict-as-prediction-markets-bet-on-more-institutional-play",
-      "publishedAt": "2026-09-25T13:16:03.000Z"
-    },
-    {
-      "id": "8a11ab758c5c216efe5d",
-      "source": "Decrypt",
-      "title": "Morning Minute: BlackRock Leans Deeper Into Tokenization with Ondo",
-      "summary": "The biggest financial institutions in the world are bringing more products onchain, and the pace is accelerating.",
-      "url": "https://decrypt.co/379292/morning-minute-blackrock-leans-deeper-into-tokenization-with-ondo",
-      "publishedAt": "2026-09-25T13:04:06.000Z"
-    },
-    {
-      "id": "0a108706d069706cace1",
-      "source": "Cointelegraph",
-      "title": "CoinMarketCap buys CoinGlass to expand crypto derivatives data",
-      "summary": "CoinGlass will retain its brand and team, while its website, app, free tools, API and pricing will remain unchanged following the acquisition.",
-      "url": "https://cointelegraph.com/news/coinmarketcap-coinglass-expand-crypto-derivatives-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-25T12:44:30.000Z"
-    },
-    {
-      "id": "dc9071c312ead511f629",
-      "source": "Cointelegraph",
-      "title": "SlowMist has yet to confirm crypto theft from iPhone Safari attack",
-      "summary": "The analyzed Safari sample targets iOS 18.4–18.6.2 using previously patched flaws, while its effectiveness on iOS 26.5 remains unverified.",
-      "url": "https://cointelegraph.com/news/no-confirmed-crypto-theft-iphone-safari-attack-slowmist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-25T12:19:34.000Z"
-    },
-    {
-      "id": "fa2465bcabe8eab1d4d6",
-      "source": "Decrypt",
-      "title": "Defense Secretary Pete Hegseth Holds Bitcoin in a Coinbase Wallet, Filing Shows",
-      "summary": "Two entries in his annual disclosure put the holding somewhere between $16,000 and $65,000, alongside more than $1 million in cash.",
-      "url": "https://decrypt.co/379290/defense-secretary-pete-hegseth-holds-bitcoin-in-a-coinbase-wallet-filing-shows",
-      "publishedAt": "2026-09-25T12:01:15.000Z"
     }
   ]
 }
