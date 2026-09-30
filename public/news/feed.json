@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T22:22:13.677Z",
+  "generatedAt": "2026-09-30T05:41:05.524Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 36,
+      "itemCount": 56,
       "error": null
     },
     {
@@ -57,6 +57,86 @@
     }
   ],
   "items": [
+    {
+      "id": "e2f47c8a470cb7392cf6",
+      "source": "CoinDesk",
+      "title": "XRP Ledger starts carrying fund records from Brazil operator overseeing $4 trillion",
+      "summary": "The regulated operator is mirroring ownership of selected investment funds on XRPL while keeping its existing database as the official record.",
+      "url": "https://www.coindesk.com/tech/2026/09/30/xrp-ledger-starts-carrying-fund-records-from-brazil-operator-overseeing-usd4-trillion",
+      "publishedAt": "2026-09-30T05:22:51.000Z"
+    },
+    {
+      "id": "0b4c9b87ba272e5f1983",
+      "source": "CoinDesk",
+      "title": "Bitcoin rally shows signs of cooling even as a 'bull score' gauge nears its perfect score",
+      "summary": "A trend guage tracked on onchain analysis firm CryptoQuant is near its ceiling. The buyers who drove BTC to an eight-month high are already pulling back.",
+      "url": "https://www.coindesk.com/markets/2026/09/30/bitcoin-rally-shows-signs-of-cooling-even-as-a-bull-score-gauge-nears-its-perfect-score",
+      "publishedAt": "2026-09-30T04:38:18.000Z"
+    },
+    {
+      "id": "61774db25dab2a88c395",
+      "source": "Cointelegraph",
+      "title": "Illinois draft crypto tax rules detail DeFi, stablecoin treatment",
+      "summary": "Illinois’ draft rules spell out how its 0.2% digital asset transaction tax would apply to stablecoins, DeFi platforms, crypto bridges and self-custody transfers.",
+      "url": "https://cointelegraph.com/news/illinois-crypto-tax-rules-defi-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-30T04:29:28.000Z"
+    },
+    {
+      "id": "8605e2a78937321cd64f",
+      "source": "Cointelegraph",
+      "title": "Crypto.com AI agent still in ‘stealth mode’ nearly 8 months after Super Bowl debut",
+      "summary": "In February, ai.com drew enough traffic to crash its website after a $15 million Super Bowl ad, but months later, users are still wondering what’s happened to their promised AI agent.",
+      "url": "https://cointelegraph.com/news/cryptocom-ai-agent-stealth-mode-nearly-8-months-after-super-bowl-debut?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-30T03:40:42.000Z"
+    },
+    {
+      "id": "5a42f26b42b91aa43dda",
+      "source": "The Block",
+      "title": "Robinhood to launch perps, weekend stock trading for US users",
+      "summary": "The trading platform also introduced Robinhood Agents, which allows users to build their own AI agents within the app.",
+      "url": "https://www.theblock.co/news/business/2026-09-29-robinhood-perps-trading-417242",
+      "publishedAt": "2026-09-30T02:58:24.000Z"
+    },
+    {
+      "id": "69d8be1e7e5f97fc2983",
+      "source": "Cointelegraph",
+      "title": "Binance Pay lets visitors spend USDT at PayPay merchants in Japan",
+      "summary": "Binance Pay will let overseas users spend USDT at most PayPay-supported merchants in Japan through HIVEX, while stores receive yen.",
+      "url": "https://cointelegraph.com/news/binance-pay-usdt-paypay-merchants-japan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-30T02:25:00.000Z"
+    },
+    {
+      "id": "3488b99ccd93fbc65f11",
+      "source": "CryptoSlate",
+      "title": "Sentora split 50% Aave revenue, but suppliers absorb all losses",
+      "summary": "The DAO would keep the contracts, but Sentora would set market risk controls and suppliers have no specified loss cushion in the plan. The post Sentora split 50% Aave revenue, but suppliers absorb all losses appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/sentora-split-50-aave-revenue-but-suppliers-absorb-all-losses/",
+      "publishedAt": "2026-09-30T00:40:26.000Z"
+    },
+    {
+      "id": "3fc8f451a671e529bd82",
+      "source": "Cointelegraph",
+      "title": "Trump accord calls for tech firms to ‘self police’ their own frontier AI",
+      "summary": "The voluntary accord puts much of the responsibility for managing frontier AI risks on developers.",
+      "url": "https://cointelegraph.com/news/trump-accord-calls-for-tech-firms-to-self-police-their-own-frontier-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-09-30T00:28:38.000Z"
+    },
+    {
+      "id": "7781fe81054a5bc43ddd",
+      "source": "CoinDesk",
+      "title": "Robinhood adds AI agents, perps and weekend trading in push to win active traders",
+      "summary": "The brokerage is expanding its trading hours and adding leveraged crypto products and automated trading tools to attract more active investors.",
+      "url": "https://www.coindesk.com/markets/2026/09/29/robinhood-adds-ai-agents-perps-and-weekend-trading-in-push-to-win-active-traders",
+      "publishedAt": "2026-09-29T23:00:00.000Z"
+    },
+    {
+      "id": "540f21a4079451c4f20e",
+      "source": "CryptoSlate",
+      "title": "Hut 8 locks in $1B credit line, but faces 40% liquidity rules",
+      "summary": "Letters of credit can cover site obligations without equivalent cash deposits, while borrowing would add corporate debt exposure. The post Hut 8 locks in $1B credit line, but faces 40% liquidity rules appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/hut-8-locks-in-1b-credit-line-but-faces-40-liquidity-rules/",
+      "publishedAt": "2026-09-29T22:50:49.000Z"
+    },
     {
       "id": "5f5a9f8d523c53ee71a6",
       "source": "Decrypt",
@@ -160,14 +240,6 @@
       "summary": "Kakaopay Securities is working with Dinari and Ondo Finance to explore tokenizing Korean-listed equities and expanding their availability to investors in international markets.",
       "url": "https://cointelegraph.com/news/kakaopay-securities-dinari-ondo-tokenized-korean-stocks-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-29T19:49:53.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-29T19:42:02.000Z"
     },
     {
       "id": "9d3b9e7bdf7273bc8156",
@@ -418,14 +490,6 @@
       "publishedAt": "2026-09-29T12:40:12.000Z"
     },
     {
-      "id": "15c47a5d17f3d5eb592d",
-      "source": "CryptoSlate",
-      "title": "Solana’s 250ms data shows lower-stake validators lost a larger share of reward-linked vote credits",
-      "summary": "The Foundation found sharply different lost-credit fractions by stake weighting, raising a reward question ahead of any 200ms step. The post Solana’s 250ms data shows lower-stake validators lost a larger share of reward-linked vote credits appeared first on…",
-      "url": "https://cryptoslate.com/solana-250ms-validator-vote-credits/",
-      "publishedAt": "2026-09-29T12:20:32.000Z"
-    },
-    {
       "id": "bec279598e4990f5a6bc",
       "source": "Decrypt",
       "title": "Morning Minute: Citi and Coinbase Just Made Stablecoins Invisible",
@@ -448,14 +512,6 @@
       "summary": "Your day-ahead look for Sept. 29, 2026",
       "url": "https://www.coindesk.com/daybook-us/2026/09/29/bitcoin-outperforms-gold-usd100-000-surge-in-play",
       "publishedAt": "2026-09-29T11:34:55.000Z"
-    },
-    {
-      "id": "b3a8da48f8e0e78677f9",
-      "source": "CryptoSlate",
-      "title": "BitMine nears 5% Ethereum threshold, yet stock valuation rules dictate its next move",
-      "summary": "Its remaining ETH gap is about $280 million at the company's reference price, against $672 million in reported cash and securities. The post BitMine nears 5% Ethereum threshold, yet stock valuation rules dictate its next move appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/bitmine-nears-5-ethereum-as-treasury-premiums-fade-its-next-capital-choice-is-harder/",
-      "publishedAt": "2026-09-29T11:20:31.000Z"
     },
     {
       "id": "84af44bd3573965ad71e",
@@ -640,62 +696,6 @@
       "summary": "OpenAI says its agents keep landing on government websites because they treat them as reliable sources, but it's pausing training while it adds safeguards.",
       "url": "https://decrypt.co/379508/openai-ai-agents-target-us-government-sites",
       "publishedAt": "2026-09-28T21:46:03.000Z"
-    },
-    {
-      "id": "630fa041390b1dd44e02",
-      "source": "Decrypt",
-      "title": "A Clever RSA Attack Fooled a Hardware Vault—Here's What It Means for Crypto",
-      "summary": "A UC San Diego-led team impersonated a hardware security module without extracting its key.",
-      "url": "https://decrypt.co/379505/rsa-attack-without-stealing-key-what-it-means-crypto",
-      "publishedAt": "2026-09-28T21:16:03.000Z"
-    },
-    {
-      "id": "f8a3d5e8cc1f308d902b",
-      "source": "Cointelegraph",
-      "title": "Canadian ‘crypto king’ set to represent himself at fraud trial",
-      "summary": "Aiden Pleterski was allegedly behind a crypto Ponzi scheme between 2021 and 2022 that resulted in a kidnapping and related criminal charges.",
-      "url": "https://cointelegraph.com/news/canada-aiden-pleterski-fraud-trial-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-28T20:41:44.000Z"
-    },
-    {
-      "id": "ba4cf310562fb98d42e7",
-      "source": "Decrypt",
-      "title": "Citi Clients Can Now Take Stablecoin Payments Through Coinbase—Without Touching Crypto",
-      "summary": "Coinbase and Citi expanded an existing deal so Citi's institutional clients can accept stablecoin payments, while Coinbase business accounts run on Citi's banking rails.",
-      "url": "https://decrypt.co/379497/citi-stablecoin-payments-coinbase-without-touching-crypto",
-      "publishedAt": "2026-09-28T20:36:03.000Z"
-    },
-    {
-      "id": "bb9444d7549ecef5d9a0",
-      "source": "Cointelegraph",
-      "title": "Blockchain.com eyes $500M IPO as crypto capital markets thaw: Report",
-      "summary": "The crypto company is seeking a valuation of up to $6 billion, well below its 2022 peak, as recently listed crypto stocks struggle to hold their gains.",
-      "url": "https://cointelegraph.com/news/blockchain-com-500m-ipo-bloomberg-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-28T20:28:13.000Z"
-    },
-    {
-      "id": "879faa6754f5b2c849e6",
-      "source": "Decrypt",
-      "title": "Anthropic's Claude Sonnet 5.5 Is Out, Beats Opus 5.5 at Coding for Half the Price",
-      "summary": "Anthropic's mid-tier model tops its own flagship on Terminal-Bench 4.0 and costs half as much per token, but an independent tester found it burns more tokens than any model it has measured.",
-      "url": "https://decrypt.co/379482/anthropic-claude-sonnet-5-5-release",
-      "publishedAt": "2026-09-28T20:06:03.000Z"
-    },
-    {
-      "id": "0cb67a17e1842c6a3654",
-      "source": "Decrypt",
-      "title": "After AI Agent Hacked Its Government, Australia Calls Altman and Amodei to Testify",
-      "summary": "Senator Sarah Hanson-Young has invited the OpenAI and Anthropic CEOs to a Canberra hearing on October 1, after an OpenAI agent quietly accessed Australia's Medicare data and nobody said a word for months.",
-      "url": "https://decrypt.co/379481/australia-sam-altman-dario-amodei-ai-hack",
-      "publishedAt": "2026-09-28T19:36:21.000Z"
-    },
-    {
-      "id": "dc0b315bbd19868b3d61",
-      "source": "The Block",
-      "title": "Tether’s USDT at center of Iran’s shadow banking network, new Senate Report says",
-      "summary": "Tether and its stablecoin have become central in \"Iran's shadow banking system,\" according to a new Senate investigation.",
-      "url": "https://www.theblock.co/news/regulation/2026-09-28-tethers-usdt-center-iran-shadow-banking-network-new-senate-report-says-417094",
-      "publishedAt": "2026-09-28T19:10:42.000Z"
     }
   ]
 }
