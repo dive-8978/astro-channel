@@ -208,8 +208,8 @@
     "zh": "让数字价值，成为真实的关爱。"
   },
   "inviteBody": {
-    "en": "Please send your organization name, contact person and proposed wording. We request a signed public statement, approved logo and publication permission, including the scope and duration. Please redact private contact details and identity documents from the public copy.",
-    "zh": "请通过邮件提供机构名称、联系人及建议文字。我们希望收到签署倡议书、获准使用的标志及公开授权，并明确范围和期限。公开版本请遮盖私人联系方式和身份证明等信息。"
+    "en": "Send your organization name, contact person and possible role. No signed document or logo is needed for the first conversation. Any later publication requires agreed scope, duration and permission.",
+    "zh": "请发送机构名称、联系人及感兴趣的参与方式。首次沟通无需签署文件或提供标识；后续公开展示须明确范围、期限并取得授权。"
   },
   "emailJoin": {
     "en": "Email the AstroBridge team",
@@ -396,11 +396,15 @@
     "zh": "一家机构，一份公开倡议书。"
   },
   "wallDocumentsBody": {
-    "en": "We invite organizations to provide a signed statement on their own letterhead and separate permission to publish their name, logo and approved document. A notarized statement is welcome if available. Select an authorized logo to open that institution’s statement directly.",
-    "zh": "我们邀请机构提供使用自身抬头的签署倡议书，并明确授权公开名称、标志和文件；如有公证文件，也欢迎提供。点击获授权机构的标志，即可直接打开该机构的倡议书。"
+    "en": "First explore a role in the proposed activity. Once participation is agreed, we request an approved public statement or participation record and separate name/logo permission. Select an authorized logo to open its approved record.",
+    "zh": "先探讨适合本期活动的参与方式。确认参与后，再商定获准公开的倡议书或参与记录，以及名称和标识的单独授权。点击已授权标识可查看对应记录。"
   },
   "formalInvitation": {
     "en": "Read the invitation & statement template →",
     "zh": "查看正式邀请函与倡议书模板 →"
+  },
+  "pilotBrief": {
+    "en": "Explore the MA Mothers Care pilot →",
+    "zh": "了解 MA Mothers Care 公益试点 →"
   }
 }
