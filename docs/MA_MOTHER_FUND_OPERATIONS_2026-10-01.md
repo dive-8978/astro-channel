@@ -36,3 +36,21 @@ Publish verified token contract/network, dedicated addresses, reserve funding, c
 ## Rollback
 
 Use an additive `git revert <release-commit>` on an up-to-date production branch, then push and verify the Vercel deployment and URLs. Do not force-push or reset unrelated news commits. No PM2 change is required for this website.
+
+## Co-signing wall update — 2026-10-01
+
+The current invitation prioritizes a written humanitarian joint statement. Funding, custody and supervision are not requirements of this invitation. Each institution should issue its own letterhead document and authorize the public version separately from the logo.
+
+Public invitation and unsigned discussion template: `/ma-mother-fund-invitation.html`. This is not an executed certificate. Do not place any third-party signature, seal or logo on the template.
+
+Registry schema version 2 adds these required fields before a participant appears:
+
+- `permissionExpiresAt`: YYYY-MM-DD, inclusive through that Asia/Shanghai calendar day; expired authorization is not displayed. Approval dates use the same program calendar.
+- `document.kind`: `joint-statement` or `notarial-record`.
+- `document.url`: `/fund-records/<slug>.pdf` or `.html`, the approved redacted statement itself. Clicking either logo or name opens this URL directly.
+- `document.sha256`: SHA-256 of the exact published document.
+- `document.publicationPermission: true` and `document.verified: true`: set only after manually verifying the issuer, signatory's authority and publication permission. These fields are editorial verification records, not digital signature certification.
+
+Existing name/logo permissions, role, approval date and optional `featured` flag remain applicable. Obtain confirmation through a verified institutional channel; an email acknowledgement, unsigned template or co-signing request cannot satisfy the checks. Give each institution its own document and archive source verification privately. Public documents must not contain private contact details, identity documents or unapproved signatures/seals.
+
+`npm run test:fund-documents` checks approval/expiry/path rules and the exact hashes of documents admitted to the public registry. A manual issuer and consent review is still essential. Featured logos link directly to their documents and use staggered illumination, light sweeps and the shared ripple. The motion can be paused and respects reduced-motion settings.

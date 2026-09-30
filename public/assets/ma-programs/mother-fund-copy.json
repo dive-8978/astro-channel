@@ -176,16 +176,16 @@
     "zh": "每一位有心人"
   },
   "wallConsent": {
-    "en": "No partners or institutional endorsements are confirmed. Names and logos will appear only with written permission, a published role and an approval date. Co-signing supports the stated charitable purpose; it does not make the participant a fund supervisor, custodian or guarantor of MA.",
-    "zh": "目前暂无确认的合作方或机构背书。名称和标志仅在取得书面授权、明确公开角色及确认日期后展示。联名表示支持公益宗旨，不自动成为基金监督方、托管方或 MA 的担保方。"
+    "en": "No signed institutional statements have been published yet. Logos appear only after written permission and an approved public statement are verified. Co-signing supports the humanitarian purpose within the statement’s scope; it does not automatically establish financial oversight, custody or endorsement of MA.",
+    "zh": "目前尚无已公开的机构签署倡议书。取得书面标志授权并核验获准公开的倡议书后，才会上墙。联名支持以文件约定的公益宗旨为限，不自动代表资金监督、托管或对 MA 的背书。"
   },
   "roleSupportTitle": {
     "en": "Co-sign the purpose",
     "zh": "公益联名"
   },
   "roleSupportBody": {
-    "en": "Authorize a jointly agreed statement and, optionally, a name or logo. No donation, token purchase or listing is requested.",
-    "zh": "授权双方确认的公益倡议文字，并可选择授权名称或标志。本邀请不要求捐款、购买代币或安排上市。"
+    "en": "Provide an agreed statement on your own letterhead, with optional approved name/logo display. No donation, token purchase, listing, custody or supervision is required for this co-signing invitation.",
+    "zh": "以机构自身抬头提供双方确认的倡议书，并可授权展示名称或标志。本次公益联名不要求捐款、购买代币、安排上市、托管或监督资金。"
   },
   "roleReviewTitle": {
     "en": "Explore independent oversight",
@@ -208,8 +208,8 @@
     "zh": "让数字价值，成为真实的关爱。"
   },
   "inviteBody": {
-    "en": "Tell us your organization, country, preferred role and contact person. This email opens a discussion; it is not automatic enrollment or a request for beneficiary medical records.",
-    "zh": "请通过邮件说明机构、所在国家、希望参与的角色及联系人。来信仅用于初步洽谈，不会自动加入，也无需提交受助者医疗资料。"
+    "en": "Please send your organization name, contact person and proposed wording. We request a signed public statement, approved logo and publication permission, including the scope and duration. Please redact private contact details and identity documents from the public copy.",
+    "zh": "请通过邮件提供机构名称、联系人及建议文字。我们希望收到签署倡议书、获准使用的标志及公开授权，并明确范围和期限。公开版本请遮盖私人联系方式和身份证明等信息。"
   },
   "emailJoin": {
     "en": "Email the AstroBridge team",
@@ -390,5 +390,17 @@
   "resume": {
     "en": "Resume motion",
     "zh": "继续动效"
+  },
+  "wallDocuments": {
+    "en": "One institution. One public statement.",
+    "zh": "一家机构，一份公开倡议书。"
+  },
+  "wallDocumentsBody": {
+    "en": "We invite organizations to provide a signed statement on their own letterhead and separate permission to publish their name, logo and approved document. A notarized statement is welcome if available. Select an authorized logo to open that institution’s statement directly.",
+    "zh": "我们邀请机构提供使用自身抬头的签署倡议书，并明确授权公开名称、标志和文件；如有公证文件，也欢迎提供。点击获授权机构的标志，即可直接打开该机构的倡议书。"
+  },
+  "formalInvitation": {
+    "en": "Read the invitation & statement template →",
+    "zh": "查看正式邀请函与倡议书模板 →"
   }
 }
