@@ -1,0 +1,88 @@
+/* Additive Mother Fund and buyback presentation. */
+.fund-addition { padding-block: 64px; }
+.fund-addition .section-head { max-width: 860px; }
+.fund-addition h2 { font-size: clamp(30px,4vw,48px); }
+.fund-addition h3 { font-size: 23px; line-height: 1.25; }
+.fund-addition p { color: #bfc6d2; }
+.fund-addition strong { color: #f9f3ee; }
+.fund-grid { display: grid; gap: 22px; }
+.fund-grid.three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.fund-grid.two { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.fund-card { position: relative; border: 1px solid var(--line); border-radius: 24px; padding: 28px; background: linear-gradient(135deg,rgba(255,219,197,.055),rgba(12,18,29,.6)); min-width: 0; }
+.fund-card p:last-child { margin-bottom: 0; }
+.step-index { display: block; margin-bottom: 26px; font: 500 13px 'Space Grotesk',sans-serif; color: #ffb2bd; letter-spacing: .15em; }
+.fund-tint { background: rgba(255,202,196,.025); border-block: 1px solid rgba(255,215,206,.09); }
+.fund-stack { display: grid; gap: 22px; }
+.fund-note { margin-top: 24px; padding: 22px 26px; border-left: 2px solid #e3a594; border-radius: 0 16px 16px 0; background: rgba(255,218,194,.035); color: #c5bdba; }
+.fund-note p { margin: 8px 0; }
+.fund-note a { font-size: 12px; text-underline-offset: 4px; }
+.fund-visual { min-width: 0; }
+.fund-hero-pledge { position: relative; z-index: 1; padding: 24px 30px; border: 1px solid rgba(255,195,182,.3); background: linear-gradient(120deg,#2d1c24,#151928); border-radius: 24px; margin-bottom: 16px; }
+.fund-hero-pledge strong { display: block; font: 500 clamp(28px,3.3vw,44px) 'Space Grotesk',sans-serif; color: #ffc8b9; letter-spacing: -.04em; }
+.fund-hero-pledge span { display: block; margin-top: 8px; color: #d5c7c6; font-size: 13px; }
+.fund-visual .mother-hero-art { min-height: 275px; padding: 24px; }
+.fund-visual .mother-orbit { width: 220px; height: 220px; }
+.ledger-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; font-size: 12px; color: #d6bfb6; }
+.ledger-card { display: flex; flex-direction: column; justify-content: center; }
+.ledger-amount { margin-top: 42px; font: 500 clamp(28px,3.2vw,42px) 'Space Grotesk',sans-serif; letter-spacing: -.04em; }
+.ledger-amount small { font-size: 18px; color: #ffb2bd; }
+.fund-ledger { margin: 20px 0; display: grid; grid-template-columns: 1fr 1fr; align-items: start; font-size: 13px; }
+.fund-ledger dt,.fund-ledger dd { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.fund-ledger dt { color: var(--muted); padding-right: 12px; }
+.fund-ledger dd { text-align: right; color: #f4e6de; overflow-wrap: anywhere; }
+.wall-toolbar { display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; margin: 28px 0 12px; }
+.button.compact { padding: 9px 15px; font-size: 12px; background: transparent; color: var(--text); cursor: pointer; }
+.supporter-wall { position: relative; overflow: hidden; isolation: isolate; border: 1px solid var(--line); border-radius: 28px; padding: 54px 24px; background: radial-gradient(ellipse at center,rgba(244,155,143,.13),#0b101b 80%); }
+.wall-ripple { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.wall-ripple i { position: absolute; width: 280px; height: 280px; top: 50%; left: 50%; border: 1px solid #e9a397; border-radius: 50%; transform: translate(-50%,-50%); animation: fund-ripple 9s linear infinite; opacity: 0; }
+.wall-ripple i:nth-child(2) { animation-delay: -3s; }
+.wall-ripple i:nth-child(3) { animation-delay: -6s; }
+.wall-track { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+.supporter-slot { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 24px 12px; min-height: 160px; border: 1px dashed rgba(255,207,190,.23); background: rgba(11,16,27,.64); border-radius: 18px; text-align: center; }
+.supporter-slot>span { font-size: 26px; color: #e4aaa0; }
+.supporter-slot strong { font-size: 14px; }
+.supporter-slot small { font-size: 11px; color: var(--muted); }
+.supporter-wall.is-paused *, .supporter-wall:hover *, .supporter-wall:focus-within * { animation-play-state: paused; }
+.fund-invite { text-align: center; max-width: 680px; margin: 44px auto 0; }
+.fund-buyback-banner { display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; border: 1px solid rgba(255,209,182,.26); border-radius: 26px; padding: 40px; background: linear-gradient(115deg,rgba(225,152,138,.1),rgba(120,157,213,.08)); }
+.fund-buyback-banner p { margin-bottom: 0; }
+.fund-buyback-banner h2 { font-size: clamp(28px,3vw,38px); }
+.profit-visual { padding: 36px; text-align: center; border: 1px solid rgba(255,185,172,.24); border-radius: 32px; background: radial-gradient(ellipse at 50% 30%,rgba(225,147,130,.17),rgba(17,20,33,.7) 75%); }
+.profit-number { display: block; font: 500 clamp(100px,14vw,180px)/1 'Space Grotesk',sans-serif; letter-spacing: -.09em; color: #ffccba; }
+.profit-number>span { font-size: .4em; margin-left: 8px; }
+.profit-visual>p { color: #bcb9c2; font-size: 13px; }
+.profit-split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px; }
+.profit-split>div { border-top: 1px solid var(--line); padding-top: 22px; }
+.profit-split strong { display: block; font-size: 30px; color: #ffb9b2; }
+.profit-split span { font-size: 12px; display: block; color: #d7c9c6; }
+.formula { font: 500 clamp(22px,2.5vw,32px)/1.5 'Space Grotesk',sans-serif; color: #ffcbb9; margin-bottom: 20px; }
+.calculator label { display: block; font-size: 13px; margin-bottom: 12px; color: #c3c0c7; }
+.calculator input { width: 100%; color: #fff2e9; background: #0b0e18; border: 1px solid #8b6b6a; border-radius: 12px; padding: 15px; font-size: 24px; }
+.calculator #calc-help { font-size: 12px; }
+a:focus-visible,button:focus-visible,input:focus-visible { outline: 2px solid #ffd4a8; outline-offset: 4px; }
+.translation-note { padding: 14px 20px; color: #e4c4ab; background: rgba(255,203,175,.05); border-radius: 12px; font-size: 12px; }
+.translation-note[hidden] { display: none; }
+.page-mother .allocation-bar span { width: 2%; min-width: 8px; }
+@keyframes fund-ripple { 0% { transform: translate(-50%,-50%) scale(.2); opacity: .5; } 100% { transform: translate(-50%,-50%) scale(4); opacity: 0; } }
+@media(min-width:981px) { .page-mother .nav-links { gap: 14px; } .page-mother .nav-links a { font-size: 12px; } }
+@media(max-width:980px) { .fund-grid.three { grid-template-columns: 1fr; } .fund-buyback-banner { grid-template-columns: 1fr; } .wall-track { grid-template-columns: 1fr 1fr; } }
+@media(max-width:680px) { .fund-grid.two { grid-template-columns: 1fr; } .fund-addition { padding-block: 42px; } .fund-card { padding: 24px; } .fund-buyback-banner { padding: 26px; } .wall-track { gap: 10px; } .supporter-wall { padding: 24px 14px; } .supporter-slot { padding: 16px 8px; } .fund-hero-pledge { padding: 22px; } .profit-visual { padding: 28px; } }
+@media(prefers-reduced-motion:reduce) { .wall-ripple i { animation: none; opacity: .15; } html { scroll-behavior: auto; } }
+.supporter-confirmed { margin-top: 22px; }
+.supporter-confirmed img { width: auto; max-width: 180px; height: 52px; object-fit: contain; margin-bottom: 20px; }
+.supporter-confirmed a { font-size: 12px; }
+.fund-addition[id] { scroll-margin-top: 88px; }
+.wall-track[hidden] { display: none; }
+.confirmed-carousel { display: flex; width: max-content; animation: fund-marquee 32s linear infinite; }
+.carousel-group { display: flex; gap: 20px; padding-right: 20px; }
+.carousel-group .supporter-slot { width: 230px; }
+.carousel-group img { max-width: 150px; height: 50px; object-fit: contain; }
+@keyframes fund-marquee { to { transform: translateX(-50%); } }
+@media(prefers-reduced-motion:reduce) { .confirmed-carousel { animation: none; width: auto; } .carousel-group { flex-wrap: wrap; } .carousel-group:nth-child(2) { display: none; } }
+.page-buyback h1 { white-space: pre-line; }
+@media(max-width:680px) {
+  .page-mother .nav-inner { flex-wrap: wrap; padding-block: 10px; gap: 10px; }
+  .page-mother .nav-links { display: flex; order: 3; width: 100%; gap: 18px; overflow-x: auto; padding: 4px 0 7px; white-space: nowrap; }
+  .page-mother .nav-links a { flex-shrink: 0; font-size: 11px; }
+  .fund-addition[id] { scroll-margin-top: 125px; }
+}

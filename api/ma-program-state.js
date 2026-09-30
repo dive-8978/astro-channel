@@ -1,6 +1,6 @@
 const PLANNED_INITIAL_SUPPLY = "1000000000";
 const PLANNED_CARD_POOL = "30000000";
-const PLANNED_MOTHER_FUND = "30000000";
+const PLANNED_MOTHER_FUND = "20000000";
 const PLANNED_BURN_RESERVE = "100000000";
 const PLANNED_DAILY_BURN = "273972";
 
@@ -46,7 +46,12 @@ export default function handler(request, response) {
     },
     motherFund: {
       plannedAllocationMA: PLANNED_MOTHER_FUND,
-      initialSupplySharePercent: "3",
+      policyRevision: "2026-10-01",
+      publicWallet: null,
+      matchingBurnMA: "20000000",
+      matchingBurnSource: "separate-company-reserve",
+      annualProfitPercent: { total: 4, fund: 2, burn: 2 },
+      initialSupplySharePercent: "2",
       verifiedReferenceValueUSD: null,
       disbursementsEnabled: false
     },

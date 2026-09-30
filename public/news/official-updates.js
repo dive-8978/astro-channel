@@ -1,4 +1,16 @@
 window.ASTRO_PROGRAM_UPDATES = [
+{
+  "id": "ma-mother-fund-20m-buyback-20261001",
+  "project": "MA",
+  "title": "MA expands its proposed Mother Fund to 20 million MA",
+  "summary": "The company-funded proposal adds a separate 20 million MA matching burn and an annual 4% eligible net-profit plan: 2% for Mother Fund replenishment and 2% for buyback and burn. Participation and independent oversight discussions are open; no institutional participation or funded wallet is confirmed.",
+  "phase": "Planning",
+  "phaseTone": "planned",
+  "date": "2026-10-01",
+  "displayDate": "October 1, 2026",
+  "url": "/ma-mother-love.html",
+  "evidence": "Published proposal and participation framework only. No listing, charitable registration, funded reserves, completed aid, buyback or burn is claimed."
+},
   {
     id: "ma-policy-and-identity-20260925", project: "MA",
     title: "MA revises its program allocations and introduces a professional website",

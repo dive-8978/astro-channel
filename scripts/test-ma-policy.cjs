@@ -2,7 +2,23 @@ const fs=require('fs'),assert=require('assert/strict'),vm=require('vm'),crypto=r
 const read=p=>fs.readFileSync(p,'utf8');
 const policy=JSON.parse(read('public/data/ma-program-policy.json'));
 assert.equal(policy.burn.days1To364MA*364+policy.burn.day365MA,50000000);
-assert.equal(policy.motherFund.allocationMA/policy.initialSupplyReferenceMA*100,1);
+assert.equal(policy.motherFund.allocationMA/policy.initialSupplyReferenceMA*100,2);
+// The fund allocation, separate reserve and profit split must not drift apart.
+assert.equal(policy.motherFund.allocationMA,20000000);
+assert.equal(policy.motherFund.initialSupplyPercent,2);
+assert.equal(policy.motherFund.matchingBurn.allocationMA,20000000);
+assert.equal(policy.motherFund.matchingBurn.source,'separate-company-reserve');
+assert.equal(policy.motherFund.matchingBurn.separateFromDailyBurn,true);
+assert.equal(policy.annualBuyback.totalProfitPercent,4);
+assert.equal(policy.annualBuyback.fundProfitPercent,2);
+assert.equal(policy.annualBuyback.burnProfitPercent,2);
+assert.equal(policy.annualBuyback.nonPositiveProfitAllocation,0);
+assert.equal(policy.motherFund.publicWallet,null);
+let apiHandler;vm.runInNewContext(read('api/ma-program-state.js').replace('export default function handler','function handler')+'; apiHandler=handler;', {set apiHandler(v){apiHandler=v;}});
+let response;apiHandler({method:'GET'},{setHeader(){},status(code){assert.equal(code,200);return this;},json(body){response=body;}});
+assert.equal(Number(response.motherFund.plannedAllocationMA),policy.motherFund.allocationMA);
+assert.equal(Number(response.motherFund.initialSupplySharePercent),policy.motherFund.initialSupplyPercent);
+assert.equal(response.mode,'planning');assert.equal(response.verified,false);assert.equal(response.motherFund.disbursementsEnabled,false);
 const cards=read('public/assets/ma-programs/cards.js');
 const rates=JSON.parse(cards.match(/var PROPOSED_REFERENCE_SCHEDULE = Object.freeze\((\{[\s\S]*?\})\);/)[1]);
 assert.deepEqual(rates,policy.redemption.referenceMA);
