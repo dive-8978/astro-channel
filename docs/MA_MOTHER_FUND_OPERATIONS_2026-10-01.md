@@ -54,3 +54,7 @@ Registry schema version 2 adds these required fields before a participant appear
 Existing name/logo permissions, role, approval date and optional `featured` flag remain applicable. Obtain confirmation through a verified institutional channel; an email acknowledgement, unsigned template or co-signing request cannot satisfy the checks. Give each institution its own document and archive source verification privately. Public documents must not contain private contact details, identity documents or unapproved signatures/seals.
 
 `npm run test:fund-documents` checks approval/expiry/path rules and the exact hashes of documents admitted to the public registry. A manual issuer and consent review is still essential. Featured logos link directly to their documents and use staggered illumination, light sweeps and the shared ripple. The motion can be paused and respects reduced-motion settings.
+
+## English institutional invitation
+
+The invitation and unsigned statement template at `/ma-mother-fund-invitation.html` are English-only as requested on 2026-10-01. The legacy `#chinese` fragment now targets the English invitation so existing links continue to work. The prior bilingual page is preserved in Git and in the local English-outreach archive; the fund page retains its language selector.
