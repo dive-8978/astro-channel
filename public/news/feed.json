@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T22:21:48.874Z",
+  "generatedAt": "2026-10-01T06:06:35.844Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,118 @@
     }
   ],
   "items": [
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-01T06:00:00.000Z"
+    },
+    {
+      "id": "4a9a77796a56179d2843",
+      "source": "CryptoSlate",
+      "title": "Three hidden flaws in Uniswap’s StablePair hook drain LP returns",
+      "summary": "StablePair can retain rebalancing value for liquidity providers, but fees anchored to a configured rate leave token and inventory risk with LPs. The post Three hidden flaws in Uniswap’s StablePair hook drain LP returns appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/three-hidden-flaws-in-uniswaps-stablepair-hook-drain-lp-returns/",
+      "publishedAt": "2026-10-01T05:10:32.000Z"
+    },
+    {
+      "id": "af58171b6b32f4be2352",
+      "source": "CoinDesk",
+      "title": "Dogecoin gets DeFi testnet as DogeOS bets miners will eventually secure its apps",
+      "summary": "DogeOS wants to turn DOGE into more than a payments and speculation asset, but its applications still rely on selected operators rather than Dogecoin miners.",
+      "url": "https://www.coindesk.com/tech/2026/10/01/dogecoin-gets-defi-testnet-as-dogeos-bets-miners-will-eventually-secure-its-apps",
+      "publishedAt": "2026-10-01T04:58:52.000Z"
+    },
+    {
+      "id": "a3113288df8ec8b498b0",
+      "source": "Cointelegraph",
+      "title": "Crypto hacks top $768M in September, worst month of 2026",
+      "summary": "The $388 million Bitget breach and $320 million Liquid Network exploit accounted for most of September’s losses, though more than $270 million from the latter was later returned.",
+      "url": "https://cointelegraph.com/news/crypto-hacks-total-766m-in-september-peckshield?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-01T04:44:33.000Z"
+    },
+    {
+      "id": "064a31dc4696fe005db4",
+      "source": "CoinDesk",
+      "title": "Bitcoin's soft-inflation pop to $85,500 fades as bond yields refuse to fall",
+      "summary": "A cooler-than-expected PCE report sent bitcoin briefly above $85,000 on Wednesday. Treasury yields held near their highest since 2002 and the gains drained away.",
+      "url": "https://www.coindesk.com/markets/2026/10/01/bitcoin-s-soft-inflation-pop-to-usd85-500-fades-as-bond-yields-refuse-to-fall",
+      "publishedAt": "2026-10-01T04:15:20.000Z"
+    },
+    {
+      "id": "21b811dff41eaeef54cb",
+      "source": "CryptoSlate",
+      "title": "Bitcoin enters its best season after a 43% surge, with $147,000 suddenly on the math",
+      "summary": "Bitcoin is closing its strongest quarter since 2024 after leaving US stocks and gold far behind despite surging bond yields. The largest digital asset has gained about 43% in the third quarter, putting it on course for its second-best third-quarter since…",
+      "url": "https://cryptoslate.com/bitcoin-enters-its-best-season-after-a-43-surge-with-147000-suddenly-on-the-math/",
+      "publishedAt": "2026-10-01T03:10:09.000Z"
+    },
+    {
+      "id": "2d11521e0c26e6a24fff",
+      "source": "CryptoSlate",
+      "title": "New Bitcoin upgrade catches hidden key leaks hiding the exact fix",
+      "summary": "BIP461 would make compliant ECDSA signatures reproducible, enabling comparisons that flag deviations without proving malicious firmware. The post New Bitcoin upgrade catches hidden key leaks hiding the exact fix appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/new-bitcoin-upgrade-catches-hidden-key-leaks-hiding-the-exact-fix/",
+      "publishedAt": "2026-10-01T01:20:32.000Z"
+    },
+    {
+      "id": "ac9dc296db7e450f0f1c",
+      "source": "Cointelegraph",
+      "title": "CFTC seeks to define event contracts as swaps amid prediction market fight",
+      "summary": "The classification could assist the CFTC’s claim that it has exclusive federal jurisdiction over event contracts offered on regulated prediction markets.",
+      "url": "https://cointelegraph.com/news/cftc-seeks-to-define-event-contracts-as-swaps-amid-prediction-market-fight?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-01T01:07:46.000Z"
+    },
+    {
+      "id": "8fab5596002ea70a6732",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin Privacy Breakthrough a Zcash Killer? | Misha Komorov, Alloc Innit",
+      "summary": "Bitcoin Magazine Bitcoin Privacy Breakthrough a Zcash Killer? | Misha Komorov, Alloc Innit Misha Komarov explains Shielded Bitcoin—a proposed ZK privacy protocol using Bitcoin PIPEs to hide transactions with no soft fork needed. This post Bitcoin Privacy…",
+      "url": "https://bitcoinmagazine.com/videos/bitcoin-privacy-breakthrough-a-zcash-killer-misha-komorov-alloc-innit",
+      "publishedAt": "2026-10-01T00:57:35.000Z"
+    },
+    {
+      "id": "1c73fb312773829d4376",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin’s Institutional Era Has Arrived | Robinhood VP of Crypto Institutions Nicola White",
+      "summary": "Bitcoin Magazine Bitcoin’s Institutional Era Has Arrived | Robinhood VP of Crypto Institutions Nicola White Robinhood VP Nicola White explains how 10x crypto perpetual futures arrived in the US and why Robinhood is pushing for 24/7 global markets. This post…",
+      "url": "https://bitcoinmagazine.com/videos/bitcoins-institutional-era-has-arrived-robinhood-vp-of-crypto-institutions-nicola-white",
+      "publishedAt": "2026-10-01T00:52:03.000Z"
+    },
+    {
+      "id": "4215c16001a30bda0129",
+      "source": "Bitcoin Magazine",
+      "title": "Mark Moss: The Bitcoin Endgame – BTC to $1 Million by 2030",
+      "summary": "Bitcoin Magazine Mark Moss: The Bitcoin Endgame – BTC to $1 Million by 2030 Mark Moss explains why Bitcoin keeps climbing post-Fed rate hike, benefiting from both currency debasement and a booming tech future. This post Mark Moss: The Bitcoin Endgame – BTC…",
+      "url": "https://bitcoinmagazine.com/videos/mark-moss-the-bitcoin-endgame-btc-to-1-million-by-2030",
+      "publishedAt": "2026-10-01T00:45:15.000Z"
+    },
+    {
+      "id": "93bbf8dc0d96b64b48ce",
+      "source": "Cointelegraph",
+      "title": "MetaMask exits Ethereum validators amid undisclosed security incident",
+      "summary": "MetaMask said it is investigating the threat internally and said it has found no immediate threat to its wallets.",
+      "url": "https://cointelegraph.com/news/metamask-exits-lido-validators-as-it-investigates-security-incident?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-01T00:15:55.000Z"
+    },
+    {
+      "id": "c2471bcc9861304fee90",
+      "source": "Decrypt",
+      "title": "Gemini 4 Is Here, and Google’s Flagship Tops All Other AI Models on Cybersecurity",
+      "summary": "Gemini 4 Argon tops 12 of 18 benchmarks in Google's own table, writes a million tokens per reply and resists hijacking best. Cyber defenders get it first, with the guardrails off.",
+      "url": "https://decrypt.co/379784/gemini-4-google-flagship-tops-ai-models-cybersecurity",
+      "publishedAt": "2026-09-30T23:20:59.000Z"
+    },
+    {
+      "id": "a1bcf7d7202c8c9a9b2f",
+      "source": "CryptoSlate",
+      "title": "Brazil’s largest energy giant tests Cardano to fix carbon double-counting",
+      "summary": "Its research platform represents aviation fuel benefits as transferable tokens that are retired after a claim, while commercial scale remains unquantified. The post Brazil’s largest energy giant tests Cardano to fix carbon double-counting appeared first on…",
+      "url": "https://cryptoslate.com/brazils-largest-energy-giant-tests-cardano-to-fix-carbon-double-counting/",
+      "publishedAt": "2026-09-30T22:40:07.000Z"
+    },
     {
       "id": "776199a429beadfa0e23",
       "source": "The Block",
@@ -144,14 +256,6 @@
       "summary": "The attacker behind the $387.5 million Bitget heist has started hiding about $3.8 million in ZEC inside Zcash's Ironwood pool, after Near Intents turned their swaps away.",
       "url": "https://decrypt.co/379759/bitget-hacker-zcash-private-pool-near-thorchain",
       "publishedAt": "2026-09-30T19:46:04.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-30T19:37:13.000Z"
     },
     {
       "id": "c29c85cc919d163ab3d2",
@@ -306,14 +410,6 @@
       "publishedAt": "2026-09-30T16:28:30.000Z"
     },
     {
-      "id": "a9532e980747c4a3516e",
-      "source": "CryptoSlate",
-      "title": "Stablecoin cards enter ‘hyper growth’ mode as monthly spending hits record $1.17 billion",
-      "summary": "Paymentscan's Sept. 29 snapshot shows a new tracked volume high and a higher implied amount per transaction. The post Stablecoin cards enter ‘hyper growth’ mode as monthly spending hits record $1.17 billion appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/stablecoin-cards-enter-hyper-growth-mode-as-monthly-spending-hits-record-1-17-billion/",
-      "publishedAt": "2026-09-30T16:20:48.000Z"
-    },
-    {
       "id": "bdf3502f9a3ea86b2f98",
       "source": "The Block",
       "title": "Bitcoin steadies as soft PCE cools October Fed rate hike bets",
@@ -354,14 +450,6 @@
       "publishedAt": "2026-09-30T15:34:50.000Z"
     },
     {
-      "id": "5d8270ad8e76f114f46b",
-      "source": "CryptoSlate",
-      "title": "Robinhood Chain kept producing blocks through a roughly 40-minute app disruption",
-      "summary": "New full-day measurements correct the block-halt claim, while separate data show a steep drop in successful app traffic. The post Robinhood Chain kept producing blocks through a roughly 40-minute app disruption appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/robinhood-chain-kept-producing-blocks-through-a-roughly-40-minute-app-disruption/",
-      "publishedAt": "2026-09-30T15:20:28.000Z"
-    },
-    {
       "id": "9c9129909ed840b0f806",
       "source": "CoinDesk",
       "title": "U.S. CFTC seeks event contract definitions that may defy states' gambling claims",
@@ -386,14 +474,6 @@
       "publishedAt": "2026-09-30T14:56:07.000Z"
     },
     {
-      "id": "8dedb3ee3c6e693b58b7",
-      "source": "CryptoSlate",
-      "title": "SEC changes token buyback guidance as spending hits $638M",
-      "summary": "The staff added a no-central-party condition, raising a harder question than how much a project buys back. The post SEC changes token buyback guidance as spending hits $638M appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/sec-changes-token-buyback-guidance-as-spending-hits-638m/",
-      "publishedAt": "2026-09-30T14:20:59.000Z"
-    },
-    {
       "id": "381c7e03998688a0660c",
       "source": "CoinDesk",
       "title": "Clock's ticking: UK's crypto regulatory application window opens with February deadline",
@@ -412,7 +492,7 @@
     {
       "id": "d4a999fcdf0855e3f44d",
       "source": "Cointelegraph",
-      "title": "Could THORChain face prosecution over stolen Bitget funds?",
+      "title": "Could THORChain face prosecution over stolen Bitget funds? Legal opinion",
       "summary": "THORChain will not — or can not — block addresses linked to the $387.5 million Bitget hack. Can the devs be prosecuted for money laundering? It’s complicated, says crypto lawyer Yuriy Brisov.",
       "url": "https://cointelegraph.com/magazine/does-thorchain-face-a-criminal-reckoning-near-intents-bitget?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-09-30T13:30:00.000Z"
@@ -424,14 +504,6 @@
       "summary": "FCA opens crypto authorization window, setting a Feb. 28, 2027 deadline as UK firms face fresh vetting under new regime.",
       "url": "https://www.theblock.co/news/regulation/2026-09-30-fca-starts-accepting-crypto-authorization-applications-ahead-of-2027-regime-417284",
       "publishedAt": "2026-09-30T13:21:27.000Z"
-    },
-    {
-      "id": "d54427a92ad1e3c316c8",
-      "source": "CryptoSlate",
-      "title": "Binance ends Funding Account crypto deposits as Pay and Convert move to Spot",
-      "summary": "Pay receipts and Convert settlement change now, while Funding-backed recurring sends face a later cutoff. The post Binance ends Funding Account crypto deposits as Pay and Convert move to Spot appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/binance-ends-direct-crypto-deposits-to-funding-as-pay-receipts-move-to-spot/",
-      "publishedAt": "2026-09-30T13:20:43.000Z"
     },
     {
       "id": "697cb43f6031144f0f84",
@@ -624,78 +696,6 @@
       "summary": "The new Zakura nodes caught up with the network in just over six hours in Gemini’s deployments. The crypto exchange’s previous software took close to a day.",
       "url": "https://www.coindesk.com/tech/2026/09/30/winklevoss-owned-gemini-switches-zcash-software-ahead-of-faster-25-second-blocks",
       "publishedAt": "2026-09-30T08:27:00.000Z"
-    },
-    {
-      "id": "21fb68111a3a87cf7a86",
-      "source": "CoinDesk",
-      "title": "How European investors can now buy bitcoin without taking on U.S. dollar risk",
-      "summary": "Asset management platform HANetf has listed ETCs in London, Frankfurt and Paris providing pound sterling and euro-hedged exposure to bitcoin.",
-      "url": "https://www.coindesk.com/business/2026/09/30/how-european-investors-can-now-buy-bitcoin-without-taking-on-u-s-dollar-risk",
-      "publishedAt": "2026-09-30T08:25:43.000Z"
-    },
-    {
-      "id": "fb5a187fb39a439696de",
-      "source": "The Block",
-      "title": "Kalshi to end liquidity incentive program amid wash trading allegations",
-      "summary": "Its monthly volume reached $52.98 billion in September as of Sept. 29, marking an all-time high, even as September data remains incomplete.",
-      "url": "https://www.theblock.co/news/business/2026-09-30-kalshi-ends-trader-incentive-program-417247",
-      "publishedAt": "2026-09-30T07:21:08.000Z"
-    },
-    {
-      "id": "9595e54f9cf47c14fad6",
-      "source": "CoinDesk",
-      "title": "Bitcoin bulls have one price level to defend",
-      "summary": "Here's the level analysts are watching and what a break below it could mean for the bulls.",
-      "url": "https://www.coindesk.com/markets/2026/09/30/bitcoin-bulls-have-one-price-level-to-defend",
-      "publishedAt": "2026-09-30T07:04:41.000Z"
-    },
-    {
-      "id": "da1a1b23d92677b814dc",
-      "source": "Cointelegraph",
-      "title": "European stablecoin issuer AllUnity launches USD stablecoin USDAU",
-      "summary": "AllUnity is launching USDAU, its fourth fiat-backed stablecoin, expanding a MiCA-regulated lineup that already covers the euro, Swiss franc and Swedish krona.",
-      "url": "https://cointelegraph.com/news/allunity-europe-mica-usd-stablecoin-usdau?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-30T07:00:00.000Z"
-    },
-    {
-      "id": "95a45a303cbef47b5034",
-      "source": "CoinDesk",
-      "title": "Robinhood unveils an AI that trades your money 24/7, and you carry all the risk",
-      "summary": "Robinhood users could soon get an AI agent that trades on their behalf, even at 2 a.m. But if a trade goes wrong, users' bear the risk, not Robinhood.",
-      "url": "https://www.coindesk.com/markets/2026/09/30/robinhood-is-giving-customers-an-ai-agent-that-trades-for-them-plus-10x-crypto-bets",
-      "publishedAt": "2026-09-30T05:59:31.000Z"
-    },
-    {
-      "id": "6f9d5cbb70e27f0dab39",
-      "source": "Cointelegraph",
-      "title": "Kalshi in advanced talks to raise new funding at $40B valuation: Reuters",
-      "summary": "The prediction market was valued at $22 billion in a $1 billion funding round just four months ago, after doubling its valuation from December.",
-      "url": "https://cointelegraph.com/news/kalshi-in-advanced-talks-to-raise-new-funding-at-40b-valuation-reuters?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-30T05:45:55.000Z"
-    },
-    {
-      "id": "e2f47c8a470cb7392cf6",
-      "source": "CoinDesk",
-      "title": "XRP Ledger starts carrying fund records from Brazil operator overseeing $4 trillion",
-      "summary": "The regulated operator is mirroring ownership of selected investment funds on XRPL while keeping its existing database as the official record.",
-      "url": "https://www.coindesk.com/tech/2026/09/30/xrp-ledger-starts-carrying-fund-records-from-brazil-operator-overseeing-usd4-trillion",
-      "publishedAt": "2026-09-30T05:22:51.000Z"
-    },
-    {
-      "id": "0b4c9b87ba272e5f1983",
-      "source": "CoinDesk",
-      "title": "Bitcoin rally shows signs of cooling even as a 'bull score' gauge nears its perfect score",
-      "summary": "A trend guage tracked on onchain analysis firm CryptoQuant is near its ceiling. The buyers who drove BTC to an eight-month high are already pulling back.",
-      "url": "https://www.coindesk.com/markets/2026/09/30/bitcoin-rally-shows-signs-of-cooling-even-as-a-bull-score-gauge-nears-its-perfect-score",
-      "publishedAt": "2026-09-30T04:38:18.000Z"
-    },
-    {
-      "id": "61774db25dab2a88c395",
-      "source": "Cointelegraph",
-      "title": "Illinois draft crypto tax rules detail DeFi, stablecoin treatment",
-      "summary": "Illinois’ draft rules spell out how its 0.2% digital asset transaction tax would apply to stablecoins, DeFi platforms, crypto bridges and self-custody transfers.",
-      "url": "https://cointelegraph.com/news/illinois-crypto-tax-rules-defi-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-09-30T04:29:28.000Z"
     }
   ]
 }
