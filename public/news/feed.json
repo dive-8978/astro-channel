@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T22:45:49.309Z",
+  "generatedAt": "2026-10-02T05:49:25.127Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -46,7 +46,7 @@
     {
       "name": "The Block",
       "status": "ok",
-      "itemCount": 18,
+      "itemCount": 19,
       "error": null
     },
     {
@@ -57,6 +57,110 @@
     }
   ],
   "items": [
+    {
+      "id": "4fe72a1786ceeae51874",
+      "source": "CryptoSlate",
+      "title": "Electrum patches Lightning flaw, but old Bitcoin backups break",
+      "summary": "September’s security fix repairs exports, but older backups for anchor channels with non-deterministic Lightning keys still need replacing. The post Electrum patches Lightning flaw, but old Bitcoin backups break appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/electrum-patches-lightning-flaw-but-old-bitcoin-backups-break/",
+      "publishedAt": "2026-10-02T05:30:01.000Z"
+    },
+    {
+      "id": "a59721e274b2ea197e17",
+      "source": "Cointelegraph",
+      "title": "South Korea advances tokenized securities rules ahead of 2027 rollout",
+      "summary": "South Korea’s financial regulator proposed detailed rules for tokenized securities, including capital requirements, OTC trading licenses and retail investment limits.",
+      "url": "https://cointelegraph.com/news/south-korea-tokenized-securities-rules-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-02T05:08:32.000Z"
+    },
+    {
+      "id": "674fe6bb1c6ddfb359a8",
+      "source": "The Block",
+      "title": "SEC’s innovation exemption poses constraint on bringing stock tokens to US, Robinhood crypto chief says",
+      "summary": "Robinhood's Johann Kerbrat told The Block that Robinhood is still working through the SEC's latest innovation exemption on tokenized stocks.",
+      "url": "https://www.theblock.co/news/regulation/2026-10-02-secs-innovation-exemption-robinhood-417538",
+      "publishedAt": "2026-10-02T05:04:41.000Z"
+    },
+    {
+      "id": "9b1088b193be3a0d4e13",
+      "source": "Cointelegraph",
+      "title": "Zano exploiter created 36.9M unauthorized ZANO before blockchain rollback",
+      "summary": "The unauthorized coins were indistinguishable from legitimate ZANO, leaving the team unable to remove them without rolling back the blockchain.",
+      "url": "https://cointelegraph.com/news/zano-exploiter-created-369m-unauthorized-zano-before-blockchain-rollback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-02T05:02:23.000Z"
+    },
+    {
+      "id": "5d630f14c0dedb920dfd",
+      "source": "Cointelegraph",
+      "title": "Core Lightning warns attackers are targeting unpatched nodes",
+      "summary": "Node operators running version 26.06.7 or earlier were told to upgrade immediately.",
+      "url": "https://cointelegraph.com/news/core-lightning-urges-upgrade-amid-reports-attackers-targeting-unpatched-nodes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-02T04:18:43.000Z"
+    },
+    {
+      "id": "c9e0a180bed7c4950a5f",
+      "source": "CryptoSlate",
+      "title": "PropAMMs lower Solana trade costs, and public pool returns crash",
+      "summary": "A September preprint finds cheaper quiet-market SOL/USDC execution at professional pools, while passive depositor returns require separate accounting. The post PropAMMs lower Solana trade costs, and public pool returns crash appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/propamms-lower-solana-trade-costs-and-public-pool-returns-crash/",
+      "publishedAt": "2026-10-02T03:50:54.000Z"
+    },
+    {
+      "id": "c6eb3fcf84975e5a2e26",
+      "source": "Cointelegraph",
+      "title": "Ethereum’s zkAPI brings privacy-preserving API payments to mainnet",
+      "summary": "Ethereum’s zkAPI is now live on mainnet, turning an earlier zero-knowledge API payment proposal into a working implementation for private, prepaid access.",
+      "url": "https://cointelegraph.com/news/ethereum-zkapi-private-api-payments-mainnet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-02T03:34:25.000Z"
+    },
+    {
+      "id": "1457fb893b7bad5433ab",
+      "source": "CryptoSlate",
+      "title": "Bitget restores $300M fund after absorbing $388M security breach",
+      "summary": "The restored backstop is separate from customer reserves, and claims remain subject to Bitget's assessment as withdrawals reopen in phases. The post Bitget restores $300M fund after absorbing $388M security breach appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/bitget-restores-300m-fund-after-absorbing-388m-security-breach/",
+      "publishedAt": "2026-10-02T02:10:34.000Z"
+    },
+    {
+      "id": "05d68d245482a5190612",
+      "source": "Cointelegraph",
+      "title": "NEAR Intents says it’s identified the hacker, gives 48-hour ultimatum",
+      "summary": "“We have identified you, sir,” NEAR Intents general manager Alex Shevchenko said on Friday after the protocol was hacked for $3.8 million.",
+      "url": "https://cointelegraph.com/news/near-intents-says-its-identified-the-hacker-gives-48-hour-ultimatum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-02T02:02:13.000Z"
+    },
+    {
+      "id": "e587ad109c27c933135b",
+      "source": "Cointelegraph",
+      "title": "SEC moves to clear custody hurdle for advisers offering crypto",
+      "summary": "Custody requirements have kept some investment advisers from offering certain crypto to clients, a regulatory hurdle the SEC’s proposal could remove.",
+      "url": "https://cointelegraph.com/news/sec-moves-to-clear-custody-hurdle-for-advisers-offering-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-02T01:07:08.000Z"
+    },
+    {
+      "id": "f760ae436e6eb77ca4c5",
+      "source": "The Block",
+      "title": "Ethereum Foundation launches zkAPI to let users pay for AI models without revealing identity",
+      "summary": "Users deposit funds into an Ethereum vault and authorize spending with zero-knowledge proofs, so the API provider can't link requests to a payer.",
+      "url": "https://www.theblock.co/news/defi/2026-10-01-ethereum-foundation-launches-zkapi-417504",
+      "publishedAt": "2026-10-02T00:22:58.000Z"
+    },
+    {
+      "id": "f2a68b54f2b461951918",
+      "source": "CryptoSlate",
+      "title": "Crypto hackers have taken $2.7 billion in 2026 and the losses are alarmingly concentrated",
+      "summary": "Crypto firms and users have lost nearly $2.7 billion to security incidents this year, with North Korea-linked thefts exceeding $1 billion. Blockchain security firm CertiK recorded 658 incidents through September, with about $420.4 million of stolen assets…",
+      "url": "https://cryptoslate.com/crypto-hackers-have-taken-2-7-billion-in-2026-and-the-losses-are-alarmingly-concentrated/",
+      "publishedAt": "2026-10-02T00:20:05.000Z"
+    },
+    {
+      "id": "66d3ddd6bcbb52056f78",
+      "source": "Cointelegraph",
+      "title": "China warns foreign spies about crypto, Singapore dominates Asia: Asia Express",
+      "summary": "Singapore’s crypto economy grows 55%, South Korea set to make crypto market makers legal, and Chinese spy ministry warns would-be foreign spies it’s watching the blockchain.",
+      "url": "https://cointelegraph.com/magazine/china-claims-crypto-used-by-spies-singapore-dominates-asian-crypto-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-01T23:17:47.000Z"
+    },
     {
       "id": "1597845278da0c2fbee7",
       "source": "CryptoSlate",
@@ -184,14 +288,6 @@
       "summary": "Bitcoin Magazine Jack Dorsey’s Block Launches Campaign To Get People Spending Bitcoin Block has launched a campaign to get people on a Bitcoin standard. This post Jack Dorsey’s Block Launches Campaign To Get People Spending Bitcoin first appeared on Bitcoin…",
       "url": "https://bitcoinmagazine.com/news/block-launches-bitcoin-campaign",
       "publishedAt": "2026-10-01T20:15:36.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-01T20:07:25.000Z"
     },
     {
       "id": "da2600231ba4d8f43bd6",
@@ -338,14 +434,6 @@
       "publishedAt": "2026-10-01T16:12:23.000Z"
     },
     {
-      "id": "139c33f7c7e108471a6e",
-      "source": "CryptoSlate",
-      "title": "Open USD bets Stripe’s $1.9 trillion network can break USDT and USDC’s grip",
-      "summary": "Transactions carry an unspecified fee, while Stripe product limits and Visa's restricted beta shape business access. The post Open USD bets Stripe’s $1.9 trillion network can break USDT and USDC’s grip appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/open-usd-bets-stripes-1-9-trillion-network-can-break-usdt-and-usdcs-grip/",
-      "publishedAt": "2026-10-01T16:00:14.000Z"
-    },
-    {
       "id": "8181286ebcd37081c913",
       "source": "Cointelegraph",
       "title": "Bitcoin fights for local uptrend as US bond yields drop from new 24-year highs",
@@ -386,14 +474,6 @@
       "publishedAt": "2026-10-01T15:00:00.000Z"
     },
     {
-      "id": "5cb3175475c62edc1a3a",
-      "source": "CryptoSlate",
-      "title": "Treasury will let states file for stablecoin approval before finishing their rules",
-      "summary": "Conditional certifications can meet initial filing timing while state rules remain unfinished, but only complete submissions begin substantive approval review. The post Treasury will let states file for stablecoin approval before finishing their rules…",
-      "url": "https://cryptoslate.com/treasury-will-let-states-file-for-stablecoin-approval-before-finishing-their-rules/",
-      "publishedAt": "2026-10-01T14:40:06.000Z"
-    },
-    {
       "id": "a20cc29bf3a5c12581e1",
       "source": "CoinDesk",
       "title": "NEAR Intents hit by $3.8 million exploit as crypto's rough year of hacks continues",
@@ -416,14 +496,6 @@
       "summary": "Bitcoin Magazine The Quantum Issue: Quantum Isn’t Coming For Your Bitcoin From The Quantum Issue: Brandon Black considers all of the issues that might prevent a viable quantum computer from ever being built. This post The Quantum Issue: Quantum Isn’t Coming…",
       "url": "https://bitcoinmagazine.com/print/the-quantum-issue-quantum-isnt-coming-for-your-bitcoin",
       "publishedAt": "2026-10-01T14:07:50.000Z"
-    },
-    {
-      "id": "8b513d7588ab4af01ede",
-      "source": "CryptoSlate",
-      "title": "MetaMask security scare pushes Ethereum validator exits to a nine-month high",
-      "summary": "Lido estimates up to about 45 days for exit, withdrawal and re-entry after MetaMask's Sept. 30 incident disclosure. The post MetaMask security scare pushes Ethereum validator exits to a nine-month high appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/metamask-security-scare-pushes-ethereum-validator-exits-to-a-nine-month-high/",
-      "publishedAt": "2026-10-01T13:40:02.000Z"
     },
     {
       "id": "2700f3cbc34c8124385f",
@@ -480,14 +552,6 @@
       "summary": "The bank has revised its 12-month target for BTC up from $82K, though it remains about 10% below Bitcoin's October 2025 record.",
       "url": "https://decrypt.co/379808/citi-lifts-12-month-bitcoin-target-to-113k-ethereum-to-3k",
       "publishedAt": "2026-10-01T12:23:15.000Z"
-    },
-    {
-      "id": "2cf87c3bbcf57ea0990e",
-      "source": "CryptoSlate",
-      "title": "Senate tax bill frees stablecoin spending while Bitcoin stays on IRS forms",
-      "summary": "The circulated proposal would give eligible dollar-stablecoin purchases no-gain/no-loss treatment without a stated value cap, while ordinary Bitcoin spending retains disposition reporting. The post Senate tax bill frees stablecoin spending while Bitcoin…",
-      "url": "https://cryptoslate.com/senate-tax-bill-frees-stablecoin-spending-while-bitcoin-stays-on-irs-forms/",
-      "publishedAt": "2026-10-01T12:20:50.000Z"
     },
     {
       "id": "9bb04937b8e9339536c2",
@@ -632,70 +696,6 @@
       "summary": "DogeOS wants to turn DOGE into more than a payments and speculation asset, but its applications still rely on selected operators rather than Dogecoin miners.",
       "url": "https://www.coindesk.com/tech/2026/10/01/dogecoin-gets-defi-testnet-as-dogeos-bets-miners-will-eventually-secure-its-apps",
       "publishedAt": "2026-10-01T04:58:52.000Z"
-    },
-    {
-      "id": "a3113288df8ec8b498b0",
-      "source": "Cointelegraph",
-      "title": "Crypto hacks top $768M in September, worst month of 2026",
-      "summary": "The $388 million Bitget breach and $320 million Liquid Network exploit accounted for most of September’s losses, though more than $270 million from the latter was later returned.",
-      "url": "https://cointelegraph.com/news/crypto-hacks-total-766m-in-september-peckshield?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-01T04:44:33.000Z"
-    },
-    {
-      "id": "064a31dc4696fe005db4",
-      "source": "CoinDesk",
-      "title": "Bitcoin's soft-inflation pop to $85,500 fades as bond yields refuse to fall",
-      "summary": "A cooler-than-expected PCE report sent bitcoin briefly above $85,000 on Wednesday. Treasury yields held near their highest since 2002 and the gains drained away.",
-      "url": "https://www.coindesk.com/markets/2026/10/01/bitcoin-s-soft-inflation-pop-to-usd85-500-fades-as-bond-yields-refuse-to-fall",
-      "publishedAt": "2026-10-01T04:15:20.000Z"
-    },
-    {
-      "id": "ac9dc296db7e450f0f1c",
-      "source": "Cointelegraph",
-      "title": "CFTC seeks to define event contracts as swaps amid prediction market fight",
-      "summary": "The classification could assist the CFTC’s claim that it has exclusive federal jurisdiction over event contracts offered on regulated prediction markets.",
-      "url": "https://cointelegraph.com/news/cftc-seeks-to-define-event-contracts-as-swaps-amid-prediction-market-fight?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-01T01:07:46.000Z"
-    },
-    {
-      "id": "93bbf8dc0d96b64b48ce",
-      "source": "Cointelegraph",
-      "title": "MetaMask exits Ethereum validators amid undisclosed security incident",
-      "summary": "MetaMask said it is investigating the threat internally and said it has found no immediate threat to its wallets.",
-      "url": "https://cointelegraph.com/news/metamask-exits-lido-validators-as-it-investigates-security-incident?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-01T00:15:55.000Z"
-    },
-    {
-      "id": "3538c67b309ba33ee89b",
-      "source": "Ethereum Foundation",
-      "title": "Introducing zkAPI: private usage credits for any API",
-      "summary": "tl;dr: zkAPI lets you pay for a metered API without being known. Deposit credits into an Ethereum vault once, then authorize bounded usage with zero-knowledge proofs instead of an identity. The provider sees the requests, and the payment layer sees the…",
-      "url": "https://blog.ethereum.org/en/2026/10/01/introducing-zkapi",
-      "publishedAt": "2026-10-01T00:00:00.000Z"
-    },
-    {
-      "id": "c2471bcc9861304fee90",
-      "source": "Decrypt",
-      "title": "Gemini 4 Is Here, and Google’s Flagship Tops All Other AI Models on Cybersecurity",
-      "summary": "Gemini 4 Argon tops 12 of 18 benchmarks in Google's own table, writes a million tokens per reply and resists hijacking best. Cyber defenders get it first, with the guardrails off.",
-      "url": "https://decrypt.co/379784/gemini-4-google-flagship-tops-ai-models-cybersecurity",
-      "publishedAt": "2026-09-30T23:20:59.000Z"
-    },
-    {
-      "id": "776199a429beadfa0e23",
-      "source": "The Block",
-      "title": "Clarity Act’s failure gave crypto ‘faster’ regulatory wins, Bitwise CIO says",
-      "summary": "Bitwise’s Matt Hougan says Clarity’s defeat left crypto with fewer restrictions and faster SEC action.",
-      "url": "https://www.theblock.co/news/markets/2026-09-30-clarity-acts-failure-gave-crypto-faster-regulatory-wins-bitwise-says-417362",
-      "publishedAt": "2026-09-30T21:53:05.000Z"
-    },
-    {
-      "id": "e1c3357fff66e0275638",
-      "source": "Decrypt",
-      "title": "Dogecoin Is Getting Apps as DogeOS Opens Its Public Testnet",
-      "summary": "The team behind the MyDoge wallet opened a public test of DogeOS, a layer that lets developers build lending platforms and games on top of the meme coin network.",
-      "url": "https://decrypt.co/379772/dogecoin-getting-apps-dogeos-public-testnet",
-      "publishedAt": "2026-09-30T21:46:03.000Z"
     }
   ]
 }
