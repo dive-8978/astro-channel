@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T05:26:09.811Z",
+  "generatedAt": "2026-10-03T11:48:02.276Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,46 @@
     }
   ],
   "items": [
+    {
+      "id": "bcc1bf0a0a754c23f921",
+      "source": "CryptoSlate",
+      "title": "Leveraged funds’ Bitcoin futures shorts fall by 5,300 BTC-equivalent as longs shrink",
+      "summary": "The September 29 snapshot shows leveraged funds’ reported shorts fell about 5,300 BTC-equivalent across four products, while longs and open interest also declined. The post Leveraged funds’ Bitcoin futures shorts fall by 5,300 BTC-equivalent as longs shrink…",
+      "url": "https://cryptoslate.com/leveraged-funds-bitcoin-futures-shorts-fall-by-5300-btc-equivalent-as-longs-shrink/",
+      "publishedAt": "2026-10-03T11:30:07.000Z"
+    },
+    {
+      "id": "f42a9db0ed24f528289c",
+      "source": "CryptoSlate",
+      "title": "Arbitrum pauses new Stylus activations over AI-assisted attack risks",
+      "summary": "Existing programs keep running, while a separate proof-conflict guard can delay unconfirmed withdrawals to Ethereum. The post Arbitrum pauses new Stylus activations over AI-assisted attack risks appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/arbitrum-pauses-new-stylus-activations-over-ai-assisted-attack-risks/",
+      "publishedAt": "2026-10-03T09:50:30.000Z"
+    },
+    {
+      "id": "181befb6f29d43bfe827",
+      "source": "Cointelegraph",
+      "title": "Community banks sue OCC over trust bank charters of crypto firms",
+      "summary": "Community banking group’s lawsuit claims OCC has overstepped its mandate from Congress.",
+      "url": "https://cointelegraph.com/news/community-banks-sue-occ-over-trust-bank-charters-of-crypto-firms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-03T09:25:01.000Z"
+    },
+    {
+      "id": "754bce5b30670b4b8ce7",
+      "source": "CryptoSlate",
+      "title": "Plunging GPU prices threaten AI hosts, and new hedges step in",
+      "summary": "Companies building AI applications can rent powerful computers instead of buying the equipment themselves, paying for access to the graphics processing units, or GPUs, that run their software. Lower rental prices make those applications cheaper to operate,…",
+      "url": "https://cryptoslate.com/plunging-gpu-prices-threaten-ai-hosts-and-new-hedges-step-in/",
+      "publishedAt": "2026-10-03T07:30:22.000Z"
+    },
+    {
+      "id": "66490b26592252694636",
+      "source": "Cointelegraph",
+      "title": "Trump is expected to appoint Jay Clayton as new AI czar: Reports",
+      "summary": "US intel chief Clayton may be asked to also oversee AI innovation and development along with “self policing” tech CEOs.",
+      "url": "https://cointelegraph.com/news/trump-is-expected-to-appoint-jay-clayton-as-new-ai-czar-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-03T07:06:08.000Z"
+    },
     {
       "id": "c1b7e347f0ff4212da26",
       "source": "CryptoSlate",
@@ -274,28 +314,12 @@
       "publishedAt": "2026-10-02T16:45:52.000Z"
     },
     {
-      "id": "60f9af7404e676584fba",
-      "source": "CryptoSlate",
-      "title": "Why Strategy’s STRC calculator shows $210 for a share it can redeem at $101",
-      "summary": "The illustrative Oct. 2 output holds the dividend constant, while Strategy controls optional redemption at $101 or higher plus applicable unpaid dividends. The post Why Strategy’s STRC calculator shows $210 for a share it can redeem at $101 appeared first on…",
-      "url": "https://cryptoslate.com/why-strategys-strc-calculator-shows-210-for-a-share-it-can-redeem-at-101/",
-      "publishedAt": "2026-10-02T16:40:55.000Z"
-    },
-    {
       "id": "e84a209937c40aaa13a8",
       "source": "Cointelegraph",
       "title": "71% of UK finance leaders expect tokenization to reshape financial services: Lloyds",
       "summary": "A Lloyds survey found that faster payments and settlement are the most significant perceived benefits of tokenization, as the UK builds infrastructure for tokenized finance.",
       "url": "https://cointelegraph.com/news/71-percent-uk-finance-leaders-expect-tokenization-reshape-financial-services-lloyds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-02T16:20:24.000Z"
-    },
-    {
-      "id": "63b30ffe859a1e0f2003",
-      "source": "CryptoSlate",
-      "title": "Unpatched Eclair Bitcoin Lightning nodes could crash again every time they restart",
-      "summary": "New disclosures show how saved unfunded channels could overwhelm older nodes again on restart, despite a fix shipping in July. The post Unpatched Eclair Bitcoin Lightning nodes could crash again every time they restart appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/unpatched-eclair-bitcoin-lightning-nodes-could-crash-again-every-time-they-restart/",
-      "publishedAt": "2026-10-02T15:40:12.000Z"
     },
     {
       "id": "3a5c4f9c0c41462b4e47",
@@ -320,14 +344,6 @@
       "summary": "Bitcoin Magazine Bitcoin Price Surges Above $87,000 on Softer-Than-Expected Jobs Data The price of bitcoin surged above $87,000 on Friday morning in New York, buoyed by constant exchange-traded fund flows and a jobs report showing that unemployment in the…",
       "url": "https://bitcoinmagazine.com/markets/bitcoin-price-surges-on-soft-jobs-data",
       "publishedAt": "2026-10-02T15:09:38.000Z"
-    },
-    {
-      "id": "79f786f7be82d1d3c4b6",
-      "source": "CryptoSlate",
-      "title": "Why an $88 billion bank reserve drop doesn’t prove a Bitcoin liquidity squeeze – yet",
-      "summary": "Wednesday reserves fell $88.236 billion while their weekly average rose $17.897 billion, exposing the limits of reserve-based Bitcoin liquidity signals. The post Why an $88 billion bank reserve drop doesn’t prove a Bitcoin liquidity squeeze – yet appeared…",
-      "url": "https://cryptoslate.com/why-an-88-billion-bank-reserve-drop-doesnt-prove-a-bitcoin-liquidity-squeeze-yet/",
-      "publishedAt": "2026-10-02T14:40:37.000Z"
     },
     {
       "id": "64f36c5978016ec6bc84",
@@ -680,22 +696,6 @@
       "summary": "Bitcoin Magazine Sazmining Launches the Wild Sats Club, a Loyalty Program That Discounts Mining Management Fees as Customer Hashrate Grows Sazmining, a Bitcoin Mining as a Service company founded in 2020 and led by CEO and Co-Founder Kent Halliburton, today…",
       "url": "https://bitcoinmagazine.com/press-releases/sazmining-launches-the-wild-sats-club-a-loyalty-program-that-discounts-mining-management-fees-as-customer-hashrate-grows",
       "publishedAt": "2026-10-01T21:05:32.000Z"
-    },
-    {
-      "id": "26b0ba08bd2adc1bd958",
-      "source": "The Block",
-      "title": "SEC proposes framework allowing investment advisers, funds to self-custody crypto",
-      "summary": "SEC proposed a crypto framework for investment advisers & funds, allowing self-custody in some cases & state trust companies as custodians.",
-      "url": "https://www.theblock.co/news/regulation/2026-10-01-sec-proposes-crypto-custody-rule-investment-advisers-funds-417498",
-      "publishedAt": "2026-10-01T21:00:53.000Z"
-    },
-    {
-      "id": "9013e395d21657a26100",
-      "source": "Cointelegraph",
-      "title": "Trump to host 3rd ‘exclusive’ memecoin event amid corruption claims",
-      "summary": "The president is scheduled to appear at his golf club in Washington, DC, at a Nov. 22 dinner for his top 185 memecoin holders, following similar events in May 2025 and April 2026.",
-      "url": "https://cointelegraph.com/news/donald-trump-memecoin-dinner-corruption-claims?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-01T21:00:11.000Z"
     }
   ]
 }
