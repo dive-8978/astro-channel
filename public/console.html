@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AstroBridge • Global Intelligent Intent Network Terminal (v7.0) · Demo</title>
+  <title>AstroBridge • Public Intent API & Local Preview (v7.0)</title>
     <link rel="icon" type="image/png" sizes="256x256" href="/assets/astrobridge-mark-256.png">
     <link rel="alternate icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -80,6 +80,9 @@
     .healthy { background: #22c55e; }
     .warning { background: #eab308; }
     .critical { background: #ef4444; }
+    .api-status-dot { width: .65rem; height: .65rem; border-radius: 9999px; display: inline-block; background: #eab308; box-shadow: 0 0 14px currentColor; }
+    .api-status-dot.online { background: #22c55e; color: #22c55e; }
+    .api-status-dot.unavailable { background: #f59e0b; color: #f59e0b; }
   </style>
 </head>
 <body>
@@ -144,10 +147,31 @@
 
 <main class="max-w-6xl mx-auto p-6 pt-16">
   <div class="text-center mb-12">
-    <p id="demo-notice" class="text-star-gold text-sm mb-4">DEMO · Browser-only planning and simulation. No signature, transaction broadcast, or live node telemetry.</p>
-    <h2 id="main-title" class="text-5xl md:text-6xl font-orbitron neon-text mb-4">Local Intent Demo Terminal</h2>
-    <p id="main-subtitle" class="text-xl opacity-90">Describe an intent → Local parsing → Preview → Simulation</p>
+    <p id="demo-notice" class="text-star-gold text-sm mb-4">PUBLIC API STATUS + LOCAL PREVIEW · The API is checked live; this page never signs or broadcasts transactions.</p>
+    <h2 id="main-title" class="text-5xl md:text-6xl font-orbitron neon-text mb-4">Public Intent API & Local Preview</h2>
+    <p id="main-subtitle" class="text-xl opacity-90">Live service status above a browser-only intent planning workspace</p>
   </div>
+
+  <section class="glass-panel p-8 mb-10" aria-labelledby="api-status-title">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <span id="api-status-dot" class="api-status-dot" aria-hidden="true"></span>
+          <h3 id="api-status-title" class="text-2xl font-orbitron neon-text">Public Intent API</h3>
+          <span id="api-status-label" class="text-sm text-yellow-300">Checking live status…</span>
+        </div>
+        <p id="api-status-detail" class="text-sm text-slate-300">Verifying the public health and integration-readiness endpoints.</p>
+      </div>
+      <div class="lg:text-right">
+        <code class="block text-sm text-genesis-blue break-all">POST https://api.astrochannel.one/api/intent/submit</code>
+        <p class="mt-2 text-xs text-slate-400">MA Request Auth V2 is required. The calling wallet signs the request and any transaction; AstroBridge does not hold wallet private keys.</p>
+        <div class="mt-3 flex flex-wrap lg:justify-end gap-4 text-sm">
+          <a href="https://api.astrochannel.one/health" target="_blank" rel="noopener noreferrer" class="text-genesis-blue hover:text-white">Health ↗</a>
+          <a href="https://api.astrochannel.one/api/integrations/readiness" target="_blank" rel="noopener noreferrer" class="text-genesis-blue hover:text-white">Integration readiness ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="glass-panel p-8 mb-10">
     <h3 id="intent-title" class="text-2xl font-orbitron neon-text mb-6">Your Intent</h3>
@@ -368,8 +392,8 @@ const translations = {
 
 // Keep the original multilingual terminal layout while identifying its local demo behavior.
 const demoLabels = {
-  en: ['Local Intent Demo Terminal', 'Describe an intent → Local parsing → Preview → Simulation', 'Parse Local Intent', 'Simulate Intent', 'Local Parsed Plan', 'Demo Node Routing', 'Demo Network Metrics', 'Local parsed result will appear here...', 'DEMO · Browser-only planning and simulation. No signature, transaction broadcast, or live node telemetry.'],
-  zh: ['本地意图演示终端', '描述意图 → 本地解析 → 计划预览 → 模拟执行', '本地解析意图', '模拟意图', '本地解析计划', '演示节点路由', '演示网络指标', '本地解析结果将显示在这里…', '演示模式 · 仅在浏览器中解析与模拟，不签名、不广播交易，不代表真实节点监控。'],
+  en: ['Public Intent API & Local Preview', 'Live service status above a browser-only intent planning workspace', 'Parse Local Intent', 'Simulate Intent', 'Local Parsed Plan', 'Demo Node Routing', 'Demo Network Metrics', 'Local parsed result will appear here...', 'PUBLIC API STATUS + LOCAL PREVIEW · The API is checked live; this page never signs or broadcasts transactions.'],
+  zh: ['公网意图 API 与本地预览', '实时服务状态 + 浏览器内意图规划工作区', '本地解析意图', '模拟意图', '本地解析计划', '演示节点路由', '演示网络指标', '本地解析结果将显示在这里…', '公网 API 状态 + 本地预览 · API 状态实时检测；本页面不签名、不广播交易。'],
   es: ['Terminal de demostración local', 'Describe → Análisis local → Vista previa → Simulación', 'Analizar localmente', 'Simular intención', 'Plan local', 'Rutas ilustrativas', 'Métricas de demostración', 'El plan local aparecerá aquí...', 'DEMO · Simulación local. Sin firma, transmisión de transacciones ni telemetría de nodos en vivo.'],
   fr: ['Terminal de démonstration locale', 'Décrire → Analyse locale → Aperçu → Simulation', 'Analyser localement', 'Simuler', 'Plan local', 'Routage illustratif', 'Mesures de démonstration', 'Le plan local apparaîtra ici...', 'DÉMO · Simulation locale. Aucune signature, diffusion de transaction ou télémétrie de nœuds en direct.'],
   ja: ['ローカル意図デモ端末', '意図の説明 → ローカル解析 → プレビュー → シミュレーション', 'ローカル解析', 'シミュレーション', 'ローカルプラン', 'ルーティング例', 'デモ指標', 'ローカル解析結果がここに表示されます…', 'デモ · ブラウザー内の解析とシミュレーションのみ。署名・送信・実ノード監視は行いません。'],
@@ -526,6 +550,38 @@ function loadMetrics() {
     <div><span>Success Rate</span><div class="text-genesis-blue">Not measured</div></div>`;
 }
 
+async function loadApiStatus() {
+  const dot = document.getElementById('api-status-dot');
+  const label = document.getElementById('api-status-label');
+  const detail = document.getElementById('api-status-detail');
+  try {
+    const statusResponse = await fetch('/api/astrobridge-status', { cache: 'no-store' });
+    const status = await statusResponse.json();
+    if (!statusResponse.ok || !status.ok) throw new Error(status.error || `status HTTP ${statusResponse.status}`);
+    const release = status.release || 'current production release';
+    dot.classList.add('online');
+    label.textContent = 'Online';
+    label.className = 'text-sm text-green-300';
+    detail.textContent = `Health check passed · ${release} · Secure MA Request Auth V${status.maRequestAuthVersion || 2} required for submission.`;
+    log('Public AstroBridge API health check passed. Local preview remains non-broadcasting.', 'text-green-400');
+  } catch (error) {
+    try {
+      await fetch('https://api.astrochannel.one/health', { mode: 'no-cors', cache: 'no-store' });
+      dot.classList.add('online');
+      label.textContent = 'Reachable';
+      label.className = 'text-sm text-green-300';
+      detail.textContent = 'The public health endpoint is reachable. Open the signed readiness response for the current release and route details.';
+      log('Public AstroBridge API endpoint is reachable. Detailed status proxy is unavailable in this preview.', 'text-green-400');
+    } catch (fallbackError) {
+      dot.classList.add('unavailable');
+      label.textContent = 'Status unavailable';
+      label.className = 'text-sm text-yellow-300';
+      detail.textContent = 'The status check could not reach the public API. Use the Health and Integration readiness links to verify the service directly.';
+      log(`Public API status check failed: ${fallbackError.message || fallbackError}`, 'text-yellow-400');
+    }
+  }
+}
+
 // ==================== AI Parse ====================
 document.getElementById('parseBtn').onclick = () => {
   const rawText = document.getElementById('intentInput').value.trim();
@@ -621,8 +677,9 @@ async function pollIntentStatus(intentId) {
 updateLanguage();
 loadNodeRouting();
 loadMetrics();
+loadApiStatus();
 
-log("AstroBridge v7.0 本地演示已就绪 · 无真实交易执行", "text-blue-300");
+log("Local preview ready · It does not sign or broadcast transactions", "text-blue-300");
 
 // v7.0 Fix: 初始化钱包监听
 setupWalletListeners();
