@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T16:30:10.438Z",
+  "generatedAt": "2026-10-03T21:26:36.035Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,30 @@
     }
   ],
   "items": [
+    {
+      "id": "6aee5c577a497e3f5e7b",
+      "source": "CryptoSlate",
+      "title": "Bankers sue to overturn OCC trust-bank rule used by crypto firms",
+      "summary": "The Independent Community Bankers of America sued the OCC in federal court in Washington on Oct. 2, two weeks after the agency approved Agora National Trust Bank, Catena Trust Bank and Bastion Platforms. American Banker reported that the complaint asked the…",
+      "url": "https://cryptoslate.com/bankers-sue-to-overturn-occ-trust-bank-rule-used-by-crypto-firms/",
+      "publishedAt": "2026-10-03T20:00:08.000Z"
+    },
+    {
+      "id": "398e0eec021abc7e69a4",
+      "source": "CryptoSlate",
+      "title": "Hedge funds built a $1.2 trillion Treasury trade on money they have to keep borrowing",
+      "summary": "Companies can own a mountain of US government debt without betting that bond prices will rise. Hedge funds buy Treasury securities and sell futures against them to collect a small pricing gap, borrowing most of the purchase money to make the return…",
+      "url": "https://cryptoslate.com/hedge-funds-built-a-1-2-trillion-treasury-trade-on-money-they-have-to-keep-borrowing/",
+      "publishedAt": "2026-10-03T18:40:22.000Z"
+    },
+    {
+      "id": "2a8145526c695dc1e7dd",
+      "source": "Decrypt",
+      "title": "Chainalysis Used AI to Trace the $387M Bitget Hack Back to North Korea",
+      "summary": "The firm says the Sept. 24 breach pushed North Korea's 2026 crypto haul past $1 billion, and detailed how it used in-house AI to trace the stolen funds across four blockchains in a race against the attackers.",
+      "url": "https://decrypt.co/380005/chainalysis-ai-87m-bitget-hack-north-korea",
+      "publishedAt": "2026-10-03T17:01:03.000Z"
+    },
     {
       "id": "dde08d08ea05be870d51",
       "source": "Decrypt",
@@ -226,14 +250,6 @@
       "publishedAt": "2026-10-02T22:01:18.000Z"
     },
     {
-      "id": "2ef5422d034f2eba136c",
-      "source": "CryptoSlate",
-      "title": "Stablecoin issuers have replaced 40% of China’s lost US Treasury demand",
-      "summary": "Stablecoin issuers are emerging as a new source of demand for US government debt as foreign official holdings lose ground. Tether and Circle have increased their Treasury securities and repurchase-agreement holdings by about $200 billion over the past five…",
-      "url": "https://cryptoslate.com/stablecoin-issuers-have-replaced-40-of-chinas-lost-us-treasury-demand/",
-      "publishedAt": "2026-10-02T21:50:39.000Z"
-    },
-    {
       "id": "293251a304028f16478f",
       "source": "CoinDesk",
       "title": "Bank group sues U.S. regulator over granting crypto trust charters",
@@ -256,14 +272,6 @@
       "summary": "Speaking on Cointelegraph’s Chain Reaction, Christian Trummer said MiCA has increased trust in regulated platforms and called for stricter enforcement against noncompliant firms.",
       "url": "https://cointelegraph.com/news/mica-strengthened-retail-trust-regulated-crypto-exchanges-bitpanda-ceo-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-02T20:40:47.000Z"
-    },
-    {
-      "id": "24043eac5b2d25a1d2f2",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s $85,000 sell wall is gone and traders are now betting on $100,000",
-      "summary": "Bitcoin’s rally is approaching a $90,000 test as a rare accumulation pattern reappears and sell-side liquidity thins. On Oct. 2, Bitcoin registered an intraday high at $87,000 after buyers broke through a sell wall around $85,000 that had stalled several…",
-      "url": "https://cryptoslate.com/bitcoins-85000-sell-wall-is-gone-and-traders-are-now-betting-on-100000/",
-      "publishedAt": "2026-10-02T20:30:33.000Z"
     },
     {
       "id": "76458b735e1849098b05",
@@ -688,14 +696,6 @@
       "summary": "“We have identified you, sir,” NEAR Intents general manager Alex Shevchenko said on Friday after the protocol was hacked for $3.8 million.",
       "url": "https://cointelegraph.com/news/near-intents-says-its-identified-the-hacker-gives-48-hour-ultimatum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-02T02:02:13.000Z"
-    },
-    {
-      "id": "e587ad109c27c933135b",
-      "source": "Cointelegraph",
-      "title": "SEC moves to clear custody hurdle for advisers offering crypto",
-      "summary": "Custody requirements have kept some investment advisers from offering certain crypto to clients, a regulatory hurdle the SEC’s proposal could remove.",
-      "url": "https://cointelegraph.com/news/sec-moves-to-clear-custody-hurdle-for-advisers-offering-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T01:07:08.000Z"
     }
   ]
 }
