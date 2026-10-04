@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T12:30:28.419Z",
+  "generatedAt": "2026-10-04T21:36:24.778Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 39,
+      "itemCount": 59,
       "error": null
     },
     {
@@ -58,6 +58,158 @@
   ],
   "items": [
     {
+      "id": "a84a68a9b96e79b764df",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s $85,000 recovery awaits proof that ETF investors kept buying after payrolls",
+      "summary": "Glassnode estimated the probability of an additional quarter-point hike at the Oct. 28 meeting fell from 66% on Sept. 28 to 22% by 15:00 UTC on Oct. 2. The post Bitcoin’s $85,000 recovery awaits proof that ETF investors kept buying after payrolls appeared…",
+      "url": "https://cryptoslate.com/bitcoins-85000-recovery-awaits-proof-that-etf-investors-kept-buying-after-payrolls/",
+      "publishedAt": "2026-10-04T20:45:36.000Z"
+    },
+    {
+      "id": "f5aa2b865f4f3f0d3822",
+      "source": "CryptoSlate",
+      "title": "Bitcoin Core’s new fix closes gap that could redirect funds without stealing keys",
+      "summary": "A missing-output SIGHASH_SINGLE request can leave recipients unbound; Core’s merged PSBT repair has no confirmed fixed-release destination. The post Bitcoin Core’s new fix closes gap that could redirect funds without stealing keys appeared first on…",
+      "url": "https://cryptoslate.com/bitcoin-cores-new-fix-closes-gap-that-could-redirect-funds-without-stealing-keys/",
+      "publishedAt": "2026-10-04T19:40:34.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-04T18:51:50.000Z"
+    },
+    {
+      "id": "a401be93db01ef55f6b9",
+      "source": "CryptoSlate",
+      "title": "New Treasury rules could change how stablecoin issuers get your dollars back",
+      "summary": "US government debt is one of the easiest assets in the world to borrow against, which lets financial companies get cash without giving up their investments for good. Washington is rewriting the rules for that borrowing, and the result will reach crypto…",
+      "url": "https://cryptoslate.com/new-treasury-rules-could-change-how-stablecoin-issuers-get-your-dollars-back/",
+      "publishedAt": "2026-10-04T18:40:36.000Z"
+    },
+    {
+      "id": "94c3b73c1a134558a262",
+      "source": "CoinDesk",
+      "title": "There's an election next month: State of Crypto",
+      "summary": "Congress is gone from Washington for the final pre-election recess, and it's time to take stock of what's going on ahead of November.",
+      "url": "https://www.coindesk.com/policy/2026/10/04/there-s-an-election-next-month-state-of-crypto",
+      "publishedAt": "2026-10-04T18:30:00.000Z"
+    },
+    {
+      "id": "410abf4ed888fa2e8cae",
+      "source": "CryptoSlate",
+      "title": "India’s local crypto exchanges get just 0.7% of inflows, Chainalysis reports",
+      "summary": "Chainalysis’s new regional chapters separate national crypto participation from domestic exchange business, with Brazil-based platforms receiving 12.5% of inflows. The post India’s local crypto exchanges get just 0.7% of inflows, Chainalysis reports appeared…",
+      "url": "https://cryptoslate.com/indias-local-crypto-exchanges-get-just-0-7-of-inflows-chainalysis-reports/",
+      "publishedAt": "2026-10-04T18:20:31.000Z"
+    },
+    {
+      "id": "a9ab1f847b22547496a3",
+      "source": "CryptoSlate",
+      "title": "Drift hack recovery opened near one cent per dollar lost",
+      "summary": "Drift's October 1 launch quote valued DFX near one cent per USDT lost, while redemption ends future pool participation for the tokens burned. The post Drift hack recovery opened near one cent per dollar lost appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/drift-hack-recovery-opened-near-one-cent-per-dollar-lost/",
+      "publishedAt": "2026-10-04T17:20:02.000Z"
+    },
+    {
+      "id": "1368682ab65a07e6b0ba",
+      "source": "Decrypt",
+      "title": "Trump Taps Jay Clayton, the SEC Chair Who Sued Ripple, to Lead AI Push",
+      "summary": "President Trump named a new \"Super Intelligence Force\" to coordinate federal AI policy, with Director of National Intelligence Jay Clayton at the helm. As SEC chair, Clayton launched crypto lawsuits including the agency's case against Ripple.",
+      "url": "https://decrypt.co/380019/trump-jay-clayton-sec-ripple-ai-push-super-intelligence",
+      "publishedAt": "2026-10-04T17:01:03.000Z"
+    },
+    {
+      "id": "38a34652f9f8fa65e3f7",
+      "source": "CryptoSlate",
+      "title": "Vitalik-inspired AI payment system can send expired deposits to its treasury",
+      "summary": "zkAPI offers an exit without server clearance, but challenged spending states, vault pauses and note expiry can constrain recovery. The post Vitalik-inspired AI payment system can send expired deposits to its treasury appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/vitalik-inspired-ai-payment-system-can-send-expired-deposits-to-its-treasury/",
+      "publishedAt": "2026-10-04T16:20:35.000Z"
+    },
+    {
+      "id": "b1642ae180e4edaea65d",
+      "source": "Decrypt",
+      "title": "Banking Group Sues to Block Crypto's 'Side Door' Into the Banking System",
+      "summary": "The Independent Community Bankers of America argues the OCC's national trust charters give crypto firms a \"side door into the banking system\" without the safeguards that bind traditional banks.",
+      "url": "https://decrypt.co/380017/banking-group-sues-block-crypto-side-door-banking",
+      "publishedAt": "2026-10-04T16:01:03.000Z"
+    },
+    {
+      "id": "f2c62c8d93594849c15e",
+      "source": "CryptoSlate",
+      "title": "Lido’s proposed staking route needs over 13 times the default entry bond",
+      "summary": "A higher entry bond lowers collateral per ETH at full balance, but funding and operator profiles determine fee-efficiency gains. The post Lido’s proposed staking route needs over 13 times the default entry bond appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/lidos-proposed-staking-route-needs-over-13-times-the-default-entry-bond/",
+      "publishedAt": "2026-10-04T15:20:58.000Z"
+    },
+    {
+      "id": "344e3dc1b5cf9b7dead6",
+      "source": "Decrypt",
+      "title": "'Uptober' Starts Green as Bitcoin ETFs Draw $134 Million",
+      "summary": "Spot Bitcoin ETFs took in $134.4 million over the first two trading days of October, rebounding from a Sept. 30 outflow as a weak jobs report cooled Fed rate-hike bets.",
+      "url": "https://decrypt.co/380007/uptober-starts-green-bitcoin-etfs-draw-134-million",
+      "publishedAt": "2026-10-04T15:01:03.000Z"
+    },
+    {
+      "id": "a015cde33063998bf4c4",
+      "source": "CryptoSlate",
+      "title": "3x Bitcoin and Ether futures funds clear SEC listing hurdle",
+      "summary": "The products target triple daily futures-benchmark returns before fees, while registration effectiveness and a first trading date remain unconfirmed. The post 3x Bitcoin and Ether futures funds clear SEC listing hurdle appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/3x-bitcoin-and-ether-futures-funds-clear-sec-listing-hurdle/",
+      "publishedAt": "2026-10-04T14:20:32.000Z"
+    },
+    {
+      "id": "9335d39d9345f8dd5703",
+      "source": "CoinDesk",
+      "title": "Crypto poured years into new products. The next challenge is keeping users",
+      "summary": "Crypto firms have spent years building financial products on blockchains. Getting people to use them — and keep using them — is becoming the next challenge.",
+      "url": "https://www.coindesk.com/business/2026/10/04/crypto-poured-years-into-new-products-the-next-challenge-is-keeping-users",
+      "publishedAt": "2026-10-04T14:00:00.000Z"
+    },
+    {
+      "id": "37fbe60e7c64a544aa68",
+      "source": "Cointelegraph",
+      "title": "Trump taps intel chief Jay Clayton to lead new Super Intelligence Force",
+      "summary": "President Donald Trump said US intel chief Clayton will lead the SIF, reporting to the president and Chief of Staff Susie Wiles.",
+      "url": "https://cointelegraph.com/news/trump-taps-jay-clayton-to-lead-new-super-intelligence-force?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-04T13:48:48.000Z"
+    },
+    {
+      "id": "9fa52f344dacb4c5999d",
+      "source": "CryptoSlate",
+      "title": "The same Fed rate hike can help stablecoins and hurt Bitcoin borrowers",
+      "summary": "When you hold a dollar stablecoin, somebody else may be earning interest on the assets backing your balance, while a company borrowing to buy Bitcoin has to find the money to pay its lenders. Both businesses are crypto-native, but a higher interest rate can…",
+      "url": "https://cryptoslate.com/the-same-fed-rate-hike-can-help-stablecoins-and-hurt-bitcoin-borrowers/",
+      "publishedAt": "2026-10-04T13:20:06.000Z"
+    },
+    {
+      "id": "af7a923c173d0cd7c343",
+      "source": "Decrypt",
+      "title": "'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum",
+      "summary": "Near Intents said the roughly $3.8 million drained in an exploit on Thursday was returned in full, a day after the team said it had identified the attacker and gave them 48 hours to return the funds.",
+      "url": "https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum",
+      "publishedAt": "2026-10-04T13:01:03.000Z"
+    },
+    {
+      "id": "51f305048003b5d38227",
+      "source": "CoinDesk",
+      "title": "The Clarity Act stalled. Bankers aren’t hitting the brakes yet on crypto dealmaking",
+      "summary": "Crypto M&A has hit record levels, but the Clarity Act’s Senate setback leaves dealmakers weighing how much regulatory uncertainty still matters.",
+      "url": "https://www.coindesk.com/business/2026/10/04/the-clarity-act-stalled-crypto-dealmakers-aren-t-hitting-the-brakes-yet",
+      "publishedAt": "2026-10-04T13:00:00.000Z"
+    },
+    {
+      "id": "a9b48970e7bc6119cf9b",
+      "source": "Cointelegraph",
+      "title": "Japan adds Garantex to list of Russia sanctions over Ukraine war",
+      "summary": "Garantex was previously sanctioned by the US, the EU and other jurisdictions for helping Russian entities evade financial restrictions.",
+      "url": "https://cointelegraph.com/news/japan-adds-garantex-to-list-of-russia-sanctions-over-ukraine-war?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-04T12:42:00.000Z"
+    },
+    {
       "id": "11b8a7938cef3f72c3fd",
       "source": "CryptoSlate",
       "title": "Binance will hold some Brazil crypto deposits until users explain where the money came from",
@@ -71,15 +223,7 @@
       "title": "El Salvador receives $138 million from IMF after Bitcoin waivers granted",
       "summary": "Efforts will continue to reduce the state’s involvement in Bitcoin-related activities and to strengthen crypto‑asset regulation and governance, the IMF said.",
       "url": "https://cointelegraph.com/news/el-salvador-receives-138-million-from-imf-after-bitcoin-waivers-granted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-04T09:39:51.000Z"
-    },
-    {
-      "id": "739bb5456360729f867b",
-      "source": "CryptoSlate",
-      "title": "Stablecoins may not drain banks of dollars but they can still make lending more expensive",
-      "summary": "Here's a hypothetical scenario: you want to use $100 out of your bank account to buy newly issued stablecoins. The company issuing the stablecoins takes your dollars, puts them in its own bank account, and gives you a balance you can send around on a…",
-      "url": "https://cryptoslate.com/stablecoins-may-not-drain-banks-of-dollars-but-they-can-still-make-lending-more-expensive/",
-      "publishedAt": "2026-10-04T07:30:08.000Z"
+      "publishedAt": "2026-10-04T09:40:00.000Z"
     },
     {
       "id": "f8496f418d6bcb0aa573",
@@ -87,23 +231,7 @@
       "title": "Russia’s Finance Ministry pays wages in digital rubles for first time",
       "summary": "Work on the introduction of the digital ruble to the budget process is being carried out by the Bank of Russia together with the Ministry of Finance.",
       "url": "https://cointelegraph.com/news/russias-finance-ministry-pays-wages-in-digital-rubles-for-first-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-04T07:16:53.000Z"
-    },
-    {
-      "id": "6aee5c577a497e3f5e7b",
-      "source": "CryptoSlate",
-      "title": "Bankers sue to overturn OCC trust-bank rule used by crypto firms",
-      "summary": "The Independent Community Bankers of America sued the OCC in federal court in Washington on Oct. 2, two weeks after the agency approved Agora National Trust Bank, Catena Trust Bank and Bastion Platforms. American Banker reported that the complaint asked the…",
-      "url": "https://cryptoslate.com/bankers-sue-to-overturn-occ-trust-bank-rule-used-by-crypto-firms/",
-      "publishedAt": "2026-10-03T20:00:08.000Z"
-    },
-    {
-      "id": "398e0eec021abc7e69a4",
-      "source": "CryptoSlate",
-      "title": "Hedge funds built a $1.2 trillion Treasury trade on money they have to keep borrowing",
-      "summary": "Companies can own a mountain of US government debt without betting that bond prices will rise. Hedge funds buy Treasury securities and sell futures against them to collect a small pricing gap, borrowing most of the purchase money to make the return…",
-      "url": "https://cryptoslate.com/hedge-funds-built-a-1-2-trillion-treasury-trade-on-money-they-have-to-keep-borrowing/",
-      "publishedAt": "2026-10-03T18:40:22.000Z"
+      "publishedAt": "2026-10-04T07:18:00.000Z"
     },
     {
       "id": "2a8145526c695dc1e7dd",
@@ -120,14 +248,6 @@
       "summary": "The YouTuber says OpenAI suspended his account twice while he trained a small, uncensored model built to run on your own computer.",
       "url": "https://decrypt.co/380001/openai-banned-pewdiepie-twice-ajax-uncensored-ai",
       "publishedAt": "2026-10-03T16:01:03.000Z"
-    },
-    {
-      "id": "72b991683bfcb349f031",
-      "source": "CryptoSlate",
-      "title": "ESMA proposes ending EU custody and transfer services for non-compliant stablecoins",
-      "summary": "Non-compliant tokens could lose licensed custody and transfer access if the proposal becomes law, with exit rules still unresolved. The post ESMA proposes ending EU custody and transfer services for non-compliant stablecoins appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/esma-proposes-ending-eu-custody-and-transfer-services-for-non-compliant-stablecoins/",
-      "publishedAt": "2026-10-03T16:00:54.000Z"
     },
     {
       "id": "3f811c39270303f0a318",
@@ -162,14 +282,6 @@
       "publishedAt": "2026-10-03T15:00:00.000Z"
     },
     {
-      "id": "45ad13e4d94ac0a044db",
-      "source": "CryptoSlate",
-      "title": "Six US banks have failed in 2026 but the numbers look nothing like 2023",
-      "summary": "Six US banks have failed in 2026 so far, which is one more than in 2023 and enough to make another banking-crisis headline practically write itself. But before we start reliving Silicon Valley Bank, it's worth looking at what those six banks actually held:…",
-      "url": "https://cryptoslate.com/six-us-banks-have-failed-in-2026-but-the-numbers-look-nothing-like-2023/",
-      "publishedAt": "2026-10-03T13:20:17.000Z"
-    },
-    {
       "id": "6d279d87218624372653",
       "source": "Decrypt",
       "title": "The Pope Has Thoughts on AI Art—And They're Not Flattering",
@@ -194,14 +306,6 @@
       "publishedAt": "2026-10-03T13:00:00.000Z"
     },
     {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-03T12:20:00.000Z"
-    },
-    {
       "id": "9a54be479fd1cf178682",
       "source": "Cointelegraph",
       "title": "NEAR Intents recovers entire stolen $3.8M after ultimatum to exploiter",
@@ -210,52 +314,20 @@
       "publishedAt": "2026-10-03T11:59:10.000Z"
     },
     {
-      "id": "bcc1bf0a0a754c23f921",
-      "source": "CryptoSlate",
-      "title": "Leveraged funds’ Bitcoin futures shorts fall by 5,300 BTC-equivalent as longs shrink",
-      "summary": "The September 29 snapshot shows leveraged funds’ reported shorts fell about 5,300 BTC-equivalent across four products, while longs and open interest also declined. The post Leveraged funds’ Bitcoin futures shorts fall by 5,300 BTC-equivalent as longs shrink…",
-      "url": "https://cryptoslate.com/leveraged-funds-bitcoin-futures-shorts-fall-by-5300-btc-equivalent-as-longs-shrink/",
-      "publishedAt": "2026-10-03T11:30:07.000Z"
-    },
-    {
-      "id": "f42a9db0ed24f528289c",
-      "source": "CryptoSlate",
-      "title": "Arbitrum pauses new Stylus activations over AI-assisted attack risks",
-      "summary": "Existing programs keep running, while a separate proof-conflict guard can delay unconfirmed withdrawals to Ethereum. The post Arbitrum pauses new Stylus activations over AI-assisted attack risks appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/arbitrum-pauses-new-stylus-activations-over-ai-assisted-attack-risks/",
-      "publishedAt": "2026-10-03T09:50:30.000Z"
-    },
-    {
       "id": "181befb6f29d43bfe827",
       "source": "Cointelegraph",
       "title": "Community banks sue OCC over trust bank charters of crypto firms",
       "summary": "Community banking group’s lawsuit claims OCC has overstepped its mandate from Congress.",
       "url": "https://cointelegraph.com/news/community-banks-sue-occ-over-trust-bank-charters-of-crypto-firms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-03T09:25:01.000Z"
-    },
-    {
-      "id": "754bce5b30670b4b8ce7",
-      "source": "CryptoSlate",
-      "title": "Plunging GPU prices threaten AI hosts, and new hedges step in",
-      "summary": "Companies building AI applications can rent powerful computers instead of buying the equipment themselves, paying for access to the graphics processing units, or GPUs, that run their software. Lower rental prices make those applications cheaper to operate,…",
-      "url": "https://cryptoslate.com/plunging-gpu-prices-threaten-ai-hosts-and-new-hedges-step-in/",
-      "publishedAt": "2026-10-03T07:30:22.000Z"
+      "publishedAt": "2026-10-03T09:28:00.000Z"
     },
     {
       "id": "66490b26592252694636",
       "source": "Cointelegraph",
-      "title": "Trump is expected to appoint Jay Clayton as new AI czar: Reports",
+      "title": "Trump expected to appoint Jay Clayton as new AI czar: Reports",
       "summary": "US intel chief Clayton may be asked to also oversee AI innovation and development along with “self policing” tech CEOs.",
       "url": "https://cointelegraph.com/news/trump-is-expected-to-appoint-jay-clayton-as-new-ai-czar-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-03T07:06:08.000Z"
-    },
-    {
-      "id": "c1b7e347f0ff4212da26",
-      "source": "CryptoSlate",
-      "title": "US judge kills Milei’s LIBRA memecoin lawsuit, leaving investors stranded",
-      "summary": "A September 29 ruling closes the LIBRA/M3M3 district-court case after continuity, pleading and jurisdiction failures. The post US judge kills Milei’s LIBRA memecoin lawsuit, leaving investors stranded appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/us-judge-kills-mileis-libra-memecoin-lawsuit-leaving-investors-stranded/",
-      "publishedAt": "2026-10-03T03:40:54.000Z"
+      "publishedAt": "2026-10-03T07:09:00.000Z"
     },
     {
       "id": "42bec25b8b5a7b767a39",
@@ -624,78 +696,6 @@
       "summary": "A second suspect faces extradition to Puerto Rico, while Investigators are tracing the proceeds of ransoms the group demanded in crypto.",
       "url": "https://decrypt.co/379913/spanish-police-arrest-16-year-old-accused-of-running-killsec-ransomware-group",
       "publishedAt": "2026-10-02T09:12:54.000Z"
-    },
-    {
-      "id": "1f6d231db5c1d29f60e4",
-      "source": "CoinDesk",
-      "title": "Tether's USDT is 'coming home' to Bitcoin after more than a decade",
-      "summary": "A Tether-backed project, Utexo, plans to support private USDT transfers, direct swaps between BTC and USDT and loans backed by BTC, while keeping most transaction data off Bitcoin’s public ledger.",
-      "url": "https://www.coindesk.com/tech/2026/09/29/tether-s-usdt-is-coming-home-to-bitcoin-this-month-after-more-than-a-decade",
-      "publishedAt": "2026-10-02T08:28:19.000Z"
-    },
-    {
-      "id": "b7a2fc5bec67710bb168",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs kick off ‘Uptober’ with $103M inflow",
-      "summary": "Bitcoin ETFs returned to inflows with $103 million, while Ether funds recorded a third straight day of net outflows.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etf-meet-uptober-103-million-inflow-btc-up?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T08:20:08.000Z"
-    },
-    {
-      "id": "9fac59f61dc45b9ac2ed",
-      "source": "CoinDesk",
-      "title": "Bitcoin tops $86,000 ahead of U.S. jobs report",
-      "summary": "Bitcoin is up roughly 3% in October as traders await September’s jobs data, while rising bond yields, a stronger dollar weigh on broader markets.",
-      "url": "https://www.coindesk.com/markets/2026/10/02/bitcoin-tops-usd86-000-ahead-of-u-s-jobs-report",
-      "publishedAt": "2026-10-02T08:11:54.000Z"
-    },
-    {
-      "id": "5e7a62422fc903b11dc7",
-      "source": "Cointelegraph",
-      "title": "South Korea crypto exchange profits fall 78% in H1 amid trading slump",
-      "summary": "South Korean crypto exchange operating profits fell 78% in the first half of 2026 as trading volumes, market capitalization and customer deposits declined.",
-      "url": "https://cointelegraph.com/news/south-korea-crypto-exchange-profits-fall-78-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T05:53:27.000Z"
-    },
-    {
-      "id": "9f608198ab7c268cee8b",
-      "source": "The Block",
-      "title": "Spot bitcoin ETFs log $2.7 billion in September inflows as institutional demand holds",
-      "summary": "US spot bitcoin ETFs recorded $2.65 billion in net inflows in September, their second-largest monthly inflow since October 2025.",
-      "url": "https://www.theblock.co/news/markets/2026-10-02-spot-bitcoin-etfs-september-inflows-417547",
-      "publishedAt": "2026-10-02T05:50:41.000Z"
-    },
-    {
-      "id": "a59721e274b2ea197e17",
-      "source": "Cointelegraph",
-      "title": "South Korea advances tokenized securities rules ahead of 2027 rollout",
-      "summary": "South Korea’s financial regulator proposed detailed rules for tokenized securities, including capital requirements, OTC trading licenses and retail investment limits.",
-      "url": "https://cointelegraph.com/news/south-korea-tokenized-securities-rules-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T05:08:32.000Z"
-    },
-    {
-      "id": "674fe6bb1c6ddfb359a8",
-      "source": "The Block",
-      "title": "SEC’s innovation exemption poses constraint on bringing stock tokens to US, Robinhood crypto chief says",
-      "summary": "Robinhood's Johann Kerbrat told The Block that Robinhood is still working through the SEC's latest innovation exemption on tokenized stocks.",
-      "url": "https://www.theblock.co/news/regulation/2026-10-02-secs-innovation-exemption-robinhood-417538",
-      "publishedAt": "2026-10-02T05:04:41.000Z"
-    },
-    {
-      "id": "9b1088b193be3a0d4e13",
-      "source": "Cointelegraph",
-      "title": "Zano exploiter minted more than a quadrillion fUSD before blockchain rollback",
-      "summary": "The unauthorized coins were indistinguishable from legitimate ZANO, leaving the team unable to remove them without rolling back the blockchain.",
-      "url": "https://cointelegraph.com/news/zano-exploiter-created-369m-unauthorized-zano-before-blockchain-rollback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T05:02:23.000Z"
-    },
-    {
-      "id": "5d630f14c0dedb920dfd",
-      "source": "Cointelegraph",
-      "title": "Core Lightning warns attackers are targeting unpatched nodes",
-      "summary": "Node operators running version 26.06.7 or earlier were told to upgrade immediately.",
-      "url": "https://cointelegraph.com/news/core-lightning-urges-upgrade-amid-reports-attackers-targeting-unpatched-nodes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T04:18:43.000Z"
     }
   ]
 }
