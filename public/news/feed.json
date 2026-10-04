@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T06:01:42.519Z",
+  "generatedAt": "2026-10-04T12:30:28.419Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 59,
+      "itemCount": 39,
       "error": null
     },
     {
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "11b8a7938cef3f72c3fd",
+      "source": "CryptoSlate",
+      "title": "Binance will hold some Brazil crypto deposits until users explain where the money came from",
+      "summary": "From Nov. 1, affected international deposits will remain pending until customers provide required transfer details. The post Binance will hold some Brazil crypto deposits until users explain where the money came from appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/binance-will-hold-some-brazil-crypto-deposits-until-users-explain-where-the-money-came-from/",
+      "publishedAt": "2026-10-04T12:20:34.000Z"
+    },
+    {
+      "id": "0a8aa361e10c49ebea19",
+      "source": "Cointelegraph",
+      "title": "El Salvador receives $138 million from IMF after Bitcoin waivers granted",
+      "summary": "Efforts will continue to reduce the state’s involvement in Bitcoin-related activities and to strengthen crypto‑asset regulation and governance, the IMF said.",
+      "url": "https://cointelegraph.com/news/el-salvador-receives-138-million-from-imf-after-bitcoin-waivers-granted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-04T09:39:51.000Z"
+    },
+    {
+      "id": "739bb5456360729f867b",
+      "source": "CryptoSlate",
+      "title": "Stablecoins may not drain banks of dollars but they can still make lending more expensive",
+      "summary": "Here's a hypothetical scenario: you want to use $100 out of your bank account to buy newly issued stablecoins. The company issuing the stablecoins takes your dollars, puts them in its own bank account, and gives you a balance you can send around on a…",
+      "url": "https://cryptoslate.com/stablecoins-may-not-drain-banks-of-dollars-but-they-can-still-make-lending-more-expensive/",
+      "publishedAt": "2026-10-04T07:30:08.000Z"
+    },
+    {
+      "id": "f8496f418d6bcb0aa573",
+      "source": "Cointelegraph",
+      "title": "Russia’s Finance Ministry pays wages in digital rubles for first time",
+      "summary": "Work on the introduction of the digital ruble to the budget process is being carried out by the Bank of Russia together with the Ministry of Finance.",
+      "url": "https://cointelegraph.com/news/russias-finance-ministry-pays-wages-in-digital-rubles-for-first-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-04T07:16:53.000Z"
+    },
     {
       "id": "6aee5c577a497e3f5e7b",
       "source": "CryptoSlate",
@@ -224,22 +256,6 @@
       "summary": "A September 29 ruling closes the LIBRA/M3M3 district-court case after continuity, pleading and jurisdiction failures. The post US judge kills Milei’s LIBRA memecoin lawsuit, leaving investors stranded appeared first on CryptoSlate .",
       "url": "https://cryptoslate.com/us-judge-kills-mileis-libra-memecoin-lawsuit-leaving-investors-stranded/",
       "publishedAt": "2026-10-03T03:40:54.000Z"
-    },
-    {
-      "id": "b8a1cf0dc22eac9abd49",
-      "source": "CryptoSlate",
-      "title": "New SEC crypto rules threaten small advisers, but big firms win",
-      "summary": "The SEC’s modeled $433,833 annual adviser cost subtotal excludes significant technology spending, raising questions about who can offer the fallback. The post New SEC crypto rules threaten small advisers, but big firms win appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/new-sec-crypto-rules-threaten-small-advisers-but-big-firms-win/",
-      "publishedAt": "2026-10-03T01:30:40.000Z"
-    },
-    {
-      "id": "baeb702ec851ccf83225",
-      "source": "CryptoSlate",
-      "title": "Blast shuts down $20M layer-2 network, forcing Oct. 26 exit deadline",
-      "summary": "Users face a temporary withdrawal pause before an Oct. 26 deadline to exit through Blast’s normal interface. The post Blast shuts down $20M layer-2 network, forcing Oct. 26 exit deadline appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/blast-shuts-down-20m-layer-2-network-forcing-oct-26-exit-deadline/",
-      "publishedAt": "2026-10-02T23:10:14.000Z"
     },
     {
       "id": "42bec25b8b5a7b767a39",
@@ -680,22 +696,6 @@
       "summary": "Node operators running version 26.06.7 or earlier were told to upgrade immediately.",
       "url": "https://cointelegraph.com/news/core-lightning-urges-upgrade-amid-reports-attackers-targeting-unpatched-nodes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-02T04:18:43.000Z"
-    },
-    {
-      "id": "c6eb3fcf84975e5a2e26",
-      "source": "Cointelegraph",
-      "title": "Ethereum’s zkAPI brings privacy-preserving API payments to mainnet",
-      "summary": "Ethereum’s zkAPI is now live on mainnet, turning an earlier zero-knowledge API payment proposal into a working implementation for private, prepaid access.",
-      "url": "https://cointelegraph.com/news/ethereum-zkapi-private-api-payments-mainnet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T03:34:25.000Z"
-    },
-    {
-      "id": "05d68d245482a5190612",
-      "source": "Cointelegraph",
-      "title": "NEAR Intents says it’s identified the hacker, gives 48-hour ultimatum",
-      "summary": "“We have identified you, sir,” NEAR Intents general manager Alex Shevchenko said on Friday after the protocol was hacked for $3.8 million.",
-      "url": "https://cointelegraph.com/news/near-intents-says-its-identified-the-hacker-gives-48-hour-ultimatum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T02:02:13.000Z"
     }
   ]
 }
