@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T21:36:24.778Z",
+  "generatedAt": "2026-10-05T05:51:15.279Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 59,
+      "itemCount": 39,
       "error": null
     },
     {
@@ -58,6 +58,110 @@
   ],
   "items": [
     {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-05T05:00:00.000Z"
+    },
+    {
+      "id": "4cbec0cb420a9912d50d",
+      "source": "CoinDesk",
+      "title": "Joint venture of OKX and NYSE parent ICE files for 24/7 tokenized U.S. stock trading",
+      "summary": "OKXICE, the joint venture of OKX and ICE, plans to launch tokenized U.S. stocks under SEC's new innovation exemption.",
+      "url": "https://www.coindesk.com/markets/2026/10/05/okx-and-nyse-s-owner-file-for-round-the-clock-tokenized-trading-in-u-s-stocks",
+      "publishedAt": "2026-10-05T04:45:03.000Z"
+    },
+    {
+      "id": "c1e5e1c36c2e36b22b87",
+      "source": "CoinDesk",
+      "title": "Zcash’s 25-second blocks go live on public testnet ahead of schedule",
+      "summary": "NU7 cuts the target block time from 75 seconds to 25, giving exchanges, wallets and developers a live rehearsal before a planned November mainnet launch.",
+      "url": "https://www.coindesk.com/tech/2026/10/05/zcash-s-25-second-blocks-go-live-on-public-testnet-ahead-of-schedule",
+      "publishedAt": "2026-10-05T04:41:35.000Z"
+    },
+    {
+      "id": "a36322967653152fd900",
+      "source": "CoinDesk",
+      "title": "Bitcoin zooms toward $87,000, nearly setting an eight-month high, then reverses",
+      "summary": "Bitcoin came within about $500 of its late-September peak before sellers pushed it back under $86,000. It's the second rally in a week to stall.",
+      "url": "https://www.coindesk.com/markets/2026/10/05/bitcoin-zooms-toward-usd87-000-nearly-setting-an-eight-month-high-then-reverses",
+      "publishedAt": "2026-10-05T04:23:25.000Z"
+    },
+    {
+      "id": "f472fc82402d598c1511",
+      "source": "CoinDesk",
+      "title": "Ether's bitcoin-beating Q3 rally came with a catch. Liquidity thinned.",
+      "summary": "Ether beat bitcoin in the third quarter, but its market liquidity got thinner, according to Coingecko.",
+      "url": "https://www.coindesk.com/markets/2026/10/05/ether-s-bitcoin-beating-q3-rally-came-with-a-catch-liquidity-thinned",
+      "publishedAt": "2026-10-05T03:50:29.000Z"
+    },
+    {
+      "id": "755ee61dc0ccb3f51254",
+      "source": "Cointelegraph",
+      "title": "Zcash activates NU7 on testnet ahead of November mainnet target",
+      "summary": "Zcash’s NU7 upgrade is now live on testnet, giving developers several weeks to assess 25-second blocks and other protocol changes before a planned November mainnet activation.",
+      "url": "https://cointelegraph.com/news/zcash-nu7-testnet-activation-november-mainnet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-05T03:47:19.000Z"
+    },
+    {
+      "id": "41b39c935ed389042a17",
+      "source": "Cointelegraph",
+      "title": "OKX, NYSE parent file to launch tokenized US stock platform",
+      "summary": "The stock trading platform seeks to offer tokenized shares in more than 60 US-listed companies under the SEC’s recently introduced innovation exemption.",
+      "url": "https://cointelegraph.com/news/okx-nyse-parent-file-to-launch-tokenized-us-stock-platform?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-05T03:44:09.000Z"
+    },
+    {
+      "id": "c7d7b9cb63652f9d0059",
+      "source": "Cointelegraph",
+      "title": "Safe investor asks Swiss watchdog to intervene in governance dispute",
+      "summary": "Greenfield Capital said it sought changes to Safe Ecosystem Foundation’s board for months before turning to the Swiss regulator.",
+      "url": "https://cointelegraph.com/news/safe-investor-asks-swiss-watchdog-to-intervene-in-governance-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-05T03:12:21.000Z"
+    },
+    {
+      "id": "fb1e29d8d7d67757e00f",
+      "source": "CryptoSlate",
+      "title": "Illinois backs delay to crypto tax rule after months of industry pushback",
+      "summary": "The October 1 joint motion seeks a July 2027 tax start, while court entry remains unconfirmed and rule comments close Oct. 30. The post Illinois backs delay to crypto tax rule after months of industry pushback appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/illinois-backs-delay-to-crypto-tax-rule-after-months-of-industry-pushback/",
+      "publishedAt": "2026-10-05T02:00:45.000Z"
+    },
+    {
+      "id": "18f5ae39a17667a52a91",
+      "source": "Cointelegraph",
+      "title": "Zcash gets a Washington lobbyist to push crypto policy",
+      "summary": "The newly registered lobbying operation lists the CLARITY Act and two digital asset tax proposals among the issues it plans to lobby on in Washington.",
+      "url": "https://cointelegraph.com/news/zcash-gets-a-washington-lobbyist-to-push-crypto-policy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-05T00:35:34.000Z"
+    },
+    {
+      "id": "2cbff1f1c35b999b6eac",
+      "source": "CryptoSlate",
+      "title": "El Salvador’s $666 million Bitcoin reserve survives IMF review",
+      "summary": "Waivers for missed accumulation criteria accompany renewed commitments, with no further Bitcoin accumulation envisaged beyond documented donations. The post El Salvador’s $666 million Bitcoin reserve survives IMF review appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/el-salvadors-666-million-bitcoin-reserve-survives-imf-review/",
+      "publishedAt": "2026-10-05T00:00:39.000Z"
+    },
+    {
+      "id": "03ea1e8b5fa8268e04ed",
+      "source": "Cointelegraph",
+      "title": "Former SEC boss made AI Czar, Bitcoin may hit $600K this cycle: Hodler’s Digest",
+      "summary": "Roman Storm and the XRP army aren’t happy former SEC boss Jay Clayton is Trump’s new AI czar, Peter Brandt flips bullish and says Bitcoin may reach as high as $600K by 2029.",
+      "url": "https://cointelegraph.com/magazine/former-sec-boss-made-ai-czar-bitcoin-may-hit-600k-this-cycle-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-04T22:31:12.000Z"
+    },
+    {
+      "id": "0c5a48a388d51ad22e5c",
+      "source": "CryptoSlate",
+      "title": "Ethereum’s past outflow charts can change when more exchange wallets are identified",
+      "summary": "Coin Metrics rebuilt ETH Standard flows, but an outflow trading claim still needs the data available at the decision time. The post Ethereum’s past outflow charts can change when more exchange wallets are identified appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/ethereums-past-outflow-charts-can-change-when-more-exchange-wallets-are-identified/",
+      "publishedAt": "2026-10-04T22:05:40.000Z"
+    },
+    {
       "id": "a84a68a9b96e79b764df",
       "source": "CryptoSlate",
       "title": "Bitcoin’s $85,000 recovery awaits proof that ETF investors kept buying after payrolls",
@@ -72,14 +176,6 @@
       "summary": "A missing-output SIGHASH_SINGLE request can leave recipients unbound; Core’s merged PSBT repair has no confirmed fixed-release destination. The post Bitcoin Core’s new fix closes gap that could redirect funds without stealing keys appeared first on…",
       "url": "https://cryptoslate.com/bitcoin-cores-new-fix-closes-gap-that-could-redirect-funds-without-stealing-keys/",
       "publishedAt": "2026-10-04T19:40:34.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-04T18:51:50.000Z"
     },
     {
       "id": "a401be93db01ef55f6b9",
@@ -154,14 +250,6 @@
       "publishedAt": "2026-10-04T15:01:03.000Z"
     },
     {
-      "id": "a015cde33063998bf4c4",
-      "source": "CryptoSlate",
-      "title": "3x Bitcoin and Ether futures funds clear SEC listing hurdle",
-      "summary": "The products target triple daily futures-benchmark returns before fees, while registration effectiveness and a first trading date remain unconfirmed. The post 3x Bitcoin and Ether futures funds clear SEC listing hurdle appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/3x-bitcoin-and-ether-futures-funds-clear-sec-listing-hurdle/",
-      "publishedAt": "2026-10-04T14:20:32.000Z"
-    },
-    {
       "id": "9335d39d9345f8dd5703",
       "source": "CoinDesk",
       "title": "Crypto poured years into new products. The next challenge is keeping users",
@@ -176,14 +264,6 @@
       "summary": "President Donald Trump said US intel chief Clayton will lead the SIF, reporting to the president and Chief of Staff Susie Wiles.",
       "url": "https://cointelegraph.com/news/trump-taps-jay-clayton-to-lead-new-super-intelligence-force?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-04T13:48:48.000Z"
-    },
-    {
-      "id": "9fa52f344dacb4c5999d",
-      "source": "CryptoSlate",
-      "title": "The same Fed rate hike can help stablecoins and hurt Bitcoin borrowers",
-      "summary": "When you hold a dollar stablecoin, somebody else may be earning interest on the assets backing your balance, while a company borrowing to buy Bitcoin has to find the money to pay its lenders. Both businesses are crypto-native, but a higher interest rate can…",
-      "url": "https://cryptoslate.com/the-same-fed-rate-hike-can-help-stablecoins-and-hurt-bitcoin-borrowers/",
-      "publishedAt": "2026-10-04T13:20:06.000Z"
     },
     {
       "id": "af7a923c173d0cd7c343",
@@ -208,14 +288,6 @@
       "summary": "Garantex was previously sanctioned by the US, the EU and other jurisdictions for helping Russian entities evade financial restrictions.",
       "url": "https://cointelegraph.com/news/japan-adds-garantex-to-list-of-russia-sanctions-over-ukraine-war?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-04T12:42:00.000Z"
-    },
-    {
-      "id": "11b8a7938cef3f72c3fd",
-      "source": "CryptoSlate",
-      "title": "Binance will hold some Brazil crypto deposits until users explain where the money came from",
-      "summary": "From Nov. 1, affected international deposits will remain pending until customers provide required transfer details. The post Binance will hold some Brazil crypto deposits until users explain where the money came from appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/binance-will-hold-some-brazil-crypto-deposits-until-users-explain-where-the-money-came-from/",
-      "publishedAt": "2026-10-04T12:20:34.000Z"
     },
     {
       "id": "0a8aa361e10c49ebea19",
@@ -376,14 +448,6 @@
       "summary": "The USDC issuer told the European Commission that MiCA's reserve mandates and concentration caps keep the largest global stablecoins outside Europe's perimeter—siding with the ECB in calling for more flexible rules.",
       "url": "https://decrypt.co/379984/circle-pushes-back-on-micas-bank-deposit-mandate-for-stablecoins",
       "publishedAt": "2026-10-02T19:46:03.000Z"
-    },
-    {
-      "id": "3be7b245a5c8329c62a2",
-      "source": "Bitcoin Magazine",
-      "title": "When the Banks Don’t Work, Bitcoin Does: Cornell University’s Adoption Index",
-      "summary": "Bitcoin Magazine When the Banks Don’t Work, Bitcoin Does: Cornell University’s Adoption Index Cornell University spoke to 25,880 people about using bitcoin. While many don't understand the tech in depth, it's proving useful for some. This post When the Banks…",
-      "url": "https://bitcoinmagazine.com/news/when-banks-dont-work-bitcoin-does-cornell",
-      "publishedAt": "2026-10-02T19:15:58.000Z"
     },
     {
       "id": "b3e8869b406b7d2bc79d",
@@ -632,70 +696,6 @@
       "summary": "Strategy’s scale and cash reserves give it an edge over treasury rivals, according to Saifedean Ammous, author of “The Bitcoin Standard.”",
       "url": "https://cointelegraph.com/news/bitcoin-treasuries-struggle-strategy-says-ammous?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-02T10:54:33.000Z"
-    },
-    {
-      "id": "35c3ac3ab14f2074d3de",
-      "source": "CoinDesk",
-      "title": "Crypto traders are in risk-on mode as bitcoin dominance nears return to 60%",
-      "summary": "Bitcoin dominance is closing in on 60% while USDT's has slipped to 6.3%, pointing to a market growing more comfortable with risk.",
-      "url": "https://www.coindesk.com/markets/2026/10/02/crypto-traders-are-in-risk-on-mode-as-bitcoin-dominance-nears-return-to-60",
-      "publishedAt": "2026-10-02T10:31:16.000Z"
-    },
-    {
-      "id": "4ef51cb4715171affa89",
-      "source": "Cointelegraph",
-      "title": "CONNECT recap: Arthur Hayes on money printing, Wall Street moves onchain",
-      "summary": "Arthur Hayes said money printing could lift crypto prices, while CONNECT Seoul speakers examined Wall Street’s competitive edge onchain.",
-      "url": "https://cointelegraph.com/news/connect-recap-arthur-hayes-money-printing-wall-street-onchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T10:29:35.000Z"
-    },
-    {
-      "id": "675160aa26a7601bc4b5",
-      "source": "The Block",
-      "title": "ECB outlines three models for putting central bank money onchain",
-      "summary": "The ECB outlined three models for bringing central bank money onchain as financial institutions explore settlement infrastructure.",
-      "url": "https://www.theblock.co/news/regulation/2026-10-02-ecb-outlines-three-models-for-putting-central-bank-money-onchain-417552",
-      "publishedAt": "2026-10-02T10:17:39.000Z"
-    },
-    {
-      "id": "aacaf9e8f59182582830",
-      "source": "Cointelegraph",
-      "title": "Bitcoin reaches for $87K as short liquidations top $120M",
-      "summary": "Bitcoin buyers broke through a wall of ask liquidity to reach new October BTC price highs near $87,800, with the area immediately above now a new resistance hurdle.",
-      "url": "https://cointelegraph.com/markets/bitcoin-87k-order-book-liquidity-wall-shifts-higher?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T09:37:06.000Z"
-    },
-    {
-      "id": "0978415f72d25845bffe",
-      "source": "Cointelegraph",
-      "title": "Aave founder says V3 unaffected after third-party adapter exploit drains $305K",
-      "summary": "Aave founder Stani Kulechov said Aave v3 was unaffected after an attacker exploited a third-party adapter to drain about $305,000 from two Safe multisig wallets.",
-      "url": "https://cointelegraph.com/news/aave-v3-third-party-adapter-exploit-305k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T09:30:49.000Z"
-    },
-    {
-      "id": "aae5c562a249a74b90dc",
-      "source": "Cointelegraph",
-      "title": "Porsche’s ‘long haul’ Web3 project ends in less than four years",
-      "summary": "Porsche is winding down its Web3 project and Pioneers Circle community as trading activity in its 911 NFT collection falls sharply from early levels.",
-      "url": "https://cointelegraph.com/news/porsche-shuts-down-web3-project-911-nft?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-02T09:18:52.000Z"
-    },
-    {
-      "id": "5004614d93a995e60b29",
-      "source": "CoinDesk",
-      "title": "Bitcoin open interest jumps $2.3 billion as traders pay more for bullish positions",
-      "summary": "Rising open interest and funding rates signal renewed demand for bullish bitcoin exposure.",
-      "url": "https://www.coindesk.com/markets/2026/10/02/why-rising-perpetual-funding-rates-signal-growing-bullish-leverage-as-bitcoin-crosses-usd86-500",
-      "publishedAt": "2026-10-02T09:14:21.000Z"
-    },
-    {
-      "id": "0e6a033d57db68f942d4",
-      "source": "Decrypt",
-      "title": "Spanish Police Arrest 16-Year-Old Accused of Running KillSec Ransomware Group",
-      "summary": "A second suspect faces extradition to Puerto Rico, while Investigators are tracing the proceeds of ransoms the group demanded in crypto.",
-      "url": "https://decrypt.co/379913/spanish-police-arrest-16-year-old-accused-of-running-killsec-ransomware-group",
-      "publishedAt": "2026-10-02T09:12:54.000Z"
     }
   ]
 }
