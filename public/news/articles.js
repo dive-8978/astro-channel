@@ -1,5 +1,126 @@
 window.ASTRO_ARTICLES = [
 {
+  "slug": "astrobridge-swap-server-verification-20261006",
+  "title": "AstroBridge Advances Swap Quote Reliability and Client Integration Readiness",
+  "dek": "An October 3 engineering review verified a targeted LI.FI quote repair, recorded a current-state backup and delivered the next integration checklist to the MA client team.",
+  "type": "Engineering Update",
+  "section": "Engineering",
+  "project": "AstroBridge",
+  "phase": "Server verified; client acceptance pending",
+  "phaseTone": "active",
+  "date": "2026-10-06",
+  "displayDate": "October 6, 2026",
+  "byline": "AstroBridge Engineering",
+  "image": "/assets/news-astrobridge.png",
+  "body": [
+    "AstroBridge has completed a focused verification of its swap-quote server work and prepared a handoff for the MA client team. The October 3 review recorded a successful public LI.FI quote response and 68 passing local regression checks. A new public readiness check on October 6 continues to report swap quote readiness and LI.FI as the provider.",
+    "The repair addresses an optional API-key file: if that file is absent, the server can use the provider's public quote route. Other file-reading errors remain failures. The review records unchanged chain and asset restrictions, with six EVM networks in the swap allowlist. A quote prepares transaction information for review; authorization and signing remain with the user's wallet.",
+    "The engineering review also recorded a restricted backup of the current production code, configuration and relevant data. This snapshot was taken after the earlier upgrade had loaded, so it preserves the then-current state rather than demonstrating a pre-upgrade recovery point. Future release work is to include backups before the scoped change.",
+    "The next client handoff prioritizes Android compatibility in the hosted-voice JWKS flow, followed by temporary ICE credentials, device registration for incoming-call notifications and a recorded two-device acceptance run. The voice-room capacity setting alone does not establish concurrent device capacity, and server readiness does not establish successful mobile calling.",
+    "This work supports a practical development direction: improve a specific service, record its limits and pass an actionable integration checklist to the next team. The October 6 readiness response still marks client integration and real-device acceptance for call push as incomplete. No completed chain transfer, general mobile release or production voice-capacity result is announced."
+  ],
+  "facts": [
+    "October 3 review: successful public LI.FI quote response; no transaction broadcast.",
+    "68 local regression checks passed in the recorded review.",
+    "October 6 public readiness: swap quoteReady=true; provider=LI.FI.",
+    "Call-push client integration and real-device acceptance remain incomplete."
+  ],
+  "status": "Dated server and local-test evidence. Quote readiness is not completed settlement or acceptance of every mobile feature.",
+  "links": [
+    {
+      "label": "Dated public progress record",
+      "url": "/data/company-actions-2026-10-06.json"
+    },
+    {
+      "label": "Current integration readiness",
+      "url": "https://api.astrochannel.one/api/integrations/readiness"
+    }
+  ]
+},
+{
+  "slug": "ma-mothers-care-email-outreach-progress-20261006",
+  "title": "MA Mothers Care Moves Forward with Focused, Email-Based Cooperation Enquiries",
+  "dek": "AstroBridge has followed up on relevant responses to its proposed mother-and-child assistance pilot, with practical participation options and a clear written record.",
+  "type": "Company Update",
+  "section": "Institution",
+  "project": "MA",
+  "phase": "Exploratory outreach",
+  "phaseTone": "planned",
+  "date": "2026-10-06",
+  "displayDate": "October 6, 2026",
+  "byline": "AstroBridge Company Office",
+  "image": "/assets/news-ma.png",
+  "body": [
+    "AstroBridge is continuing its MA Mothers Care outreach through email. The proposed pilot brings together mother-and-child essentials and accessible digital-safety education. Its published brief gives potential participants a concrete starting point for discussing feasibility, community needs and an appropriate contribution.",
+    "On October 4, the company sent four individual responses arising from its recent correspondence. These continued an enquiry about an internal social-impact channel, routed a proposal to a contact supplied by a service team, answered a separate stablecoin product enquiry with a request for email discussion, and thanked an organization that declined the current proposal. The product enquiry and humanitarian proposal remain separate matters.",
+    "Our approach is to make the request useful and voluntary: explain the proposed activity, answer questions in writing and respect an organization's decision. Current cooperation discussions are being conducted by email. There is no expectation that a recipient must donate, sign a statement or endorse a token simply to explore whether a role is suitable.",
+    "The indicative first pilot would cover 20–50 families in one locality. Location, dates, a qualified delivery partner and a cash budget remain unconfirmed. The wider Mother Fund is associated with the MA cryptocurrency; its proposed allocation is not a verified cash balance. AstroBridge is not presenting this company initiative as a registered charity.",
+    "As of the October 6 mailbox review, the follow-ups had not produced a new substantive acceptance. Automatic receipts and contact-routing messages are recorded as such. Any future participation, public joint statement or use of a participant's name or logo would need its own written agreement. Public beneficiary applications and fundraising are not opened by this update."
+  ],
+  "facts": [
+    "Four individual follow-up messages verified as sent on October 4, Beijing time.",
+    "Current cooperation correspondence is email-only.",
+    "October 6 review found no new substantive acceptance of the follow-ups.",
+    "Pilot location, delivery partner, dates and cash budget remain unconfirmed."
+  ],
+  "status": "Planning-stage company initiative and exploratory correspondence. No signed partnership, approved partner logo, funding commitment or completed aid delivery is announced.",
+  "links": [
+    {
+      "label": "MA Mothers Care pilot brief",
+      "url": "/ma-mothers-care-pilot.html"
+    },
+    {
+      "label": "Company information",
+      "url": "/company.html"
+    },
+    {
+      "label": "Dated public progress record",
+      "url": "/data/company-actions-2026-10-06.json"
+    }
+  ]
+},
+{
+  "slug": "astrobridge-website-search-visibility-20261006",
+  "title": "AstroBridge Website Begins Recording Google Search Visibility",
+  "dek": "A Search Console notification marks an early discoverability milestone for the company's public website and evidence-led updates.",
+  "type": "Company Update",
+  "section": "Institution",
+  "project": "Institution",
+  "phase": "Search visibility recorded",
+  "phaseTone": "verified",
+  "date": "2026-10-06",
+  "displayDate": "October 6, 2026",
+  "byline": "AstroBridge Company Office",
+  "image": "/assets/news-astrobridge.png",
+  "body": [
+    "AstroBridge has received a Google Search Console notification for www.astrochannel.one confirming that search-impression collection began on October 2. The notification, dated October 5, says pages from the website have started appearing for some Google searches.",
+    "This is an early discoverability milestone for the company's public work. The website brings together company information, product and engineering updates, policy documents and the proposed MA Mothers Care pilot, giving readers a place to check the scope and current status of each activity.",
+    "The next website work is to review the queries and pages that receive impressions and use those observations to improve clarity, navigation and access to relevant records. The notice does not provide a verified audience count, search ranking, click total or conversion result; those measurements require a separate review of the actual reports.",
+    "AstroBridge's long-term company direction is to grow through useful products, clear communication and sustained execution. Search visibility is one step in making that work easier to find. This update records a website notification, not a Google partnership, certification or endorsement."
+  ],
+  "facts": [
+    "Search Console notice received October 5, 2026.",
+    "Notice identifies October 2 as the start of search-impression collection.",
+    "The notice concerns www.astrochannel.one.",
+    "No traffic total, ranking or conversion metric has been verified for this update."
+  ],
+  "status": "Company-reported website notification. Search visibility does not establish endorsement, user adoption or commercial results.",
+  "links": [
+    {
+      "label": "Company information",
+      "url": "/company.html"
+    },
+    {
+      "label": "Official newsroom",
+      "url": "/newsroom.html"
+    },
+    {
+      "label": "Dated public progress record",
+      "url": "/data/company-actions-2026-10-06.json"
+    }
+  ]
+},
+{
   "slug": "ma-android-fcm-server-foundation-20260928",
   "title": "AstroBridge Deploys the Server Foundation for MA Android Offline Calls",
   "dek": "A scoped server upgrade adds durable call-push processing and staged access controls. FCM delivery remains disabled pending Firebase setup, Android integration and device acceptance.",

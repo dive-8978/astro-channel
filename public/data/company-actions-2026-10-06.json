@@ -1,0 +1,36 @@
+{
+  "publishedDate": "2026-10-06",
+  "publisher": "AstroBridge Technology Limited",
+  "recordType": "Company-reported progress summary",
+  "engineering": {
+    "reviewDate": "2026-10-03",
+    "localRegressionPassed": 68,
+    "publicQuoteObserved": true,
+    "transactionBroadcast": false,
+    "publicReadinessRechecked": "2026-10-06",
+    "swapQuoteReady": true,
+    "provider": "LI.FI",
+    "callPushClientIntegrationVerified": false,
+    "callPushRealDeviceAcceptancePassed": false,
+    "backupScope": "Current-state snapshot taken after the earlier upgrade; not proof of a pre-upgrade snapshot"
+  },
+  "outreach": {
+    "followUpSentDateBeijing": "2026-10-04",
+    "individualFollowUps": 4,
+    "mode": "Email only",
+    "reviewDate": "2026-10-06",
+    "newSubstantiveAcceptanceObserved": false,
+    "confirmedPartnership": false,
+    "logoAuthorization": false,
+    "pilotStatus": "Planning; location, dates, delivery partner and cash budget unconfirmed",
+    "correspondencePrivacy": "Private messages, personal contacts and recipient identifiers are not published."
+  },
+  "website": {
+    "notificationDate": "2026-10-05",
+    "notificationSource": "Google Search Console email to the website owner",
+    "impressionCollectionStart": "2026-10-02",
+    "domain": "www.astrochannel.one",
+    "trafficMetricsVerified": false,
+    "endorsementClaimed": false
+  }
+}
