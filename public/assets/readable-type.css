@@ -1,0 +1,137 @@
+/* Readable copy without changing the existing brand or heading hierarchy. */
+body[data-reading] { font-size: 18px; }
+body[data-reading] .tech-visual figcaption {
+  font-size: 14px;
+  line-height: 1.7;
+}
+body[data-reading] p { overflow-wrap: break-word; }
+body[data-reading] nav { flex-wrap: wrap; }
+
+/* Professional company page */
+body[data-reading="professional"] nav {
+  font-size: 16px;
+  row-gap: 14px;
+}
+body[data-reading="professional"] select,
+body[data-reading="professional"] .button,
+body[data-reading="professional"] .text-link { font-size: 16px; }
+body[data-reading="professional"] .button { display: inline-flex; align-items: center; min-height: 44px; }
+body[data-reading="professional"] .edition { font-size: 13px; }
+body[data-reading="professional"] .eyebrow { font-size: 14px; line-height: 1.6; }
+body[data-reading="professional"] .lead { font-size: 20px; }
+body[data-reading="professional"] .section-head > p:not(.eyebrow),
+body[data-reading="professional"] .evidence p:not(.eyebrow),
+body[data-reading="professional"] .three p,
+body[data-reading="professional"] .product-grid p,
+body[data-reading="professional"] .technical-grid p,
+body[data-reading="professional"] .care-heading p { font-size: 18px; line-height: 1.8; }
+body[data-reading="professional"] .number,
+body[data-reading="professional"] .intent-flow span { font-size: 14px; }
+body[data-reading="professional"] .boundary strong,
+body[data-reading="professional"] .boundary p,
+body[data-reading="professional"] .scope-note,
+body[data-reading="professional"] .care > [data-p="impactStatus"],
+body[data-reading="professional"] .intent-flow strong,
+body[data-reading="professional"] footer { font-size: 16px; line-height: 1.8; }
+body[data-reading="professional"] .tag { font-size: 13px; }
+body[data-reading="professional"] .allocations small { font-size: 14px; }
+
+/* Astro AI Chain: safety boundaries and delivery status deserve readable type. */
+body[data-reading="chain"] header nav,
+body[data-reading="chain"] .brand,
+body[data-reading="chain"] select,
+body[data-reading="chain"] .button { font-size: 16px; }
+body[data-reading="chain"] header nav { row-gap: 12px; }
+body[data-reading="chain"] .button { min-height: 44px; }
+body[data-reading="chain"] .eyebrow,
+body[data-reading="chain"] .hero .eyebrow { font-size: 14px; line-height: 1.6; }
+body[data-reading="chain"] .lead { font-size: 20px; }
+body[data-reading="chain"] .phase { font-size: 16px; color: #a7b4ca; }
+body[data-reading="chain"] .art-note { flex-wrap: wrap; font-size: 14px; color: #a1b9dd; }
+body[data-reading="chain"] .principle-strip span { font-size: 16px; }
+body[data-reading="chain"] .section-heading p:not(.eyebrow),
+body[data-reading="chain"] .cards p,
+body[data-reading="chain"] .security-list p,
+body[data-reading="chain"] .roadmap p:not(.eyebrow),
+body[data-reading="chain"] .faq details p,
+body[data-reading="chain"] .closing p:not(.eyebrow) { font-size: 18px; line-height: 1.8; }
+body[data-reading="chain"] .path-tabs button,
+body[data-reading="chain"] .flow p,
+body[data-reading="chain"] .path-detail,
+body[data-reading="chain"] .layer-note strong,
+body[data-reading="chain"] .layer-note p,
+body[data-reading="chain"] .metrics span,
+body[data-reading="chain"] .snapshot,
+body[data-reading="chain"] .footnote { font-size: 16px; line-height: 1.8; }
+body[data-reading="chain"] .flow h3,
+body[data-reading="chain"] .security-list h3,
+body[data-reading="chain"] .roadmap h3 { font-size: 20px; }
+body[data-reading="chain"] .flow span,
+body[data-reading="chain"] .number,
+body[data-reading="chain"] .security-list > article > span,
+body[data-reading="chain"] .roadmap li > span,
+body[data-reading="chain"] .roadmap .eyebrow { font-size: 14px; }
+body[data-reading="chain"] table { font-size: 16px; min-width: 760px; }
+body[data-reading="chain"] thead th,
+body[data-reading="chain"] .tag { font-size: 14px; }
+body[data-reading="chain"] .snapshot,
+body[data-reading="chain"] .footnote,
+body[data-reading="chain"] footer { color: #a7b4ca; }
+body[data-reading="chain"] .faq summary { font-size: 18px; }
+body[data-reading="chain"] footer { font-size: 14px; }
+
+/* MA product page */
+body[data-reading="ma"] .links,
+body[data-reading="ma"] .program-card .btn,
+body[data-reading="ma"] .edition-actions .btn { font-size: 16px; }
+body[data-reading="ma"] .brand small,
+body[data-reading="ma"] .btn-disabled small,
+body[data-reading="ma"] .edition-badge { font-size: 13px; line-height: 1.5; }
+body[data-reading="ma"] .eyebrow,
+body[data-reading="ma"] .program-pill,
+body[data-reading="ma"] .micro,
+body[data-reading="ma"] .live-chip strong,
+body[data-reading="ma"] .metric span { font-size: 15px; }
+body[data-reading="ma"] .live-chip code { font-size: 14px; }
+body[data-reading="ma"] .feature p,
+body[data-reading="ma"] .bubble,
+body[data-reading="ma"] .endpoint p,
+body[data-reading="ma"] .edition-card p { font-size: 18px; line-height: 1.8; }
+body[data-reading="ma"] .download-note,
+body[data-reading="ma"] footer { font-size: 16px; line-height: 1.8; }
+body[data-reading="ma"] .edition-top { flex-wrap: wrap; }
+
+/* Legacy technology page */
+body[data-reading="technology"] .nav-links a,
+body[data-reading="technology"] .back-home { font-size: 16px; }
+body[data-reading="technology"] .page-desc,
+body[data-reading="technology"] .tech-card p { font-size: 18px; line-height: 1.8; }
+body[data-reading="technology"] .tech-card h3 { font-size: 22px; }
+body[data-reading="technology"] .tech-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+body[data-reading="technology"] .tech-node { font-size: 16px; line-height: 1.5; padding: 16px; }
+body[data-reading="technology"] .tech-node small { font-size: 14px; line-height: 1.6; }
+body[data-reading="technology"] footer { font-size: 16px; line-height: 1.8; }
+
+@media (max-width: 1250px) {
+  body[data-reading="technology"] .back-home {
+    position: relative; top: auto; left: auto;
+    display: inline-flex; margin: 16px 20px 0;
+  }
+}
+@media (max-width: 720px) {
+  body[data-reading="professional"] .lead,
+  body[data-reading="chain"] .lead,
+  body[data-reading="ma"] .lead { font-size: 18px; }
+  body[data-reading="professional"] nav,
+  body[data-reading="chain"] header nav { justify-content: flex-start; gap: 12px 20px; }
+  body[data-reading="professional"] .hero > *,
+  body[data-reading="chain"] .hero > * { min-width: 0; }
+  body[data-reading="chain"] .brand { letter-spacing: .8px; }
+  body[data-reading="chain"] .phase { align-items: flex-start; }
+  body[data-reading="chain"] .phase > span:first-child { margin-top: 10px; }
+  body[data-reading="professional"] .intent-flow,
+  body[data-reading="chain"] .flow { grid-template-columns: 1fr; }
+  body[data-reading="chain"] .flow li { border-right: 0; border-bottom: 1px solid #34405a; }
+  body[data-reading="chain"] .flow li:last-child { border-bottom: 0; }
+  body[data-reading="chain"] .flow p { min-height: 0; }
+}
