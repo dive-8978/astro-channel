@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T23:10:14.105Z",
+  "generatedAt": "2026-10-08T06:15:37.272Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 57,
       "error": null
     },
     {
@@ -57,6 +57,94 @@
     }
   ],
   "items": [
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-08T06:00:00.000Z"
+    },
+    {
+      "id": "14e1ebaeae8966baef7c",
+      "source": "CoinDesk",
+      "title": "Bitcoin loans are paying for tuition and working capital, not just trades, lenders say",
+      "summary": "Bitcoin-backed lending is evolving into a mainstream source of credit, with borrowers using BTC to access liquidity without selling.",
+      "url": "https://www.coindesk.com/markets/2026/10/08/bitcoin-loans-are-paying-for-tuition-and-working-capital-not-just-trades-lenders-say",
+      "publishedAt": "2026-10-08T05:40:41.000Z"
+    },
+    {
+      "id": "5080a82332687f272d0c",
+      "source": "Cointelegraph",
+      "title": "Crypto’s heavy backing of Republicans alienated Democrats: Cuomo",
+      "summary": "Former New York Governor Andrew Cuomo urged the crypto industry to balance its support for Democrats and Republicans if they want federal crypto legislation passed.",
+      "url": "https://cointelegraph.com/news/cryptos-republican-spending-alienated-democrats-says-andrew-cuomo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-08T05:06:51.000Z"
+    },
+    {
+      "id": "90a529b5c24226d8cea2",
+      "source": "The Block",
+      "title": "‘Don’t rush anything’: Vitalik Buterin warns against hasty wallet migrations amid growing AI threats",
+      "summary": "Ethereum co-founder Vitalik Buterin warned that the crypto industry should take risks to cryptography from AI-accelerated math seriously.",
+      "url": "https://www.theblock.co/news/defi/2026-10-08-vitalik-buterin-warns-hasty-wallet-migrations-418007",
+      "publishedAt": "2026-10-08T05:00:28.000Z"
+    },
+    {
+      "id": "4662b69dd3d56509dfa9",
+      "source": "Cointelegraph",
+      "title": "Crypto must cement adoption to withstand US policy shifts: Canton CEO",
+      "summary": "Canton CEO Yuval Rooz compared blockchain adoption to Uber and Airbnb, arguing that widespread adoption could help insulate it from potential policy reversals.",
+      "url": "https://cointelegraph.com/news/canton-ceo-crypto-adoption-us-policy-reversals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-08T04:28:27.000Z"
+    },
+    {
+      "id": "7e74673be8416ad60627",
+      "source": "CoinDesk",
+      "title": "Ethereum’s Glamsterdam test runs near 200 million gas per block after upgrade",
+      "summary": "The Sepolia rehearsal has raised its processing budget more than threefold, but sampled blocks used less than half that allowance.",
+      "url": "https://www.coindesk.com/tech/2026/10/08/ethereum-s-glamsterdam-test-runs-near-200-million-gas-per-block-after-upgrade",
+      "publishedAt": "2026-10-08T04:23:23.000Z"
+    },
+    {
+      "id": "d3b26eed8c0bf18e3ae8",
+      "source": "CoinDesk",
+      "title": "Bitcoin breaks below $83,000 as oil jumps on Iran strike-plan report",
+      "summary": "Bitcoin has slipped under a level FxPro says opens a \"quick path to $80,000.\" Brent crude climbed above $102 and pushed Treasury yields back toward their highest since 2002.",
+      "url": "https://www.coindesk.com/markets/2026/10/08/bitcoin-breaks-below-usd83-000-as-oil-jumps-on-iran-strike-plan-report",
+      "publishedAt": "2026-10-08T04:00:07.000Z"
+    },
+    {
+      "id": "2fc069e9930c9b25684c",
+      "source": "The Block",
+      "title": "Samsung to launch USDC transfers on Solana for US Galaxy users",
+      "summary": "The South Korean tech giant said the feature is built into Samsung Wallet, with fiat on- and off-ramps, rather than a separate crypto app.",
+      "url": "https://www.theblock.co/news/business/2026-10-07-samsung-to-launch-usdc-transfers-on-solana-for-us-galaxy-users-418004",
+      "publishedAt": "2026-10-08T02:50:01.000Z"
+    },
+    {
+      "id": "8cf04d0707936c4ceec3",
+      "source": "CoinDesk",
+      "title": "Crypto news site Cointelegraph seeks buyer after web traffic plunges",
+      "summary": "The amount of money the crypto media firm has been shopping itself for was not revealed.",
+      "url": "https://www.coindesk.com/business/2026/10/07/crypto-news-site-cointelegraph-seeks-buyer-after-web-traffic-plunges",
+      "publishedAt": "2026-10-08T00:35:24.000Z"
+    },
+    {
+      "id": "4b6f6c03ae9526e1316c",
+      "source": "Cointelegraph",
+      "title": "Vitalik Buterin backs crypto ‘bunker mode’ amid rapid AI math advances",
+      "summary": "Ethereum researchers say crypto users should consider an orderly migration of funds to fresh addresses, warning AI could threaten private-key security before quantum computers do.",
+      "url": "https://cointelegraph.com/news/justin-drake-urges-crypto-bunker-mode-as-ai-could-break-wallet-security-within-months?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-08T00:04:32.000Z"
+    },
+    {
+      "id": "cebe71e5e8ac17b4ee22",
+      "source": "CryptoSlate",
+      "title": "US government moves $470 million in seized crypto to Coinbase wallets, raising Bitcoin sale questions",
+      "summary": "The US government moved about $470 million in seized crypto to likely Coinbase Prime addresses, according to Arkham, reviving questions over potential asset sales. On Oct. 7, blockchain analytics firm Arkham Intelligence said the transfers included Bitcoin,…",
+      "url": "https://cryptoslate.com/us-government-moves-470-million-in-seized-crypto-to-coinbase-linked-wallets-reviving-bitcoin-sale-questions/",
+      "publishedAt": "2026-10-08T00:00:12.000Z"
+    },
     {
       "id": "a68a6deaf0a454d3e1c7",
       "source": "CryptoSlate",
@@ -160,14 +248,6 @@
       "summary": "The discussions would see Payward supply liquidity for crypto trading as major banks deepen their involvement in digital assets.",
       "url": "https://www.coindesk.com/business/2026/10/05/wells-fargo-in-talks-with-kraken-parent-payward-for-crypto-trading-liquidity",
       "publishedAt": "2026-10-07T18:59:32.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-07T18:55:36.000Z"
     },
     {
       "id": "27b77f07da6267553d34",
@@ -466,14 +546,6 @@
       "publishedAt": "2026-10-07T11:59:24.000Z"
     },
     {
-      "id": "c6ab91f6254b2e81f277",
-      "source": "CryptoSlate",
-      "title": "S&P brings ratings-style scrutiny to $10 billion crypto vault market as $6 million Base incident exposes risks",
-      "summary": "The vault framework compares impairment risk while leaving capital protection and future returns unpromised. The post S&P brings ratings-style scrutiny to $10 billion crypto vault market as $6 million Base incident exposes risks appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/sp-brings-ratings-style-scrutiny-to-10-billion-crypto-vault-market-as-6-million-base-incident-exposes-risks/",
-      "publishedAt": "2026-10-07T11:40:51.000Z"
-    },
-    {
       "id": "319ca0aa49084743ceac",
       "source": "Cointelegraph",
       "title": "Crypto card access doesn’t match global demand, Tangem says",
@@ -624,78 +696,6 @@
       "summary": "Chervinsky says that beyond regulated perps, onchain markets need to enter the U.S. regulatory perimeter, a step he expects will happen soon.",
       "url": "https://www.theblock.co/news/regulation/2026-10-07-hyperliquid-policy-center-jake-chervinsky-interview-417896",
       "publishedAt": "2026-10-07T08:30:01.000Z"
-    },
-    {
-      "id": "2ad2ff4d6a963c079783",
-      "source": "Cointelegraph",
-      "title": "Russia clears first crypto exchanges, custodians under new law",
-      "summary": "Russia registered its first crypto exchanges and custodians, including its largest bank, Sberbank, which plans to launch crypto products on Dec. 1.",
-      "url": "https://cointelegraph.com/news/russia-first-crypto-platforms-register-new-law?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-07T08:06:35.000Z"
-    },
-    {
-      "id": "450289ae58fd63efe0d6",
-      "source": "CoinDesk",
-      "title": "Down but not out. Bitcoin's stair-step bullish trajectory is still intact",
-      "summary": "Bitcoin dipped to around $84,200 on Wednesday but stayed inside its recent range, keeping the broader bullish stair-step trajectory intact.",
-      "url": "https://www.coindesk.com/markets/2026/10/07/down-but-not-out-bitcoin-s-stair-step-bullish-trajectory-is-still-intact",
-      "publishedAt": "2026-10-07T07:52:22.000Z"
-    },
-    {
-      "id": "c8260c750fa1d563922b",
-      "source": "Cointelegraph",
-      "title": "DOJ invokes Bitcoin Fog ruling in potential blow to Roman Storm acquittal bid",
-      "summary": "Prosecutors say a recent Bitcoin Fog appeals court ruling supports their argument that Tornado Cash activity in Manhattan was enough to establish venue for parts of Roman Storm’s case in New York.",
-      "url": "https://cointelegraph.com/news/roman-storm-bitcoin-fog-doj-acquittal-bid?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-07T07:10:59.000Z"
-    },
-    {
-      "id": "2cb48be84237b8e89e15",
-      "source": "The Block",
-      "title": "Robinhood adds $25 million worth of bitcoin to balance sheet as it deepens crypto push",
-      "summary": "Robinhood SVP Johann Kerbrat says the purchase was intended to signal the company's commitment to the crypto sector.",
-      "url": "https://www.theblock.co/news/business/2026-10-07-robinhood-adds-25-million-bitcoin-balance-sheet-417890",
-      "publishedAt": "2026-10-07T07:08:36.000Z"
-    },
-    {
-      "id": "19a3596a39b0ea28d5ad",
-      "source": "CoinDesk",
-      "title": "U.S. government moves over $100 million in BTC and BNB. A sale hasn't been confirmed",
-      "summary": "Wallets linked to the U.S. government moved millions in crypto on Tuesday, according to data tracked by Arkham.",
-      "url": "https://www.coindesk.com/markets/2026/10/07/u-s-government-moves-over-usd100-million-in-btc-and-bnb-a-sale-hasn-t-been-confirmed",
-      "publishedAt": "2026-10-07T05:58:25.000Z"
-    },
-    {
-      "id": "2303118a4595859d4d6b",
-      "source": "Cointelegraph",
-      "title": "Kalshi’s 15-min gold markets overtake Ether just weeks after launch",
-      "summary": "Gold recorded 542 million contracts and an estimated $5 million in fees in September, surpassing Ether’s 318 million contracts and $2.6 million, though Bitcoin remained far ahead.",
-      "url": "https://cointelegraph.com/news/kalshis-15-min-gold-markets-overtake-ether-just-weeks-after-launch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-07T04:57:54.000Z"
-    },
-    {
-      "id": "6c01b6dc906fcf25c9ff",
-      "source": "CoinDesk",
-      "title": "Pudgy Penguins’ Abstract becomes second Ethereum layer 2 to shut in a week",
-      "summary": "The consumer-focused blockchain will close Dec. 15 after Igloo spent tens of millions supporting it, days after Blast said its own network was no longer worth operating.",
-      "url": "https://www.coindesk.com/tech/2026/10/07/pudgy-penguins-abstract-becomes-second-ethereum-layer-2-to-shut-in-a-week",
-      "publishedAt": "2026-10-07T04:31:14.000Z"
-    },
-    {
-      "id": "393b012c1c75cca834c4",
-      "source": "CoinDesk",
-      "title": "Cardano gives token issuers power to freeze, seize and restrict assets",
-      "summary": "The new standard is aimed at regulated stablecoins, funds and bonds whose issuers need identity checks, sanctions controls and other transfer rules built into the asset itself.",
-      "url": "https://www.coindesk.com/tech/2026/10/07/cardano-gives-token-issuers-power-to-freeze-seize-and-restrict-assets",
-      "publishedAt": "2026-10-07T04:11:33.000Z"
-    },
-    {
-      "id": "ceb9847b340dbab83ecd",
-      "source": "CoinDesk",
-      "title": "Bitcoin dips below $84,000 as oil jumps on Iranian tanker attacks",
-      "summary": "Bitcoin briefly broke under the level analysts flagged as the point where sellers take over. Oil and the dollar both climbed.",
-      "url": "https://www.coindesk.com/markets/2026/10/07/bitcoin-dips-below-usd84-000-as-oil-jumps-on-iranian-tanker-attacks",
-      "publishedAt": "2026-10-07T04:00:51.000Z"
     }
   ]
 }
