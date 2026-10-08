@@ -1,4 +1,134 @@
 window.ASTRO_ARTICLES = [
+  {
+    "slug": "astro-ai-chain-staging-engineering-20261008",
+    "title": "Astro AI Chain Advances from Access Engineering to Verified Test Transfers",
+    "dek": "October 8 delivery records document an isolated, no-value staging chain, recovery checks and 92 passing regressions. Real-asset payments remain closed.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "AstroAI Chain",
+    "phase": "Staging verified; production acceptance pending",
+    "phaseTone": "active",
+    "date": "2026-10-08",
+    "displayDate": "October 8, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-astroai-chain.png",
+    "body": [
+      "Astro AI Chain completed several distinct engineering milestones on October 8. The work progressed from authenticated access and integration contracts to an independently scoped staging deployment that executes transfers using assets with no monetary value. These stages have separate evidence records; an earlier candidate or a passing health endpoint is not being presented as a production payment launch.",
+      "The access layer completed public checks for approved authenticated reads and explicit rejection of unauthenticated requests and unsupported write routes. This gives integration teams a narrower, testable interface. Read access is separate from permission to pay, and multiple access routes do not by themselves provide independent consensus or eliminate shared dependencies.",
+      "The later staging acceptance verified zero protocol-fee test transfers, lookup by the original transaction hash and recovery after a response is lost. Replaying the same signed transaction did not produce a second debit. Reverted receipts were checked as failures rather than converted into successful payment messages. These are tests of the documented staging workflow, not claims about every possible failure or every external network.",
+      "The reference client and public test transport checked system certificate trust, hostname and an explicit certificate pin together. The transaction-status contract distinguishes pending, confirmed and reverted. Confirmation requires the expected Transfer event and agreement from the configured trusted RPC receipts. Agreement among these endpoints is not proof of independently operated validators or a trustless light-client verification system.",
+      "The R11/R12 delivery records report 56 core checks and 36 payment checks passing, for 92 regressions in the local and server acceptance records. A 275-file source, build and delivery snapshot was synchronized and checked file by file. That count describes this delivered snapshot; it is not a count of live services or a substitute for deployment and runtime evidence.",
+      "The refreshed official Chain page also shipped today using the existing company mark and existing website entry points. It explains purpose, architecture, security boundaries and current progress without exposing private infrastructure or credentials. The page is a public project explanation, not a mainnet announcement or a token-sale invitation.",
+      "Important gates remain open: a stable payment entry point, a completed certificate-rotation exercise, shared-wallet multi-device nonce coordination, independent long-running validation resources and native mobile transaction acceptance. The temporary staging environment has no production availability promise. Its test assets have no monetary value or external-asset backing. Public-load validation and an independent security audit are not announced.",
+      "The operational handoff remains Chain to AstroBridge to MA when each prerequisite is ready. For now, new Chain payment, cross-chain and NFT activation work in the client integration is deferred, and MA real-asset Chain payments stay disabled. Previously enabled original-network functions keep their existing rules; previously disabled execution paths are not unlocked by this update. The aim is a clear record of what was delivered today and what must still be verified before broader use."
+    ],
+    "facts": [
+      "October 8 R11/R12: 56 core plus 36 payment checks, 92 passing regressions.",
+      "Original-hash recovery, same-transaction replay and reverted-receipt checks passed in staging.",
+      "275 delivered source/build/documentation files synchronized with hash verification.",
+      "Real-asset Chain payments, cross-chain activation and NFT activation remain closed."
+    ],
+    "status": "Dated internal engineering acceptance of a no-value staging environment. Not a public mainnet, independent-validator deployment, external security audit or completed mobile payment launch.",
+    "links": [
+      {
+        "label": "Astro AI Chain project page",
+        "url": "/astro-chain.html?lang=en"
+      },
+      {
+        "label": "Dated public progress record",
+        "url": "/data/company-actions-2026-10-08.json"
+      }
+    ]
+  },
+  {
+    "slug": "astrobridge-ma-server-handoff-20261008",
+    "title": "AstroBridge Updates MA Server Interfaces and Makes Status Reporting More Explicit",
+    "dek": "A scoped October 8 release improves persisted intent status, read-only diagnostics and integration boundaries while preserving existing business and data.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "AstroBridge",
+    "phase": "Server release; mobile acceptance pending",
+    "phaseTone": "active",
+    "date": "2026-10-08",
+    "displayDate": "October 8, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-astrobridge.png",
+    "body": [
+      "AstroBridge completed a scoped server release on October 8 and prepared an updated MA engineering handoff. The release improves the distinction between a stored request, a provider response and verified settlement. Existing user data and previously enabled original-network functions were preserved; no broad financial activation is included.",
+      "Intent-status responses now follow persisted records. An absent intent returns not found rather than a fabricated pending state. Invalid identifiers are rejected, while damaged records or an unavailable backend produce an explicit service failure. Queue diagnostics use read-only queries and do not start processing workers merely because a status page is requested.",
+      "The new Chain integration surface publishes explicit capability boundaries. The current asset list is empty, real-asset payment readiness is false and no payment gateway is configured in AstroBridge. A valid status request with no configured backend reports unavailable, and the gateway-proxy route reports not implemented. This makes missing prerequisites visible instead of implying that a route exists simply because a URL responds.",
+      "Existing LI.FI quote support remains separate from execution. The dated public check obtained a supported EVM quote without broadcasting a real transaction. Unsupported new-chain quote requests are rejected explicitly. Provider progress is not presented as verified destination settlement, and existing execution locks remain in place.",
+      "The release also delivered project-group server capability and restored the hosted-voice service's readiness and public signing-key response. Advertised group and voice capacities are configuration values, not measured concurrent attendance or a completed production voice-capacity test. Group and voice mobile acceptance, background delivery and the relevant security boundaries still require their own checks.",
+      "The release record reports 77 passing local checks and 13 passing read-only public checks. Current-state database and Redis backups were recorded, scoped service operations were documented and temporary deployment access was removed after delivery. This records backup creation and access cleanup, not a full disaster-recovery restore exercise.",
+      "Separately, the MA team delivered the 1.6.56 build 81 test-chain integration artifacts for the standard and full editions, with APK/AAB output. Its own verification records 97 isolated new-chain checks and 64 of 64 local regression checks. Those mock and build results are not phone-payment acceptance, app-store approval or evidence that new-chain payment has been enabled.",
+      "The immediate client handoff prioritizes existing-business compatibility, project-group and voice validation. The newer Chain payment, cross-chain and NFT integration is deferred at present. MA owns client configuration, software releases and mobile acceptance; AstroBridge's server work does not silently change those client-side gates."
+    ],
+    "facts": [
+      "October 8 server release: 77 local checks passed.",
+      "Dated post-release verification: 13 of 13 read-only public checks passed; no real transaction sent.",
+      "MA 1.6.56 build 81 artifacts: 97 isolated new-chain checks and 64/64 local regressions in the MA record.",
+      "Previously enabled original functions preserved; new-chain financial activation deferred."
+    ],
+    "status": "Server and local-build evidence, not successful phone calling, measured group capacity, store approval, completed cross-chain settlement or permission to enable real-asset Chain payments.",
+    "links": [
+      {
+        "label": "MA product page",
+        "url": "/painpoints.html"
+      },
+      {
+        "label": "Current server integration readiness",
+        "url": "https://api.astrochannel.one/api/integrations/readiness"
+      },
+      {
+        "label": "Dated public progress record",
+        "url": "/data/company-actions-2026-10-08.json"
+      }
+    ]
+  },
+  {
+    "slug": "ai-humanity-research-publication-20261007",
+    "title": "AstroBridge Publishes AI and Humanity Research with Explicit Experimental Boundaries",
+    "dek": "The October 7 publication adds discussion papers, architecture diagrams and an interactive permission example. Public submissions remain closed.",
+    "type": "Research Update",
+    "section": "Engineering",
+    "project": "Institution",
+    "phase": "Research page live; forum not open",
+    "phaseTone": "active",
+    "date": "2026-10-07",
+    "displayDate": "October 7, 2026",
+    "byline": "AstroBridge Research",
+    "image": "/assets/news-open-safety-layer.png",
+    "body": [
+      "AstroBridge published its English AI and Humanity research page on October 7, adding a public place to examine coexistence ideas and their engineering limits. The website provides discussion papers, architecture diagrams, example source and an interactive permission-checking demonstration. It distinguishes speculative proposals from tested software behavior.",
+      "The practical alternative centers on bounded agency: explicit permissions, human approval for consequential requests, independent enforcement, revocation, resource budgets and recovery. These are design principles and limited examples, not a universal mechanism that can identify, neutralize or control every AI system.",
+      "The local implementation records 14 passing tests. Its quota model limits an account's authored content and attachments to a combined 20 MB, using transactional updates to keep accounting consistent under concurrent writes. That evidence concerns the local implementation, not a production public community or unlimited-scale hosting.",
+      "Public account registration and submissions remain closed until persistent storage, ownership controls, moderation and operational safeguards are connected and verified. The live page can be read and explored today, but visitors are not being invited to submit private documents to an unverified public backend.",
+      "This research publication sits alongside today's refreshed Astro AI Chain explanation and the existing seven-language MA product page. The seven-language product coverage was delivered earlier and is not counted as a new October 7–8 release. Website accessibility, research publication and financial readiness are separate milestones.",
+      "The company's development direction is to turn useful ideas into small, testable systems and communicate both results and limitations. This update announces research access and local tests, not an AI-safety certification, a new institutional partner or proof that the speculative proposals have been validated."
+    ],
+    "facts": [
+      "English research page and official website entry published October 7.",
+      "Three discussion approaches, diagrams, source examples and a permission-checking demonstration.",
+      "14 local tests passed; local per-account content quota is 20 MB.",
+      "Public registration and submissions remain closed."
+    ],
+    "status": "Public research and locally tested examples. No universal safety guarantee, production forum, external certification or confirmed partnership is announced.",
+    "links": [
+      {
+        "label": "AI and Humanity research page",
+        "url": "/ai-coexistence.html"
+      },
+      {
+        "label": "MA seven-language product page",
+        "url": "/painpoints.html"
+      },
+      {
+        "label": "Dated public progress record",
+        "url": "/data/company-actions-2026-10-08.json"
+      }
+    ]
+  }
+,
 {
   "slug": "astrobridge-swap-server-verification-20261006",
   "title": "AstroBridge Advances Swap Quote Reliability and Client Integration Readiness",
