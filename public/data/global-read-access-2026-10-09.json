@@ -1,0 +1,25 @@
+{
+  "recordDate": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "release": "R19",
+  "evidenceType": "dated-team-acceptance-record",
+  "acceptanceCheckedAt": "2026-10-08T18:47:43.709Z",
+  "scope": "regional-authorized-read-preview-expansion",
+  "regions": [
+    "Africa",
+    "Europe",
+    "Australia / Oceania",
+    "South America"
+  ],
+  "regionalAcceptanceRecorded": "passed",
+  "existingEntryConfigurationPreserved": true,
+  "clientAutoRoutingChanged": false,
+  "realAssetChainPaymentsEnabled": false,
+  "independentValidatorsAdded": 0,
+  "formalMaDeployment": null,
+  "placementBasis": "provider-reported execution region; not a residence guarantee",
+  "performanceClaimsAnnounced": false,
+  "privateTopologyPublished": false,
+  "illustrationIsLiveMap": false,
+  "projectPage": "/astro-chain.html?lang=en"
+}

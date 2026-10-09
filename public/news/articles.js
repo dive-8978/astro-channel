@@ -1,5 +1,55 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "astro-ai-chain-global-read-access-20261009",
+    "title": "Across Four Continents: Astro AI Chain Broadens Its Global Read-Access Footprint",
+    "dek": "New regional read-preview services extend the network’s reach across Africa, Europe, Australia / Oceania and South America, building a wider foundation for developers and future product integration.",
+    "type": "Network Update",
+    "section": "Engineering",
+    "project": "AstroAI Chain",
+    "phase": "Regional read-access expansion",
+    "phaseTone": "active",
+    "date": "2026-10-09",
+    "displayDate": "October 9, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-global-read-access-20261009-1280.webp",
+    "imageSrcset": "/assets/news-global-read-access-20261009-640.webp 640w, /assets/news-global-read-access-20261009-1280.webp 1280w",
+    "imageWidth": 1280,
+    "imageHeight": 720,
+    "imageAlt": "Concept illustration emphasizing connections across Africa, Europe, Australia and South America.",
+    "imageCaption": "Concept artwork of regional read access—not a live node, validator or payment-network map.",
+    "body": [
+      "Astro AI Chain is taking another step toward a broader global presence. Our latest network release adds regional read-preview services across Africa, Europe, Australia / Oceania and South America. This expands the reach of the network’s information-access layer and gives our engineering teams a wider geographic foundation to work with. It is a concrete step in a long-term direction: build useful connections, verify them carefully and make the network more capable through steady iteration.",
+      "A global project needs more than a global ambition. Developers and communities work across different regions, time zones and network conditions. Extending the read-access footprint creates additional places from which authorized network information can be accessed and examined. The broader connection surface creates more room to understand regional needs and prepare the next generation of integrations.",
+      "In Africa, the new regional preview extends the footprint into another continental setting for authorized network reads. In Europe, it adds a further regional access surface for engineering review. Australia / Oceania and South America bring two more regional settings into the same expansion. Together, these additions widen the geography represented in our read-access work while retaining the existing entry point.",
+      "The first advantage is a broader foundation for development. More regional access surfaces give teams additional environments in which to investigate connectivity and service behavior. They create the opportunity to compare observations, identify regional differences and improve integration decisions with evidence. This wider foundation will support the next round of engineering measurements and product planning.",
+      "The second advantage is a consistent network identity and permission model. A larger footprint is most useful when applications can still tell which network they are reading and which capabilities they may use. The new read-preview services keep identity checks and read authorization within the existing contract. Expansion does not turn an information request into permission to move assets or execute another action. That clarity is an important part of a dependable developer experience.",
+      "The third advantage is continuity during expansion. The existing entry point keeps its configuration, while the additional regional services are reviewed as a separate extension. This gives the AstroBridge and MA teams room to assess the new read-access options before selecting a client configuration. New geography can support future integration without requiring existing product behavior to be silently replaced.",
+      "For AstroBridge, the milestone creates a wider regional context for examining network information and integration contracts. For MA, it creates additional read-access options for a later, reviewed configuration. The new services are not automatically active in the app. Our aim is to turn infrastructure progress into a clear product benefit only after the relevant integration checks are complete.",
+      "The October 9 release record documents completed acceptance of the four-continent read-preview extension. The milestone brings coverage and engineering practice together: a wider geographic footprint, a clear integration contract and a dated record for teams to review. These are practical building blocks for our continuing global development.",
+      "Our network is becoming stronger in geographic reach and in the discipline behind its expansion. A wider map is only the beginning: useful access, recognizable identity, explicit permissions and verifiable integration are what make those connections meaningful. We will continue building this foundation across regions, with each next step guided by engineering evidence and the needs of the people and developers we want to serve."
+    ],
+    "facts": [
+      "Regional read-preview additions cover Africa, Europe, Australia / Oceania and South America.",
+      "The existing entry point and current client routing remain unchanged by this release.",
+      "The October 9 R19 acceptance record documents completion of the scoped regional read-access checks."
+    ],
+    "status": "Scope: authorized read previews. Regional observations are provider-reported and may change. This is not a payment-mainnet or independent-validator launch; real-asset Chain payments remain closed.",
+    "links": [
+      {
+        "label": "Explore Astro AI Chain",
+        "url": "/astro-chain.html?lang=en"
+      },
+      {
+        "label": "Dated regional expansion record",
+        "url": "/data/global-read-access-2026-10-09.json"
+      },
+      {
+        "label": "Explore the MA product",
+        "url": "/painpoints.html?lang=en"
+      }
+    ]
+  },
+  {
     "slug": "astro-ai-chain-staging-engineering-20261008",
     "title": "Astro AI Chain Advances from Access Engineering to Verified Test Transfers",
     "dek": "October 8 delivery records document an isolated, no-value staging chain, recovery checks and 92 passing regressions. Real-asset payments remain closed.",
