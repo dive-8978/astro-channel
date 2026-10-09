@@ -1,0 +1,28 @@
+{
+  "recordDate": "2026-10-09",
+  "status": "preparing",
+  "product": "MA / Astro Chat",
+  "directoryUrl": "/ma-support.html",
+  "liveWebChatEnabled": false,
+  "supportEmail": null,
+  "supportEmailVerified": false,
+  "accounts": [
+    {
+      "role": "official",
+      "plannedDisplayName": "MA Official",
+      "status": "preparing",
+      "chatId": null,
+      "qrCodeUrl": null,
+      "contactVerified": false
+    },
+    {
+      "role": "support",
+      "plannedDisplayName": "MA Support",
+      "status": "preparing",
+      "chatId": null,
+      "qrCodeUrl": null,
+      "contactVerified": false,
+      "responseHours": null
+    }
+  ]
+}
