@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T18:24:20.817Z",
+  "generatedAt": "2026-10-10T06:01:09.576Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 38,
+      "itemCount": 58,
       "error": null
     },
     {
@@ -58,10 +58,186 @@
   ],
   "items": [
     {
+      "id": "d30063277276f8165a26",
+      "source": "CoinDesk",
+      "title": "Bitcoin's volatility has plunged, but extreme price swings are more frequent than in 2018",
+      "summary": "CoinDesk analysis finds 10 unusually large trading days in 2026, raising questions about how investors measure risk in an increasingly institutional crypto market.",
+      "url": "https://www.coindesk.com/markets/2026/10/09/bitcoin-s-volatility-has-plunged-but-extreme-price-swings-are-more-frequent-than-in-2018",
+      "publishedAt": "2026-10-10T05:43:00.000Z"
+    },
+    {
+      "id": "8ad8bb6b4b898fdc29e7",
+      "source": "CoinDesk",
+      "title": "Robinhood Chain slowdown spreads from fees to trading as transactions fall more than 40%",
+      "summary": "Daily activity has dropped from 10.8 million transactions to 6.2 million since mid-September even as Robinhood keeps paying network fees on customer swaps.",
+      "url": "https://www.coindesk.com/markets/2026/10/10/robinhood-chain-slowdown-spreads-from-fees-to-trading-as-transactions-fall-more-than-40",
+      "publishedAt": "2026-10-10T04:44:35.000Z"
+    },
+    {
+      "id": "1c754750b950aaa05720",
+      "source": "CoinDesk",
+      "title": "XRP Ledger patched decade-old bug that could create billions of dollars in XRP from nothing",
+      "summary": "Researchers demonstrated how a payment could create spendable XRP without the sender funding it, prompting an emergency software release.",
+      "url": "https://www.coindesk.com/tech/2026/10/10/xrp-ledger-patched-decade-old-bug-that-could-create-billions-of-dollars-in-xrp-from-nothing",
+      "publishedAt": "2026-10-10T04:20:07.000Z"
+    },
+    {
+      "id": "6f00d148cbb71479168e",
+      "source": "CoinDesk",
+      "title": "Visa survey says nearly half of APAC consumers open to using stablecoins by 2031",
+      "summary": "Visa’s survey of 14,250 people found interest in stablecoin payments is growing, though only 6% of respondents correctly understood how they work.",
+      "url": "https://www.coindesk.com/business/2026/10/05/1-2-billion-apac-consumers-could-adopt-stablecoins-by-2031-according-to-visa",
+      "publishedAt": "2026-10-10T03:00:00.000Z"
+    },
+    {
+      "id": "63916f8020c7944f7606",
+      "source": "CryptoSlate",
+      "title": "Celsius founder faces lifetime ban, but can trade his own crypto",
+      "summary": "A qualifying DOJ payment can satisfy the $25 million obligation, while a separate $10 million judgment has a sentence-completion condition with exceptions. The post Celsius founder faces lifetime ban, but can trade his own crypto appeared first on…",
+      "url": "https://cryptoslate.com/celsius-founder-faces-lifetime-ban-but-can-trade-his-own-crypto/",
+      "publishedAt": "2026-10-10T01:50:00.000Z"
+    },
+    {
+      "id": "6f48e5956a6d0b2a4252",
+      "source": "Bitcoin Magazine",
+      "title": "Bitcoin Life Insurer Meanwhile Raises $37.5M as Wealthy Families Look to Pass On Their BTC",
+      "summary": "Bitcoin Magazine Bitcoin Life Insurer Meanwhile Raises $37.5M as Wealthy Families Look to Pass On Their BTC The Bermuda-regulated startup, whose backers include Bain Capital Crypto and Sam Altman, has now raised more than $180 million. This post Bitcoin Life…",
+      "url": "https://bitcoinmagazine.com/news/meanwhile-bitcoin-raises-37-million",
+      "publishedAt": "2026-10-10T00:53:09.000Z"
+    },
+    {
+      "id": "494d74e2afff9aaaec32",
+      "source": "CryptoSlate",
+      "title": "Solana doubles block production speed to 200ms as network prepares for Alpenglow upgrade",
+      "summary": "The final SIMD-0525 step halves Solana’s original slot-time target, shortening leader windows and epochs while per-slot budgets keep work capacity roughly steady. The post Solana doubles block production speed to 200ms as network prepares for Alpenglow…",
+      "url": "https://cryptoslate.com/solana-doubles-block-production-speed-to-200ms-as-network-prepares-for-alpenglow-upgrade/",
+      "publishedAt": "2026-10-10T00:40:59.000Z"
+    },
+    {
+      "id": "4fb84f1a5b397c5b1561",
+      "source": "CryptoSlate",
+      "title": "Tether freezes $1.4M in TRON vaults and THORChain stalls",
+      "summary": "A researcher reported resumed TRON swaps after four vaults were blacklisted, exposing issuer control over USDT inside decentralized infrastructure. The post Tether freezes $1.4M in TRON vaults and THORChain stalls appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/tether-freezes-1-4m-in-tron-vaults-and-thorchain-stalls/",
+      "publishedAt": "2026-10-09T23:30:53.000Z"
+    },
+    {
+      "id": "cd4b5c03559dcd3399bb",
+      "source": "CryptoSlate",
+      "title": "ETH fee burns cover just 2% of new coins printed in 2026",
+      "summary": "An October 9 ledger puts fee burn at 2.07% of gross issuance, while a conditional capacity model tests the demand needed to shrink supply. The post ETH fee burns cover just 2% of new coins printed in 2026 appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/eth-fee-burns-cover-just-2-of-new-coins-printed-in-2026/",
+      "publishedAt": "2026-10-09T22:20:23.000Z"
+    },
+    {
+      "id": "ae3e1b3331bb9ef5954c",
+      "source": "CoinDesk",
+      "title": "U.S. CFTC moves to fold event contracts into swaps regulations as legal fight rages",
+      "summary": "The derivatives regulator is proposing a formal rule to include certain contracts traded on platforms like Kalshi's as swaps that require the agency's oversight.",
+      "url": "https://www.coindesk.com/policy/2026/10/09/u-s-cftc-moves-to-fold-event-contracts-into-swaps-regulations-as-legal-fight-rages",
+      "publishedAt": "2026-10-09T21:21:54.000Z"
+    },
+    {
+      "id": "fa46f19b21c27620bbb0",
+      "source": "CryptoSlate",
+      "title": "Ledger hack scare nears $90 million as Tether moves to freeze stolen USDT",
+      "summary": "Suspected Ledger wallet thefts are approaching $90 million as Tether freezes USDT stablecoin linked to the incident, according to blockchain investigators. In an Oct. 9 statement, the crypto hardware wallet maker said it was investigating reports that…",
+      "url": "https://cryptoslate.com/ledger-hack-scare-nears-90-million-as-tether-moves-to-freeze-stolen-usdt/",
+      "publishedAt": "2026-10-09T21:10:39.000Z"
+    },
+    {
+      "id": "ad97309df663c47b9a34",
+      "source": "Cointelegraph",
+      "title": "US plans to seize $1B in crypto linked to Iran this week: Scott Bessent",
+      "summary": "The Treasury Department has announced several digital asset seizures related to sanctions on Iran as part of US sanctions.",
+      "url": "https://cointelegraph.com/news/scott-bessent-us-seize-crypto-iran-sanctions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-09T20:39:17.000Z"
+    },
+    {
+      "id": "9e83db3f8f327d031dce",
+      "source": "Cointelegraph",
+      "title": "New York permanently bars Celsius founder Mashinsky in $35M fraud settlement",
+      "summary": "The agreement resolves a 2023 civil fraud lawsuit against the Celsius founder and permanently bars him from the cryptocurrency, securities and commodities industries.",
+      "url": "https://cointelegraph.com/news/celsius-founder-alex-mashinsky-permanently-banned-from-crypto-industry-in-ny-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-09T20:14:02.000Z"
+    },
+    {
+      "id": "19992ad3168c93175a2c",
+      "source": "Bitcoin Magazine",
+      "title": "‘We Know Where It Is’: Treasury Secretary Threatens To Freeze $1B of Iran’s Crypto",
+      "summary": "Bitcoin Magazine ‘We Know Where It Is’: Treasury Secretary Threatens To Freeze $1B of Iran’s Crypto The U.S. will seize $1 billion of Iran’s crypto this week, U.S. Treasury Secretary Scott Bessent has said. It isn’t clear which asset though. This post ‘We…",
+      "url": "https://bitcoinmagazine.com/news/treasury-to-seize-one-billion-of-iran-crypto",
+      "publishedAt": "2026-10-09T20:10:14.000Z"
+    },
+    {
+      "id": "cc37bc3c3ae4ac83f596",
+      "source": "Bitcoin Magazine",
+      "title": "Here’s How Not To Screw up Your Bitcoin Privacy",
+      "summary": "Bitcoin Magazine Here’s How Not To Screw up Your Bitcoin Privacy Speaking on the Bitcoin Rails podcast, Cake Wallet’s Seth for Privacy said people need to take more precautions to protect their identities when using the biggest cryptocurrency. This post…",
+      "url": "https://bitcoinmagazine.com/news/seth-for-privacy-bitcoin-tips",
+      "publishedAt": "2026-10-09T20:02:39.000Z"
+    },
+    {
+      "id": "609f67283266e8ea9ad7",
+      "source": "CryptoSlate",
+      "title": "XRP Ledger lets institutions share account duties without sharing their keys",
+      "summary": "The XRP Ledger (XRPL) now lets institutions delegate account tasks while retaining control of their primary signing keys. The PermissionDelegationV1_1 amendment went live on Oct. 8 at ledger 107,524,865. It lets account owners assign specific transaction…",
+      "url": "https://cryptoslate.com/ripple-wants-to-turn-xrpls-4-5-billion-in-tokenized-assets-into-round-the-clock-collateral/",
+      "publishedAt": "2026-10-09T20:00:29.000Z"
+    },
+    {
+      "id": "611e70cc31aafadd7569",
+      "source": "Decrypt",
+      "title": "OpenAI and Anthropic Are Quietly Rehearsing for the Day After an AI Catastrophe",
+      "summary": "Executives are war-gaming the political fallout of a major AI-driven cyberattack and preparing to brief Congress fast if and when necessary.",
+      "url": "https://decrypt.co/380621/openai-anthropic-quietly-rehearsing-ai-catastrophe",
+      "publishedAt": "2026-10-09T19:47:01.000Z"
+    },
+    {
+      "id": "3c1a3581293011274a10",
+      "source": "Cointelegraph",
+      "title": "THORChain exec accuses Tether of temporarily freezing USDT vaults",
+      "summary": "Chad Barraford, technical co-founder of the network, said that the funds were frozen and then unfrozen without explanation.",
+      "url": "https://cointelegraph.com/news/thorchain-tether-freezing-usdt-addresses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-09T19:04:03.000Z"
+    },
+    {
+      "id": "39373df18fa8d2543ac0",
+      "source": "CryptoSlate",
+      "title": "Hoskinson says Vitalik’s AI warning could delay the internet’s quantum defenses",
+      "summary": "Cardano founder Charles Hoskinson accused Vitalik Buterin of undermining quantum-resistant cryptography with speculative warnings about AI-driven mathematical breakthroughs. In an Oct. 9 post, Hoskinson challenged the Ethereum co-founder's skepticism toward…",
+      "url": "https://cryptoslate.com/cardanos-hoskinson-hoskinson-slams-vitalik-buterins-ai-doomsday-warning-as-a-threat-to-cryptos-quantum-future/",
+      "publishedAt": "2026-10-09T19:00:27.000Z"
+    },
+    {
+      "id": "d0b5f43dc7ce81eaa8f6",
+      "source": "The Block",
+      "title": "Former FTX COO says Netflix’s ‘Altruists’ trailer ‘made me physically throw up’",
+      "summary": "Former FTX COO Constance Wang says Netflix's \"The Altruists\" misrepresents FTX's collapse and turns it into a love story.",
+      "url": "https://www.theblock.co/news/business/2026-10-09-former-ftx-coo-netflix-the-altruists-trailer-418208",
+      "publishedAt": "2026-10-09T18:51:45.000Z"
+    },
+    {
+      "id": "7f7831c2f02dd08c4449",
+      "source": "Decrypt",
+      "title": "Senate Democrat Presses Cantor Fitzgerald on Tether Ties and Lutnick Family Profits",
+      "summary": "Sen. Richard Blumenthal wants Cantor Fitzgerald to open its records on Tether and on how much Commerce Secretary Howard Lutnick's family has earned from its business deal.",
+      "url": "https://decrypt.co/380619/senate-democrat-cantor-fitzgerald-tether-lutnick",
+      "publishedAt": "2026-10-09T18:46:03.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-09T18:30:11.000Z"
+    },
+    {
       "id": "9340785a2351a43c425a",
       "source": "CoinDesk",
       "title": "Robinhood Chain considers technology that gives paying traders priority",
-      "summary": "A recently updated version of the paid-for transaction-ordering technology “Time Boost” will be available on Arbitrum, Robinhood Chain’s infrastructure provider.",
+      "summary": "Arbitrum recently replaced its Timeboost transaction-ordering system with a new model called Priority Gas Auctions.",
       "url": "https://www.coindesk.com/business/2026/10/09/robinhood-chain-considers-technology-that-gives-paying-traders-priority",
       "publishedAt": "2026-10-09T18:11:00.000Z"
     },
@@ -234,14 +410,6 @@
       "publishedAt": "2026-10-09T14:41:09.000Z"
     },
     {
-      "id": "87d70cf25f92c0d8040f",
-      "source": "CryptoSlate",
-      "title": "Locked liquidity did not stop this $14 million crypto pool drain",
-      "summary": "Bitquery traced 79AU’s drain to token permissions that bypassed burned LP receipts, with residual rights documented on Oct. 8. The post Locked liquidity did not stop this $14 million crypto pool drain appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/79thvaults-14-million-pool-drain-shows-why-locked-liquidity-can-fail/",
-      "publishedAt": "2026-10-09T14:40:46.000Z"
-    },
-    {
       "id": "4f53ede3443e6ee6ab91",
       "source": "The Block",
       "title": "New York AG secures up to $35 million from former Celsius CEO Alex Mashinsky",
@@ -266,14 +434,6 @@
       "publishedAt": "2026-10-09T13:44:49.000Z"
     },
     {
-      "id": "a7f1c779cfe528471efb",
-      "source": "CryptoSlate",
-      "title": "Polygon’s 8 million USDT0 holders face scrutiny as 58% of growth matches scam patterns",
-      "summary": "The Oct. 7 audit estimates about 1.1 million scam look-alikes, while addresses holding at least $10 fell 42% since August 2025. The post Polygon’s 8 million USDT0 holders face scrutiny as 58% of growth matches scam patterns appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/polygons-8-million-usdt0-holders-face-scrutiny-as-58-of-growth-matches-scam-patterns/",
-      "publishedAt": "2026-10-09T13:40:01.000Z"
-    },
-    {
       "id": "752ccd69d2afcc334aa8",
       "source": "Bitcoin Magazine",
       "title": "Bitcoin Core developer responds to AI & Quantum Risk",
@@ -288,14 +448,6 @@
       "summary": "Bitcoin Magazine Building the Berkshire Hathaway of Bitcoin | Twenty One Capital CEO Rapha Zagury Twenty One Capital holds 43K BTC at a discount. CEO Rapha Zagury breaks down its mNAV, share buybacks, and why Tether's backing provides a permanent edge. This…",
       "url": "https://bitcoinmagazine.com/videos/building-the-berkshire-hathaway-of-bitcoin-twenty-one-capital-ceo-rapha-zagury",
       "publishedAt": "2026-10-09T13:33:09.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T13:31:41.000Z"
     },
     {
       "id": "70041085d65b46317e76",
@@ -346,14 +498,6 @@
       "publishedAt": "2026-10-09T12:04:07.000Z"
     },
     {
-      "id": "882967c22da692db1e5b",
-      "source": "CryptoSlate",
-      "title": "Backing Polymarket’s primary favorites would have lost 4%, new audit finds.",
-      "summary": "Bitquery’s 273-race scorecard found an 87% win rate, but its equal-dollar hypothetical shows why accurate calls can come at losing prices. The post Backing Polymarket’s primary favorites would have lost 4%, new audit finds. appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/backing-polymarkets-primary-favorites-would-have-lost-4-new-audit-finds/",
-      "publishedAt": "2026-10-09T12:00:22.000Z"
-    },
-    {
       "id": "fab65619425912e9e4f2",
       "source": "Decrypt",
       "title": "Morning Minute: Uptober Turns Sour as Crypto Majors Slide",
@@ -400,14 +544,6 @@
       "summary": "Thailand's SEC has limited initial crypto ETFs to bitcoin and ether, with new custody, exposure, and trading rules taking effect Oct. 16.",
       "url": "https://www.theblock.co/news/regulation/2026-10-09-thailand-sec-issues-bitcoin-and-ether-etf-rules-set-to-take-effect-oct-16-418132",
       "publishedAt": "2026-10-09T10:40:59.000Z"
-    },
-    {
-      "id": "bc584e9e4f2d566e4576",
-      "source": "CryptoSlate",
-      "title": "AI agents can pay for your shopping. Who gets your money back?",
-      "summary": "Amazon's Bedrock AgentCore Payments, built with Coinbase and Stripe, lets AI agents discover paid services, authenticate, and pay with stablecoins and x402 under preset spending limits. AI agents are getting wallets before merchants get a court, and shopping…",
-      "url": "https://cryptoslate.com/ai-agents-hijack-online-shopping-forcing-a-6b-merchant-crisis/",
-      "publishedAt": "2026-10-09T10:40:44.000Z"
     },
     {
       "id": "72f7d20486d93333f802",
@@ -466,14 +602,6 @@
       "publishedAt": "2026-10-09T09:50:01.000Z"
     },
     {
-      "id": "5e816bfbc628231ffa20",
-      "source": "CryptoSlate",
-      "title": "Strategy’s $150 million-a-day STRC market has a hidden dependency on its own buybacks",
-      "summary": "Strategy's $1.45 billion preferred-share buyback program is supporting a substantial share of trading in one of its key Bitcoin financing instruments. According to a Keyrock research report, Strategy's repurchases accounted for more than 20% of weekly…",
-      "url": "https://cryptoslate.com/strategys-150-million-a-day-strc-market-has-a-hidden-dependency-on-its-own-buybacks/",
-      "publishedAt": "2026-10-09T09:40:38.000Z"
-    },
-    {
       "id": "26b9bc107a01cad856c9",
       "source": "CoinDesk",
       "title": "Dark web drug market operator sentenced to 40 years, forfeits $101 million in bitcoin",
@@ -506,14 +634,6 @@
       "publishedAt": "2026-10-09T08:59:31.000Z"
     },
     {
-      "id": "2a9f5874091aadbb56e0",
-      "source": "CryptoSlate",
-      "title": "Coinbase streams $150,000 Singapore trading cup and crowns its first champion",
-      "summary": "The exchange paired walkouts and memes with a ten-trader tournament; its displayed leaderboard listed Intern first without confirming a winner. The post Coinbase streams $150,000 Singapore trading cup and crowns its first champion appeared first on…",
-      "url": "https://cryptoslate.com/coinbase-streams-150000-singapore-trading-cup-and-crowns-its-first-champion/",
-      "publishedAt": "2026-10-09T08:30:11.000Z"
-    },
-    {
       "id": "53b2d2a28e657d577a92",
       "source": "Cointelegraph",
       "title": "Bitcoin, Ether ETFs’ October outflows swell toward $1B",
@@ -522,17 +642,9 @@
       "publishedAt": "2026-10-09T07:34:44.000Z"
     },
     {
-      "id": "59c4cbe95f4634f23e6f",
-      "source": "CryptoSlate",
-      "title": "EU regulators target non-compliant stablecoins with a 90-day deadline",
-      "summary": "National regulators should require remediation within three months and may permit narrowly supervised exit services for existing holdings. The post EU regulators target non-compliant stablecoins with a 90-day deadline appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/eu-regulators-target-non-compliant-stablecoins-with-a-90-day-deadline/",
-      "publishedAt": "2026-10-09T07:20:02.000Z"
-    },
-    {
       "id": "db49a380d94a53882271",
       "source": "CoinDesk",
-      "title": "Live updates: Bitcoin steadies near $83,000 as crypto recovers from Thursday selloff",
+      "title": "Live updates: Bitcoin slips from day's highs, set to close week with a loss",
       "summary": "Bitcoin ETFs lost $244 million on Thursday and the ZEC fund extended a run of October outflows. Bitcoin is back near $82,000 after a $1 billion liquidation.",
       "url": "https://www.coindesk.com/business/2026/10/09/live-updates-xrp-etfs-the-only-ones-in-green-as-btc-eth-zec-funds-post-outflows",
       "publishedAt": "2026-10-09T06:51:32.000Z"
@@ -584,118 +696,6 @@
       "summary": "About $356 million in ETH positions were liquidated over 24 hours, more than bitcoin despite ether’s market value being less than a fifth as large.",
       "url": "https://www.coindesk.com/markets/2026/10/09/ether-bets-were-wiped-out-at-six-times-bitcoin-s-rate-in-crypto-s-usd1-billion-flush",
       "publishedAt": "2026-10-09T04:04:36.000Z"
-    },
-    {
-      "id": "6ddf30dbfce2e4f4f4ea",
-      "source": "CoinDesk",
-      "title": "Bitcoin rebounds to $82,000 as Trump rules out Iran strikes, oil drops",
-      "summary": "Bitcoin rebounded to $82,000 as Trump ruled out an Iran strike before the midterms, while crypto security experts pushed back on “bunker mode” fears.",
-      "url": "https://www.coindesk.com/markets/2026/10/09/bitcoin-rebounds-to-usd82-000-as-trump-rules-out-iran-strikes",
-      "publishedAt": "2026-10-09T03:27:38.000Z"
-    },
-    {
-      "id": "542b8cb92c366b5e8fcf",
-      "source": "Cointelegraph",
-      "title": "Thailand finalizes rules paving way for Bitcoin, Ether ETFs",
-      "summary": "The rules are set to take effect next week, allowing crypto ETFs to trade exclusively on the Stock Exchange of Thailand.",
-      "url": "https://cointelegraph.com/news/thailand-finalizes-rules-paving-way-for-bitcoin-ether-etfs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T03:08:51.000Z"
-    },
-    {
-      "id": "31bc7924cea75f5579c0",
-      "source": "Cointelegraph",
-      "title": "Cantor Fitzgerald faces Senate Democrat’s questions over Tether ties",
-      "summary": "The letter follows a report by the Democratic investigators last month alleging Tether’s USDT has become a key tool for Iran’s shadow banking network.",
-      "url": "https://cointelegraph.com/news/cantor-fitzgerald-faces-senate-democrats-probe-over-tether-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T00:46:27.000Z"
-    },
-    {
-      "id": "c500d141e5e7d8b2886b",
-      "source": "Cointelegraph",
-      "title": "China’s P2P stablecoin wallets surge 43x, Korea’s $450B crypto economy: Asia Express",
-      "summary": "Despite ongoing bans, China has seen a big surge in peer-to-peer stablecoin use. New figures show South Korea’s $450B crypto economy is the largest in East Asia.",
-      "url": "https://cointelegraph.com/magazine/chinas-p2p-stablecoin-wallets-surge-43x-koreas-450b-crypto-economy-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-08T22:35:00.000Z"
-    },
-    {
-      "id": "2b704c46360d6b877256",
-      "source": "Decrypt",
-      "title": "AI Startup Manus Raises $500 Million After China Nixed Meta’s $2 Billion Acquisition",
-      "summary": "Manus built a self-driving AI assistant before the hype, sold itself to Meta, then watched Beijing unwind the deal. Its first fresh money since: more than $500 million.",
-      "url": "https://decrypt.co/380546/maus-ai-startup-raises-500m-meta-acquisition-china",
-      "publishedAt": "2026-10-08T21:46:03.000Z"
-    },
-    {
-      "id": "6b196749b724dae58699",
-      "source": "CoinDesk",
-      "title": "Top Democrat among Senate investigators probes ties between Cantor Fitzgerald, Tether",
-      "summary": "As Democrats steadily rise in their potential to take back a Senate majority, Senator Richard Blumenthal is digging into Tether's U.S. financial partnership.",
-      "url": "https://www.coindesk.com/policy/2026/10/08/top-democrat-among-senate-investigators-probes-ties-between-cantor-fitzgerald-tether",
-      "publishedAt": "2026-10-08T21:22:58.000Z"
-    },
-    {
-      "id": "676af8c38b8dec76ed28",
-      "source": "Decrypt",
-      "title": "Google Wants Gemini to Be Your Next Coworker—Complete With Its Own Email Address",
-      "summary": "Google Cloud unveiled a single Gemini agent that takes goals instead of questions, works in the background for days, and can join a company as a staffer with its own inbox and calendar.",
-      "url": "https://decrypt.co/380545/google-gemini-coworker-own-email-address",
-      "publishedAt": "2026-10-08T21:16:03.000Z"
-    },
-    {
-      "id": "13e401854ffc8841e15c",
-      "source": "Decrypt",
-      "title": "Ethereum Test Network Raises Block Limit to Over 3x Its Current Capacity",
-      "summary": "Ethereum's Sepolia test network activated Glamsterdam on October 6 with a block gas limit near 200 million, over three times mainnet's 60 million.",
-      "url": "https://decrypt.co/380538/ethereum-test-raises-block-limit-3x-current-capacity",
-      "publishedAt": "2026-10-08T20:16:03.000Z"
-    },
-    {
-      "id": "f4ebce952c50e741c119",
-      "source": "CoinDesk",
-      "title": "Wall Street's tokenization boom could have bigger winners than bitcoin and ether, Citrini says",
-      "summary": "The research firm sees tokenized stocks, bonds and loans creating new markets for trading and lending, with fee-generating platforms and companies poised to benefit.",
-      "url": "https://www.coindesk.com/markets/2026/10/08/wall-street-s-tokenization-boom-could-have-bigger-winners-than-bitcoin-and-ether-citrini-says",
-      "publishedAt": "2026-10-08T19:46:15.000Z"
-    },
-    {
-      "id": "9c8cd35888000fbf3e17",
-      "source": "Cointelegraph",
-      "title": "Securitize stock jumps over 10% after launching tokenized US equities on Solana",
-      "summary": "Securitize’s new offering gives eligible investors access to tokenized shares of 12 US companies, with dividend and voting rights and plans for round-the-clock trading.",
-      "url": "https://cointelegraph.com/news/securitize-stock-jumps-launching-tokenized-us-equities-solana?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-08T19:31:38.000Z"
-    },
-    {
-      "id": "51273d7cf27b3bc25fde",
-      "source": "Decrypt",
-      "title": "NFL Sides With States Against Kalshi in Supreme Court Prediction Market Fight",
-      "summary": "The NFL urged the Supreme Court to resolve a circuit split over whether states can regulate sports contracts on prediction markets, arguing they're gambling, not federally regulated swaps.",
-      "url": "https://decrypt.co/380530/nfl-kalshi-supreme-court-prediction-market",
-      "publishedAt": "2026-10-08T19:31:03.000Z"
-    },
-    {
-      "id": "5d6cd80ad657a6f580a5",
-      "source": "Cointelegraph",
-      "title": "NFL backs New Jersey authorities in SCOTUS petition over Kalshi",
-      "summary": "According to the league, Kalshi and other prediction markets “threaten game integrity” because many event contracts are “highly susceptible to manipulation.”",
-      "url": "https://cointelegraph.com/news/nfl-new-jersey-supreme-court-kalshi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-08T19:17:18.000Z"
-    },
-    {
-      "id": "401d813d7d8db77ae16a",
-      "source": "Bitcoin Magazine",
-      "title": "AI Coding Agents Drive Surge in Bitcoin Integration Requests: Breez",
-      "summary": "Bitcoin Magazine AI Coding Agents Drive Surge in Bitcoin Integration Requests: Breez Bitcoin software company Breez said demand for its developer tools has surged since AI coding agents went mainstream, with partnership inquiries rising roughly 14-fold as…",
-      "url": "https://bitcoinmagazine.com/news/ai-coding-agents-drive-bitcoin-integration",
-      "publishedAt": "2026-10-08T19:17:12.000Z"
-    },
-    {
-      "id": "3f230261f6ef07fcbfb6",
-      "source": "Bitcoin Magazine",
-      "title": "WhiteBIT Integrates Lightning Network for Fast and Cheap Bitcoin Transactions",
-      "summary": "Bitcoin Magazine WhiteBIT Integrates Lightning Network for Fast and Cheap Bitcoin Transactions The Swiss crypto exchange has onboarded the Lightning Network to help people withdraw and deposit bitcoin with ease. This post WhiteBIT Integrates Lightning…",
-      "url": "https://bitcoinmagazine.com/news/whitebit-integrates-lightning-network",
-      "publishedAt": "2026-10-08T19:10:07.000Z"
     }
   ]
 }
