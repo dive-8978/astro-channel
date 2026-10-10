@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T06:01:09.576Z",
+  "generatedAt": "2026-10-10T12:41:45.182Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 58,
+      "itemCount": 38,
       "error": null
     },
     {
@@ -57,6 +57,70 @@
     }
   ],
   "items": [
+    {
+      "id": "2e2df5dfee4b754d7c50",
+      "source": "CryptoSlate",
+      "title": "Stealing $1.5B in crypto is easy, cashing out is the trap",
+      "summary": "North Korean hackers stole around $1.5 billion from Bybit in February 2025. While the hack itself has been widely covered and analyzed, few have focused on what happened afterward and what became of the stolen funds. To move all that money, hackers needed to…",
+      "url": "https://cryptoslate.com/the-business-that-turns-north-korean-stolen-crypto-into-spendable-money/",
+      "publishedAt": "2026-10-10T12:00:37.000Z"
+    },
+    {
+      "id": "2cf2e03d3377ba6b5fb9",
+      "source": "CoinDesk",
+      "title": "One year after 10/10 flash crash, bitcoin and ether liquidity have rebuilt, but altcoins still face risks",
+      "summary": "Bitcoin and ether order books are deeper than before the crash, while altcoin liquidity keeps eroding and spot trading remains well below its October 2025 peak.",
+      "url": "https://www.coindesk.com/markets/2026/10/10/one-year-after-10-10-bitcoin-and-ether-liquidity-have-rebuilt-but-other-altcoins-still-face-risks",
+      "publishedAt": "2026-10-10T12:00:00.000Z"
+    },
+    {
+      "id": "ab01e81a61881beb5b32",
+      "source": "CoinDesk",
+      "title": "Tokenized commodities look beyond gold as lending and oil open new markets",
+      "summary": "Paxos Labs, Theo and Energy Substantiation execs see growth coming from putting physical assets to work, with precious metals leading and energy presenting a tougher test.",
+      "url": "https://www.coindesk.com/business/2026/10/05/tokenized-commodities-look-beyond-gold-as-lending-and-oil-open-new-markets",
+      "publishedAt": "2026-10-10T12:00:00.000Z"
+    },
+    {
+      "id": "4168e469590fc4c1f1b7",
+      "source": "Cointelegraph",
+      "title": "Justin Sun says Tron’s post-quantum cryptography has gone live on testnet",
+      "summary": "“We’re ready to bring quantum resistance to mainnet at any time,” Sun said in a post on X.",
+      "url": "https://cointelegraph.com/news/justin-sun-says-trons-post-quantum-cryptography-has-gone-live-on-testnet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-10T11:52:14.000Z"
+    },
+    {
+      "id": "4dc2919a221e08b42361",
+      "source": "CoinDesk",
+      "title": "Bitcoin's $19 billion wake-up call: One-year after flash crash, has crypto learned anything?",
+      "summary": "The Oct. 10, 2025 flash crash wiped out billions in leveraged crypto bets. Traders now have better tools to spot risks, but the forces behind the selloff remain.",
+      "url": "https://www.coindesk.com/markets/2026/10/10/bitcoin-s-usd19-billion-wake-up-call-one-year-later-has-crypto-learned-anything",
+      "publishedAt": "2026-10-10T11:00:00.000Z"
+    },
+    {
+      "id": "42c1745ff0663bc952c6",
+      "source": "Cointelegraph",
+      "title": "Tech chief says EU can fend off rogue AI risk: Report",
+      "summary": "There are global concerns following incidents at OpenAI ‌and Anthropic, and fears have arisen that rogue AI agents may venture beyond human control.",
+      "url": "https://cointelegraph.com/news/tech-chief-says-eu-can-fend-off-rogue-ai-risk-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-10T08:41:06.000Z"
+    },
+    {
+      "id": "b14b91e32555c57c87ee",
+      "source": "Cointelegraph",
+      "title": "Sam Altman-backed Bitcoin life insurer, Meanwhile, raises more funds",
+      "summary": "The round follows increased international demand for Meanwhile’s Bitcoin life insurance policies amid broader macro instability.",
+      "url": "https://cointelegraph.com/news/sam-altman-backed-bitcoin-life-insurer-meanwhile-raises-more-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-10T07:10:43.000Z"
+    },
+    {
+      "id": "aa50fb7ec29e132f6a3a",
+      "source": "CryptoSlate",
+      "title": "Inflation target of 2% may not stop the next Fed rate freeze",
+      "summary": "The Fed can stop raising rates before inflation reaches 2% if officials believe the economy's already heading there without another increase. September's meeting left most unconvinced, with strong spending and persistent price increases outweighing the…",
+      "url": "https://cryptoslate.com/what-would-actually-stop-the-fed-from-raising-rates-again/",
+      "publishedAt": "2026-10-10T07:00:05.000Z"
+    },
     {
       "id": "d30063277276f8165a26",
       "source": "CoinDesk",
@@ -290,14 +354,6 @@
       "publishedAt": "2026-10-09T17:02:47.000Z"
     },
     {
-      "id": "6ee205d1340fda40b7b5",
-      "source": "CryptoSlate",
-      "title": "Ethereum open interest rose 2.3% in ETH on Binance as its dollar value fell 6.6%",
-      "summary": "Matched October 6–8 snapshots show a larger ETH-denominated book despite Thursday’s contraction, separating outstanding exposure from lower USDT valuation. The post Ethereum open interest rose 2.3% in ETH on Binance as its dollar value fell 6.6% appeared…",
-      "url": "https://cryptoslate.com/ethereums-binance-futures-book-grew-2-3-in-eth-while-its-dollar-value-fell/",
-      "publishedAt": "2026-10-09T17:00:01.000Z"
-    },
-    {
       "id": "b9c9d68d48870898f62d",
       "source": "Bitcoin Magazine",
       "title": "Ledger Warns Buyers Not to Set Up Wallets From Reseller After Users Report Losses",
@@ -344,14 +400,6 @@
       "summary": "Blockchain.com has applied for DCM and FCM licenses to offer ahead of a planned $500 million IPO.",
       "url": "https://www.theblock.co/news/business/2026-10-09-blockchain-com-cftc-license-prediction-markets-derivatives-418192",
       "publishedAt": "2026-10-09T16:05:22.000Z"
-    },
-    {
-      "id": "6dda5f9c9f900387bedb",
-      "source": "CryptoSlate",
-      "title": "OpenAI, Google and Meta battle for AI internet domains as crypto firms target .bitcoin and .wallet",
-      "summary": "CryptoSlate's tally shows 11 applications for .bit and five for .crypto, with final strings due Nov. 17. The post OpenAI, Google and Meta battle for AI internet domains as crypto firms target .bitcoin and .wallet appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/openai-google-and-meta-battle-for-ai-internet-domains-as-crypto-firms-target-bitcoin-and-wallet/",
-      "publishedAt": "2026-10-09T16:00:55.000Z"
     },
     {
       "id": "bc62712a815d20cd520f",
@@ -648,54 +696,6 @@
       "summary": "Bitcoin ETFs lost $244 million on Thursday and the ZEC fund extended a run of October outflows. Bitcoin is back near $82,000 after a $1 billion liquidation.",
       "url": "https://www.coindesk.com/business/2026/10/09/live-updates-xrp-etfs-the-only-ones-in-green-as-btc-eth-zec-funds-post-outflows",
       "publishedAt": "2026-10-09T06:51:32.000Z"
-    },
-    {
-      "id": "d39fc2e4ff13bfa76865",
-      "source": "CoinDesk",
-      "title": "New tech to power bitcoin lending is set to debut with $500 million in commitments",
-      "summary": "Layer-1 blockchain Sui is launching Hashi, an institutional protocol allowing holders to use bitcoin as collateral without moving it off the Bitcoin network.",
-      "url": "https://www.coindesk.com/markets/2026/10/09/new-tech-to-power-bitcoin-lending-is-set-to-debut-with-usd500-million-in-commitments",
-      "publishedAt": "2026-10-09T06:40:54.000Z"
-    },
-    {
-      "id": "439ddd51668bab6594c0",
-      "source": "Cointelegraph",
-      "title": "Crypto projects apply for Anthropic’s new frontier AI security scanner",
-      "summary": "Anthropic’s new opt-in service promises vulnerability reports from its strongest AI models, including Claude Mythos.",
-      "url": "https://cointelegraph.com/news/crypto-projects-apply-for-anthropics-new-frontier-ai-security-scanner?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T05:34:33.000Z"
-    },
-    {
-      "id": "62f28911550db512a102",
-      "source": "Cointelegraph",
-      "title": "Trump administration outlines quantum, AI initiatives in $6B science push",
-      "summary": "The White House outlined a $215 million quantum computing competition and $2.4 billion in AI industry commitments as concerns grow over quantum threats to cryptocurrency security.",
-      "url": "https://cointelegraph.com/news/trump-administration-quantum-computing-ai-6-billion-science-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T05:25:27.000Z"
-    },
-    {
-      "id": "5b17024e006af45d5714",
-      "source": "CoinDesk",
-      "title": "Solana is about to halve its block times as final 200-millisecond upgrade nears",
-      "summary": "The network is completing a seven-week push to produce blocks twice as frequently, though validators face higher costs and tighter operating windows.",
-      "url": "https://www.coindesk.com/tech/2026/10/09/solana-is-about-to-halve-its-block-times-as-final-200-millisecond-upgrade-nears",
-      "publishedAt": "2026-10-09T05:00:52.000Z"
-    },
-    {
-      "id": "4d7098d4817ebc91050e",
-      "source": "CoinDesk",
-      "title": "XRP Ledger adds new controls for banks, stablecoins and tokenized funds",
-      "summary": "The feature lets businesses give separate accounts limited powers such as approving customers or making payments, while keeping the keys that control their main holdings offline.",
-      "url": "https://www.coindesk.com/tech/2026/10/09/xrp-ledger-adds-new-controls-for-banks-stablecoins-and-tokenized-funds",
-      "publishedAt": "2026-10-09T04:21:36.000Z"
-    },
-    {
-      "id": "d75826179112f6482f3a",
-      "source": "CoinDesk",
-      "title": "Ether bets were wiped out at six times bitcoin’s rate in crypto’s $1 billion flush",
-      "summary": "About $356 million in ETH positions were liquidated over 24 hours, more than bitcoin despite ether’s market value being less than a fifth as large.",
-      "url": "https://www.coindesk.com/markets/2026/10/09/ether-bets-were-wiped-out-at-six-times-bitcoin-s-rate-in-crypto-s-usd1-billion-flush",
-      "publishedAt": "2026-10-09T04:04:36.000Z"
     }
   ]
 }
