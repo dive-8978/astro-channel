@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T13:03:12.199Z",
+  "generatedAt": "2026-10-11T22:06:15.108Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -58,6 +58,126 @@
   ],
   "items": [
     {
+      "id": "76bd5b6379bf9932980e",
+      "source": "CryptoSlate",
+      "title": "Optimism’s Unichain deal will put more chains under one operator",
+      "summary": "The October migration would concentrate more chain operations at Optimism, while Ethereum fallback routes depend on each chain’s deployed contracts. The post Optimism’s Unichain deal will put more chains under one operator appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/jing-wangs-optimism-adds-unichain-to-its-operating-plans-while-users-exit-rights-remain-uneven/",
+      "publishedAt": "2026-10-11T22:00:06.000Z"
+    },
+    {
+      "id": "ba6ffbcbf13631e0472a",
+      "source": "CryptoSlate",
+      "title": "Some Aave loans sit near liquidation with collateral that can take hours to cash out",
+      "summary": "October 9 borrower snapshots put the focus on whether collateral sales or redemptions can fund stablecoin repayment. The post Some Aave loans sit near liquidation with collateral that can take hours to cash out appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/aaves-yield-collateral-markets-reveal-a-thin-cushion-before-liquidation/",
+      "publishedAt": "2026-10-11T20:00:33.000Z"
+    },
+    {
+      "id": "b7e9767e46b90ede1eba",
+      "source": "CryptoSlate",
+      "title": "XRP’s next Wall Street expansion comes with an unexpected complication from Ripple",
+      "summary": "Management retains cost less impairment, so an unrealized XRP price rise alone will not lift earnings by revaluing the holdings. The post XRP’s next Wall Street expansion comes with an unexpected complication from Ripple appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/xrps-next-wall-street-expansion-comes-with-an-unexpected-complication-from-ripple/",
+      "publishedAt": "2026-10-11T19:00:09.000Z"
+    },
+    {
+      "id": "e72249de5aa94b5e6a10",
+      "source": "CoinDesk",
+      "title": "Everyone wants SCOTUS to take up prediction markets: State of Crypto",
+      "summary": "The U.S. Supreme Court hasn't yet indicated whether it will take up cases surrounding prediction markets, but there are now several amicus briefs, an interim final rule and a rule proposal.",
+      "url": "https://www.coindesk.com/policy/2026/10/11/everyone-wants-scotus-to-take-up-prediction-markets-state-of-crypto",
+      "publishedAt": "2026-10-11T18:30:00.000Z"
+    },
+    {
+      "id": "3644cf403b43a125b12e",
+      "source": "The Block",
+      "title": "XRP Ledger patches decade-old bug that could have minted trillions of XRP",
+      "summary": "An overflow bug in the XRP Ledger's payment engine could have let an attacker mint about 18 trillion spendable XRP in one transaction.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-10-11-xrp-ledger-patches-decade-old-bug-that-could-have-minted-trillions-of-xrp-418230",
+      "publishedAt": "2026-10-11T18:07:41.000Z"
+    },
+    {
+      "id": "32865d8407bf0069d58b",
+      "source": "CryptoSlate",
+      "title": "Lightning apps using unpatched LDK risk Bitcoin theft from a reconnect lie",
+      "summary": "The October 1-dated v0.2.7 and v0.1.13 patches close a reconnect theft path, while v0.2.7 also fixes an LSPS2 payment-amount flaw. The post Lightning apps using unpatched LDK risk Bitcoin theft from a reconnect lie appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/unpatched-ldk-apps-can-lose-bitcoin-when-a-lightning-peer-lies-after-reconnecting/",
+      "publishedAt": "2026-10-11T18:00:02.000Z"
+    },
+    {
+      "id": "f9263eb99ee802adbe46",
+      "source": "Decrypt",
+      "title": "Tokenized Stocks Show Real Demand But Remain Volatile and Illiquid, IMF Finds",
+      "summary": "An IMF analysis found that more than half of tokenized stock trading happens outside U.S. market hours, though the roughly $2.3 billion market remains more volatile and less liquid than traditional equities.",
+      "url": "https://decrypt.co/380653/tokenized-stocks-show-real-demand-but-remain-volatile-and-illiquid-imf-finds",
+      "publishedAt": "2026-10-11T17:11:03.000Z"
+    },
+    {
+      "id": "521afd29aa24c150f8c7",
+      "source": "Cointelegraph",
+      "title": "Saylor teases Strategy Bitcoin buying after ending September with STRC buybacks",
+      "summary": "Investors will have to wait an extra day to find out if and how much Strategy added to its Bitcoin treasury in the first week of October.",
+      "url": "https://cointelegraph.com/news/saylors-teases-strategy-bitcoin-buying-after-ending-september-with-strc-buybacks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-11T17:11:00.000Z"
+    },
+    {
+      "id": "0485bdd6050b1595dd28",
+      "source": "CryptoSlate",
+      "title": "Some Kraken futures limit orders can still fill after a successful cancel",
+      "summary": "The October 8 Maker Protection expansion brings more contracts under a rule that discards unfilled remainders while still allowing execution. The post Some Kraken futures limit orders can still fill after a successful cancel appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/krakens-held-futures-limit-orders-can-still-fill-after-a-successful-cancel/",
+      "publishedAt": "2026-10-11T17:00:04.000Z"
+    },
+    {
+      "id": "f618c9be1569eebed566",
+      "source": "Decrypt",
+      "title": "Bitcoin, Ethereum and Solana ETFs All in the Red for October",
+      "summary": "Bitcoin ETFs have seen $386.3 million in net outflows through the first seven trading days of October, while Ethereum funds have now posted nine straight days of losses.",
+      "url": "https://decrypt.co/380640/bitcoin-ethereum-solana-etfs-red-october",
+      "publishedAt": "2026-10-11T16:01:03.000Z"
+    },
+    {
+      "id": "8f5961c7b2757ed91d35",
+      "source": "CryptoSlate",
+      "title": "Bitcoin hedge funds face a liquidation trap when their collateral is split across markets",
+      "summary": "Here's a hypothetical situation: a hedge fund is making money, but one of its exchanges is about to liquidate its position anyway. Bitcoin has fallen, its short position on CME is profitable, and the matching long on Hyperliquid is bleeding cash. The two…",
+      "url": "https://cryptoslate.com/bitcoin-hedge-funds-face-a-liquidation-trap-when-their-collateral-is-split-across-markets/",
+      "publishedAt": "2026-10-11T16:00:20.000Z"
+    },
+    {
+      "id": "b289b13d0f034f1ceed0",
+      "source": "CoinDesk",
+      "title": "Clarity's failure could speed crypto innovation while shielding incumbents",
+      "summary": "Executives see openings for tokenization, DeFi and dealmaking, while lawyers warn agency action leaves spot-market oversight and lasting certainty unresolved.",
+      "url": "https://www.coindesk.com/policy/2026/10/11/clarity-s-failure-could-speed-crypto-innovation-while-shielding-incumbents",
+      "publishedAt": "2026-10-11T16:00:00.000Z"
+    },
+    {
+      "id": "a6fd07ceee2aa1765995",
+      "source": "CoinDesk",
+      "title": "President Trump declares 'energy ceasefire' between Russia and Ukraine",
+      "summary": "\"Ukraine supports the ceasefire, and it is important that Russia support it as well,\" said Ukrainian President Zelensky.",
+      "url": "https://www.coindesk.com/markets/2026/10/11/president-trump-declares-energy-ceasefire-between-russia-and-ukraine",
+      "publishedAt": "2026-10-11T15:40:47.000Z"
+    },
+    {
+      "id": "650f1a6a5837f01d5a87",
+      "source": "CryptoSlate",
+      "title": "Tokenized stocks can carry the same rights without the same trading protections",
+      "summary": "Douro Labs’ October 9 submission seeks feed-quality guidance, while venue safeguards and covered FINRA-member broker duties remain distinct. The post Tokenized stocks can carry the same rights without the same trading protections appeared first on…",
+      "url": "https://cryptoslate.com/secs-tokenized-stock-exemption-leaves-key-price-feed-choices-to-venues/",
+      "publishedAt": "2026-10-11T15:00:49.000Z"
+    },
+    {
+      "id": "6c23f6db03058ac24992",
+      "source": "CryptoSlate",
+      "title": "XRP ETFs extend a 13-week inflow streak as Bitcoin, Ethereum and Solana funds shed $1.25 billion",
+      "summary": "US-listed XRP ETFs extended their inflow streak to 13 weeks as Bitcoin, Ethereum and Solana funds suffered nearly $1.25 billion in combined withdrawals during the week ended Oct. 9. Bitcoin ETFs recorded $681.1 million in net withdrawals, while Ethereum…",
+      "url": "https://cryptoslate.com/bitcoin-ethereum-and-solana-etfs-lose-1-25-billion-as-xrp-extends-13-week-inflow-streak/",
+      "publishedAt": "2026-10-11T14:00:41.000Z"
+    },
+    {
       "id": "5c1db5e48a5a6f1bfb6c",
       "source": "CryptoSlate",
       "title": "New iPhone spyware can hunt for crypto wallets and extract their data every 15 seconds",
@@ -87,7 +207,7 @@
       "title": "Here’s what happened in crypto today",
       "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
       "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-11T12:45:00.000Z"
+      "publishedAt": "2026-10-11T12:59:00.000Z"
     },
     {
       "id": "9ec3ab0c141b656b7a24",
@@ -98,28 +218,20 @@
       "publishedAt": "2026-10-11T12:00:20.000Z"
     },
     {
-      "id": "68db17240073d93a8528",
-      "source": "CryptoSlate",
-      "title": "AI discovers XRP Ledger flaw that could mint 18 trillion tokens and put $94 billion market at risk",
-      "summary": "Testing produced spendable XRP, but the disclosure reports no evidence of public-network exploitation and explains why the fix took effect immediately. The post AI discovers XRP Ledger flaw that could mint 18 trillion tokens and put $94 billion market at…",
-      "url": "https://cryptoslate.com/ai-discovers-xrp-ledger-flaw-that-could-mint-18-trillion-tokens-and-put-94-billion-market-at-risk/",
-      "publishedAt": "2026-10-11T10:30:30.000Z"
-    },
-    {
       "id": "61d3917d9f49a0ecfef5",
       "source": "Cointelegraph",
       "title": "Coldcard says it’s investigating how phishing link appeared on its X account",
       "summary": "Company advised users not to visit or interact with the link in question and said it will share any further verified updates.",
       "url": "https://cointelegraph.com/news/coldcard-says-its-investigating-how-phishing-link-appeared-on-its-x-account?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-11T10:22:44.000Z"
+      "publishedAt": "2026-10-11T10:40:00.000Z"
     },
     {
       "id": "43ae6a8468683294391e",
       "source": "Cointelegraph",
-      "title": "Ledger confirms unauthorized hardware implant; losses may exceed $86M",
+      "title": "Ledger confirms unauthorized hardware implant, says losses may exceed $86M",
       "summary": "Ledger said the incident appeared to be isolated to a single reseller and its Southeast Asian market.",
       "url": "https://cointelegraph.com/news/ledger-confirms-unauthorized-hardware-implant-losses-may-exceed-86m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-11T09:01:51.000Z"
+      "publishedAt": "2026-10-11T09:05:00.000Z"
     },
     {
       "id": "0ba29e53c103d079e78f",
@@ -127,23 +239,7 @@
       "title": "CFTC proposals aimed at separating prediction markets from casino gambling",
       "summary": "The two measures attempt to set the stage for a potential US Supreme Court battle over federal and state jurisdiction.",
       "url": "https://cointelegraph.com/news/cftc-proposals-aimed-at-separating-prediction-markets-from-casino-gambling?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-11T07:44:51.000Z"
-    },
-    {
-      "id": "d75eaa04c5d3c7c296c4",
-      "source": "CryptoSlate",
-      "title": "Bitcoin companies are learning that holding forever takes cash",
-      "summary": "Metaplanet sold 10,000 BTC and bought back 11,000 at a higher average price to show it was willing to sell its Bitcoin. The Japanese treasury company was pursuing a credit rating and better access to financing, and its Oct. 5 disclosure explained why turning…",
-      "url": "https://cryptoslate.com/bitcoin-companies-are-learning-that-holding-forever-takes-cash/",
-      "publishedAt": "2026-10-11T07:00:24.000Z"
-    },
-    {
-      "id": "b1eb0c7c7f0baa75a6aa",
-      "source": "CryptoSlate",
-      "title": "BTCPay Docker users must opt into Tor at their next update to keep onion access",
-      "summary": "Existing installations must explicitly select Tor at their next setup or update, even though existing Tor data is preserved. The post BTCPay Docker users must opt into Tor at their next update to keep onion access appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/btcpays-docker-servers-must-opt-into-tor-to-keep-onion-access/",
-      "publishedAt": "2026-10-10T19:00:26.000Z"
+      "publishedAt": "2026-10-11T07:50:00.000Z"
     },
     {
       "id": "35ca89ceb122d1a694b7",
@@ -154,14 +250,6 @@
       "publishedAt": "2026-10-10T18:35:25.000Z"
     },
     {
-      "id": "3b0c63cfe45e2d3a3311",
-      "source": "CryptoSlate",
-      "title": "Newer AI models missed more payment fraud in Coinbase’s benchmark",
-      "summary": "A fixed historical replay found weaker fraud coverage across three model upgrades, while GPT’s precision improved. The post Newer AI models missed more payment fraud in Coinbase’s benchmark appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/coinbase-benchmark-finds-newer-ai-models-missed-more-payment-fraud/",
-      "publishedAt": "2026-10-10T18:00:18.000Z"
-    },
-    {
       "id": "ec282e3103a47e498123",
       "source": "Decrypt",
       "title": "CFTC Draws the Line Between Prediction Markets and Gambling in New Rules",
@@ -170,28 +258,12 @@
       "publishedAt": "2026-10-10T17:01:03.000Z"
     },
     {
-      "id": "bc6d16e4d7c82bf6cf2b",
-      "source": "CryptoSlate",
-      "title": "Being right about Bitcoin won’t save your 3x leveraged ETF position",
-      "summary": "Bitcoin's next recovery could vindicate your investment thesis but leave your leveraged fund deep in the red, because the fund's daily reset can make waiting a pretty expensive habit. Getting Bitcoin right and actually making money on Bitcoin are becoming…",
-      "url": "https://cryptoslate.com/being-right-about-bitcoin-wont-save-your-3x-leveraged-etf-position/",
-      "publishedAt": "2026-10-10T17:00:12.000Z"
-    },
-    {
       "id": "70f97874c14c23b3f228",
       "source": "Decrypt",
       "title": "This Sam Altman-Backed Life Insurer Runs Entirely on Bitcoin, and Just Raised $37.5 Million",
       "summary": "The Bermuda-based insurer, which runs entirely on Bitcoin, drew the funding from existing backers led by Bain Capital Crypto after a record year driven by demand from wealthy families in Asia, Europe and the Middle East.",
       "url": "https://decrypt.co/380633/sam-altman-backed-life-insurer-bitcoin-raise",
       "publishedAt": "2026-10-10T16:01:04.000Z"
-    },
-    {
-      "id": "42af1342b5efc05cd09b",
-      "source": "CryptoSlate",
-      "title": "CFTC proposes a divide between prediction contracts and sportsbook wagers",
-      "summary": "An event-contract proposal and separate casino-wager rule sharpen the federal classification boundary while leaving state-law access disputes unresolved. The post CFTC proposes a divide between prediction contracts and sportsbook wagers appeared first on…",
-      "url": "https://cryptoslate.com/cftc-proposes-new-divide-between-prediction-contracts-and-sportsbook-wagers/",
-      "publishedAt": "2026-10-10T16:00:40.000Z"
     },
     {
       "id": "b8bf6879bfb2aef5f76f",
@@ -208,22 +280,6 @@
       "summary": "Physicists at George Washington University say a formula can estimate when an AI chatbot will flip from good answers to bad ones, and early tests on small models back it up.",
       "url": "https://decrypt.co/380624/formula-predicts-when-ai-chatbot-turn-bad",
       "publishedAt": "2026-10-10T15:01:03.000Z"
-    },
-    {
-      "id": "e948fb1f5df23a17db3b",
-      "source": "CryptoSlate",
-      "title": "Luxor’s reported 6–13% annualized Bitcoin yield depends on mining delivery",
-      "summary": "Luxor’s paired forwards can fix gross BTC receipts, while mining delivery, counterparty performance and financing terms still determine repayment. The post Luxor’s reported 6–13% annualized Bitcoin yield depends on mining delivery appeared first on…",
-      "url": "https://cryptoslate.com/bitcoins-reported-6-13-mining-yield-still-carries-miner-credit-risk/",
-      "publishedAt": "2026-10-10T15:00:54.000Z"
-    },
-    {
-      "id": "1504b5cbd270559e1ddd",
-      "source": "CryptoSlate",
-      "title": "Coinbase’s Texas move gets a shareholder suit dismissed over Delaware-era claims",
-      "summary": "The October 2 court order required a written board demand in this action, without deciding whether directors committed misconduct. The post Coinbase’s Texas move gets a shareholder suit dismissed over Delaware-era claims appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/coinbase-shareholder-suit-hits-texas-demand-rule-for-conduct-from-its-delaware-years/",
-      "publishedAt": "2026-10-10T14:00:52.000Z"
     },
     {
       "id": "07789d2a201c3f2aa76b",
@@ -269,9 +325,9 @@
       "id": "42c1745ff0663bc952c6",
       "source": "Cointelegraph",
       "title": "Tech chief says EU can fend off rogue AI risk: Report",
-      "summary": "There are global concerns following incidents at OpenAI ‌and Anthropic, and fears have arisen that rogue AI agents may venture beyond human control.",
+      "summary": "Recent incidents at OpenAI ‌and Anthropic stoke global concerns and fears that rogue AI agents may venture beyond human control.",
       "url": "https://cointelegraph.com/news/tech-chief-says-eu-can-fend-off-rogue-ai-risk-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-10T08:41:06.000Z"
+      "publishedAt": "2026-10-10T08:45:00.000Z"
     },
     {
       "id": "b14b91e32555c57c87ee",
@@ -640,62 +696,6 @@
       "summary": "Is this the beginning of a bigger selloff with the anniversary of 10/10 looming? Or just a leverage flush before the next leg up?",
       "url": "https://decrypt.co/380569/morning-minute-uptober-turns-sour-as-crypto-majors-slide",
       "publishedAt": "2026-10-09T11:41:15.000Z"
-    },
-    {
-      "id": "03a910c3bfae501bb94d",
-      "source": "CoinDesk",
-      "title": "Zcash developers set January target for quantum-resistant payments after ‘bunker mode’ scare",
-      "summary": "The plan concerns public payments, where about seven in 10 ZEC sit. A separate wallet tool would keep balance checks from revealing which addresses belong together.",
-      "url": "https://www.coindesk.com/tech/2026/10/09/zcash-developers-set-january-target-for-quantum-resistant-payments-after-bunker-mode-scare",
-      "publishedAt": "2026-10-09T11:39:05.000Z"
-    },
-    {
-      "id": "dbaeeac115138e873635",
-      "source": "CoinDesk",
-      "title": "Trump's Iran pledge underpins crypto gains as bitcoin bears face liquidation pressure",
-      "summary": "Your day-ahead look for Oct. 9, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/10/09/trump-s-iran-pledge-underpins-crypto-gains-as-bitcoin-bears-face-liquidation-pressure",
-      "publishedAt": "2026-10-09T11:09:04.000Z"
-    },
-    {
-      "id": "da9edb1d778f5680fb6f",
-      "source": "Cointelegraph",
-      "title": "ESMA seeks evidence tokenized collateral can be cashed out in crisis",
-      "summary": "ESMA is seeking industry feedback on the legal, liquidity and operational risks of tokenized collateral before deciding whether additional EU regulatory measures are necessary.",
-      "url": "https://cointelegraph.com/news/esma-tokenized-collateral-eu-clearinghouses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T10:49:24.000Z"
-    },
-    {
-      "id": "5da657c59c5b8d7bb0ce",
-      "source": "CoinDesk",
-      "title": "Bitcoin steadies near $82,500 after Trump rules out Iran strike before midterms",
-      "summary": "Bitcoin recovered to around $82,500 after Trump ruled out an Iran strike, but remains about 4% lower on the week, while ether has lost 9%.",
-      "url": "https://www.coindesk.com/markets/2026/10/09/bitcoin-steadies-near-usd82-500-after-trump-rules-out-iran-strike-before-midterms",
-      "publishedAt": "2026-10-09T10:44:22.000Z"
-    },
-    {
-      "id": "085891279a50eb04f24e",
-      "source": "The Block",
-      "title": "Thailand SEC issues bitcoin and ether ETF rules set to take effect Oct. 16",
-      "summary": "Thailand's SEC has limited initial crypto ETFs to bitcoin and ether, with new custody, exposure, and trading rules taking effect Oct. 16.",
-      "url": "https://www.theblock.co/news/regulation/2026-10-09-thailand-sec-issues-bitcoin-and-ether-etf-rules-set-to-take-effect-oct-16-418132",
-      "publishedAt": "2026-10-09T10:40:59.000Z"
-    },
-    {
-      "id": "72f7d20486d93333f802",
-      "source": "Cointelegraph",
-      "title": "UK sanctions three crypto exchanges tied to Russian illicit funds",
-      "summary": "The UK sanctioned crypto exchanges and payment processors, some of which were tied to thousands of Russian entities and the sanctioned HTX exchange.",
-      "url": "https://cointelegraph.com/news/uk-sanctions-crypto-exchanges-russian-illicit-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T10:34:37.000Z"
-    },
-    {
-      "id": "a216b5f98eeb115d2749",
-      "source": "The Block",
-      "title": "Sam Altman-backed bitcoin life insurer Meanwhile raises $37.5 million round led by Bain Capital Crypto",
-      "summary": "Meanwhile raised $37.5M from existing investors, bringing the Sam Altman-backed bitcoin life insurer's total funding above $180 million.",
-      "url": "https://www.theblock.co/news/deals/2026-10-09-sam-altman-backed-bitcoin-life-insurer-meanwhile-raises-37-5-million-round-led-by-bain-capital-crypto-418131",
-      "publishedAt": "2026-10-09T10:33:46.000Z"
     }
   ]
 }
