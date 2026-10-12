@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T22:06:15.108Z",
+  "generatedAt": "2026-10-12T06:08:15.527Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,102 @@
     }
   ],
   "items": [
+    {
+      "id": "0a43b3dd31139b0fc7ab",
+      "source": "CryptoSlate",
+      "title": "Ledger wallet implant exposes a gap in its authenticity check",
+      "summary": "Ledger has confirmed an unauthorized hardware implant in one affected customer's wallet as independent investigators estimate $93.2 million in suspected cryptocurrency thefts. In an Oct. 10 statement, the hardware wallet manufacturer said the discovery…",
+      "url": "https://cryptoslate.com/ledger-confirms-hidden-implant-in-crypto-wallet-as-93-million-theft-investigation-widens/",
+      "publishedAt": "2026-10-12T06:00:34.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-12T05:55:00.000Z"
+    },
+    {
+      "id": "caccd13c98072022666b",
+      "source": "Cointelegraph",
+      "title": "DATA Network to migrate to Sui, retire own chain",
+      "summary": "The migration is backed by a $30 million investment from Sui Foundation.",
+      "url": "https://cointelegraph.com/news/data-network-to-migrate-to-sui-retire-its-own-chain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-12T05:15:43.000Z"
+    },
+    {
+      "id": "d82ce10700cb949a831f",
+      "source": "CoinDesk",
+      "title": "Bitcoin shrugs off ETF outflows to trade above $84,000 as oil falls",
+      "summary": "Bitcoin is holding on to its weekend gains as oil trades lower. ETFs lost over $600 million in outflows last week.",
+      "url": "https://www.coindesk.com/markets/2026/10/12/bitcoin-shrugs-off-etf-outflows-to-trade-above-usd84-000-as-oil-falls",
+      "publishedAt": "2026-10-12T04:49:30.000Z"
+    },
+    {
+      "id": "437cada195ae90942879",
+      "source": "Cointelegraph",
+      "title": "French lawmakers back reporting rule for crypto wallets over $112K",
+      "summary": "Holders could face fines of up to 10,000 euros for failing to declare qualifying assets.",
+      "url": "https://cointelegraph.com/news/french-lawmakers-back-reporting-rule-for-crypto-wallets-over-112k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-12T04:45:15.000Z"
+    },
+    {
+      "id": "e93c512bacf730c6b7a0",
+      "source": "The Block",
+      "title": "Former Acting Chair Caroline Pham says CFTC can regulate almost everything except ‘onions and box office receipts’",
+      "summary": "Pham said the CFTC's recent proposals are 'absolutely the kind of protection' needed for crypto retail traders in the United States.",
+      "url": "https://www.theblock.co/news/regulation/2026-10-12-former-cftc-acting-chair-caroline-pham-onions-418246",
+      "publishedAt": "2026-10-12T04:33:57.000Z"
+    },
+    {
+      "id": "be8214ae6a18e7c61148",
+      "source": "CryptoSlate",
+      "title": "Aave’s USDG rollover plan has a yield below most quoted borrowing rates",
+      "summary": "February PT yield trails three quoted funding rates; GHO was cheaper in the Oct. 7 snapshot, and replacement-token rewards remain unconfirmed. The post Aave’s USDG rollover plan has a yield below most quoted borrowing rates appeared first on CryptoSlate .",
+      "url": "https://cryptoslate.com/aaves-proposed-usdg-rollover-faces-higher-borrowing-costs-and-uncertain-rewards/",
+      "publishedAt": "2026-10-12T02:00:47.000Z"
+    },
+    {
+      "id": "4093db349706934ffff3",
+      "source": "The Block",
+      "title": "Sui Foundation invests $30 million in DATA Network as AI data protocol migrates to Sui",
+      "summary": "DATA Network is set to be upgraded to run as a protocol natively on Sui, and its independent chain will be retired.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-10-11-sui-foundation-invests-30-million-data-network-418243",
+      "publishedAt": "2026-10-12T02:00:00.000Z"
+    },
+    {
+      "id": "568780164416933ffa4a",
+      "source": "Cointelegraph",
+      "title": "XRP Ledger defends emergency patch for unlimited XRP bug",
+      "summary": "The XRP Ledger Foundation pushed back against claims that its emergency security patch was forced on network operators.",
+      "url": "https://cointelegraph.com/news/xrp-ledger-defends-emergency-patch-for-unlimited-xrp-bug?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-12T01:21:29.000Z"
+    },
+    {
+      "id": "61384e2ff457ec3ae60a",
+      "source": "CryptoSlate",
+      "title": "Starknet considers leaving Ethereum for a quantum-resistant Layer 1",
+      "summary": "Starknet's STRK token more than doubled over seven days while developers considered leaving Ethereum to build an independent Layer 1 blockchain. A CoinGlass snapshot checked at 20:28 UTC on Oct. 11 showed STRK at $0.1190, up 17.7% over 24 hours and 116.7%…",
+      "url": "https://cryptoslate.com/starknet-doubles-in-a-week-as-ethereum-exit-plan-ignite-2-billion-trading-frenzy/",
+      "publishedAt": "2026-10-11T23:00:46.000Z"
+    },
+    {
+      "id": "3e629a030c841268cbaf",
+      "source": "Cointelegraph",
+      "title": "Ledger attack spreads to EU, AI finds ’18 trillion XRP’ bug: Hodler’s Digest",
+      "summary": "An user reports buying a tampered Ledger from a big retailer in Europe. Security researchers use AI to uncover a “$94 billion” XRP bug — but receive just a $250K bounty.",
+      "url": "https://cointelegraph.com/magazine/ledger-attack-spreads-to-eu-ai-finds-18-trillion-xrp-bug-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-11T22:57:53.000Z"
+    },
+    {
+      "id": "19bc7b325265167e4ed3",
+      "source": "The Block",
+      "title": "Trader nets $1.28 million on new 1,000x exchange Papertrade by moving Hyperliquid’s ETH prices",
+      "summary": "The same wallet later lost $450,000 when 30 short positions were liquidated on Saturday night after staying open for more than three hours.",
+      "url": "https://www.theblock.co/news/defi/2026-10-11-trader-nets-1-28-million-on-new-1000x-exchange-papertrade-by-moving-hyperliquids-eth-prices-418239",
+      "publishedAt": "2026-10-11T22:26:02.000Z"
+    },
     {
       "id": "76bd5b6379bf9932980e",
       "source": "CryptoSlate",
@@ -170,22 +266,6 @@
       "publishedAt": "2026-10-11T15:00:49.000Z"
     },
     {
-      "id": "6c23f6db03058ac24992",
-      "source": "CryptoSlate",
-      "title": "XRP ETFs extend a 13-week inflow streak as Bitcoin, Ethereum and Solana funds shed $1.25 billion",
-      "summary": "US-listed XRP ETFs extended their inflow streak to 13 weeks as Bitcoin, Ethereum and Solana funds suffered nearly $1.25 billion in combined withdrawals during the week ended Oct. 9. Bitcoin ETFs recorded $681.1 million in net withdrawals, while Ethereum…",
-      "url": "https://cryptoslate.com/bitcoin-ethereum-and-solana-etfs-lose-1-25-billion-as-xrp-extends-13-week-inflow-streak/",
-      "publishedAt": "2026-10-11T14:00:41.000Z"
-    },
-    {
-      "id": "5c1db5e48a5a6f1bfb6c",
-      "source": "CryptoSlate",
-      "title": "New iPhone spyware can hunt for crypto wallets and extract their data every 15 seconds",
-      "summary": "iVerify’s P7 DarkSword report describes remote commands to collect imToken-related data after an iPhone is compromised. The post New iPhone spyware can hunt for crypto wallets and extract their data every 15 seconds appeared first on CryptoSlate .",
-      "url": "https://cryptoslate.com/new-iphone-spyware-can-hunt-for-crypto-wallets-and-extract-their-data-every-15-seconds/",
-      "publishedAt": "2026-10-11T13:00:14.000Z"
-    },
-    {
       "id": "4e37611c6c3c1247a49e",
       "source": "Decrypt",
       "title": "How Zcash Plans to Hide Your Keys From AI and Quantum Attacks",
@@ -200,22 +280,6 @@
       "summary": "Investors are using blockchain-based shares for smaller and after-hours trades. The IMF says liquidity, legal rules and settlement systems have not caught up.",
       "url": "https://www.coindesk.com/business/2026/10/11/imf-finds-demand-for-tokenized-stocks-says-the-market-is-still-volatile-illiquid",
       "publishedAt": "2026-10-11T13:00:00.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-11T12:59:00.000Z"
-    },
-    {
-      "id": "9ec3ab0c141b656b7a24",
-      "source": "CryptoSlate",
-      "title": "What happens when crypto trades stocks while Wall Street sleeps?",
-      "summary": "Wall Street closes at 4 p.m., but apparently that's becoming more of a suggestion than a rule. You can now spend the evening watching Netflix and making leveraged bets on American semiconductor companies while the exchange where their shares trade is closed.…",
-      "url": "https://cryptoslate.com/who-prices-a-stock-index-when-its-shares-arent-trading/",
-      "publishedAt": "2026-10-11T12:00:20.000Z"
     },
     {
       "id": "61d3917d9f49a0ecfef5",
@@ -428,7 +492,7 @@
     {
       "id": "3c1a3581293011274a10",
       "source": "Cointelegraph",
-      "title": "THORChain exec accuses Tether of temporarily freezing USDT vaults",
+      "title": "THORChain dev accuses Tether of temporarily freezing USDT vaults",
       "summary": "Chad Barraford, technical co-founder of the network, said that the funds were frozen and then unfrozen without explanation.",
       "url": "https://cointelegraph.com/news/thorchain-tether-freezing-usdt-addresses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-09T19:04:03.000Z"
@@ -632,70 +696,6 @@
       "summary": "Bitcoin Magazine Bitcoin Core developer responds to AI & Quantum Risk Is AI address security fear-mongering? Chaincode Labs' Antoine Poinsot answers Justin Drake's viral post, breaking down quantum risk and preparation. This post Bitcoin Core developer…",
       "url": "https://bitcoinmagazine.com/videos/bitcoin-core-developer-responds-to-ai-quantum-risk",
       "publishedAt": "2026-10-09T13:38:38.000Z"
-    },
-    {
-      "id": "bb049155c8d6302e2c3e",
-      "source": "Bitcoin Magazine",
-      "title": "Building the Berkshire Hathaway of Bitcoin | Twenty One Capital CEO Rapha Zagury",
-      "summary": "Bitcoin Magazine Building the Berkshire Hathaway of Bitcoin | Twenty One Capital CEO Rapha Zagury Twenty One Capital holds 43K BTC at a discount. CEO Rapha Zagury breaks down its mNAV, share buybacks, and why Tether's backing provides a permanent edge. This…",
-      "url": "https://bitcoinmagazine.com/videos/building-the-berkshire-hathaway-of-bitcoin-twenty-one-capital-ceo-rapha-zagury",
-      "publishedAt": "2026-10-09T13:33:09.000Z"
-    },
-    {
-      "id": "70041085d65b46317e76",
-      "source": "Cointelegraph",
-      "title": "France is world’s most dangerous place for Bitcoiners: 90 attacks in 7 months",
-      "summary": "French authorities recorded 90 crypto-related cases involving kidnapping, extortion, threats and violent theft in seven months. What makes France such a hotspot?",
-      "url": "https://cointelegraph.com/magazine/france-is-worlds-most-dangerous-place-for-bitcoiners-90-attacks-in-7-months?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-09T13:30:00.000Z"
-    },
-    {
-      "id": "4af049bafa7713055895",
-      "source": "Bitcoin Magazine",
-      "title": "Calamos Investments CEO John Koudounis: Bitcoin Will Hit $1M by 2030",
-      "summary": "Bitcoin Magazine Calamos Investments CEO John Koudounis: Bitcoin Will Hit $1M by 2030 Is Bitcoin headed for a $1M awakening by 2030? Calamos CEO John Koudounis explains why institutional bank lending and ETF access will drive the surge. This post Calamos…",
-      "url": "https://bitcoinmagazine.com/videos/calamos-investments-ceo-john-koudounis-bitcoin-will-hit-1m-by-2030",
-      "publishedAt": "2026-10-09T13:28:10.000Z"
-    },
-    {
-      "id": "b9ce1592beac9a8a14ab",
-      "source": "Decrypt",
-      "title": "Bitcoin Bleeds in Uptober—How Low Can It Go? Experts Weigh In",
-      "summary": "Experts highlight several support levels, from $83,000 down to $72,000, that Bitcoin may need to test in a bearish start to Uptober.",
-      "url": "https://decrypt.co/380574/bitcoin-bleeds-in-uptober-how-low-can-it-go-experts-weigh-in",
-      "publishedAt": "2026-10-09T13:20:12.000Z"
-    },
-    {
-      "id": "de2aa379c47e4fff2bc9",
-      "source": "The Block",
-      "title": "Base creator Jesse Pollak says equities and non-dollar stablecoins will lead upcoming ‘tokenization supercycle’",
-      "summary": "Coinbase launched tokenized stocks on Base six weeks ago, with about $70 million to $100 million in daily volume, according to Pollak.",
-      "url": "https://www.theblock.co/news/defi/2026-10-09-tokenization-supercycle-base-jesse-pollak-418144",
-      "publishedAt": "2026-10-09T13:12:57.000Z"
-    },
-    {
-      "id": "90cd88f370dd99f69bd9",
-      "source": "CoinDesk",
-      "title": "DWF Labs subsidiaries sue BitGo for $141 million over alleged token lock-up breach",
-      "summary": "DWF is seeking $114 million in damages on the basis BitGo’s token sales resulted in direct losses through the fall in tokens' prices.",
-      "url": "https://www.coindesk.com/policy/2026/10/09/dwf-labs-subsidiaries-sue-bitgo-for-usd141-million-over-alleged-token-lock-up-breach",
-      "publishedAt": "2026-10-09T12:23:54.000Z"
-    },
-    {
-      "id": "3184e58066fb582a786b",
-      "source": "Decrypt",
-      "title": "UK Targets Cryptomus and TokenSpot in New Russia Sanctions Package",
-      "summary": "The package hits five crypto and payment platforms, two of which handled transactions with Russia’s A7 network, the UK government said.",
-      "url": "https://decrypt.co/380568/uk-targets-cryptomus-and-tokenspot-in-new-russia-sanctions-package",
-      "publishedAt": "2026-10-09T12:04:07.000Z"
-    },
-    {
-      "id": "fab65619425912e9e4f2",
-      "source": "Decrypt",
-      "title": "Morning Minute: Uptober Turns Sour as Crypto Majors Slide",
-      "summary": "Is this the beginning of a bigger selloff with the anniversary of 10/10 looming? Or just a leverage flush before the next leg up?",
-      "url": "https://decrypt.co/380569/morning-minute-uptober-turns-sour-as-crypto-majors-slide",
-      "publishedAt": "2026-10-09T11:41:15.000Z"
     }
   ]
 }
