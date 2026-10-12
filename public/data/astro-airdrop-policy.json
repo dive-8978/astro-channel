@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "revision": "2026-10-12-dual-plan",
+  "mode": "planning",
+  "registrationEnabled": false,
+  "claimsEnabled": false,
+  "addressCollectionEnabled": false,
+  "rewardAsset": "ASTRO",
+  "mainnetDeployment": null,
+  "separateProgramEligibility": true,
+  "allowBothProgramsAfterVerification": true,
+  "deduplicationKey": ["campaignId", "beneficiary"],
+  "registration": {
+    "campaignId": "astro-ma-registration-v1",
+    "proposedBudgetASTRO": "1000000000",
+    "targetSlots": "100000000",
+    "tiersStatus": "draft-subject-to-final-approval",
+    "tiers": [
+      {"from": 1, "to": 1000, "amountASTRO": "10000"},
+      {"from": 1001, "to": 100000, "amountASTRO": "1000"},
+      {"from": 100001, "to": 1000000, "amountASTRO": "500"},
+      {"from": 1000001, "to": 46000000, "amountASTRO": "5"},
+      {"from": 46000001, "to": 100000000, "amountASTRO": "4"}
+    ],
+    "lockYears": 1,
+    "lockStartsAt": "successful-funded-onchain-lock",
+    "exactYearConvention": null
+  },
+  "holders": {
+    "campaignId": "astro-ma-bnb-holders-v1",
+    "sourceChainId": 56,
+    "sourceToken": "MemeAstro (MA)",
+    "officialTokenContract": null,
+    "issuanceVerified": false,
+    "plannedContinuousHoldingMonths": 6,
+    "minimumHoldingUnits": null,
+    "holdingStartPolicy": null,
+    "exactMonthConvention": null,
+    "rewardRatio": null,
+    "proposedBudgetASTRO": null,
+    "rewardLockPolicy": null,
+    "distributionSchedule": null,
+    "singleSnapshotProvesContinuity": false,
+    "usesRegistrationBudget": false
+  },
+  "collector": {
+    "mode": "disabled-preview",
+    "plannedMethods": ["ma-official-qr", "manual-address-entry"],
+    "sharedVerificationPipeline": true,
+    "holdingAddressAndRecipientAreSeparateRoles": true,
+    "requiresOwnershipProofBeforeEligibility": true,
+    "persistentStorageConfigured": false
+  }
+}
