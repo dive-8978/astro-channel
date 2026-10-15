@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T21:47:01.871Z",
+  "generatedAt": "2026-10-15T04:50:11.328Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 55,
+      "itemCount": 35,
       "error": null
     },
     {
@@ -57,6 +57,94 @@
     }
   ],
   "items": [
+    {
+      "id": "2b06c18a999d4d19ef11",
+      "source": "CryptoSlate",
+      "title": "Qivalis wins Dutch EMI license, but MiCA rules block launch",
+      "summary": "The company says issuance is planned in the coming months, subject to MiCA requirements and white-paper publication. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/qivalis-wins-dutch-emi-license-but-mica-rules-block-launch/",
+      "publishedAt": "2026-10-15T04:40:28.000Z"
+    },
+    {
+      "id": "41e08cecffabb656c559",
+      "source": "The Block",
+      "title": "Bitcoin drops below $81,000 as risk-off sentiment weighs on Asian equities",
+      "summary": "Asian equities tumbled on Thursday, with South Korea's Kospi losing 8% and Japan's Nikkei 225 declining 5% during morning trading.",
+      "url": "https://www.theblock.co/news/markets/2026-10-15-bitcoin-drops-asian-equities-tumble-418623",
+      "publishedAt": "2026-10-15T04:38:48.000Z"
+    },
+    {
+      "id": "ff526ddf2965eb8d5333",
+      "source": "CoinDesk",
+      "title": "Nearly $1 billion in crypto bets liquidated as bitcoin, ether and XRP slide",
+      "summary": "Ether accounted for nearly 60% of the forced closures across the two largest cryptocurrencies, falling roughly twice as much as bitcoin.",
+      "url": "https://www.coindesk.com/markets/2026/10/15/nearly-usd1-billion-in-crypto-bets-liquidated-as-bitcoin-ether-and-xrp-slide",
+      "publishedAt": "2026-10-15T04:25:15.000Z"
+    },
+    {
+      "id": "db3c4bd0222409aeeb2c",
+      "source": "CoinDesk",
+      "title": "Bitcoin mining pool once handling 2.3% of network shuts after hashrate falls 65%",
+      "summary": "Computing power directed at Binance Pool has fallen from 26 EH/s in December to about 9 EH/s. Its remaining miners must choose another provider before a Nov. 10 cutoff.",
+      "url": "https://www.coindesk.com/markets/2026/10/15/bitcoin-mining-pool-once-handling-2-3-of-network-shuts-after-hashrate-falls-65",
+      "publishedAt": "2026-10-15T04:13:56.000Z"
+    },
+    {
+      "id": "663dd4e9857beba2f8cd",
+      "source": "CoinDesk",
+      "title": "Bitcoin wilts as Fed rate uncertainty weighs. Kospi plunges 8%",
+      "summary": "Bets on an October Fed rate hike briefly spiked to nearly 50% after Wednesday’s inflation report, but have since cooled.",
+      "url": "https://www.coindesk.com/markets/2026/10/15/bitcoin-is-back-below-usd81-000-as-fed-rate-uncertainty-weighs",
+      "publishedAt": "2026-10-15T03:57:45.000Z"
+    },
+    {
+      "id": "1c5f01e8ef5d4f65c28a",
+      "source": "Cointelegraph",
+      "title": "Bitcoin miners plunge up to 13% in Wall Street’s worst selloff since July",
+      "summary": "TeraWulf, Core Scientific, Cipher Mining and IREN each lost more than 12% as hotter inflation hit AI infrastructure companies.",
+      "url": "https://cointelegraph.com/markets/bitcoin-miners-plunge-up-to-13-in-wall-streets-worst-selloff-since-july?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-15T03:29:22.000Z"
+    },
+    {
+      "id": "83cd770beaa18b6314a1",
+      "source": "CryptoSlate",
+      "title": "Firelight forces XRP-linked tokens lockup as withdrawal delay queue grows",
+      "summary": "The October 6 activation moved existing FXRP stakes automatically into pooled cover backing, pairing fee income with claim exposure and longer withdrawals. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next.…",
+      "url": "https://cryptoslate.com/firelight-forces-xrp-linked-tokens-lockup-as-withdrawal-delay-queue-grows/",
+      "publishedAt": "2026-10-15T01:30:51.000Z"
+    },
+    {
+      "id": "7ccf4190682f17cc5943",
+      "source": "Cointelegraph",
+      "title": "VanEck seeks to withdraw application for Lido staked Ether ETF",
+      "summary": "VanEck initially filed an S-1 registration statement for the exchange-traded fund in October last year.",
+      "url": "https://cointelegraph.com/news/vaneck-seeks-to-withdraw-application-for-lido-staked-ether-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-15T01:21:52.000Z"
+    },
+    {
+      "id": "ff6a89f2432a954c3913",
+      "source": "Cointelegraph",
+      "title": "Polygon gains US payments licenses after closing Coinme deal",
+      "summary": "The deal gives Polygon access to 37 money transmitter licenses and 11 state exemptions.",
+      "url": "https://cointelegraph.com/news/polygon-gains-us-payments-licenses-after-closing-coinme-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-15T00:55:21.000Z"
+    },
+    {
+      "id": "27334b699f6633c0daf8",
+      "source": "CryptoSlate",
+      "title": "Solana sets October 21 for massive Alpenglow upgrade that could make transactions 99% faster to finalize",
+      "summary": "The mainnet plan calls for a live consensus replacement, with roughly 150ms finality dependent on network conditions and a coordinated validator handoff. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get…",
+      "url": "https://cryptoslate.com/solana-sets-october-21-for-massive-alpenglow-upgrade-that-could-make-transactions-99-faster-to-finalize/",
+      "publishedAt": "2026-10-15T00:00:17.000Z"
+    },
+    {
+      "id": "bf0b674785e0e32d321c",
+      "source": "CryptoSlate",
+      "title": "Coins.ph users face app lockout as central bank intervenes",
+      "summary": "Its October 14 response emphasizes controls to exclude offshore gambling operators and says it continues as a BSP-licensed institution. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
+      "url": "https://cryptoslate.com/coins-ph-users-face-app-lockout-as-central-bank-intervenes/",
+      "publishedAt": "2026-10-14T22:30:33.000Z"
+    },
     {
       "id": "e6ecc7a3790fa34b79e4",
       "source": "Decrypt",
@@ -306,28 +394,12 @@
       "publishedAt": "2026-10-14T15:35:36.000Z"
     },
     {
-      "id": "7bf63392e1117a4c8d2a",
-      "source": "CryptoSlate",
-      "title": "Bitcoin Fog operator’s conviction upheld without Chainalysis disclosing source code",
-      "summary": "The September 25 ruling relied on corroborated Reactor testimony and a case-specific failure to justify source-code access. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/bitcoin-fog-appeal-upheld-wallet-tracing-without-requiring-its-source-code/",
-      "publishedAt": "2026-10-14T15:30:57.000Z"
-    },
-    {
       "id": "8ad30f01ded790880092",
       "source": "CoinDesk",
       "title": "Crypto Long & Short: Why gold and bitcoin belong in the same portfolio",
       "summary": "Open the original publisher to read this report.",
       "url": "https://www.coindesk.com/coindesk-indices/2026/10/14/crypto-long-and-short-why-gold-and-bitcoin-belong-in-the-same-portfolio",
       "publishedAt": "2026-10-14T15:05:15.000Z"
-    },
-    {
-      "id": "07852b856bd97ac78d15",
-      "source": "CryptoSlate",
-      "title": "Bitcoin plunges to $81,300 support as Fed hike odds hit 55% amid $100 million crypto wipeout",
-      "summary": "Bitcoin fell below $83,000 on Wednesday as hotter-than-expected US core inflation data revived expectations of further Federal Reserve interest rate hikes, triggering a fresh wave of liquidations across the cryptocurrency market. CoinGlass data showed that…",
-      "url": "https://cryptoslate.com/bitcoin-plunges-to-81300-support-as-fed-hike-odds-hit-55-amid-100-million-crypto-wipeout/",
-      "publishedAt": "2026-10-14T15:00:32.000Z"
     },
     {
       "id": "adf937505836f49ca480",
@@ -368,14 +440,6 @@
       "summary": "The asset manager's crypto assets surged 63% to $79.6 billion as investors returned, but holdings remain 23% below year-ago levels.",
       "url": "https://www.coindesk.com/markets/2026/10/14/blackrock-s-crypto-etf-assets-surge-63-but-remain-far-below-2025-peak",
       "publishedAt": "2026-10-14T14:31:14.000Z"
-    },
-    {
-      "id": "2089f0ba4232decf499c",
-      "source": "CryptoSlate",
-      "title": "Low East Coast diesel stocks could delay inflation relief for Bitcoin investors",
-      "summary": "EIA forecasts winter distillate inventories 20–30% below normal, while falling diesel prices keep the inflation and Bitcoin implications conditional. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
-      "url": "https://cryptoslate.com/bitcoins-inflation-relief-case-faces-an-east-coast-winter-diesel-stock-gap/",
-      "publishedAt": "2026-10-14T14:30:46.000Z"
     },
     {
       "id": "a44623a12082f8a38e8e",
@@ -448,14 +512,6 @@
       "summary": "Sahil Arora says he's not done with celebrity meme coins, and that Fomo presents new possible strategies for his controversial schemes.",
       "url": "https://decrypt.co/380928/notorious-crypto-celeb-meme-coin-promoter-plots-second-wave-on-new-launchpad",
       "publishedAt": "2026-10-14T13:41:21.000Z"
-    },
-    {
-      "id": "89065cb95fb0fabd7bf7",
-      "source": "CryptoSlate",
-      "title": "Bitcoin whales accumulate ahead of crucial US inflation report as $744 million exits ETFs",
-      "summary": "Bitcoin whales are accumulating before Wednesday's US inflation report, despite $744 million in recent spot ETF withdrawals. According to an Oct. 13 CryptoQuant report, large holders have increased their combined Bitcoin holdings to 3.03 million BTC, with…",
-      "url": "https://cryptoslate.com/bitcoin-whales-accumulate-ahead-of-crucial-us-inflation-report-as-744-million-exits-etfs/",
-      "publishedAt": "2026-10-14T13:30:53.000Z"
     },
     {
       "id": "f5970eb199a0dfaa0855",
@@ -640,62 +696,6 @@
       "summary": "Co-CEO Arjun Sethi says customers want cash, crypto, tokenized stocks and credit in one place, starting with lending and cards.",
       "url": "https://decrypt.co/380912/kraken-owner-payward-to-buy-lithuanias-saldo-bank-in-eu-push",
       "publishedAt": "2026-10-14T10:21:34.000Z"
-    },
-    {
-      "id": "f9bc9ecaa892fd962851",
-      "source": "Cointelegraph",
-      "title": "Standard Chartered expands Bitcoin and Ether trading to professional investors in UAE",
-      "summary": "Standard Chartered expanded its spot crypto trading services to professional investors in the UAE region, with plans to offer access to more market participants.",
-      "url": "https://cointelegraph.com/news/standard-chartered-bitcoin-ether-trading-professional-investors-uae?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-14T10:07:03.000Z"
-    },
-    {
-      "id": "7eeaf9047a1e4c03e7ff",
-      "source": "Decrypt",
-      "title": "BitMEX Sued in UK for Return of $27M in Bitcoin Over Unlicensed Derivatives",
-      "summary": "The claim challenges 1,053 loss-making perpetual swap trades from 2018 to 2022 and also accuses the now-closed exchange of deceit.",
-      "url": "https://decrypt.co/380904/bitmex-sued-in-uk-for-return-of-27m-in-bitcoin-over-unlicensed-derivatives",
-      "publishedAt": "2026-10-14T09:54:52.000Z"
-    },
-    {
-      "id": "6128640e54dbc48c6404",
-      "source": "CoinDesk",
-      "title": "Live updates: Bitcoin falls back to $82,000 after inflation rises more than forecast",
-      "summary": "An historic turnaround lower in interest rates suggests the possibility that the bond bear market may have run its course.",
-      "url": "https://www.coindesk.com/business/2026/10/14/live-updates-bitcoin-tumbles-from-near-usd84-000-ahead-of-u-s-inflation-data",
-      "publishedAt": "2026-10-14T09:45:53.000Z"
-    },
-    {
-      "id": "baf74ccb5e6ae688d2da",
-      "source": "CoinDesk",
-      "title": "Proposed 31.4% French tax on regulated stablecoins could drive crypto traders offshore",
-      "summary": "Chainalysis' regional sales director in France Francois Volpoet warned the proposed 31.4% tax on regulated stablecoins could push traders toward unmonitored offshore channels.",
-      "url": "https://www.coindesk.com/policy/2026/10/14/proposed-french-tax-on-regulated-stablecoins-could-drive-crypto-traders-offshore",
-      "publishedAt": "2026-10-14T08:48:11.000Z"
-    },
-    {
-      "id": "3f85912463779bb312bf",
-      "source": "CoinDesk",
-      "title": "Standard Chartered unlocks direct bitcoin and ether trading for affluent UAE clients",
-      "summary": "The bank manages custody and settlement in-house via a closed-loop model, removing the need for separate crypto wallets.",
-      "url": "https://www.coindesk.com/business/2026/10/14/standard-chartered-unlocks-direct-bitcoin-and-ether-trading-for-affluent-uae-clients",
-      "publishedAt": "2026-10-14T08:10:07.000Z"
-    },
-    {
-      "id": "d6b65d2ffac364fe610b",
-      "source": "CoinDesk",
-      "title": "Coinbase, which holds 5% of all bitcoin, wants the quantum fix started now",
-      "summary": "Coinbase says bitcoin should start preparing for quantum computers now, with flexible addresses, a backup quantum-proof key and a separate debate over lost coins.",
-      "url": "https://www.coindesk.com/tech/2026/10/14/coinbase-which-holds-5-of-all-bitcoin-wants-the-quantum-fix-started-now",
-      "publishedAt": "2026-10-14T05:44:51.000Z"
-    },
-    {
-      "id": "eb070002738c61a35452",
-      "source": "Cointelegraph",
-      "title": "Starknet introduces wallet privacy feature for DeFi activity",
-      "summary": "Starknet’s Shadow Accounts allow users to obscure connections between their main wallets and DeFi activity, though transactions remain visible onchain.",
-      "url": "https://cointelegraph.com/news/starknet-introduces-wallet-privacy-feature-for-defi-activity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-14T05:32:14.000Z"
     }
   ]
 }
