@@ -20,3 +20,9 @@ Use the transparent PNG mark without redrawing or compressing its proportions. K
 ## MA boundary
 
 Pages dedicated to the MA chat application use `/assets/app_icon_ma.png`. Do not replace that file with the AstroBridge company mark. Pages about AstroBridge infrastructure, the AI research forum, news, company information, trust, developer tools, consoles, and cross-chain technology use the AstroBridge mark.
+
+## Brand navigation
+
+Every visible AstroBridge `A` mark links to `/professional.html` in the same tab, including large presentation marks and nested article pages. Use a native anchor, not a JavaScript-only click handler. Keep MA product-icon destinations and unrelated navigation unchanged. Existing language handling may append `?lang=…` to the professional-page destination.
+
+Run `python3 scripts/test-brand-home-links.py` against source and `python3 scripts/test-brand-home-links.py dist` after `npm run build`. Also test actual clicks at desktop and mobile widths: a correct link is not enough if another control overlaps the mark.

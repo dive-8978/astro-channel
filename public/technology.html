@@ -15,9 +15,11 @@ body{background:#020617;color:#fff;overflow-x:hidden}
 
 /* 左上角返回主页按钮 */
 .back-home {
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  position: relative;
+  top: auto;
+  left: auto;
+  display: inline-flex;
+  margin: 16px 20px 0;
   z-index: 999;
   color: #4cc9f0;
   font-weight: 600;
@@ -146,7 +148,7 @@ footer{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.
 <div class="container">
 
 <nav>
-  <div class="logo"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="36" height="36" style="width:1.25em;height:1.25em;margin-right:8px;vertical-align:middle;">AstroBridge</div>
+  <a class="logo" href="/professional.html" style="text-decoration:none"><img src="/assets/astrobridge-mark-256.png" alt="AstroBridge emblem" width="36" height="36" style="width:1.25em;height:1.25em;margin-right:8px;vertical-align:middle;">AstroBridge</a>
   <div class="nav-right">
     <div class="nav-links">
       <a href="vision.html">Vision</a>
