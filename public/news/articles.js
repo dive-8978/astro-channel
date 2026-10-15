@@ -1,5 +1,247 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "astrobridge-professional-website-refresh-20261015",
+    "title": "A New Window into AstroBridge: Our Professional Website Gets a Richer Look",
+    "dek": "Original illustrations, a clearer project journey and seven-language additions are now live, with existing content and familiar entry points preserved.",
+    "type": "Company Update",
+    "section": "Institution",
+    "project": "AstroBridge",
+    "phase": "Website published and checked",
+    "phaseTone": "verified",
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/connected-city-1536.webp",
+    "imageSrcset": "/assets/horizons-20261015/connected-city-768.webp 768w, /assets/horizons-20261015/connected-city-1536.webp 1536w",
+    "imageWidth": 1536,
+    "imageHeight": 1024,
+    "imageAlt": "Original concept illustration of a connected city with people, technology and shared spaces.",
+    "imageCaption": "Original concept artwork for the professional website—not a live network map.",
+    "body": [
+      "AstroBridge's professional website has a new visual chapter. Published on October 15, the update adds two original illustrations, keeps the official project mark at the center of the main artwork and gives visitors clearer paths into the technology, MA product and public resources. The work expands the existing page rather than replacing its history.",
+      "The new project journey starts in January 2026, the project origin confirmed by the team. It connects that starting point with dated design records and the work still ahead. This is a development timeline, not a company incorporation date or a mainnet launch announcement.",
+      "New content is available in seven languages. Desktop and mobile-width browser checks covered layout, artwork, navigation and expandable answers. The published page and six new supporting assets matched the reviewed release files; thirteen HTTP checks passed across the new material and existing entry points.",
+      "This release makes the project easier to explore without changing chat, calling or Chain services. A clearer website is a communication milestone, not proof of network capacity or a substitute for real-device product testing."
+    ],
+    "facts": [
+      "Professional website update published October 15; seven-language additions and existing content preserved.",
+      "Two original illustrations; official project mark retained.",
+      "Thirteen post-release HTTP checks passed; page and six supporting assets matched the candidate."
+    ],
+    "status": "Verified website publication. Mobile-width browser checks are not physical-phone acceptance; this update makes no network-performance or mainnet-readiness claim.",
+    "links": [
+      {
+        "label": "Explore the updated professional website",
+        "url": "/professional.html?lang=en"
+      },
+      {
+        "label": "Review the website source release",
+        "url": "https://github.com/dive-8978/astro-channel/commit/85c10ce4b4f32e7780a00c30ba78de1b7041781e"
+      },
+      {
+        "label": "October 15 publication and engineering record",
+        "url": "/data/company-actions-2026-10-15.json"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "AstroBridge 专业官网焕新：用更丰富的视觉与历程呈现我们的建设",
+        "dek": "原创插画、清晰的项目历程与七语新增内容已上线，原有内容和熟悉的入口继续保留。",
+        "type": "公司动态",
+        "phase": "官网已发布并核验",
+        "displayDate": "2026年10月15日",
+        "byline": "AstroBridge",
+        "imageAlt": "以人物、科技和共享空间呈现连接愿景的原创城市概念插画。",
+        "imageCaption": "专业官网原创概念插画，并非实时网络地图。",
+        "body": [
+          "AstroBridge 专业官网开启新的视觉篇章。10月15日上线的更新增加两幅原创插画，在主视觉中央保留正式项目图标，并为技术、MA 产品与公开资料提供更清晰的探索路径。本次是在原有页面上丰富内容，而不是替换已有历史。",
+          "新增项目历程从团队确认的2026年1月起点展开，将项目起步、注明日期的设计记录与后续工作连接起来。这是研发历程，不是公司注册日期，也不是主网上线公告。",
+          "新增内容覆盖七种语言。桌面与手机宽度浏览器检查涵盖布局、插画、导航和展开问答。正式页面及六个新增配套资源与审核后的发布文件一致；新旧入口合计十三项 HTTP 检查通过。",
+          "本次更新让项目更便于了解，没有修改聊天、通话或 Chain 服务。官网呈现的完善是信息公开的一步，不代表网络容量验证，也不能替代真实手机的产品验收。"
+        ],
+        "facts": [
+          "10月15日官网更新上线；新增内容覆盖七语，保留原有内容。",
+          "两幅原创插画，继续使用正式项目图标。",
+          "十三项发布后 HTTP 检查通过；页面与六个配套资源匹配候选版本。"
+        ],
+        "status": "本次核验范围为官网发布。手机宽度浏览器检查不是真机验收；本更新不宣称网络性能或主网已经达标。",
+        "links": [
+          {
+            "label": "浏览新版专业官网",
+            "url": "/professional.html?lang=zh"
+          },
+          {
+            "label": "查看官网源码发布",
+            "url": "https://github.com/dive-8978/astro-channel/commit/85c10ce4b4f32e7780a00c30ba78de1b7041781e"
+          },
+          {
+            "label": "10月15日发布与工程记录",
+            "url": "/data/company-actions-2026-10-15.json"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ma-square-efficient-playback-candidate-20261015",
+    "title": "MA Prepares a More Efficient Public-Square Video Playback Candidate",
+    "dek": "Local engineering adds native-file downloads, clearer failure stages and tightly bounded replay caching. Production rollout and real-device acceptance remain pending.",
+    "type": "Engineering Update",
+    "section": "Products",
+    "project": "MA",
+    "phase": "Local candidate; device acceptance pending",
+    "phaseTone": "active",
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-ma.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "MA product artwork.",
+    "imageCaption": "MA product artwork; not a screenshot of verified playback.",
+    "body": [
+      "Following reports of public-square videos failing to play, the AstroBridge and MA integration work now includes a locally tested playback candidate. The immediate goal is practical: make download progress visible, identify the stage of a failure and reduce repeated transfers where authorization permits. This is not an announcement that the reported playback problem has been resolved on users' phones.",
+      "The candidate downloads video to a private local file, exposes progress and cancellation, and stops downloads when the app moves into the background. It distinguishes authorization, download, integrity, file and player errors instead of treating every failure as the same message. Complete-file integrity and MP4 checks remain in place before playback.",
+      "An optional server capability combines up to four media-authorization requests. A permission-aware public-video cache is capped at 32 MiB with a 120-second reuse window. Every playback still requires fresh authorization; account separation and cleanup after authorization denial remain part of the design. Encrypted Moments, chats and account-recovery material do not enter this cache.",
+      "The October 15 engineering record reports twelve passing local validation groups, including backend regression, transfer and cache checks, UI interaction and local HTTP contract testing. JavaScript bundles and Hermes compilation completed for MA and MA full on iOS and Android. These are local build and test results, not signed native releases or successful handset playback.",
+      "The next gate is a limited iPhone and Android test covering first playback, replay, cancellation, background transitions and withdrawn content. The recorded candidate is not deployed, still downloads the complete file before playing, and does not introduce streaming or a global CDN. Broader rollout depends on those separate checks."
+    ],
+    "facts": [
+      "Twelve local validation groups passed in the October 15 candidate record.",
+      "Permission-aware public-video cache: 32 MiB maximum; 120-second reuse window; fresh authorization per play.",
+      "MA and MA full: four JavaScript bundles and four Hermes compilations; no native-device acceptance."
+    ],
+    "status": "Local candidate only at the recorded checkpoint. Not a production release, a confirmed fix on iPhone or Android, a streaming launch, or a measured global-capacity result.",
+    "links": [
+      {
+        "label": "Explore MA",
+        "url": "/painpoints.html?lang=en"
+      },
+      {
+        "label": "October 15 publication and engineering record",
+        "url": "/data/company-actions-2026-10-15.json"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "MA 广场视频播放优化候选完成本地验证",
+        "dek": "原生文件下载、分阶段错误提示与有界重播缓存已纳入本地工程；生产发布和真实手机验收仍待完成。",
+        "type": "工程进展",
+        "phase": "本地候选，待真机验收",
+        "displayDate": "2026年10月15日",
+        "byline": "AstroBridge 工程团队",
+        "imageAlt": "MA 产品主题图。",
+        "imageCaption": "MA 产品主题图，并非视频播放成功的验收截图。",
+        "body": [
+          "针对广场视频无法播放的反馈，AstroBridge 与 MA 的对接工程形成了已通过本地测试的播放优化候选。当前目标很具体：让下载进度可见、让失败阶段可定位，并在授权允许时减少重复传输。这不表示用户手机上的播放问题已经解决。",
+          "候选实现将视频下载至应用私有文件，提供进度与取消操作，并在应用退到后台时停止下载。授权、下载、完整性校验、文件和播放器错误分别呈现，不再混为同一提示。播放前的完整文件校验与 MP4 检查继续保留。",
+          "可选服务端能力最多合并四项媒体授权请求。公开广场视频缓存上限为32 MiB，可复用窗口为120秒。每次播放仍需重新授权，并保留账号隔离和授权拒绝后的清理机制。加密朋友圈、聊天及账号恢复资料不进入该缓存。",
+          "10月15日工程记录显示十二组本地验证通过，涵盖后端回归、传输与缓存、界面交互和本地 HTTP 契约联调。MA 与 MA full 的 iOS、Android JavaScript 打包及 Hermes 编译完成。这些属于本地构建与测试，不是签名原生发布，也不代表真机播放成功。",
+          "下一关是有限范围的 iPhone 与 Android 测试，覆盖首次播放、重播、取消、后台切换和已撤回内容。记录中的候选尚未部署，仍是完整下载后播放，没有引入流式播放或全球 CDN。扩大上线范围需要这些独立检查通过。"
+        ],
+        "facts": [
+          "10月15日候选记录：十二组本地验证通过。",
+          "公开视频缓存上限32 MiB、复用窗口120秒；每次播放重新授权。",
+          "MA 与 MA full：四份 JavaScript 打包及四份 Hermes 编译完成，未完成真机验收。"
+        ],
+        "status": "仅记录当时的本地候选状态，不是生产发布、iPhone 或安卓问题已解决、流媒体上线或全球容量验证。",
+        "links": [
+          {
+            "label": "了解 MA",
+            "url": "/painpoints.html?lang=zh"
+          },
+          {
+            "label": "10月15日发布与工程记录",
+            "url": "/data/company-actions-2026-10-15.json"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "astro-ai-chain-design-journey-20261015",
+    "title": "Inside Astro AI Chain: Identity, AI Coordination and Authorized Resources",
+    "dek": "A newly published design overview connects the project's January 2026 origins with a staged engineering roadmap, keeping research goals separate from production claims.",
+    "type": "Protocol Brief",
+    "section": "Protocol",
+    "project": "AstroAI Chain",
+    "phase": "Design overview published; network work continues",
+    "phaseTone": "active",
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/research-studio-1024.webp",
+    "imageSrcset": "/assets/horizons-20261015/research-studio-640.webp 640w, /assets/horizons-20261015/research-studio-1024.webp 1024w",
+    "imageWidth": 1024,
+    "imageHeight": 683,
+    "imageAlt": "Concept illustration of people and AI assistants working together in a research studio.",
+    "imageCaption": "Human–AI collaboration concept artwork—not a deployed robotics service.",
+    "body": [
+      "What does Astro AI Chain aim to connect? The new public design overview describes three complementary layers: identity and ledger records, AI task coordination, and authorized computing, storage and services. It offers a clearer way to understand the network's direction without presenting a design diagram as a completed production system.",
+      "In this design, ledger changes follow deterministic rules rather than model opinions. AI agents plan and use approved tools within explicit budgets, permissions and deadlines. Connecting a resource does not, by itself, authorize the disclosure of its private data. These boundaries are engineering requirements, not claims that every component has already been deployed.",
+      "The overview also separates product roles. MA is the application entry point, AstroBridge is the independent integration layer, and Astro AI Chain is the network under development. The project journey begins in January 2026 and includes the October 12 V1.2 design snapshot; neither date is presented as a public mainnet launch.",
+      "The published roadmap calls for sustained multi-region operation, independent integration, recovery exercises and external security review before broader opening. These remain acceptance gates. This brief announces a public explanation of the design—not a token activation, completed mainnet, independent audit or performance advantage over another network."
+    ],
+    "facts": [
+      "Public design overview available on the updated professional website.",
+      "Three design layers: identity and ledger, AI coordination, and authorized resources.",
+      "January 2026 project origin and October 12 V1.2 document snapshot are explicitly distinguished from a mainnet launch."
+    ],
+    "status": "Public design communication based on the dated V1.2 overview. Future milestones depend on implementation and acceptance; no new production-network launch is announced.",
+    "links": [
+      {
+        "label": "Read the network design overview",
+        "url": "/professional.html?lang=en#network-design"
+      },
+      {
+        "label": "Explore the project journey",
+        "url": "/professional.html?lang=en#project-journey"
+      },
+      {
+        "label": "October 15 publication and engineering record",
+        "url": "/data/company-actions-2026-10-15.json"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "走近 Astro AI Chain：身份、AI 协调与授权资源",
+        "dek": "新公开的设计概览，将2026年1月的项目起点与分阶段工程路线连接起来，清晰区分研发目标和生产能力。",
+        "type": "协议简报",
+        "phase": "设计概览已公开，网络持续研发",
+        "displayDate": "2026年10月15日",
+        "byline": "AstroBridge",
+        "imageAlt": "人物与 AI 助手在研究工作室中协作的概念插画。",
+        "imageCaption": "人类与 AI 协作概念图，并非已部署的机器人服务。",
+        "body": [
+          "Astro AI Chain 希望连接什么？新公开的设计概览介绍三个互补层次：身份与账本记录、AI 任务协调，以及获准接入的计算、存储和服务。它让网络方向更容易理解，但不会将一张设计图表述为已经完成的生产系统。",
+          "在这一设计中，账本变更遵循确定性规则，而不是模型意见。AI 代理在明确的预算、权限和期限内规划并使用获准工具。资源接入本身不构成公开其私有数据的授权。这些是工程要求，不代表每一个组件已经部署。",
+          "概览也区分各产品角色：MA 是应用入口，AstroBridge 是独立集成层，Astro AI Chain 是研发中的网络。项目历程始于2026年1月，并记录10月12日的 V1.2 设计快照；这两个日期都不是公开主网的上线日期。",
+          "公开路线包括多地区持续运行、独立接入、恢复演练与外部安全审查，通过相关验收后再扩大开放。这些仍是后续验收关卡。本简报发布的是设计说明，而不是代币启用、主网完成、独立审计通过或相较其他网络的性能优势。"
+        ],
+        "facts": [
+          "更新后的专业官网已提供公开网络设计概览。",
+          "三个设计层次：身份与账本、AI 协调、授权资源。",
+          "2026年1月项目起点和10月12日 V1.2 文档快照，均与主网上线明确区分。"
+        ],
+        "status": "基于注明日期的 V1.2 概览进行公开设计说明。未来里程碑依赖实现与验收；本次没有宣布新的生产网络上线。",
+        "links": [
+          {
+            "label": "阅读网络设计概览",
+            "url": "/professional.html?lang=zh#network-design"
+          },
+          {
+            "label": "了解项目历程",
+            "url": "/professional.html?lang=zh#project-journey"
+          },
+          {
+            "label": "10月15日发布与工程记录",
+            "url": "/data/company-actions-2026-10-15.json"
+          }
+        ]
+      }
+    }
+  },
+  {
     "slug": "astro-ai-chain-global-read-access-20261009",
     "title": "Across Four Continents: Astro AI Chain Broadens Its Global Read-Access Footprint",
     "dek": "New regional read-preview services extend the network’s reach across Africa, Europe, Australia / Oceania and South America, building a wider foundation for developers and future product integration.",

@@ -1,0 +1,60 @@
+{
+  "recordDate": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "scope": "Dated first-party publication and local engineering records. Not a continuous health monitor, independent audit or native-device acceptance.",
+  "website": {
+    "publicationDate": "2026-10-15",
+    "verifiedAt": "2026-10-15T10:55:54+08:00",
+    "sourceCommit": "85c10ce4b4f32e7780a00c30ba78de1b7041781e",
+    "page": "/professional.html",
+    "newLanguages": 7,
+    "originalIllustrations": 2,
+    "postReleaseHttpChecksPassed": 13,
+    "hashMatchedFiles": 7,
+    "existingContentPreserved": true,
+    "desktopBrowserChecked": true,
+    "mobileWidthBrowserChecked": true,
+    "physicalPhoneAcceptanceClaimed": false
+  },
+  "maPlaybackCandidate": {
+    "recordedAt": "2026-10-15T09:01:08+08:00",
+    "stage": "local-candidate",
+    "localValidationGroupsPassed": 12,
+    "javascriptBundles": 4,
+    "hermesCompilations": 4,
+    "batchAuthorizationMaximum": 4,
+    "publicCacheMaximumBytes": 33554432,
+    "reuseWindowSeconds": 120,
+    "freshAuthorizationEachPlayback": true,
+    "privateMomentsChatAndRecoveryCached": false,
+    "productionDeployed": false,
+    "nativeReleaseBuilt": false,
+    "nativeDevicePlaybackVerified": false,
+    "streamingImplemented": false,
+    "globalCdnDeployed": false,
+    "nextGate": "Limited iPhone and Android acceptance before a separately approved production rollout."
+  },
+  "chainDesign": {
+    "stage": "public-design-overview",
+    "projectOrigin": "2026-01",
+    "projectOriginBasis": "Team-confirmed project history; not company incorporation or a mainnet date.",
+    "documentVersion": "V1.2",
+    "documentSnapshotDate": "2026-10-12",
+    "publicOverview": "/professional.html?lang=en#network-design",
+    "layers": [
+      "identity and ledger",
+      "AI coordination",
+      "authorized resources"
+    ],
+    "productionMainnetLaunchAnnounced": false,
+    "tokenActivationAnnounced": false,
+    "independentAuditAnnounced": false,
+    "comparativePerformanceClaimed": false
+  },
+  "excluded": [
+    "credentials and internal deployment details",
+    "private whitepaper file",
+    "personal device or account identifiers",
+    "unverified partnerships, capacity and phone-playback claims"
+  ]
+}

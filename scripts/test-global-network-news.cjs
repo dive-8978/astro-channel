@@ -20,23 +20,24 @@ function render(query) {
 const slug = "astro-ai-chain-global-read-access-20261009";
 const en = render("?slug=" + slug);
 const zh = render("?slug=" + slug + "&lang=zh");
-assert.equal(en.articles[0].slug, slug);
+const globalStory = en.articles.find(item => item.slug === slug);
+assert.ok(globalStory);
 assert.equal(en.articles.filter(item => item.slug === slug).length, 1);
 assert.match(en.document.title, /Across Four Continents/);
 assert.equal(zh.document.title, en.document.title);
 assert.equal(zh.document.documentElement.lang, "en");
-assert.equal(en.articles[0].translations, undefined);
+assert.equal(globalStory.translations, undefined);
 assert.doesNotMatch(en.html, /article-languages|跨越四大洲/);
 assert.match(en.html, /<figure class="article-media">/);
 assert.match(en.html, /srcset=/);
 assert.match(en.html, /not a live node, validator or payment-network map/);
 assert.match(en.html, /real-asset Chain payments remain closed/);
 assert.deepEqual(render("?slug=" + slug + "&lang=unsupported").document.title, en.document.title);
-const old = en.articles[1];
+const old = en.articles.find(item => item.slug === "astro-ai-chain-staging-engineering-20261008");
 assert.equal(render("?slug=" + old.slug + "&lang=zh").document.title, old.title + " | Astro Open Infrastructure");
 assert.match(render("?slug=not-a-story").html, /Story not found/);
 for (const key of ["image", "imageSrcset"]) {
-  for (const entry of en.articles[0][key].split(",")) {
+  for (const entry of globalStory[key].split(",")) {
     const asset = entry.trim().split(" ")[0];
     assert.ok(fs.existsSync(path.join(base, asset)), asset);
   }
@@ -47,6 +48,6 @@ assert.equal(record.recordDate, "2026-10-09");
 assert.equal(record.independentValidatorsAdded, 0);
 assert.equal(record.realAssetChainPaymentsEnabled, false);
 assert.equal(record.formalMaDeployment, null);
-const newText = JSON.stringify(en.articles[0]) + JSON.stringify(record);
+const newText = JSON.stringify(globalStory) + JSON.stringify(record);
 assert.doesNotMatch(newText, /https?:\/\/[^" ]*(workers\.dev|railway|render\.com)|Bearer |privateKey|BEGIN.*PRIVATE KEY/);
 console.log("PASS English-only article, artwork, language fallback and bounded public record.");
