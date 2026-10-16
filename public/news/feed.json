@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T21:30:23.755Z",
+  "generatedAt": "2026-10-16T04:40:35.328Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 35,
+      "itemCount": 36,
       "error": null
     },
     {
@@ -57,6 +57,110 @@
     }
   ],
   "items": [
+    {
+      "id": "5384352b8ede4c3299bd",
+      "source": "CoinDesk",
+      "title": "An OpenAI agent ran out of Ethereum funds, and took from a wallet it did not own",
+      "summary": "The research model derived funded Sepolia addresses from public seed phrases, questioned whether using the money was ethical, then called the funds “effectively abandoned” and used them anyway.",
+      "url": "https://www.coindesk.com/tech/2026/10/16/an-openai-agent-ran-out-of-ethereum-funds-and-took-from-a-wallet-it-did-not-own",
+      "publishedAt": "2026-10-16T04:29:19.000Z"
+    },
+    {
+      "id": "53b5c4f6d471f0749a59",
+      "source": "CoinDesk",
+      "title": "Bitcoin buyers snap up a brief drop below $80,000 as Asian stocks rebound",
+      "summary": "Bitcoin tore back to $82,500 within two hours of dipping under $80,000, and chipmakers in Seoul recovered from their worst close since April.",
+      "url": "https://www.coindesk.com/markets/2026/10/16/bitcoin-buyers-snap-up-a-brief-drop-below-usd80-000-as-asian-stocks-rebound",
+      "publishedAt": "2026-10-16T04:14:22.000Z"
+    },
+    {
+      "id": "a903fef21753d82a3d03",
+      "source": "CryptoSlate",
+      "title": "82 criminal charges follow armed crypto abduction in Toronto",
+      "summary": "Toronto police allege attackers sought cryptocurrency and business security access; searches uncovered ammunition stolen from the military. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst…",
+      "url": "https://cryptoslate.com/82-criminal-charges-follow-armed-crypto-abduction-in-toronto/",
+      "publishedAt": "2026-10-16T02:20:21.000Z"
+    },
+    {
+      "id": "0c3bfc0b02713eb54cb1",
+      "source": "Cointelegraph",
+      "title": "MSCI adopts index exclusion rules that could oust Strategy",
+      "summary": "Strategy, Metaplanet and Upexi were previously identified for deletion under the methodology, with MSCI set to announce its final list on Nov. 11.",
+      "url": "https://cointelegraph.com/news/msci-adopts-index-exclusion-rules-that-could-oust-strategy?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-16T00:48:20.000Z"
+    },
+    {
+      "id": "35f890767ac91911c6cd",
+      "source": "CryptoSlate",
+      "title": "Ledger wants customers to trust its new $849 device as criminals compromise existing wallets",
+      "summary": "Reservations are open for the data-only device, which pairs everyday apps with hardware approvals and targets 2027 delivery. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/ledger-wants-customers-to-trust-its-new-849-device-as-criminals-compromise-existing-wallets/",
+      "publishedAt": "2026-10-16T00:00:02.000Z"
+    },
+    {
+      "id": "052c98275a90fa6f5322",
+      "source": "Cointelegraph",
+      "title": "Australia releases draft bill to adopt OECD crypto tax reporting framework",
+      "summary": "Australia is among 77 jurisdictions committed to adopting CARF, with its first international exchanges of crypto tax data expected in 2028.",
+      "url": "https://cointelegraph.com/news/australia-releases-draft-bill-to-adopt-oecd-crypto-tax-reporting-framework?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-15T23:34:19.000Z"
+    },
+    {
+      "id": "838a0ef103a2d5e7f5b8",
+      "source": "Bitcoin Magazine",
+      "title": "Brooklyn DA Pulls the Plug on Crypto Scam Network",
+      "summary": "Bitcoin Magazine Brooklyn DA Pulls the Plug on Crypto Scam Network 112 servers and 241 fake sites knocked offline in one of the largest cyber takedowns ever by a local prosecutor. This post Brooklyn DA Pulls the Plug on Crypto Scam Network first appeared on…",
+      "url": "https://bitcoinmagazine.com/news/brooklyn-da-pulls-plug-on-crypto-scam",
+      "publishedAt": "2026-10-15T23:03:27.000Z"
+    },
+    {
+      "id": "c7f7643d2e92d41c7398",
+      "source": "Cointelegraph",
+      "title": "Scammer loses $4.8M stored on tampered Ledgers: Asia Express",
+      "summary": "A scammer reportedly lost $4.8M of stolen money after storing the funds on tampered Ledgers. Bitcoin and Ether ETFs launch trading in Thailand and South Korea blocks 27 exchanges.",
+      "url": "https://cointelegraph.com/magazine/scammer-loses-48m-stored-on-tampered-ledgers-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-15T22:42:58.000Z"
+    },
+    {
+      "id": "f88391627c849f383fa6",
+      "source": "CryptoSlate",
+      "title": "Quantum fixes protect Bitcoin, but legit owners risk lockout",
+      "summary": "Nic Carter's hypothetical attack highlights why safer signatures would leave an ownership choice for holders unable to migrate or prove prior control. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get…",
+      "url": "https://cryptoslate.com/quantum-fixes-protect-bitcoin-but-legit-owners-risk-lockout/",
+      "publishedAt": "2026-10-15T22:40:17.000Z"
+    },
+    {
+      "id": "64d6ec9a31141d4058d3",
+      "source": "Decrypt",
+      "title": "Hidden Text, a Fake Mailbox: How Researchers Got Rogue AI Agents to Talk",
+      "summary": "Researchers added hidden text to contact AI agents probing Alibaba’s map service, getting replies about their tasks as investigators traced activity to Tencent Cloud infrastructure.",
+      "url": "https://decrypt.co/381109/researchers-fleet-rouge-ai-agents-talk-alibaba",
+      "publishedAt": "2026-10-15T22:16:03.000Z"
+    },
+    {
+      "id": "8d13ac714fbc2a2d6778",
+      "source": "The Block",
+      "title": "MSCI finalizes index rules that put Strategy, crypto treasury firms at risk of exclusion",
+      "summary": "MSCI's new non-operating company rules could exclude Strategy, Metaplanet and SharpLink. The final list of affected firms is due Nov. 11.",
+      "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729",
+      "publishedAt": "2026-10-15T22:15:56.000Z"
+    },
+    {
+      "id": "dc103412811a83b0f9a6",
+      "source": "Decrypt",
+      "title": "Google Says It Just Cracked One of Quantum Computing's Biggest Bottlenecks",
+      "summary": "Google's Willow chip cut errors 40x on the scarce “magic states” quantum computers burn through, a step toward smaller, useful machines—and toward ones that could threaten today's encryption.",
+      "url": "https://decrypt.co/381102/google-cracked-quantum-computing-biggest-bottlenecks",
+      "publishedAt": "2026-10-15T21:46:04.000Z"
+    },
+    {
+      "id": "e6c642f04794ad899155",
+      "source": "The Block",
+      "title": "Farcaster acquired by Balaji’s Network School, with new ‘social smart contract’ for users",
+      "summary": "Balaji Srinivasan's Network School acquired Farcaster from Neynar. Users must sign a \"social smart contract\" or drop to read-only access.",
+      "url": "https://www.theblock.co/news/ecosystems/2026-10-15-network-school-acquires-farcaster-from-neynar-418720",
+      "publishedAt": "2026-10-15T21:41:14.000Z"
+    },
     {
       "id": "ed74065fd177b7f120fe",
       "source": "CryptoSlate",
@@ -290,14 +394,6 @@
       "publishedAt": "2026-10-15T14:43:35.000Z"
     },
     {
-      "id": "df381fd6085de232b756",
-      "source": "CryptoSlate",
-      "title": "AI agents keep coming back for crypto as x402 wallet refill rate surges to 89%",
-      "summary": "Chainalysis’s rate covers wallets already active on multiple days, leaving overall retention and independent commercial demand unmeasured. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst…",
-      "url": "https://cryptoslate.com/ai-agents-keep-coming-back-for-crypto-as-x402-wallet-refill-rate-surges-to-89/",
-      "publishedAt": "2026-10-15T14:30:53.000Z"
-    },
-    {
       "id": "8e66489f6760d6cf61b0",
       "source": "Decrypt",
       "title": "Ethereum, Altcoins See 'Outsized Drawdowns' Due to Macro Pressures",
@@ -378,14 +474,6 @@
       "publishedAt": "2026-10-15T13:23:35.000Z"
     },
     {
-      "id": "3afa8f48d6cbba0f7696",
-      "source": "CryptoSlate",
-      "title": "Ethereum’s faster-exit plan would leave new validators waiting to earn",
-      "summary": "A dated three-week entry estimate shows how direct deposits and pooled holdings bear the cost of inactive staking capital. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/ethereums-faster-exit-plan-would-preserve-an-earnings-hurdle-for-new-stakers/",
-      "publishedAt": "2026-10-15T13:20:02.000Z"
-    },
-    {
       "id": "7bc0e22d6a8deadeb978",
       "source": "Bitcoin Magazine",
       "title": "Troy Cross: Number Go Up – The Solution to Bitcoin’s Marketing Problem?",
@@ -416,14 +504,6 @@
       "summary": "The scheme allegedly stole tens of millions through Russian-language Facebook ads and fake advisers, then went after victims again with fake recovery offers.",
       "url": "https://www.coindesk.com/business/2026/10/15/how-brooklyn-prosecutors-and-the-fbi-took-down-a-massive-crypto-fraud-network-targeting-russian-speakers",
       "publishedAt": "2026-10-15T12:35:24.000Z"
-    },
-    {
-      "id": "ad5519be91ca13d7ec00",
-      "source": "CryptoSlate",
-      "title": "Crypto scammers stole millions from victims, then returned pretending to help recover their money",
-      "summary": "Prosecutors say recovered data showed the same scammers returning weeks later with false promises to recover stolen assets. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/crypto-scammers-stole-millions-from-victims-then-returned-pretending-to-help-recover-their-money/",
-      "publishedAt": "2026-10-15T12:20:40.000Z"
     },
     {
       "id": "dd7ba54aaa3e4ba85dfc",
@@ -616,86 +696,6 @@
       "summary": "The consultation follows Parliament’s passage of digital asset legislation in April, with Australia’s securities regulator now proposing capital, custody and trading standards for crypto platforms.",
       "url": "https://cointelegraph.com/news/australia-seeks-feedback-on-crypto-platform-rules-ahead-of-2027-rollout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-15T05:00:40.000Z"
-    },
-    {
-      "id": "41e08cecffabb656c559",
-      "source": "The Block",
-      "title": "Bitcoin drops below $81,000 as risk-off sentiment weighs on Asian equities",
-      "summary": "Asian equities tumbled on Thursday, with South Korea's Kospi losing 8% and Japan's Nikkei 225 declining 5% during morning trading.",
-      "url": "https://www.theblock.co/news/markets/2026-10-15-bitcoin-drops-asian-equities-tumble-418623",
-      "publishedAt": "2026-10-15T04:38:48.000Z"
-    },
-    {
-      "id": "ff526ddf2965eb8d5333",
-      "source": "CoinDesk",
-      "title": "Nearly $1 billion in crypto bets liquidated as bitcoin, ether and XRP slide",
-      "summary": "Ether accounted for nearly 60% of the forced closures across the two largest cryptocurrencies, falling roughly twice as much as bitcoin.",
-      "url": "https://www.coindesk.com/markets/2026/10/15/nearly-usd1-billion-in-crypto-bets-liquidated-as-bitcoin-ether-and-xrp-slide",
-      "publishedAt": "2026-10-15T04:25:15.000Z"
-    },
-    {
-      "id": "db3c4bd0222409aeeb2c",
-      "source": "CoinDesk",
-      "title": "Bitcoin mining pool once handling 2.3% of network shuts after hashrate falls 65%",
-      "summary": "Computing power directed at Binance Pool has fallen from 26 EH/s in December to about 9 EH/s. Its remaining miners must choose another provider before a Nov. 10 cutoff.",
-      "url": "https://www.coindesk.com/markets/2026/10/15/bitcoin-mining-pool-once-handling-2-3-of-network-shuts-after-hashrate-falls-65",
-      "publishedAt": "2026-10-15T04:13:56.000Z"
-    },
-    {
-      "id": "663dd4e9857beba2f8cd",
-      "source": "CoinDesk",
-      "title": "Bitcoin wilts as Fed rate uncertainty weighs. Kospi plunges 8%",
-      "summary": "Bets on an October Fed rate hike briefly spiked to nearly 50% after Wednesday’s inflation report, but have since cooled.",
-      "url": "https://www.coindesk.com/markets/2026/10/15/bitcoin-is-back-below-usd81-000-as-fed-rate-uncertainty-weighs",
-      "publishedAt": "2026-10-15T03:57:45.000Z"
-    },
-    {
-      "id": "1c5f01e8ef5d4f65c28a",
-      "source": "Cointelegraph",
-      "title": "Bitcoin miners plunge up to 13% in Wall Street’s worst selloff since July",
-      "summary": "TeraWulf, Core Scientific, Cipher Mining and IREN each lost more than 12% as hotter inflation hit AI infrastructure companies.",
-      "url": "https://cointelegraph.com/markets/bitcoin-miners-plunge-up-to-13-in-wall-streets-worst-selloff-since-july?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-15T03:29:22.000Z"
-    },
-    {
-      "id": "7ccf4190682f17cc5943",
-      "source": "Cointelegraph",
-      "title": "VanEck seeks to withdraw application for Lido staked Ether ETF",
-      "summary": "VanEck initially filed an S-1 registration statement for the exchange-traded fund in October last year.",
-      "url": "https://cointelegraph.com/news/vaneck-seeks-to-withdraw-application-for-lido-staked-ether-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-15T01:21:52.000Z"
-    },
-    {
-      "id": "ff6a89f2432a954c3913",
-      "source": "Cointelegraph",
-      "title": "Polygon gains US payments licenses after closing Coinme deal",
-      "summary": "The deal gives Polygon access to 37 money transmitter licenses and 11 state exemptions.",
-      "url": "https://cointelegraph.com/news/polygon-gains-us-payments-licenses-after-closing-coinme-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-15T00:55:21.000Z"
-    },
-    {
-      "id": "e6ecc7a3790fa34b79e4",
-      "source": "Decrypt",
-      "title": "Godfather of AI and 400 Scientists Want AI Models Cut Off From the Internet",
-      "summary": "After a summer of AI models escaping test environments and hacking real companies, hundreds of researchers say the internet itself should be treated as a security boundary.",
-      "url": "https://decrypt.co/380998/scientists-want-ai-cut-off-from-internet",
-      "publishedAt": "2026-10-14T21:46:04.000Z"
-    },
-    {
-      "id": "d12c9ce29b4ad4ec79e6",
-      "source": "Bitcoin Magazine",
-      "title": "Russia’s Central Bank Authorizes Sberbank to Exchange Cryptocurrencies",
-      "summary": "Bitcoin Magazine Russia’s Central Bank Authorizes Sberbank to Exchange Cryptocurrencies Sberbank will debut its bitcoin-related products in December. This post Russia’s Central Bank Authorizes Sberbank to Exchange Cryptocurrencies first appeared on Bitcoin…",
-      "url": "https://bitcoinmagazine.com/news/russia-central-bank-gives-sberbank-license",
-      "publishedAt": "2026-10-14T21:30:14.000Z"
-    },
-    {
-      "id": "5604326a2f4255e5f7b5",
-      "source": "Decrypt",
-      "title": "Developer Who Cloned Photoshop With AI Just Did the Same to Microsoft Office",
-      "summary": "Developer Brandon Thomas used Anthropic's Claude to build free, open-source replicas of Word, Excel and PowerPoint. They're rough, but they show how cheap cloning software has become.",
-      "url": "https://decrypt.co/380991/developer-cloned-photoshop-ai-just-did-same-microsoft-office",
-      "publishedAt": "2026-10-14T21:16:03.000Z"
     }
   ]
 }
