@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T04:38:00.294Z",
+  "generatedAt": "2026-10-17T10:54:10.700Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 57,
+      "itemCount": 37,
       "error": null
     },
     {
@@ -57,6 +57,54 @@
     }
   ],
   "items": [
+    {
+      "id": "f875c4be5e444f422695",
+      "source": "Cointelegraph",
+      "title": "Circle’s Allaire says stablecoin issuer looking to enter 40 developing markets: Report",
+      "summary": "Markets in Southeast Asia, Latin America, Africa and the Middle East see increasing demand for stablecoins.",
+      "url": "https://cointelegraph.com/news/circles-allaire-says-stablecoin-issuer-looking-to-enter-40-developing-markets-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-17T10:00:07.000Z"
+    },
+    {
+      "id": "15bbc931e1dca9a78fbf",
+      "source": "Cointelegraph",
+      "title": "Lagarde says euro-area economy is resilient, digital euro imminent",
+      "summary": "“The digital euro will further stimulate innovation and competition in retail payments,” according to the ECB president.",
+      "url": "https://cointelegraph.com/news/lagarde-says-euro-area-economy-is-resilient-digital-euro-imminent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-17T08:32:11.000Z"
+    },
+    {
+      "id": "f70044c7d5a0cee8fbbd",
+      "source": "Cointelegraph",
+      "title": "Bitget to discontinue services for some users in one-off exercise",
+      "summary": "Bitget says user funds are safe and exchange will continue to operate during the change.",
+      "url": "https://cointelegraph.com/news/bitget-to-discontinue-services-for-some-users-in-one-off-exercise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-17T07:26:57.000Z"
+    },
+    {
+      "id": "3eec954e725fb1905fae",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s inflation hedge has a hidden cost, and leverage makes it worse",
+      "summary": "Borrowing costs, missed interest income, and futures fees can all eat into returns even when Bitcoin holds its value. That's a big problem, and it gets even worse when inflation stays high. September's US inflation report showed consumer prices up 3.7% year…",
+      "url": "https://cryptoslate.com/bitcoins-inflation-hedge-has-a-hidden-cost-and-leverage-makes-it-worse/",
+      "publishedAt": "2026-10-17T07:00:46.000Z"
+    },
+    {
+      "id": "56e318bfebe415339265",
+      "source": "CoinDesk",
+      "title": "‘Wow, it’s a real discovery’: Claude cracks a 25-year NSA number mystery",
+      "summary": "Numbers the spy agency handed over in the 1990s, long suspected of hiding a backdoor, turn out to have come from a basic computer program. Bitcoin was never on that list, and its quantum problem hasn’t gone anywhere.",
+      "url": "https://www.coindesk.com/tech/2026/10/17/wow-it-s-a-real-discovery-claude-cracks-a-25-year-nsa-number-mystery",
+      "publishedAt": "2026-10-17T06:39:48.000Z"
+    },
+    {
+      "id": "a212e2d60696d7fa93ff",
+      "source": "CryptoSlate",
+      "title": "Cardano shifts $26M to USDCx as bridge controls freeze payouts",
+      "summary": "Converted Intersect-administered budgets reduce ADA exposure, while milestone release and stablecoin cash-out conditions still govern access to usable money. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next.…",
+      "url": "https://cryptoslate.com/cardano-shifts-26m-to-usdcx-as-bridge-controls-freeze-payouts/",
+      "publishedAt": "2026-10-17T05:00:24.000Z"
+    },
     {
       "id": "bd87516a24b7c18a9eb9",
       "source": "CoinDesk",
@@ -322,14 +370,6 @@
       "publishedAt": "2026-10-16T14:11:03.000Z"
     },
     {
-      "id": "1e88e10c321cb52ad693",
-      "source": "CryptoSlate",
-      "title": "Fortitude sold $8.3 million in borrowed Zcash to fund its mining expansion",
-      "summary": "Fortitude’s dollar-repayable ZEC borrowing can finance expansion through coin sales, while additional machines compete for existing block rewards. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
-      "url": "https://cryptoslate.com/zcashs-mining-boom-can-grow-without-creating-a-new-token-bid/",
-      "publishedAt": "2026-10-16T14:00:05.000Z"
-    },
-    {
       "id": "6b1763a364f820be1cb0",
       "source": "Cointelegraph",
       "title": "Ledger’s early implant warnings deserved more action, Karpelès says",
@@ -376,14 +416,6 @@
       "summary": "Bitcoin Magazine Morgan Stanley’s Amy Oldenburg: The Digital Gold Investment Case for Bitcoin Bitcoin's digital gold case is strong, says Morgan Stanley’s Amy Oldenburg, but she wants less tech risk correlation and more gold-like trade behavior. This post…",
       "url": "https://bitcoinmagazine.com/videos/morgan-stanleys-amy-oldenburg-the-digital-gold-investment-case-for-bitcoin",
       "publishedAt": "2026-10-16T13:20:36.000Z"
-    },
-    {
-      "id": "eb4030be25bafd4ebe64",
-      "source": "CryptoSlate",
-      "title": "Institutions managing €800 billion ask what crypto tokens actually earn",
-      "summary": "Brendan Ma, head of investment strategy at the Arbitrum Foundation, said he met with representatives of institutions managing about €800 billion in assets over 48 hours of closed-door meetings to discuss crypto. Private bankers and wealth managers kept…",
-      "url": "https://cryptoslate.com/e800b-in-wealth-managers-rethink-how-they-allocate-to-crypto/",
-      "publishedAt": "2026-10-16T13:00:10.000Z"
     },
     {
       "id": "3dbf5fbfdeba609c427a",
@@ -664,38 +696,6 @@
       "summary": "Researchers added hidden text to contact AI agents probing Alibaba’s map service, getting replies about their tasks as investigators traced activity to Tencent Cloud infrastructure.",
       "url": "https://decrypt.co/381109/researchers-fleet-rouge-ai-agents-talk-alibaba",
       "publishedAt": "2026-10-15T22:16:03.000Z"
-    },
-    {
-      "id": "8d13ac714fbc2a2d6778",
-      "source": "The Block",
-      "title": "MSCI finalizes index rules that put Strategy, crypto treasury firms at risk of exclusion",
-      "summary": "MSCI's new non-operating company rules could exclude Strategy, Metaplanet and SharpLink. The final list of affected firms is due Nov. 11.",
-      "url": "https://www.theblock.co/news/business/2026-10-15-msci-rules-could-exclude-strategy-mstr-from-indexes-418729",
-      "publishedAt": "2026-10-15T22:15:56.000Z"
-    },
-    {
-      "id": "dc103412811a83b0f9a6",
-      "source": "Decrypt",
-      "title": "Google Says It Just Cracked One of Quantum Computing's Biggest Bottlenecks",
-      "summary": "Google's Willow chip cut errors 40x on the scarce “magic states” quantum computers burn through, a step toward smaller, useful machines—and toward ones that could threaten today's encryption.",
-      "url": "https://decrypt.co/381102/google-cracked-quantum-computing-biggest-bottlenecks",
-      "publishedAt": "2026-10-15T21:46:04.000Z"
-    },
-    {
-      "id": "e6c642f04794ad899155",
-      "source": "The Block",
-      "title": "Farcaster acquired by Balaji’s Network School, with new ‘social smart contract’ for users",
-      "summary": "Balaji Srinivasan's Network School acquired Farcaster from Neynar. Users must sign a \"social smart contract\" or drop to read-only access.",
-      "url": "https://www.theblock.co/news/ecosystems/2026-10-15-network-school-acquires-farcaster-from-neynar-418720",
-      "publishedAt": "2026-10-15T21:41:14.000Z"
-    },
-    {
-      "id": "3e4ab518e47cd91757a7",
-      "source": "Decrypt",
-      "title": "Russia Will Soon Ban Peer-to-Peer Bitcoin Trading, Central Bank Confirms",
-      "summary": "Russians have until July 1, 2027 to buy and sell crypto directly with each other. After that, every trade runs through a broker or exchange approved by the Bank of Russia.",
-      "url": "https://decrypt.co/381079/russia-ban-peer-to-peer-bitcoin-trading",
-      "publishedAt": "2026-10-15T20:31:04.000Z"
     }
   ]
 }
