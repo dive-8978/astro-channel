@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T21:20:00.592Z",
+  "generatedAt": "2026-10-17T04:38:00.294Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 37,
+      "itemCount": 57,
       "error": null
     },
     {
@@ -57,6 +57,38 @@
     }
   ],
   "items": [
+    {
+      "id": "bd87516a24b7c18a9eb9",
+      "source": "CoinDesk",
+      "title": "Satoshi-era bitcoin faces a bigger quantum threat after Google’s new Willow breakthrough",
+      "summary": "Google says its Willow chip can prepare the special quantum states needed for advanced calculations with about 40 times fewer errors, reducing one of the hardware bottlenecks behind any future attempt to crack bitcoin wallets.",
+      "url": "https://www.coindesk.com/tech/2026/10/16/satoshi-era-bitcoin-faces-a-bigger-quantum-threat-after-google-s-new-willow-breakthrough",
+      "publishedAt": "2026-10-17T02:30:00.000Z"
+    },
+    {
+      "id": "e3b572980c705fa5d696",
+      "source": "CryptoSlate",
+      "title": "Visa and Mastercard adopt USDC payouts across 200 countries",
+      "summary": "Visa's Inyo rollout and Mastercard's BVNK platform give businesses stablecoin funding routes, subject to eligibility and rollout limits. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
+      "url": "https://cryptoslate.com/visa-and-mastercard-adopt-usdc-payouts-across-200-countries/",
+      "publishedAt": "2026-10-17T02:00:33.000Z"
+    },
+    {
+      "id": "5a43c98ebf45af12547c",
+      "source": "CryptoSlate",
+      "title": "Cross River Bank links $2.4B RLUSD to core banking system",
+      "summary": "The bank says fintechs can access dollar and RLUSD payments through one API, with availability limited to some US states. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/cross-river-bank-links-2-4b-rlusd-to-core-banking-system/",
+      "publishedAt": "2026-10-16T22:30:17.000Z"
+    },
+    {
+      "id": "7f2a8a997e0384aba418",
+      "source": "Bitcoin Magazine",
+      "title": "Poetic Justice: Scammer Lost $5M in Bitcoin After Being Targeted by Ledger Thieves",
+      "summary": "Bitcoin Magazine Poetic Justice: Scammer Lost $5M in Bitcoin After Being Targeted by Ledger Thieves Chainalysis has revealed that a victim of last week’s Ledger theft was a scammer themself. This post Poetic Justice: Scammer Lost $5M in Bitcoin After Being…",
+      "url": "https://bitcoinmagazine.com/news/scammer-lost-bitcoin-to-ledger-thieves",
+      "publishedAt": "2026-10-16T22:12:36.000Z"
+    },
     {
       "id": "076cb952497e90b9f559",
       "source": "CryptoSlate",
@@ -370,14 +402,6 @@
       "publishedAt": "2026-10-16T12:22:18.000Z"
     },
     {
-      "id": "425c397f691429f28dbd",
-      "source": "CryptoSlate",
-      "title": "Oil stocks on land are near a decade low, complicating Bitcoin’s inflation relief hopes",
-      "summary": "The IEA’s September estimates show oil accumulating at sea while land-based buffers shrink, leaving inflation and financing relief uncertain. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
-      "url": "https://cryptoslate.com/bitcoins-inflation-relief-case-faces-a-113-million-barrel-onshore-oil-draw/",
-      "publishedAt": "2026-10-16T12:00:11.000Z"
-    },
-    {
       "id": "020687018ac99ef80922",
       "source": "Decrypt",
       "title": "Morning Minute: Google Clears a Major Quantum Hurdle, Bitcoin Still Safe",
@@ -416,14 +440,6 @@
       "summary": "Your day-ahead look for Oct. 16, 2026",
       "url": "https://www.coindesk.com/daybook-us/2026/10/16/traders-will-soon-be-able-to-bet-on-whether-coinbase-robinhood-and-marathon-will-hit-their-targets",
       "publishedAt": "2026-10-16T11:15:00.000Z"
-    },
-    {
-      "id": "1eda7313af980d0c1b5b",
-      "source": "CryptoSlate",
-      "title": "Ripple opens Wall Street’s door to Hyperliquid’s $59 billion trading market",
-      "summary": "Institutions trade swaps referencing more than 100 traditional financial markets around the clock, with Ripple Prime as the principal counterparty, Ripple announced on Oct. 15. The swaps cover stocks, equity indices, ETFs, metals, energy and foreign…",
-      "url": "https://cryptoslate.com/ripple-opens-wall-streets-door-to-hyperliquids-59-billion-trading-market/",
-      "publishedAt": "2026-10-16T11:00:56.000Z"
     },
     {
       "id": "aeba4814b183b564278a",
@@ -634,14 +650,6 @@
       "publishedAt": "2026-10-15T23:34:19.000Z"
     },
     {
-      "id": "838a0ef103a2d5e7f5b8",
-      "source": "Bitcoin Magazine",
-      "title": "Brooklyn DA Pulls the Plug on Crypto Scam Network",
-      "summary": "Bitcoin Magazine Brooklyn DA Pulls the Plug on Crypto Scam Network 112 servers and 241 fake sites knocked offline in one of the largest cyber takedowns ever by a local prosecutor. This post Brooklyn DA Pulls the Plug on Crypto Scam Network first appeared on…",
-      "url": "https://bitcoinmagazine.com/news/brooklyn-da-pulls-plug-on-crypto-scam",
-      "publishedAt": "2026-10-15T23:03:27.000Z"
-    },
-    {
       "id": "c7f7643d2e92d41c7398",
       "source": "Cointelegraph",
       "title": "Scammer loses $4.8M stored on tampered Ledgers: Asia Express",
@@ -688,14 +696,6 @@
       "summary": "Russians have until July 1, 2027 to buy and sell crypto directly with each other. After that, every trade runs through a broker or exchange approved by the Bank of Russia.",
       "url": "https://decrypt.co/381079/russia-ban-peer-to-peer-bitcoin-trading",
       "publishedAt": "2026-10-15T20:31:04.000Z"
-    },
-    {
-      "id": "c1a902cc6dd37c88376d",
-      "source": "Cointelegraph",
-      "title": "Binance.US seeks $1B valuation in potential $100M funding round: Report",
-      "summary": "The crypto exchange was reportedly looking to use the additional funding to regain market share following Binance’s 2023 settlement with US authorities.",
-      "url": "https://cointelegraph.com/news/binance-us-funding-valuation-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-15T20:21:11.000Z"
     }
   ]
 }
