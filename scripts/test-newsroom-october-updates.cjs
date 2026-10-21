@@ -14,7 +14,8 @@ const slugs = [
   "astro-ai-chain-design-journey-20261015"
 ];
 assert.equal(new Set(articles.map(article => article.slug)).size, articles.length);
-assert.deepEqual(Array.from(articles.slice(0, 3), article => article.slug), slugs);
+const historicalOctoberArticles = articles.filter(article => slugs.includes(article.slug));
+assert.deepEqual(Array.from(historicalOctoberArticles, article => article.slug), slugs);
 function render(slug, language) {
   const root = { innerHTML: "" };
   const description = { content: "" };
@@ -76,15 +77,16 @@ assert.equal(record.maPlaybackCandidate.streamingImplemented, false);
 assert.equal(record.maPlaybackCandidate.privateMomentsChatAndRecoveryCached, false);
 assert.equal(record.chainDesign.productionMainnetLaunchAnnounced, false);
 assert.equal(record.chainDesign.independentAuditAnnounced, false);
-assert.equal(articles[1].phaseTone, "active");
-assert.match(articles[1].dek, /remain pending/);
-assert.match(articles[1].status, /Local candidate only/);
-assert.match(articles[2].status, /no new production-network launch/);
-const safeCopy = JSON.stringify(articles.slice(0, 3)) + JSON.stringify(record);
+assert.equal(historicalOctoberArticles[1].phaseTone, "active");
+assert.match(historicalOctoberArticles[1].dek, /remain pending/);
+assert.match(historicalOctoberArticles[1].status, /Local candidate only/);
+assert.match(historicalOctoberArticles[2].status, /no new production-network launch/);
+const safeCopy = JSON.stringify(historicalOctoberArticles) + JSON.stringify(record);
 assert.doesNotMatch(safeCopy, /\/Users\/|Bearer |BEGIN.*PRIVATE KEY|baow59671|ssh |root@/);
 const newsroom = fs.readFileSync(path.join(publicRoot, "newsroom.html"), "utf8");
-assert.ok(newsroom.includes('class="lead-story" href="news/article.html?slug=' + slugs[0] + '"'));
-assert.match(newsroom, /news\/articles\.js\?v=20261015/);
-assert.match(fs.readFileSync(path.join(publicRoot, "news/article.html"), "utf8"), /articles\.js\?v=20261015/);
+const leadSlug = newsroom.match(/class="lead-story" href="news\/article\.html\?slug=([^"]+)"/)?.[1];
+assert.ok(articles.some(article => article.slug === leadSlug));
+assert.match(newsroom, /news\/articles\.js\?v=20261021/);
+assert.match(fs.readFileSync(path.join(publicRoot, "news/article.html"), "utf8"), /articles\.js\?v=20261021/);
 checkLocalLink(record.chainDesign.publicOverview);
 console.log("PASS three bilingual updates, scoped claims, local links, artwork, lead story and cache version.");

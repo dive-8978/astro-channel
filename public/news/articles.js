@@ -1,5 +1,89 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "ma-next-chapter-in-connection-20261021",
+    "title": "A New Chapter in Connection",
+    "dek": "New release candidates for MA and MA full carry forward a focus on conversations, community, and the people who matter.",
+    "type": "Product Update",
+    "section": "Products",
+    "project": "MA",
+    "phase": "Release candidate",
+    "phaseTone": "active",
+    "date": "2026-10-21",
+    "displayDate": "October 21, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261021/01-ma-release-candidate-concept.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "AI-generated concept artwork, not an app screenshot or a map of operating network nodes.",
+    "imageCaption": "AI-generated concept artwork, not an app screenshot or a map of operating network nodes.",
+    "body": [
+      "MA begins with a simple idea: the people who matter should feel closer.",
+      "New release candidates for MA and MA full mark the next chapter of that work. Our attention is on the everyday experience of conversation, community, and moving naturally through the app.",
+      "We are refining the details that shape those moments, from familiar controls to the flow between screens. Device validation continues as we prepare the next release, with the same human focus guiding what comes next."
+    ],
+    "facts": [
+      "New release candidates for MA and MA full carry forward a focus on conversations, community, and the people who matter."
+    ],
+    "status": "Refinement and device validation continue.",
+    "links": []
+  },
+  {
+    "slug": "astrobridge-strengthening-foundation-20261021",
+    "title": "Strengthening the Foundation",
+    "dek": "AstroBridge's latest deployed upgrades strengthen connection safeguards and proactive monitoring.",
+    "type": "Infrastructure Update",
+    "section": "Engineering",
+    "project": "AstroBridge",
+    "phase": "Infrastructure update deployed",
+    "phaseTone": "verified",
+    "date": "2026-10-21",
+    "displayDate": "October 21, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261021/02-astrobridge-foundation-concept.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "AI-generated concept artwork, not an app screenshot or a map of operating network nodes.",
+    "imageCaption": "AI-generated concept artwork, not an app screenshot or a map of operating network nodes.",
+    "body": [
+      "AstroBridge has deployed a new round of infrastructure upgrades, strengthening connection safeguards and expanding proactive monitoring.",
+      "This work supports a continuing focus on the foundations behind the experience: well-maintained services, earlier operational awareness, and deliberate improvements over time.",
+      "As we build non-custodial intent infrastructure, that discipline remains part of the product itself. A clear interface is supported by careful work beneath it, and each round of maintenance helps prepare the foundation for the road ahead."
+    ],
+    "facts": [
+      "AstroBridge's latest deployed upgrades strengthen connection safeguards and proactive monitoring."
+    ],
+    "status": "AstroBridge has deployed a new round of infrastructure upgrades, strengthening connection safeguards and expanding proactive monitoring.",
+    "links": []
+  },
+  {
+    "slug": "ma-astrobridge-connection-choice-control-20261021",
+    "title": "Connection. Choice. Control.",
+    "dek": "MA and AstroBridge share a vision for a more open digital experience, with user authorization at its heart.",
+    "type": "Company Note",
+    "section": "Institution",
+    "project": "AstroBridge",
+    "phase": "Product vision",
+    "phaseTone": "planned",
+    "date": "2026-10-21",
+    "displayDate": "October 21, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261021/03-ma-astrobridge-choice-concept.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "AI-generated concept artwork, not an app screenshot or a map of operating network nodes.",
+    "imageCaption": "AI-generated concept artwork, not an app screenshot or a map of operating network nodes.",
+    "body": [
+      "MA puts human connection at the centre of its purpose: conversations among family, friends, and communities. AstroBridge contributes a complementary direction through non-custodial intent infrastructure, with user authorization guiding how actions are approved.",
+      "Together, they shape a vision for digital experiences that feel more open and more approachable. Clear choices should sit alongside ease of use, and control of assets should remain with the people who own them.",
+      "This is the direction guiding our work as the MA and AstroBridge experience continues to develop."
+    ],
+    "facts": [
+      "MA and AstroBridge share a vision for a more open digital experience, with user authorization at its heart."
+    ],
+    "status": "This is the direction guiding our work as the MA and AstroBridge experience continues to develop.",
+    "links": []
+  },
+  {
     "slug": "astrobridge-professional-website-refresh-20261015",
     "title": "A New Window into AstroBridge: Our Professional Website Gets a Richer Look",
     "dek": "Original illustrations, a clearer project journey and seven-language additions are now live, with existing content and familiar entry points preserved.",
