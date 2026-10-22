@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T21:48:38.846Z",
+  "generatedAt": "2026-10-22T04:59:57.912Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,78 @@
     }
   ],
   "items": [
+    {
+      "id": "f42bdeb6d51ca2882212",
+      "source": "CoinDesk",
+      "title": "Bitcoin ETFs attract $1.08 billion in 3 days but it may not be enough for a steep rally",
+      "summary": "Past steep rallies ran on about $235 million a day of net inflows into ETFs. The funds are yet to match that pace, according to data analyzed by CoinDesk.",
+      "url": "https://www.coindesk.com/markets/2026/10/22/bitcoin-etfs-attract-usd1-08-billion-in-3-days-but-it-may-not-be-enough-for-a-steep-rally",
+      "publishedAt": "2026-10-22T04:41:59.000Z"
+    },
+    {
+      "id": "48ec6708f25ca8b90e2c",
+      "source": "CoinDesk",
+      "title": "XRP Ledger bug fix moved to November after validator support dipped for two hours",
+      "summary": "The fix lost its two-week countdown less than two days from the finish after support slipped to 26 of 35 validators. It’s now back at 31.",
+      "url": "https://www.coindesk.com/tech/2026/10/22/xrp-ledger-bug-fix-moved-to-november-after-validator-support-dipped-for-two-hours",
+      "publishedAt": "2026-10-22T04:36:20.000Z"
+    },
+    {
+      "id": "ec71c70850174fb97b94",
+      "source": "CoinDesk",
+      "title": "Bitcoin gives back its run at $85,000 as Tesla and Meta fail to calm AI nerves",
+      "summary": "BTC broke through its $84,000 ceiling late Wednesday, then slid back to the $82,500 support analysts are watching as tech futures fell.",
+      "url": "https://www.coindesk.com/markets/2026/10/22/bitcoin-gives-back-its-run-at-usd85-000-as-tesla-and-meta-fail-to-calm-ai-nerves",
+      "publishedAt": "2026-10-22T03:51:34.000Z"
+    },
+    {
+      "id": "fb6ccbb959fd6e685e3b",
+      "source": "CryptoSlate",
+      "title": "OCC waiver rule puts active stablecoin issuers on notice",
+      "summary": "Existing US issuers awaiting OCC approval need discretionary relief to keep issuing from Jan. 18, 2027; filing alone is insufficient. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
+      "url": "https://cryptoslate.com/occ-waiver-rule-puts-active-stablecoin-issuers-on-notice/",
+      "publishedAt": "2026-10-22T03:20:53.000Z"
+    },
+    {
+      "id": "38439c4b39d51c00c294",
+      "source": "Cointelegraph",
+      "title": "PHP Foundation admits ‘structural failure’ delayed critical security fix",
+      "summary": "Government websites and online services were disrupted after concerns about a PHP bug that could allow attackers to take control of vulnerable servers.",
+      "url": "https://cointelegraph.com/news/php-foundation-admits-structural-failure-delayed-critical-security-fix?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-22T00:44:00.000Z"
+    },
+    {
+      "id": "fb8c9a8f1f8efeefaf24",
+      "source": "The Block",
+      "title": "Aerodrome and Velodrome merge to launch Aero across seven blockchain networks",
+      "summary": "Aerodrome and Velodrome have merged to launch Aero across Ethereum mainnet, Base, Robinhood Chain, Ink, OP Mainnet, Arc, and Arbitrum.",
+      "url": "https://www.theblock.co/news/defi/2026-10-21-aerodrome-velodrome-merge-aero-421514",
+      "publishedAt": "2026-10-22T00:00:00.000Z"
+    },
+    {
+      "id": "ac95c303988d1be0ffd5",
+      "source": "CryptoSlate",
+      "title": "Irish drug lord’s lost Bitcoin fortune comes back to life as $41 million moves to Coinbase",
+      "summary": "The net receipt reached an address Arkham labels a Coinbase Prime deposit, a destination also used in July and August. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/irish-drug-lords-lost-bitcoin-fortune-comes-back-to-life-as-41-million-moves-to-coinbase/",
+      "publishedAt": "2026-10-21T23:10:19.000Z"
+    },
+    {
+      "id": "59f225388791c7835c0e",
+      "source": "CryptoSlate",
+      "title": "Why earning XRP yield through this wallet could actually cost you money",
+      "summary": "Xaman’s hypothetical return example puts fee recovery near 15 months for 100 XRP, while current vault terms differ. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/xaman-xrp-yield-fees/",
+      "publishedAt": "2026-10-21T22:00:04.000Z"
+    },
+    {
+      "id": "916b4cdcc4d2d38d604e",
+      "source": "Cointelegraph",
+      "title": "American Bankers Association: OCC’s GENIUS rules ‘undermine’ US Congress",
+      "summary": "Banking advocacy organizations are pushing back against the OCC’s finalized rules on a stablecoin law, arguing against changes to provisions on yield.",
+      "url": "https://cointelegraph.com/news/american-bankers-association-occ-genius-rules-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-21T21:53:48.000Z"
+    },
     {
       "id": "a12890d0277b88f31c4a",
       "source": "Decrypt",
@@ -402,14 +474,6 @@
       "publishedAt": "2026-10-21T13:52:51.000Z"
     },
     {
-      "id": "c35ed71d311a87f932d7",
-      "source": "CryptoSlate",
-      "title": "Crypto rallies point to slower USDC growth and faster USDT growth, study finds",
-      "summary": "Coin Metrics finds opposite relationships with prior non-stablecoin crypto returns, complicating the case that combined issuance measures fresh Bitcoin demand. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch…",
-      "url": "https://cryptoslate.com/usdc-and-usdt-growth-challenge-bitcoins-dry-powder-signal/",
-      "publishedAt": "2026-10-21T13:50:28.000Z"
-    },
-    {
       "id": "ec1d07ba0f495b1f2366",
       "source": "Bitcoin Magazine",
       "title": "Blockchain.com CEO: “Crypto Spring” has Arrived – Institutions Driving the Market",
@@ -448,14 +512,6 @@
       "summary": "Grand Theft Auto 6 is rumoured to feature a meme coin, and crypto traders are speculating on how prominently Rockstar will integrate it.",
       "url": "https://decrypt.co/381511/gta-6-trailer-features-dacity-meme-coin-heres-what-traders-think-itll-do",
       "publishedAt": "2026-10-21T13:16:04.000Z"
-    },
-    {
-      "id": "c9dc4dce6ac4bebe078f",
-      "source": "CryptoSlate",
-      "title": "Stablecoins moved $891 billion in a quarter after exchanges and bots were excluded",
-      "summary": "Coinbase-commissioned research measures filtered transfers, while its separate after-hours statistic covers a different period and includes automation. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get…",
-      "url": "https://cryptoslate.com/stablecoins-moved-891-billion-in-q3-after-exchanges-and-bots-were-excluded/",
-      "publishedAt": "2026-10-21T12:50:35.000Z"
     },
     {
       "id": "54d11539a96baeaa0293",
@@ -536,14 +592,6 @@
       "summary": "The rule sets reserve, redemption and risk standards for issuers, but the OCC has yet to say when it will begin accepting applications.",
       "url": "https://decrypt.co/381502/occ-finalizes-genius-act-stablecoin-rules-ahead-of-january-deadline",
       "publishedAt": "2026-10-21T11:52:23.000Z"
-    },
-    {
-      "id": "e4cec13e41dc9cdbfd0e",
-      "source": "CryptoSlate",
-      "title": "Lido’s proposed exits would pay lenders with borrower collateral",
-      "summary": "Fallback Exits would reduce debt alongside collateral, while healthy-position eligibility and the lender’s route to ETH remain unsettled. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/lidos-proposed-exits-could-unwind-eth-loans-before-borrowers-reach-liquidation/",
-      "publishedAt": "2026-10-21T11:50:55.000Z"
     },
     {
       "id": "6c291221f15d8da26c3d",
@@ -648,54 +696,6 @@
       "summary": "Zcash extended triple-digit year-to-date gains as developers agreed on the NU7 mainnet activation height, targeting Nov. 5, with node synchronization work still pending.",
       "url": "https://cointelegraph.com/markets/zcash-zec-rallies-12-percent-nu7-mainnet-upgrade?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-21T10:15:00.000Z"
-    },
-    {
-      "id": "3c2ee40eb26fb81c11a7",
-      "source": "Cointelegraph",
-      "title": "Drift exploiter sends $109M in Ether to Tornado Cash in 2 days",
-      "summary": "Wallets linked to the $295 million April hack still held $138 million in Ether after sending another $46 million to the mixer Wednesday.",
-      "url": "https://cointelegraph.com/news/drift-exploiter-moves-109m-eth-tornado-cash-2-days?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-21T10:13:52.000Z"
-    },
-    {
-      "id": "f79ec1ba715a7af4e300",
-      "source": "CoinDesk",
-      "title": "SpaceX and Tesla explore merger that would unite more than 30,000 bitcoin",
-      "summary": "Independent committees are assessing a potential tie-up, while strong SpaceX earnings lift shares ahead of Tesla’s results.",
-      "url": "https://www.coindesk.com/markets/2026/10/21/spacex-and-tesla-explore-merger-that-would-unite-more-than-30-000-bitcoin",
-      "publishedAt": "2026-10-21T09:23:00.000Z"
-    },
-    {
-      "id": "9237f4e5e53b537c8e1a",
-      "source": "CoinDesk",
-      "title": "Monero futures are again heating with leverage, raising volatility risks",
-      "summary": "Open interest has topped $300 million and price is back above $600. A similar setup was seen before January's crash.",
-      "url": "https://www.coindesk.com/markets/2026/10/21/monero-futures-are-again-heating-with-leverage-raising-volatility-risks",
-      "publishedAt": "2026-10-21T08:57:29.000Z"
-    },
-    {
-      "id": "cea71691115875554e78",
-      "source": "CoinDesk",
-      "title": "Tether leads $15 million funding round for AI-focused payment startup Mural",
-      "summary": "The Series A round, which included participation from North Island Ventures and existing investors, brings New York-based Mural's total funding to $28 million.",
-      "url": "https://www.coindesk.com/business/2026/10/21/tether-leads-usd15-million-series-a-for-ai-focused-payment-startup-mural",
-      "publishedAt": "2026-10-21T08:47:11.000Z"
-    },
-    {
-      "id": "41e3b3f7fcfa2b8d6b94",
-      "source": "Cointelegraph",
-      "title": "Ether ETF outflows continue, pass $1B in October so far",
-      "summary": "US spot Ether ETFs have shed $1.08 billion so far in October, the biggest monthly outflow of 2026, while Bitcoin ETF inflows slowed after Monday’s spike.",
-      "url": "https://cointelegraph.com/markets/ether-etf-outflows-near-1-1-billion-october?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-21T08:11:50.000Z"
-    },
-    {
-      "id": "901c9fb8d406bef83942",
-      "source": "CoinDesk",
-      "title": "Zcash developers confirm November date for upgrade that triples payment speed",
-      "summary": "The NU7 upgrade will cut the time between Zcash blocks to 25 seconds from 75 seconds. The chosen block height still has to be merged into the spec and shipped in node software.",
-      "url": "https://www.coindesk.com/markets/2026/10/21/zcash-developers-confirm-november-date-for-upgrade-that-triples-payment-speed",
-      "publishedAt": "2026-10-21T08:10:12.000Z"
     }
   ]
 }
