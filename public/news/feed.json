@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T21:43:17.572Z",
+  "generatedAt": "2026-10-23T05:01:11.963Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -46,7 +46,7 @@
     {
       "name": "The Block",
       "status": "ok",
-      "itemCount": 19,
+      "itemCount": 20,
       "error": null
     },
     {
@@ -57,6 +57,158 @@
     }
   ],
   "items": [
+    {
+      "id": "e4cf9f6314b2dd18f080",
+      "source": "CoinDesk",
+      "title": "Ethereum delays Glamsterdam test after security devs flag risk to existing contracts",
+      "summary": "Developers canceled Monday's Hoodi activation after researchers showed how new gas rules could let smart contracts permanently record failed operations.",
+      "url": "https://www.coindesk.com/tech/2026/10/23/ethereum-delays-glamsterdam-test-after-security-devs-flag-risk-to-existing-contracts",
+      "publishedAt": "2026-10-23T04:59:34.000Z"
+    },
+    {
+      "id": "a2f9d0e7691d9c6eec1c",
+      "source": "CoinDesk",
+      "title": "Cardano holders are being asked to bet $5 million on copper hitting a new record",
+      "summary": "Toto Finance wants 22 million ADA from Cardano’s treasury to buy tokenized copper, and the metal would have to trade well above its all-time high for holders to get their money back.",
+      "url": "https://www.coindesk.com/markets/2026/10/23/cardano-holders-are-being-asked-to-bet-usd5-million-on-copper-hitting-a-new-record",
+      "publishedAt": "2026-10-23T04:36:51.000Z"
+    },
+    {
+      "id": "cf1ddb98b336e6215a35",
+      "source": "Cointelegraph",
+      "title": "Bitcoin Core changes security policy as AI makes bugs easier to find",
+      "summary": "Bitcoin Core says keeping certain vulnerabilities secret no longer offers much protection in the wake of AI-assisted bug hunting.",
+      "url": "https://cointelegraph.com/news/bitcoin-core-changes-security-policy-as-ai-makes-bugs-easier-to-find?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-23T04:34:14.000Z"
+    },
+    {
+      "id": "2826c5aab8714c6f7503",
+      "source": "CryptoSlate",
+      "title": "NEAR proposal slashes yield by 36%, dividing network validators",
+      "summary": "HSP-029 would gradually cut the annual issuance cap by 36%, while tokens bought and held or staked remain in total supply. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/near-proposal-slashes-yield-by-36-dividing-network-validators/",
+      "publishedAt": "2026-10-23T04:10:18.000Z"
+    },
+    {
+      "id": "ba785c457cb8161ab2ba",
+      "source": "The Block",
+      "title": "HSBC rolls out its first HKD stablecoin RedCoin to retail users",
+      "summary": "PayMe users will be able to activate a stablecoin wallet in-app in the coming days for peer-to-peer and peer-to-merchant payments.",
+      "url": "https://www.theblock.co/news/business/2026-10-23-hsbc-hkd-stablecoin-redcoin-424018",
+      "publishedAt": "2026-10-23T04:03:09.000Z"
+    },
+    {
+      "id": "080cf7dc8f20e52acc15",
+      "source": "CoinDesk",
+      "title": "Bitcoin, gold trim early losses as yen gives up gains. Oil stays near $100",
+      "summary": "Bitcoin and gold pared early losses as the yen gave up gains and Asian stocks rebounded, though oil near $100 keeps inflation risks in focus.",
+      "url": "https://www.coindesk.com/markets/2026/10/23/bitcoin-gold-trim-early-losses-as-yen-gives-up-gains-oil-stays-near-usd100",
+      "publishedAt": "2026-10-23T03:13:01.000Z"
+    },
+    {
+      "id": "c4e80fdac9618115842c",
+      "source": "The Block",
+      "title": "Chainlink partners with LG CNS to drive Korean won stablecoin expansion",
+      "summary": "LG CNS is set to integrate Chainlink's cross-chain, data, and orchestration infrastructure into its digital asset platform.",
+      "url": "https://www.theblock.co/news/business/2026-10-22-chainlink-partners-with-lg-cns-423993",
+      "publishedAt": "2026-10-23T02:48:13.000Z"
+    },
+    {
+      "id": "4a32e38fc88e53b9626d",
+      "source": "The Block",
+      "title": "Bitcoin slides below $81,500 as tech stock sell-off spreads to Asian equities",
+      "summary": "The Wall Street sell-off extended to Asian equities on Friday morning, with South Korea's Kospi down 2.3% and Japan's Nikkei 225 down 1.6%.",
+      "url": "https://www.theblock.co/news/markets/2026-10-22-bitcoin-slides-tech-stock-sell-off-423990",
+      "publishedAt": "2026-10-23T02:21:30.000Z"
+    },
+    {
+      "id": "6582bd5bed9e2800c748",
+      "source": "CryptoSlate",
+      "title": "a16z drops crypto branding, expands $2.2B fund into AI and frontier tech",
+      "summary": "The Information’s unconfirmed report follows a16z crypto’s $2.2 billion fifth fund announcement on May 5, 2026. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/a16z-reportedly-pivots-2-2b-fund-but-hides-its-next-play/",
+      "publishedAt": "2026-10-23T01:50:52.000Z"
+    },
+    {
+      "id": "655639cbac806180b6b8",
+      "source": "Cointelegraph",
+      "title": "Switzerland approves first spot Bitcoin ETF for retail investors",
+      "summary": "BIT Asset Management’s Bitcoin Fund ETF is expected to begin trading on SIX Swiss Exchange in November, with its public offering restricted to Switzerland.",
+      "url": "https://cointelegraph.com/news/switzerland-approves-first-spot-bitcoin-etf-for-retail-investors?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-23T00:59:35.000Z"
+    },
+    {
+      "id": "809d3eb350d4623741b8",
+      "source": "CryptoSlate",
+      "title": "Ethereum’s long-awaited Glamsterdam upgrade hits another roadblock as 13 security risks emerge",
+      "summary": "Ethereum developers have postponed the Glamsterdam upgrade on a major test network after identifying potential security risks affecting existing smart contracts. The Ethereum Foundation confirmed on Oct. 22 that the upgrade, scheduled for Oct. 26 on the…",
+      "url": "https://cryptoslate.com/ethereums-long-awaited-glamsterdam-upgrade-hits-another-roadblock-as-13-security-risks-emerge/",
+      "publishedAt": "2026-10-23T00:40:37.000Z"
+    },
+    {
+      "id": "d3215c41e8d3357e4201",
+      "source": "Cointelegraph",
+      "title": "Pentagon bans US forces from using military info to bet in prediction markets",
+      "summary": "Hegseth warned that prediction market wagers could expose military operations to adversaries.",
+      "url": "https://cointelegraph.com/news/pentagon-bans-us-forces-from-using-military-info-to-bet-in-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-22T23:50:42.000Z"
+    },
+    {
+      "id": "404e7b065b5d67b41dad",
+      "source": "CryptoSlate",
+      "title": "XRPL recovers from network slowdown as critical security upgrade faces two-week delay",
+      "summary": "The XRP Ledger (XRPL) has recovered from intermittent transaction-processing delays, although developers are still preparing a permanent software correction. On Oct. 22, XRP Ledger Operations confirmed that ledger-closing times had returned to normal after a…",
+      "url": "https://cryptoslate.com/xrpl-recovers-from-network-slowdown-as-critical-security-upgrade-faces-two-week-delay/",
+      "publishedAt": "2026-10-22T23:40:48.000Z"
+    },
+    {
+      "id": "5d7a202fc2783a6ba1a0",
+      "source": "Bitcoin Magazine",
+      "title": "The Sleeper Has Awakened: Pepenardo’s Sleeping Knights Return",
+      "summary": "Bitcoin Magazine The Sleeper Has Awakened: Pepenardo’s Sleeping Knights Return Hand-altered magazine covers, one-of-one trading cards, and the evolving culture of bitcoin collectibles. This post The Sleeper Has Awakened: Pepenardo’s Sleeping Knights Return…",
+      "url": "https://bitcoinmagazine.com/culture/the-sleeper-has-awakened-pepenardos-sleeping-knights-return",
+      "publishedAt": "2026-10-22T23:06:48.000Z"
+    },
+    {
+      "id": "edb7e2d116ab4039db18",
+      "source": "Cointelegraph",
+      "title": "New DeepSeek ban in US, Swiss-Asia crypto ties deepen: Asia Express",
+      "summary": "DeepSeek banned from US federal civilian agencies over spying fears. Singapore firm behind Europe’s only spot Bitcoin ETF, as Switzerland partners with Vietnam on crypto tech.",
+      "url": "https://cointelegraph.com/magazine/new-deepseek-ban-in-us-swiss-asia-crypto-ties-deepen-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-22T22:50:22.000Z"
+    },
+    {
+      "id": "251d56ef501d4868957b",
+      "source": "CoinDesk",
+      "title": "Senate's top Democratic investigator looking into Tether payments to Bo Hines' firm",
+      "summary": "Senator Richard Blumenthal, the ranking Democrat on the investigations subcommittee, added a probe of the ex-White House crypto adviser to his list of crypto interests.",
+      "url": "https://www.coindesk.com/policy/2026/10/22/senate-s-top-democratic-investigator-looking-into-tether-payments-to-bo-hines-firm",
+      "publishedAt": "2026-10-22T22:43:36.000Z"
+    },
+    {
+      "id": "8307deeaa414a4a9d610",
+      "source": "CryptoSlate",
+      "title": "Bitcoin ETFs sold through 7 of 8 crashes even as Wall Street makes BTC selloffs less violent",
+      "summary": "Bitcoin ETFs recorded outflows during seven of eight major selloffs, challenging expectations that Wall Street investors would support prices during downturns. A new DWF Labs report shared with CryptoSlate found that US spot Bitcoin exchange-traded funds…",
+      "url": "https://cryptoslate.com/bitcoin-etfs-sold-through-7-of-8-crashes-even-as-wall-street-makes-btc-selloffs-less-violent/",
+      "publishedAt": "2026-10-22T22:30:38.000Z"
+    },
+    {
+      "id": "5f424c843e095dc0b095",
+      "source": "Decrypt",
+      "title": "Is the Internet Safe Again After the PHP Nightmare? What You Need to Know",
+      "summary": "PHP shipped its fix, attackers launched millions of attempts, and governments say no one has broken in yet. Here's what that means for your passwords, your crypto, and your browsing.",
+      "url": "https://decrypt.co/381662/internet-safe-again-after-php-nightmare-what-you-need-know",
+      "publishedAt": "2026-10-22T22:21:46.000Z"
+    },
+    {
+      "id": "7f83ae4c29d81dc2c240",
+      "source": "Cointelegraph",
+      "title": "Circle shareholder sues Trump, World Liberty and Steve Witkoff over crypto deals",
+      "summary": "According to a Circle shareholder, the US president’s “corruption” through USD1 left the company unable to compete with stablecoins, harming USDC.",
+      "url": "https://cointelegraph.com/news/circle-shareholder-lawsuit-donald-trump-world-liberty-financial-steve-witkoff-crypto-corruption?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-22T21:39:18.000Z"
+    },
     {
       "id": "704d843972021c73156a",
       "source": "Bitcoin Magazine",
@@ -306,14 +458,6 @@
       "publishedAt": "2026-10-22T15:24:18.000Z"
     },
     {
-      "id": "925be468efd70e8d5621",
-      "source": "CryptoSlate",
-      "title": "Robinhood generates $51 million in blockchain fees while Ethereum settlement costs total just $69,000",
-      "summary": "Bitwise’s Q3 estimates put most fees with the operator before business expenses, while ARB and ETH offer different economic exposures. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/robinhood-generates-51-million-in-blockchain-fees-while-ethereum-settlement-costs-total-just-69000/",
-      "publishedAt": "2026-10-22T15:00:14.000Z"
-    },
-    {
       "id": "d05065faeeb66974b677",
       "source": "CoinDesk",
       "title": "Crypto for Advisors: Stablecoins are ready for prime time",
@@ -362,14 +506,6 @@
       "publishedAt": "2026-10-22T14:03:40.000Z"
     },
     {
-      "id": "4008678d8c642c1576a1",
-      "source": "CryptoSlate",
-      "title": "A Midnight privacy-vault demo needs outside signers to release Ethereum tokens",
-      "summary": "SIG’s Ethereum example burns a shielded claim before payout, while restoring it after failure requires an attested outcome. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/a-midnight-privacy-vault-demo-needs-outside-signers-to-release-ethereum-tokens/",
-      "publishedAt": "2026-10-22T14:00:42.000Z"
-    },
-    {
       "id": "034a18584a064ca13dc5",
       "source": "The Block",
       "title": "Uniswap’s aggregator hooks go live on Ethereum, Base and Robinhood Chain",
@@ -402,14 +538,6 @@
       "publishedAt": "2026-10-22T13:33:24.000Z"
     },
     {
-      "id": "c26c7e08d83a29093e3a",
-      "source": "Bitcoin Magazine",
-      "title": "Retail Money is “Dead” – Wall Street is how Bitcoin Actually Wins",
-      "summary": "▶ Bitcoin Magazine Retail Money is “Dead” – Wall Street is how Bitcoin Actually Wins Bitcoin is moving from the fringe to the boardroom, says Allen Helm. He details how institutions structure digital credit around BTC and record ETF inflows. This post Retail…",
-      "url": "https://bitcoinmagazine.com/videos/retail-money-is-dead-wall-street-is-how-bitcoin-actually-wins",
-      "publishedAt": "2026-10-22T13:29:09.000Z"
-    },
-    {
       "id": "e7750b214204474272dd",
       "source": "The Block",
       "title": "Fireblocks denies report of $2.5 billion acquisition talks with Visa",
@@ -432,14 +560,6 @@
       "summary": "SoFi Bank launched SoFi Earn, a tokenized deposit paying 4.40% APY with FDIC coverage, allowing users to convert funds to stablecoins 24/7.",
       "url": "https://cointelegraph.com/news/sofi-bank-issued-tokenized-deposit-yield-bearing-crypto-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-22T13:13:45.000Z"
-    },
-    {
-      "id": "8cd192f34f4b5f786c42",
-      "source": "CryptoSlate",
-      "title": "Binance moves to exclude disrupted overnight data from stock-futures funding",
-      "summary": "The October 21 notice targets inputs to payments between opposing traders, but gives no resulting rates or payment amounts. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/binance-moves-to-exclude-disrupted-overnight-data-from-stock-futures-funding/",
-      "publishedAt": "2026-10-22T13:00:21.000Z"
     },
     {
       "id": "59cdff46c37c8376e767",
@@ -474,14 +594,6 @@
       "publishedAt": "2026-10-22T12:01:03.000Z"
     },
     {
-      "id": "f853e2b8d6c9e014ccf6",
-      "source": "CryptoSlate",
-      "title": "Qubic’s recovery rules require ownership checks even for unstolen funds in vulnerable wallets",
-      "summary": "Listed vulnerable wallets can require evidence beyond a valid signature before holders regain access, even when an attacker took nothing. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/qubics-recovery-rules-require-ownership-checks-even-for-unstolen-funds-in-vulnerable-wallets/",
-      "publishedAt": "2026-10-22T12:00:24.000Z"
-    },
-    {
       "id": "786cb275dfcb145c8235",
       "source": "Cointelegraph",
       "title": "The UK needs a workable route to regulated DeFi access",
@@ -512,14 +624,6 @@
       "summary": "Your day-ahead look for Oct. 21, 2026",
       "url": "https://www.coindesk.com/daybook-us/2026/10/22/crypto-traders-seek-shelter-in-bitcoin-as-altcoins-slide-and-etf-flows-wobble",
       "publishedAt": "2026-10-22T11:20:04.000Z"
-    },
-    {
-      "id": "20fb67bd04482d71a0c6",
-      "source": "CryptoSlate",
-      "title": "Solana targets faster finality, while Wall Street cuts the cash that must move",
-      "summary": "Solana activated Alpenglow on mainnet on Oct. 21 at slot 459,653,000, replacing TowerBFT with a consensus design that targets about 150 milliseconds to finality. Under the new protocol, confirmed and finalized become the same state. At the National…",
-      "url": "https://cryptoslate.com/solana-targets-faster-finality-while-wall-street-cuts-the-cash-that-must-move/",
-      "publishedAt": "2026-10-22T11:00:54.000Z"
     },
     {
       "id": "04a2d0281c5f2bad3cda",
@@ -592,110 +696,6 @@
       "summary": "StarkWare plans to release a draft whitepaper in November as it explores an independent, quantum-resistant blockchain.",
       "url": "https://cointelegraph.com/news/starknet-vote-post-quantum-l1-research-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-22T09:37:54.000Z"
-    },
-    {
-      "id": "6053c54844f41486e37e",
-      "source": "The Block",
-      "title": "Starknet community overwhelmingly backs research into becoming an independent post-quantum Layer 1",
-      "summary": "Starknet's community backed research into becoming an independent post-quantum Layer 1, with a draft whitepaper expected in November.",
-      "url": "https://www.theblock.co/news/ecosystems/2026-10-22-starknet-community-backs-independent-post-quantum-layer-1-421885",
-      "publishedAt": "2026-10-22T09:32:00.000Z"
-    },
-    {
-      "id": "b68a9b3cab483f4707ea",
-      "source": "The Block",
-      "title": "Layer 2 Scaling Solutions",
-      "summary": "Layer 2 scaling solutions help blockchains like Ethereum process more activity without forcing every transaction to happen directly on the base chain. Ethereum’s main network is secure and decentralized, but blockspace is limited. When demand rises, fees…",
-      "url": "https://www.theblock.co/learn/campus/layer-2-scaling-solutions-419685",
-      "publishedAt": "2026-10-22T09:15:50.000Z"
-    },
-    {
-      "id": "77e10b1b801e3d52cc9e",
-      "source": "The Block",
-      "title": "South Korea’s crypto bill nears completion while tax debate intensifies: reports",
-      "summary": "The bill seeks to establish a framework for digital assets, including licensing regimes for exchanges and rules for stablecoin issuance.",
-      "url": "https://www.theblock.co/news/regulation/2026-10-22-south-koreas-crypto-bill-nears-completion-421880",
-      "publishedAt": "2026-10-22T09:11:57.000Z"
-    },
-    {
-      "id": "c243054c68a3df42ee4a",
-      "source": "Cointelegraph",
-      "title": "PHP flaw draws millions of exploit attempts, Cloudflare CEO warns",
-      "summary": "Cloudflare’s Matthew Prince said the network saw thousands of exploit attempts even before the PHP vulnerability was publicly disclosed.",
-      "url": "https://cointelegraph.com/news/cloudflare-millions-exploit-attempts-php-vulnerability-disclosure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-22T09:06:02.000Z"
-    },
-    {
-      "id": "15b2779df862eaf2c598",
-      "source": "CoinDesk",
-      "title": "Asian stocks tumble, bitcoin retreats as China enters bear market",
-      "summary": "Technology shares led regional losses as mixed U.S. earnings unsettled investors and Brent crude climbed above $112 a barrel.",
-      "url": "https://www.coindesk.com/markets/2026/10/22/asian-stocks-tumble-bitcoin-retreats-as-china-enters-bear-market",
-      "publishedAt": "2026-10-22T08:49:08.000Z"
-    },
-    {
-      "id": "353d1ff11580406b4d12",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs bag another $528M, taking 3-day haul past $1B",
-      "summary": "US spot Bitcoin ETFs drew $1.08 billion over three trading sessions to push October flows back above water.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etfs-528-million-btc-tops-84k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-22T07:37:32.000Z"
-    },
-    {
-      "id": "a9516f787266405da338",
-      "source": "CoinDesk",
-      "title": "China seeks to seize 61,800 BTC tied to $5.7 billion fraud scheme",
-      "summary": "Chinese prosecutors are seeking to confiscate more than 61,800 Bitcoin tied to a $5.7 billion fraud scheme, days after a U.K. court ruled Chinese law governs victims’ claims to the coins.",
-      "url": "https://www.coindesk.com/markets/2026/10/22/china-seeks-to-seize-61-800-btc-tied-to-usd5-7-billion-fraud-scheme",
-      "publishedAt": "2026-10-22T06:24:10.000Z"
-    },
-    {
-      "id": "e63224eea7a961efead7",
-      "source": "Cointelegraph",
-      "title": "Move over memecoins: Crypto ‘meme games’ coming, bagholders and all",
-      "summary": "“Plenty will be ponzis. Plenty will get exploited. Plenty will insta die. There will be ridiculous gains, and people will get absolutely f***ing rinsed,” says Illuvium co-founder Kieran Warwick.",
-      "url": "https://cointelegraph.com/news/move-over-memecoins-crypto-meme-games-coming-bagholders-and-all?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-22T05:35:38.000Z"
-    },
-    {
-      "id": "2ea20b77f44bda1d6f7a",
-      "source": "CoinDesk",
-      "title": "Solana’s biggest network change since 2020 is live. Here’s how users benefit",
-      "summary": "The new voting system targets settlement in about 150 milliseconds, potentially shortening waits for payments and deposits. Users can keep their existing wallets.",
-      "url": "https://www.coindesk.com/tech/2026/10/22/solana-completes-alpenglow-upgrade-here-s-what-it-means-for-users",
-      "publishedAt": "2026-10-22T05:24:58.000Z"
-    },
-    {
-      "id": "f42bdeb6d51ca2882212",
-      "source": "CoinDesk",
-      "title": "Bitcoin ETFs attract $1.08 billion in 3 days but it may not be enough for a steep rally",
-      "summary": "Past steep rallies ran on about $235 million a day of net inflows into ETFs. The funds are yet to match that pace, according to data analyzed by CoinDesk.",
-      "url": "https://www.coindesk.com/markets/2026/10/22/bitcoin-etfs-attract-usd1-08-billion-in-3-days-but-it-may-not-be-enough-for-a-steep-rally",
-      "publishedAt": "2026-10-22T04:41:59.000Z"
-    },
-    {
-      "id": "48ec6708f25ca8b90e2c",
-      "source": "CoinDesk",
-      "title": "XRP Ledger bug fix moved to November after validator support dipped for two hours",
-      "summary": "The fix lost its two-week countdown less than two days from the finish after support slipped to 26 of 35 validators. It’s now back at 31.",
-      "url": "https://www.coindesk.com/tech/2026/10/22/xrp-ledger-bug-fix-moved-to-november-after-validator-support-dipped-for-two-hours",
-      "publishedAt": "2026-10-22T04:36:20.000Z"
-    },
-    {
-      "id": "ec71c70850174fb97b94",
-      "source": "CoinDesk",
-      "title": "Bitcoin gives back its run at $85,000 as Tesla and Meta fail to calm AI nerves",
-      "summary": "BTC broke through its $84,000 ceiling late Wednesday, then slid back to the $82,500 support analysts are watching as tech futures fell.",
-      "url": "https://www.coindesk.com/markets/2026/10/22/bitcoin-gives-back-its-run-at-usd85-000-as-tesla-and-meta-fail-to-calm-ai-nerves",
-      "publishedAt": "2026-10-22T03:51:34.000Z"
-    },
-    {
-      "id": "38439c4b39d51c00c294",
-      "source": "Cointelegraph",
-      "title": "PHP Foundation admits ‘structural failure’ delayed critical security fix",
-      "summary": "Government websites and online services were disrupted after concerns about a PHP bug that could allow attackers to take control of vulnerable servers.",
-      "url": "https://cointelegraph.com/news/php-foundation-admits-structural-failure-delayed-critical-security-fix?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-22T00:44:00.000Z"
     }
   ]
 }
