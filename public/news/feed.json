@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T16:03:08.999Z",
+  "generatedAt": "2026-10-24T20:57:08.693Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 60,
+      "itemCount": 40,
       "error": null
     },
     {
@@ -57,6 +57,62 @@
     }
   ],
   "items": [
+    {
+      "id": "85b44e5b7e8a44122937",
+      "source": "CryptoSlate",
+      "title": "Circle’s new USDC auctions let institutions collect the fees others pay to cash out",
+      "summary": "Eligible institutions can collect rebates funded by matched redeemers, whose auction fees are capped at the Express rate. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/circles-new-usdc-auctions-let-institutions-collect-the-fees-others-pay-to-cash-out/",
+      "publishedAt": "2026-10-24T20:00:46.000Z"
+    },
+    {
+      "id": "f1fc16cec2da4d6fc914",
+      "source": "CryptoSlate",
+      "title": "Kraken drops Monero spending questions but keeps a $1,500 rolling 30-day withdrawal cap for individuals",
+      "summary": "Crypto exchange Kraken has withdrawn intrusive compliance demands sent to Monero customers after its co-CEO admitted the requests were unjustified. On Oct. 24, Arjun Sethi said that customers who purchased and withdrew Monero (XMR) had received emails…",
+      "url": "https://cryptoslate.com/kraken-drops-monero-spending-questions-but-keeps-a-1500-rolling-30-day-withdrawal-cap-for-individuals/",
+      "publishedAt": "2026-10-24T19:00:37.000Z"
+    },
+    {
+      "id": "a9c8d73bbee90f6f58d7",
+      "source": "CryptoSlate",
+      "title": "Arthur Hayes exits crypto trading positions as analysts track $26 million in sales",
+      "summary": "Arthur Hayes has exited Maelstrom's directional crypto positions, and on-chain analysts are tracking about $26 million in token sales. In an Oct. 24 statement, Hayes said he had taken profits on Ethereum (ETH), Ethena (ENA), Uniswap (UNI), and other…",
+      "url": "https://cryptoslate.com/arthur-hayes-exits-crypto-trading-positions-as-analysts-track-26-million-in-sales/",
+      "publishedAt": "2026-10-24T18:00:27.000Z"
+    },
+    {
+      "id": "d1012749e3e36aaffed3",
+      "source": "The Block",
+      "title": "Crypto longs lose $404 million in four hours as bitcoin briefly slips below $80,000",
+      "summary": "Spot bitcoin ETFs lost $773 million on Thursday and Friday after three days of net inflows, per SoSoValue data.",
+      "url": "https://www.theblock.co/news/markets/2026-10-24-crypto-longs-lose-404-million-in-four-hours-as-bitcoin-briefly-slips-below-80000-431608",
+      "publishedAt": "2026-10-24T17:44:36.000Z"
+    },
+    {
+      "id": "54feed5dd718b3960725",
+      "source": "Decrypt",
+      "title": "Google Quietly Updates Privacy Policy to Let Gmail and Photos Data Feed Ads",
+      "summary": "A policy change effective Oct. 16 carves out an exception to Google’s long-standing pledge—letting connected Gmail, Drive, and Photos data personalize ads through its Personal Intelligence AI features.",
+      "url": "https://decrypt.co/381775/google-quietly-updates-privacy-policy-gmail-photos-ads",
+      "publishedAt": "2026-10-24T17:01:02.000Z"
+    },
+    {
+      "id": "8dd5e979ff9ac171af7b",
+      "source": "CryptoSlate",
+      "title": "NYSE’s owner is backing 24/7 stock tokens without Wall Street’s usual price rules",
+      "summary": "The company that owns the New York Stock Exchange wants people to be able to buy stocks 24/7. Given the trading volume crypto and other tokenized assets have seen in the past year or so, the decision to introduce stock tokens comes as no surprise. People…",
+      "url": "https://cryptoslate.com/nyses-owner-is-backing-24-7-stock-tokens-without-wall-streets-usual-price-rules/",
+      "publishedAt": "2026-10-24T17:00:27.000Z"
+    },
+    {
+      "id": "5b267030d03ab7d2cf7c",
+      "source": "The Block",
+      "title": "Argentine judge clears Milei and 10 others in LIBRA case, finding no ‘criminally relevant deception’",
+      "summary": "The judge's 60-page ruling concluded Argentine President Javier Milei's post promoting the LIBRA token did not, by itself, establish fraud.",
+      "url": "https://www.theblock.co/news/regulation/2026-10-24-argentine-judge-clears-milei-and-10-others-in-libra-case-finding-no-criminally-relevant-deception-431606",
+      "publishedAt": "2026-10-24T16:24:13.000Z"
+    },
     {
       "id": "b9d5d998571800d88860",
       "source": "Decrypt",
@@ -138,11 +194,11 @@
       "publishedAt": "2026-10-24T14:06:24.000Z"
     },
     {
-      "id": "d2bc35eb08aa7c6183fa",
+      "id": "62722c2835f6d67f1168",
       "source": "CoinDesk",
       "title": "Bitcoin’s wealthy holders turning to loans and yield as investment habits mature: Xapo CEO",
       "summary": "Borrowing against bitcoin and earning income to build their BTC holdings are becoming priorities for long-term investors, Xapo Bank CEO Seamus Rocca told CoinDesk.",
-      "url": "https://www.coindesk.com/",
+      "url": "https://www.coindesk.com/business/2026/10/24/bitcoin-s-wealthy-holders-turning-to-loans-and-yield-as-investment-habits-mature-xapo-ceo",
       "publishedAt": "2026-10-24T14:00:00.000Z"
     },
     {
@@ -194,44 +250,12 @@
       "publishedAt": "2026-10-24T07:00:27.000Z"
     },
     {
-      "id": "4ed00c97222e29b95e25",
-      "source": "CryptoSlate",
-      "title": "JST Buyback & Burn Upgrade: GasFree Revenue and $20.34M Surplus Injected as JUST’s Ecosystem Trio Solidifies JST Token Value",
-      "summary": "Summary: The upgraded JST Buyback and Burn program features the following highlights: $50M Treasury Reserve Cushion: Establishes a safety buffer for sustainable ecosystem operations. Expanded Funding Sources: Integrates GasFree revenue alongside JustLend and…",
-      "url": "https://cryptoslate.com/jst-buyback-burn-upgrade-gasfree-revenue-and-20-34m-surplus-injected-as-justs-ecosystem-trio-solidifies-jst-token-value/",
-      "publishedAt": "2026-10-24T06:38:41.000Z"
-    },
-    {
-      "id": "ed7077489b9bf3a1d90c",
-      "source": "CryptoSlate",
-      "title": "New York demands $1.3B from NovaTech and 11,000 victims face delay",
-      "summary": "The October 22 motion follows a 2025 liability ruling, while separate promoter obligations include Ciceron’s installments through 2029. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/new-york-demands-1-3b-from-novatech-and-11000-victims-face-delay/",
-      "publishedAt": "2026-10-24T05:50:59.000Z"
-    },
-    {
       "id": "1a8b1b120c950a210276",
       "source": "CoinDesk",
       "title": "Franklin Templeton adds $150 million in fund shares to XRP Ledger, all in one wallet",
       "summary": "Two subscriptions on Thursday nearly quadrupled the fund’s tokens on the network. The receiving wallet shares its authorized signers with the issuer.",
       "url": "https://www.coindesk.com/markets/2026/10/24/franklin-templeton-adds-usd150-million-in-fund-shares-to-xrp-ledger-all-in-one-wallet",
       "publishedAt": "2026-10-24T04:45:43.000Z"
-    },
-    {
-      "id": "b1770df50e01546056c9",
-      "source": "CryptoSlate",
-      "title": "3.3M users gain HSBC RedCoin, yet 1 strict rule blocks them",
-      "summary": "Eligible users can activate RedCoin wallets for payments as access expands over coming days, while investment subscriptions remain planned for later in 2026. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next.…",
-      "url": "https://cryptoslate.com/3-3m-users-gain-hsbc-redcoin-yet-1-strict-rule-blocks-them/",
-      "publishedAt": "2026-10-24T02:20:15.000Z"
-    },
-    {
-      "id": "cf2bb01577f5f07b8355",
-      "source": "CryptoSlate",
-      "title": "New OCC stablecoin rule resets redemptions, and banks face big shifts",
-      "summary": "For covered issuers, the ordinary two-business-day limit ends at payment initiation or requested issuer credit, with external bank availability assessed separately. Read the full story on CryptoSlate Understand the crypto stories that matter and what to…",
-      "url": "https://cryptoslate.com/new-occ-stablecoin-rule-resets-redemptions-and-banks-face-big-shifts/",
-      "publishedAt": "2026-10-23T22:50:04.000Z"
     },
     {
       "id": "441ba02f7bdd48b71db6",
@@ -672,30 +696,6 @@
       "summary": "BLOOM seeks to cut costs by helping financial institutions coordinate cross-border use of stablecoins and tokenized deposits.",
       "url": "https://cointelegraph.com/news/malaysia-thailand-join-singapores-cross-border-stablecoin-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-23T07:15:53.000Z"
-    },
-    {
-      "id": "25ae06e24d2e7aa9606e",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETFs bleed $635M as October slides back into the red",
-      "summary": "Thursday’s withdrawals ended a three-day inflow streak and left US spot Bitcoin ETFs with $175 million in net outflows for October.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etfs-erase-october-gains-outflow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-23T07:09:39.000Z"
-    },
-    {
-      "id": "b449479b5ffc8b448fec",
-      "source": "Cointelegraph",
-      "title": "Ethereum delays Glamsterdam Hoodi testnet launch over security risks",
-      "summary": "ChainSecurity said it identified 13 real-world examples of smart contracts potentially affected by Glamsterdam’s gas changes and is coordinating responsible disclosure with affected projects.",
-      "url": "https://cointelegraph.com/news/ethereum-delays-glamsterdam-testnet-fork-gas-security-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-23T05:09:41.000Z"
-    },
-    {
-      "id": "49c239d59106a65957dc",
-      "source": "CoinDesk",
-      "title": "Polymarket has reportedly fired its marketing chief, also a close friend of the CEO",
-      "summary": "Matthew Modabber was reportedly ousted after an internal probe of several instances of misconduct, according to the New York Post.",
-      "url": "https://www.coindesk.com/markets/2026/10/23/polymarket-has-reportedly-fired-its-marketing-chief-also-a-close-friend-of-the-ceo",
-      "publishedAt": "2026-10-23T05:01:19.000Z"
     }
   ]
 }
