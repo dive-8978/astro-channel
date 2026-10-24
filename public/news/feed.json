@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T11:13:31.825Z",
+  "generatedAt": "2026-10-24T16:03:08.999Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 40,
+      "itemCount": 60,
       "error": null
     },
     {
@@ -57,6 +57,126 @@
     }
   ],
   "items": [
+    {
+      "id": "b9d5d998571800d88860",
+      "source": "Decrypt",
+      "title": "Sweden's Government Offices Block ChatGPT and Claude, Keep Microsoft Copilot",
+      "summary": "Sweden's Government Offices will block ChatGPT and Claude on staff computers from Monday, steering civil servants to Microsoft Copilot as the only AI that passed its security review.",
+      "url": "https://decrypt.co/381763/sweden-government-offices-block-chatgpt-claude",
+      "publishedAt": "2026-10-24T16:01:03.000Z"
+    },
+    {
+      "id": "24bcf25b3fe276e41717",
+      "source": "CoinDesk",
+      "title": "Strategy, Strive face balancing act between bitcoin buying and preferred stock dividends",
+      "summary": "The securities have financed purchases of nearly 136,000 bitcoin, opening a funding channel that analysts expect to complement the larger ETF market.",
+      "url": "https://www.coindesk.com/business/2026/10/24/strategy-strive-face-balancing-act-between-bitcoin-buying-and-preferred-stock-dividends",
+      "publishedAt": "2026-10-24T16:00:00.000Z"
+    },
+    {
+      "id": "8b3a8da41667ffc87160",
+      "source": "CryptoSlate",
+      "title": "Circle shareholder sues Trump over UAE crypto deals, citing up to $82 million in potential annual revenue",
+      "summary": "A Circle shareholder sued President Donald Trump, alleging UAE-linked cryptocurrency payments enriched his family and diverted business from USDC. The complaint, filed Oct. 22 in Washington federal court, challenges a $500 million investment in Trump's World…",
+      "url": "https://cryptoslate.com/circle-shareholder-sues-trump-over-uae-crypto-deals-citing-up-to-82-million-in-potential-annual-revenue/",
+      "publishedAt": "2026-10-24T15:45:44.000Z"
+    },
+    {
+      "id": "0db08873ae403b1d7e61",
+      "source": "CoinDesk",
+      "title": "Block's new voice AI sounds eerily human, sparking awe and scam fears",
+      "summary": "Reactions split between amazement at how human it sounds and fears it could fuel scams and deception, with CZ eyeing uses in children’s education.",
+      "url": "https://www.coindesk.com/tech/2026/10/24/block-s-new-voice-ai-sounds-eerily-human-sparking-awe-and-scam-fears",
+      "publishedAt": "2026-10-24T15:21:06.000Z"
+    },
+    {
+      "id": "ff0cb8405235eff27bd9",
+      "source": "CoinDesk",
+      "title": "Crypto under weekend pressure, bitcoin slides below $80,000 on U.S. Middle East evacuations",
+      "summary": "Bitcoin has sunk to its weakest level in more than one month.",
+      "url": "https://www.coindesk.com/markets/2026/10/24/crypto-under-weekend-pressure-bitcoin-slides-below-usd80-000-on-u-s-middle-east-evacuations",
+      "publishedAt": "2026-10-24T15:11:24.000Z"
+    },
+    {
+      "id": "6624c1af826f0cef88e1",
+      "source": "Decrypt",
+      "title": "Game Publishers Have Pushed to Cut Discs Since 2007, Infinity Ward Veteran Says",
+      "summary": "Robert Bowling, who spent six years working on Call of Duty, told Decrypt that Activision suggested cutting discs nearly two decades ago.",
+      "url": "https://decrypt.co/381674/game-publishers-have-pushed-to-cut-discs-since-2007-infinity-ward-veteran-says",
+      "publishedAt": "2026-10-24T15:01:02.000Z"
+    },
+    {
+      "id": "ba3665b075d6b100324c",
+      "source": "CoinDesk",
+      "title": "Why McDonalds, Microsoft and Google saying no to tokenized stocks isn't a dealbreaker",
+      "summary": "Some of the world's biggest companies objected to being listed on the first tokenized securities trading venue under the SEC's innovation exemption. But the early pushback may say more about issuer caution than about rejection of tokenization itself.",
+      "url": "https://www.coindesk.com/business/2026/10/23/why-mcdonalds-microsoft-and-google-saying-no-to-tokenized-stocks-isn-t-a-dealbreaker",
+      "publishedAt": "2026-10-24T15:00:00.000Z"
+    },
+    {
+      "id": "7f540bf35dc3c3471df6",
+      "source": "CryptoSlate",
+      "title": "Bitcoin Core speeds up security fixes as 44% of surveyed nodes run unsupported versions",
+      "summary": "Bitcoin Core merged a policy amendment on Oct. 22 that lets developers backport fixes for easily rediscovered vulnerabilities to every maintained release line and publish an advisory alongside them. A network snapshot from Oct. 18 shows that 3,671 of 8,422…",
+      "url": "https://cryptoslate.com/bitcoin-core-speeds-up-security-fixes-as-44-of-surveyed-nodes-run-unsupported-versions/",
+      "publishedAt": "2026-10-24T14:45:04.000Z"
+    },
+    {
+      "id": "ad4ef13f64b57d1b322c",
+      "source": "CoinDesk",
+      "title": "Argentina drops criminal probe into President Milei over crashed memecoin LIBRA",
+      "summary": "The judge found that Milei's promotion of LIBRA did not constitute fraud, despite the attention his support drew to the token.",
+      "url": "https://www.coindesk.com/business/2026/10/24/argentina-drops-criminal-probe-into-president-milei-over-crashed-memecoin-libra",
+      "publishedAt": "2026-10-24T14:38:47.000Z"
+    },
+    {
+      "id": "07011e4e061599f175d0",
+      "source": "CoinDesk",
+      "title": "Wells Fargo, Cisco, Marvell among latest firms objecting to OKXICE's tokenized stock plan",
+      "summary": "Six more companies have objected to listing tokenized versions of their stock on the venue, Reuters reported, bringing the total to 22.",
+      "url": "https://www.coindesk.com/business/2026/10/24/wells-fargo-cisco-marvell-among-latest-firms-objecting-to-okxice-s-tokenized-stock-plan",
+      "publishedAt": "2026-10-24T14:06:24.000Z"
+    },
+    {
+      "id": "d2bc35eb08aa7c6183fa",
+      "source": "CoinDesk",
+      "title": "Bitcoin’s wealthy holders turning to loans and yield as investment habits mature: Xapo CEO",
+      "summary": "Borrowing against bitcoin and earning income to build their BTC holdings are becoming priorities for long-term investors, Xapo Bank CEO Seamus Rocca told CoinDesk.",
+      "url": "https://www.coindesk.com/",
+      "publishedAt": "2026-10-24T14:00:00.000Z"
+    },
+    {
+      "id": "cd366bc117fe3184693c",
+      "source": "CryptoSlate",
+      "title": "Ethereum sees biggest exchange withdrawal in four months as October ETF losses top $1 billion",
+      "summary": "About 169,770 ETH left centralized exchanges on net in one day, Santiment reported Oct. 23, the largest daily withdrawal in more than four months and worth about $407 million at the $2,400 reference price. The last bigger episode came June 5, when roughly…",
+      "url": "https://cryptoslate.com/ethereum-sees-biggest-exchange-withdrawal-in-four-months-as-october-etf-losses-top-1-billion/",
+      "publishedAt": "2026-10-24T13:30:53.000Z"
+    },
+    {
+      "id": "665d9271c8edb5ed8860",
+      "source": "Decrypt",
+      "title": "Hong Kong’s Biggest Bank Puts a Stablecoin in 3 Million Wallets",
+      "summary": "HSBC switched on its Hong Kong dollar stablecoin inside PayMe on Friday, testing whether a bank-issued token can become everyday money.",
+      "url": "https://decrypt.co/381760/hong-kong-bank-hsbc-stablecoin-3-million-wallets",
+      "publishedAt": "2026-10-24T13:01:02.000Z"
+    },
+    {
+      "id": "caf4568f30cfe81379a2",
+      "source": "CryptoSlate",
+      "title": "Wall Street’s $359 billion-a-day repo market has found a use for blockchain",
+      "summary": "Wall Street has found a use for blockchain that involves neither memecoins nor replacing the banking system. It's now helping institutions borrow billions between breakfast and lunch, usually because they have government bonds but not enough cash when a…",
+      "url": "https://cryptoslate.com/wall-streets-359-billion-a-day-repo-market-has-found-a-use-for-blockchain/",
+      "publishedAt": "2026-10-24T12:00:47.000Z"
+    },
+    {
+      "id": "d043824c418be65e6180",
+      "source": "CoinDesk",
+      "title": "U.S. Clarity Act failure gives Asia and Middle East a competitive edge, says Apex Group CEO",
+      "summary": "Apex Group CEO Peter Hughes warned that the failure of the U.S. Clarity Act will drive digital asset businesses toward faster-moving jurisdictions in Asia and the Middle East.",
+      "url": "https://www.coindesk.com/policy/2026/10/24/u-s-clarity-act-failure-gives-asia-and-middle-east-a-competitive-edge-says-apex-group-ceo",
+      "publishedAt": "2026-10-24T12:00:00.000Z"
+    },
     {
       "id": "255dac0cb6d76e879148",
       "source": "CryptoSlate",
@@ -114,14 +234,6 @@
       "publishedAt": "2026-10-23T22:50:04.000Z"
     },
     {
-      "id": "fd2f60cdb7557cd4c2a2",
-      "source": "CryptoSlate",
-      "title": "Aave changes USDT borrowing rules and loan costs suddenly jump",
-      "summary": "The October 20 fixed-supply model underlies the cushion; the implemented 92% threshold adds no cash or guaranteed exit. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/aave-changes-usdt-borrowing-rules-and-loan-costs-suddenly-jump/",
-      "publishedAt": "2026-10-23T21:40:08.000Z"
-    },
-    {
       "id": "441ba02f7bdd48b71db6",
       "source": "Cointelegraph",
       "title": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report",
@@ -162,14 +274,6 @@
       "publishedAt": "2026-10-23T20:54:17.000Z"
     },
     {
-      "id": "bbc8202e3dfafe3789bc",
-      "source": "CryptoSlate",
-      "title": "UK’s FCA says crypto apps may need licenses when algorithms choose trade routes",
-      "summary": "Proposed guidance separates technical access from substantive transaction involvement as firms apply for the UK’s October 2027 regime. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/uks-fca-says-crypto-apps-may-need-licenses-when-algorithms-choose-trade-routes/",
-      "publishedAt": "2026-10-23T20:30:00.000Z"
-    },
-    {
       "id": "418b3322bdb88028fe68",
       "source": "Decrypt",
       "title": "Senate Democrat Probes Tether Payments to Ex-White House Crypto Adviser’s Firm",
@@ -184,14 +288,6 @@
       "summary": "SpaceX’s latest 10-Q filing quietly confirms any Tesla combination requires sign-off from its “controlling shareholder.”",
       "url": "https://decrypt.co/381753/spacex-filing-elon-musk-final-word-tesla-merger",
       "publishedAt": "2026-10-23T19:36:02.000Z"
-    },
-    {
-      "id": "63cd6e332c988e06c7c5",
-      "source": "CryptoSlate",
-      "title": "SpaceX perpetual futures traded about $6 billion after earnings",
-      "summary": "Talos’s combined Binance and Hyperliquid turnover figure rose sharply while Binance’s dollar exposure contracted; actual retained fees remain unquantified. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next.…",
-      "url": "https://cryptoslate.com/spacex-perpetual-futures-traded-about-6-billion-after-earnings/",
-      "publishedAt": "2026-10-23T19:10:43.000Z"
     },
     {
       "id": "d37b5af734f5d2cf7d43",
@@ -216,14 +312,6 @@
       "summary": "Netanyahu says blockchain could help Israel prepare for possible sanctions targeting its banking system.",
       "url": "https://www.theblock.co/news/markets/2026-10-23-netanyahu-israel-blockchain-plan-possible-sanctions-427792",
       "publishedAt": "2026-10-23T18:15:55.000Z"
-    },
-    {
-      "id": "5e7389854981b4194102",
-      "source": "CryptoSlate",
-      "title": "Bitcoin ETFs shed $635 million as BTC tests their holdings’ estimated $81,500 cost basis",
-      "summary": "US spot Bitcoin exchange-traded funds recorded about $635 million in net outflows Thursday as the cryptocurrency traded near the estimated cost basis of the funds' Bitcoin holdings. The Oct. 22 withdrawals were the largest daily outflow since June 25 and…",
-      "url": "https://cryptoslate.com/bitcoin-etf-outflows-holdings-cost-basis/",
-      "publishedAt": "2026-10-23T18:10:49.000Z"
     },
     {
       "id": "6f4d0f91ecb08ffb2635",
@@ -608,94 +696,6 @@
       "summary": "Matthew Modabber was reportedly ousted after an internal probe of several instances of misconduct, according to the New York Post.",
       "url": "https://www.coindesk.com/markets/2026/10/23/polymarket-has-reportedly-fired-its-marketing-chief-also-a-close-friend-of-the-ceo",
       "publishedAt": "2026-10-23T05:01:19.000Z"
-    },
-    {
-      "id": "e4cf9f6314b2dd18f080",
-      "source": "CoinDesk",
-      "title": "Ethereum delays Glamsterdam test after security devs flag risk to existing contracts",
-      "summary": "Developers canceled Monday's Hoodi activation after researchers showed how new gas rules could let smart contracts permanently record failed operations.",
-      "url": "https://www.coindesk.com/tech/2026/10/23/ethereum-delays-glamsterdam-test-after-security-devs-flag-risk-to-existing-contracts",
-      "publishedAt": "2026-10-23T04:59:34.000Z"
-    },
-    {
-      "id": "a2f9d0e7691d9c6eec1c",
-      "source": "CoinDesk",
-      "title": "Cardano holders are being asked to bet $5 million on copper hitting a new record",
-      "summary": "Toto Finance wants 22 million ADA from Cardano’s treasury to buy tokenized copper, and the metal would have to trade well above its all-time high for holders to get their money back.",
-      "url": "https://www.coindesk.com/markets/2026/10/23/cardano-holders-are-being-asked-to-bet-usd5-million-on-copper-hitting-a-new-record",
-      "publishedAt": "2026-10-23T04:36:51.000Z"
-    },
-    {
-      "id": "cf1ddb98b336e6215a35",
-      "source": "Cointelegraph",
-      "title": "Bitcoin Core changes security policy as AI makes bugs easier to find",
-      "summary": "Bitcoin Core says keeping certain vulnerabilities secret no longer offers much protection in the wake of AI-assisted bug hunting.",
-      "url": "https://cointelegraph.com/news/bitcoin-core-changes-security-policy-as-ai-makes-bugs-easier-to-find?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-23T04:34:14.000Z"
-    },
-    {
-      "id": "ba785c457cb8161ab2ba",
-      "source": "The Block",
-      "title": "HSBC rolls out its first HKD stablecoin RedCoin to retail users",
-      "summary": "PayMe users will be able to activate a stablecoin wallet in-app in the coming days for peer-to-peer and peer-to-merchant payments.",
-      "url": "https://www.theblock.co/news/business/2026-10-23-hsbc-hkd-stablecoin-redcoin-424018",
-      "publishedAt": "2026-10-23T04:03:09.000Z"
-    },
-    {
-      "id": "080cf7dc8f20e52acc15",
-      "source": "CoinDesk",
-      "title": "Bitcoin, gold trim early losses as yen gives up gains. Oil stays near $100",
-      "summary": "Bitcoin and gold pared early losses as the yen gave up gains and Asian stocks rebounded, though oil near $100 keeps inflation risks in focus.",
-      "url": "https://www.coindesk.com/markets/2026/10/23/bitcoin-gold-trim-early-losses-as-yen-gives-up-gains-oil-stays-near-usd100",
-      "publishedAt": "2026-10-23T03:13:01.000Z"
-    },
-    {
-      "id": "c4e80fdac9618115842c",
-      "source": "The Block",
-      "title": "Chainlink partners with LG CNS to drive Korean won stablecoin expansion",
-      "summary": "LG CNS is set to integrate Chainlink's cross-chain, data, and orchestration infrastructure into its digital asset platform.",
-      "url": "https://www.theblock.co/news/business/2026-10-22-chainlink-partners-with-lg-cns-423993",
-      "publishedAt": "2026-10-23T02:48:13.000Z"
-    },
-    {
-      "id": "4a32e38fc88e53b9626d",
-      "source": "The Block",
-      "title": "Bitcoin slides below $81,500 as tech stock sell-off spreads to Asian equities",
-      "summary": "The Wall Street sell-off extended to Asian equities on Friday morning, with South Korea's Kospi down 2.3% and Japan's Nikkei 225 down 1.6%.",
-      "url": "https://www.theblock.co/news/markets/2026-10-22-bitcoin-slides-tech-stock-sell-off-423990",
-      "publishedAt": "2026-10-23T02:21:30.000Z"
-    },
-    {
-      "id": "655639cbac806180b6b8",
-      "source": "Cointelegraph",
-      "title": "Switzerland’s first retail spot Bitcoin ETF targets November launch",
-      "summary": "BIT Asset Management’s Bitcoin Fund ETF is expected to begin trading on SIX Swiss Exchange in November, with its public offering restricted to Switzerland.",
-      "url": "https://cointelegraph.com/news/switzerland-approves-first-spot-bitcoin-etf-for-retail-investors?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-23T00:59:35.000Z"
-    },
-    {
-      "id": "d3215c41e8d3357e4201",
-      "source": "Cointelegraph",
-      "title": "Pentagon bans US forces from using military info to bet in prediction markets",
-      "summary": "Hegseth warned that prediction market wagers could expose military operations to adversaries.",
-      "url": "https://cointelegraph.com/news/pentagon-bans-us-forces-from-using-military-info-to-bet-in-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-22T23:50:42.000Z"
-    },
-    {
-      "id": "edb7e2d116ab4039db18",
-      "source": "Cointelegraph",
-      "title": "New DeepSeek ban in US, Swiss-Asia crypto ties deepen: Asia Express",
-      "summary": "DeepSeek banned from US federal civilian agencies over spying fears. Singapore firm behind Europe’s only spot Bitcoin ETF, as Switzerland partners with Vietnam on crypto tech.",
-      "url": "https://cointelegraph.com/magazine/new-deepseek-ban-in-us-swiss-asia-crypto-ties-deepen-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-22T22:50:22.000Z"
-    },
-    {
-      "id": "251d56ef501d4868957b",
-      "source": "CoinDesk",
-      "title": "Senate's top Democratic investigator looking into Tether payments to Bo Hines' firm",
-      "summary": "Senator Richard Blumenthal, the ranking Democrat on the investigations subcommittee, added a probe of the ex-White House crypto adviser to his list of crypto interests.",
-      "url": "https://www.coindesk.com/policy/2026/10/22/senate-s-top-democratic-investigator-looking-into-tether-payments-to-bo-hines-firm",
-      "publishedAt": "2026-10-22T22:43:36.000Z"
     }
   ]
 }
