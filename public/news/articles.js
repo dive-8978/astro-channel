@@ -1,5 +1,38 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "ma-stay-close-to-mom-20261026",
+    "title": "Stay Close to Mom, Wherever Life Takes You",
+    "dek": "Across cities and borders, a simple message can mean everything. MA brings us closer to our mothers, our families, and the people we love.",
+    "type": "Community Note",
+    "section": "Products",
+    "project": "MA",
+    "phase": "Community note",
+    "phaseTone": "active",
+    "date": "2026-10-26",
+    "displayDate": "October 26, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261026/ma-stay-close-to-mom.jpg",
+    "imageWidth": 849,
+    "imageHeight": 1508,
+    "imageAlt": "A warm illustration of a mother embracing her child, surrounded by soft light.",
+    "imageCaption": "An illustration of a mother embracing her child, shared as a reflection on family connection.",
+    "body": [
+      "Across cities and borders, a simple message can mean everything. MA brings us closer to our mothers, our families, and the people we love.",
+      "Life takes us to new places, but the moments that matter can be small: a greeting, a check-in, or a few words that say, 'I'm thinking of you.'",
+      "Stay close to Mom, wherever life takes you."
+    ],
+    "facts": [
+      "MA's product purpose includes everyday conversations among family and friends."
+    ],
+    "status": "A community message about connection and care.",
+    "links": [
+      {
+        "label": "Explore MA",
+        "url": "/painpoints.html?lang=en"
+      }
+    ]
+  },
+  {
     "slug": "ma-next-chapter-in-connection-20261021",
     "title": "A New Chapter in Connection",
     "dek": "New release candidates for MA and MA full carry forward a focus on conversations, community, and the people who matter.",

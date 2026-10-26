@@ -86,7 +86,8 @@ assert.doesNotMatch(safeCopy, /\/Users\/|Bearer |BEGIN.*PRIVATE KEY|baow59671|ss
 const newsroom = fs.readFileSync(path.join(publicRoot, "newsroom.html"), "utf8");
 const leadSlug = newsroom.match(/class="lead-story" href="news\/article\.html\?slug=([^"]+)"/)?.[1];
 assert.ok(articles.some(article => article.slug === leadSlug));
-assert.match(newsroom, /news\/articles\.js\?v=20261021/);
-assert.match(fs.readFileSync(path.join(publicRoot, "news/article.html"), "utf8"), /articles\.js\?v=20261021/);
+const cacheVersion = articles[0].date.replaceAll("-", "");
+assert.ok(newsroom.includes("news/articles.js?v=" + cacheVersion));
+assert.ok(fs.readFileSync(path.join(publicRoot, "news/article.html"), "utf8").includes("articles.js?v=" + cacheVersion));
 checkLocalLink(record.chainDesign.publicOverview);
 console.log("PASS three bilingual updates, scoped claims, local links, artwork, lead story and cache version.");

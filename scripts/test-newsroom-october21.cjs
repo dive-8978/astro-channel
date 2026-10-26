@@ -19,7 +19,8 @@ const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({
 
 assert.equal(approved.length, 3);
 assert.equal(new Set(articles.map(article => article.slug)).size, articles.length);
-assert.deepEqual(articles.slice(0, 3).map(article => article.slug), slugs);
+const approvedArticles = articles.filter(article => slugs.includes(article.slug));
+assert.deepEqual(approvedArticles.map(article => article.slug), slugs);
 assert.deepEqual(articles.filter(article => article.date === "2026-10-21").map(article => article.slug), slugs);
 const historicalArticles = articles.filter(article => article.date < "2026-10-21");
 assert.equal(historicalArticles.length, 24);
@@ -91,16 +92,18 @@ assert.doesNotMatch(safe.html, /<script>bad\(\)<\/script>|<h1><img/);
 
 const newsroom = fs.readFileSync(path.join(publicRoot, "newsroom.html"), "utf8");
 const articlePage = fs.readFileSync(path.join(publicRoot, "news/article.html"), "utf8");
-assert.ok(newsroom.includes('class="lead-story" href="news/article.html?slug=' + slugs[0] + '"'));
-assert.ok(newsroom.includes("<strong>" + approved[0].title + "</strong>"));
-assert.ok(newsroom.includes(approved[0].summary));
-assert.match(newsroom, /news\/articles\.js\?v=20261021/);
-assert.match(articlePage, /articles\.js\?v=20261021/);
+const leadArticle = articles[0];
+assert.ok(newsroom.includes('class="lead-story" href="news/article.html?slug=' + leadArticle.slug + '"'));
+assert.ok(newsroom.includes("<strong>" + leadArticle.title + "</strong>"));
+assert.ok(newsroom.includes(leadArticle.dek));
+const cacheVersion = leadArticle.date.replaceAll("-", "");
+assert.ok(newsroom.includes("news/articles.js?v=" + cacheVersion));
+assert.ok(articlePage.includes("articles.js?v=" + cacheVersion));
 const sitemap = fs.readFileSync(path.join(publicRoot, "sitemap.xml"), "utf8");
-assert.ok(sitemap.includes("<loc>https://www.astrochannel.one/newsroom.html</loc><lastmod>2026-10-21</lastmod>"));
+assert.ok(sitemap.includes("<loc>https://www.astrochannel.one/newsroom.html</loc><lastmod>" + leadArticle.date + "</lastmod>"));
 for (const slug of slugs) {
   const entry = "<loc>https://www.astrochannel.one/news/article.html?slug=" + slug + "</loc><lastmod>2026-10-21</lastmod>";
   assert.equal(sitemap.split(entry).length - 1, 1);
 }
-assert.doesNotMatch(JSON.stringify(articles.slice(0, 3)), /\/Users\/|Bearer |PRIVATE KEY|fully secure|zero data collection|100 million|100,000,000/);
+assert.doesNotMatch(JSON.stringify(approvedArticles), /\/Users\/|Bearer |PRIVATE KEY|fully secure|zero data collection|100 million|100,000,000/);
 console.log("PASS three exact approved English dispatches, original image hashes, 24 unchanged historical articles, rendering, escaping, cache and sitemap.");
