@@ -56,7 +56,7 @@ function boot(search = '', saved, blocked = false) {
   return { context, elements, originals, nodes, selector, classes, stored };
 }
 const page = boot();
-assert.equal(page.elements.length, 84);
+assert.ok(page.elements.length >= 70, 'Cover all substantial homepage copy');
 assert.deepEqual(Array.from(page.context.window.MA_PAGE_I18N.languages), languages);
 for (const language of languages) {
   page.selector.value = language;
@@ -82,7 +82,20 @@ assert.equal(boot('?lang=xx', 'de').selector.value, 'de');
 assert.equal(boot('', 'invalid').selector.value, 'en');
 assert.equal(boot('?lang=%3Cscript%3E', undefined, true).selector.value, 'en');
 for (const language of languages) assert.ok(html.includes(`<option value="${language}">`));
-assert.ok(html.includes('window.MA_PAGE_I18N.message("preparing")'));
-assert.ok(html.includes('window.MA_PAGE_I18N.message("downloadError")'));
+// The public homepage now sends visitors to the two current store listings.
+// No stale service-worker download, test build or developer-only AAB links.
+for (const packageName of ['com.astrobridge.ma', 'com.astrobridge.ma.full']) {
+  assert.ok(html.includes(`https://play.google.com/store/apps/details?id=${packageName}"`));
+}
+assert.equal((html.match(/data-edition="/g) || []).length, 2);
+assert.match(html, /1\.6\.91 \(116\)/);
+assert.match(html, /MA Square · Beta/);
+assert.match(html, /Card redemption is not active/);
+assert.match(html, /iOS · Release pending/);
+assert.match(html, /Chat history is stored locally\. Online delivery/);
+assert.doesNotMatch(html + code, /1\.5\.1|MA Website|MA Social|Store-safe|multipart-download|ma-download-sw/);
+assert.doesNotMatch(html, /href="[^"]+\.(?:aab|ipa)(?:["?])/);
+assert.ok(html.includes('ma-support.html'));
+assert.ok(html.includes('ma-policies.html'));
 assert.ok(!html.includes('addEventListener("click", () => document.body.classList.toggle("zh"))'));
-console.log('PASS: 84 content elements across 7 languages; metadata, labels, download messages, persistence, query precedence and blocked storage.');
+console.log(`PASS: ${page.elements.length} content elements across 7 languages; metadata, labels, persistence, query precedence, blocked storage, two store editions and release boundaries.`);

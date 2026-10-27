@@ -1,101 +1,602 @@
-/* MA product-page translations. Columns: English source, Spanish, French,
- * German, Japanese, Korean. Chinese and English remain in the original HTML.
- * Source-text keys deliberately avoid positional coupling to the page layout. */
+/* Seven-language MA homepage copy. Static translations only; no remote scripts or account access. */
 (() => {
   'use strict';
   const languages = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko'];
   const rows = [
-    ['Product', 'Producto', 'Produit', 'Produkt', '製品', '제품'],
-    ['Security', 'Seguridad', 'Sécurité', 'Sicherheit', 'セキュリティ', '보안'],
-    ['Channel', 'Canal', 'Canal', 'Kanal', 'チャネル', '채널'],
-    ['Programs', 'Programas', 'Programmes', 'Programme', 'プログラム', '프로그램'],
-    ['Newsroom', 'Noticias', 'Actualités', 'Neuigkeiten', 'ニュース', '뉴스'],
-    ['AstroBridge dedicated channel', 'Canal dedicado de AstroBridge', 'Canal dédié AstroBridge', 'Dedizierter AstroBridge-Kanal', 'AstroBridge 専用チャネル', 'AstroBridge 전용 채널'],
-    ['Private chat.Native value.', 'Chat privado.<br><span>Valor integrado.</span>', 'Discussion privée.<br><span>Valeur intégrée.</span>', 'Privater Chat.<br><span>Werte direkt übertragen.</span>', 'プライベートな会話。<br><span>価値を直接届ける。</span>', '비공개 대화.<br><span>가치를 바로 전하다.</span>'],
-    ['Your identity, beyond a phone number. MA brings address-based chat identity, wallet tools and local-first experiences into one app. Chat identity and funds wallet are separate.', 'Tu identidad va más allá de un número de teléfono. MA reúne identidad de chat basada en direcciones, herramientas de cartera y experiencias que priorizan los datos locales. La identidad de chat y la cartera de fondos son independientes.', 'Votre identité ne se limite pas à un numéro de téléphone. MA réunit une identité de discussion fondée sur une adresse, des outils de portefeuille et des expériences privilégiant les données locales. L’identité de discussion et le portefeuille de fonds sont distincts.', 'Ihre Identität ist mehr als eine Telefonnummer. MA vereint adressbasierte Chat-Identität, Wallet-Werkzeuge und lokal ausgerichtete Funktionen in einer App. Chat-Identität und Wallet für Guthaben sind getrennt.', '電話番号にとらわれないアイデンティティ。MA はアドレスベースのチャット ID、ウォレット機能、ローカル優先の体験を一つのアプリにまとめます。チャット ID と資金用ウォレットは別々です。', '전화번호에 얽매이지 않는 정체성. MA는 주소 기반 채팅 ID, 지갑 도구, 로컬 우선 기능을 하나의 앱에 통합합니다. 채팅 ID와 자금 지갑은 분리되어 있습니다.'],
-    ['Get MA for Android', 'Descargar MA para Android', 'Télécharger MA pour Android', 'MA für Android herunterladen', 'Android 版 MA をダウンロード', 'Android용 MA 다운로드'],
-    ['iOS · Coming Soon', 'iOS · Próximamente', 'iOS · Bientôt disponible', 'iOS · Demnächst', 'iOS · 近日公開', 'iOS · 출시 예정'],
-    ['Explore MA', 'Explorar MA', 'Découvrir MA', 'MA entdecken', 'MA を見る', 'MA 살펴보기'],
-    ['Professional view · MA identity', 'Vista profesional · Identidad MA', 'Vue professionnelle · Identité MA', 'Fachansicht · MA-Identität', '専門サイト · MA の ID', '전문 사이트 · MA ID'],
-    ['Card Redemption', 'Canje de tarjetas', 'Échange de cartes', 'Karteneinlösung', 'カード交換', '카드 교환'],
-    ['Daily Burn', 'Quema diaria', 'Destruction quotidienne', 'Tägliche Token-Vernichtung', '毎日のバーン', '일일 소각'],
-    ['Mother Fund', 'Fondo para Madres', 'Fonds pour les mères', 'Mütterfonds', 'マザーファンド', '어머니 기금'],
-    ['No phone number required', 'No se requiere número de teléfono', 'Aucun numéro de téléphone requis', 'Keine Telefonnummer erforderlich', '電話番号は不要', '전화번호 불필요'],
-    ['7 languages', '7 idiomas', '7 langues', '7 Sprachen', '7 言語対応', '7개 언어'],
-    ['Local-first data', 'Datos locales prioritarios', 'Données locales privilégiées', 'Lokale Daten zuerst', 'ローカル優先のデータ', '로컬 우선 데이터'],
-    ['Signed P2P delivery', 'Entrega P2P firmada', 'Transmission P2P signée', 'Signierte P2P-Zustellung', '署名付き P2P 配信', '서명된 P2P 전송'],
-    ['Address-based chat identity', 'Identidad de chat basada en direcciones', 'Identité de discussion fondée sur une adresse', 'Adressbasierte Chat-Identität', 'アドレスベースのチャット ID', '주소 기반 채팅 ID'],
-    ['Dedicated AstroBridge channels', 'Canales dedicados de AstroBridge', 'Canaux dédiés AstroBridge', 'Dedizierte AstroBridge-Kanäle', 'AstroBridge 専用チャネル', 'AstroBridge 전용 채널'],
-    ['Interface languages', 'Idiomas de la interfaz', 'Langues de l’interface', 'Oberflächensprachen', '表示言語', '인터페이스 언어'],
-    ['One conversation. More possibility.', 'Una conversación. Más posibilidades.', 'Une conversation. Plus de possibilités.', 'Ein Gespräch. Mehr Möglichkeiten.', '一つの会話から、広がる可能性。', '하나의 대화, 더 많은 가능성.'],
-    ['Messaging designed around people, not protocols.', 'Mensajería diseñada para las personas, no para los protocolos.', 'Une messagerie pensée pour les personnes, pas pour les protocoles.', 'Nachrichten für Menschen gestaltet, nicht für Protokolle.', 'プロトコルではなく、人と会話を中心に。', '프로토콜이 아닌 사람을 중심으로 설계한 메시징.'],
-    ['MA keeps the interaction calm and familiar while placing identity, value, and network control in your hands.', 'MA mantiene una interacción sencilla y familiar, dejando en tus manos el control de la identidad, el valor y la red.', 'MA offre une interaction simple et familière, tout en vous laissant le contrôle de l’identité, de la valeur et du réseau.', 'MA bietet eine ruhige, vertraute Bedienung und legt die Kontrolle über Identität, Werte und Netzwerk in Ihre Hände.', 'MA は落ち着いた使い慣れた操作感を保ち、ID、価値、ネットワークの管理をあなたの手に委ねます。', 'MA는 편안하고 익숙한 사용 경험을 제공하면서 ID, 가치, 네트워크의 제어권을 사용자에게 맡깁니다.'],
-    ['Focused private chat', 'Chat privado sin distracciones', 'Discussion privée ciblée', 'Konzentrierter privater Chat', '会話に集中できるプライベートチャット', '대화에 집중하는 비공개 채팅'],
-    ['Direct P2P message delivery with presence and delivery state synchronization.', 'Entrega directa de mensajes P2P con sincronización de presencia y estado de entrega.', 'Transmission directe de messages P2P avec synchronisation de la présence et de l’état de livraison.', 'Direkte P2P-Nachrichtenzustellung mit synchronisiertem Online- und Zustellstatus.', 'P2P でメッセージを直接配信し、オンライン状態と配信状態を同期します。', 'P2P로 메시지를 직접 전송하고 온라인 및 전달 상태를 동기화합니다.'],
-    ['Transfer inside chat', 'Transferencias dentro del chat', 'Transfert dans la discussion', 'Überweisung im Chat', 'チャット内で送金', '채팅 내 송금'],
-    ['Send value from the same place you speak, without breaking the conversation.', 'Envía valor desde donde conversas, sin interrumpir el diálogo.', 'Transférez de la valeur là où vous discutez, sans interrompre la conversation.', 'Übertragen Sie Werte dort, wo Sie sprechen, ohne das Gespräch zu unterbrechen.', '会話を中断せず、話しているその場所から価値を送れます。', '대화를 중단하지 않고 대화하는 바로 그곳에서 가치를 전하세요.'],
-    ['Self-custody wallet', 'Cartera de autocustodia', 'Portefeuille en autogarde', 'Wallet in Eigenverwahrung', '自己管理型ウォレット', '자기 보관 지갑'],
-    ['Asset view, transfer, receive, swap entry, and transaction history in one app.', 'Consulta de activos, envío, recepción, acceso a intercambios e historial de transacciones en una app.', 'Actifs, envoi, réception, accès aux échanges et historique des transactions dans une seule application.', 'Vermögensübersicht, Senden, Empfangen, Swap-Einstieg und Transaktionsverlauf in einer App.', '資産の確認、送金、受取、スワップへの入口、取引履歴を一つのアプリで。', '자산 조회, 송금, 수신, 스왑 진입, 거래 내역을 하나의 앱에서 관리합니다.'],
-    ['Signed identity', 'Identidad firmada', 'Identité signée', 'Signierte Identität', '署名による ID 認証', '서명 기반 ID'],
-    ['Wallet signatures authenticate the connection without handing over custody.', 'Las firmas de la cartera autentican la conexión sin ceder la custodia.', 'Les signatures du portefeuille authentifient la connexion sans céder la garde des actifs.', 'Wallet-Signaturen authentifizieren die Verbindung, ohne die Verwahrung abzugeben.', 'ウォレットの署名で接続を認証し、資産の管理権を渡しません。', '지갑 서명으로 연결을 인증하며 자산 보관 권한을 넘기지 않습니다.'],
-    ['Live network status', 'Estado de la red en tiempo real', 'État du réseau en temps réel', 'Netzwerkstatus in Echtzeit', 'リアルタイムのネットワーク状態', '실시간 네트워크 상태'],
-    ['See AstroBridge API, P2P channel, node health, and queue state directly.', 'Consulta directamente la API de AstroBridge, el canal P2P, el estado de los nodos y la cola.', 'Consultez directement l’API AstroBridge, le canal P2P, la santé des nœuds et l’état de la file.', 'Sehen Sie AstroBridge-API, P2P-Kanal, Knotenzustand und Warteschlange direkt ein.', 'AstroBridge API、P2P チャネル、ノードの稼働状態、キューの状態を直接確認できます。', 'AstroBridge API, P2P 채널, 노드 상태, 대기열 상태를 직접 확인하세요.'],
-    ['Scan and connect', 'Escanear y conectar', 'Scanner et se connecter', 'Scannen und verbinden', 'スキャンして接続', '스캔하고 연결'],
-    ['Use QR entry points for addresses and streamlined value actions.', 'Usa códigos QR para reconocer direcciones y simplificar las acciones de transferencia de valor.', 'Utilisez des codes QR pour les adresses et des transferts de valeur simplifiés.', 'Nutzen Sie QR-Codes für Adressen und vereinfachte Wertübertragungen.', 'QR コードでアドレスを読み取り、価値のやり取りをスムーズにします。', 'QR 코드로 주소를 인식하고 가치 전송 과정을 간소화하세요.'],
-    ['Dinner was on me. Send your share whenever.', 'Yo pagué la cena. Envíame tu parte cuando puedas.', 'J’ai payé le dîner. Envoie ta part quand tu veux.', 'Ich habe das Abendessen bezahlt. Schick deinen Anteil, wenn es passt.', '夕食代は払っておいたよ。都合のよい時に自分の分を送ってね。', '저녁값은 내가 냈어. 편할 때 네 몫을 보내 줘.'],
-    ['MA Transfer', 'Transferencia MA', 'Transfert MA', 'MA-Überweisung', 'MA 送金', 'MA 송금'],
-    ['Signed and ready', 'Firmado y listo', 'Signé et prêt', 'Signiert und bereit', '署名済み、送信準備完了', '서명 완료, 전송 준비됨'],
-    ['Sent. That was quick.', 'Enviado. Qué rápido.', 'Envoyé. C’était rapide.', 'Gesendet. Das ging schnell.', '送ったよ。すぐできたね。', '보냈어. 정말 빠르네.'],
-    ['Conversation meets value', 'La conversación conecta con el valor', 'La conversation rencontre la valeur', 'Gespräch trifft Wert', '会話と価値がつながる', '대화와 가치의 연결'],
-    ['Transfer without leaving the moment.', 'Transfiere sin salir de la conversación.', 'Transférez sans quitter la conversation.', 'Überweisen, ohne den Moment zu verlassen.', '会話の流れを止めずに送金。', '대화의 흐름을 끊지 않는 송금.'],
-    ['MA makes a transfer feel like a natural part of conversation while keeping signature confirmation visible and deliberate.', 'MA integra las transferencias de forma natural en la conversación y mantiene la confirmación de firma clara y consciente.', 'MA intègre naturellement le transfert à la conversation, tout en gardant la confirmation de signature visible et explicite.', 'MA lässt Überweisungen natürlich ins Gespräch einfließen und hält die Signaturbestätigung sichtbar und bewusst.', 'MA は送金を会話の自然な一部にしながら、署名の確認を見える形で、意識して行えるようにします。', 'MA는 송금을 대화의 자연스러운 일부로 만들면서 서명 확인 단계를 명확하고 의도적으로 유지합니다.'],
-    ['Sender identity bound to the authenticated socket', 'Identidad del remitente vinculada al socket autenticado', 'Identité de l’expéditeur liée au socket authentifié', 'Absenderidentität an den authentifizierten Socket gebunden', '送信者 ID を認証済みソケットに紐付け', '발신자 ID를 인증된 소켓에 연결'],
-    ['Delivery acknowledgement and clear error states', 'Confirmación de entrega y errores claros', 'Accusés de livraison et erreurs explicites', 'Zustellbestätigung und klare Fehlerzustände', '配信確認と明確なエラー表示', '전달 확인 및 명확한 오류 상태'],
-    ['Biometric access and local-first storage controls', 'Acceso biométrico y controles de almacenamiento local prioritario', 'Accès biométrique et contrôle du stockage local privilégié', 'Biometrischer Zugriff und lokal ausgerichtete Speichersteuerung', '生体認証とローカル優先の保存管理', '생체 인증 및 로컬 우선 저장 제어'],
-    ['Built on AstroBridge', 'Construido sobre AstroBridge', 'Fondé sur AstroBridge', 'Auf AstroBridge aufgebaut', 'AstroBridge が支える', 'AstroBridge 기반'],
-    ['Two dedicated channels. One coherent experience.', 'Dos canales dedicados. Una experiencia coherente.', 'Deux canaux dédiés. Une expérience cohérente.', 'Zwei dedizierte Kanäle. Ein stimmiges Erlebnis.', '二つの専用チャネル。一つのつながる体験。', '두 개의 전용 채널, 하나의 일관된 경험.'],
-    ['Assets, transaction broadcast, intent submission, user validation, and ecosystem APIs.', 'Activos, difusión de transacciones, envío de intenciones, validación de usuarios y API del ecosistema.', 'Actifs, diffusion de transactions, soumission d’intentions, validation des utilisateurs et API de l’écosystème.', 'Vermögenswerte, Transaktionsübertragung, Intent-Einreichung, Nutzerprüfung und Ökosystem-APIs.', '資産照会、取引のブロードキャスト、インテント送信、ユーザー検証、エコシステム API。', '자산 조회, 거래 브로드캐스트, 인텐트 제출, 사용자 검증, 생태계 API.'],
-    ['Real-time private messages, presence synchronization, and signed P2P transport.', 'Mensajes privados en tiempo real, sincronización de presencia y transporte P2P firmado.', 'Messages privés en temps réel, synchronisation de présence et transport P2P signé.', 'Private Nachrichten in Echtzeit, Präsenzsynchronisierung und signierter P2P-Transport.', 'リアルタイムのプライベートメッセージ、オンライン状態の同期、署名付き P2P 通信。', '실시간 비공개 메시지, 온라인 상태 동기화, 서명된 P2P 전송.'],
-    ['MA programs', 'Programas MA', 'Programmes MA', 'MA-Programme', 'MA プログラム', 'MA 프로그램'],
-    ['Cards, supply, and care.', 'Tarjetas, oferta y cuidado.', 'Cartes, offre et solidarité.', 'Karten, Token-Angebot und Fürsorge.', 'カード、供給量、そして支援。', '카드, 공급량, 그리고 돌봄.'],
-    ['Open the official program pages. They are read-only until the relevant on-chain and consent checks are complete.', 'Abre las páginas oficiales de los programas. Son de solo lectura hasta completar las verificaciones pertinentes en cadena y de consentimiento.', 'Ouvrez les pages officielles des programmes. Elles restent en lecture seule jusqu’à la fin des vérifications pertinentes sur la chaîne et du consentement.', 'Öffnen Sie die offiziellen Programmseiten. Sie bleiben schreibgeschützt, bis die erforderlichen On-Chain- und Einwilligungsprüfungen abgeschlossen sind.', '公式プログラムページをご覧ください。必要なオンチェーン検証と同意の確認が完了するまで、ページは閲覧専用です。', '공식 프로그램 페이지를 확인하세요. 관련 온체인 검증과 동의 확인이 완료될 때까지 읽기 전용입니다.'],
-    ['Card gallery, proposed reference values, and the future app-to-web redemption boundary.', 'Galería de tarjetas, valores de referencia propuestos y límites del futuro canje entre app y web.', 'Galerie de cartes, valeurs de référence proposées et périmètre du futur échange entre application et web.', 'Kartengalerie, vorgeschlagene Referenzwerte und Grenzen der künftigen Einlösung zwischen App und Web.', 'カードギャラリー、提案段階の参考値、今後のアプリとウェブ間の交換範囲。', '카드 갤러리, 제안된 기준값, 향후 앱과 웹 간 교환 범위.'],
-    ['Open Card Redemption', 'Abrir canje de tarjetas', 'Ouvrir l’échange de cartes', 'Karteneinlösung öffnen', 'カード交換を見る', '카드 교환 열기'],
-    ['Planned 50M MA reserve, 136,986 MA daily schedule, and transaction-proof standard. No burn is counted before verifiable on-chain evidence exists.', 'Reserva prevista de 50 millones de MA, calendario de 136.986 MA diarios y estándar de prueba de transacción. No se contabiliza ninguna quema sin pruebas verificables en cadena.', 'Réserve prévue de 50 millions de MA, calendrier de 136 986 MA par jour et norme de preuve de transaction. Aucune destruction n’est comptabilisée sans preuve vérifiable sur la chaîne.', 'Geplante Reserve von 50 Millionen MA, täglicher Plan von 136.986 MA und Transaktionsnachweisstandard. Ohne überprüfbare On-Chain-Nachweise wird keine Vernichtung gezählt.', '5,000 万 MA の準備金、毎日 136,986 MA の予定、取引証明基準を計画。検証可能なオンチェーン証拠が得られるまで、バーン済み数量は計上しません。', '5천만 MA 준비금, 일일 136,986 MA 일정, 거래 증명 기준을 계획합니다. 검증 가능한 온체인 증거가 있기 전에는 소각량을 집계하지 않습니다.'],
-    ['Open Daily Burn', 'Abrir quema diaria', 'Ouvrir la destruction quotidienne', 'Tägliche Vernichtung öffnen', '毎日のバーンを見る', '일일 소각 열기'],
-    ['A proposed 20 million MA Mother Fund, public accountability and an open participation invitation.', 'Propuesta de un Fondo para Madres de 20 millones de MA, rendición de cuentas pública e invitación abierta a participar.', 'Projet de Fonds pour les mères de 20 millions de MA, responsabilité publique et invitation ouverte à participer.', 'Vorgeschlagener Mütterfonds mit 20 Millionen MA, öffentlicher Rechenschaft und offener Einladung zur Teilnahme.', '2,000 万 MA のマザーファンド構想、公開の説明責任、参加へのオープンな招待。', '2천만 MA 어머니 기금 제안, 공개적인 책임 체계, 열린 참여 초대.'],
-    ['Open Mother Fund', 'Abrir el Fondo para Madres', 'Ouvrir le Fonds pour les mères', 'Mütterfonds öffnen', 'マザーファンドを見る', '어머니 기금 열기'],
-    ['MA Buyback Plan', 'Plan de recompra de MA', 'Plan de rachat MA', 'MA-Rückkaufplan', 'MA 買い戻し計画', 'MA 매입 계획'],
-    ['Annual proposal: 2% of eligible audited profit to replenish the Mother Fund, and 2% to buy MA for burning.', 'Propuesta anual: destinar el 2% del beneficio auditado elegible a reponer el Fondo para Madres y otro 2% a comprar MA para su quema.', 'Proposition annuelle : affecter 2 % du bénéfice audité admissible au Fonds pour les mères et 2 % au rachat de MA pour destruction.', 'Jährlicher Vorschlag: 2 % des anrechenbaren geprüften Gewinns zur Auffüllung des Mütterfonds und 2 % zum Kauf von MA zur Vernichtung.', '年間の提案：対象となる監査済み利益の 2% でマザーファンドを補充し、別の 2% でバーン用の MA を買い戻します。', '연간 제안: 적격 감사 이익의 2%로 어머니 기금을 보충하고, 별도 2%로 소각할 MA를 매입합니다.'],
-    ['Read the buyback plan', 'Leer el plan de recompra', 'Lire le plan de rachat', 'Rückkaufplan lesen', '買い戻し計画を読む', '매입 계획 읽기'],
-    ['Say it. Send it.Own the connection.', 'Habla. Envía.<br>Controla la conexión.', 'Parlez. Envoyez.<br>Gardez le contrôle.', 'Sprechen. Senden.<br>Die Verbindung selbst bestimmen.', '話して、送る。<br>つながりはあなたの手に。', '말하고, 보내세요.<br>연결의 주인은 당신입니다.'],
-    ["Download MA v1.5.1 from AstroBridge's official cloud. Install the APK on Android devices; AAB packages are for authorized store testing and publishing.", 'Descarga MA v1.5.1 desde la nube oficial de AstroBridge. Instala el APK en Android; los paquetes AAB son para pruebas y publicación autorizadas en tiendas.', 'Téléchargez MA v1.5.1 depuis le cloud officiel d’AstroBridge. Installez l’APK sur Android ; les paquets AAB sont réservés aux tests et à la publication autorisés en boutique.', 'Laden Sie MA v1.5.1 aus der offiziellen AstroBridge-Cloud herunter. Installieren Sie die APK auf Android; AAB-Pakete sind für autorisierte Store-Tests und Veröffentlichungen bestimmt.', 'AstroBridge の公式クラウドから MA v1.5.1 をダウンロード。Android 端末には APK をインストールしてください。AAB は認可されたストアのテストと公開用です。', 'AstroBridge 공식 클라우드에서 MA v1.5.1을 다운로드하세요. Android 기기에는 APK를 설치하며, AAB 패키지는 승인된 스토어 테스트 및 배포용입니다.'],
-    ['MA Full', 'MA Completo', 'MA Complet', 'MA Vollversion', 'MA フル版', 'MA 전체 버전'],
-    ['All features', 'Todas las funciones', 'Toutes les fonctions', 'Alle Funktionen', 'すべての機能', '전체 기능'],
-    ['Private chat, local wallet, BSC and BNB payments, SuperChain, Garden, games, Bible and authorized hymn libraries.', 'Chat privado, cartera local, pagos BSC y BNB, SuperChain, Garden, juegos, Biblia y bibliotecas de himnos autorizadas.', 'Discussion privée, portefeuille local, paiements BSC et BNB, SuperChain, Garden, jeux, Bible et bibliothèques de cantiques autorisées.', 'Privater Chat, lokale Wallet, BSC- und BNB-Zahlungen, SuperChain, Garden, Spiele, Bibel und lizenzierte Gesangsbibliotheken.', 'プライベートチャット、ローカルウォレット、BSC と BNB の支払い、SuperChain、Garden、ゲーム、聖書、許諾済みの賛美歌ライブラリー。', '비공개 채팅, 로컬 지갑, BSC 및 BNB 결제, SuperChain, Garden, 게임, 성경, 사용 허가된 찬송가 라이브러리.'],
-    ['MA Website', 'MA Edición web', 'MA Édition web', 'MA Website-Version', 'MA ウェブサイト版', 'MA 웹사이트 버전'],
-    ['No library', 'Sin biblioteca', 'Sans bibliothèque', 'Ohne Bibliothek', 'コンテンツライブラリーなし', '콘텐츠 라이브러리 없음'],
-    ['The wallet-enabled website edition without the Bible and hymn libraries.', 'Edición web con cartera, sin las bibliotecas de Biblia e himnos.', 'Édition web avec portefeuille, sans bibliothèques de Bible et de cantiques.', 'Website-Version mit Wallet, ohne Bibel- und Gesangsbibliotheken.', 'ウォレット機能を備えたウェブサイト版。聖書と賛美歌ライブラリーは含みません。', '지갑 기능이 있는 웹사이트 버전으로, 성경과 찬송가 라이브러리는 포함하지 않습니다.'],
-    ['MA Chat', 'MA Chat', 'MA Discussion', 'MA Chat', 'MA チャット版', 'MA 채팅 버전'],
-    ['Store-safe', 'Versión para tiendas', 'Version pour boutiques', 'Store-Version', 'ストア向け版', '스토어용 버전'],
-    ['Communication-first edition without wallet, transfer, SuperChain, mining, or token functions.', 'Edición centrada en la comunicación, sin cartera, transferencias, SuperChain, minería ni funciones de tokens.', 'Édition centrée sur la communication, sans portefeuille, transfert, SuperChain, minage ni fonctions de jetons.', 'Kommunikationsorientierte Version ohne Wallet, Überweisungen, SuperChain, Mining oder Token-Funktionen.', '通信を中心とした版。ウォレット、送金、SuperChain、マイニング、トークン機能は含みません。', '소통 중심 버전으로 지갑, 송금, SuperChain, 채굴, 토큰 기능은 포함하지 않습니다.'],
-    ['MA Social', 'MA Social', 'MA Social', 'MA Social', 'MA ソーシャルテスト版', 'MA 소셜 테스트 버전'],
-    ['Testing', 'Pruebas', 'Tests', 'Testversion', 'テスト用', '테스트'],
-    ['Social, Garden, games and library testing without wallet, transfer, or SuperChain screens. Includes an experimental contribution module.', 'Pruebas de funciones sociales, Garden, juegos y bibliotecas, sin pantallas de cartera, transferencias ni SuperChain. Incluye un módulo experimental de contribución.', 'Tests des fonctions sociales, de Garden, des jeux et des bibliothèques, sans écrans de portefeuille, de transfert ou de SuperChain. Inclut un module expérimental de contribution.', 'Tests für soziale Funktionen, Garden, Spiele und Bibliotheken ohne Wallet-, Überweisungs- oder SuperChain-Ansichten. Enthält ein experimentelles Beitragsmodul.', 'ソーシャル、Garden、ゲーム、ライブラリーのテスト版。ウォレット、送金、SuperChain の画面はなく、実験的な貢献モジュールを含みます。', '소셜, Garden, 게임, 라이브러리 테스트용이며 지갑, 송금, SuperChain 화면은 없습니다. 실험적 기여 모듈을 포함합니다.'],
-    ["Large packages are streamed from AstroBridge's official download nodes and assembled by your browser into the original APK or AAB file. Keep this page open until the browser download begins.", 'Los paquetes grandes se transmiten desde los nodos oficiales de AstroBridge y el navegador los reconstruye como el APK o AAB original. Mantén esta página abierta hasta que comience la descarga.', 'Les gros paquets sont transmis depuis les nœuds officiels d’AstroBridge et réassemblés par votre navigateur en fichiers APK ou AAB originaux. Gardez cette page ouverte jusqu’au début du téléchargement.', 'Große Pakete werden von offiziellen AstroBridge-Downloadknoten übertragen und im Browser zur ursprünglichen APK- oder AAB-Datei zusammengesetzt. Lassen Sie diese Seite bis zum Downloadstart geöffnet.', '大きなパッケージは AstroBridge の公式ダウンロードノードから分割配信され、ブラウザーが元の APK または AAB に復元します。ダウンロードが始まるまで、このページを開いたままにしてください。', '대용량 패키지는 AstroBridge 공식 다운로드 노드에서 분할 전송되고 브라우저에서 원본 APK 또는 AAB로 조립됩니다. 다운로드가 시작될 때까지 이 페이지를 열어 두세요.'],
-    ['iOS distribution will use TestFlight and the App Store after the organization publisher account is ready. App Store-signed IPA archives cannot be installed directly on arbitrary devices.', 'La distribución en iOS usará TestFlight y App Store cuando la cuenta de publicación de la organización esté lista. Los archivos IPA firmados para App Store no se pueden instalar directamente en cualquier dispositivo.', 'La distribution iOS utilisera TestFlight et l’App Store lorsque le compte éditeur de l’organisation sera prêt. Les archives IPA signées pour l’App Store ne peuvent pas être installées directement sur n’importe quel appareil.', 'Die iOS-Verteilung erfolgt über TestFlight und den App Store, sobald das Herausgeberkonto der Organisation bereit ist. Für den App Store signierte IPA-Dateien lassen sich nicht direkt auf beliebigen Geräten installieren.', '組織の公開用アカウントの準備が整った後、iOS は TestFlight と App Store で配布します。App Store 署名の IPA は任意の端末へ直接インストールできません。', '조직 배포 계정이 준비되면 iOS는 TestFlight와 App Store로 배포됩니다. App Store 서명 IPA 파일은 임의의 기기에 직접 설치할 수 없습니다.'],
-    ['Official test build', 'Compilación oficial de prueba', 'Version officielle de test', 'Offizieller Test-Build', '公式テストビルド', '공식 테스트 빌드'],
-    ['Policies & Community Rules', 'Políticas y normas de la comunidad', 'Politiques et règles communautaires', 'Richtlinien und Community-Regeln', 'ポリシーとコミュニティ規則', '정책 및 커뮤니티 규칙']
-  ];
+  [
+    "Explore",
+    "Explorar",
+    "Découvrir",
+    "Entdecken",
+    "機能",
+    "둘러보기"
+  ],
+  [
+    "Privacy",
+    "Privacidad",
+    "Confidentialité",
+    "Datenschutz",
+    "プライバシー",
+    "개인정보 보호"
+  ],
+  [
+    "Get MA",
+    "Obtener MA",
+    "Obtenir MA",
+    "MA herunterladen",
+    "MA を入手",
+    "MA 다운로드"
+  ],
+  [
+    "Newsroom",
+    "Noticias",
+    "Actualités",
+    "Neuigkeiten",
+    "ニュース",
+    "뉴스"
+  ],
+  [
+    "MA / MADE FOR CONNECTION",
+    "MA / PARA ESTAR CERCA",
+    "MA / POUR GARDER LE LIEN",
+    "MA / FÜR VERBINDUNG GEMACHT",
+    "MA / つながりのために",
+    "MA / 연결을 위해"
+  ],
+  [
+    "Stay close.Even from afar.",
+    "Siempre cerca.<br><span>Incluso a distancia.</span>",
+    "Restez proches.<br><span>Même de loin.</span>",
+    "Bleibt euch nah.<br><span>Auch aus der Ferne.</span>",
+    "離れていても、<br><span>心は近くに。</span>",
+    "멀리 있어도,<br><span>마음은 가까이.</span>"
+  ],
+  [
+    "A message to Mom. A call with a friend. A moment worth sharing. MA brings conversations, voice and video calls, and community into one familiar place.",
+    "Un mensaje a mamá. Una llamada con un amigo. Un momento para compartir. MA reúne conversaciones, llamadas de voz y vídeo y comunidad en un lugar familiar.",
+    "Un message à maman. Un appel à un ami. Un moment à partager. MA réunit conversations, appels audio et vidéo et communauté dans un espace familier.",
+    "Eine Nachricht an Mama. Ein Anruf bei Freunden. Ein Moment zum Teilen. MA vereint Chats, Sprach- und Videoanrufe und Gemeinschaft an einem vertrauten Ort.",
+    "お母さんへのメッセージ、友人との電話、分かち合いたいひととき。MA はチャット、音声・ビデオ通話、コミュニティを使い慣れた一つの場所にまとめます。",
+    "엄마에게 보내는 메시지, 친구와의 통화, 함께 나누고 싶은 순간. MA는 채팅, 음성·영상 통화, 커뮤니티를 익숙한 한곳에 담습니다."
+  ],
+  [
+    "Get it on Google Play",
+    "Disponible en Google Play",
+    "Disponible sur Google Play",
+    "Bei Google Play herunterladen",
+    "Google Play で入手",
+    "Google Play에서 다운로드"
+  ],
+  [
+    "Choose your edition",
+    "Elige tu edición",
+    "Choisissez votre version",
+    "Version auswählen",
+    "バージョンを選ぶ",
+    "버전 선택"
+  ],
+  [
+    "iOS · Release pending",
+    "iOS · Lanzamiento pendiente",
+    "iOS · Sortie à venir",
+    "iOS · Veröffentlichung ausstehend",
+    "iOS · 正式公開待ち",
+    "iOS · 정식 출시 대기"
+  ],
+  [
+    "For family & friends",
+    "Para familia y amigos",
+    "Pour la famille et les amis",
+    "Für Familie und Freunde",
+    "家族や友人と",
+    "가족과 친구를 위해"
+  ],
+  [
+    "Your data, thoughtfully handled",
+    "Tus datos, tratados con cuidado",
+    "Vos données, traitées avec soin",
+    "Sorgsamer Umgang mit Ihren Daten",
+    "データを大切に扱う",
+    "데이터를 신중하게"
+  ],
+  [
+    "Official support",
+    "Soporte oficial",
+    "Assistance officielle",
+    "Offizieller Support",
+    "公式サポート",
+    "공식 지원"
+  ],
+  [
+    "No phone number to create a chat identity",
+    "Crea tu identidad sin número de teléfono",
+    "Créez votre identité sans numéro de téléphone",
+    "Chat-Identität ohne Telefonnummer erstellen",
+    "電話番号なしでチャット ID を作成",
+    "전화번호 없이 채팅 ID 생성"
+  ],
+  [
+    "7 interface languages",
+    "7 idiomas de interfaz",
+    "7 langues d’interface",
+    "7 Oberflächensprachen",
+    "7 言語のインターフェース",
+    "7개 인터페이스 언어"
+  ],
+  [
+    "Local-first conversations",
+    "Conversaciones con prioridad local",
+    "Conversations privilégiant le stockage local",
+    "Chats mit lokaler Speicherung im Fokus",
+    "ローカル優先の会話",
+    "로컬 우선 대화"
+  ],
+  [
+    "People first. Always.",
+    "Las personas, siempre primero.",
+    "Les personnes avant tout.",
+    "Menschen stehen an erster Stelle.",
+    "いつも、人を中心に。",
+    "언제나 사람을 먼저."
+  ],
+  [
+    "Messages · Voice · Video",
+    "Mensajes · Voz · Vídeo",
+    "Messages · Audio · Vidéo",
+    "Nachrichten · Sprache · Video",
+    "メッセージ · 音声 · ビデオ",
+    "메시지 · 음성 · 영상"
+  ],
+  [
+    "MA & MA full",
+    "MA y MA full",
+    "MA et MA full",
+    "MA und MA full",
+    "MA と MA full",
+    "MA 및 MA full"
+  ],
+  [
+    "Designed for adults",
+    "Para personas adultas",
+    "Conçu pour les adultes",
+    "Für Erwachsene entwickelt",
+    "成人向け",
+    "성인 사용자 대상"
+  ],
+  [
+    "THE EVERYDAY, BETTER CONNECTED",
+    "EL DÍA A DÍA, MÁS CONECTADO",
+    "LE QUOTIDIEN, MIEUX CONNECTÉ",
+    "IM ALLTAG BESSER VERBUNDEN",
+    "日常を、もっとつなぐ",
+    "일상을 더 가깝게"
+  ],
+  [
+    "More ways to be there.",
+    "Más formas de estar presente.",
+    "Plus de façons d’être là.",
+    "Auf mehr Wegen füreinander da.",
+    "そばにいる方法を、もっと。",
+    "함께하는 더 많은 방법."
+  ],
+  [
+    "From a quick hello to a longer conversation, keep the people who matter part of your day.",
+    "Desde un saludo breve hasta una larga conversación, comparte tu día con quienes importan.",
+    "D’un petit bonjour à une longue conversation, gardez vos proches dans votre quotidien.",
+    "Vom kurzen Hallo bis zum langen Gespräch: Lassen Sie wichtige Menschen an Ihrem Alltag teilhaben.",
+    "短い挨拶からゆっくりした会話まで、大切な人を毎日の中に。",
+    "짧은 인사부터 긴 대화까지, 소중한 사람들과 일상을 나누세요."
+  ],
+  [
+    "Your everyday chat",
+    "Tu chat de cada día",
+    "Vos conversations du quotidien",
+    "Ihr Chat für jeden Tag",
+    "毎日のチャット",
+    "일상 속 채팅"
+  ],
+  [
+    "Text, photos, voice messages and expressive cards, all in the conversation.",
+    "Texto, fotos, mensajes de voz y tarjetas expresivas en una misma conversación.",
+    "Textes, photos, messages vocaux et cartes expressives dans la conversation.",
+    "Text, Fotos, Sprachnachrichten und ausdrucksstarke Karten direkt im Chat.",
+    "テキスト、写真、ボイスメッセージ、気持ちを伝えるカードを会話の中で。",
+    "텍스트, 사진, 음성 메시지, 감정이 담긴 카드를 대화에서 함께."
+  ],
+  [
+    "Hear them. See them.",
+    "Escúchalos. Míralos.",
+    "Les entendre. Les voir.",
+    "Hören. Sehen. Nah sein.",
+    "声を聞く。顔を見る。",
+    "목소리와 얼굴로 만나요."
+  ],
+  [
+    "Voice and video calls bring familiar voices and faces into the moment.",
+    "Las llamadas de voz y vídeo acercan voces y rostros familiares al momento.",
+    "Les appels audio et vidéo rapprochent les voix et les visages familiers.",
+    "Sprach- und Videoanrufe bringen vertraute Stimmen und Gesichter in den Moment.",
+    "音声・ビデオ通話で、なじみの声と顔を今この瞬間に。",
+    "음성·영상 통화로 익숙한 목소리와 얼굴을 지금 만나세요."
+  ],
+  [
+    "A place for your people",
+    "Un lugar para los tuyos",
+    "Un espace pour les vôtres",
+    "Ein Ort für Ihre Menschen",
+    "仲間と集まる場所",
+    "우리만의 대화 공간"
+  ],
+  [
+    "Keep a family group close, gather friends, or join a project community.",
+    "Mantén cerca a tu familia, reúne amigos o únete a una comunidad de proyecto.",
+    "Gardez le lien en famille, réunissez vos amis ou rejoignez un groupe de projet.",
+    "Bleiben Sie mit der Familie verbunden, versammeln Sie Freunde oder treten Sie einer Projektgruppe bei.",
+    "家族のグループ、友人の集まり、関心のあるプロジェクトのコミュニティへ。",
+    "가족과 연락하고, 친구들을 모으고, 관심 있는 프로젝트 그룹에 참여하세요."
+  ],
+  [
+    "Small moments. Shared.",
+    "Pequeños momentos compartidos.",
+    "Les petits moments, partagés.",
+    "Kleine Momente teilen.",
+    "小さな日常を分かち合う。",
+    "작은 순간을 함께."
+  ],
+  [
+    "Share with friends in Moments. Explore the MA Square beta, where available.",
+    "Comparte con amigos en Moments. Explora la beta de MA Square donde esté disponible.",
+    "Partagez avec vos amis dans Moments. Découvrez la bêta de MA Square là où elle est disponible.",
+    "Teilen Sie mit Freunden in Moments. Entdecken Sie die MA-Square-Beta, wo verfügbar.",
+    "Moments で近況を共有。利用可能な地域では MA 広場のベータ版も体験できます。",
+    "모멘트에서 친구들과 소식을 나누고, 지원되는 곳에서 MA 광장 베타를 만나보세요."
+  ],
+  [
+    "MA Square · Beta",
+    "MA Square · Beta",
+    "MA Square · Bêta",
+    "MA Square · Beta",
+    "MA 広場 · ベータ版",
+    "MA 광장 · 베타"
+  ],
+  [
+    "Make it feel like you",
+    "Hazlo a tu manera",
+    "À votre image",
+    "So, wie es zu Ihnen passt",
+    "自分らしい使い心地に",
+    "나에게 맞는 편안함"
+  ],
+  [
+    "Choose your language, adjust text size and personalize your space.",
+    "Elige tu idioma, ajusta el tamaño del texto y personaliza tu espacio.",
+    "Choisissez votre langue, réglez la taille du texte et personnalisez votre espace.",
+    "Wählen Sie Ihre Sprache, passen Sie die Schriftgröße an und gestalten Sie Ihren Bereich.",
+    "言語を選び、文字サイズを調整し、自分のスペースをカスタマイズ。",
+    "언어를 선택하고 글자 크기를 조절해 나만의 공간을 꾸미세요."
+  ],
+  [
+    "Start with a chat identity",
+    "Empieza con una identidad de chat",
+    "Commencez avec une identité de discussion",
+    "Mit einer Chat-Identität starten",
+    "チャット ID から始める",
+    "채팅 ID로 시작하세요"
+  ],
+  [
+    "Create a local chat identity without opening or funding a wallet.",
+    "Crea una identidad de chat local sin abrir ni financiar una cartera.",
+    "Créez une identité locale sans ouvrir ni alimenter un portefeuille.",
+    "Erstellen Sie eine lokale Chat-Identität, ohne eine Wallet zu eröffnen oder aufzuladen.",
+    "ウォレットの作成や入金なしで、本機のチャット ID を作成できます。",
+    "지갑을 만들거나 자금을 넣지 않고 로컬 채팅 ID를 생성하세요."
+  ],
+  [
+    "FOR THE PEOPLE WHO MATTER",
+    "PARA QUIENES IMPORTAN",
+    "POUR CEUX QUI COMPTENT",
+    "FÜR DIE MENSCHEN, DIE ZÄHLEN",
+    "大切な人のために",
+    "소중한 사람들을 위해"
+  ],
+  [
+    "Some connections mean everything.",
+    "Hay vínculos que lo son todo.",
+    "Certains liens sont essentiels.",
+    "Manche Verbindungen bedeuten alles.",
+    "かけがえのない、つながり。",
+    "어떤 연결은 전부가 됩니다."
+  ],
+  [
+    "Distance changes where we live, not who we care about. MA is built around the simple things that keep mothers, families and friends connected: a hello, a familiar voice, a face on the screen.",
+    "La distancia cambia dónde vivimos, no a quién queremos. MA se centra en lo que une a madres, familias y amigos: un saludo, una voz conocida, una cara en la pantalla.",
+    "La distance change nos lieux de vie, pas nos liens. MA privilégie les gestes simples qui relient mères, familles et amis : un bonjour, une voix familière, un visage à l’écran.",
+    "Entfernung verändert, wo wir leben, nicht wen wir lieben. MA setzt auf die kleinen Dinge, die Mütter, Familien und Freunde verbinden: ein Hallo, eine vertraute Stimme, ein Gesicht auf dem Bildschirm.",
+    "距離が変えるのは住む場所であって、大切に思う相手ではありません。挨拶、聞き慣れた声、画面に映る顔。MA はお母さん、家族、友人をつなぐ小さな日常を大切にします。",
+    "거리는 사는 곳을 바꾸지만 소중한 사람을 바꾸지는 않습니다. MA는 엄마, 가족, 친구를 이어 주는 작은 것들을 소중히 여깁니다. 인사 한마디, 익숙한 목소리, 화면 속 얼굴처럼요."
+  ],
+  [
+    "Read our story",
+    "Lee nuestra historia",
+    "Lire notre histoire",
+    "Unsere Geschichte lesen",
+    "私たちの想いを読む",
+    "우리의 이야기 읽기"
+  ],
+  [
+    "Illustration",
+    "Ilustración",
+    "Illustration",
+    "Illustration",
+    "イラスト",
+    "일러스트"
+  ],
+  [
+    "CLEAR CHOICES. CLEAR BOUNDARIES.",
+    "DECISIONES Y LÍMITES CLAROS",
+    "DES CHOIX ET DES LIMITES CLAIRS",
+    "KLARE ENTSCHEIDUNGEN. KLARE GRENZEN.",
+    "選択も、境界も、明確に。",
+    "명확한 선택과 경계"
+  ],
+  [
+    "Your conversations deserve care.",
+    "Tus conversaciones merecen cuidado.",
+    "Vos conversations méritent de l’attention.",
+    "Ihre Gespräche verdienen Sorgfalt.",
+    "あなたの会話を、大切に。",
+    "모든 대화를 소중하게."
+  ],
+  [
+    "History on your device",
+    "Historial en tu dispositivo",
+    "Historique sur votre appareil",
+    "Verlauf auf Ihrem Gerät",
+    "履歴は自分の端末に",
+    "기기에 저장되는 대화"
+  ],
+  [
+    "Chat history is stored locally. Online delivery, account services and notifications use service infrastructure; see our privacy policy for details.",
+    "El historial se guarda localmente. La entrega en línea, las cuentas y las notificaciones usan infraestructura de servicio; consulta la política de privacidad.",
+    "L’historique est conservé localement. La livraison en ligne, les comptes et les notifications utilisent des services ; consultez notre politique de confidentialité.",
+    "Der Chatverlauf wird lokal gespeichert. Online-Zustellung, Kontodienste und Benachrichtigungen nutzen Serverinfrastruktur; Details stehen in der Datenschutzerklärung.",
+    "チャット履歴はローカルに保存されます。オンライン配信、アカウント、通知にはサービス基盤を利用します。詳細はプライバシーポリシーをご覧ください。",
+    "채팅 기록은 로컬에 저장됩니다. 온라인 전달, 계정 서비스, 알림은 서비스 인프라를 사용합니다. 자세한 내용은 개인정보 처리방침을 확인하세요."
+  ],
+  [
+    "Chat identity ≠ funds wallet",
+    "Identidad de chat ≠ cartera",
+    "Identité de discussion ≠ portefeuille",
+    "Chat-Identität ≠ Wallet",
+    "チャット ID と資金用ウォレットは別",
+    "채팅 ID와 자금 지갑은 별개"
+  ],
+  [
+    "A chat account connects you to people. Wallet tools, where enabled, are separate and do not give MA custody of your funds.",
+    "La cuenta de chat te conecta con personas. Las herramientas de cartera, cuando están habilitadas, son independientes y no dan a MA la custodia de tus fondos.",
+    "Le compte de discussion vous relie aux autres. Les outils de portefeuille, lorsqu’ils sont activés, sont distincts et ne confient pas vos fonds à MA.",
+    "Das Chatkonto verbindet Sie mit Menschen. Verfügbare Wallet-Funktionen sind getrennt und geben MA keine Verwahrung über Ihr Guthaben.",
+    "チャットアカウントは人とのつながりのためのもの。利用可能なウォレット機能は独立しており、MA が資金を預かることはありません。",
+    "채팅 계정은 사람들을 연결합니다. 지원되는 지갑 도구는 별개이며 MA에 자금 보관 권한을 주지 않습니다."
+  ],
+  [
+    "Tools for safer conversations",
+    "Herramientas para conversar con seguridad",
+    "Des outils pour mieux échanger",
+    "Werkzeuge für sichere Gespräche",
+    "安心して会話するための機能",
+    "안심하고 대화하는 도구"
+  ],
+  [
+    "Access report and block controls from chat profiles. Review the community rules and official support information whenever you need them.",
+    "Accede a denunciar y bloquear desde los perfiles del chat. Consulta las normas de la comunidad y el soporte oficial cuando lo necesites.",
+    "Signalez ou bloquez depuis les profils de discussion. Consultez les règles de la communauté et les informations d’assistance officielle.",
+    "Melden und blockieren Sie über Chatprofile. Community-Regeln und offizielle Supportinformationen stehen bei Bedarf bereit.",
+    "チャットのプロフィールから通報やブロックを利用できます。コミュニティ規則と公式サポート情報もご確認ください。",
+    "채팅 프로필에서 신고와 차단을 이용하세요. 필요할 때 커뮤니티 규칙과 공식 지원 정보를 확인할 수 있습니다."
+  ],
+  [
+    "Privacy & community rules",
+    "Privacidad y normas",
+    "Confidentialité et règles",
+    "Datenschutz und Regeln",
+    "プライバシーとコミュニティ規則",
+    "개인정보 및 커뮤니티 규칙"
+  ],
+  [
+    "One connection. Two editions.",
+    "Una conexión. Dos ediciones.",
+    "Un même lien. Deux versions.",
+    "Eine Verbindung. Zwei Versionen.",
+    "同じつながり。二つの選択。",
+    "하나의 연결, 두 가지 버전."
+  ],
+  [
+    "Choose MA for everyday connection, or MA full for the same experience with additional reading tools.",
+    "Elige MA para conectar cada día o MA full para la misma experiencia con herramientas de lectura adicionales.",
+    "Choisissez MA au quotidien, ou MA full pour la même expérience avec des outils de lecture supplémentaires.",
+    "Wählen Sie MA für den Alltag oder MA full für dasselbe Erlebnis mit zusätzlichen Lesefunktionen.",
+    "日々のつながりには MA。読書機能も使いたい方には MA full。",
+    "일상적인 연결에는 MA, 추가 읽기 도구도 원한다면 MA full을 선택하세요."
+  ],
+  [
+    "Everyday connection",
+    "Conexión cotidiana",
+    "Le lien au quotidien",
+    "Im Alltag verbunden",
+    "毎日のつながり",
+    "일상 속 연결"
+  ],
+  [
+    "Messaging, voice and video calls, groups and local-first conversations.",
+    "Mensajes, llamadas de voz y vídeo, grupos y conversaciones con prioridad local.",
+    "Messages, appels audio et vidéo, groupes et conversations privilégiant le stockage local.",
+    "Nachrichten, Sprach- und Videoanrufe, Gruppen und lokal gespeicherte Gespräche.",
+    "メッセージ、音声・ビデオ通話、グループ、ローカル優先の会話。",
+    "메시지, 음성·영상 통화, 그룹, 로컬 우선 대화."
+  ],
+  [
+    "Connection + reading",
+    "Conexión y lectura",
+    "Lien et lecture",
+    "Verbindung und Lesen",
+    "つながりと読書",
+    "연결과 읽기"
+  ],
+  [
+    "The MA communication experience, plus Bible and hymn reading tools.",
+    "La experiencia de comunicación de MA, más herramientas de lectura de la Biblia e himnos.",
+    "L’expérience de communication MA, avec des outils de lecture de la Bible et de cantiques.",
+    "Die MA-Kommunikationserfahrung, ergänzt um Bibel- und Gesangbuch-Lesefunktionen.",
+    "MA のコミュニケーション機能に、聖書と賛美歌の読書機能を追加。",
+    "MA의 소통 경험에 성경과 찬송가 읽기 도구를 더했습니다."
+  ],
+  [
+    "Availability depends on your country, device and store listing. Google Play shows the version available to you.",
+    "La disponibilidad depende del país, dispositivo y ficha de la tienda. Google Play muestra la versión disponible para ti.",
+    "La disponibilité dépend du pays, de l’appareil et de la fiche en boutique. Google Play affiche la version proposée.",
+    "Die Verfügbarkeit hängt von Land, Gerät und Store-Eintrag ab. Google Play zeigt die für Sie verfügbare Version.",
+    "配信状況は地域、端末、ストアによって異なります。入手可能なバージョンは Google Play でご確認ください。",
+    "이용 가능 여부는 국가, 기기, 스토어에 따라 다릅니다. Google Play에서 제공되는 버전을 확인하세요."
+  ],
+  [
+    "The iOS editions have been submitted to Apple. App Store availability will be announced here once confirmed.",
+    "Las ediciones iOS se han enviado a Apple. Anunciaremos aquí su disponibilidad en App Store cuando esté confirmada.",
+    "Les versions iOS ont été soumises à Apple. Leur disponibilité sur l’App Store sera annoncée ici après confirmation.",
+    "Die iOS-Versionen wurden bei Apple eingereicht. Die Verfügbarkeit im App Store geben wir hier nach Bestätigung bekannt.",
+    "iOS の両バージョンは Apple に提出済みです。App Store での配信が確認でき次第、ここでお知らせします。",
+    "두 iOS 버전은 Apple에 제출되었습니다. App Store 출시가 확인되면 이곳에 안내하겠습니다."
+  ],
+  [
+    "Android release",
+    "Versión Android",
+    "Version Android",
+    "Android-Version",
+    "Android 公開バージョン",
+    "Android 출시 버전"
+  ],
+  [
+    "Our wider purpose",
+    "Nuestro propósito más amplio",
+    "Notre engagement au-delà des échanges",
+    "Unser weitergehendes Anliegen",
+    "つながりの先にある想い",
+    "연결 너머의 뜻"
+  ],
+  [
+    "Care that looks ahead.",
+    "Cuidado que mira al futuro.",
+    "Une attention tournée vers l’avenir.",
+    "Fürsorge mit Blick nach vorn.",
+    "未来へ続く、思いやり。",
+    "더 먼 미래를 향한 돌봄."
+  ],
+  [
+    "These pages explain future proposals. Card redemption is not active; program plans are not live services or guaranteed benefits.",
+    "Estas páginas explican propuestas futuras. El canje de tarjetas no está activo; los planes no son servicios disponibles ni beneficios garantizados.",
+    "Ces pages présentent des projets futurs. L’échange de cartes n’est pas actif ; les projets ne constituent ni des services disponibles ni des avantages garantis.",
+    "Diese Seiten erläutern Zukunftspläne. Karteneinlösung ist nicht aktiv; Pläne sind keine verfügbaren Dienste oder garantierten Vorteile.",
+    "以下は将来の計画です。カード交換は未開始であり、計画は稼働中のサービスや利益の保証ではありません。",
+    "아래 페이지는 향후 계획을 설명합니다. 카드 교환은 아직 운영되지 않으며, 계획은 출시된 서비스나 보장된 혜택이 아닙니다."
+  ],
+  [
+    "Card redemption",
+    "Canje de tarjetas",
+    "Échange de cartes",
+    "Karteneinlösung",
+    "カード交換",
+    "카드 교환"
+  ],
+  [
+    "Explore the card collection and the proposed redemption program.",
+    "Explora la colección de tarjetas y el programa de canje propuesto.",
+    "Découvrez la collection de cartes et le projet d’échange.",
+    "Entdecken Sie die Kartensammlung und das geplante Einlösungsprogramm.",
+    "カードコレクションと交換プログラムの構想をご覧ください。",
+    "카드 컬렉션과 교환 프로그램 계획을 살펴보세요."
+  ],
+  [
+    "Mother Fund",
+    "Fondo para Madres",
+    "Fonds pour les mères",
+    "Mütterfonds",
+    "マザーファンド",
+    "어머니 기금"
+  ],
+  [
+    "Our proposed care initiative, with dignity and public accountability at its heart.",
+    "Nuestra iniciativa de cuidado propuesta, centrada en la dignidad y la responsabilidad pública.",
+    "Un projet solidaire fondé sur la dignité et la transparence.",
+    "Unsere geplante Initiative für Fürsorge mit Würde und öffentlicher Rechenschaft.",
+    "尊厳と透明性を大切にする支援構想です。",
+    "존엄과 공개적인 책임을 중심에 둔 돌봄 계획입니다."
+  ],
+  [
+    "Supply stewardship",
+    "Gestión de la oferta",
+    "Gestion de l’offre",
+    "Verantwortlicher Umgang mit dem Angebot",
+    "供給量の管理計画",
+    "공급량 관리 계획"
+  ],
+  [
+    "Read the proposed burn policy and its transaction-evidence requirements.",
+    "Lee la política de quema propuesta y sus requisitos de pruebas de transacción.",
+    "Consultez le projet de destruction de jetons et ses exigences de preuve.",
+    "Lesen Sie die geplante Burn-Richtlinie und ihre Anforderungen an Transaktionsnachweise.",
+    "バーン方針案と取引証明の要件をご覧ください。",
+    "소각 정책 계획과 거래 증빙 요건을 확인하세요."
+  ],
+  [
+    "Buyback plan",
+    "Plan de recompra",
+    "Plan de rachat",
+    "Rückkaufplan",
+    "買い戻し計画",
+    "매입 계획"
+  ],
+  [
+    "Understand the proposal, its conditions and the difference between plans and results.",
+    "Conoce la propuesta, sus condiciones y la diferencia entre planes y resultados.",
+    "Comprenez le projet, ses conditions et la distinction entre intentions et résultats.",
+    "Erfahren Sie mehr über den Plan, seine Bedingungen und den Unterschied zu tatsächlichen Ergebnissen.",
+    "構想、条件、計画と実績の違いをご確認ください。",
+    "계획과 조건, 그리고 계획과 실제 결과의 차이를 확인하세요."
+  ],
+  [
+    "Read the plan",
+    "Leer el plan",
+    "Lire le projet",
+    "Plan lesen",
+    "計画を読む",
+    "계획 보기"
+  ],
+  [
+    "Built by AstroBridge",
+    "Creado por AstroBridge",
+    "Créé par AstroBridge",
+    "Entwickelt von AstroBridge",
+    "AstroBridge が開発",
+    "AstroBridge 제작"
+  ],
+  [
+    "Policies & Community Rules",
+    "Políticas y normas",
+    "Politiques et règles",
+    "Richtlinien und Community-Regeln",
+    "ポリシーとコミュニティ規則",
+    "정책 및 커뮤니티 규칙"
+  ]
+];
   const ui = {
     language: ['Language', '语言', 'Idioma', 'Langue', 'Sprache', '言語', '언어'],
     home: ['MA home', 'MA 首页', 'Inicio de MA', 'Accueil MA', 'MA-Startseite', 'MA ホーム', 'MA 홈'],
-    programs: ['MA program pages', 'MA 计划页面', 'Programas MA', 'Programmes MA', 'MA-Programmseiten', 'MA プログラムページ', 'MA 프로그램 페이지'],
+    programs: ['MA shortcuts', 'MA 快捷入口', 'Accesos MA', 'Raccourcis MA', 'MA-Schnellzugriffe', 'MA ショートカット', 'MA 바로가기'],
     preview: ['MA application preview', 'MA 应用预览', 'Vista previa de MA', 'Aperçu de MA', 'MA-App-Vorschau', 'MA アプリのプレビュー', 'MA 앱 미리보기'],
-    android: ['MA running on Android', 'Android 上运行的 MA', 'MA en Android', 'MA sur Android', 'MA auf Android', 'Android で動作する MA', 'Android에서 실행 중인 MA'],
+    android: ['MA application preview on Android', 'Android 上运行的 MA', 'MA en Android', 'MA sur Android', 'MA auf Android', 'Android で動作する MA', 'Android에서 실행 중인 MA'],
     icon: ['MA icon', 'MA 图标', 'Icono de MA', 'Icône MA', 'MA-Symbol', 'MA アイコン', 'MA 아이콘'],
-    title: ['MA | Private Chat. Native Value.', 'MA | 私密聊天。价值直达。', 'MA | Chat privado. Valor integrado.', 'MA | Discussion privée. Valeur intégrée.', 'MA | Privater Chat. Werte direkt übertragen.', 'MA | プライベートな会話。価値を直接届ける。', 'MA | 비공개 대화. 가치를 바로 전하다.'],
-    description: ["MA is AstroBridge's private P2P messenger and wallet. Chat, transfer, and connect through a dedicated signed channel.", 'MA 是 AstroBridge 的私密 P2P 聊天与钱包应用。通过专属签名通道聊天、转账并连接。', 'MA es la aplicación de mensajería P2P privada y cartera de AstroBridge. Chatea, transfiere y conecta mediante un canal dedicado y firmado.', 'MA est la messagerie P2P privée et le portefeuille d’AstroBridge. Discutez, transférez et connectez-vous via un canal dédié et signé.', 'MA ist der private P2P-Messenger und die Wallet von AstroBridge. Chatten, übertragen und verbinden über einen dedizierten signierten Kanal.', 'MA は AstroBridge のプライベート P2P メッセンジャーとウォレットです。専用の署名付きチャネルで会話、送金、接続ができます。', 'MA는 AstroBridge의 비공개 P2P 메신저 및 지갑입니다. 전용 서명 채널로 대화하고 송금하고 연결하세요.'],
+    title: ["MA | Stay Close. Even from Afar.", "MA | 让牵挂，随时相连。", "MA | Siempre cerca, incluso a distancia.", "MA | Restez proches, même de loin.", "MA | Bleibt euch nah, auch aus der Ferne.", "MA | 離れていても、心は近くに。", "MA | 멀리 있어도, 마음은 가까이."],
+    description: ["Stay connected with family and friends through MA: messages, voice and video calls, groups and local-first conversations. Explore MA and MA full on Google Play.", "通过 MA 与家人朋友保持联络：聊天、语音视频通话、群聊与本地优先的聊天体验。了解 Google Play 上的 MA 和 MA 全能版。", "Conecta con familia y amigos con MA: mensajes, llamadas de voz y vídeo, grupos y conversaciones con prioridad local. Descubre MA y MA full en Google Play.", "Gardez le lien avec vos proches grâce à MA : messages, appels audio et vidéo, groupes et conversations privilégiant le stockage local. Découvrez MA et MA full sur Google Play.", "Bleiben Sie mit Familie und Freunden verbunden: MA bietet Nachrichten, Sprach- und Videoanrufe, Gruppen und lokale Chatverläufe. MA und MA full bei Google Play.", "MA で家族や友人とつながる。メッセージ、音声・ビデオ通話、グループ、ローカル優先の会話。Google Play の MA と MA full をご覧ください。", "MA로 가족, 친구와 연락하세요. 메시지, 음성·영상 통화, 그룹, 로컬 우선 대화. Google Play에서 MA와 MA full을 만나보세요."],
     preparing: ['Preparing…', '准备下载…', 'Preparando…', 'Préparation…', 'Wird vorbereitet…', '準備中…', '준비 중…'],
     downloadError: ['The download could not start. Check your connection and try again.', '下载暂时失败，请检查网络后重试。', 'No se pudo iniciar la descarga. Comprueba tu conexión e inténtalo de nuevo.', 'Le téléchargement n’a pas pu démarrer. Vérifiez votre connexion et réessayez.', 'Der Download konnte nicht starten. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.', 'ダウンロードを開始できませんでした。接続を確認し、もう一度お試しください。', '다운로드를 시작할 수 없습니다. 연결을 확인하고 다시 시도하세요.']
   };
