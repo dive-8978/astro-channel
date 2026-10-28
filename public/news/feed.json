@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T22:22:29.231Z",
+  "generatedAt": "2026-10-28T05:53:37.217Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,110 @@
     }
   ],
   "items": [
+    {
+      "id": "f0d3ccff888a82ca6c2b",
+      "source": "CryptoSlate",
+      "title": "Bitcoin apps risk massive fee drain, and 2 library bugs are blamed",
+      "summary": "Applications importing PSBTs can miscalculate miner fees and miss an excessive-fee warning if they rely on the vulnerable library's accounting. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
+      "url": "https://cryptoslate.com/bitcoin-apps-risk-massive-fee-drain-and-2-library-bugs-are-blamed/",
+      "publishedAt": "2026-10-28T05:30:00.000Z"
+    },
+    {
+      "id": "3805885ac8656ef04228",
+      "source": "CoinDesk",
+      "title": "Bitcoin treasury Datavault AI plunges 50% after firm says it can’t access its BTC",
+      "summary": "The company said the accounting correction will cut reported assets by $92.2 million at the end of 2025 after bitcoin held on Biconomy could not be withdrawn.",
+      "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-treasury-datavault-ai-plunges-50-after-firm-says-it-can-t-access-its-btc",
+      "publishedAt": "2026-10-28T05:28:13.000Z"
+    },
+    {
+      "id": "91b9787cd068ba660bc6",
+      "source": "CoinDesk",
+      "title": "Bithumb hacked through employee system as South Korean financial firms face cyberattacks",
+      "summary": "The breach hit an internal employee system that Bithumb says is separate from its trading platform, while the exchange is still determining whether customer information was exposed.",
+      "url": "https://www.coindesk.com/tech/2026/10/28/bithumb-hacked-through-employee-system-as-south-korean-financial-firms-face-cyberattacks",
+      "publishedAt": "2026-10-28T05:10:36.000Z"
+    },
+    {
+      "id": "30f4b35b7fd141c752e1",
+      "source": "CoinDesk",
+      "title": "Bitcoin nears $81,000 ahead of Fed decision as ZEC jumps 8%",
+      "summary": "Majors outpaced bitcoin across the board as tech stocks extended a climb.",
+      "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-nears-usd81-000-ahead-of-fed-decision-as-zec-jumps-8",
+      "publishedAt": "2026-10-28T04:15:20.000Z"
+    },
+    {
+      "id": "fbc0450f840b1576ac4b",
+      "source": "Cointelegraph",
+      "title": "Robinhood’s Tenev warns US tokenization uncertainty deters ‘serious assets’",
+      "summary": "Robinhood CEO Vlad Tenev says tokenized equities need more than a temporary SEC exemption to flourish in the US.",
+      "url": "https://cointelegraph.com/news/robinhoods-tenev-warns-us-tokenization-uncertainty-deters-serious-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-28T03:55:57.000Z"
+    },
+    {
+      "id": "2b1bab14af36df247b91",
+      "source": "CryptoSlate",
+      "title": "BNY offers XRP custody, but only 1 rollout type exists",
+      "summary": "Eligible clients can now hold XRP through BNY, while transfers of existing tokens would not establish additional purchases. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/bny-offers-xrp-custody-but-only-1-rollout-type-exists/",
+      "publishedAt": "2026-10-28T03:40:09.000Z"
+    },
+    {
+      "id": "c1a3a4d6de47d310c47c",
+      "source": "CoinDesk",
+      "title": "Coinbase says user funds are safe after third-party vendor exposes customer contact info",
+      "summary": "The crypto exchange says an incident at analytics firm Amplitude exposed some customer contact information, but insists its own systems were not breached.",
+      "url": "https://www.coindesk.com/tech/2026/10/28/coinbase-says-customer-funds-are-safe-after-third-party-vendor-exposes-customer-contact-info",
+      "publishedAt": "2026-10-28T03:11:14.000Z"
+    },
+    {
+      "id": "2f004fae4f5bfc74c0d6",
+      "source": "The Block",
+      "title": "Datavault AI stock plummets 50% after firm says it cannot withdraw bitcoin tied to $150 million deal",
+      "summary": "The issue centers on a deal with Scilex, under which Scilex agreed to buy shares of Datavault AI for $150 million, payable in bitcoin.",
+      "url": "https://www.theblock.co/news/business/2026-10-27-datavault-ai-stock-plummets-bitcoin-deal-431962",
+      "publishedAt": "2026-10-28T03:00:33.000Z"
+    },
+    {
+      "id": "9f76fa01d09aa45e18ba",
+      "source": "Cointelegraph",
+      "title": "Bithumb discloses data leak after internal system breach: Report",
+      "summary": "The breach impacted its in-house mobile system, used by employees for work and information sharing.",
+      "url": "https://cointelegraph.com/news/bithumb-discloses-data-leak-after-internal-system-breach-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-28T02:18:47.000Z"
+    },
+    {
+      "id": "ce1d3bfa4b14c820bd52",
+      "source": "CryptoSlate",
+      "title": "X100 governance flaws trigger $6M loss due to a flash loan",
+      "summary": "X100’s attacker repaid a flash loan from theft proceeds while its stake stayed locked, and Arkadiko’s ballot accepted late token purchases. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst…",
+      "url": "https://cryptoslate.com/x100-governance-flaws-trigger-6m-loss-due-to-a-flash-loan/",
+      "publishedAt": "2026-10-28T02:10:15.000Z"
+    },
+    {
+      "id": "aa9af6cfe28fd19877c1",
+      "source": "Cointelegraph",
+      "title": "Discord is making public chats searchable on Google: How to opt out",
+      "summary": "Discord conversations on large public servers will soon reach audiences far beyond their communities, raising privacy concerns.",
+      "url": "https://cointelegraph.com/news/discord-is-making-public-chats-searchable-on-google-how-to-opt-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-28T00:47:04.000Z"
+    },
+    {
+      "id": "19f98fe18823e6c4d05a",
+      "source": "CryptoSlate",
+      "title": "Polymarket reforms Bitcoin contracts and Binance trading spikes immediately drop",
+      "summary": "A newer study finds the earlier Binance trading pattern subsided after averaging, but historical wallet gains cannot quantify current losses. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
+      "url": "https://cryptoslate.com/polymarket-reforms-bitcoin-contracts-and-binance-trading-spikes-immediately-drop/",
+      "publishedAt": "2026-10-27T23:40:55.000Z"
+    },
+    {
+      "id": "4d542ad61dc96d08629d",
+      "source": "CryptoSlate",
+      "title": "Zcash’s $125 million funding fight widens as Tyler Winklevoss calls to end its ‘USAID’",
+      "summary": "Zcash faces competing proposals to scrap or extend developer subsidies as growing investor interest swells the privacy network's funding reserves. The debate intensified after Zcash co-founder Sean Bowe proposed ending automatic payments to Zcash Community…",
+      "url": "https://cryptoslate.com/zcashs-125-million-funding-fight-widens-as-tyler-winklevoss-calls-to-end-its-usaid/",
+      "publishedAt": "2026-10-27T22:20:21.000Z"
+    },
     {
       "id": "1f755f5025513e093269",
       "source": "Cointelegraph",
@@ -168,14 +272,6 @@
       "summary": "An expanded deal with Bitso puts Anchorage Digital Bank’s custody beneath both sides of the US-Mexico remittance route.",
       "url": "https://decrypt.co/381988/anchorage-custody-backbone-us-mexico-stablecoin-corridor",
       "publishedAt": "2026-10-27T19:46:02.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-27T19:36:13.000Z"
     },
     {
       "id": "a04b8d9a861812c4c61c",
@@ -370,14 +466,6 @@
       "publishedAt": "2026-10-27T16:35:29.000Z"
     },
     {
-      "id": "c22d9de750d44fed6a85",
-      "source": "CryptoSlate",
-      "title": "Japan’s services inflation split complicates the BOJ outlook before Friday’s decision",
-      "summary": "Business-service inflation reached 3.7%, while the transport-excluded rate held steady and labor-sensitive price growth eased before Friday’s BOJ decision. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next.…",
-      "url": "https://cryptoslate.com/japans-services-inflation-split-complicates-the-boj-outlook-before-fridays-decision/",
-      "publishedAt": "2026-10-27T16:00:16.000Z"
-    },
-    {
       "id": "61f3184bca1449864b2e",
       "source": "Cointelegraph",
       "title": "USDC overtakes USDT in euro stablecoin trading as EU rules reshape market: Kaiko",
@@ -408,14 +496,6 @@
       "summary": "BNY adds XRP and RLUSD to its custody platform, as Ripple and C2FO test settling invoice payments on the XRP Ledger.",
       "url": "https://www.theblock.co/news/business/2026-10-27-ripple-bny-explore-using-xrp-ledger-finance-approved-invoices-431891",
       "publishedAt": "2026-10-27T15:01:12.000Z"
-    },
-    {
-      "id": "2f759b1ff0a64b59ef74",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s next rally could trigger selling from holders of 874,000 BTC",
-      "summary": "Bitfinex maps potential overhead supply as ETF inflows return through IBIT alone, leaving spot buyers to prove a durable reclaim. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your…",
-      "url": "https://cryptoslate.com/bitcoins-next-rally-could-trigger-selling-from-holders-of-874000-btc/",
-      "publishedAt": "2026-10-27T15:00:26.000Z"
     },
     {
       "id": "3ec819971f560993ad22",
@@ -490,14 +570,6 @@
       "publishedAt": "2026-10-27T13:52:58.000Z"
     },
     {
-      "id": "856532b6ab77b4ac6fd2",
-      "source": "CryptoSlate",
-      "title": "Bitcoin simulations show why a return to $126,000 would not last",
-      "summary": "A separate daily-close model crosses the record in 50.4% of paths but finishes above in 34.8%, exposing a gap that a terminal price target cannot show. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get…",
-      "url": "https://cryptoslate.com/bitcoin-simulations-show-why-a-return-to-126000-may-not-last/",
-      "publishedAt": "2026-10-27T13:40:40.000Z"
-    },
-    {
       "id": "f3ea621ad1c2105b13c6",
       "source": "Cointelegraph",
       "title": "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser",
@@ -552,14 +624,6 @@
       "summary": "One of crypto’s primary growth sectors for this upcoming cycle is under attack. Will Vlad Tenev speak up on today’s Robinhood earnings call?",
       "url": "https://decrypt.co/381907/morning-minute-tokenized-stock-battle-looms-over-robinhoods-earnings-call",
       "publishedAt": "2026-10-27T12:59:58.000Z"
-    },
-    {
-      "id": "8c7d5839793e31eccb80",
-      "source": "CryptoSlate",
-      "title": "Bitcoin moves over $5 billion in value but miners collect just $185,000 in transaction fees",
-      "summary": "Glassnode’s October 26 snapshot shows higher estimated settlement value alongside lower fees and active addresses. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/bitcoin-moves-over-5-billion-in-value-but-miners-collect-just-185000-in-transaction-fees/",
-      "publishedAt": "2026-10-27T12:40:41.000Z"
     },
     {
       "id": "1f310b8571db252452ab",
@@ -618,14 +682,6 @@
       "publishedAt": "2026-10-27T11:32:45.000Z"
     },
     {
-      "id": "3339a031b083c3f89bc9",
-      "source": "CryptoSlate",
-      "title": "Coinbase sets 3-day MiCA deadline for USDT, PayPal and Trump-linked stablecoins",
-      "summary": "Affected retail balances will convert at market rates, with USDC used where suitable and late deposits excluded. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/coinbase-sets-3-day-mica-deadline-for-usdt-paypal-and-trump-linked-stablecoins/",
-      "publishedAt": "2026-10-27T11:20:33.000Z"
-    },
-    {
       "id": "c97117e6e020d36d4696",
       "source": "CoinDesk",
       "title": "Crypto wallet maker Keystone to destroy almost 19,000 devices after security breach",
@@ -640,62 +696,6 @@
       "summary": "Jason Calacanis wants investors to sell bitcoin and back artificial intelligence. He is also holding TAO, the cryptocurrency behind AI network Bittensor.",
       "url": "https://www.coindesk.com/markets/2026/10/27/investor-who-called-for-ai-pivot-in-2023-says-bitcoin-is-going-to-usd57-000",
       "publishedAt": "2026-10-27T10:57:51.000Z"
-    },
-    {
-      "id": "1d42c34cd31d9d40bd77",
-      "source": "The Block",
-      "title": "Ark Invest buys $5.2 million of Circle shares, sells $15.9 million of its own Bitcoin ETF as BTC grinds lower",
-      "summary": "Ark Invest rebalanced its fund weightings, adding Circle shares and trimming its Bitcoin ETF holdings as BTC fell below $80,000.",
-      "url": "https://www.theblock.co/news/markets/2026-10-27-ark-invest-buys-5-2-million-of-circle-shares-sells-15-9-million-of-its-own-bitcoin-etf-as-btc-grinds-lower-431838",
-      "publishedAt": "2026-10-27T10:57:34.000Z"
-    },
-    {
-      "id": "13b3de9fb6ee40d5b556",
-      "source": "Decrypt",
-      "title": "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin",
-      "summary": "The federally supervised bank will manage RLUSD's reserves and offer custody, as banking groups fight crypto charters in court.",
-      "url": "https://decrypt.co/381899/ripple-wins-final-occ-approval-for-trust-bank-behind-2-6b-rlusd-stablecoin",
-      "publishedAt": "2026-10-27T10:16:46.000Z"
-    },
-    {
-      "id": "ef0dd77d461b9a02ef7a",
-      "source": "Cointelegraph",
-      "title": "Zcash co-founder calls to stop funding ‘over $125M’ grants program",
-      "summary": "Sean Bowe says ZCG has enough money to keep funding projects and wants its share of new ZEC redirected to a reserve for the network.",
-      "url": "https://cointelegraph.com/news/zcash-co-founder-ending-zcg-funding-125m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-27T10:00:31.000Z"
-    },
-    {
-      "id": "32264c8c97523f76178e",
-      "source": "CoinDesk",
-      "title": "Now is the time to accumulate bitcoin, Galaxy says",
-      "summary": "Galaxy argues improving price trends, resilient ETF demand and rising U.S. debt support bitcoin’s recovery towards its previous high.",
-      "url": "https://www.coindesk.com/markets/2026/10/27/now-is-the-time-to-accumulate-bitcoin-galaxy-says",
-      "publishedAt": "2026-10-27T09:42:46.000Z"
-    },
-    {
-      "id": "9aa53b598ea6a14fb5e8",
-      "source": "Cointelegraph",
-      "title": "Bloom bot hackers loot $953K faster than you can microwave popcorn",
-      "summary": "Bloom pledged to reimburse nine traders after $953,000 was drained from 48 wallets, saying no private keys were accessed or compromised.",
-      "url": "https://cointelegraph.com/news/bloom-bot-hackers-953k-faster-popcorn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-27T09:07:37.000Z"
-    },
-    {
-      "id": "8a56cb6366ec9d66de08",
-      "source": "CoinDesk",
-      "title": "An AI label alone no longer wins lenders, JPMorgan says",
-      "summary": "As default insurance on several AI-linked firms hits record costs, companies must show they can finance investment, service the debt and eventually mint cash, JPMorgan says.",
-      "url": "https://www.coindesk.com/markets/2026/10/27/an-ai-label-alone-no-longer-wins-lenders-jpmorgan-says",
-      "publishedAt": "2026-10-27T08:24:39.000Z"
-    },
-    {
-      "id": "199ccab312059d7a72b8",
-      "source": "Cointelegraph",
-      "title": "Binance files for Brazil crypto license ahead of Friday deadline",
-      "summary": "The exchange is delisting 22 crypto assets for Brazilian users and hopes talks with the central bank will allow it to restore some services.",
-      "url": "https://cointelegraph.com/news/binance-brazil-crypto-license-oct-30-deadline?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-27T08:04:21.000Z"
     }
   ]
 }
