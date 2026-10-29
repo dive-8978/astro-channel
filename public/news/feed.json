@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T22:40:41.612Z",
+  "generatedAt": "2026-10-29T05:58:02.302Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -22,7 +22,7 @@
     {
       "name": "Decrypt",
       "status": "ok",
-      "itemCount": 54,
+      "itemCount": 34,
       "error": null
     },
     {
@@ -57,6 +57,94 @@
     }
   ],
   "items": [
+    {
+      "id": "18c0932d7e855e6a436f",
+      "source": "CoinDesk",
+      "title": "AI found a way to crash bitcoin nodes on Windows and Macs. It's now public",
+      "summary": "Three flaws a language-model scan dug up are the first disclosed under Core’s new rules for bugs that are easy to find.",
+      "url": "https://www.coindesk.com/tech/2026/10/29/ai-found-a-way-to-crash-bitcoin-nodes-on-windows-and-macs-it-s-now-public",
+      "publishedAt": "2026-10-29T05:54:39.000Z"
+    },
+    {
+      "id": "69f0edef6fbd9131ff9e",
+      "source": "CoinDesk",
+      "title": "Security failure at Indian certificate firm bites Ethereum as developers rush out fixes",
+      "summary": "A key blunder at Indian certificate issuer eMudhra left some Teku and Besu setups trusting forged certificates. Default mainnet nodes weren’t exposed.",
+      "url": "https://www.coindesk.com/tech/2026/10/29/ethereum-clients-patch-flaw-that-could-let-attackers-redirect-eth-rewards",
+      "publishedAt": "2026-10-29T05:30:34.000Z"
+    },
+    {
+      "id": "df3b12db350351bd2a5a",
+      "source": "CryptoSlate",
+      "title": "Ripple’s RLUSD stablecoin gains Coinbase access as Moody’s awards investment-grade rating",
+      "summary": "Ripple's RLUSD stablecoin has launched on Coinbase and its Base blockchain after Moody's assigned the token an investment-grade credit rating. The agreement announced Wednesday makes RLUSD available on Coinbase's retail and institutional trading platforms,…",
+      "url": "https://cryptoslate.com/ripples-rlusd-stablecoin-gains-coinbase-access-as-moodys-awards-investment-grade-rating/",
+      "publishedAt": "2026-10-29T05:30:07.000Z"
+    },
+    {
+      "id": "b85a4bd6904582bb1e47",
+      "source": "CoinDesk",
+      "title": "Utah charges predictions platform Kalshi with illegal gambling",
+      "summary": "Utah has filed criminal charges against betting platform Kalshi and its co-founders.",
+      "url": "https://www.coindesk.com/policy/2026/10/29/utah-charges-predictions-platform-kalshi-with-illegal-gambling",
+      "publishedAt": "2026-10-29T05:02:37.000Z"
+    },
+    {
+      "id": "3a830ae61c8314d278ea",
+      "source": "Cointelegraph",
+      "title": "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+      "summary": "CFTC chair Mike Selig says autonomous AI agents could challenge financial rules built around human traders, and regulators need to adapt.",
+      "url": "https://cointelegraph.com/news/a-fridge-that-launches-memecoins-cftc-floats-ai-crypto-future?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-29T04:39:49.000Z"
+    },
+    {
+      "id": "607d21df0e58ab1817d9",
+      "source": "CoinDesk",
+      "title": "Bitcoin dips below $80,000 as Samsung-led tech jitters and a hawkish Fed weigh on crypto",
+      "summary": "Bitcoin fell below $80,000 as Samsung-driven tech weakness and a hawkish Fed hold triggered a broad risk-off move. Crypto futures saw $356 million in liquidations.",
+      "url": "https://www.coindesk.com/markets/2026/10/29/bitcoin-dips-below-usd80-000-as-samsung-led-risk-aversion-in-tech-and-a-hawkish-fed-weigh-on-crypto",
+      "publishedAt": "2026-10-29T03:32:43.000Z"
+    },
+    {
+      "id": "7ea14a8093b8a3a6e20f",
+      "source": "CoinDesk",
+      "title": "Mystery Wall Street Journal ad sparks new fight over tokenized stocks",
+      "summary": "A full-page warning urging CEOs to opt out of tokenized stock trading drew a response from Securitize and questions over who paid for it.",
+      "url": "https://www.coindesk.com/policy/2026/10/28/mystery-wall-street-journal-ad-sparks-new-fight-over-tokenized-stocks",
+      "publishedAt": "2026-10-29T03:21:24.000Z"
+    },
+    {
+      "id": "c7c2f1c2dad442f3fccb",
+      "source": "Cointelegraph",
+      "title": "Tampered Ledger wallets cost Singapore users $2.7M: Police",
+      "summary": "Police say at least two cases were reported as early as Sept. 10, nearly a month before the wider incident became public.",
+      "url": "https://cointelegraph.com/news/tampered-ledger-wallets-cost-singapore-users-27m-police?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-29T03:16:32.000Z"
+    },
+    {
+      "id": "4808809303072e24c22f",
+      "source": "CryptoSlate",
+      "title": "Ripple is heading for its best year ever while XRP faces its worst since 2022",
+      "summary": "Ripple is expecting its strongest business year on record even as XRP heads toward its worst annual performance since 2022. The blockchain company said on Oct. 28 that it is on track to exit 2026 with a record $900 million annualized product revenue run…",
+      "url": "https://cryptoslate.com/ripple-is-heading-for-its-best-year-ever-while-xrp-faces-its-worst-since-2022/",
+      "publishedAt": "2026-10-29T02:10:42.000Z"
+    },
+    {
+      "id": "17117efc9df5097ffb16",
+      "source": "Cointelegraph",
+      "title": "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
+      "summary": "Traders are pricing in a 78% chance of a December rate hike, while analysts say Treasury yields, the US dollar and upcoming inflation data could determine Bitcoin’s next move.",
+      "url": "https://cointelegraph.com/markets/bitcoin-faces-fresh-pressure-after-feds-hawkish-rate-hold-analysts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-10-29T01:12:01.000Z"
+    },
+    {
+      "id": "33d46232e17adb3f7cb2",
+      "source": "CryptoSlate",
+      "title": "Bithumb hack leaks staff data and regulators launch raid",
+      "summary": "The FSC says customer-data exposure is still being checked as authorities investigate the staff-support system and plan stronger safeguards. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst…",
+      "url": "https://cryptoslate.com/bithumb-faces-on-site-inspections-after-reporting-signs-of-employee-data-leak/",
+      "publishedAt": "2026-10-28T23:40:57.000Z"
+    },
     {
       "id": "80759bf8d2624b8a2acc",
       "source": "CryptoSlate",
@@ -120,14 +208,6 @@
       "summary": "Bitcoin Magazine Bitcoin Price Trades Above $81,500 as Fed Keeps Rates Steady in Split Vote Bitcoin price held near $81,000 after the Federal Reserve kept rates at 3.75% to 4% in a 10-2 vote. This post Bitcoin Price Trades Above $81,500 as Fed Keeps Rates…",
       "url": "https://bitcoinmagazine.com/markets/bitcoin-price-trades-near-81500-fed",
       "publishedAt": "2026-10-28T20:03:08.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-28T19:46:45.000Z"
     },
     {
       "id": "64649b68775c5e3b371c",
@@ -394,14 +474,6 @@
       "publishedAt": "2026-10-28T14:43:01.000Z"
     },
     {
-      "id": "840287a7557b8e1a51ef",
-      "source": "CryptoSlate",
-      "title": "Bitcoin option buyers face a Fed-week premium that can fade after the decision",
-      "summary": "Laevitas’s Oct. 26 snapshot showed a 9.2-point implied-versus-realized premium, putting buyers’ exposure after policy decisions in focus. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/bitcoin-option-buyers-face-a-fed-week-premium-that-can-fade-after-the-decision/",
-      "publishedAt": "2026-10-28T14:40:38.000Z"
-    },
-    {
       "id": "71479dd22033781f8e69",
       "source": "Bitcoin Magazine",
       "title": "U.S. Treasury Says U.S. ‘Will Win in the Digital Asset Stack’ as Clarity Act Stalls",
@@ -432,14 +504,6 @@
       "summary": "▶ Bitcoin Magazine Luxor Announces $16M Funding Round to Scale AI Compute, Derivatives Luxor raises $16M to scale AI GPU compute. Ethan Vera and CMT Digital's Sam Hallene explain why Bitcoin mining expertise translates so well to the AI boom. This post Luxor…",
       "url": "https://bitcoinmagazine.com/videos/luxor-announces-16m-funding-round-to-scale-ai-compute-derivatives",
       "publishedAt": "2026-10-28T13:42:18.000Z"
-    },
-    {
-      "id": "c5f745f6d3541021e3f5",
-      "source": "CryptoSlate",
-      "title": "Kraken to cancel orders across 176 crypto markets in sweeping trading overhaul",
-      "summary": "Existing orders will not transfer to synthetic replacements, where limit orders will carry taker fees. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/kraken-to-cancel-orders-across-176-crypto-markets-in-sweeping-trading-overhaul/",
-      "publishedAt": "2026-10-28T13:40:44.000Z"
     },
     {
       "id": "9c6a8d5363f5f8bcbab6",
@@ -512,14 +576,6 @@
       "summary": "Nearly half the companies on the venture’s original roster have now objected to their shares trading on the planned blockchain-based venue.",
       "url": "https://www.coindesk.com/business/2026/10/28/jpmorgan-coca-cola-dell-also-say-no-to-okx-ice-tokenized-tock-trading-plan",
       "publishedAt": "2026-10-28T12:59:36.000Z"
-    },
-    {
-      "id": "0d58c549fd03ce9d0e81",
-      "source": "CryptoSlate",
-      "title": "Robinhood now makes more money from predicting the future than trading crypto",
-      "summary": "The year-over-year crypto decline contrasted with $173 million in event-contract revenue and record company revenue of $1.42 billion. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/robinhood-now-makes-more-money-from-predicting-the-future-than-trading-crypto/",
-      "publishedAt": "2026-10-28T12:20:28.000Z"
     },
     {
       "id": "ba3ea93529253a9c89e0",
@@ -640,62 +696,6 @@
       "summary": "Bitcoin sought to rebuild support at $80,000 while Asian and US tech stocks extended a rebound into key corporate earnings releases.",
       "url": "https://cointelegraph.com/markets/bitcoin-price-eyes-82k-as-morgan-stanley-strategist-says-most-of-correction-is-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-28T09:56:00.000Z"
-    },
-    {
-      "id": "3d2bec674f5ebef6e41f",
-      "source": "CoinDesk",
-      "title": "Here's how much bitcoin and the S&P 500 could rally after midterms",
-      "summary": "Both bitcoin and the S&P 500 have historically produced positive returns in a year after midterms. BTC's pattern, however, could also be explained by the four-year halving cycles.",
-      "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-averages-over-50-in-the-12-months-after-midterms-s-and-p-500-gains-15",
-      "publishedAt": "2026-10-28T09:15:22.000Z"
-    },
-    {
-      "id": "bb2f523aaf0cd308e086",
-      "source": "The Block",
-      "title": "Moody’s assigns investment-grade ratings to Ripple’s RLUSD stablecoin",
-      "summary": "Moody's Ratings assigned the RLUSD A2 long-term and P-1 short-term ratings, citing credit quality and market value of its reserve assets.",
-      "url": "https://www.theblock.co/news/web3/2026-10-28-moodys-ripple-rlusd-stablecoin-431969",
-      "publishedAt": "2026-10-28T09:15:20.000Z"
-    },
-    {
-      "id": "abad496fef0828f27e63",
-      "source": "CoinDesk",
-      "title": "Securitize adds Stellar blockchain as institutional tokenization gathers steam",
-      "summary": "The firms announced the agreement at Meridian 2026, the Stellar Development Foundation’s annual conference in Portugal.",
-      "url": "https://www.coindesk.com/business/2026/10/28/securitize-adds-stellar-blockchain-as-institutional-tokenization-gathers-steam",
-      "publishedAt": "2026-10-28T09:00:00.000Z"
-    },
-    {
-      "id": "b5f24f1392c100000756",
-      "source": "Cointelegraph",
-      "title": "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K",
-      "summary": "US spot Bitcoin ETFs drew $286 million over two days, narrowing October’s net outflows to $26 million as the Crypto Fear & Greed Index remained neutral.",
-      "url": "https://cointelegraph.com/markets/bitcoin-etf-176-million-inflow-sentiment-rebounds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-28T07:57:18.000Z"
-    },
-    {
-      "id": "0dd3f18954c51bc4d731",
-      "source": "Cointelegraph",
-      "title": "Coinbase denies systems breach, says vendor exposed customer data",
-      "summary": "Coinbase said that an incident at analytics vendor Amplitude exposed some customers’ contact data, but it found no evidence of unauthorized access to its own systems.",
-      "url": "https://cointelegraph.com/news/coinbase-analytics-provider-customer-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-10-28T07:42:55.000Z"
-    },
-    {
-      "id": "3805885ac8656ef04228",
-      "source": "CoinDesk",
-      "title": "Bitcoin treasury Datavault AI plunges 50% after firm says it can’t access its BTC",
-      "summary": "The company said the accounting correction will cut reported assets by $92.2 million at the end of 2025 after bitcoin held on Biconomy could not be withdrawn.",
-      "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-treasury-datavault-ai-plunges-50-after-firm-says-it-can-t-access-its-btc",
-      "publishedAt": "2026-10-28T05:28:13.000Z"
-    },
-    {
-      "id": "91b9787cd068ba660bc6",
-      "source": "CoinDesk",
-      "title": "Bithumb hacked through employee system as South Korean financial firms face cyberattacks",
-      "summary": "The breach hit an internal employee system that Bithumb says is separate from its trading platform, while the exchange is still determining whether customer information was exposed.",
-      "url": "https://www.coindesk.com/tech/2026/10/28/bithumb-hacked-through-employee-system-as-south-korean-financial-firms-face-cyberattacks",
-      "publishedAt": "2026-10-28T05:10:36.000Z"
     }
   ]
 }
