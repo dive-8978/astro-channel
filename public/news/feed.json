@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T21:42:20.846Z",
+  "generatedAt": "2026-11-01T06:21:03.197Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,30 @@
     }
   ],
   "items": [
+    {
+      "id": "62c1badc67fe246a6e2b",
+      "source": "CryptoSlate",
+      "title": "Solana’s reward records leave stakers with a gap in validator fee data",
+      "summary": "Agave leaves the applied-rate field empty, so verifying a staking fee requires historical validator state and delegation evidence. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your…",
+      "url": "https://cryptoslate.com/solanas-reward-records-leave-stakers-with-a-gap-in-validator-fee-data/",
+      "publishedAt": "2026-11-01T05:10:57.000Z"
+    },
+    {
+      "id": "20271d4d5eb4658ec690",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s recovery faces rising derivatives exposure and $643 million in ETF outflows",
+      "summary": "Higher selected derivatives exposure and ETF redemptions leave the recovery facing a demand test before November 6 payrolls. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/bitcoins-recovery-faces-rising-derivatives-exposure-and-643-million-in-etf-outflows/",
+      "publishedAt": "2026-11-01T01:10:55.000Z"
+    },
+    {
+      "id": "20b1721badb1c57469b8",
+      "source": "CoinDesk",
+      "title": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
+      "summary": "While the FBI listed hundreds of addresses in its notice, Chainalysis said the Binance attackers have already used \"thousands addresses,\" and expects this number to continue growing.",
+      "url": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
+      "publishedAt": "2026-11-01T01:10:05.000Z"
+    },
     {
       "id": "bf859cf8662c7e47ab3c",
       "source": "CryptoSlate",
@@ -298,14 +322,6 @@
       "publishedAt": "2026-10-31T05:01:32.000Z"
     },
     {
-      "id": "c10f9400c67756da74fd",
-      "source": "CryptoSlate",
-      "title": "Aave reopens frozen markets but blocks new collateral loans",
-      "summary": "LlamaRisk reports the main emergency batches executed, while available liquidity and collateral rules still determine practical access. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in…",
-      "url": "https://cryptoslate.com/aave-reopens-frozen-markets-but-blocks-new-collateral-loans/",
-      "publishedAt": "2026-10-31T03:40:43.000Z"
-    },
-    {
       "id": "a6879e54816586d23ae7",
       "source": "Bitcoin Magazine",
       "title": "MSTR Q3 2026 Earnings Call: Analyst Q&A",
@@ -336,14 +352,6 @@
       "summary": "Anxiety about the AI boom has sent the Nasdaq 100 slumping by about 10% in just three weeks since hitting a record high on October 6, including a 4.5% drop on Friday.",
       "url": "https://www.coindesk.com/business/2026/10/30/openai-reportedly-cuts-fundraising-target-amid-ai-jitters",
       "publishedAt": "2026-10-31T00:48:56.000Z"
-    },
-    {
-      "id": "5c81bd7261759fe0ea7a",
-      "source": "CryptoSlate",
-      "title": "Maple locks $280M in XRP collateral and upcoming maturity dates threaten liquidations",
-      "summary": "About 225 million XRP supports three stablecoin loan positions, but December and January maturities do not guarantee automatic collateral releases. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
-      "url": "https://cryptoslate.com/maple-locks-280m-in-xrp-collateral-and-upcoming-maturity-dates-threaten-liquidations/",
-      "publishedAt": "2026-10-31T00:10:43.000Z"
     },
     {
       "id": "644d2e9a8afe3fc169ee",
@@ -688,14 +696,6 @@
       "summary": "Bitcoin held above $76,000 after a $6.3 billion Binance hack and a tech-stock sell-off, as momentum indicators pointed to a possible rebound.",
       "url": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T11:29:23.000Z"
-    },
-    {
-      "id": "a507f81f2849d2639d45",
-      "source": "CoinDesk",
-      "title": "Crypto liquidations jump to $1.57 billion as Binance hack sends bitcoin, ether lower",
-      "summary": "Bitcoin traded near $77,350 after $6.3 billion Binance hack, with crypto futures liquidations jumping to $1.57 billion.",
-      "url": "https://www.coindesk.com/markets/2026/10/30/crypto-liquidations-jump-to-usd1-57-billion-as-binance-hack-sends-bitcoin-ether-lower",
-      "publishedAt": "2026-10-30T11:09:24.000Z"
     }
   ]
 }
