@@ -1,0 +1,14 @@
+{
+  "id": 132818887,
+  "details_url": "https://developer.mozilla.org/en-US/observatory/analyze?host=www.astrochannel.one",
+  "algorithm_version": 6,
+  "scanned_at": "2026-11-01T15:16:36.312Z",
+  "error": null,
+  "grade": "B+",
+  "score": 80,
+  "status_code": 200,
+  "tests_failed": 1,
+  "tests_passed": 11,
+  "tests_quantity": 12,
+  "scope": "www.astrochannel.one public website HTTP response only; not MA or AstroAI Chain"
+}

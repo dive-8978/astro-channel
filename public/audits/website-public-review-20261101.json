@@ -1,0 +1,51 @@
+{
+  "id": "AB-PUBLIC-WEB-20261101",
+  "slug": "website-public-review-20261101",
+  "date": "2026-11-01",
+  "title": {
+    "en": "Website - Public Security Check Summary",
+    "zh": "官网公开安全检查摘要"
+  },
+  "status": {
+    "en": "External automated results available",
+    "zh": "已有外部自动化检查结果"
+  },
+  "scope": {
+    "en": "The public website only; not the MA app or AstroAI Chain.",
+    "zh": "仅限公开官网，不覆盖 MA 应用或 AstroAI Chain。"
+  },
+  "sections": [
+    {
+      "title": {
+        "en": "Dated external results",
+        "zh": "有日期的外部结果"
+      },
+      "items": [
+        {
+          "en": "MDN HTTP Observatory returned B+, score 80, with 11 of 12 tests passed on 1 November 2026.",
+          "zh": "2026 年 11 月 1 日，MDN HTTP Observatory 返回 B+、80 分，12 项通过 11 项。"
+        },
+        {
+          "en": "Qualys SSL Labs completed checks of two observed website endpoints: A+ and A. These are separate endpoint results.",
+          "zh": "Qualys SSL Labs 完成两个被测官网入口的检查，分别为 A+ 与 A，两个入口结果分开记录。"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Follow-up and limits",
+        "zh": "跟进与限制"
+      },
+      "items": [
+        {
+          "en": "Website dependency review recorded follow-up findings. Automated grades are scoped observations, not independent human security audits.",
+          "zh": "官网依赖复核记录了后续待办。自动评分是限定范围的观察，不是独立人工安全审计。"
+        },
+        {
+          "en": "The original provider pages and dated response snapshots are linked in this review centre.",
+          "zh": "原服务结果页面及有日期的响应快照已列在审核中心。"
+        }
+      ]
+    }
+  ]
+}

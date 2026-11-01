@@ -1,0 +1,51 @@
+{
+  "id": "AB-PUBLIC-CHAIN-20261101",
+  "slug": "astroai-chain-public-review-20261101",
+  "date": "2026-11-01",
+  "title": {
+    "en": "AstroAI Chain - Progress Review Summary",
+    "zh": "AstroAI Chain 进展审核公开摘要"
+  },
+  "status": {
+    "en": "Research and acceptance work in progress",
+    "zh": "研发与验收工作持续推进"
+  },
+  "scope": {
+    "en": "Nontechnical progress and assurance-stage information only.",
+    "zh": "仅披露非技术进展与审核阶段。"
+  },
+  "sections": [
+    {
+      "title": {
+        "en": "Progress reviewed",
+        "zh": "已核对的进展"
+      },
+      "items": [
+        {
+          "en": "The team continues engineering, validation and documentation work. Recent registered progress was checked against internal evidence.",
+          "zh": "团队持续推进工程、验证与文档工作；已依据内部证据复核近期登记的进展。"
+        },
+        {
+          "en": "Targeted internal verification has progressed. Production readiness and independent review are assessed separately.",
+          "zh": "定向内部验证已有进展；生产就绪与独立审核另行评估。"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Current boundary",
+        "zh": "当前边界"
+      },
+      "items": [
+        {
+          "en": "Production acceptance remains incomplete. This update is not a mainnet-launch announcement, security certification or performance guarantee.",
+          "zh": "生产验收尚未完成；本更新不代表主网正式上线、安全认证或性能保证。"
+        },
+        {
+          "en": "Protocols, architecture, implementation, deployment information and private review materials are not disclosed.",
+          "zh": "协议、架构、实现、部署信息与内部审核材料均不公开。"
+        }
+      ]
+    }
+  ]
+}

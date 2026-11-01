@@ -1,0 +1,270 @@
+{
+  "schema": "astrobridge-public-review-centre-v1",
+  "date": "2026-11-01",
+  "disclosure": "public summaries only; full internal reports and core technical details excluded",
+  "reports": [
+    {
+      "id": "AB-PUBLIC-MA-20261101",
+      "slug": "ma-public-review-20261101",
+      "date": "2026-11-01",
+      "title": {
+        "en": "MA - Progress Review Summary",
+        "zh": "MA 进展审核公开摘要"
+      },
+      "status": {
+        "en": "Internal review completed; follow-up open",
+        "zh": "阶段内部复核已完成，后续验收继续"
+      },
+      "scope": {
+        "en": "A public summary of recent client engineering checks.",
+        "zh": "近期客户端工程检查的公开摘要。"
+      },
+      "sections": [
+        {
+          "title": {
+            "en": "Progress reviewed",
+            "zh": "已核对的进展"
+          },
+          "items": [
+            {
+              "en": "Recent communication, notification behaviour and companion-client work were reviewed against dated engineering evidence.",
+              "zh": "已根据有日期的工程证据复核近期通信、通知行为和电脑关联客户端相关工作。"
+            },
+            {
+              "en": "Targeted local checks were completed. Local checks are kept separate from release approval and real-device acceptance.",
+              "zh": "已完成本轮定向本地检查；本地结果与发行审核、真机验收分别记录。"
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Current boundary",
+            "zh": "当前边界"
+          },
+          "items": [
+            {
+              "en": "Follow-up remains open for dependency review and complete device acceptance. This summary does not certify every production service or app release.",
+              "zh": "依赖复核与完整设备验收仍有后续工作；本摘要不构成所有生产服务或应用版本的安全认证。"
+            },
+            {
+              "en": "Key implementation details and the full internal review remain private. Product availability follows the official release notes.",
+              "zh": "关键实现与完整内部审核不公开；产品可用状态以正式发行说明为准。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AB-PUBLIC-CHAIN-20261101",
+      "slug": "astroai-chain-public-review-20261101",
+      "date": "2026-11-01",
+      "title": {
+        "en": "AstroAI Chain - Progress Review Summary",
+        "zh": "AstroAI Chain 进展审核公开摘要"
+      },
+      "status": {
+        "en": "Research and acceptance work in progress",
+        "zh": "研发与验收工作持续推进"
+      },
+      "scope": {
+        "en": "Nontechnical progress and assurance-stage information only.",
+        "zh": "仅披露非技术进展与审核阶段。"
+      },
+      "sections": [
+        {
+          "title": {
+            "en": "Progress reviewed",
+            "zh": "已核对的进展"
+          },
+          "items": [
+            {
+              "en": "The team continues engineering, validation and documentation work. Recent registered progress was checked against internal evidence.",
+              "zh": "团队持续推进工程、验证与文档工作；已依据内部证据复核近期登记的进展。"
+            },
+            {
+              "en": "Targeted internal verification has progressed. Production readiness and independent review are assessed separately.",
+              "zh": "定向内部验证已有进展；生产就绪与独立审核另行评估。"
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Current boundary",
+            "zh": "当前边界"
+          },
+          "items": [
+            {
+              "en": "Production acceptance remains incomplete. This update is not a mainnet-launch announcement, security certification or performance guarantee.",
+              "zh": "生产验收尚未完成；本更新不代表主网正式上线、安全认证或性能保证。"
+            },
+            {
+              "en": "Protocols, architecture, implementation, deployment information and private review materials are not disclosed.",
+              "zh": "协议、架构、实现、部署信息与内部审核材料均不公开。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AB-PUBLIC-WEB-20261101",
+      "slug": "website-public-review-20261101",
+      "date": "2026-11-01",
+      "title": {
+        "en": "Website - Public Security Check Summary",
+        "zh": "官网公开安全检查摘要"
+      },
+      "status": {
+        "en": "External automated results available",
+        "zh": "已有外部自动化检查结果"
+      },
+      "scope": {
+        "en": "The public website only; not the MA app or AstroAI Chain.",
+        "zh": "仅限公开官网，不覆盖 MA 应用或 AstroAI Chain。"
+      },
+      "sections": [
+        {
+          "title": {
+            "en": "Dated external results",
+            "zh": "有日期的外部结果"
+          },
+          "items": [
+            {
+              "en": "MDN HTTP Observatory returned B+, score 80, with 11 of 12 tests passed on 1 November 2026.",
+              "zh": "2026 年 11 月 1 日，MDN HTTP Observatory 返回 B+、80 分，12 项通过 11 项。"
+            },
+            {
+              "en": "Qualys SSL Labs completed checks of two observed website endpoints: A+ and A. These are separate endpoint results.",
+              "zh": "Qualys SSL Labs 完成两个被测官网入口的检查，分别为 A+ 与 A，两个入口结果分开记录。"
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Follow-up and limits",
+            "zh": "跟进与限制"
+          },
+          "items": [
+            {
+              "en": "Website dependency review recorded follow-up findings. Automated grades are scoped observations, not independent human security audits.",
+              "zh": "官网依赖复核记录了后续待办。自动评分是限定范围的观察，不是独立人工安全审计。"
+            },
+            {
+              "en": "The original provider pages and dated response snapshots are linked in this review centre.",
+              "zh": "原服务结果页面及有日期的响应快照已列在审核中心。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "externalChecks": [
+    {
+      "provider": "MDN HTTP Observatory",
+      "type": "external_automated_service",
+      "grade": "B+",
+      "score": 80,
+      "passed": 11,
+      "total": 12,
+      "scannedAt": "2026-11-01T15:16:36.312Z",
+      "algorithmVersion": 6,
+      "scanId": 132818887,
+      "url": "https://developer.mozilla.org/en-US/observatory/analyze?host=www.astrochannel.one",
+      "snapshot": "/audits/mdn-observatory-20261101.json"
+    },
+    {
+      "provider": "Qualys SSL Labs",
+      "type": "external_automated_service",
+      "grades": [
+        "A+",
+        "A"
+      ],
+      "reportVersion": "2.4.3",
+      "endpoints": [
+        {
+          "grade": "A+",
+          "status": "READY",
+          "tested_at": "Sun, 01 Nov 2026 15:18:43 UTC"
+        },
+        {
+          "grade": "A",
+          "status": "READY",
+          "tested_at": "Sun, 01 Nov 2026 15:19:30 UTC"
+        }
+      ],
+      "url": "https://www.ssllabs.com/ssltest/analyze.html?d=www.astrochannel.one&hideResults=on",
+      "snapshot": "/audits/ssl-labs-20261101.json"
+    }
+  ],
+  "resources": [
+    {
+      "name": "OWASP MASVS / MASTG",
+      "kind": "free_standard",
+      "url": "https://mas.owasp.org/MASVS/",
+      "text": {
+        "en": "Mobile security verification requirements and testing guidance; no project conformity claim.",
+        "zh": "移动应用安全验证要求与测试方法；不代表本项目已符合该标准。"
+      }
+    },
+    {
+      "name": "OWASP ASVS",
+      "kind": "free_standard",
+      "url": "https://asvs.owasp.org/",
+      "text": {
+        "en": "Application security verification requirements for planning future reviews.",
+        "zh": "应用安全验证要求，可用于后续审核规划。"
+      }
+    },
+    {
+      "name": "OSV.dev",
+      "kind": "free_tool",
+      "url": "https://osv.dev/",
+      "text": {
+        "en": "Public package vulnerability data; dependency matches need reachability triage.",
+        "zh": "公共依赖漏洞数据；匹配公告后仍需判断实际可达性。"
+      }
+    },
+    {
+      "name": "OpenSSF Scorecard",
+      "kind": "free_tool",
+      "url": "https://github.com/ossf/scorecard",
+      "text": {
+        "en": "Open-source repository practice checks. No result was available for our website repository in this review.",
+        "zh": "开源仓库安全实践检查；本轮未取得官网仓库评分。"
+      }
+    }
+  ],
+  "publicReferenceLibraries": [
+    {
+      "name": "Trail of Bits - Public Reports",
+      "url": "https://trailofbits.com/reports/",
+      "text": {
+        "en": "Openly readable security review examples across software, cryptography and blockchain.",
+        "zh": "可公开阅读的软件、密码学与区块链安全审核案例。"
+      }
+    },
+    {
+      "name": "Cure53 - Public Reports",
+      "url": "https://cure53.de/#publications",
+      "text": {
+        "en": "Public assessment examples for applications, cryptography and infrastructure.",
+        "zh": "公开的应用、密码学与基础设施安全评估案例。"
+      }
+    },
+    {
+      "name": "OpenZeppelin - Security Center",
+      "url": "https://contracts.openzeppelin.com/security",
+      "text": {
+        "en": "Version-scoped contract audit references and a security-review process example.",
+        "zh": "按版本列示的合约审计参考与安全审核流程示例。"
+      }
+    },
+    {
+      "name": "OSTIF - Audits",
+      "url": "https://ostif.org/audits/",
+      "text": {
+        "en": "Public open-source audit engagements and reports; sponsorship or a free engagement is not guaranteed.",
+        "zh": "开源项目公开审计案例与报告；不保证本项目可获资助或免费委托。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "AB-PUBLIC-MA-20261101",
+  "slug": "ma-public-review-20261101",
+  "date": "2026-11-01",
+  "title": {
+    "en": "MA - Progress Review Summary",
+    "zh": "MA 进展审核公开摘要"
+  },
+  "status": {
+    "en": "Internal review completed; follow-up open",
+    "zh": "阶段内部复核已完成，后续验收继续"
+  },
+  "scope": {
+    "en": "A public summary of recent client engineering checks.",
+    "zh": "近期客户端工程检查的公开摘要。"
+  },
+  "sections": [
+    {
+      "title": {
+        "en": "Progress reviewed",
+        "zh": "已核对的进展"
+      },
+      "items": [
+        {
+          "en": "Recent communication, notification behaviour and companion-client work were reviewed against dated engineering evidence.",
+          "zh": "已根据有日期的工程证据复核近期通信、通知行为和电脑关联客户端相关工作。"
+        },
+        {
+          "en": "Targeted local checks were completed. Local checks are kept separate from release approval and real-device acceptance.",
+          "zh": "已完成本轮定向本地检查；本地结果与发行审核、真机验收分别记录。"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Current boundary",
+        "zh": "当前边界"
+      },
+      "items": [
+        {
+          "en": "Follow-up remains open for dependency review and complete device acceptance. This summary does not certify every production service or app release.",
+          "zh": "依赖复核与完整设备验收仍有后续工作；本摘要不构成所有生产服务或应用版本的安全认证。"
+        },
+        {
+          "en": "Key implementation details and the full internal review remain private. Product availability follows the official release notes.",
+          "zh": "关键实现与完整内部审核不公开；产品可用状态以正式发行说明为准。"
+        }
+      ]
+    }
+  ]
+}
