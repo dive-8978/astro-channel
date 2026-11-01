@@ -1,0 +1,104 @@
+{
+  "publicationDate": "2026-11-01",
+  "kind": "official-editorial-progress-review",
+  "scope": "Dated public-safe summaries; not a complete product or network acceptance report.",
+  "articles": [
+    {
+      "slug": "astro-ecosystem-progress-november-20261101",
+      "project": "AstroBridge",
+      "stage": "Portfolio progress review",
+      "facts": [
+        "Review published November 1, drawing on dated project records and accessible project conversations.",
+        "MA, AstroBridge, AstroAI Chain and AstroX have separate responsibilities and acceptance stages.",
+        "Research progress is reported separately from deployment and public availability."
+      ],
+      "status": "An editorial progress review, not a simultaneous release of every project.",
+      "url": "/news/article.html?slug=astro-ecosystem-progress-november-20261101",
+      "title": "November Progress Across the Astro Ecosystem"
+    },
+    {
+      "slug": "ma-android-and-product-information-20261101",
+      "project": "MA",
+      "stage": "Android available · iOS review pending",
+      "facts": [
+        "The product-page update was published and checked in the October 28 release record.",
+        "Both Google Play listing pages were reachable during the November 1 review.",
+        "Both iOS submissions remained Waiting for Review in the November 1 account check."
+      ],
+      "status": "Android availability is recorded separately from iOS approval; device, region and feature availability may differ.",
+      "url": "/news/article.html?slug=ma-android-and-product-information-20261101"
+    },
+    {
+      "slug": "ma-voice-input-candidate-20261101",
+      "project": "MA",
+      "stage": "Locally checked candidate",
+      "facts": [
+        "October 28 candidate record: 19 local behavior scenarios passed with native services simulated.",
+        "Android native compilation and iOS module compile checks are recorded.",
+        "This candidate is not claimed as part of already-distributed build 116."
+      ],
+      "status": "Source candidate with local checks; fresh signed builds and real-device recognition acceptance remain pending.",
+      "url": "/news/article.html?slug=ma-voice-input-candidate-20261101"
+    },
+    {
+      "slug": "astrox-local-trading-application-20261101",
+      "project": "AstroX",
+      "stage": "Local test application",
+      "facts": [
+        "Local v0.2 handoff records signed transactions, balance and order queries, and receipt recovery.",
+        "The local report records 32 checks and a matching demo; this review did not rerun that suite.",
+        "Chain integration and server deployment remain pending."
+      ],
+      "status": "Local prototype using valueless test assets; not a public exchange or a production blockchain launch.",
+      "url": "/news/article.html?slug=astrox-local-trading-application-20261101"
+    },
+    {
+      "slug": "astroai-chain-data-integrity-research-20261101",
+      "project": "AstroAI Chain",
+      "stage": "Local engineering research",
+      "facts": [
+        "November 1 records cover local persisted-data integrity and inventory-accounting work.",
+        "Targeted checks are recorded per change; they are not a single complete network acceptance suite.",
+        "Production acceptance and the sustained operating exercise remain pending."
+      ],
+      "status": "Local network engineering progress; no mainnet, global-node-count or independent-operator milestone is announced.",
+      "url": "/news/article.html?slug=astroai-chain-data-integrity-research-20261101"
+    },
+    {
+      "slug": "small-on-device-ai-research-20261101",
+      "project": "AI Safety Research",
+      "stage": "Research direction",
+      "facts": [
+        "The direction was discussed in late-October project research conversations.",
+        "Proposed evaluation includes unseen tasks, success rate, resource use and human intervention.",
+        "No on-device performance result or autonomous-learning breakthrough is claimed."
+      ],
+      "status": "Early research and experiment design; implementation and physical-device evaluation remain future work.",
+      "url": "/news/article.html?slug=small-on-device-ai-research-20261101"
+    },
+    {
+      "slug": "quantitative-engineering-replay-research-20261101",
+      "project": "Quantitative Research",
+      "stage": "Offline experiment",
+      "facts": [
+        "November 1 release gate: experiment-only and not accepted for product release.",
+        "Receipt and retry cases were examined offline.",
+        "Real-account acceptance and financial finality are not verified."
+      ],
+      "status": "An offline engineering experiment in a separate project; no live-trading availability or investment result is announced.",
+      "url": "/news/article.html?slug=quantitative-engineering-replay-research-20261101"
+    },
+    {
+      "slug": "astrobridge-developer-conversations-20261101",
+      "project": "AstroBridge",
+      "stage": "Public technical discussion",
+      "facts": [
+        "A November 1 public reply is recorded with its own visible post URL.",
+        "The discussion concerns practical SDK behavior, not a partner announcement.",
+        "Multichain capability is assessed per operation and evidence stage."
+      ],
+      "status": "Documented public community activity; no partnership, endorsement or adoption figure is claimed.",
+      "url": "/news/article.html?slug=astrobridge-developer-conversations-20261101"
+    }
+  ]
+}

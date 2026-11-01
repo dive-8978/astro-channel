@@ -1,5 +1,527 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "astro-ecosystem-progress-november-20261101",
+    "title": "November Progress Across the Astro Ecosystem",
+    "dek": "A dated look at work across MA, AstroBridge, AstroAI Chain, AstroX and our wider research portfolio, with each project reported at its actual stage.",
+    "type": "Company Update",
+    "section": "Institution",
+    "project": "AstroBridge",
+    "phase": "Portfolio progress review",
+    "phaseTone": "active",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/connected-city-1536.webp",
+    "imageWidth": 1536,
+    "imageHeight": 1024,
+    "imageAlt": "Concept illustration of a connected city and shared digital spaces.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "Our recent work connects several distinct efforts: everyday communication in MA, non-custodial intent and API infrastructure in AstroBridge, network research in AstroAI Chain, and transaction-application experiments in AstroX. The projects share a direction while retaining their own execution rules and release milestones.",
+      "The current review covers MA’s Android distribution and refreshed product information, a voice-input candidate, AstroX’s local test application, Chain data-integrity work, and early research into small on-device AI systems. Separate quantitative-engineering experiments continue to focus on simulation, replay and recovery. Developer discussions help us compare these engineering questions with practical SDK experience.",
+      "AstroWallet AI, AstroGuard, home-network care and AstroRealms remain distinct parts of the broader portfolio. This update does not announce a new release for each of them. We will publish project-specific milestones as fresh evidence becomes available.",
+      "The articles in this edition distinguish published pages, distributed applications, locally checked candidates and research proposals. As of the November 1 review, the MA iOS submissions remain Waiting for Review; AstroX has not completed server deployment or Chain integration, and AstroAI Chain has not passed production acceptance."
+    ],
+    "facts": [
+      "Review published November 1, drawing on dated project records and accessible project conversations.",
+      "MA, AstroBridge, AstroAI Chain and AstroX have separate responsibilities and acceptance stages.",
+      "Research progress is reported separately from deployment and public availability."
+    ],
+    "status": "An editorial progress review, not a simultaneous release of every project.",
+    "links": [
+      {
+        "label": "Read this edition",
+        "url": "/newsroom.html#official"
+      },
+      {
+        "label": "Explore the ecosystem",
+        "url": "/professional.html"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "十一月进展：连接通信产品、交易研发与端侧 AI",
+        "dek": "汇总 MA、AstroBridge、AstroAI Chain、AstroX 及相关研究的近期进展，按各自实际阶段发布。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "我们近期的工作连接着几个独立方向：MA 面向日常通信，AstroBridge 提供非托管意图与 API 基础，AstroAI Chain 推进底层网络研发，AstroX 探索交易应用。它们共享长期方向，同时保留各自的执行规则和发布里程碑。",
+          "本轮整理覆盖 MA 安卓发行与产品网页更新、语音输入候选、AstroX 本地测试应用、Chain 数据完整性工作，以及手机端小型 AI 的早期研究。独立的量化工程实验继续关注模拟、重放和恢复；开发者技术讨论也帮助我们对照真实 SDK 使用中的问题。",
+          "AstroWallet AI、AstroGuard、家庭网络关怀和 AstroRealms 仍是整体项目版图中的独立部分。本轮没有把它们统一宣布为新版发布；有新的可核实成果时，会按项目分别更新。",
+          "这一组新闻区分已发布网页、已发行应用、本地检查候选和研究设想。截至11月1日的复核，MA 的 iOS 提交仍等待审核；AstroX 尚未完成服务器部署或 Chain 接入，AstroAI Chain 尚未通过生产验收。"
+        ],
+        "facts": [
+          "11月1日发布，依据注明日期的工程记录与可访问项目对话整理。",
+          "MA、AstroBridge、AstroAI Chain 与 AstroX 的职责及验收阶段分别说明。",
+          "研发进展、部署状态和公开可用性分别记录。"
+        ],
+        "status": "这是近期进展汇总，不代表所有项目同时完成发布。",
+        "imageAlt": "连接城市与共享数字空间的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "查看本期新闻",
+            "url": "/newsroom.html#official"
+          },
+          {
+            "label": "了解项目生态",
+            "url": "/professional.html"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ma-android-and-product-information-20261101",
+    "title": "MA and MA full on Android, with Clearer Product Information in Seven Languages",
+    "dek": "The refreshed MA website puts family communication first and provides distinct Google Play links for both editions.",
+    "type": "Product Update",
+    "section": "Products",
+    "project": "MA",
+    "phase": "Android available · iOS review pending",
+    "phaseTone": "verified",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261021/01-ma-release-candidate-concept.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "Concept artwork illustrating human connection and digital communication.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "MA’s refreshed product page brings conversations with family, friends and communities to the foreground. It explains messaging, voice and video, reading and social features without making asset ownership a prerequisite for starting a conversation.",
+      "The October 28 website release receipt records seven-language content and 28 browser checks across desktop, tablet and phone widths. The download section links separately to MA and MA full on Google Play and identifies Android release 1.6.91, build 116. Both public Google Play listings were reachable during this November 1 review.",
+      "Distribution differs by platform. The November 1 App Store Connect review recorded both iOS 1.6.91 submissions as Waiting for Review. That status is separate from Android availability and from earlier device-installation tests. MA Square continues to be described as a test-stage feature."
+    ],
+    "facts": [
+      "The product-page update was published and checked in the October 28 release record.",
+      "Both Google Play listing pages were reachable during the November 1 review.",
+      "Both iOS submissions remained Waiting for Review in the November 1 account check."
+    ],
+    "status": "Android availability is recorded separately from iOS approval; device, region and feature availability may differ.",
+    "links": [
+      {
+        "label": "Explore MA",
+        "url": "/painpoints.html"
+      },
+      {
+        "label": "MA on Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.astrobridge.ma"
+      },
+      {
+        "label": "MA full on Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.astrobridge.ma.full"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "MA 与 MA full 安卓版持续提供下载，产品信息支持七种语言",
+        "dek": "更新后的 MA 官网以亲友通信为中心，为两个版本提供清晰独立的 Google Play 下载入口。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "MA 更新后的产品页把家人、朋友与社群之间的日常联系放在前面，介绍文字、语音、视频、阅读与社交功能。开始一段聊天不以先持有数字资产为前提。",
+          "10月28日的网页发布回执记录了七种语言内容，以及覆盖桌面、平板和手机宽度的28组浏览器检查。下载区分别链接 MA 和 MA full 的 Google Play 页面，并标注安卓1.6.91、构建116。本次11月1日复核可以访问两个公开商店页面。",
+          "各平台发行状态分别记录。11月1日 App Store Connect 复核显示，两个 iOS 1.6.91 提交仍为等待审核；这与安卓可下载、此前设备安装测试是不同的状态。MA 广场继续按测试阶段功能介绍。"
+        ],
+        "facts": [
+          "10月28日回执记录产品网页已发布并完成检查。",
+          "11月1日复核可访问两个 Google Play 公开页面。",
+          "11月1日账号检查中，两个 iOS 提交仍等待审核。"
+        ],
+        "status": "安卓可用性与 iOS 审核分别说明；设备、地区和具体功能的开放情况可能不同。",
+        "imageAlt": "呈现人与人联系及数字通信的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "了解 MA",
+            "url": "/painpoints.html"
+          },
+          {
+            "label": "Google Play 上的 MA",
+            "url": "https://play.google.com/store/apps/details?id=com.astrobridge.ma"
+          },
+          {
+            "label": "Google Play 上的 MA full",
+            "url": "https://play.google.com/store/apps/details?id=com.astrobridge.ma.full"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ma-voice-input-candidate-20261101",
+    "title": "Voice Input for MA: Speak, Review, Then Decide",
+    "dek": "A new candidate adds native speech-input handling and clearer recovery controls while keeping transaction approval in the user’s hands.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "MA",
+    "phase": "Locally checked candidate",
+    "phaseTone": "active",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261021/01-ma-release-candidate-concept.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "Concept artwork illustrating human connection and digital communication.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "The October 28 MA engineering candidate adds an iOS speech module and refines Android speech-session handling. The interface distinguishes listening, finishing, cancellation and error recovery, and lets users review recognized text before using it.",
+      "The local record includes 19 JavaScript behavior scenarios, seven-language parsing and authorization-flow regression checks, Android native compilation and an iOS module compile check. These checks support continued development; new signed packages, fresh device recognition tests and a store submission remain separate steps.",
+      "Speech recognition depends on the device’s available system service. The candidate explains unavailable engines and retains keyboard input. Recognized words fill an editable field; users must parse and check the result again before the existing wallet authorization flow can continue."
+    ],
+    "facts": [
+      "October 28 candidate record: 19 local behavior scenarios passed with native services simulated.",
+      "Android native compilation and iOS module compile checks are recorded.",
+      "This candidate is not claimed as part of already-distributed build 116."
+    ],
+    "status": "Source candidate with local checks; fresh signed builds and real-device recognition acceptance remain pending.",
+    "links": [
+      {
+        "label": "MA product information",
+        "url": "/painpoints.html"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "MA 语音输入候选：先说出需求，再核对文字与操作",
+        "dek": "新的候选改进补齐原生语音输入和恢复提示，继续把交易核对与授权保留给用户。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "10月28日的 MA 工程候选新增 iOS 语音模块，并完善 Android 识别会话处理。界面区分识别中、结束、取消与错误恢复，让用户先查看识别文字，再决定如何使用。",
+          "本地记录包括19个 JavaScript 行为场景、七语言解析与授权流程回归、安卓原生编译和 iOS 模块编译检查。这些支持继续研发；新的签名安装包、真实设备识别测试与商店提交仍是后续独立步骤。",
+          "语音识别依赖设备可用的系统服务。候选在引擎不可用时给出说明并保留键盘输入；识别结果只回填可编辑文本，用户需要重新解析和核对，再按既有钱包授权流程继续。"
+        ],
+        "facts": [
+          "10月28日记录：19个本地行为场景通过，原生服务使用模拟。",
+          "已记录安卓原生编译与 iOS 模块编译检查。",
+          "这项候选改进不冒充已发行构建116中的功能。"
+        ],
+        "status": "当前为完成本地检查的源码候选，新的签名构建与真实设备识别验收仍待完成。",
+        "imageAlt": "呈现人与人联系及数字通信的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "MA 产品信息",
+            "url": "/painpoints.html"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "astrox-local-trading-application-20261101",
+    "title": "AstroX Builds a Small, Testable Transaction Application",
+    "dek": "The first local application brings signed instructions, order matching, balance queries and repeat-submission receipts into one controlled workflow.",
+    "type": "Development Update",
+    "section": "Engineering",
+    "project": "AstroX",
+    "phase": "Local test application",
+    "phaseTone": "active",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/research-studio-1024.webp",
+    "imageWidth": 1024,
+    "imageHeight": 683,
+    "imageAlt": "Concept illustration of a collaborative technology research studio.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "AstroX is being explored as a transaction application within the AstroAI Chain ecosystem. Its local v0.2 candidate combines a deterministic integer ledger with signed orders, cancellations, test transfers, account queries and order queries. It uses valueless test assets.",
+      "The local handoff records 32 passing checks and a matching demonstration. An identical signed instruction can return its original local receipt on repeat submission, helping separate receipt recovery from a new transaction. This local result is not a Chain transaction hash or proof of chain settlement.",
+      "The next integration work needs agreement on network identity, signing, transaction finality, approved interfaces and event recovery. Server deployment has not been completed as of this review. The application remains a controlled prototype, with Chain integration explicitly pending."
+    ],
+    "facts": [
+      "Local v0.2 handoff records signed transactions, balance and order queries, and receipt recovery.",
+      "The local report records 32 checks and a matching demo; this review did not rerun that suite.",
+      "Chain integration and server deployment remain pending."
+    ],
+    "status": "Local prototype using valueless test assets; not a public exchange or a production blockchain launch.",
+    "links": [
+      {
+        "label": "Ecosystem overview",
+        "url": "/professional.html"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "AstroX 推进轻量、可测试的交易应用原型",
+        "dek": "首个本地应用把签名指令、订单撮合、余额查询与重复提交回执放进受控的测试流程。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "AstroX 正在探索作为 AstroAI Chain 生态中的交易应用。本地 v0.2 候选把确定的整数账本与签名下单、撤单、测试转账、账户及订单查询组合起来，仅使用无价值测试资产。",
+          "本地交接记录32项检查通过，并完成撮合演示。同一完整签名指令再次提交时可以读回原有本地回执，帮助区分回执恢复和新交易。本地结果并不是 Chain 交易哈希，也不是链上结算证明。",
+          "下一步接入需要明确网络身份、签名、交易最终性、获批接口与事件恢复规则。截至本次复核，服务器部署尚未完成；应用仍为受控原型，Chain 接入明确保持待完成状态。"
+        ],
+        "facts": [
+          "本地 v0.2 交接记录签名交易、余额与订单查询及回执恢复。",
+          "报告记录32项检查及撮合演示；本次新闻整理没有重跑套件。",
+          "Chain 接入与服务器部署仍待完成。"
+        ],
+        "status": "使用无价值资产的本地原型，不代表公开交易平台或生产公链上线。",
+        "imageAlt": "协作式技术研究空间的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "生态介绍",
+            "url": "/professional.html"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "astroai-chain-data-integrity-research-20261101",
+    "title": "AstroAI Chain Advances Data Integrity and Recovery Research",
+    "dek": "Recent local work examines persisted records, replay checks and accounting evidence as part of the network’s longer-term development.",
+    "type": "Research Update",
+    "section": "Protocol",
+    "project": "AstroAI Chain",
+    "phase": "Local engineering research",
+    "phaseTone": "active",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261021/02-astrobridge-foundation-concept.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "Concept artwork illustrating infrastructure development.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "AstroAI Chain’s latest local engineering records focus on storing and reading back historical data, checking record integrity, and connecting persisted inventories with accounting evidence. The aim is to make future operational decisions depend on inspectable data rather than an assumed healthy state.",
+      "Targeted local cases examine changed directories, incomplete records and disagreement between stored data and its description. Uncertain or inconsistent material remains visible for investigation instead of being silently promoted to an accepted result.",
+      "This work is part of network R&D. It does not establish independent global validators, a public mainnet launch or production acceptance. Cross-region recovery, real data-source integration, resource acceptance and the sustained operating exercise remain separate milestones."
+    ],
+    "facts": [
+      "November 1 records cover local persisted-data integrity and inventory-accounting work.",
+      "Targeted checks are recorded per change; they are not a single complete network acceptance suite.",
+      "Production acceptance and the sustained operating exercise remain pending."
+    ],
+    "status": "Local network engineering progress; no mainnet, global-node-count or independent-operator milestone is announced.",
+    "links": [
+      {
+        "label": "Network research overview",
+        "url": "/astro-chain.html"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "AstroAI Chain 推进数据完整性与恢复机制研究",
+        "dek": "近期本地工程围绕持久记录、重放检查与核算证据展开，为后续网络验证打基础。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "AstroAI Chain 最新本地工程记录关注历史数据的保存与完整读回、记录完整性检查，以及持久库存和核算证据的连接。目标是让后续运维判断依据可检查的数据，而不是默认系统处于健康状态。",
+          "定向本地场景检查目录变化、不完整记录及存储数据与描述不一致等情况。存在疑问或冲突的材料继续保留待查，不会被静默提升为已接受结果。",
+          "这些工作属于网络研发，不构成独立全球验证者部署、公开主网上线或生产验收。跨地区恢复、真实数据源接线、资源验收和持续运行测试仍是分别推进的里程碑。"
+        ],
+        "facts": [
+          "11月1日记录覆盖本地持久数据完整性与库存核算工作。",
+          "检查按各项改动分别记录，不等于完整网络验收套件。",
+          "生产验收与持续运行验证仍待完成。"
+        ],
+        "status": "本地网络工程进展，本次没有宣布主网、全球节点数量或独立运营方里程碑。",
+        "imageAlt": "呈现基础设施研发的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "网络研发介绍",
+            "url": "/astro-chain.html"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "small-on-device-ai-research-20261101",
+    "title": "Exploring Small On-Device AI Through Memory, Tools and Reusable Skills",
+    "dek": "An early research direction asks how a compact mobile model could become more useful by retrieving evidence and reusing tested procedures.",
+    "type": "Research Note",
+    "section": "Protocol",
+    "project": "AI Safety Research",
+    "phase": "Research direction",
+    "phaseTone": "planned",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/research-studio-1024.webp",
+    "imageWidth": 1024,
+    "imageHeight": 683,
+    "imageAlt": "Concept illustration of a collaborative technology research studio.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "Our recent research discussions explore a phone-based assistant built around a small local model, a source-aware memory store, bounded tools and measurable task outcomes. The focus is practical usefulness under limited memory, power and storage budgets.",
+      "One proposed experiment compares a base model, a model with retrieval, and a model with retrieval plus tested reusable skills. Candidate tasks include document comparison, structured information extraction and file organization in a restricted test environment.",
+      "The central question is whether these additions improve success on unfamiliar tasks without increasing unsafe actions or excessive resource use. This is a research proposal: a growing knowledge store is not proof that model weights or general reasoning ability have improved, and no new phone AI product is being released in this announcement."
+    ],
+    "facts": [
+      "The direction was discussed in late-October project research conversations.",
+      "Proposed evaluation includes unseen tasks, success rate, resource use and human intervention.",
+      "No on-device performance result or autonomous-learning breakthrough is claimed."
+    ],
+    "status": "Early research and experiment design; implementation and physical-device evaluation remain future work.",
+    "links": [
+      {
+        "label": "AI coexistence research",
+        "url": "/ai-coexistence.html"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "探索手机端小型 AI：记忆、工具与可复用技能",
+        "dek": "早期研究关注：如何让小型移动模型通过查找证据、复用经过测试的方法，逐步提升实用性。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "近期研究讨论探索由小型本地模型、带来源的记忆库、受限工具和可衡量任务结果组成的手机助手，重点是在有限内存、电量和存储预算下提供实际帮助。",
+          "一项拟议实验比较基础模型、加入检索的模型，以及加入检索与已验证技能的模型。候选任务包括受限测试环境中的文档比较、结构化信息提取和文件整理。",
+          "核心问题是：这些能力能否提高陌生任务的成功率，同时控制错误操作与资源使用。这仍是研究方案；知识库变大并不证明模型参数或通用推理能力提升，本次也没有发布新的手机 AI 产品。"
+        ],
+        "facts": [
+          "该方向来自10月下旬项目研究讨论。",
+          "拟议评估包含未见任务、成功率、资源消耗与人工介入。",
+          "不宣称已取得手机性能结果或自主学习突破。"
+        ],
+        "status": "当前为早期研究与实验设计，具体实现和物理设备评估仍是后续工作。",
+        "imageAlt": "协作式技术研究空间的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "AI 共存研究",
+            "url": "/ai-coexistence.html"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "quantitative-engineering-replay-research-20261101",
+    "title": "Simulation-First Execution Research: Receipts, Replay and Recovery",
+    "dek": "Separate quantitative-engineering experiments examine how to preserve original execution intent and reconcile uncertain outcomes.",
+    "type": "Research Update",
+    "section": "Engineering",
+    "project": "Quantitative Research",
+    "phase": "Offline experiment",
+    "phaseTone": "planned",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/research-studio-1024.webp",
+    "imageWidth": 1024,
+    "imageHeight": 683,
+    "imageAlt": "Concept illustration of a collaborative technology research studio.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "Our separate quantitative research project is investigating durable execution records, receipt handling and bounded retry behavior. Recent offline cases examine how an original intent can be preserved while an uncertain result is checked.",
+      "The work treats recovery as an engineering problem: keep the evidence needed to distinguish a pending operation, an acknowledged result and a genuinely new instruction. Local experiment records are not substituted for exchange confirmation or financial finality.",
+      "The November 1 release gate still classifies the work as experiment-only. Complete recovery, product integration and real-account acceptance remain unfinished. These findings are being used to refine future tests; this is not a trading-service launch, a performance result or a return forecast."
+    ],
+    "facts": [
+      "November 1 release gate: experiment-only and not accepted for product release.",
+      "Receipt and retry cases were examined offline.",
+      "Real-account acceptance and financial finality are not verified."
+    ],
+    "status": "An offline engineering experiment in a separate project; no live-trading availability or investment result is announced.",
+    "links": [
+      {
+        "label": "Project context",
+        "url": "/professional.html"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "量化工程以模拟为先：回执、重放与恢复研究",
+        "dek": "独立量化工程实验研究如何保留原始执行意图，并核对结果不确定的操作。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "独立的量化研究项目正在检查持久执行记录、回执处理和有限次数的重试。近期离线场景关注：在核对不确定结果时，如何继续保留原始业务意图。",
+          "恢复机制需要保留证据，区分待确认操作、已经确认的结果与真正的新指令。本地实验记录不能替代交易所确认或资金最终到账证明。",
+          "11月1日的发布门槛仍将这项工作列为仅限实验；完整恢复、产品接线与真实账户验收尚未完成。研究结果用于完善后续测试，本次不构成交易服务发布、业绩展示或收益预测。"
+        ],
+        "facts": [
+          "11月1日发布门槛：仅限实验，未接受为产品发布。",
+          "回执和重试场景在离线环境检查。",
+          "真实账户验收与资金最终性尚未验证。"
+        ],
+        "status": "独立项目的离线工程实验，不宣布实盘服务开放或投资结果。",
+        "imageAlt": "协作式技术研究空间的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "项目背景",
+            "url": "/professional.html"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "astrobridge-developer-conversations-20261101",
+    "title": "AstroBridge Shares Practical SDK Lessons with Developer Communities",
+    "dek": "Recent public technical exchanges focus on version control, network identity and the difference between request timeouts and transaction outcomes.",
+    "type": "Community Update",
+    "section": "Institution",
+    "project": "AstroBridge",
+    "phase": "Public technical discussion",
+    "phaseTone": "verified",
+    "date": "2026-11-01",
+    "displayDate": "November 1, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/news-20261021/02-astrobridge-foundation-concept.png",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "imageAlt": "Concept artwork illustrating infrastructure development.",
+    "imageCaption": "Existing concept artwork used as an editorial illustration; not a product screenshot or operating-node map.",
+    "body": [
+      "AstroBridge is developing its technical community through concrete implementation discussions. A November 1 exchange on a TRON SDK thread covered version pinning, configuration checks and the distinction between an HTTP request timing out and a signed transaction reaching its validity limit.",
+      "These discussions complement internal engineering reviews of receipts, retry boundaries and evidence freshness. We aim to ask precise questions and contribute useful implementation detail while distinguishing a suggested approach from a capability already implemented in our products.",
+      "AstroBridge’s wider direction remains a multichain non-custodial intent and API framework. A particular swap catalog describes only that catalog’s scope. Public replies and technical conversations are community activity; they do not establish partnerships, endorsements or customer deployments."
+    ],
+    "facts": [
+      "A November 1 public reply is recorded with its own visible post URL.",
+      "The discussion concerns practical SDK behavior, not a partner announcement.",
+      "Multichain capability is assessed per operation and evidence stage."
+    ],
+    "status": "Documented public community activity; no partnership, endorsement or adoption figure is claimed.",
+    "links": [
+      {
+        "label": "Read the public technical reply",
+        "url": "https://x.com/Astro___Channel/status/2116736024898404366"
+      },
+      {
+        "label": "AstroBridge on X",
+        "url": "https://x.com/Astro___Channel"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "AstroBridge 与开发者社区交流 SDK 实践经验",
+        "dek": "近期公开技术交流关注版本固定、网络身份，以及请求超时和交易结果之间的区别。",
+        "displayDate": "2026年11月1日",
+        "body": [
+          "AstroBridge 正通过具体实现问题参与开发者技术社区。11月1日，一次 TRON SDK 讨论涉及版本固定、配置核对，以及 HTTP 请求超时与签名交易有效期结束之间的区别。",
+          "这些交流与内部对回执、重试边界和证据时效的检查相互补充。我们希望提出准确的问题、分享有用的实现细节，并区分建议方案与产品已经实现的能力。",
+          "AstroBridge 的整体方向仍是广泛多链的非托管意图与 API 框架，某个兑换目录只代表该目录本身的范围。公开回复和技术讨论属于社区活动，不据此宣布合作伙伴、背书或客户部署。"
+        ],
+        "facts": [
+          "11月1日的一次公开回复已记录独立帖子链接。",
+          "内容是 SDK 实践讨论，不是合作公告。",
+          "多链能力按具体操作与证据阶段分别判断。"
+        ],
+        "status": "有公开记录的社区技术活动，不宣称合作、背书或用户增长数字。",
+        "imageAlt": "呈现基础设施研发的概念插画。",
+        "imageCaption": "沿用官网概念插画，用于编辑配图；不代表软件截图或实际运行节点。",
+        "links": [
+          {
+            "label": "查看公开技术回复",
+            "url": "https://x.com/Astro___Channel/status/2116736024898404366"
+          },
+          {
+            "label": "AstroBridge 的 X 账号",
+            "url": "https://x.com/Astro___Channel"
+          }
+        ]
+      }
+    }
+  },
+  {
     "slug": "ma-stay-close-to-mom-20261026",
     "title": "Stay Close to Mom, Wherever Life Takes You",
     "dek": "Across cities and borders, a simple message can mean everything. MA brings us closer to our mothers, our families, and the people we love.",
@@ -536,241 +1058,240 @@ window.ASTRO_ARTICLES = [
         "url": "/data/company-actions-2026-10-08.json"
       }
     ]
-  }
-,
-{
-  "slug": "astrobridge-swap-server-verification-20261006",
-  "title": "AstroBridge Advances Swap Quote Reliability and Client Integration Readiness",
-  "dek": "An October 3 engineering review verified a targeted LI.FI quote repair, recorded a current-state backup and delivered the next integration checklist to the MA client team.",
-  "type": "Engineering Update",
-  "section": "Engineering",
-  "project": "AstroBridge",
-  "phase": "Server verified; client acceptance pending",
-  "phaseTone": "active",
-  "date": "2026-10-06",
-  "displayDate": "October 6, 2026",
-  "byline": "AstroBridge Engineering",
-  "image": "/assets/news-astrobridge.png",
-  "body": [
-    "AstroBridge has completed a focused verification of its swap-quote server work and prepared a handoff for the MA client team. The October 3 review recorded a successful public LI.FI quote response and 68 passing local regression checks. A new public readiness check on October 6 continues to report swap quote readiness and LI.FI as the provider.",
-    "The repair addresses an optional API-key file: if that file is absent, the server can use the provider's public quote route. Other file-reading errors remain failures. The review records unchanged chain and asset restrictions, with six EVM networks in the swap allowlist. A quote prepares transaction information for review; authorization and signing remain with the user's wallet.",
-    "The engineering review also recorded a restricted backup of the current production code, configuration and relevant data. This snapshot was taken after the earlier upgrade had loaded, so it preserves the then-current state rather than demonstrating a pre-upgrade recovery point. Future release work is to include backups before the scoped change.",
-    "The next client handoff prioritizes Android compatibility in the hosted-voice JWKS flow, followed by temporary ICE credentials, device registration for incoming-call notifications and a recorded two-device acceptance run. The voice-room capacity setting alone does not establish concurrent device capacity, and server readiness does not establish successful mobile calling.",
-    "This work supports a practical development direction: improve a specific service, record its limits and pass an actionable integration checklist to the next team. The October 6 readiness response still marks client integration and real-device acceptance for call push as incomplete. No completed chain transfer, general mobile release or production voice-capacity result is announced."
-  ],
-  "facts": [
-    "October 3 review: successful public LI.FI quote response; no transaction broadcast.",
-    "68 local regression checks passed in the recorded review.",
-    "October 6 public readiness: swap quoteReady=true; provider=LI.FI.",
-    "Call-push client integration and real-device acceptance remain incomplete."
-  ],
-  "status": "Dated server and local-test evidence. Quote readiness is not completed settlement or acceptance of every mobile feature.",
-  "links": [
-    {
-      "label": "Dated public progress record",
-      "url": "/data/company-actions-2026-10-06.json"
-    },
-    {
-      "label": "Current integration readiness",
-      "url": "https://api.astrochannel.one/api/integrations/readiness"
-    }
-  ]
-},
-{
-  "slug": "ma-mothers-care-email-outreach-progress-20261006",
-  "title": "MA Mothers Care Moves Forward with Focused, Email-Based Cooperation Enquiries",
-  "dek": "AstroBridge has followed up on relevant responses to its proposed mother-and-child assistance pilot, with practical participation options and a clear written record.",
-  "type": "Company Update",
-  "section": "Institution",
-  "project": "MA",
-  "phase": "Exploratory outreach",
-  "phaseTone": "planned",
-  "date": "2026-10-06",
-  "displayDate": "October 6, 2026",
-  "byline": "AstroBridge Company Office",
-  "image": "/assets/news-ma.png",
-  "body": [
-    "AstroBridge is continuing its MA Mothers Care outreach through email. The proposed pilot brings together mother-and-child essentials and accessible digital-safety education. Its published brief gives potential participants a concrete starting point for discussing feasibility, community needs and an appropriate contribution.",
-    "On October 4, the company sent four individual responses arising from its recent correspondence. These continued an enquiry about an internal social-impact channel, routed a proposal to a contact supplied by a service team, answered a separate stablecoin product enquiry with a request for email discussion, and thanked an organization that declined the current proposal. The product enquiry and humanitarian proposal remain separate matters.",
-    "Our approach is to make the request useful and voluntary: explain the proposed activity, answer questions in writing and respect an organization's decision. Current cooperation discussions are being conducted by email. There is no expectation that a recipient must donate, sign a statement or endorse a token simply to explore whether a role is suitable.",
-    "The indicative first pilot would cover 20–50 families in one locality. Location, dates, a qualified delivery partner and a cash budget remain unconfirmed. The wider Mother Fund is associated with the MA cryptocurrency; its proposed allocation is not a verified cash balance. AstroBridge is not presenting this company initiative as a registered charity.",
-    "As of the October 6 mailbox review, the follow-ups had not produced a new substantive acceptance. Automatic receipts and contact-routing messages are recorded as such. Any future participation, public joint statement or use of a participant's name or logo would need its own written agreement. Public beneficiary applications and fundraising are not opened by this update."
-  ],
-  "facts": [
-    "Four individual follow-up messages verified as sent on October 4, Beijing time.",
-    "Current cooperation correspondence is email-only.",
-    "October 6 review found no new substantive acceptance of the follow-ups.",
-    "Pilot location, delivery partner, dates and cash budget remain unconfirmed."
-  ],
-  "status": "Planning-stage company initiative and exploratory correspondence. No signed partnership, approved partner logo, funding commitment or completed aid delivery is announced.",
-  "links": [
-    {
-      "label": "MA Mothers Care pilot brief",
-      "url": "/ma-mothers-care-pilot.html"
-    },
-    {
-      "label": "Company information",
-      "url": "/company.html"
-    },
-    {
-      "label": "Dated public progress record",
-      "url": "/data/company-actions-2026-10-06.json"
-    }
-  ]
-},
-{
-  "slug": "astrobridge-website-search-visibility-20261006",
-  "title": "AstroBridge Website Begins Recording Google Search Visibility",
-  "dek": "A Search Console notification marks an early discoverability milestone for the company's public website and evidence-led updates.",
-  "type": "Company Update",
-  "section": "Institution",
-  "project": "Institution",
-  "phase": "Search visibility recorded",
-  "phaseTone": "verified",
-  "date": "2026-10-06",
-  "displayDate": "October 6, 2026",
-  "byline": "AstroBridge Company Office",
-  "image": "/assets/news-astrobridge.png",
-  "body": [
-    "AstroBridge has received a Google Search Console notification for www.astrochannel.one confirming that search-impression collection began on October 2. The notification, dated October 5, says pages from the website have started appearing for some Google searches.",
-    "This is an early discoverability milestone for the company's public work. The website brings together company information, product and engineering updates, policy documents and the proposed MA Mothers Care pilot, giving readers a place to check the scope and current status of each activity.",
-    "The next website work is to review the queries and pages that receive impressions and use those observations to improve clarity, navigation and access to relevant records. The notice does not provide a verified audience count, search ranking, click total or conversion result; those measurements require a separate review of the actual reports.",
-    "AstroBridge's long-term company direction is to grow through useful products, clear communication and sustained execution. Search visibility is one step in making that work easier to find. This update records a website notification, not a Google partnership, certification or endorsement."
-  ],
-  "facts": [
-    "Search Console notice received October 5, 2026.",
-    "Notice identifies October 2 as the start of search-impression collection.",
-    "The notice concerns www.astrochannel.one.",
-    "No traffic total, ranking or conversion metric has been verified for this update."
-  ],
-  "status": "Company-reported website notification. Search visibility does not establish endorsement, user adoption or commercial results.",
-  "links": [
-    {
-      "label": "Company information",
-      "url": "/company.html"
-    },
-    {
-      "label": "Official newsroom",
-      "url": "/newsroom.html"
-    },
-    {
-      "label": "Dated public progress record",
-      "url": "/data/company-actions-2026-10-06.json"
-    }
-  ]
-},
-{
-  "slug": "ma-android-fcm-server-foundation-20260928",
-  "title": "AstroBridge Deploys the Server Foundation for MA Android Offline Calls",
-  "dek": "A scoped server upgrade adds durable call-push processing and staged access controls. FCM delivery remains disabled pending Firebase setup, Android integration and device acceptance.",
-  "type": "Engineering Update",
-  "section": "Engineering",
-  "project": "AstroBridge",
-  "phase": "Foundation deployed; activation pending",
-  "phaseTone": "active",
-  "date": "2026-09-28",
-  "displayDate": "September 28, 2026",
-  "byline": "AstroBridge Engineering",
-  "image": "/assets/news-ma.png",
-  "body": [
-    "AstroBridge has deployed the Android call-push foundation for MA and MA full. The update prepares a separate delivery path for incoming-call events when an Android client is not connected in the foreground. It does not yet enable Firebase Cloud Messaging delivery or announce a completed offline-calling release.",
-    "The server code includes durable Redis queue processing, worker heartbeat reporting, encrypted device-token storage and package-specific FCM HTTP v1 sending support. Wallet-signed requests, notification preferences, peer allow and block controls, request limits, duplicate-call protection and call expiry provide controls for staged testing.",
-    "Three access modes are implemented: disabled, allowlist and public-authenticated. The deployed service remains disabled with public rollout at zero. Firebase configuration, the Android client integration and a recorded two-device acceptance run are still required before an allowlisted trial and any subsequent small public rollout.",
-    "The deployment was limited to the call-push components. Forty-three published files were checked against their local SHA-256 hashes, with matching results. The release record also confirms that nine unrelated managed processes retained their process identities, statuses and restart counts. Existing production configuration and historical data were preserved, and rollback files were retained.",
-    "Verification passed 56 local regression tests, 48 tests in the server candidate suite and 12 isolated Redis checks on the server. Four local crash-recovery checks and six deployment/rollback simulation checks also passed. These checks are internal engineering evidence; no production rollback drill or successful phone delivery is inferred from them.",
-    "At publication, public readiness reports durable Redis connectivity and a fresh worker heartbeat, while FCM configuration, client integration and real-device acceptance remain incomplete. The next acceptance run must cover background and lock-screen calls, supported process-termination scenarios, answering, rejection, cancellation and timeout. Garden checkout and NFT authorization remain disabled."
-  ],
-  "facts": [
-    "43 published files match the local release by SHA-256.",
-    "56 local regression tests and 48 server candidate tests passed.",
-    "12 isolated server Redis checks passed.",
-    "FCM sending is disabled; client and real-device acceptance are pending."
-  ],
-  "status": "Server foundation deployed. This is not an offline-call launch, Google Play approval, global delivery guarantee or proof that Android background disconnection has been fixed.",
-  "links": [
-    {
-      "label": "Dated public release record",
-      "url": "/data/fcm-foundation-2026-09-28.json"
-    },
-    {
-      "label": "Current integration readiness",
-      "url": "https://api.astrochannel.one/api/integrations/readiness"
-    }
-  ]
-},
-{
-  "slug": "ma-android-dual-device-engineering-review-20260927",
-  "title": "MA and MA full Complete a New Round of Android Device Checks",
-  "dek": "The September 27 review records foreground messaging and voice-call progress, while background delivery and mobile web connectivity remain acceptance blockers.",
-  "type": "Engineering Update",
-  "section": "Engineering",
-  "project": "MA",
-  "phase": "Device review; blockers open",
-  "phaseTone": "active",
-  "date": "2026-09-27",
-  "displayDate": "September 27, 2026",
-  "byline": "AstroBridge Engineering",
-  "image": "/assets/news-ma.png",
-  "body": [
-    "MA and MA full version 1.6.12, build 37, were reviewed on an Android phone and tablet on September 27. Both editions installed and launched on both devices. The review captured an English friend-request flow, acceptance acknowledgements and bidirectional foreground messages.",
-    "The foreground voice-call check showed an incoming-call interface, answering, a connected state and an approximately five-minute session with active microphone access. Acoustic quality was not measured, and this observation does not establish video, group-call capacity or reliability across other networks.",
-    "Localization work made historical call summaries render from language-neutral metadata and corrected an English transfer label. Seven-language resource checks and tablet language switching were recorded. The later dual-device review still found a chat timestamp and several game accessibility labels that needed localization work; these results do not amount to a complete native-language editorial review.",
-    "The dual-device review reported a conditional fail overall. Background message notifications and incoming-call alerts did not arrive in the tested scenarios. One message appeared after the app returned to the foreground, demonstrating catch-up in that case rather than real-time background delivery. Some in-app MA web pages also encountered connection-reset errors on a tested device.",
-    "These findings inform the server call-push work and the next client acceptance cycle. Thirty-five automated regression groups completed successfully in the recorded review, but passing automated checks does not close the observed device blockers. No live-fund transfer, cross-chain settlement, Google Play approval or iOS acceptance is announced by this update."
-  ],
-  "facts": [
-    "Tested builds: MA and MA full 1.6.12 (37).",
-    "35 automated regression groups completed successfully in the recorded review.",
-    "Foreground bidirectional messaging and a connected voice session were observed.",
-    "Overall device-review verdict: conditional fail; background delivery remained blocked."
-  ],
-  "status": "Dated internal review of specific builds and scenarios, not a current claim that all defects are resolved or that the applications are generally released.",
-  "links": [
-    {
-      "label": "Public device-review summary",
-      "url": "/data/ma-device-review-2026-09-27.json"
-    },
-    {
-      "label": "MA privacy policy",
-      "url": "/ma-privacy.html"
-    }
-  ]
-},
-{
-  "slug": "astrobridge-multichain-code-inventory-20260926",
-  "title": "AstroBridge Documents Its Multi-Chain Architecture Across 47 Network Groups",
-  "dek": "A backend source review records 47 network-labeled RPC groups and 163 configured URL entries, with a roadmap from broad integration coverage to reproducible per-chain execution evidence.",
-  "type": "Engineering Update",
-  "section": "Engineering",
-  "project": "AstroBridge",
-  "phase": "Source inventory reviewed",
-  "phaseTone": "active",
-  "date": "2026-09-26",
-  "displayDate": "September 26, 2026",
-  "byline": "AstroBridge Engineering",
-  "image": "/assets/news-astrobridge.png",
-  "body": [
-    "AstroBridge has developed a broad multi-chain integration layout in its backend. An internal source review dated September 26, 2026 identifies 47 network-labeled groups in its RPC pool, plus two auxiliary groups named SUPER and EDGE. Together, these contain 163 configured URL entries. The inventory documents source coverage; it does not count independently operated servers or establish that every endpoint is currently available.",
-    "The configured network groups include Ethereum, BNB Smart Chain, Polygon, Avalanche, Arbitrum, Optimism, Base, Scroll, Linea, zkSync, Manta, Core, Ronin and Rootstock, among others. Some entries refer to different protocol families or historical network names. Compatibility must therefore be assessed against each network’s current protocol and deployment state.",
-    "This backend scope is broader than any one mobile screen or swap product. The core CHAIN_CONFIG table contains 12 entries, including mainnet, testnet and non-EVM adapter configurations. A separate swap API allowlist contains six networks. These inventories describe different integration layers and must not be added together as a count of fully supported chains.",
-    "The backend contains EVM transaction submission and receipt-handling code, alongside non-EVM adapter entry points. Several non-EVM execution methods in the inspected snapshot still return placeholder identifiers. A protocol label or configured endpoint therefore cannot, by itself, establish signed execution or completed cross-chain settlement.",
-    "The next engineering priorities are a unified capability registry, explicit chain-ID checks, bounded failover within the requested network, and reproducible per-chain acceptance records. Unknown or unsupported requests should be rejected rather than silently redirected to another network. Cross-chain acceptance records should include both the source transaction and destination receipt.",
-    "AstroBridge’s development direction is a non-custodial intent network that helps wallets, applications and agents integrate with multiple chains through consistent authorization, routing and execution records. Broad source coverage is the foundation; repeatable reliability and a useful developer experience are the next milestones."
-  ],
-  "facts": [
-    "47 network-labeled RPC groups plus 2 auxiliary groups in the inspected source.",
-    "163 configured URL entries: 121 in network groups and 42 in auxiliary groups.",
-    "12 core chain configuration entries and a separate 6-network swap allowlist.",
-    "Dated source hashes and the full group inventory accompany this internal review."
-  ],
-  "status": "Internal source capability review dated September 26. Configured network labels are not proof of live availability, universal execution, independent security certification or a measured performance benchmark.",
-  "links": [
-    {
-      "label": "Dated source inventory and review limits",
-      "url": "/data/multichain-layout-2026-09-26.json"
-    }
-  ]
-},
+  },
+  {
+    "slug": "astrobridge-swap-server-verification-20261006",
+    "title": "AstroBridge Advances Swap Quote Reliability and Client Integration Readiness",
+    "dek": "An October 3 engineering review verified a targeted LI.FI quote repair, recorded a current-state backup and delivered the next integration checklist to the MA client team.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "AstroBridge",
+    "phase": "Server verified; client acceptance pending",
+    "phaseTone": "active",
+    "date": "2026-10-06",
+    "displayDate": "October 6, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-astrobridge.png",
+    "body": [
+      "AstroBridge has completed a focused verification of its swap-quote server work and prepared a handoff for the MA client team. The October 3 review recorded a successful public LI.FI quote response and 68 passing local regression checks. A new public readiness check on October 6 continues to report swap quote readiness and LI.FI as the provider.",
+      "The repair addresses an optional API-key file: if that file is absent, the server can use the provider's public quote route. Other file-reading errors remain failures. The review records unchanged chain and asset restrictions, with six EVM networks in the swap allowlist. A quote prepares transaction information for review; authorization and signing remain with the user's wallet.",
+      "The engineering review also recorded a restricted backup of the current production code, configuration and relevant data. This snapshot was taken after the earlier upgrade had loaded, so it preserves the then-current state rather than demonstrating a pre-upgrade recovery point. Future release work is to include backups before the scoped change.",
+      "The next client handoff prioritizes Android compatibility in the hosted-voice JWKS flow, followed by temporary ICE credentials, device registration for incoming-call notifications and a recorded two-device acceptance run. The voice-room capacity setting alone does not establish concurrent device capacity, and server readiness does not establish successful mobile calling.",
+      "This work supports a practical development direction: improve a specific service, record its limits and pass an actionable integration checklist to the next team. The October 6 readiness response still marks client integration and real-device acceptance for call push as incomplete. No completed chain transfer, general mobile release or production voice-capacity result is announced."
+    ],
+    "facts": [
+      "October 3 review: successful public LI.FI quote response; no transaction broadcast.",
+      "68 local regression checks passed in the recorded review.",
+      "October 6 public readiness: swap quoteReady=true; provider=LI.FI.",
+      "Call-push client integration and real-device acceptance remain incomplete."
+    ],
+    "status": "Dated server and local-test evidence. Quote readiness is not completed settlement or acceptance of every mobile feature.",
+    "links": [
+      {
+        "label": "Dated public progress record",
+        "url": "/data/company-actions-2026-10-06.json"
+      },
+      {
+        "label": "Current integration readiness",
+        "url": "https://api.astrochannel.one/api/integrations/readiness"
+      }
+    ]
+  },
+  {
+    "slug": "ma-mothers-care-email-outreach-progress-20261006",
+    "title": "MA Mothers Care Moves Forward with Focused, Email-Based Cooperation Enquiries",
+    "dek": "AstroBridge has followed up on relevant responses to its proposed mother-and-child assistance pilot, with practical participation options and a clear written record.",
+    "type": "Company Update",
+    "section": "Institution",
+    "project": "MA",
+    "phase": "Exploratory outreach",
+    "phaseTone": "planned",
+    "date": "2026-10-06",
+    "displayDate": "October 6, 2026",
+    "byline": "AstroBridge Company Office",
+    "image": "/assets/news-ma.png",
+    "body": [
+      "AstroBridge is continuing its MA Mothers Care outreach through email. The proposed pilot brings together mother-and-child essentials and accessible digital-safety education. Its published brief gives potential participants a concrete starting point for discussing feasibility, community needs and an appropriate contribution.",
+      "On October 4, the company sent four individual responses arising from its recent correspondence. These continued an enquiry about an internal social-impact channel, routed a proposal to a contact supplied by a service team, answered a separate stablecoin product enquiry with a request for email discussion, and thanked an organization that declined the current proposal. The product enquiry and humanitarian proposal remain separate matters.",
+      "Our approach is to make the request useful and voluntary: explain the proposed activity, answer questions in writing and respect an organization's decision. Current cooperation discussions are being conducted by email. There is no expectation that a recipient must donate, sign a statement or endorse a token simply to explore whether a role is suitable.",
+      "The indicative first pilot would cover 20–50 families in one locality. Location, dates, a qualified delivery partner and a cash budget remain unconfirmed. The wider Mother Fund is associated with the MA cryptocurrency; its proposed allocation is not a verified cash balance. AstroBridge is not presenting this company initiative as a registered charity.",
+      "As of the October 6 mailbox review, the follow-ups had not produced a new substantive acceptance. Automatic receipts and contact-routing messages are recorded as such. Any future participation, public joint statement or use of a participant's name or logo would need its own written agreement. Public beneficiary applications and fundraising are not opened by this update."
+    ],
+    "facts": [
+      "Four individual follow-up messages verified as sent on October 4, Beijing time.",
+      "Current cooperation correspondence is email-only.",
+      "October 6 review found no new substantive acceptance of the follow-ups.",
+      "Pilot location, delivery partner, dates and cash budget remain unconfirmed."
+    ],
+    "status": "Planning-stage company initiative and exploratory correspondence. No signed partnership, approved partner logo, funding commitment or completed aid delivery is announced.",
+    "links": [
+      {
+        "label": "MA Mothers Care pilot brief",
+        "url": "/ma-mothers-care-pilot.html"
+      },
+      {
+        "label": "Company information",
+        "url": "/company.html"
+      },
+      {
+        "label": "Dated public progress record",
+        "url": "/data/company-actions-2026-10-06.json"
+      }
+    ]
+  },
+  {
+    "slug": "astrobridge-website-search-visibility-20261006",
+    "title": "AstroBridge Website Begins Recording Google Search Visibility",
+    "dek": "A Search Console notification marks an early discoverability milestone for the company's public website and evidence-led updates.",
+    "type": "Company Update",
+    "section": "Institution",
+    "project": "Institution",
+    "phase": "Search visibility recorded",
+    "phaseTone": "verified",
+    "date": "2026-10-06",
+    "displayDate": "October 6, 2026",
+    "byline": "AstroBridge Company Office",
+    "image": "/assets/news-astrobridge.png",
+    "body": [
+      "AstroBridge has received a Google Search Console notification for www.astrochannel.one confirming that search-impression collection began on October 2. The notification, dated October 5, says pages from the website have started appearing for some Google searches.",
+      "This is an early discoverability milestone for the company's public work. The website brings together company information, product and engineering updates, policy documents and the proposed MA Mothers Care pilot, giving readers a place to check the scope and current status of each activity.",
+      "The next website work is to review the queries and pages that receive impressions and use those observations to improve clarity, navigation and access to relevant records. The notice does not provide a verified audience count, search ranking, click total or conversion result; those measurements require a separate review of the actual reports.",
+      "AstroBridge's long-term company direction is to grow through useful products, clear communication and sustained execution. Search visibility is one step in making that work easier to find. This update records a website notification, not a Google partnership, certification or endorsement."
+    ],
+    "facts": [
+      "Search Console notice received October 5, 2026.",
+      "Notice identifies October 2 as the start of search-impression collection.",
+      "The notice concerns www.astrochannel.one.",
+      "No traffic total, ranking or conversion metric has been verified for this update."
+    ],
+    "status": "Company-reported website notification. Search visibility does not establish endorsement, user adoption or commercial results.",
+    "links": [
+      {
+        "label": "Company information",
+        "url": "/company.html"
+      },
+      {
+        "label": "Official newsroom",
+        "url": "/newsroom.html"
+      },
+      {
+        "label": "Dated public progress record",
+        "url": "/data/company-actions-2026-10-06.json"
+      }
+    ]
+  },
+  {
+    "slug": "ma-android-fcm-server-foundation-20260928",
+    "title": "AstroBridge Deploys the Server Foundation for MA Android Offline Calls",
+    "dek": "A scoped server upgrade adds durable call-push processing and staged access controls. FCM delivery remains disabled pending Firebase setup, Android integration and device acceptance.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "AstroBridge",
+    "phase": "Foundation deployed; activation pending",
+    "phaseTone": "active",
+    "date": "2026-09-28",
+    "displayDate": "September 28, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-ma.png",
+    "body": [
+      "AstroBridge has deployed the Android call-push foundation for MA and MA full. The update prepares a separate delivery path for incoming-call events when an Android client is not connected in the foreground. It does not yet enable Firebase Cloud Messaging delivery or announce a completed offline-calling release.",
+      "The server code includes durable Redis queue processing, worker heartbeat reporting, encrypted device-token storage and package-specific FCM HTTP v1 sending support. Wallet-signed requests, notification preferences, peer allow and block controls, request limits, duplicate-call protection and call expiry provide controls for staged testing.",
+      "Three access modes are implemented: disabled, allowlist and public-authenticated. The deployed service remains disabled with public rollout at zero. Firebase configuration, the Android client integration and a recorded two-device acceptance run are still required before an allowlisted trial and any subsequent small public rollout.",
+      "The deployment was limited to the call-push components. Forty-three published files were checked against their local SHA-256 hashes, with matching results. The release record also confirms that nine unrelated managed processes retained their process identities, statuses and restart counts. Existing production configuration and historical data were preserved, and rollback files were retained.",
+      "Verification passed 56 local regression tests, 48 tests in the server candidate suite and 12 isolated Redis checks on the server. Four local crash-recovery checks and six deployment/rollback simulation checks also passed. These checks are internal engineering evidence; no production rollback drill or successful phone delivery is inferred from them.",
+      "At publication, public readiness reports durable Redis connectivity and a fresh worker heartbeat, while FCM configuration, client integration and real-device acceptance remain incomplete. The next acceptance run must cover background and lock-screen calls, supported process-termination scenarios, answering, rejection, cancellation and timeout. Garden checkout and NFT authorization remain disabled."
+    ],
+    "facts": [
+      "43 published files match the local release by SHA-256.",
+      "56 local regression tests and 48 server candidate tests passed.",
+      "12 isolated server Redis checks passed.",
+      "FCM sending is disabled; client and real-device acceptance are pending."
+    ],
+    "status": "Server foundation deployed. This is not an offline-call launch, Google Play approval, global delivery guarantee or proof that Android background disconnection has been fixed.",
+    "links": [
+      {
+        "label": "Dated public release record",
+        "url": "/data/fcm-foundation-2026-09-28.json"
+      },
+      {
+        "label": "Current integration readiness",
+        "url": "https://api.astrochannel.one/api/integrations/readiness"
+      }
+    ]
+  },
+  {
+    "slug": "ma-android-dual-device-engineering-review-20260927",
+    "title": "MA and MA full Complete a New Round of Android Device Checks",
+    "dek": "The September 27 review records foreground messaging and voice-call progress, while background delivery and mobile web connectivity remain acceptance blockers.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "MA",
+    "phase": "Device review; blockers open",
+    "phaseTone": "active",
+    "date": "2026-09-27",
+    "displayDate": "September 27, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-ma.png",
+    "body": [
+      "MA and MA full version 1.6.12, build 37, were reviewed on an Android phone and tablet on September 27. Both editions installed and launched on both devices. The review captured an English friend-request flow, acceptance acknowledgements and bidirectional foreground messages.",
+      "The foreground voice-call check showed an incoming-call interface, answering, a connected state and an approximately five-minute session with active microphone access. Acoustic quality was not measured, and this observation does not establish video, group-call capacity or reliability across other networks.",
+      "Localization work made historical call summaries render from language-neutral metadata and corrected an English transfer label. Seven-language resource checks and tablet language switching were recorded. The later dual-device review still found a chat timestamp and several game accessibility labels that needed localization work; these results do not amount to a complete native-language editorial review.",
+      "The dual-device review reported a conditional fail overall. Background message notifications and incoming-call alerts did not arrive in the tested scenarios. One message appeared after the app returned to the foreground, demonstrating catch-up in that case rather than real-time background delivery. Some in-app MA web pages also encountered connection-reset errors on a tested device.",
+      "These findings inform the server call-push work and the next client acceptance cycle. Thirty-five automated regression groups completed successfully in the recorded review, but passing automated checks does not close the observed device blockers. No live-fund transfer, cross-chain settlement, Google Play approval or iOS acceptance is announced by this update."
+    ],
+    "facts": [
+      "Tested builds: MA and MA full 1.6.12 (37).",
+      "35 automated regression groups completed successfully in the recorded review.",
+      "Foreground bidirectional messaging and a connected voice session were observed.",
+      "Overall device-review verdict: conditional fail; background delivery remained blocked."
+    ],
+    "status": "Dated internal review of specific builds and scenarios, not a current claim that all defects are resolved or that the applications are generally released.",
+    "links": [
+      {
+        "label": "Public device-review summary",
+        "url": "/data/ma-device-review-2026-09-27.json"
+      },
+      {
+        "label": "MA privacy policy",
+        "url": "/ma-privacy.html"
+      }
+    ]
+  },
+  {
+    "slug": "astrobridge-multichain-code-inventory-20260926",
+    "title": "AstroBridge Documents Its Multi-Chain Architecture Across 47 Network Groups",
+    "dek": "A backend source review records 47 network-labeled RPC groups and 163 configured URL entries, with a roadmap from broad integration coverage to reproducible per-chain execution evidence.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "AstroBridge",
+    "phase": "Source inventory reviewed",
+    "phaseTone": "active",
+    "date": "2026-09-26",
+    "displayDate": "September 26, 2026",
+    "byline": "AstroBridge Engineering",
+    "image": "/assets/news-astrobridge.png",
+    "body": [
+      "AstroBridge has developed a broad multi-chain integration layout in its backend. An internal source review dated September 26, 2026 identifies 47 network-labeled groups in its RPC pool, plus two auxiliary groups named SUPER and EDGE. Together, these contain 163 configured URL entries. The inventory documents source coverage; it does not count independently operated servers or establish that every endpoint is currently available.",
+      "The configured network groups include Ethereum, BNB Smart Chain, Polygon, Avalanche, Arbitrum, Optimism, Base, Scroll, Linea, zkSync, Manta, Core, Ronin and Rootstock, among others. Some entries refer to different protocol families or historical network names. Compatibility must therefore be assessed against each network’s current protocol and deployment state.",
+      "This backend scope is broader than any one mobile screen or swap product. The core CHAIN_CONFIG table contains 12 entries, including mainnet, testnet and non-EVM adapter configurations. A separate swap API allowlist contains six networks. These inventories describe different integration layers and must not be added together as a count of fully supported chains.",
+      "The backend contains EVM transaction submission and receipt-handling code, alongside non-EVM adapter entry points. Several non-EVM execution methods in the inspected snapshot still return placeholder identifiers. A protocol label or configured endpoint therefore cannot, by itself, establish signed execution or completed cross-chain settlement.",
+      "The next engineering priorities are a unified capability registry, explicit chain-ID checks, bounded failover within the requested network, and reproducible per-chain acceptance records. Unknown or unsupported requests should be rejected rather than silently redirected to another network. Cross-chain acceptance records should include both the source transaction and destination receipt.",
+      "AstroBridge’s development direction is a non-custodial intent network that helps wallets, applications and agents integrate with multiple chains through consistent authorization, routing and execution records. Broad source coverage is the foundation; repeatable reliability and a useful developer experience are the next milestones."
+    ],
+    "facts": [
+      "47 network-labeled RPC groups plus 2 auxiliary groups in the inspected source.",
+      "163 configured URL entries: 121 in network groups and 42 in auxiliary groups.",
+      "12 core chain configuration entries and a separate 6-network swap allowlist.",
+      "Dated source hashes and the full group inventory accompany this internal review."
+    ],
+    "status": "Internal source capability review dated September 26. Configured network labels are not proof of live availability, universal execution, independent security certification or a measured performance benchmark.",
+    "links": [
+      {
+        "label": "Dated source inventory and review limits",
+        "url": "/data/multichain-layout-2026-09-26.json"
+      }
+    ]
+  },
   {
     "slug": "ma-android-security-release-candidate-20260926",
     "title": "MA and MA full Advance to a New Android Security Release Candidate",
@@ -812,316 +1333,373 @@ window.ASTRO_ARTICLES = [
     ]
   },
   {
-    slug: "building-open-infrastructure-in-public",
-    title: "Why We Are Building Astro Open Infrastructure in Public",
-    dek: "A founder’s note on turning separate products into an inspectable, non-custodial protocol framework.",
-    type: "Founder Note",
-    section: "Institution",
-    project: "Institution",
-    phase: "Published framework",
-    phaseTone: "verified",
-    date: "2026-07-26",
-    displayDate: "July 26, 2026",
-    byline: "Founder’s Office",
-    image: "/assets/news-astrobridge.png",
-    body: [
+    "slug": "building-open-infrastructure-in-public",
+    "title": "Why We Are Building Astro Open Infrastructure in Public",
+    "dek": "A founder’s note on turning separate products into an inspectable, non-custodial protocol framework.",
+    "type": "Founder Note",
+    "section": "Institution",
+    "project": "Institution",
+    "phase": "Published framework",
+    "phaseTone": "verified",
+    "date": "2026-07-26",
+    "displayDate": "July 26, 2026",
+    "byline": "Founder’s Office",
+    "image": "/assets/news-astrobridge.png",
+    "body": [
       "We began with practical products: a system for expressing and checking intent, a wallet for authorization, a conversational interface, a reference ledger and a mobile world for edge participation. The next responsibility is to make the rules between those products public. That is why we formed Astro Open Infrastructure as an unincorporated international open-protocol initiative.",
       "The institution is not presented as a registered company, foundation, charity or recognized standards body. Its purpose is narrower and more useful today: publish the charter, define an RFC process, document interoperability boundaries and keep claims tied to evidence. A public specification can be challenged, implemented independently and improved without requiring trust in a private roadmap.",
       "Our core position is simple. Human authorization must remain above autonomous execution. Wallets should retain custody. Safety decisions should be explainable. Intent fingerprints and signed receipts should make important steps verifiable without publishing unnecessary private information.",
       "We are building this record in stages. Some components are running public services, some are tested reference implementations and others remain research. We will state those differences directly. The credibility of open infrastructure comes from reproducible work, not from calling an unfinished system complete.",
       "The invitation is open to engineers, security researchers, node operators, writers and translators. Contribution does not promise a token, return or governance right. It creates a public technical record that the wider internet can inspect and reuse."
     ],
-    facts: [
+    "facts": [
       "Founding charter version 0.1 is published.",
       "RFC-0002 and RFC-0003 are marked implemented at version 0.1.",
       "The initiative explicitly discloses its unincorporated status."
     ],
-    status: "Institutional framework in public draft. It is not a government-recognized standards organization.",
-    links: [
-      { label: "Charter and RFC framework", url: "https://www.astrochannel.one/open-infrastructure.html" },
-      { label: "Official website", url: "https://www.astrochannel.one/" }
+    "status": "Institutional framework in public draft. It is not a government-recognized standards organization.",
+    "links": [
+      {
+        "label": "Charter and RFC framework",
+        "url": "https://www.astrochannel.one/open-infrastructure.html"
+      },
+      {
+        "label": "Official website",
+        "url": "https://www.astrochannel.one/"
+      }
     ]
   },
   {
-    slug: "open-safety-layer-public-beta",
-    title: "Astro Open Safety Layer Public Beta Is Live",
-    dek: "A free, non-custodial API now provides deterministic intent checks, fingerprints and signed safety receipts.",
-    type: "Engineering Update",
-    section: "Engineering",
-    project: "Open Safety Layer",
-    phase: "Public beta",
-    phaseTone: "active",
-    date: "2026-07-25",
-    displayDate: "July 25, 2026",
-    byline: "Astro Open Infrastructure Engineering",
-    image: "/assets/news-open-safety-layer.png",
-    body: [
+    "slug": "open-safety-layer-public-beta",
+    "title": "Astro Open Safety Layer Public Beta Is Live",
+    "dek": "A free, non-custodial API now provides deterministic intent checks, fingerprints and signed safety receipts.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "Open Safety Layer",
+    "phase": "Public beta",
+    "phaseTone": "active",
+    "date": "2026-07-25",
+    "displayDate": "July 25, 2026",
+    "byline": "Astro Open Infrastructure Engineering",
+    "image": "/assets/news-open-safety-layer.png",
+    "body": [
       "The Astro Open Safety Layer public beta is available as a free protocol service and an Apache-2.0 reference implementation. It accepts a structured intent, applies deterministic checks and returns an explainable decision without taking custody of funds or requesting a private key.",
       "Every assessment is bound to an intent fingerprint. The service can issue an Ed25519-signed safety receipt that links that fingerprint to simulation and assessment hashes. A client can retrieve the current public key and verify the receipt independently instead of trusting a screenshot or a dashboard state.",
       "The public endpoint also exposes OpenAPI discovery and a TypeScript SDK. Rate limits, request size controls and an open safety-feed workflow are included in the current implementation. The automated test suite covers five core behaviors, and the build and tests pass in the verified local release.",
       "This beta is a starting point, not a security certification. It has not completed an independent production audit. The current public health response discloses that the service is non-custodial, uses a persistent signing key and has no configured RPC chains or active external safety-feed entries at the time of publication.",
       "Developers can use the hosted endpoint or self-host the code. Our next work is to widen reproducible test vectors, add reviewed evidence sources and gather implementation feedback before any stability claim."
     ],
-    facts: [
+    "facts": [
       "Public health endpoint returns status “ok” and custody “false.”",
       "Local build and five automated tests pass.",
       "Code is published under Apache-2.0.",
       "Receipts use Ed25519 signatures."
     ],
-    status: "Public beta. No claim of independent audit, production certification or universal chain coverage.",
-    links: [
-      { label: "OpenAPI specification", url: "https://astro-open-safety-layer.vercel.app/openapi.json" },
-      { label: "Source code", url: "https://github.com/dive-8978/astro-open-safety-layer" },
-      { label: "Product page", url: "https://www.astrochannel.one/open-safety-layer.html" }
+    "status": "Public beta. No claim of independent audit, production certification or universal chain coverage.",
+    "links": [
+      {
+        "label": "OpenAPI specification",
+        "url": "https://astro-open-safety-layer.vercel.app/openapi.json"
+      },
+      {
+        "label": "Source code",
+        "url": "https://github.com/dive-8978/astro-open-safety-layer"
+      },
+      {
+        "label": "Product page",
+        "url": "https://www.astrochannel.one/open-safety-layer.html"
+      }
     ]
   },
   {
-    slug: "aoi-intent-envelope",
-    title: "AOI Intent Envelope: A Portable Identity for Web3 Intent",
-    dek: "RFC-0002 defines a chain-neutral structure for actors, actions, constraints and deterministic fingerprints.",
-    type: "Protocol Brief",
-    section: "Protocol",
-    project: "AstroBridge",
-    phase: "Implemented v0.1",
-    phaseTone: "verified",
-    date: "2026-07-24",
-    displayDate: "July 24, 2026",
-    byline: "Astro Open Infrastructure Protocol Group",
-    image: "/assets/news-astrobridge.png",
-    body: [
+    "slug": "aoi-intent-envelope",
+    "title": "AOI Intent Envelope: A Portable Identity for Web3 Intent",
+    "dek": "RFC-0002 defines a chain-neutral structure for actors, actions, constraints and deterministic fingerprints.",
+    "type": "Protocol Brief",
+    "section": "Protocol",
+    "project": "AstroBridge",
+    "phase": "Implemented v0.1",
+    "phaseTone": "verified",
+    "date": "2026-07-24",
+    "displayDate": "July 24, 2026",
+    "byline": "Astro Open Infrastructure Protocol Group",
+    "image": "/assets/news-astrobridge.png",
+    "body": [
       "Web3 applications often describe the same action in incompatible ways. A swap request in a wallet, an agent instruction in a chat and an execution request in a bridge may carry equivalent meaning but produce different records. The Astro Open Intent Envelope is our first public attempt to give that meaning a portable identity.",
       "The envelope separates the actor, requested action, target chain, assets and enforceable constraints. Fields are normalized before fingerprinting so that equivalent documents can produce a stable identifier. The fingerprint can then connect safety assessment, routing, authorization and execution records without placing a private key or full personal history on a public ledger.",
       "Portability matters because no single Astro product should own the intent. MA can originate a conversational request. AstroWallet AI can attach authorization. AstroBridge can assess and route it. AstroAI Chain can retain a fingerprint and proof record. Other implementations should be able to join the same flow by following the published structure.",
       "RFC-0002 is marked implemented at version 0.1 in the current framework, but implementation does not mean final standardization. Field naming, canonicalization rules and cross-language test vectors need broader review. We expect adversarial input, encoding differences and chain-specific semantics to expose weaknesses.",
       "The protocol group is publishing the envelope early so those weaknesses can be found in public. The goal is not a new token dependency. It is a small interoperability primitive that wallets, agents and execution systems can reproduce."
     ],
-    facts: [
+    "facts": [
       "RFC-0002 is published as implemented version 0.1.",
       "The envelope is chain-neutral and does not contain private keys.",
       "Deterministic normalization precedes fingerprinting."
     ],
-    status: "Version 0.1 interoperability primitive. Cross-language compatibility review remains future work.",
-    links: [
-      { label: "Open Infrastructure RFC index", url: "https://www.astrochannel.one/open-infrastructure.html#rfc" },
-      { label: "Safety Layer discovery", url: "https://astro-open-safety-layer.vercel.app/.well-known/astro-safety" }
+    "status": "Version 0.1 interoperability primitive. Cross-language compatibility review remains future work.",
+    "links": [
+      {
+        "label": "Open Infrastructure RFC index",
+        "url": "https://www.astrochannel.one/open-infrastructure.html#rfc"
+      },
+      {
+        "label": "Safety Layer discovery",
+        "url": "https://astro-open-safety-layer.vercel.app/.well-known/astro-safety"
+      }
     ]
   },
   {
-    slug: "signed-safety-receipts",
-    title: "Signed Safety Receipts: Verification After Assessment",
-    dek: "RFC-0003 links an intent fingerprint to the exact assessment evidence returned by a safety service.",
-    type: "Protocol Brief",
-    section: "Protocol",
-    project: "Open Safety Layer",
-    phase: "Implemented v0.1",
-    phaseTone: "verified",
-    date: "2026-07-23",
-    displayDate: "July 23, 2026",
-    byline: "Astro Open Infrastructure Protocol Group",
-    image: "/assets/news-open-safety-layer.png",
-    body: [
+    "slug": "signed-safety-receipts",
+    "title": "Signed Safety Receipts: Verification After Assessment",
+    "dek": "RFC-0003 links an intent fingerprint to the exact assessment evidence returned by a safety service.",
+    "type": "Protocol Brief",
+    "section": "Protocol",
+    "project": "Open Safety Layer",
+    "phase": "Implemented v0.1",
+    "phaseTone": "verified",
+    "date": "2026-07-23",
+    "displayDate": "July 23, 2026",
+    "byline": "Astro Open Infrastructure Protocol Group",
+    "image": "/assets/news-open-safety-layer.png",
+    "body": [
       "A safety result is useful only if a client can prove which intent was assessed and whether the result was altered. The Astro Safety Receipt addresses that boundary with a compact signed statement.",
       "The receipt binds an intent fingerprint to hashes representing simulation and safety assessment output. The reference service signs the statement with Ed25519 and exposes its current public key. A wallet, agent or independent verifier can check the signature after receiving the response. This makes the assessment record portable across interfaces and easier to audit after an execution decision.",
       "A signed receipt does not make an unsafe action safe. It does not guarantee that every chain state was observed, that an RPC provider was honest or that the underlying rules detected every exploit. It proves a narrower fact: a particular service key signed a particular assessment record for a particular fingerprint.",
       "Keeping that claim narrow is important. Security infrastructure becomes dangerous when cryptographic proof is used to imply more than it actually establishes. RFC-0003 therefore belongs beside explicit service status, key rotation policy, test vectors and disclosure of data sources.",
       "The current reference implementation demonstrates receipt creation and verification. Future work includes independent implementations, stable key-history discovery and broader compatibility tests. We welcome review focused on canonicalization, replay boundaries and operational key management."
     ],
-    facts: [
+    "facts": [
       "RFC-0003 is published as implemented version 0.1.",
       "The reference receipt uses Ed25519.",
       "The public service exposes its current verification key."
     ],
-    status: "A receipt proves authorship and record integrity; it is not an audit or guarantee of transaction safety.",
-    links: [
-      { label: "Current public key endpoint", url: "https://astro-open-safety-layer.vercel.app/v1/keys/current" },
-      { label: "Reference implementation", url: "https://github.com/dive-8978/astro-open-safety-layer" }
+    "status": "A receipt proves authorship and record integrity; it is not an audit or guarantee of transaction safety.",
+    "links": [
+      {
+        "label": "Current public key endpoint",
+        "url": "https://astro-open-safety-layer.vercel.app/v1/keys/current"
+      },
+      {
+        "label": "Reference implementation",
+        "url": "https://github.com/dive-8978/astro-open-safety-layer"
+      }
     ]
   },
   {
-    slug: "astroai-chain-core-flow-tests",
-    title: "AstroAI Chain Reference Ledger Passes Core Flow Tests",
-    dek: "The TypeScript service now covers hash-linked records, edge tasks, contribution consensus and execution proofs.",
-    type: "Engineering Update",
-    section: "Engineering",
-    project: "AstroAI Chain",
-    phase: "Reference build",
-    phaseTone: "active",
-    date: "2026-07-22",
-    displayDate: "July 22, 2026",
-    byline: "Astro Open Infrastructure Engineering",
-    image: "/assets/news-astroai-chain.png",
-    body: [
+    "slug": "astroai-chain-core-flow-tests",
+    "title": "AstroAI Chain Reference Ledger Passes Core Flow Tests",
+    "dek": "The TypeScript service now covers hash-linked records, edge tasks, contribution consensus and execution proofs.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "AstroAI Chain",
+    "phase": "Reference build",
+    "phaseTone": "active",
+    "date": "2026-07-22",
+    "displayDate": "July 22, 2026",
+    "byline": "Astro Open Infrastructure Engineering",
+    "image": "/assets/news-astroai-chain.png",
+    "body": [
       "AstroAI Chain has moved beyond its whitepaper into a working TypeScript reference service. The current implementation creates privacy-preserving intent fingerprints, appends hash-linked blocks, assigns work to edge AI nodes and records micro-contributions through a threshold-based consensus flow.",
       "The service also stores execution receipts and exposes world-state data designed for AstroRealms. Snapshot restore is covered so a reference node can persist and recover its state. In the latest local verification, the TypeScript build completed and all three core integration tests passed.",
       "Those tests cover three connected paths: fingerprint creation with block linking; edge contribution with micro-consensus; and execution receipt storage with snapshot recovery. This is meaningful engineering progress because the components now operate as one service rather than isolated examples.",
       "It is equally important to state what has not been built. AstroAI Chain is not a completed public mainnet. It does not yet have independently operated validators, authenticated production node identities, replicated consensus storage, an external security audit or a published genesis policy. The present release is a reference root-chain service for protocol development and integration.",
       "Our next milestone is to harden network identity and replication while keeping the data model compatible with the intent envelope and safety receipts. Public test vectors and independently reproducible nodes will matter more than a premature mainnet label."
     ],
-    facts: [
+    "facts": [
       "TypeScript build passes.",
       "Three core integration tests pass.",
       "World-state, receipt and snapshot APIs are implemented.",
       "The README explicitly identifies the release as a reference service."
     ],
-    status: "Working reference implementation, not a completed public mainnet.",
-    links: [
-      { label: "Protocol framework", url: "https://www.astrochannel.one/open-infrastructure.html" },
-      { label: "Official website", url: "https://www.astrochannel.one/" }
+    "status": "Working reference implementation, not a completed public mainnet.",
+    "links": [
+      {
+        "label": "Protocol framework",
+        "url": "https://www.astrochannel.one/open-infrastructure.html"
+      },
+      {
+        "label": "Official website",
+        "url": "https://www.astrochannel.one/"
+      }
     ]
   },
   {
-    slug: "community-built-superchain",
-    title: "What We Mean by a Community-Built Superchain",
-    dek: "The network starts at the edge: each installation can become a small contributor to a system that grows in capability over time.",
-    type: "Founder Note",
-    section: "Institution",
-    project: "AstroAI Chain",
-    phase: "Research",
-    phaseTone: "planned",
-    date: "2026-07-21",
-    displayDate: "July 21, 2026",
-    byline: "Founder’s Office",
-    image: "/assets/news-astroai-chain.png",
-    body: [
+    "slug": "community-built-superchain",
+    "title": "What We Mean by a Community-Built Superchain",
+    "dek": "The network starts at the edge: each installation can become a small contributor to a system that grows in capability over time.",
+    "type": "Founder Note",
+    "section": "Institution",
+    "project": "AstroAI Chain",
+    "phase": "Research",
+    "phaseTone": "planned",
+    "date": "2026-07-21",
+    "displayDate": "July 21, 2026",
+    "byline": "Founder’s Office",
+    "image": "/assets/news-astroai-chain.png",
+    "body": [
       "Most blockchain stories begin with a network that is already defined and ask people to join it. Our research begins in the opposite direction. We imagine software that can activate a constrained edge node when a person installs it, then gradually assemble useful network capacity from many independent participants.",
       "A phone should not pretend to be a data-center validator. It can contribute smaller things: availability, bounded inference tasks, signed observations, test participation or relay capacity under clear battery, bandwidth and consent controls. Stronger home and server nodes can accept heavier roles. Contribution records should reflect verifiable work rather than passive installation.",
       "At a large scale, this model could create a community-built superchain whose capability emerges as participation grows. The number ten million is a long-term design target, not a current user count or guaranteed completion threshold. Reaching it would require robust identity, Sybil resistance, privacy protection, replicated consensus, sustainable incentives and governance that independent operators can trust.",
       "AstroAI Chain is the current reference ledger for exploring that architecture. AstroRealms turns selected contribution states into a mobile game experience so participation can be understandable rather than hidden in a background process.",
       "We are publishing the idea as research because architecture should be tested before economics are promised. The first proof is not a token price. It is whether independent devices can perform bounded work, produce verifiable records and leave the user in control."
     ],
-    facts: [
+    "facts": [
       "The ten-million-node concept is a long-term research target.",
       "Current software is a reference implementation.",
       "No active token economics or participation return is promised."
     ],
-    status: "Architecture and research roadmap. No claim of a live superchain or current global node count.",
-    links: [
-      { label: "Astro Open Infrastructure", url: "https://www.astrochannel.one/open-infrastructure.html" }
+    "status": "Architecture and research roadmap. No claim of a live superchain or current global node count.",
+    "links": [
+      {
+        "label": "Astro Open Infrastructure",
+        "url": "https://www.astrochannel.one/open-infrastructure.html"
+      }
     ]
   },
   {
-    slug: "astrorealms-mobile-game-loop",
-    title: "AstroRealms Turns Edge Contribution Into a Mobile Game Loop",
-    dek: "A Three.js world connects node activation, shards, contributions and flagship construction to AstroAI Chain state.",
-    type: "Product Update",
-    section: "Products",
-    project: "AstroRealms",
-    phase: "Working prototype",
-    phaseTone: "active",
-    date: "2026-07-20",
-    displayDate: "July 20, 2026",
-    byline: "AstroRealms Product Team",
-    image: "/assets/news-astrorealms.png",
-    body: [
+    "slug": "astrorealms-mobile-game-loop",
+    "title": "AstroRealms Turns Edge Contribution Into a Mobile Game Loop",
+    "dek": "A Three.js world connects node activation, shards, contributions and flagship construction to AstroAI Chain state.",
+    "type": "Product Update",
+    "section": "Products",
+    "project": "AstroRealms",
+    "phase": "Working prototype",
+    "phaseTone": "active",
+    "date": "2026-07-20",
+    "displayDate": "July 20, 2026",
+    "byline": "AstroRealms Product Team",
+    "image": "/assets/news-astrorealms.png",
+    "body": [
       "Infrastructure is usually invisible. AstroRealms explores a different interface: a mobile 3D world where edge-node participation becomes a visible construction process.",
       "A player can activate a node, receive a shard, submit a hashed contribution and use verified progress to assemble flagship modules. The vessel in the center is not intended as a decorative progress bar. Its world state is designed to consume AstroAI Chain data so construction reflects recorded contribution events.",
       "The current Vite, React and Three.js frontend builds successfully. It supports Kids, Explorer and Data modes for different levels of detail. The experience is designed around touch input and a game-like visual hierarchy rather than a desktop protocol dashboard.",
       "The product still has a clear boundary between interface and network reality. A rendered module does not by itself prove valuable distributed work. That proof must come from authenticated tasks, accepted contributions and ledger records. The game should visualize those facts, not replace them.",
       "The next release path includes deeper Android device testing, stronger world-state synchronization and more meaningful construction tasks. AstroRealms will remain honest about simulated state while the underlying edge network advances from reference implementation toward independently operated testing."
     ],
-    facts: [
+    "facts": [
       "Vite production build passes.",
       "Frontend uses React and Three.js.",
       "Kids, Explorer and Data modes are implemented.",
       "World-state integration targets AstroAI Chain."
     ],
-    status: "Working 3D frontend and reference integration. Network-scale contribution is not yet claimed.",
-    links: [
-      { label: "Open protocol framework", url: "https://www.astrochannel.one/open-infrastructure.html" }
+    "status": "Working 3D frontend and reference integration. Network-scale contribution is not yet claimed.",
+    "links": [
+      {
+        "label": "Open protocol framework",
+        "url": "https://www.astrochannel.one/open-infrastructure.html"
+      }
     ]
   },
   {
-    slug: "ma-human-ai-intent-interface",
-    title: "MA: The Human and AI Intent Interface",
-    dek: "MA connects person-to-person and person-to-agent conversation with wallet-aware intent and mobile control.",
-    type: "Product Update",
-    section: "Products",
-    project: "MA",
-    phase: "Active development",
-    phaseTone: "active",
-    date: "2026-07-19",
-    displayDate: "July 19, 2026",
-    byline: "MA Product Team",
-    image: "/assets/news-ma.png",
-    body: [
+    "slug": "ma-human-ai-intent-interface",
+    "title": "MA: The Human and AI Intent Interface",
+    "dek": "MA connects person-to-person and person-to-agent conversation with wallet-aware intent and mobile control.",
+    "type": "Product Update",
+    "section": "Products",
+    "project": "MA",
+    "phase": "Active development",
+    "phaseTone": "active",
+    "date": "2026-07-19",
+    "displayDate": "July 19, 2026",
+    "byline": "MA Product Team",
+    "image": "/assets/news-ma.png",
+    "body": [
       "The public name of our conversational product is MA. Its role in the Astro system is to help a person express intent naturally before any asset-affecting action reaches authorization or execution.",
       "Conversation can connect people to people and people to AI agents, but language alone is not a transaction approval. MA is designed to pass structured, wallet-aware intent into the wider stack. AstroBridge can assess and route that intent, while AstroWallet AI remains responsible for the user’s authorization boundary.",
       "This separation matters as agents become more capable. An agent may help compare routes, prepare an action or explain a warning. It should not silently inherit custody or turn conversational ambiguity into an irreversible transaction. The open intent envelope gives the interface a defined handoff rather than an opaque internal command.",
       "The current MA project passes its local asset and source diagnostics. The application has already been developed as a separate product, so this newsroom update does not announce a rewrite or a new independent audit. It clarifies MA’s public name and its responsibility inside Astro Open Infrastructure.",
       "Future work will focus on interoperability at the intent boundary: consistent fingerprints, explainable safety results and receipts that can be carried back into a conversation. The goal is a calmer human interface for complex networks without pretending that a chat window can remove every risk."
     ],
-    facts: [
+    "facts": [
       "MA is the public product name.",
       "Local project diagnostics pass.",
       "Wallet authorization remains separate from conversational intent."
     ],
-    status: "Product integration update. No claim of independent security audit or universal agent compatibility.",
-    links: [
-      { label: "MA product page", url: "https://www.astrochannel.one/painpoints.html" },
-      { label: "Official website", url: "https://www.astrochannel.one/" }
+    "status": "Product integration update. No claim of independent security audit or universal agent compatibility.",
+    "links": [
+      {
+        "label": "MA product page",
+        "url": "https://www.astrochannel.one/painpoints.html"
+      },
+      {
+        "label": "Official website",
+        "url": "https://www.astrochannel.one/"
+      }
     ]
   },
   {
-    slug: "astrowallet-authorization-at-edge",
-    title: "AstroWallet AI Keeps Assets and Authorization at the Edge",
-    dek: "The wallet acts as the asset and signature entry point while intent assessment and routing remain separate services.",
-    type: "Product Update",
-    section: "Products",
-    project: "AstroWallet AI",
-    phase: "Active development",
-    phaseTone: "active",
-    date: "2026-07-18",
-    displayDate: "July 18, 2026",
-    byline: "AstroWallet AI Product Team",
-    image: "/assets/news-astrowallet.png",
-    body: [
+    "slug": "astrowallet-authorization-at-edge",
+    "title": "AstroWallet AI Keeps Assets and Authorization at the Edge",
+    "dek": "The wallet acts as the asset and signature entry point while intent assessment and routing remain separate services.",
+    "type": "Product Update",
+    "section": "Products",
+    "project": "AstroWallet AI",
+    "phase": "Active development",
+    "phaseTone": "active",
+    "date": "2026-07-18",
+    "displayDate": "July 18, 2026",
+    "byline": "AstroWallet AI Product Team",
+    "image": "/assets/news-astrowallet.png",
+    "body": [
       "AstroWallet AI is the asset and signature entry point in the Astro architecture. That wording is deliberate: the wallet authorizes, while other components can prepare, assess and route an intent.",
       "A user may begin in MA, a compatible agent or another application. AstroBridge can normalize the request and evaluate possible execution paths. The Open Safety Layer can provide a fingerprint, deterministic checks and a signed receipt. None of those services should receive the user’s private key. The final asset-affecting approval returns to the wallet boundary.",
       "The current project includes local wallet control, multi-chain interfaces, biometric authorization paths and intent routing integration. Its TypeScript type check passes in the verified local version. That is an engineering status statement, not a claim that every supported network or device has received independent production review.",
       "We believe wallets become more useful when they can consume open evidence instead of presenting an unexplained confirm button. A portable intent fingerprint and receipt can help a person compare what was requested, what was assessed and what is being signed.",
       "The next work is to strengthen interoperability with the public intent and receipt specifications, expand device testing and publish clearer compatibility boundaries. Custody remains with the user; automation remains subordinate to authorization."
     ],
-    facts: [
+    "facts": [
       "TypeScript type check passes.",
       "The wallet is designed as a non-custodial authorization boundary.",
       "Intent assessment and routing are separate from signature approval."
     ],
-    status: "Active product development. No claim of complete chain coverage or independent production audit.",
-    links: [
-      { label: "AstroWallet AI overview", url: "https://www.astrochannel.one/roadmap.html" },
-      { label: "Open Infrastructure charter", url: "https://www.astrochannel.one/open-infrastructure.html" }
+    "status": "Active product development. No claim of complete chain coverage or independent production audit.",
+    "links": [
+      {
+        "label": "AstroWallet AI overview",
+        "url": "https://www.astrochannel.one/roadmap.html"
+      },
+      {
+        "label": "Open Infrastructure charter",
+        "url": "https://www.astrochannel.one/open-infrastructure.html"
+      }
     ]
   },
   {
-    slug: "charter-governance-rfc-framework",
-    title: "Astro Open Infrastructure Publishes Charter, Governance and RFC Framework",
-    dek: "The public institutional record defines principles, decision bodies, contribution rules and the first three protocol specifications.",
-    type: "Institutional News",
-    section: "Institution",
-    project: "Institution",
-    phase: "Published framework",
-    phaseTone: "verified",
-    date: "2026-07-17",
-    displayDate: "July 17, 2026",
-    byline: "Astro Open Infrastructure Secretariat",
-    image: "/assets/astrobridge-open-infrastructure.png",
-    body: [
+    "slug": "charter-governance-rfc-framework",
+    "title": "Astro Open Infrastructure Publishes Charter, Governance and RFC Framework",
+    "dek": "The public institutional record defines principles, decision bodies, contribution rules and the first three protocol specifications.",
+    "type": "Institutional News",
+    "section": "Institution",
+    "project": "Institution",
+    "phase": "Published framework",
+    "phaseTone": "verified",
+    "date": "2026-07-17",
+    "displayDate": "July 17, 2026",
+    "byline": "Astro Open Infrastructure Secretariat",
+    "image": "/assets/astrobridge-open-infrastructure.png",
+    "body": [
       "Astro Open Infrastructure has published its founding charter version 0.1, initial governance model, RFC process and contribution guidance. The framework places AstroBridge, MA, AstroWallet AI, AstroAI Chain, AstroRealms and the Open Safety Layer within one public technical institution.",
       "The charter establishes six principles: human control, non-custodial operation, privacy by proof, open specifications, interoperability and verifiable claims. These principles are intended to constrain both software design and public communication.",
       "The initial governance model names a Protocol Council, Security Council, Node Operator Assembly and Contributor Community. These are responsibility definitions, not a claim that representative membership or voting authority is already active. Membership and voting records must be published before any body can claim that authority.",
       "Three RFC entries define the first protocol surface. RFC-0001 describes the reference architecture and remains a draft. RFC-0002 specifies the open intent envelope and RFC-0003 specifies the signed safety receipt; both are marked implemented at version 0.1.",
       "Contribution is open across engineering, security, nodes, SDKs, research, translation and education. The guidance explicitly rejects submission of private keys and does not promise market value or investment return for contribution. The framework will evolve through recorded proposals, public review and versioned compatibility tests."
     ],
-    facts: [
+    "facts": [
       "Founding charter version 0.1 is public.",
       "Four initial governance responsibilities are defined.",
       "Three RFC entries are published.",
       "Contribution guidance includes security and economic disclaimers."
     ],
-    status: "Public founding framework. Representative governance bodies are not yet claimed as active.",
-    links: [
-      { label: "Published charter and RFCs", url: "https://www.astrochannel.one/open-infrastructure.html" },
-      { label: "Astro Open Safety Layer", url: "https://www.astrochannel.one/open-safety-layer.html" }
+    "status": "Public founding framework. Representative governance bodies are not yet claimed as active.",
+    "links": [
+      {
+        "label": "Published charter and RFCs",
+        "url": "https://www.astrochannel.one/open-infrastructure.html"
+      },
+      {
+        "label": "Astro Open Safety Layer",
+        "url": "https://www.astrochannel.one/open-safety-layer.html"
+      }
     ]
   }
 ];
