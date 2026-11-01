@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T17:57:38.180Z",
+  "generatedAt": "2026-11-01T22:09:26.111Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,46 @@
     }
   ],
   "items": [
+    {
+      "id": "8456360ab5c1d00af056",
+      "source": "CryptoSlate",
+      "title": "Tracked Binance wallets record $2.5 billion in outflows as withdrawals reopen after hack",
+      "summary": "Binance's tracked cryptocurrency wallets recorded $2,510 million in net outflows on Nov. 1 after the exchange resumed withdrawals following its $6.3 billion security breach. According to DeFiLlama data, the outflows included approximately $1,083 million in…",
+      "url": "https://cryptoslate.com/tracked-binance-wallets-record-2-5-billion-in-outflows-as-withdrawals-reopen-after-hack/",
+      "publishedAt": "2026-11-01T21:00:31.000Z"
+    },
+    {
+      "id": "be04128cf6db6fd20e5c",
+      "source": "CryptoSlate",
+      "title": "Crypto scammers used SEC’s website to lure investors into alleged $130 million fraud",
+      "summary": "The SEC’s complaint seeks a targeted future filing bar, alongside monetary relief for alleged fraud. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/crypto-scammers-used-secs-website-to-lure-investors-into-alleged-130-million-fraud/",
+      "publishedAt": "2026-11-01T20:00:49.000Z"
+    },
+    {
+      "id": "5175397ea18f38d640ab",
+      "source": "CoinDesk",
+      "title": "The crypto reader's guide to the 2026 midterm election: State of Crypto",
+      "summary": "America is going to the polls, and the results will shape crypto legislation and regulation over the next two years. Here's what to know.",
+      "url": "https://www.coindesk.com/policy/2026/11/01/the-crypto-reader-s-guide-to-the-2026-midterm-election-state-of-crypto",
+      "publishedAt": "2026-11-01T19:30:00.000Z"
+    },
+    {
+      "id": "08d432c53ff11828d2bb",
+      "source": "CryptoSlate",
+      "title": "Cursor urges credential resets after malicious Claude Code marketplace update",
+      "summary": "Affected macOS and Windows users need host cleanup and trusted-system credential rotation because uninstalling may leave persistent components. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
+      "url": "https://cryptoslate.com/cursor-urges-credential-resets-after-malicious-claude-code-marketplace-update/",
+      "publishedAt": "2026-11-01T18:40:09.000Z"
+    },
+    {
+      "id": "55f0e056cde895794273",
+      "source": "The Block",
+      "title": "North Korean hackers launder $242 million of Binance loot via Tron as FBI presses THORChain: analyst",
+      "summary": "Crypto bridges Relay, THORChain, Chainflip and Symbiosis moved about $140 million of stolen funds off Tron, with Relay handling the most at $48 million.",
+      "url": "https://www.theblock.co/news/defi/2026-11-01-north-korean-hackers-launder-242-million-of-binance-loot-via-tron-as-fbi-presses-thorchain-analyst-432257",
+      "publishedAt": "2026-11-01T18:25:48.000Z"
+    },
     {
       "id": "2c7a1d82aa04925babd7",
       "source": "CryptoSlate",
@@ -218,36 +258,12 @@
       "publishedAt": "2026-11-01T07:44:38.000Z"
     },
     {
-      "id": "62c1badc67fe246a6e2b",
-      "source": "CryptoSlate",
-      "title": "Solana’s reward records leave stakers with a gap in validator fee data",
-      "summary": "Agave leaves the applied-rate field empty, so verifying a staking fee requires historical validator state and delegation evidence. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your…",
-      "url": "https://cryptoslate.com/solanas-reward-records-leave-stakers-with-a-gap-in-validator-fee-data/",
-      "publishedAt": "2026-11-01T05:10:57.000Z"
-    },
-    {
-      "id": "20271d4d5eb4658ec690",
-      "source": "CryptoSlate",
-      "title": "Bitcoin’s recovery faces rising derivatives exposure and $643 million in ETF outflows",
-      "summary": "Higher selected derivatives exposure and ETF redemptions leave the recovery facing a demand test before November 6 payrolls. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/bitcoins-recovery-faces-rising-derivatives-exposure-and-643-million-in-etf-outflows/",
-      "publishedAt": "2026-11-01T01:10:55.000Z"
-    },
-    {
       "id": "20b1721badb1c57469b8",
       "source": "CoinDesk",
       "title": "FBI confirms North Korea's role in $6 billion Binance hack, asks DeFi community to block BTC, ETH, SOL addresses",
       "summary": "While the FBI listed hundreds of addresses in its notice, Chainalysis said the Binance attackers have already used \"thousands addresses,\" and expects this number to continue growing.",
       "url": "https://www.coindesk.com/policy/2026/10/31/fbi-confirms-north-korea-s-role-in-usd6-billion-binance-hack-asks-defi-community-to-block-btc-eth-sol-addresses",
       "publishedAt": "2026-11-01T01:10:05.000Z"
-    },
-    {
-      "id": "bf859cf8662c7e47ab3c",
-      "source": "CryptoSlate",
-      "title": "Jupiter Lend’s withdrawal liquidity rebounds from near zero to 29 million USDC",
-      "summary": "An October 31 API reading shows partial recovery, with available USDC at about 7% of reported total assets. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/jupiter-lend-usdc-withdrawal-liquidity-rebounds/",
-      "publishedAt": "2026-10-31T19:10:09.000Z"
     },
     {
       "id": "148a53f1bf5ca08063c5",
@@ -680,22 +696,6 @@
       "summary": "A US fusion startup says it has turned mercury into gold. Could a potential increase in the gold supply strengthen Bitcoin’s claim to be a better form of digital gold?",
       "url": "https://cointelegraph.com/magazine/will-golds-infinite-mint-bug-make-bitcoin-more-valuable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-10-30T13:30:00.000Z"
-    },
-    {
-      "id": "3d5cc191eb33708c4bf1",
-      "source": "Bitcoin Magazine",
-      "title": "Doomberg: US Treasury Sanctions are “Wildly Bullish” for Bitcoin & Gold",
-      "summary": "▶ Bitcoin Magazine Doomberg: US Treasury Sanctions are “Wildly Bullish” for Bitcoin & Gold U.S. pressure to hold Treasuries forces central banks to sell what they can, says Doomberg, setting up a wildly bullish long-term case for gold and Bitcoin. This post…",
-      "url": "https://bitcoinmagazine.com/videos/doomberg-us-treasury-sanctions-are-wildly-bullish-for-bitcoin-gold",
-      "publishedAt": "2026-10-30T13:26:43.000Z"
-    },
-    {
-      "id": "ff6dbfd7fa55db58cdd7",
-      "source": "Bitcoin Magazine",
-      "title": "Alex Thorn: 50-Week Signal Says Bitcoin’s Bottom is In",
-      "summary": "▶ Bitcoin Magazine Alex Thorn: 50-Week Signal Says Bitcoin’s Bottom is In Galaxy's Alex Thorn calls the Bitcoin bottom, pointing to the 50-week moving average reclaim, resilience at $80K, and why being long is now contrarian. This post Alex Thorn: 50-Week…",
-      "url": "https://bitcoinmagazine.com/videos/alex-thorn-50-week-signal-says-bitcoins-bottom-is-in",
-      "publishedAt": "2026-10-30T13:22:21.000Z"
     }
   ]
 }
