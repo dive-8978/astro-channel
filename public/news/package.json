@@ -8,6 +8,6 @@
     "check": "node crawler.mjs --check"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.2.5"
+    "fast-xml-parser": "^5.11.2"
   }
 }
