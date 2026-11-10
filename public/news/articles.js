@@ -1,5 +1,135 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "ma-full-on-the-app-store-20261110",
+    "title": "MA full Is Now on the App Store",
+    "dek": "MA full brings messaging, voice and video calls, and Bible and hymn reading to iPhone and iPad.",
+    "type": "Product Release",
+    "section": "Products",
+    "project": "MA",
+    "phase": "App Store release",
+    "phaseTone": "verified",
+    "date": "2026-11-10",
+    "displayDate": "November 10, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/technology-20261009/ma-connections-1280.webp",
+    "imageSrcset": "/assets/technology-20261009/ma-connections-640.webp 640w, /assets/technology-20261009/ma-connections-1280.webp 1280w",
+    "imageWidth": 1280,
+    "imageHeight": 960,
+    "imageAlt": "Concept illustration for MA communication.",
+    "imageCaption": "MA editorial illustration.",
+    "body": [
+      "MA full version 1.6.91 was released on November 9, 2026. Apple lists the app under MA full, published by AstroBridge Technology Limited.",
+      "MA full combines everyday messaging, voice and video calls with Bible and hymn reading. It gives families and friends one place to keep in touch and gives readers access to the additional reading tools in this edition.",
+      "Search for MA full in the App Store or open the official listing directly. We verified the public listing in the United States and United Kingdom. Apple displays availability and device requirements for your storefront."
+    ],
+    "facts": [
+      "Apple’s public listing identifies MA full 1.6.91 and AstroBridge Technology Limited.",
+      "The United States and United Kingdom storefront listings were verified on November 10."
+    ],
+    "status": "This release covers the MA full edition on iOS.",
+    "links": [
+      {
+        "label": "Open in the App Store",
+        "url": "https://apps.apple.com/app/ma-full/id6820893444"
+      },
+      {
+        "label": "View the US App Store listing",
+        "url": "https://apps.apple.com/us/app/ma-full/id6820893444"
+      },
+      {
+        "label": "Explore MA",
+        "url": "/painpoints.html?lang=en#download"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "MA 全能版已上架苹果 App Store",
+        "dek": "MA full 现可在 iPhone 和 iPad 上使用，提供聊天、语音视频通话，以及圣经与赞美诗阅读。",
+        "type": "产品发布",
+        "phase": "App Store 已发布",
+        "displayDate": "2026年11月10日",
+        "imageAlt": "MA 通信主题概念插画。",
+        "imageCaption": "MA 新闻配图。",
+        "body": [
+          "MA 全能版 1.6.91 于 2026 年 11 月 9 日发布。苹果商店显示的应用名称是 MA full，开发者为 AstroBridge Technology Limited。",
+          "MA 全能版把日常聊天、语音和视频通话，与圣经及赞美诗阅读放在同一个应用里。用户可以联系家人朋友，也可以使用全能版提供的阅读工具。",
+          "在 App Store 搜索 MA full，或直接打开官方链接。美国和英国区的公开页面已核实，下载与设备要求以你所在地区的商店页面为准。"
+        ],
+        "facts": [
+          "苹果公开页面列出 MA full 1.6.91 和开发者 AstroBridge Technology Limited。",
+          "11 月 10 日已复核美国和英国区的公开商店页面。"
+        ],
+        "status": "本次发布对应 iOS 的 MA 全能版。",
+        "links": [
+          {
+            "label": "在 App Store 打开",
+            "url": "https://apps.apple.com/app/ma-full/id6820893444"
+          },
+          {
+            "label": "查看美国区商店页面",
+            "url": "https://apps.apple.com/us/app/ma-full/id6820893444"
+          },
+          {
+            "label": "了解 MA",
+            "url": "/painpoints.html?lang=zh#download"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "astropart-parts-lookup-prototype-20261110",
+    "title": "AstroPart Tests a Scan-to-Find Workflow for Robot Parts",
+    "dek": "The local prototype connects a robot or part label with compatible components and regional supplier information.",
+    "type": "Engineering Update",
+    "section": "Engineering",
+    "project": "AstroPart",
+    "phase": "Local prototype",
+    "phaseTone": "active",
+    "date": "2026-11-10",
+    "displayDate": "November 10, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/research-studio-1024.webp",
+    "imageSrcset": "/assets/horizons-20261015/research-studio-640.webp 640w, /assets/horizons-20261015/research-studio-1024.webp 1024w",
+    "imageWidth": 1024,
+    "imageHeight": 683,
+    "imageAlt": "Concept illustration of a research studio.",
+    "imageCaption": "Concept artwork for an engineering update.",
+    "body": [
+      "When a robot needs a replacement part, the first question is whether the part fits. AstroPart is developing a lookup flow that starts with identifying the device or component and then shows compatible parts.",
+      "In the local prototype, manufacturers can register devices and parts and maintain supply locations. A user can open a QR code to check compatible parts and see supplier contacts, the service area and when stock information was last confirmed.",
+      "The team is validating registration, compatibility changes, label reissue and supplier lookup with sample records. A field pilot will need to verify physical labels, devices and supplier workflows."
+    ],
+    "facts": [
+      "The QR lookup and manufacturer workspace run in the local prototype.",
+      "Twenty-one local tests passed in the November 10 check."
+    ],
+    "status": "Local prototype testing is underway. A field pilot remains a separate milestone.",
+    "links": [],
+    "translations": {
+      "zh": {
+        "title": "AstroPart 星件链完成机器人配件扫码查询原型",
+        "dek": "本地原型可通过整机或配件标签查询适配部件和地区供货信息。",
+        "type": "工程进展",
+        "phase": "本地原型",
+        "displayDate": "2026年11月10日",
+        "imageAlt": "研发工作室概念插画。",
+        "imageCaption": "工程进展概念配图。",
+        "body": [
+          "机器人需要换件时，首先要确认配件能不能装。AstroPart 星件链从识别整机或部件入手，再向用户展示适配的配件。",
+          "本地原型已提供厂家工作台和用户查询页。厂家可以登记整机、配件和供货点，用户扫码后可以查看适配信息、供货方联系方式、服务范围及库存最近确认时间。",
+          "团队正用样例数据验证登记、适配变更、补发标签和供货点查询。实地试点还需要验收实体标签、设备与供货流程。"
+        ],
+        "facts": [
+          "扫码查询和厂家工作台已在本地原型运行。",
+          "11 月 10 日复核通过 21 项本地测试。"
+        ],
+        "status": "目前处于本地原型验证阶段，实地试点需单独验收。",
+        "links": []
+      }
+    }
+  },
+  {
     "slug": "astro-ecosystem-progress-november-20261101",
     "title": "November Progress Across the Astro Ecosystem",
     "dek": "A dated look at work across MA, AstroBridge, AstroAI Chain, AstroX and our wider research portfolio, with each project reported at its actual stage.",
