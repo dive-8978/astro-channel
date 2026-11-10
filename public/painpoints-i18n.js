@@ -68,6 +68,14 @@
     "Google Play에서 다운로드"
   ],
   [
+    "Download on the App Store",
+    "Descargar en App Store",
+    "Télécharger dans l’App Store",
+    "Im App Store laden",
+    "App Store でダウンロード",
+    "App Store에서 다운로드"
+  ],
+  [
     "Choose your edition",
     "Elige tu edición",
     "Choisissez votre version",
@@ -452,20 +460,12 @@
     "MA의 소통 경험에 성경과 찬송가 읽기 도구를 더했습니다."
   ],
   [
-    "Availability depends on your country, device and store listing. Google Play shows the version available to you.",
-    "La disponibilidad depende del país, dispositivo y ficha de la tienda. Google Play muestra la versión disponible para ti.",
-    "La disponibilité dépend du pays, de l’appareil et de la fiche en boutique. Google Play affiche la version proposée.",
-    "Die Verfügbarkeit hängt von Land, Gerät und Store-Eintrag ab. Google Play zeigt die für Sie verfügbare Version.",
-    "配信状況は地域、端末、ストアによって異なります。入手可能なバージョンは Google Play でご確認ください。",
-    "이용 가능 여부는 국가, 기기, 스토어에 따라 다릅니다. Google Play에서 제공되는 버전을 확인하세요."
-  ],
-  [
-    "The iOS editions have been submitted to Apple. App Store availability will be announced here once confirmed.",
-    "Las ediciones iOS se han enviado a Apple. Anunciaremos aquí su disponibilidad en App Store cuando esté confirmada.",
-    "Les versions iOS ont été soumises à Apple. Leur disponibilité sur l’App Store sera annoncée ici après confirmation.",
-    "Die iOS-Versionen wurden bei Apple eingereicht. Die Verfügbarkeit im App Store geben wir hier nach Bestätigung bekannt.",
-    "iOS の両バージョンは Apple に提出済みです。App Store での配信が確認でき次第、ここでお知らせします。",
-    "두 iOS 버전은 Apple에 제출되었습니다. App Store 출시가 확인되면 이곳에 안내하겠습니다."
+    "MA full is now available on the App Store. Availability and versions vary by country, device and store.",
+    "MA full ya está disponible en App Store. La disponibilidad y las versiones dependen del país, el dispositivo y la tienda.",
+    "MA full est désormais disponible sur l’App Store. La disponibilité et les versions varient selon le pays, l’appareil et la boutique.",
+    "MA full ist jetzt im App Store erhältlich. Verfügbarkeit und Versionen können je nach Land, Gerät und Store variieren.",
+    "MA full は App Store で配信中です。配信状況やバージョンは、国や地域、端末、ストアによって異なります。",
+    "이제 App Store에서 MA full을 다운로드할 수 있습니다. 이용 가능 여부와 버전은 국가, 기기, 스토어에 따라 다릅니다."
   ],
   [
     "Android release",
@@ -596,7 +596,15 @@
     android: ['MA application preview on Android', 'Android 上运行的 MA', 'MA en Android', 'MA sur Android', 'MA auf Android', 'Android で動作する MA', 'Android에서 실행 중인 MA'],
     icon: ['MA icon', 'MA 图标', 'Icono de MA', 'Icône MA', 'MA-Symbol', 'MA アイコン', 'MA 아이콘'],
     title: ["MA | Stay Close. Even from Afar.", "MA | 让牵挂，随时相连。", "MA | Siempre cerca, incluso a distancia.", "MA | Restez proches, même de loin.", "MA | Bleibt euch nah, auch aus der Ferne.", "MA | 離れていても、心は近くに。", "MA | 멀리 있어도, 마음은 가까이."],
-    description: ["Stay connected with family and friends through MA: messages, voice and video calls, groups and local-first conversations. Explore MA and MA full on Google Play.", "通过 MA 与家人朋友保持联络：聊天、语音视频通话、群聊与本地优先的聊天体验。了解 Google Play 上的 MA 和 MA 全能版。", "Conecta con familia y amigos con MA: mensajes, llamadas de voz y vídeo, grupos y conversaciones con prioridad local. Descubre MA y MA full en Google Play.", "Gardez le lien avec vos proches grâce à MA : messages, appels audio et vidéo, groupes et conversations privilégiant le stockage local. Découvrez MA et MA full sur Google Play.", "Bleiben Sie mit Familie und Freunden verbunden: MA bietet Nachrichten, Sprach- und Videoanrufe, Gruppen und lokale Chatverläufe. MA und MA full bei Google Play.", "MA で家族や友人とつながる。メッセージ、音声・ビデオ通話、グループ、ローカル優先の会話。Google Play の MA と MA full をご覧ください。", "MA로 가족, 친구와 연락하세요. 메시지, 음성·영상 통화, 그룹, 로컬 우선 대화. Google Play에서 MA와 MA full을 만나보세요."],
+    description: [
+      "Stay close with MA through messages, voice and video calls. Get MA and MA full on Google Play, and MA full on the App Store.",
+      "用 MA 的聊天、语音和视频通话与亲友保持联络。Google Play 提供 MA 和 MA 全能版，App Store 提供 MA 全能版。",
+      "Mantén el contacto con MA mediante mensajes y llamadas de voz y vídeo. MA y MA full en Google Play. MA full también en App Store.",
+      "Gardez le lien avec MA grâce aux messages et aux appels audio et vidéo. MA et MA full sur Google Play. MA full aussi sur l’App Store.",
+      "Bleiben Sie mit MA per Chat, Sprach- und Videoanruf in Verbindung. MA und MA full bei Google Play. MA full auch im App Store.",
+      "MA のチャットや音声・ビデオ通話で、家族や友人とつながる。MA と MA full は Google Play、MA full は App Store でも配信中です。",
+      "MA의 메시지와 음성·영상 통화로 소중한 사람과 연락하세요. MA와 MA full은 Google Play에서, MA full은 App Store에서도 만나보세요."
+    ],
     preparing: ['Preparing…', '准备下载…', 'Preparando…', 'Préparation…', 'Wird vorbereitet…', '準備中…', '준비 중…'],
     downloadError: ['The download could not start. Check your connection and try again.', '下载暂时失败，请检查网络后重试。', 'No se pudo iniciar la descarga. Comprueba tu conexión e inténtalo de nuevo.', 'Le téléchargement n’a pas pu démarrer. Vérifiez votre connexion et réessayez.', 'Der Download konnte nicht starten. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.', 'ダウンロードを開始できませんでした。接続を確認し、もう一度お試しください。', '다운로드를 시작할 수 없습니다. 연결을 확인하고 다시 시도하세요.']
   };

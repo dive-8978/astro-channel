@@ -82,16 +82,23 @@ assert.equal(boot('?lang=xx', 'de').selector.value, 'de');
 assert.equal(boot('', 'invalid').selector.value, 'en');
 assert.equal(boot('?lang=%3Cscript%3E', undefined, true).selector.value, 'en');
 for (const language of languages) assert.ok(html.includes(`<option value="${language}">`));
-// The public homepage now sends visitors to the two current store listings.
+// Each edition links to its verified public store listings.
 // No stale service-worker download, test build or developer-only AAB links.
 for (const packageName of ['com.astrobridge.ma', 'com.astrobridge.ma.full']) {
   assert.ok(html.includes(`https://play.google.com/store/apps/details?id=${packageName}"`));
 }
-assert.equal((html.match(/data-edition="/g) || []).length, 2);
+const editions = Object.fromEntries(
+  Array.from(html.matchAll(/<article\b[^>]*\bdata-edition="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g),
+    ([, name, content]) => [name, content])
+);
+assert.deepEqual(Object.keys(editions), ['MA', 'MA full']);
+assert.match(editions.MA, /iOS · Release pending/);
+assert.doesNotMatch(editions.MA, /apps\.apple\.com/);
+assert.ok(editions['MA full'].includes('href="https://apps.apple.com/app/ma-full/id6820893444"'));
+assert.doesNotMatch(editions['MA full'], /iOS · Release pending/);
 assert.match(html, /1\.6\.91 \(116\)/);
 assert.match(html, /MA Square · Beta/);
 assert.match(html, /Card redemption is not active/);
-assert.match(html, /iOS · Release pending/);
 assert.match(html, /Chat history is stored locally\. Online delivery/);
 assert.doesNotMatch(html + code, /1\.5\.1|MA Website|MA Social|Store-safe|multipart-download|ma-download-sw/);
 assert.doesNotMatch(html, /href="[^"]+\.(?:aab|ipa)(?:["?])/);
