@@ -832,3 +832,11 @@
     gap: 3px;
   }
 }
+
+.ap-professional-banner {
+  margin-top: 24px;
+}
+.ap-professional-banner img {
+  max-height: 340px;
+  object-fit: contain;
+}
