@@ -13,8 +13,9 @@
   <meta property="og:description" content="Find the right part. Keep the story of every repair. From Earth to the next frontier.">
   <meta property="og:url" content="https://www.astrochannel.one/astropart.html">
   <meta property="og:image" content="https://www.astrochannel.one/assets/astropart/repair-robot.jpg">
-  <link rel="stylesheet" href="/assets/astropart.css?v=20261111">
-  <script defer src="/assets/astropart.js?v=20261111"></script>
+  <link rel="stylesheet" href="/assets/astropart.css?v=20261111b">
+  <script defer src="/assets/astropart-translations.js?v=20261111b"></script>
+  <script defer src="/assets/astropart.js?v=20261111b"></script>
 </head>
 <body class="ap-page">
   <a class="ap-skip" href="#main" data-ap="skip">Skip to content</a>
@@ -22,13 +23,11 @@
     <a class="ap-parent" href="/professional.html"><img src="/assets/astrobridge-mark-256.png" width="32" height="32" alt="AstroBridge"><span>ASTROBRIDGE <small data-ap="ecosystem">ECOSYSTEM</small></span></a>
     <nav aria-label="AstroPart">
       <a href="#how" data-ap="navHow">The experience</a>
+      <a href="#verify" data-ap="navVerify">Hash lookup</a>
       <a href="#chain" data-ap="navChain">On-chain vision</a>
       <a href="#horizon" data-ap="navHorizon">Beyond Earth</a>
     </nav>
-    <div class="ap-languages" role="group" aria-label="Language">
-      <button type="button" data-ap-language="en" aria-pressed="true">EN</button>
-      <button type="button" data-ap-language="zh" aria-pressed="false">中文</button>
-    </div>
+    <label class="ap-language-control"><span class="ap-sr-only" data-ap="language">Language</span><select id="ap-language-select"><option value="en">English</option><option value="zh">中文</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="ko">한국어</option></select></label>
   </header>
   <main id="main">
     <section class="ap-hero">
@@ -63,6 +62,25 @@
       </div>
       <div class="ap-rollout"><span class="ap-status" data-ap="chainStatus">ON-CHAIN ROLLOUT / IN DEVELOPMENT</span><p data-ap="chainNote">Free on-chain registration is the planned service. The current pilot provides lookup and application records; chain registration will open after integration and acceptance. Parts, repairs and delivery are priced by their providers.</p><a href="/astro-chain.html"><span data-ap="meetChain">Explore Astro AI Chain</span> ↗</a></div>
     </div></section>
+    <section class="ap-verify ap-shell" id="verify">
+      <div class="ap-section-heading"><div><p class="ap-eyebrow" data-ap="verifyLabel">WEB3 / HASH LOOKUP</p><h2 data-ap="verifyTitle">Check the record<br>behind the machine.</h2></div><p data-ap="verifyIntro">Look up a public AstroPart registration hash or label code.</p></div>
+      <form id="ap-lookup-form" class="ap-lookup-form">
+        <label for="ap-hash" data-ap="hashLabel">Registration hash or label code</label>
+        <div><input id="ap-hash" name="ref" type="text" minlength="1" maxlength="66" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="0x… / AstroPart label code" data-ap-placeholder="hashPlaceholder" required><button class="ap-button" type="submit" data-ap="lookupButton">Look up record</button></div>
+      </form>
+      <p id="ap-lookup-status" role="status" aria-live="polite" class="ap-lookup-status"></p>
+      <section class="ap-lookup-result" id="ap-lookup-result" aria-label="Lookup result" hidden>
+        <dl>
+          <div><dt data-ap="resultName">Record</dt><dd data-result="name"></dd></div>
+          <div><dt data-ap="resultManufacturer">Manufacturer</dt><dd data-result="manufacturer"></dd></div>
+          <div><dt data-ap="resultHash">Registration hash</dt><dd data-result="hash"></dd></div>
+          <div><dt data-ap="resultIntegrity">Registration integrity</dt><dd data-result="integrity"></dd></div>
+          <div><dt data-ap="resultChain">Chain receipt lookup</dt><dd data-ap="chainPending">Integration pending</dd></div>
+        </dl>
+      </section>
+      <div class="ap-verify-links"><a href="https://130.94.65.212/docs" target="_blank" rel="noopener noreferrer"><span data-ap="apiLink">Developer API reference</span> ↗</a><a href="/astro-chain.html"><span data-ap="meetChain">Explore Astro AI Chain</span> ↗</a></div>
+      <p class="ap-verify-note" data-ap="verifyNote">Registration hashes check application records. On-chain transaction and block receipt lookup will follow the approved Astro AI Chain integration.</p>
+    </section>
     <section class="ap-community ap-shell">
       <p class="ap-eyebrow" data-ap="peopleLabel">04 / ONE ECOSYSTEM, MANY HANDS</p>
       <div class="ap-split"><h2 data-ap="peopleTitle">Built around the people<br>who keep robots alive.</h2><div class="ap-audiences">

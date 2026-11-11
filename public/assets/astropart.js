@@ -48,14 +48,44 @@
     readNews: "阅读项目进展", backEcosystem: "探索 Astro 项目生态", newsroom: "新闻频道"
   };
 
+  const translations = window.ASTROPART_TRANSLATIONS || {};
+  const isSupported = value => Object.prototype.hasOwnProperty.call(entries, value);
+  let dictionary = {};
+  const lookupState = { message: "", record: null, busy: false };
+
   function normalize(value) {
-    return String(value || "en").split(/[-_]/)[0];
+    return String(value || "en").toLowerCase().split(/[-_]/)[0];
+  }
+  function renderLookup() {
+    const status = document.querySelector("#ap-lookup-status");
+    const result = document.querySelector("#ap-lookup-result");
+    if (!status || !result) return;
+    status.textContent = dictionary[lookupState.message] || "";
+    result.hidden = !lookupState.record;
+    if (lookupState.record) {
+      const record = lookupState.record;
+      const values = {
+        name: record.name,
+        manufacturer: record.manufacturer,
+        hash: record.registrationHash,
+        integrity: dictionary[record.integrityVerified ? "integrityVerified" : "integrityReview"]
+      };
+      Object.entries(values).forEach(([key, value]) => {
+        result.querySelector('[data-result="' + key + '"]').textContent = value || "—";
+      });
+    }
+    document.querySelector("#ap-lookup-form button").disabled = lookupState.busy;
   }
   function apply(requested) {
-    const requestedLanguage = normalize(requested);
-    const language = isProjectPage ? (requestedLanguage === "zh" ? "zh" : "en") : (entries[requestedLanguage] ? requestedLanguage : "en");
+    const normalized = normalize(requested);
+    const language = isSupported(normalized) ? normalized : "en";
     const [entryLabel, entrySummary, entryCTA] = entries[language];
-    const dictionary = { ...english, ...(language === "zh" ? chinese : {}), entryLabel, entrySummary, entryCTA };
+    dictionary = {
+      ...english,
+      ...(language === "zh" ? chinese : {}),
+      ...(translations[language] || {}),
+      entryLabel, entrySummary, entryCTA
+    };
     nodes.forEach(node => {
       if (dictionary[node.dataset.ap] !== undefined) node.textContent = dictionary[node.dataset.ap];
     });
@@ -65,13 +95,17 @@
       link.href = url.pathname + url.search + url.hash;
     });
     if (isProjectPage) {
-      document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
-      document.title = language === "zh" ? "AstroPart 星件链 — 让机器人维修更便捷" : "AstroPart — A world where every robot can be repaired";
-      const description = language === "zh" ? "AstroPart 星件链连接机器人身份、适配配件与维修记录，迈向机器人和部件免费上链，从地球延伸至未来星际。" : "AstroPart connects robot identity, compatible parts and repair knowledge. Explore the pilot and our vision for free robot and component registration on Astro AI Chain.";
-      document.querySelector('meta[name="description"]').content = description;
-      document.querySelector('meta[property="og:title"]').content = document.title;
-      document.querySelector('meta[property="og:description"]').content = description;
-      document.querySelectorAll("[data-ap-language]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.apLanguage === language)));
+      document.documentElement.lang = language === "zh" ? "zh-CN" : language;
+      document.title = dictionary.pageTitle;
+      document.querySelector('meta[name="description"]').content = dictionary.pageDescription;
+      document.querySelector('meta[property="og:title"]').content = dictionary.pageTitle;
+      document.querySelector('meta[property="og:description"]').content = dictionary.pageDescription;
+      document.querySelector("#ap-language-select").value = language;
+      document.querySelector(".ap-hero-art img").alt = dictionary.robotAlt;
+      document.querySelector("#ap-lookup-result").setAttribute("aria-label", dictionary.resultLabel);
+      document.querySelectorAll("[data-ap-placeholder]").forEach(node => {
+        node.placeholder = dictionary[node.dataset.apPlaceholder];
+      });
       document.querySelectorAll('a[href^="/"]').forEach(link => {
         const url = new URL(link.href, location.href);
         if (url.pathname.endsWith(".html")) {
@@ -83,6 +117,7 @@
       url.searchParams.set("lang", language);
       history.replaceState(null, "", url);
       try { localStorage.setItem("ma.program.language", language); } catch (_) {}
+      renderLookup();
     }
   }
 
@@ -91,6 +126,51 @@
     try { language = localStorage.getItem("ma.program.language"); } catch (_) {}
   }
   apply(language || "en");
-  document.querySelectorAll("[data-ap-language]").forEach(button => button.addEventListener("click", () => apply(button.dataset.apLanguage)));
+  document.querySelector("#ap-language-select")?.addEventListener("change", event => apply(event.target.value));
   document.querySelector("#language")?.addEventListener("change", event => apply(event.target.value));
+
+  document.querySelector("#ap-lookup-form")?.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (lookupState.busy) return;
+    const input = document.querySelector("#ap-hash").value.trim();
+    lookupState.record = null;
+    if (!/^(?:0x[0-9a-f]{64}|[a-z0-9_-]{1,64})$/i.test(input)) {
+      lookupState.message = "lookupInvalid";
+      renderLookup();
+      return;
+    }
+    lookupState.message = "lookupChecking";
+    lookupState.busy = true;
+    renderLookup();
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 12000);
+    try {
+      const response = await fetch("/api/astropart-lookup?ref=" + encodeURIComponent(input), {
+        headers: { Accept: "application/json" },
+        signal: controller.signal,
+        cache: "no-store"
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        const errors = {
+          INVALID_REFERENCE: "lookupInvalid", RECORD_NOT_FOUND: "lookupMissing",
+          RECORD_UNAVAILABLE: "lookupRevoked", RECORD_PROOF_FAILED: "lookupProofFailed",
+          RATE_LIMITED: "lookupBusy"
+        };
+        lookupState.message = errors[result.error] || "lookupUnavailable";
+      } else {
+        if (!/^0x[0-9a-f]{64}$/i.test(result.registrationHash || "") ||
+            typeof result.integrityVerified !== "boolean" ||
+            result.chainReceiptStatus !== "INTEGRATION_PENDING") throw new Error("Invalid lookup result");
+        lookupState.record = result;
+        lookupState.message = "lookupFound";
+      }
+    } catch {
+      lookupState.message = "lookupUnavailable";
+    } finally {
+      clearTimeout(timer);
+      lookupState.busy = false;
+      renderLookup();
+    }
+  });
 })();
