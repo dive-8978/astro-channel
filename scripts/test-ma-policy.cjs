@@ -18,6 +18,7 @@ assert.equal(policy.motherFund.publicWallet,null);
 let apiHandler;vm.runInNewContext(read('api/ma-program-state.js').replace('export default function handler','function handler')+'; apiHandler=handler;', {set apiHandler(v){apiHandler=v;}});
 let response;apiHandler({method:'GET'},{setHeader(){},status(code){assert.equal(code,200);return this;},json(body){response=body;}});
 assert.equal(Number(response.motherFund.plannedAllocationMA),policy.motherFund.allocationMA);
+assert.equal(response.motherFund.policyRevision,policy.revision);
 assert.equal(Number(response.cardRedemption.plannedPoolMA),policy.redemption.poolMA);
 assert.equal(Number(response.burn.plannedReserveMA),policy.burn.reserveMA);
 assert.equal(Number(response.burn.plannedDailyMA),policy.burn.days1To364MA);

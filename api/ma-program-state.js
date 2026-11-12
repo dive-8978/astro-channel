@@ -47,7 +47,7 @@ export default function handler(request, response) {
     },
     motherFund: {
       plannedAllocationMA: PLANNED_MOTHER_FUND,
-      policyRevision: "2026-10-01",
+      policyRevision: "2026-11-12",
       publicWallet: null,
       matchingBurnMA: "20000000",
       matchingBurnSource: "separate-company-reserve",
