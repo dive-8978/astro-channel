@@ -138,6 +138,8 @@ footer{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.
   <link rel="stylesheet" href="/assets/technology-imagery.css?v=20261009a">
   <script defer src="/assets/technology-imagery.js?v=20261009a"></script>
   <link rel="stylesheet" href="/assets/readable-type.css?v=20261009a">
+  <link rel="stylesheet" href="/assets/technology-superchain.css?v=20261112a">
+  <script defer src="/assets/technology-superchain.js?v=20261112a"></script>
 </head>
 
 <body data-reading="technology">
@@ -156,16 +158,46 @@ footer{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.
       <a href="technology.html">Technology</a>
       <a href="progress.html">Progress</a>
     </div>
+    <select id="tech-language" class="tech-lang" aria-label="Language"><option value="en">English</option><option value="zh">中文</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="ja">日本語</option><option value="ko">한국어</option></select>
     <div class="x-icon" onclick="window.open('https://x.com/Astro___Channel','_blank')">
       <svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
     </div>
   </div>
 </nav>
 
-<h1 class="page-title">Technology</h1>
-<p class="page-desc">Engineering evidence and research goals, separated by delivery stage.</p>
+<section class="tech-feature" aria-labelledby="tech-main-title">
+  <div><p class="tech-kicker" data-t="heroKicker">ASTROBRIDGE / MULTICHAIN INFRASTRUCTURE</p><h1 id="tech-main-title" data-t="heroTitle">One intent.<br>Many networks.</h1><p class="lead" data-t="heroLead">AstroBridge is an intent and interoperability layer designed to help applications and wallets work across networks—with user authorization at the center.</p><div class="tech-actions"><a class="tech-button primary" href="#capabilities" data-t="heroButton">Explore the capabilities ↓</a><a class="tech-button secondary" href="/console.html" data-t="heroSecondary">Open the console ↗</a></div></div>
+  <div class="tech-hero-art"><span data-t="heroArt">Concept illustration · not a live network map</span></div>
+</section>
+<section class="tech-intro" id="overview"><div><p class="tech-kicker" data-t="introKicker">01 / THE IDEA</p><h2 class="tech-section-title" data-t="introTitle">A superchain approach to connectivity.</h2></div><div><p class="tech-section-lead" data-t="introBody">Different networks have different assets, interfaces and rules. AstroBridge brings these interactions into a shared intent-oriented framework, so a product can present a clearer path from a user’s request to an authorized action. “Superchain” describes this broader interoperability vision—not a claim that every network or route is live.</p></div></section>
+<section class="tech-section" id="capabilities"><div class="tech-section-head"><p class="tech-kicker" data-t="capKicker">02 / WHAT IT IS DESIGNED TO DO</p><h2 class="tech-section-title" data-t="capTitle">One framework, multiple capabilities.</h2><p class="tech-section-lead" data-t="capIntro">Built for applications that need to connect user intent, network information and transaction workflows.</p></div><div class="tech-capabilities">
+<article><span class="number">01 / INTENT</span><h3 data-t="c1h">Express the outcome</h3><p data-t="c1p">Describe an intended action in a consistent request structure, rather than building a separate experience for every network.</p></article>
+<article><span class="number">02 / AUTHORIZATION</span><h3 data-t="c2h">User-controlled signing</h3><p data-t="c2p">Designed around non-custodial authorization: users review the wallet, network and transaction before approving supported actions.</p></article>
+<article><span class="number">03 / ROUTING</span><h3 data-t="c3h">Explore routes and quotes</h3><p data-t="c3p">Interfaces can request route and quote information where integrations are available. A quote is a proposal, not a completed transfer.</p></article>
+<article><span class="number">04 / NETWORKS</span><h3 data-t="c4h">A broad multichain design</h3><p data-t="c4p">The integration framework spans multiple network configurations. Actual support is assessed by network, operation and release stage.</p></article>
+<article><span class="number">05 / INTEGRATION</span><h3 data-t="c5h">Application &amp; API layer</h3><p data-t="c5p">Wallets and applications can be designed around a shared interface for requests, route information and status.</p></article>
+<article><span class="number">06 / VISIBILITY</span><h3 data-t="c6h">Follow the lifecycle</h3><p data-t="c6p">Track a request through authorization, submission and receipt checks. Cross-chain completion requires destination evidence too.</p></article>
+</div></section>
+<section class="tech-section" id="workflow"><div class="tech-section-head"><p class="tech-kicker" data-t="flowKicker">03 / HOW IT WORKS</p><h2 class="tech-section-title" data-t="flowTitle">From intention to verification.</h2><p class="tech-section-lead" data-t="flowIntro">An illustrative workflow. The available steps depend on the network, wallet and integration.</p></div><div class="tech-flow">
+<article><strong>01</strong><h3 data-t="f1h">Request</h3><p data-t="f1p">Choose an action, asset and destination in an application.</p></article>
+<article><strong>02</strong><h3 data-t="f2h">Review</h3><p data-t="f2p">Check the route, network, address, amount and applicable fees.</p></article>
+<article><strong>03</strong><h3 data-t="f3h">Authorize</h3><p data-t="f3p">Approve the supported transaction with the user’s own wallet.</p></article>
+<article><strong>04</strong><h3 data-t="f4h">Verify</h3><p data-t="f4p">Follow the status and check the relevant network receipts.</p></article>
+</div></section>
+<section class="tech-section" id="architecture"><div class="tech-section-head"><p class="tech-kicker" data-t="archKicker">04 / THE ECOSYSTEM</p><h2 class="tech-section-title" data-t="archTitle">Clear roles. Connected experiences.</h2></div><div class="tech-boundary"><article><h3 data-t="a1h">AstroBridge / coordination</h3><p data-t="a1p">The intent and API layer brings together application requests, authorization and network integration.</p><p data-t="a1b">Configured networks, implemented functions and verified production routes are different categories.</p></article><article><h3 data-t="a2h">MA &amp; AstroAI Chain / distinct roles</h3><p data-t="a2p">MA is the user-facing communication app. AstroAI Chain is a separate network research and engineering initiative.</p><p data-t="a2b">Future integrations are subject to their own development and acceptance.</p></article></div></section>
+<section class="tech-section tech-qa" id="questions"><div class="tech-section-head"><p class="tech-kicker" data-t="faqKicker">05 / COMMON QUESTIONS</p><h2 class="tech-section-title" data-t="faqTitle">Understand the boundaries.</h2></div>
+<details><summary data-t="q1">Is AstroBridge a single blockchain?</summary><p data-t="a1">AstroBridge is an interoperability and intent framework. AstroAI Chain is a separate network project; connecting the two is a development goal, not evidence of a completed integration.</p></details>
+<details><summary data-t="q2">Does a supported network mean every action works?</summary><p data-t="a2">No. Network configuration, quote availability, transaction execution and destination settlement each need their own verification. Availability can vary by asset and route.</p></details>
+<details><summary data-t="q3">Does AstroBridge take custody of my wallet?</summary><p data-t="a3">The architecture is designed for user-controlled authorization. Review the exact wallet and provider flow for a particular integration, and never share a seed phrase or private key.</p></details>
+<details><summary data-t="q4">Where can developers check progress?</summary><p data-t="a4">Use the console and the dated engineering readiness report below. Preview, testing and production acceptance are labeled separately.</p></details>
+<div class="tech-actions"><a class="tech-button primary" href="/console.html" data-t="devButton">Explore the console ↗</a><a class="tech-button secondary" href="/astrobridge-internal-certification.html" data-t="evidenceButton">Read engineering evidence ↗</a></div></section>
+
+<section class="tech-legacy" id="evidence">
+<h2 class="page-title" data-t="legacyTitle">Engineering evidence &amp; research</h2>
+<p class="page-desc" data-t="legacyIntro">Engineering evidence and research goals, separated by delivery stage.</p>
 <figure class="tech-visual tech-visual--wide"><img src="/assets/technology-20261009/signed-coordination-1280.webp" srcset="/assets/technology-20261009/signed-coordination-640.webp 640w, /assets/technology-20261009/signed-coordination-1280.webp 1280w" sizes="(max-width: 720px) 90vw, 1100px" width="1280" height="720" alt="" loading="lazy" decoding="async"><figcaption data-tech-caption>Concept artwork · not a product screenshot or live network map.</figcaption></figure>
 
+<div class="tech-original" lang="en">
 <div class="tech-grid">
   <div class="tech-node big">
     <div class="icon">🪪</div>
@@ -231,6 +263,8 @@ footer{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.
   <p>Light-client and zero-knowledge verification are research directions. AstroBridge does not currently claim universal trust-minimized verification or full on-chain execution.</p>
 </div>
 
+</div>
+</section>
 <footer>
   <p>© 2026 AstroBridge | FOR DEMONSTRATION ONLY</p>
 </footer>

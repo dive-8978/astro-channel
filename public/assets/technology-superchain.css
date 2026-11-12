@@ -1,0 +1,31 @@
+/* AstroBridge technology page: a clearer product narrative, keeping the evidence below. */
+body[data-reading="technology"]{background:#071219;color:#eff7f5;font-family:Inter,system-ui,sans-serif}
+body[data-reading="technology"] #particles{opacity:.16;pointer-events:none}
+body[data-reading="technology"] .container{max-width:1280px;padding:20px 28px 72px}
+body[data-reading="technology"] nav{margin-bottom:18px;padding:8px 0 20px;border-bottom:1px solid #ffffff18}
+body[data-reading="technology"] .nav-links a{color:#c0d3d1}
+body[data-reading="technology"] .back-home{color:#b8d8d0;border-color:#a7d6c34d;background:transparent}
+body[data-reading="technology"] .back-home:hover{background:#b7e9cf;color:#071c16}
+.tech-lang{color:#e9f8f1;background:#102923;border:1px solid #41695c;border-radius:8px;padding:9px 12px;font-size:15px;min-height:42px}
+.tech-feature{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:48px;align-items:center;padding:76px 0 62px;border-bottom:1px solid #b1dfcb24}
+.tech-kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#96ddbc;font-weight:700;margin:0 0 20px}
+.tech-feature h1{white-space:pre-line;font-size:clamp(2.5rem,5vw,5rem);letter-spacing:-.055em;line-height:1.06;margin-bottom:24px;max-width:700px}
+.tech-feature .lead{font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.75;color:#bbd0ca;max-width:630px}
+.tech-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.tech-button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;border-radius:8px;padding:12px 19px;font-size:15px;font-weight:700;text-decoration:none;border:1px solid #a1dcc050;transition:.2s}
+.tech-button.primary{background:#b9efd0;color:#09251a;border-color:#b9efd0}.tech-button.secondary{color:#e4f6ed;background:#ffffff06}.tech-button:hover{transform:translateY(-2px)}
+.tech-hero-art{min-height:410px;border:1px solid #7bb5a237;border-radius:20px;background:linear-gradient(180deg,#071a1b06,#06181748 75%,#061817cc),url('/assets/technology-20261009/signed-coordination-1280.webp') center/cover;display:flex;align-items:flex-end;padding:24px;box-shadow:0 30px 80px #0004}
+.tech-hero-art span{color:#c3e3d5;background:#102d27cf;border:1px solid #a1dcc04d;border-radius:999px;padding:8px 13px;font-size:13px}
+.tech-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;padding:80px 0;border-bottom:1px solid #b1dfcb24}
+.tech-section-title{font-size:clamp(2rem,3vw,3.1rem);letter-spacing:-.04em;line-height:1.15}.tech-section-lead{color:#bdd0cc;line-height:1.8;font-size:18px}
+.tech-section{padding:80px 0;border-bottom:1px solid #b1dfcb24}.tech-section-head{max-width:760px;margin-bottom:34px}.tech-section-head h2{margin-bottom:15px}
+.tech-capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tech-capabilities article{padding:28px;border:1px solid #a5d7c52d;border-radius:14px;background:linear-gradient(145deg,#132c2b,#0c1c20);min-height:205px}
+.tech-capabilities .number{color:#9be0bd;font-size:13px;letter-spacing:.1em}.tech-capabilities h3{font-size:20px;color:#eff8f4;margin:23px 0 10px}.tech-capabilities p,.tech-flow p,.tech-boundary p,.tech-qa p{color:#b8cbc6;line-height:1.7;font-size:16px}
+.tech-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tech-flow article{border-top:2px solid #78d3a2;padding:20px 14px 0 0}.tech-flow strong{color:#8ed8af;font-size:14px}.tech-flow h3{font-size:19px;margin:16px 0 10px}
+.tech-boundary{display:grid;grid-template-columns:1fr 1fr;gap:22px}.tech-boundary article{background:#0f2625;border-radius:14px;padding:28px;border:1px solid #a5d7c52a}.tech-boundary h3{color:#edf8f1;font-size:20px;margin-bottom:13px}.tech-boundary p+p{margin-top:12px}
+.tech-qa details{border-bottom:1px solid #a5d7c532;padding:18px 0}.tech-qa summary{cursor:pointer;font-weight:700;font-size:18px;line-height:1.5}.tech-qa details p{max-width:860px;padding:14px 0 5px}
+.tech-legacy{padding-top:80px}.tech-legacy .page-title{font-size:2rem}.tech-legacy .tech-node{animation:none;background:#173a34;box-shadow:none;border:1px solid #9dd4bf35}.tech-legacy .tech-card{background:#102522;border-color:#a5d7c52a}.tech-legacy .tech-card p{color:#c1d4d0}.tech-legacy .tech-card h3{color:#a9e9c3}
+@media(max-width:900px){.tech-feature,.tech-intro{grid-template-columns:1fr;gap:30px}.tech-feature{padding:52px 0}.tech-hero-art{min-height:330px}.tech-capabilities{grid-template-columns:repeat(2,1fr)}.tech-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){body[data-reading="technology"] .container{padding:16px 20px 60px}.tech-feature{padding:40px 0 48px}.tech-hero-art{min-height:240px}.tech-intro,.tech-section{padding:55px 0}.tech-capabilities,.tech-boundary{grid-template-columns:1fr}.tech-flow{gap:24px 12px}.tech-feature h1{white-space:pre-line;font-size:2.6rem}.tech-actions .tech-button{flex:1 1 auto}}
+@media(prefers-reduced-motion:reduce){.tech-button{transition:none}.tech-button:hover{transform:none}}

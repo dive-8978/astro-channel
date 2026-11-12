@@ -1,0 +1,25 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const html = fs.readFileSync('public/technology.html','utf8');
+const code = fs.readFileSync('public/assets/technology-superchain.js','utf8');
+const keys = [...html.matchAll(/data-t="([^"]+)"/g)].map(x=>x[1]);
+assert.equal(new Set(keys).size,57);
+assert.match(html, /technology-superchain\.css/);
+assert.match(html, /technology-superchain\.js/);
+assert.match(html, /technology-20261009\/signed-coordination-1280\.webp/);
+const values = keys.map(key => ({dataset:{t:key},innerText:'english:'+key,textContent:''}));
+const fakeNode=()=>({textContent:'',querySelectorAll:()=>[{},{textContent:''}],querySelector:()=>({textContent:''})});
+const fakeCard=()=>({querySelector:s=>s==='h3'?{textContent:''}:{textContent:'',querySelector:()=>({textContent:''}),append(){}}});
+const original={innerHTML:'<original>',lang:'en',querySelectorAll:s=>s==='.tech-node'?Array.from({length:9},fakeNode):Array.from({length:4},fakeCard)};
+const nav=Array.from({length:4},()=>({textContent:'',getAttribute:()=>'/technology.html',setAttribute(){}}));
+const home={textContent:''},footer={textContent:''},select={value:'',addEventListener(_event,fn){this.change=fn;}};
+const links=nav;
+const document={documentElement:{lang:'en'},getElementById:()=>select,querySelectorAll:s=>s==='[data-t]'?values:s==='.nav-links a'?nav:s==='a[href]'?links:[],querySelector:s=>s==='.tech-original'?original:s==='.back-home'?home:s==='footer p'?footer:null};
+const context={document,URL,URLSearchParams,location:{search:'?lang=zh',href:'https://example.test/technology.html?lang=zh'},history:{replaceState(){}},localStorage:{getItem(){return null},setItem(){}}};
+vm.runInNewContext(code,context);
+const title=()=>values.find(x=>x.dataset.t==='heroTitle').textContent;
+assert.match(title(),/一个意图/);assert.equal(document.documentElement.lang,'zh');assert.equal(home.textContent,'← 首页');
+for(const language of ['es','fr','de','ja','ko']){select.change({target:{value:language}});assert.equal(document.documentElement.lang,language);assert.notEqual(title(),'english:heroTitle');assert.equal(original.lang,language);}
+select.change({target:{value:'en'}});assert.equal(document.documentElement.lang,'en');assert.equal(title(),'english:heroTitle');
+console.log('PASS technology: 57 translated content fields in 7 languages, navigation, original image, language switching and fallback.');
