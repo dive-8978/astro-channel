@@ -62,7 +62,7 @@
 a:focus-visible,button:focus-visible,input:focus-visible { outline: 2px solid #ffd4a8; outline-offset: 4px; }
 .translation-note { padding: 14px 20px; color: #e4c4ab; background: rgba(255,203,175,.05); border-radius: 12px; font-size: 12px; }
 .translation-note[hidden] { display: none; }
-.page-mother .allocation-bar span { width: 2%; min-width: 8px; }
+.page-mother .allocation-bar span { width: 1%; min-width: 8px; }
 @keyframes fund-ripple { 0% { transform: translate(-50%,-50%) scale(.2); opacity: .5; } 100% { transform: translate(-50%,-50%) scale(4); opacity: 0; } }
 @media(min-width:981px) { .page-mother .nav-links { gap: 14px; } .page-mother .nav-links a { font-size: 12px; } }
 @media(max-width:980px) { .fund-grid.three { grid-template-columns: 1fr; } .fund-buyback-banner { grid-template-columns: 1fr; } .wall-track { grid-template-columns: 1fr 1fr; } }

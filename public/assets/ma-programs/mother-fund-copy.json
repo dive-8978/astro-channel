@@ -8,8 +8,8 @@
     "zh": "参与公益计划"
   },
   "heroAmount": {
-    "en": "20,000,000 MA",
-    "zh": "20,000,000 MA"
+    "en": "10,000,000 MA",
+    "zh": "10,000,000 MA"
   },
   "heroPledge": {
     "en": "Company-funded. Dedicated to mothers and children.",
@@ -24,8 +24,8 @@
     "zh": "价格会变，公益用途不变。"
   },
   "pledgeBody": {
-    "en": "AstroBridge Technology Limited plans to supply 20,000,000 MA for practical assistance to mothers and children facing hardship worldwide. The entire allocation and its realized sale proceeds are intended exclusively for this purpose, regardless of MA’s market price.",
-    "zh": "AstroBridge Technology Limited 计划提供 2,000 万 MA，帮助全球处于困境中的母亲与儿童。无论 MA 价格如何变化，这笔代币及其实际售出所得都专用于这一公益用途。"
+    "en": "AstroBridge Technology Limited plans to supply 10,000,000 MA for practical assistance to mothers and children facing hardship worldwide. The entire allocation and its realized sale proceeds are intended exclusively for this purpose, regardless of MA’s market price.",
+    "zh": "AstroBridge Technology Limited 计划提供 1,000 万 MA，帮助全球处于困境中的母亲与儿童。无论 MA 价格如何变化，这笔代币及其实际售出所得都专用于这一公益用途。"
   },
   "careTitle": {
     "en": "Everyday essentials",
@@ -220,12 +220,12 @@
     "zh": "持续的公司投入"
   },
   "cycleTitle": {
-    "en": "20M for care. A separate 20M for the matching burn.",
-    "zh": "2,000 万用于公益，另备 2,000 万用于对应销毁。"
+    "en": "10M care proposal; prior separate burn is under review.",
+    "zh": "1,000 万公益提案；旧的额外销毁安排待确认。"
   },
   "cycleBody": {
-    "en": "After the initial fund allocation is fully sold and reconciled, the company plans to burn an additional 20,000,000 MA from a separate company reserve. The annual plan then allocates 4% of eligible audited net profit: 2% to buy MA for the fund, and 2% to buy MA for burning.",
-    "zh": "初始基金额度全部售出并完成核对后，公司计划从另行准备的公司储备中销毁 2,000 万 MA。此后年度计划投入符合口径的经审计净利润的 4%：2% 回购 MA 补充基金，2% 回购 MA 后销毁。"
+    "en": "An earlier proposal described a separate 20,000,000 MA burn and annual 4% profit-based spending. Their amounts, triggers and continuation are under review after the fund target changed. No reserve, sale or burn is verified.",
+    "zh": "旧方案另列 2,000 万 MA 对应销毁及年度利润 4% 回购安排；基金目标变更后，其额度、触发条件和是否继续均待确认。储备、售出和销毁均未核验。"
   },
   "readBuyback": {
     "en": "Read the full buyback plan →",
@@ -272,28 +272,28 @@
     "zh": "初始基金代币、公司对应销毁储备及年度回购是三项不同的配置。已售代币归买家所有，不能将它们再计为对应销毁。"
   },
   "stageFundTitle": {
-    "en": "Supply the 20M fund",
-    "zh": "提供 2,000 万基金额度"
+    "en": "Supply the 10M fund",
+    "zh": "提供 1,000 万基金额度"
   },
   "stageFundBody": {
-    "en": "Following a future listing and the publication of funding, custody and oversight rules, place 20,000,000 company-supplied MA in a dedicated public wallet. Its proceeds are restricted to aid.",
-    "zh": "未来上市并公布注资、保管与监督规则后，将公司提供的 2,000 万 MA 转入专用公开钱包，售出所得专用于援助。"
+    "en": "Following a future listing and the publication of funding, custody and oversight rules, place 10,000,000 company-supplied MA in a dedicated public wallet. Its proceeds are restricted to aid.",
+    "zh": "未来上市并公布注资、保管与监督规则后，将公司提供的 1,000 万 MA 转入专用公开钱包，售出所得专用于援助。"
   },
   "stageBurnTitle": {
-    "en": "Match with a separate 20M burn",
-    "zh": "另备 2,000 万对应销毁"
+    "en": "Prior separate 20M burn under review",
+    "zh": "旧的 2,000 万额外销毁待确认"
   },
   "stageBurnBody": {
-    "en": "Once all initial 20,000,000 fund MA are sold and the sales ledger is reconciled, burn another 20,000,000 MA supplied separately by the company. Publish reserve funding and transaction evidence; never take this allocation from the aid proceeds.",
-    "zh": "初始基金 2,000 万 MA 全部售出且销售账目核对完成后，销毁公司另外提供的 2,000 万 MA。公开储备注资及交易凭证，不从援助所得中扣取这笔额度。"
+    "en": "The earlier 20,000,000 MA matching-burn proposal used the former 20,000,000 MA fund target. The reserve, trigger and continuation are under review; nothing has been funded or burned.",
+    "zh": "旧的 2,000 万 MA 对应销毁基于先前 2,000 万基金目标；储备、触发规则和是否继续均待确认，目前尚未注资或销毁。"
   },
   "stageAnnualTitle": {
     "en": "Continue with 2% + 2% each year",
     "zh": "此后每年持续投入 2% + 2%"
   },
   "stageAnnualBody": {
-    "en": "After the initial sale and matching-burn reconciliation, allocate 4% of eligible annual net profit: one 2% buys MA for the fund; the other 2% buys MA for burning. Both purchases use company funds and have separate records.",
-    "zh": "完成初始售出及对应销毁核对后，每年投入符合口径净利润的 4%：其中 2% 回购 MA 补充基金，另 2% 回购 MA 后销毁。两部分都由公司出资并分别记录。"
+    "en": "An earlier plan proposed spending 4% of eligible annual net profit, with 2% for the fund and 2% for burning. Its continuation and execution conditions are under review; no buyback is claimed.",
+    "zh": "旧方案拟投入符合口径净利润的 4%，其中 2% 用于基金、2% 用于销毁。是否继续及执行条件均待确认，当前不宣称已回购。"
   },
   "basisKicker": {
     "en": "The annual calculation",

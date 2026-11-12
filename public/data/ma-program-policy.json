@@ -24,8 +24,8 @@
     }
   },
   "motherFund": {
-    "allocationMA": 20000000,
-    "initialSupplyPercent": 2,
+    "allocationMA": 10000000,
+    "initialSupplyPercent": 1,
     "companySupplied": true,
     "status": "planned-not-funded",
     "publicWallet": null,
@@ -33,8 +33,8 @@
     "matchingBurn": {
       "allocationMA": 20000000,
       "source": "separate-company-reserve",
-      "trigger": "all initial 20000000 MA sold and sale reconciliation published",
-      "status": "planned-not-funded",
+      "trigger": "earlier proposal: all initial 20000000 MA sold and sale reconciliation published; trigger under review",
+      "status": "prior-proposal-under-review-not-funded",
       "separateFromDailyBurn": true
     }
   },
@@ -48,7 +48,7 @@
   },
   "notice": "Planning figures only. Activation requires verified contracts, funded reserves, eligibility and published final rules. No token value guarantee.",
   "annualBuyback": {
-    "status": "planned-not-active",
+    "status": "prior-proposal-under-review-not-active",
     "start": "after initial fund sale and matching burn reconciliation",
     "profitBasis": "audited annual net profit after tax and prior-loss recovery",
     "totalProfitPercent": 4,

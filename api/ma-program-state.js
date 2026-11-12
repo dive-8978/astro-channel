@@ -1,8 +1,8 @@
 const PLANNED_INITIAL_SUPPLY = "1000000000";
-const PLANNED_CARD_POOL = "30000000";
-const PLANNED_MOTHER_FUND = "20000000";
-const PLANNED_BURN_RESERVE = "100000000";
-const PLANNED_DAILY_BURN = "273972";
+const PLANNED_CARD_POOL = "7000000";
+const PLANNED_MOTHER_FUND = "10000000";
+const PLANNED_BURN_RESERVE = "50000000";
+const PLANNED_DAILY_BURN = "136986";
 
 export default function handler(request, response) {
   response.setHeader("Access-Control-Allow-Origin", "https://astrochannel.one");
@@ -39,6 +39,7 @@ export default function handler(request, response) {
     burn: {
       plannedReserveMA: PLANNED_BURN_RESERVE,
       plannedDailyMA: PLANNED_DAILY_BURN,
+      plannedFinalDayMA: "137096",
       startDate: null,
       verifiedBurnedMA: null,
       verifiedRemainingMA: null,
@@ -50,8 +51,10 @@ export default function handler(request, response) {
       publicWallet: null,
       matchingBurnMA: "20000000",
       matchingBurnSource: "separate-company-reserve",
+      matchingBurnStatus: "prior-proposal-under-review-not-funded",
       annualProfitPercent: { total: 4, fund: 2, burn: 2 },
-      initialSupplySharePercent: "2",
+      annualBuybackStatus: "prior-proposal-under-review-not-active",
+      initialSupplySharePercent: "1",
       verifiedReferenceValueUSD: null,
       disbursementsEnabled: false
     },
@@ -59,7 +62,7 @@ export default function handler(request, response) {
       "published MA token address and ABI",
       "funded reserve and vault addresses",
       "audited burn execution contract",
-      "final burn semantics and 220 MA remainder policy",
+      "final burn semantics and last-day adjustment policy",
       "verified MA market-price source",
       "server-issued card ownership ledger and replay-safe claim service"
     ]
