@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T18:56:48.695Z",
+  "generatedAt": "2026-11-16T06:44:49.782Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -57,6 +57,110 @@
     }
   ],
   "items": [
+    {
+      "id": "cd3bfb0d59ec7d02bbec",
+      "source": "CoinDesk",
+      "title": "Cardano holders vote down $5 million bid to buy warehouse copper",
+      "summary": "Toto Finance’s 22 million ADA treasury request expired Sunday with about 20 million ADA in favor, and none of Cardano’s seven constitutional committee members voted yes.",
+      "url": "https://www.coindesk.com/markets/2026/11/16/cardano-holders-vote-down-usd5-million-bid-to-buy-warehouse-copper",
+      "publishedAt": "2026-11-16T06:27:42.000Z"
+    },
+    {
+      "id": "50e62f01c9efd03785a7",
+      "source": "CoinDesk",
+      "title": "Trump administration to name Nvidia, OpenAI and several others as AI national champions",
+      "summary": "The Wall Street Journal reported that the move aims to help the firms expand overseas and compete with global rivals, though nothing has been confirmed.",
+      "url": "https://www.coindesk.com/markets/2026/11/16/trump-administration-to-name-nvidia-openai-and-several-others-as-u-s-ai-national-champions",
+      "publishedAt": "2026-11-16T06:01:41.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T06:00:00.000Z"
+    },
+    {
+      "id": "e71f065420a2b86c94aa",
+      "source": "Cointelegraph",
+      "title": "Aster CEO suspects foul play after token plunges 32% in minutes",
+      "summary": "Aster’s CEO attributed the extreme volatility to highly leveraged liquidations but said the exchange remained operational.",
+      "url": "https://cointelegraph.com/markets/aster-ceo-suspects-foul-play-after-token-plunges-32-in-minutes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T05:28:40.000Z"
+    },
+    {
+      "id": "dd6df188f3a3e01026da",
+      "source": "CoinDesk",
+      "title": "Bitcoin’s biggest bet is now a drop below $60,000, not a rally above $100,000",
+      "summary": "The $60,000 put has replaced the $100,000 call as bitcoin’s biggest options bet on Deribit, with $900 million in open interest after the recent slide.",
+      "url": "https://www.coindesk.com/markets/2026/11/16/bitcoin-s-biggest-bet-is-now-a-drop-below-usd60-000-not-a-rally-above-usd100-000",
+      "publishedAt": "2026-11-16T05:01:17.000Z"
+    },
+    {
+      "id": "2075935582d813b2c5f6",
+      "source": "Cointelegraph",
+      "title": "Asian chip stocks tumble ahead of Nvidia Q3 earnings",
+      "summary": "The weakness came amid a wider sell-off in regional equity markets, with Japan’s Nikkei 225 down 2% and South Korea’s Kospi losing 2.6%.",
+      "url": "https://cointelegraph.com/markets/asian-chip-stocks-tumble-ahead-of-nvidia-q3-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T04:42:07.000Z"
+    },
+    {
+      "id": "8959a441580de0adbf14",
+      "source": "The Block",
+      "title": "Luxor hit by AI-enabled attack that redirected client hashrate, says vulnerability patched",
+      "summary": "The company said it patched the vulnerability within two hours and that no data was leaked or exfiltrated.",
+      "url": "https://www.theblock.co/news/business/2026-11-15-luxor-attack-client-hashrate-440810",
+      "publishedAt": "2026-11-16T04:35:34.000Z"
+    },
+    {
+      "id": "9c336e1240be34ebcd32",
+      "source": "Cointelegraph",
+      "title": "Luxor CEO warns of AI ‘dark forest’ following Bitcoin miner hijack",
+      "summary": "Attackers redirected customers’ Bitcoin mining power through Luxor’s Commander platform over the weekend, prompting its CEO to issue a warning to crypto businesses.",
+      "url": "https://cointelegraph.com/news/luxor-ceo-warns-of-ai-dark-forest-after-bitcoin-miner-hijack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-16T02:33:07.000Z"
+    },
+    {
+      "id": "e4480eb8fa856d7179ab",
+      "source": "Cointelegraph",
+      "title": "Jensen Huang weighs Nvidia comeback days after shock exit: FT",
+      "summary": "Silicon Valley executives are reportedly organizing a campaign to bring Huang back and are looking to gain White House support.",
+      "url": "https://cointelegraph.com/news/jensen-huang-weighs-nvidia-comeback-days-after-shock-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-15T23:47:45.000Z"
+    },
+    {
+      "id": "f87456668809ef0b8a4e",
+      "source": "Cointelegraph",
+      "title": "US sellers drive Bitcoin crash, Jensen plots Nvidia comeback: Hodler’s Digest",
+      "summary": "Anchorage Digital data suggests the Bitcoin selloff is being driven by US investors. A “war room” has been set up by supporters to reinstate Nvidia boss Jensen Huang.",
+      "url": "https://cointelegraph.com/magazine/us-sellers-drive-bitcoin-crash-jensen-plots-comeback-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-15T22:50:59.000Z"
+    },
+    {
+      "id": "ef5726eee85d837d81dd",
+      "source": "The Block",
+      "title": "CZ denies Binance sold crypto as Bitcoin bounces from four-month low near $62,000",
+      "summary": "The price moves across the market led to $2 billion in crypto liquidations in a single 24-hour period over the weekend.",
+      "url": "https://www.theblock.co/news/markets/2026-11-15-cz-denies-binance-sold-crypto-as-bitcoin-bounces-from-four-month-low-near-62000-440807",
+      "publishedAt": "2026-11-15T21:57:53.000Z"
+    },
+    {
+      "id": "c83411a5e875a5c6b686",
+      "source": "The Block",
+      "title": "Traders claim $6 million profit by spotting BitGo’s public pull request and frontrunning memecoin listing",
+      "summary": "A public BitGo code change on July 27 added support for Cash Cat on Robinhood Chain ten days before Robinhood announced the listing.",
+      "url": "https://www.theblock.co/news/defi/2026-11-15-traders-claim-6-million-profit-by-spotting-bitgos-public-pull-request-and-frontrunning-memecoin-listing-440363",
+      "publishedAt": "2026-11-15T20:33:17.000Z"
+    },
+    {
+      "id": "68ef8f006a4b4630208a",
+      "source": "CoinDesk",
+      "title": "Did prediction markets call the U.S. midterm election?: State of Crypto",
+      "summary": "Prediction markets and polls largely aligned by the end of the 2026 election cycle, and both had notable misses.",
+      "url": "https://www.coindesk.com/policy/2026/11/15/did-prediction-markets-call-the-u-s-midterm-election-state-of-crypto",
+      "publishedAt": "2026-11-15T19:30:00.000Z"
+    },
     {
       "id": "40d8ca087a1704ede8c9",
       "source": "CryptoSlate",
@@ -146,17 +250,9 @@
       "publishedAt": "2026-11-15T11:55:50.000Z"
     },
     {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-15T11:18:48.000Z"
-    },
-    {
       "id": "42dba8edd18000deea87",
       "source": "Cointelegraph",
-      "title": "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+      "title": "Bitcoin falls to 4-month low near $62K as crypto selloff deepens",
       "summary": "The global cryptocurrency market capitalization fell 4% to $2.26 trillion over 24 hours, while Ether and Solana posted double-digit weekly losses.",
       "url": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-15T10:23:17.000Z"
@@ -188,7 +284,7 @@
     {
       "id": "7e2dfacf0f4b2004addd",
       "source": "Cointelegraph",
-      "title": "RWA protocol stUSDT winds down three years after $2.3B TVL peak",
+      "title": "RWA protocol stUSDT winds down 3 years after $2.3B TVL peak",
       "summary": "The stUSDT team did not disclose a reason for winding down the RWA protocol but assured holders that all underlying assets remain fully backed.",
       "url": "https://cointelegraph.com/news/rwa-protocol-stusdt-winds-down-three-years-after-23b-tvl-peak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-15T06:27:26.000Z"
@@ -600,102 +696,6 @@
       "summary": "▶ Bitcoin Magazine Over 300 Pro-Crypto Lawmakers Are Coming Into Congress Mason Lynaugh, executive director of Stand With Crypto, joins BMTV to talk through what the midterms mean for Bitcoin and crypto. This post Over 300 Pro-Crypto Lawmakers Are Coming…",
       "url": "https://bitcoinmagazine.com/videos/over-300-pro-crypto-lawmakers-are-coming-into-congress",
       "publishedAt": "2026-11-13T15:00:13.000Z"
-    },
-    {
-      "id": "b95439c4e72bb774d40e",
-      "source": "The Block",
-      "title": "Tether-backed Twenty One Capital reports $1.09 billion Q3 net income on bitcoin gains",
-      "summary": "Twenty One Capital reported $1.09 billion in Q3 net income, driven by Bitcoin gains, while posting a $4.8 million operating loss.",
-      "url": "https://www.theblock.co/news/business/2026-11-13-tether-backed-twenty-one-capital-reports-1-09-billion-q3-net-income-on-bitcoin-gains-439711",
-      "publishedAt": "2026-11-13T14:50:49.000Z"
-    },
-    {
-      "id": "a586303dfde4f38ba753",
-      "source": "Bitcoin Magazine",
-      "title": "President Trump Taps Two Democrats in Bipartisan Slate of SEC and CFTC Nominees as Both Agencies Run Short-Handed",
-      "summary": "Bitcoin Magazine President Trump Taps Two Democrats in Bipartisan Slate of SEC and CFTC Nominees as Both Agencies Run Short-Handed The White House sent four SEC and CFTC nominees to the Senate on Thursday, including former CFTC Commissioner Kristin Johnson…",
-      "url": "https://bitcoinmagazine.com/news/trump-sec-cftc-nominees-bipartisan",
-      "publishedAt": "2026-11-13T14:45:00.000Z"
-    },
-    {
-      "id": "810dca3016c0b167d608",
-      "source": "The Block",
-      "title": "Ethereum and Layer 1s Explained",
-      "summary": "Ethereum 101 explains how Ethereum made blockchains programmable. It covers smart contracts, accounts and the EVM, ETH and gas fees, Proof of Stake, network upgrades, and how alternative Layer 1s trade off security, decentralization and scalability.",
-      "url": "https://www.theblock.co/learn/campus/ethereum-and-layer-1s-explained-435883",
-      "publishedAt": "2026-11-13T14:12:23.000Z"
-    },
-    {
-      "id": "7482b8f6fc7922f77520",
-      "source": "Bitcoin Magazine",
-      "title": "Bitcoin Price Briefly Crashes to $67,500, Lowest Since August, as Dollar Holds 19-Month High",
-      "summary": "Bitcoin Magazine Bitcoin Price Briefly Crashes to $67,500, Lowest Since August, as Dollar Holds 19-Month High Bitcoin price briefly crashed to about $67,555 around midnight Eastern, its lowest level since August, then recovered near $69,800 on Friday after…",
-      "url": "https://bitcoinmagazine.com/markets/bitcoin-price-trades-near-69100-dollar",
-      "publishedAt": "2026-11-13T14:11:44.000Z"
-    },
-    {
-      "id": "cb8f6539f1f23125fc24",
-      "source": "CoinDesk",
-      "title": "Kraken parent Payward says expansion outside crypto trading helps cushion revenue decline",
-      "summary": "While earnings and the company’s newly introduced financial performance measure remained below year-earlier levels, there are signs of improvement from the second quarter.",
-      "url": "https://www.coindesk.com/business/2026/11/13/kraken-parent-payward-says-expansion-outside-crypto-trading-helps-cushion-revenue-decline",
-      "publishedAt": "2026-11-13T14:02:00.000Z"
-    },
-    {
-      "id": "6d5dbeb6c873948d5c31",
-      "source": "Decrypt",
-      "title": "Crypto Laundering a 'Material Risk' for UK Ahead of FATF Review: RUSI",
-      "summary": "Assessors visit in June 2027, months before full crypto rules take effect, leaving the UK to prove it can enforce against crypto laundering.",
-      "url": "https://decrypt.co/383227/crypto-laundering-a-material-risk-for-uk-ahead-of-fatf-review-rusi",
-      "publishedAt": "2026-11-13T13:55:25.000Z"
-    },
-    {
-      "id": "31ad60b7c00a1a1b8abf",
-      "source": "Cointelegraph",
-      "title": "Arthur Hayes ‘flattered’ as Coinbase backs US stock perps",
-      "summary": "Arthur Hayes said he was “flattered” by Coinbase’s defense of US stock perpetual futures, a decade after BitMEX launched perpetual swaps.",
-      "url": "https://cointelegraph.com/news/arthur-hayes-coinbase-us-stock-perps-cftc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T13:41:26.000Z"
-    },
-    {
-      "id": "6a46d1e1d92549288ae0",
-      "source": "Decrypt",
-      "title": "‘Roadmap is Complete,' Cardano Founder Charles Hoskinson Says",
-      "summary": "Cardano's ADA token is down almost 95% from its all-time high, and investors don't seem to be happy that the roadmap is complete.",
-      "url": "https://decrypt.co/383221/roadmap-is-complete-cardano-founder-charles-hoskinson-says",
-      "publishedAt": "2026-11-13T13:36:29.000Z"
-    },
-    {
-      "id": "5f7ff2f92059624d61c3",
-      "source": "The Block",
-      "title": "From $6 to $6.9 million: Two dormant Bitcoin addresses wake up to move 100 BTC after more than 16 years",
-      "summary": "Two Bitcoin whale addresses moved 100 BTC worth $6.89 million after more than 16 years of dormancy on Friday.",
-      "url": "https://www.theblock.co/news/markets/2026-11-13-from-6-to-6-9-million-two-dormant-bitcoin-addresses-wake-up-to-move-100-btc-after-more-than-16-years-439698",
-      "publishedAt": "2026-11-13T13:34:46.000Z"
-    },
-    {
-      "id": "a918e1ebda2caeef14f1",
-      "source": "Cointelegraph",
-      "title": "Nakamoto shares fall 6% premarket after Q3 revenue turns negative",
-      "summary": "A $5.8 million Bitcoin options loss pushed Nakamoto’s quarterly operating revenue below zero, while the company extended repayment of $60 million in Kraken debt to 2027.",
-      "url": "https://cointelegraph.com/markets/nakamoto-shares-fall-after-negative-q3-revenue?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-13T13:04:19.000Z"
-    },
-    {
-      "id": "d6d9e3b1303860e4fa9c",
-      "source": "Decrypt",
-      "title": "Morning Minute: Crypto Plummets as Jensen Huang Exits Nvidia",
-      "summary": "Bitcoin fell all the way to $68,000 overnight and hit a new three-month low. But are there reasons for hope?",
-      "url": "https://decrypt.co/383222/morning-minute-crypto-plummets-as-jensen-huang-exits-nvidia",
-      "publishedAt": "2026-11-13T13:03:40.000Z"
-    },
-    {
-      "id": "88480777acd654f71c64",
-      "source": "The Block",
-      "title": "UK, Singapore, and Thailand central banks complete foreign exchange settlement trial linking traditional and tokenized systems",
-      "summary": "Three central banks published findings from a cross-border FX settlement trial using Partior's synchronization prototype.",
-      "url": "https://www.theblock.co/news/regulation/2026-11-13-uk-singapore-and-thailand-central-banks-complete-foreign-exchange-settlement-trial-linking-traditional-and-tokenized-systems-439692",
-      "publishedAt": "2026-11-13T12:27:41.000Z"
     }
   ]
 }
