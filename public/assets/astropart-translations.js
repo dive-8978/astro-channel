@@ -87,7 +87,17 @@ window.ASTROPART_TRANSLATIONS = {
     "pageTitle": "AstroPart — Un mundo donde cada robot puede repararse",
     "pageDescription": "AstroPart conecta robots, piezas compatibles e historiales de reparación. Explora el piloto y la visión de registro gratuito en Astro AI Chain.",
     "robotAlt": "Robot de reparación AstroPart con una pieza y una llave",
-    "resultLabel": "Resultado de consulta"
+    "resultLabel": "Resultado de consulta",
+    "appsLabel": "APLICACIONES ASTROPART / DESCARGA",
+    "appsTitle": "El canal de reparación,\nen tus manos.",
+    "appsIntro": "Elige la aplicación para tu función. Ambas son gratuitas para descargar y usar.",
+    "userAppRole": "Para propietarios de robots y equipos de reparación",
+    "userAppDescription": "Escanea o busca piezas, comprueba la compatibilidad y contacta con proveedores.",
+    "factoryAppRole": "Para fabricantes y proveedores",
+    "factoryAppDescription": "Registra robots y piezas, administra productos y conecta los flujos de producción.",
+    "downloadOn": "Descargar en",
+    "getItOn": "Disponible en",
+    "freeToUse": "Descarga y uso gratuitos"
   },
   "fr": {
     "skip": "Aller au contenu",
@@ -177,7 +187,17 @@ window.ASTROPART_TRANSLATIONS = {
     "pageTitle": "AstroPart — Un monde où chaque robot peut être réparé",
     "pageDescription": "AstroPart relie l’identité des robots, les pièces compatibles et les réparations. Découvrez le pilote et la vision d’un enregistrement gratuit sur Astro AI Chain.",
     "robotAlt": "Robot réparateur AstroPart tenant une pièce et une clé",
-    "resultLabel": "Résultat de recherche"
+    "resultLabel": "Résultat de recherche",
+    "appsLabel": "APPLICATIONS ASTROPART / TÉLÉCHARGEMENT",
+    "appsTitle": "La réparation des robots,\nà portée de main.",
+    "appsIntro": "Choisissez l’application adaptée à votre rôle. Les deux sont gratuites au téléchargement et à l’utilisation.",
+    "userAppRole": "Pour les propriétaires de robots et les équipes de réparation",
+    "userAppDescription": "Scannez ou recherchez une pièce, vérifiez sa compatibilité et contactez les fournisseurs.",
+    "factoryAppRole": "Pour les fabricants et les fournisseurs",
+    "factoryAppDescription": "Enregistrez robots et pièces, gérez les fiches produit et reliez vos lignes de production.",
+    "downloadOn": "Télécharger sur",
+    "getItOn": "Télécharger dans",
+    "freeToUse": "Téléchargement et utilisation gratuits"
   },
   "de": {
     "skip": "Zum Inhalt",
@@ -267,7 +287,17 @@ window.ASTROPART_TRANSLATIONS = {
     "pageTitle": "AstroPart — Eine Welt, in der jeder Roboter repariert werden kann",
     "pageDescription": "AstroPart verbindet Roboteridentität, passende Teile und Reparatureinträge. Entdecken Sie den Piloten und die kostenlose Registrierung auf Astro AI Chain als Vision.",
     "robotAlt": "AstroPart-Reparaturroboter mit Bauteil und Schraubenschlüssel",
-    "resultLabel": "Suchergebnis"
+    "resultLabel": "Suchergebnis",
+    "appsLabel": "ASTROPART APPS / DOWNLOAD",
+    "appsTitle": "Der Reparaturweg,\nimmer griffbereit.",
+    "appsIntro": "Wählen Sie die passende App. Beide Apps sind kostenlos und können gratis genutzt werden.",
+    "userAppRole": "Für Roboterbesitzer und Reparaturteams",
+    "userAppDescription": "Scannen oder suchen Sie Roboterteile, prüfen Sie die Kompatibilität und kontaktieren Sie Anbieter.",
+    "factoryAppRole": "Für Hersteller und Lieferanten",
+    "factoryAppDescription": "Registrieren Sie Roboter und Teile, verwalten Sie Produktdaten und verbinden Sie Fertigungsabläufe.",
+    "downloadOn": "Laden im",
+    "getItOn": "Jetzt bei",
+    "freeToUse": "Kostenloser Download und Nutzung"
   },
   "ja": {
     "skip": "本文へ移動",
@@ -357,7 +387,17 @@ window.ASTROPART_TRANSLATIONS = {
     "pageTitle": "AstroPart — すべてのロボットを修理できる世界へ",
     "pageDescription": "AstroPart は機体の識別情報、適合部品、修理記録をつなぎます。検索試験版と Astro AI Chain への無料登録構想をご覧ください。",
     "robotAlt": "部品とレンチを持つ AstroPart の修理ロボット",
-    "resultLabel": "検索結果"
+    "resultLabel": "検索結果",
+    "appsLabel": "ASTROPART アプリ / ダウンロード",
+    "appsTitle": "ロボット修理の窓口を、\nいつも手元に。",
+    "appsIntro": "用途に合ったアプリをお選びください。どちらも無料でダウンロードして利用できます。",
+    "userAppRole": "ロボットの所有者・修理チーム向け",
+    "userAppDescription": "ロボット部品をスキャンまたは検索し、適合を確認して供給元に連絡できます。",
+    "factoryAppRole": "メーカー・供給業者向け",
+    "factoryAppDescription": "ロボットや部品を登録し、製品情報を管理して生産工程と連携できます。",
+    "downloadOn": "こちらからダウンロード",
+    "getItOn": "こちらから入手",
+    "freeToUse": "無料でダウンロード・利用可能"
   },
   "ko": {
     "skip": "본문으로 이동",
@@ -447,7 +487,17 @@ window.ASTROPART_TRANSLATIONS = {
     "pageTitle": "AstroPart — 모든 로봇을 수리할 수 있는 세상",
     "pageDescription": "AstroPart는 로봇 식별 정보, 호환 부품, 수리 기록을 연결합니다. 조회 시범 서비스와 Astro AI Chain 무료 등록 비전을 살펴보세요.",
     "robotAlt": "부품과 렌치를 들고 있는 AstroPart 수리 로봇",
-    "resultLabel": "조회 결과"
+    "resultLabel": "조회 결과",
+    "appsLabel": "ASTROPART 앱 / 다운로드",
+    "appsTitle": "수리 연결 통로를\n손안에 담으세요.",
+    "appsIntro": "역할에 맞는 앱을 선택하세요. 두 앱 모두 무료로 다운로드하고 사용할 수 있습니다.",
+    "userAppRole": "로봇 소유자 및 수리팀용",
+    "userAppDescription": "로봇 부품을 스캔하거나 검색하고, 호환성을 확인해 공급처에 문의하세요.",
+    "factoryAppRole": "제조사 및 공급업체용",
+    "factoryAppDescription": "로봇과 부품을 등록하고 제품 정보를 관리하며 생산 공정과 연결하세요.",
+    "downloadOn": "다음에서 다운로드",
+    "getItOn": "다음에서 받기",
+    "freeToUse": "무료 다운로드 및 사용"
   },
   "en": {
     "language": "Language",
@@ -479,7 +529,17 @@ window.ASTROPART_TRANSLATIONS = {
     "pageTitle": "AstroPart — A world where every robot can be repaired",
     "pageDescription": "AstroPart connects robot identity, compatible parts and repair records. Explore the lookup pilot and our vision for free registration on Astro AI Chain.",
     "robotAlt": "AstroPart repair robot holding a component and a wrench",
-    "resultLabel": "Lookup result"
+    "resultLabel": "Lookup result",
+    "appsLabel": "ASTROPART APPS / DOWNLOAD",
+    "appsTitle": "The repair channel,\nin your hands.",
+    "appsIntro": "Choose the app that fits your role. Both apps are free to download and use.",
+    "userAppRole": "For robot owners and repair teams",
+    "userAppDescription": "Scan or look up a robot part, check compatibility and connect with suppliers.",
+    "factoryAppRole": "For manufacturers and suppliers",
+    "factoryAppDescription": "Register robots and parts, manage product records and connect production workflows.",
+    "downloadOn": "Download on the",
+    "getItOn": "Get it on",
+    "freeToUse": "Free to download and use"
   },
   "zh": {
     "language": "语言",
@@ -511,6 +571,16 @@ window.ASTROPART_TRANSLATIONS = {
     "pageTitle": "AstroPart 星件链 — 让机器人维修更便捷",
     "pageDescription": "AstroPart 星件链连接机器人身份、适配配件与维修记录，迈向机器人和部件免费上链，从地球延伸至未来星际。",
     "robotAlt": "手持部件和扳手的 AstroPart 维修机器人",
-    "resultLabel": "查询结果"
+    "resultLabel": "查询结果",
+    "appsLabel": "ASTROPART 应用 / 下载",
+    "appsTitle": "让维修通道，\n随身相伴。",
+    "appsIntro": "按您的角色选择应用。两款应用均可免费下载和使用。",
+    "userAppRole": "适用于机器人用户与维修团队",
+    "userAppDescription": "扫码或查询机器人配件，核对适配信息并联系供货方。",
+    "factoryAppRole": "适用于制造商与供货商",
+    "factoryAppDescription": "登记机器人与配件、管理产品档案，并连接生产流程。",
+    "downloadOn": "下载平台",
+    "getItOn": "前往下载",
+    "freeToUse": "免费下载和使用"
   }
 };

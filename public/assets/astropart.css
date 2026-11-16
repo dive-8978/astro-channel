@@ -440,6 +440,110 @@
   font-size:13px;
   border-bottom:1px solid #c7d0bd;
 }
+.ap-apps {
+  padding-top:45px;
+}
+.ap-apps-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:50px;
+  margin-bottom:38px;
+}
+.ap-apps-heading>p {
+  max-width:440px;
+  color:#607269;
+  margin:0 0 5px;
+}
+.ap-app-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.ap-app-card {
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:18px 22px;
+  align-items:center;
+  padding:30px;
+  border:1px solid #d7dfd1;
+  border-radius:15px;
+  background:linear-gradient(145deg,#fffef9,#eef2e8);
+  box-shadow:0 14px 40px rgba(23,61,54,.06);
+}
+.ap-app-icon {
+  width:80px;
+  height:80px;
+  border-radius:19px;
+  object-fit:cover;
+  box-shadow:0 5px 18px rgba(19,49,42,.16);
+}
+.ap-app-copy .ap-app-role {
+  margin:0 0 4px;
+  color:#78867c;
+  font-size:11px;
+  letter-spacing:.04em;
+}
+.ap-app-copy h3 {
+  color:#173d36;
+  font-size:24px;
+}
+.ap-app-copy>p:last-child {
+  margin:12px 0 0;
+  color:#607269;
+  font-size:13px;
+  line-height:1.65;
+}
+.ap-store-links {
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.ap-store-button {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:60px;
+  padding:8px 12px;
+  border:1px solid #183d35;
+  border-radius:9px;
+  background:#0c211d;
+  color:#fff!important;
+  transition:transform .2s,background .2s;
+}
+.ap-store-button:hover {
+  transform:translateY(-2px);
+  background:#173d36;
+}
+.ap-store-button>span:last-child {
+  display:flex;
+  flex-direction:column;
+  line-height:1.15;
+}
+.ap-store-button small {
+  font-size:9px;
+  color:#d1d9d1;
+}
+.ap-store-button strong {
+  font-size:14px;
+  font-weight:700;
+}
+.ap-store-mark {
+  font-size:23px;
+  line-height:1;
+}
+.ap-play-mark {
+  color:#7ed8a9;
+}
+.ap-app-free {
+  grid-column:1/-1;
+  margin:0!important;
+  color:#6c7d70;
+  font-size:11px;
+  text-align:center;
+}
 .ap-footer {
   border-top:1px solid #d2dccb;
   display:flex;
@@ -617,6 +721,15 @@
   .ap-next {
     display:block;
   }
+  .ap-apps-heading {
+    display:block;
+  }
+  .ap-apps-heading>p {
+    margin-top:20px;
+  }
+  .ap-app-grid {
+    grid-template-columns:1fr;
+  }
   .ap-next-links {
     margin-top:35px;
   }
@@ -692,6 +805,30 @@
   }
   .ap-page h2 {
     font-size:36px;
+  }
+  .ap-app-card {
+    grid-template-columns:64px 1fr;
+    gap:16px;
+    padding:21px;
+  }
+  .ap-app-icon {
+    width:64px;
+    height:64px;
+    border-radius:16px;
+  }
+  .ap-app-copy h3 {
+    font-size:21px;
+  }
+  .ap-store-links {
+    gap:8px;
+  }
+  .ap-store-button {
+    gap:7px;
+    min-height:57px;
+    padding:7px;
+  }
+  .ap-store-button strong {
+    font-size:12px;
   }
   .ap-horizon h2 {
     font-size:46px;

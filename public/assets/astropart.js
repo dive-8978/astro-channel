@@ -122,9 +122,7 @@
   }
 
   let language = new URLSearchParams(location.search).get("lang");
-  if (!language) {
-    try { language = localStorage.getItem("ma.program.language"); } catch (_) {}
-  }
+  // The AstroPart page starts in English unless the URL explicitly asks for another language.
   apply(language || "en");
   document.querySelector("#ap-language-select")?.addEventListener("change", event => apply(event.target.value));
   document.querySelector("#language")?.addEventListener("change", event => apply(event.target.value));
