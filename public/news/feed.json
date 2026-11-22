@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T07:03:01.996Z",
+  "generatedAt": "2026-11-22T19:49:01.262Z",
   "policy": {
     "mode": "headline-index",
     "fullTextStored": false,
@@ -58,20 +58,156 @@
   ],
   "items": [
     {
+      "id": "d2bc35eb08aa7c6183fa",
+      "source": "CoinDesk",
+      "title": "More on the pending oversight hearings: State of Crypto",
+      "summary": "New letters show the widening range of Congressional committees that will be probing the presidential administration — and the crypto collateral that may be swept up.",
+      "url": "https://www.coindesk.com/",
+      "publishedAt": "2026-11-22T19:30:00.000Z"
+    },
+    {
+      "id": "cea8ac5b2c02922eddd7",
+      "source": "CryptoSlate",
+      "title": "Wagyu’s $13.5 million token crash exposes another coin with 99.9% held by one wallet",
+      "summary": "The account that sent XMR1 to the seller held 99.97% of ZEC1’s supply in Bitquery’s November 20 snapshot. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/wagyus-13-5-million-token-crash-exposes-another-coin-with-99-9-held-by-one-wallet/",
+      "publishedAt": "2026-11-22T19:05:03.000Z"
+    },
+    {
+      "id": "085be34f834051f7f0cc",
+      "source": "The Block",
+      "title": "Chainflip’s losses climb to $12 million after protocol discloses 122.9 BTC theft, offers hacker bounty",
+      "summary": "Chainflip offered the attacker a 10% bounty to return the remainder of the $12 million in stolen BTC, ETH, and stablecoins by Monday.",
+      "url": "https://www.theblock.co/news/defi/2026-11-22-chainflips-losses-climb-to-12-million-after-protocol-discloses-122-9-btc-theft-offers-hacker-bounty-444829",
+      "publishedAt": "2026-11-22T18:58:57.000Z"
+    },
+    {
+      "id": "da5027bc27453045aa32",
+      "source": "CryptoSlate",
+      "title": "UK to ban crypto exchanges from making markets on their own platforms as Bitcoin rules change",
+      "summary": "Firms making markets in spot Bitcoin on qualifying platforms are exempt from principal-dealing permission for that activity. Separate venue rules apply. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get…",
+      "url": "https://cryptoslate.com/uk-to-ban-crypto-exchanges-from-making-markets-on-their-own-platforms-as-bitcoin-rules-change/",
+      "publishedAt": "2026-11-22T18:05:49.000Z"
+    },
+    {
+      "id": "6b7d5662c7da250205e2",
+      "source": "CryptoSlate",
+      "title": "XRP’s institutional adoption story has a catch that investors may be overlooking",
+      "summary": "CertiK checked selected network controls, and two live fund designs show where sterling, RLUSD and XRP come into play. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/xrps-institutional-adoption-story-has-a-catch-that-investors-may-be-overlooking/",
+      "publishedAt": "2026-11-22T17:05:07.000Z"
+    },
+    {
+      "id": "21e16a27b6e3064a6142",
+      "source": "CryptoSlate",
+      "title": "Chainflip users face frozen withdrawals after $4.86 million vanishes from Ethereum vault",
+      "summary": "The emergency pause also stopped deposits, withdrawals and quotes, and the swap and liquidity-provider apps still showed maintenance Saturday evening UTC. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next.…",
+      "url": "https://cryptoslate.com/chainflip-users-face-frozen-withdrawals-after-4-86-million-vanishes-from-ethereum-vault/",
+      "publishedAt": "2026-11-22T16:05:55.000Z"
+    },
+    {
+      "id": "15ec96aca761032ac813",
+      "source": "CryptoSlate",
+      "title": "AI agents built their own scientific journal and found that reviewing research was harder than expected",
+      "summary": "In a small paired test, text-only referees challenged corrected drafts almost as often as the flawed originals. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/ai-reviewers-flagged-corrected-drafts-almost-as-often-as-flawed-ones/",
+      "publishedAt": "2026-11-22T15:00:11.000Z"
+    },
+    {
+      "id": "fa292ffe8e192efe2667",
+      "source": "CryptoSlate",
+      "title": "Bitcoin reclaims $61,000 before giving back a third of the weekend rally",
+      "summary": "During Sunday’s move above $61,000, Binance perpetuals posted nearly ten times as much net buying as the exchange’s spot market. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/bitcoin-reclaims-61000-before-giving-back-a-third-of-that-rally/",
+      "publishedAt": "2026-11-22T14:30:34.000Z"
+    },
+    {
+      "id": "e2d3fe8c9bfc44ec66cf",
+      "source": "Cointelegraph",
+      "title": "The future of onchain FX could start with users, not institutional liquidity",
+      "summary": "Onchain FX does not need to recreate the trillion-dollar institutional market to become useful. Real demand can make smaller markets work first.",
+      "url": "https://cointelegraph.com/opinion/future-onchain-fx-could-start-with-users-not-institutional-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T14:30:00.000Z"
+    },
+    {
+      "id": "308b8b0d59712dfa9fda",
+      "source": "Decrypt",
+      "title": "Google's Quantum Chip Beats Classical Limits in 'Impossible' Game",
+      "summary": "Google’s Willow quantum processor beat the classical ceiling in a four-qubit coordination game, revealing a promising hardware test rather than commercial quantum computing.",
+      "url": "https://decrypt.co/383743/googles-quantum-chip-beats-classical-limits-in-impossible-game-tests-105-qubits",
+      "publishedAt": "2026-11-22T14:01:02.000Z"
+    },
+    {
+      "id": "ee874841de5db770db1b",
+      "source": "CryptoSlate",
+      "title": "Deribit outage hit Bitcoin hedgers on Coinbase",
+      "summary": "Two trading interruptions hit global Bitcoin and Ether perpetuals that share Deribit execution, while Coinbase said its US derivatives were unaffected. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get…",
+      "url": "https://cryptoslate.com/deribit-outage-hit-bitcoin-hedgers-on-coinbase/",
+      "publishedAt": "2026-11-22T14:00:44.000Z"
+    },
+    {
+      "id": "ccaa92382d4ae721d2da",
+      "source": "CoinDesk",
+      "title": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins",
+      "summary": "Quantum computers can’t break Bitcoin network’s security yet, but Leo Fan warns that upgrading it and moving funds could take longer than expected.",
+      "url": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
+      "publishedAt": "2026-11-22T14:00:00.000Z"
+    },
+    {
+      "id": "f10208c311e50ed8ee7b",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s next big threat could come from two oil tankers in the Middle East",
+      "summary": "Two reported tanker strikes put the recent Brent decline to the test as traders watch outbound cargo and US rate expectations. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/two-hormuz-tanker-strikes-threaten-a-potential-source-of-relief-for-bitcoin/",
+      "publishedAt": "2026-11-22T13:00:09.000Z"
+    },
+    {
+      "id": "9c3e9d00b29c512a7769",
+      "source": "CryptoSlate",
+      "title": "Bitcoin’s $60,000 breakdown puts December Fed decision under the spotlight",
+      "summary": "Bitcoin fell below $60,000 on Friday for the first time since July, with US spot Bitcoin funds recording withdrawals and short-term Treasury bills offering investors more than 4% a year. That creates a problem for the Federal Reserve's December meeting:…",
+      "url": "https://cryptoslate.com/bitcoin-below-60000-fed-half-point-cpi/",
+      "publishedAt": "2026-11-22T12:00:04.000Z"
+    },
+    {
+      "id": "7b1cea512b7cd2703cd1",
+      "source": "Cointelegraph",
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T11:25:27.000Z"
+    },
+    {
+      "id": "1acd1cda79098aa85373",
+      "source": "Cointelegraph",
+      "title": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
+      "summary": "Kraken said all orders were processed correctly and found no evidence of a security breach or compromised accounts.",
+      "url": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T09:33:06.000Z"
+    },
+    {
+      "id": "08ddcf627eede1b818c3",
+      "source": "CryptoSlate",
+      "title": "Bitcoin shorts collapsed 79% in five weeks, then the market turned lower",
+      "summary": "A drop of 3,889 reported short contracts drove most of the move, and the next CFTC report is due November 30. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
+      "url": "https://cryptoslate.com/bitcoin-shorts-collapsed-79-in-five-weeks-then-the-market-turned-lower/",
+      "publishedAt": "2026-11-22T09:30:45.000Z"
+    },
+    {
+      "id": "0dc3bc0fa754cb67993e",
+      "source": "Cointelegraph",
+      "title": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit",
+      "summary": "Cyber reported unexpected minting of CYBER tokens on Solana, followed by tokens moving out of its Ethereum bridge lockbox, prompting an investigation.",
+      "url": "https://cointelegraph.com/news/upbit-bithumb-suspend-cyber-transfers-bridge-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "publishedAt": "2026-11-22T07:24:05.000Z"
+    },
+    {
       "id": "c671ed5a724a1f58a2ee",
       "source": "Cointelegraph",
       "title": "Chainflip confirms $12M hack, offers attacker 10% bounty",
       "summary": "Chainflip offered the attacker a 10% bounty to return 90% of the stolen funds by Nov. 23, promising to treat the return as a white-hat recovery and withdraw law enforcement complaints.",
       "url": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-22T05:28:43.000Z"
-    },
-    {
-      "id": "bbbecefd08cc11c8834c",
-      "source": "CryptoSlate",
-      "title": "Hackers swapped a hosted DeepSeek model for 53 hours and stripped away its safety protections",
-      "summary": "Prime Intellect says the substitute refused none of its HarmBench prompts, down from 198 of 240 with the original model. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/hackers-swapped-a-hosted-deepseek-model-for-53-hours-and-stripped-away-its-safety-protections/",
-      "publishedAt": "2026-11-21T21:30:30.000Z"
     },
     {
       "id": "7a97d49c248d7a81b688",
@@ -82,28 +218,12 @@
       "publishedAt": "2026-11-21T21:17:36.000Z"
     },
     {
-      "id": "aa45d9cc14fa220d9641",
-      "source": "CryptoSlate",
-      "title": "Russia allows Bitcoin trading as sanctioned Moscow Exchange prepares December launch",
-      "summary": "From Nov. 22, Russian exchanges can begin trading Bitcoin once the central bank approves the rules, but customers still can't use it to pay for anything. Moscow Exchange plans a Dec. 1 pilot through a US-sanctioned clearinghouse, with ordinary investors…",
-      "url": "https://cryptoslate.com/russia-bitcoin-trading-rules-moscow-exchange/",
-      "publishedAt": "2026-11-21T19:40:03.000Z"
-    },
-    {
       "id": "b3e843c8255192dd04e2",
       "source": "The Block",
       "title": "Cyber investigating suspected $1 million bridge exploit as Upbit, Bithumb freeze transfers",
       "summary": "South Korean exchanges Upbit and Bithumb both suspended CYBER deposits and withdrawals, citing a suspected security incident.",
       "url": "https://www.theblock.co/news/defi/2026-11-21-cyber-investigating-suspected-1-million-bridge-exploit-as-upbit-bithumb-freeze-transfers-444810",
       "publishedAt": "2026-11-21T18:51:14.000Z"
-    },
-    {
-      "id": "0c19b0bef23db276e463",
-      "source": "CryptoSlate",
-      "title": "Aave’s $4 billion USDC borrow cap could leave just $190 million available for withdrawals",
-      "summary": "If loans fill the new cap at late Nov. 20 supply levels, about 190 million USDC would remain for withdrawals. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/aaves-4-billion-usdc-borrow-cap-could-leave-just-190-million-available-for-withdrawals/",
-      "publishedAt": "2026-11-21T18:40:32.000Z"
     },
     {
       "id": "c2a8e064fbc8575e0165",
@@ -122,14 +242,6 @@
       "publishedAt": "2026-11-21T17:50:00.000Z"
     },
     {
-      "id": "0f0413838e56b83b10d1",
-      "source": "CryptoSlate",
-      "title": "Singapore wants to test stablecoin payments by AI agents",
-      "summary": "A planned sandbox would test how banks and payment providers verify an agent’s authority before executing payments in digital money. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your…",
-      "url": "https://cryptoslate.com/singapore-wants-to-test-stablecoin-payments-by-ai-agents/",
-      "publishedAt": "2026-11-21T17:40:11.000Z"
-    },
-    {
       "id": "b306cf516b0b06b266ee",
       "source": "Decrypt",
       "title": "Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges",
@@ -146,14 +258,6 @@
       "publishedAt": "2026-11-21T16:41:00.000Z"
     },
     {
-      "id": "5333398b159d67626cbd",
-      "source": "CryptoSlate",
-      "title": "A Bitcoin drop toward $53,000 could put $240 million in collateral at risk",
-      "summary": "An Aave borrower had nearly 90 WBTC seized Saturday, and a later snapshot shows where other loans could come under pressure. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/a-bitcoin-drop-toward-53000-could-put-240-million-in-collateral-at-risk/",
-      "publishedAt": "2026-11-21T16:35:27.000Z"
-    },
-    {
       "id": "349d36e142f2170f0dcc",
       "source": "Decrypt",
       "title": "Signal Calls OS-Level AI an 'Existential Threat' and Blocks Screenshots to Fight It",
@@ -164,26 +268,10 @@
     {
       "id": "b9cf4c98e416225b32a2",
       "source": "The Block",
-      "title": "Chainflip’s FLIP drops 34% after attacker drains $4.86 million from vault with suspected key compromise",
+      "title": "Chainflip’s FLIP drops 34% after attacker drains $12 million from vaults with suspected key compromise",
       "summary": "Chainflip's FLIP token dropped 34% in price in the wake of the apparently automated attack, per The Block's price data.",
       "url": "https://www.theblock.co/news/defi/2026-11-21-chainflips-flip-drops-34-after-attacker-drains-4-86-million-from-vault-with-suspected-key-compromise-444804",
       "publishedAt": "2026-11-21T15:24:14.000Z"
-    },
-    {
-      "id": "4e6279bd9c51acf1ef68",
-      "source": "CryptoSlate",
-      "title": "One Bitcoin miner paid an $11.9M tariff bill four years after delivery",
-      "summary": "Bitcoin miner Bitfarms thought the machines it brought into Washington state in 2021 had been made in Malaysia. Its supplier said so, and the company provided US Customs officials with documents supporting that claim. Four years later, the company paid the…",
-      "url": "https://cryptoslate.com/one-bitcoin-miner-paid-an-11-9m-tariff-bill-four-years-after-delivery/",
-      "publishedAt": "2026-11-21T15:20:09.000Z"
-    },
-    {
-      "id": "cb71cbc684d9f9f9779f",
-      "source": "CryptoSlate",
-      "title": "US Treasury sells $15 billion in first nine-day cash bill auction since 2008",
-      "summary": "Treasury had flagged possible month-end borrowing and reported $891.2 billion in cash at the Nov. 19 close. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The Catalyst in your inbox",
-      "url": "https://cryptoslate.com/us-treasury-sells-15-billion-in-first-nine-day-cash-bill-auction-since-2008/",
-      "publishedAt": "2026-11-21T14:30:07.000Z"
     },
     {
       "id": "eb61cd2cc54d784c859e",
@@ -194,12 +282,12 @@
       "publishedAt": "2026-11-21T14:01:06.000Z"
     },
     {
-      "id": "b029f0aa5a3c94078113",
-      "source": "CryptoSlate",
-      "title": "Kraken says trades stand after Bitcoin sold at $24,250 Canadian",
-      "summary": "Kraken’s Canadian-dollar Bitcoin pair hit nearly identical lows in consecutive 15-minute intervals. Other CAD pairs also posted unusually low prices. Read the full story on CryptoSlate Understand the crypto stories that matter and what to watch next. Get The…",
-      "url": "https://cryptoslate.com/kraken-says-trades-stand-after-bitcoin-sold-at-24250-canadian/",
-      "publishedAt": "2026-11-21T13:30:47.000Z"
+      "id": "f5921f4d2c30cedf773e",
+      "source": "CoinDesk",
+      "title": "OpenAI, Anthropic and rivals seek AI agent rules to prevent commerce chaos",
+      "summary": "OpenAI, Anthropic, and other technology giants are backing standards designed to enable agents to work together without putting any one company in control.",
+      "url": "https://www.coindesk.com/tech/2026/11/21/openai-anthropic-and-rivals-seek-ai-agent-rules-to-prevent-commerce-chaos",
+      "publishedAt": "2026-11-21T14:00:00.000Z"
     },
     {
       "id": "38565ac46cf693f59234",
@@ -210,36 +298,12 @@
       "publishedAt": "2026-11-21T12:30:00.000Z"
     },
     {
-      "id": "a6bcc1cd27915a87fb38",
-      "source": "CryptoSlate",
-      "title": "Ethereum’s Glamsterdam delay reveals a troubling pattern behind its biggest network upgrades",
-      "summary": "Ethereum's Glamsterdam upgrade has slipped into 2027, exposing a growing disconnect between faster development and the network's ability to meet deadlines. On Nov. 20, Ethereum Foundation researcher Toni Wahrstätter said the upgrade, which the foundation had…",
-      "url": "https://cryptoslate.com/ethereums-glamsterdam-delay-reveals-a-troubling-pattern-behind-its-biggest-network-upgrades/",
-      "publishedAt": "2026-11-21T12:00:31.000Z"
-    },
-    {
-      "id": "7b1cea512b7cd2703cd1",
-      "source": "Cointelegraph",
-      "title": "Here’s what happened in crypto today",
-      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-21T11:18:52.000Z"
-    },
-    {
       "id": "ad9702a7c3c1b1f9ba0c",
       "source": "Cointelegraph",
       "title": "ECB seeks industry partners for tokenized deposits, securities experiments",
       "summary": "Industry groups have until Dec. 11 to apply for the ECB’s first experimental exercises under its Appia initiative, with later submissions reviewed on a rolling basis.",
       "url": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
       "publishedAt": "2026-11-21T09:48:56.000Z"
-    },
-    {
-      "id": "a167cf2d74e8e397cd75",
-      "source": "CryptoSlate",
-      "title": "Binance can hold MEXC deposits even after the blockchain clears them",
-      "summary": "You can send crypto from MEXC to Binance, see that the transaction went through on the blockchain, and still be unable to trade with that deposit when you log in to Binance. That's what Binance told customers to expect while it reviews deposits from MEXC.…",
-      "url": "https://cryptoslate.com/binance-can-hold-mexc-deposits-even-after-the-blockchain-clears-them/",
-      "publishedAt": "2026-11-21T08:30:04.000Z"
     },
     {
       "id": "c9b7cce25be07357ce69",
@@ -632,70 +696,6 @@
       "summary": "BlackRock's IBIT made up nearly all of Thursday's outflows, despite Morgan Stanley's MSBT attracting $49.6 million.",
       "url": "https://www.theblock.co/news/markets/2026-11-20-us-spot-bitcoin-etfs-see-582-million-in-daily-net-outflows-as-november-total-nears-3-5-billion-444217",
       "publishedAt": "2026-11-20T12:29:57.000Z"
-    },
-    {
-      "id": "aa55a19ea09d5e243b18",
-      "source": "CoinDesk",
-      "title": "Bitcoin, stocks and gold traders getting nervous, and volatility gauges are surging",
-      "summary": "Your day-ahead look for Nov. 20, 2026",
-      "url": "https://www.coindesk.com/daybook-us/2026/11/20/bitcoin-stocks-and-gold-traders-getting-nervous-and-volatility-gauges-are-surging",
-      "publishedAt": "2026-11-20T12:15:08.000Z"
-    },
-    {
-      "id": "3d83ec7c91401588650e",
-      "source": "The Block",
-      "title": "Ark buys $90 million worth of Anthropic shares on debut, trims Ethereum and Solana staking ETF holdings",
-      "summary": "Ark Invest bought nearly 1 million Anthropic shares and trimmed its Ethereum and Solana staking ETF holdings.",
-      "url": "https://www.theblock.co/news/markets/2026-11-20-ark-buys-90-million-worth-of-anthropic-shares-on-debut-trims-ethereum-and-solana-staking-etf-holdings-444226",
-      "publishedAt": "2026-11-20T12:12:29.000Z"
-    },
-    {
-      "id": "b99cf468593ffd316ddd",
-      "source": "Decrypt",
-      "title": "MoonPay Applies for National Trust Bank Charter to Grow Custody and Stablecoin Business",
-      "summary": "The crypto payments firm joins a rush of crypto companies seeking federal trust charters, which face growing political scrutiny.",
-      "url": "https://decrypt.co/383688/moonpay-applies-for-national-trust-bank-charter-to-grow-custody-and-stablecoin-business",
-      "publishedAt": "2026-11-20T12:10:14.000Z"
-    },
-    {
-      "id": "6cf11d6d5aaccb8ce019",
-      "source": "Decrypt",
-      "title": "Bitcoin ETFs Shed $582M in a Day as BTC Drops Below $62K",
-      "summary": "Thursday's ETF outflow was the funds' biggest in three weeks, as rising Treasury yields and Fed rate hike bets weigh on crypto.",
-      "url": "https://decrypt.co/383685/bitcoin-etfs-shed-582m-in-a-day-as-btc-drops-below-62k",
-      "publishedAt": "2026-11-20T11:50:51.000Z"
-    },
-    {
-      "id": "84ede28926ce3a67868e",
-      "source": "CoinDesk",
-      "title": "Bitcoin drops for third straight day as Asian tech shares slide",
-      "summary": "BlackRock’s spot bitcoin ETF recorded the largest single-day outflow since its introduction more than two years ago as investors continued to flee the sector.",
-      "url": "https://www.coindesk.com/markets/2026/11/20/bitcoin-drops-for-third-straight-day-as-asian-tech-shares-slide",
-      "publishedAt": "2026-11-20T11:42:02.000Z"
-    },
-    {
-      "id": "146c122fe7c985ce136f",
-      "source": "Cointelegraph",
-      "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
-      "summary": "OnChain Lens tracked nearly $600 million in ETH transfers over two days as the Binance hackers moved the stolen funds through fresh wallets and cross-chain protocols to obscure their trail.",
-      "url": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T11:31:41.000Z"
-    },
-    {
-      "id": "3dd9cf83bf7914500529",
-      "source": "Decrypt",
-      "title": "Coinbase Targets In-House Prediction Markets by First Half of 2027: Report",
-      "summary": "The exchange offers event contracts through Kalshi, but running its own would give it more control and a bigger share of trading revenue.",
-      "url": "https://decrypt.co/383682/coinbase-targets-in-house-prediction-markets-by-first-half-of-2027-report",
-      "publishedAt": "2026-11-20T11:23:00.000Z"
-    },
-    {
-      "id": "0ae616e7afd2b687fe00",
-      "source": "Cointelegraph",
-      "title": "VanEck to end Gemini ETF custody deals, keeps Coinbase",
-      "summary": "VanEck plans to end Gemini’s custody agreements for three crypto ETFs in February 2027, while Coinbase will continue serving as a custodian for the funds.",
-      "url": "https://cointelegraph.com/news/vaneck-gemini-etf-custody-end-keep-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "publishedAt": "2026-11-20T10:54:38.000Z"
     }
   ]
 }
