@@ -1,5 +1,91 @@
 window.ASTRO_ARTICLES = [
   {
+    "slug": "astro-connected-world-long-horizon-20261125",
+    "title": "A Connected Future, from Earth to the Next Frontier",
+    "dek": "Astro’s long-range ambition links everyday apps, interoperable infrastructure and real-world services—while treating robotics and life beyond Earth as a distant horizon to earn, not a claim already achieved.",
+    "type": "Vision & Roadmap",
+    "section": "Institution",
+    "project": "Astro Ecosystem",
+    "phase": "Long-term vision",
+    "phaseTone": "planned",
+    "date": "2026-11-25",
+    "displayDate": "November 25, 2026",
+    "byline": "AstroBridge",
+    "image": "/assets/horizons-20261015/connected-city-1536.webp",
+    "imageSrcset": "/assets/horizons-20261015/connected-city-768.webp 768w, /assets/horizons-20261015/connected-city-1536.webp 1536w",
+    "imageWidth": 1536,
+    "imageHeight": 1024,
+    "imageAlt": "Concept illustration of a connected future city where people, services and intelligent machines share public spaces.",
+    "imageCaption": "Illustrative concept art. It does not depict a deployed Astro network.",
+    "body": [
+      "Astro’s journey began in January 2026 with a practical question and a far-reaching ambition: can useful products people rely on today become the first step toward a more connected digital world?",
+      "The long-term vision is larger than any single app. MA brings communication and everyday experiences into focus. AstroBridge aims to make it easier for applications and services to connect. AstroAI Chain is being developed as a network foundation, while AstroPart explores how robots, components and repair information could be connected. Each project has a distinct role and its own milestones.",
+      "The horizon is global: people, applications, devices and, over time, intelligent agents and robots working together across borders—with clear permissions and records that can be checked where appropriate. AstroPart’s vision reaches from making robot repair easier on Earth to considering how reliable service records could matter in remote environments beyond Earth. That is a long-term aspiration, not a current deployment claim.",
+      "Reaching that future will take more than a large idea. Communication must work reliably. Integrations must be understandable. Identity and permissions must be handled carefully. Network behavior, recovery and security must be demonstrated in stages, under real operating conditions.",
+      "Our path starts with products that solve immediate needs, then grows through documented interfaces, controlled infrastructure validation and focused applications with real users. We will share meaningful milestones while protecting confidential implementation details; public claims will remain tied to evidence that can be inspected.",
+      "The ambition is planetary in scale and patient in execution: build digital infrastructure that can support useful work across an expanding family of applications, and earn every step through tested products, clear boundaries and verifiable progress."
+    ],
+    "facts": [
+      "This article describes a long-term direction, not a production mainnet or a deployed global network.",
+      "AstroPart’s scan-to-find robot-parts workflow was reported as a local prototype in the November 10 engineering update.",
+      "Current and future milestones are reported separately in the official newsroom."
+    ],
+    "status": "Long-term vision only. AstroAI Chain remains in development; no production mainnet, global operator network or off-Earth deployment is claimed.",
+    "links": [
+      {
+        "label": "AstroBridge technology",
+        "url": "/technology.html?lang=en"
+      },
+      {
+        "label": "Explore AstroPart",
+        "url": "/astropart.html"
+      },
+      {
+        "label": "Browse official updates",
+        "url": "/newsroom.html#official"
+      }
+    ],
+    "translations": {
+      "zh": {
+        "title": "从地球走向更远的边界：Astro 的互联未来愿景",
+        "dek": "Astro 希望把日常应用、互联基础设施和现实服务逐步连接起来；机器人与地外场景属于需要长期努力实现的愿景，不是已经落地的成果。",
+        "type": "愿景与路线图",
+        "phase": "长期愿景",
+        "displayDate": "2026年11月25日",
+        "imageAlt": "未来互联城市概念图，展示人、服务与智能机器共处的空间。",
+        "imageCaption": "概念插画，不代表 Astro 网络已经部署。",
+        "body": [
+          "Astro 的旅程始于 2026 年 1 月：从一个务实的问题出发，走向一个更远大的目标——今天真正有用的产品，能否成为通往互联数字世界的第一步？",
+          "这项长期愿景不止于某一个应用。MA 聚焦通信与日常体验；AstroBridge 希望让应用和服务更容易连接；AstroAI Chain 正在研发网络基础；AstroPart 则探索如何连接机器人、部件与维修资料。每个项目都有自己的定位和阶段目标。",
+          "我们希望逐步走向一个全球互联的环境：让人、应用、设备，以及未来的智能代理与机器人能够跨地域协作，在权限清晰的前提下传递必要信息，并在适当场景留下可核验记录。AstroPart 的愿景既包括让地球上的机器人维修更便捷，也包括思考可靠服务记录在地外遥远环境中的价值。这是长期目标，不是当前已部署的服务。",
+          "实现这样的未来不能只靠宏大构想。通信要可靠，接口要易懂，身份与权限要谨慎处理；网络运行、故障恢复和安全能力，都必须在真实条件下分阶段验证。",
+          "我们的路径从解决眼前需求的产品开始，再逐步推进接口文档、受控基础设施验证，以及面向真实用户的专业应用。我们会分享有意义的阶段成果，同时保护机密实现细节；对外发布的能力说明仍以可检查的证据为准。",
+          "目标可以面向整个地球，执行必须稳步前进：逐步建设能够支持更多应用和实际工作的数字基础设施，并用经过验证的产品、清晰的边界和可核验的进展，赢得每一步。"
+        ],
+        "facts": [
+          "本文介绍长期方向，不代表生产主网或全球网络已经上线。",
+          "AstroPart 的机器人配件扫码查询在 11 月 10 日工程进展中记为本地原型。",
+          "已完成、研发中和规划中的里程碑会在官方新闻频道分别记录。"
+        ],
+        "status": "本文仅介绍长期愿景。AstroAI Chain 仍在研发；不宣称生产主网、全球运营者网络或地外部署已经实现。",
+        "links": [
+          {
+            "label": "了解 AstroBridge 技术方向",
+            "url": "/technology.html?lang=zh"
+          },
+          {
+            "label": "了解 AstroPart",
+            "url": "/astropart.html"
+          },
+          {
+            "label": "查看官方进展",
+            "url": "/newsroom.html#official"
+          }
+        ]
+      }
+    }
+  },
+  {
     "slug": "ma-full-on-the-app-store-20261110",
     "title": "MA full Is Now on the App Store",
     "dek": "MA full brings messaging, voice and video calls, and Bible and hymn reading to iPhone and iPad.",
